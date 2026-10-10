@@ -14,7 +14,7 @@ Waypoint and ScoreMyBiz alternate by date. Design: `docs/superpowers/specs/2026-
 6. The result is appended to `logs/posts.jsonl`. A second run on the same date does nothing.
 
 ## LinkedIn
-After Instagram publishes, the same day's slides go to the founder's personal LinkedIn profile as one swipeable post
+Once a week, on Tuesdays (`linkedin_weekday` in content/apps.json), after Instagram publishes, that day's slides go to the founder's personal LinkedIn profile as one swipeable post
 (`engine/linkedin.py`). The text carries the Play Store URL as a clickable link. It runs only when the secrets
 `LINKEDIN_ACCESS_TOKEN` and `LINKEDIN_PERSON_URN` exist. A LinkedIn failure never affects Instagram: the run exits 1
 (you get an email) and a re-run retries only LinkedIn. The token lasts about 60 days and cannot be refreshed by a

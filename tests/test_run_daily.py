@@ -211,6 +211,9 @@ def test_media_urls_pin_the_pushed_commit_not_a_branch(tmp_path):
         assert "/deadbeef/out/2026-10-11/" in u and "/main/" not in u
 
 
+TUE = date(2026, 10, 13)  # LinkedIn day: Tuesday, and a Waypoint day
+
+
 LI_ENV = dict(ENV, LINKEDIN_ACCESS_TOKEN="litok", LINKEDIN_PERSON_URN="urn:li:person:me")
 
 
@@ -221,7 +224,7 @@ def last_entry(tmp_path, channel):
 
 def test_linkedin_posts_after_instagram_with_the_same_slides_and_a_clickable_link(tmp_path):
     w = World(tmp_path)
-    assert go(w, env=LI_ENV) == 0
+    assert go(w, env=LI_ENV, day=TUE) == 0
     assert w.count("publish") == 1 and len(w.li_calls) == 1
     call = w.li_calls[0]
     assert call["token"] == "litok" and call["urn"] == "urn:li:person:me" and len(call["slides"]) == 3
@@ -232,17 +235,32 @@ def test_linkedin_posts_after_instagram_with_the_same_slides_and_a_clickable_lin
 
 def test_linkedin_is_skipped_quietly_without_credentials_and_in_prepare_mode(tmp_path):
     w = World(tmp_path)
-    assert go(w) == 0 and w.li_calls == []
+    assert go(w, day=TUE) == 0 and w.li_calls == []
     w2 = World(tmp_path / "b")
-    assert go(w2, mode="prepare", env=LI_ENV) == 0 and w2.li_calls == []
+    assert go(w2, mode="prepare", env=LI_ENV, day=TUE) == 0 and w2.li_calls == []
 
 
 def test_linkedin_failure_exits_1_keeps_instagram_published_and_a_rerun_retries_only_linkedin(tmp_path):
     w = World(tmp_path)
     w.li_fail = 1
-    assert go(w, env=LI_ENV) == 1
+    assert go(w, env=LI_ENV, day=TUE) == 1
     assert w.count("publish") == 1 and last_entry(tmp_path, "linkedin")["status"] == "failed"
     assert last_entry(tmp_path, "instagram")["status"] == "published"
-    assert go(w, env=LI_ENV) == 0
-    assert w.count("publish") == 1 and w.rendered_ids == ["w0"] and len(w.li_calls) == 2
-    assert go(w, env=LI_ENV) == 0 and len(w.li_calls) == 2  # already on LinkedIn: nothing more
+    assert go(w, env=LI_ENV, day=TUE) == 0
+    assert w.count("publish") == 1 and w.rendered_ids == ["w1"] and len(w.li_calls) == 2
+    assert go(w, env=LI_ENV, day=TUE) == 0 and len(w.li_calls) == 2  # already on LinkedIn: nothing more
+
+
+def test_linkedin_posts_only_once_a_week_on_tuesday(tmp_path):
+    w = World(tmp_path)
+    for d in (date(2026, 10, 11), date(2026, 10, 12), date(2026, 10, 14), date(2026, 10, 15), date(2026, 10, 16), date(2026, 10, 17)):
+        assert go(w, env=LI_ENV, day=d) == 0
+    assert w.li_calls == [] and w.count("publish") == 6
+    assert go(w, env=LI_ENV, day=TUE) == 0 and len(w.li_calls) == 1
+    assert go(w, env=LI_ENV, day=date(2026, 10, 20)) == 0 and len(w.li_calls) == 2  # next Tuesday
+
+
+def test_a_rerun_on_a_non_linkedin_day_never_posts_to_linkedin(tmp_path):
+    w = World(tmp_path)
+    assert go(w, env=LI_ENV, day=date(2026, 10, 12)) == 0
+    assert go(w, env=LI_ENV, day=date(2026, 10, 12)) == 0 and w.li_calls == []

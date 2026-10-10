@@ -16,7 +16,7 @@ from pathlib import Path
 from typing import Callable
 
 from . import instagram, linkedin, render
-from .config import ROOT, load_apps, load_bank
+from .config import ROOT, load_apps, load_bank, load_global
 from .instagram import Captions, InstagramError, PartialPublish, SetUrls
 from .lint import alt_texts, build_captions, build_linkedin_text, lint_item
 from .linkedin import LinkedInError
@@ -169,7 +169,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     apps = apps or load_apps()
     banks = banks or {a: load_bank(a) for a in apps}
     li_token, li_urn = env.get("LINKEDIN_ACCESS_TOKEN"), env.get("LINKEDIN_PERSON_URN")
-    li_on = bool(li_token and li_urn)
+    # LinkedIn gets one post a week, on the day set in content/apps.json (Tuesday)
+    li_on = bool(li_token and li_urn) and day.weekday() == load_global().get("linkedin_weekday", 1)
     if mode == "post":
         deps.sync_repo()
         status = day_status(log, day)
