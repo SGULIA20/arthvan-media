@@ -17,7 +17,7 @@ from typing import Callable
 
 from . import instagram, render
 from .config import ROOT, load_apps, load_bank
-from .instagram import Captions, InstagramError, SetUrls
+from .instagram import Captions, InstagramError, PartialPublish, SetUrls
 from .lint import build_captions, lint_item
 from .select_item import lagos_date, pick
 
@@ -36,8 +36,8 @@ def http_size(url: str):
         return None
 
 
-def wait_for_urls(expected: dict, timeout_s: float = 180, fetch=http_size, sleep=time.sleep,
-                  clock=time.monotonic, poll_s: float = 5) -> None:
+def wait_for_urls(expected: dict, timeout_s: float = 600, fetch=http_size, sleep=time.sleep,
+                  clock=time.monotonic, poll_s: float = 10) -> None:
     """Block until every URL answers with the expected byte size, else raise TimeoutError."""
     start = clock()
     pending = dict(expected)
@@ -59,6 +59,16 @@ def git_publish(paths: list, message: str) -> None:
     subprocess.run(["git", "push", "origin", "HEAD:main"], check=True)
 
 
+def sync_repo() -> None:
+    """In CI, take the newest main so a re-run sees the log written by the run it repeats."""
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        subprocess.run(["git", "pull", "--ff-only", "origin", "main"], check=True)
+
+
+def head_sha() -> str:
+    return subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, check=True).stdout.strip()
+
+
 @dataclass
 class Deps:
     render_set: Callable = render.render_set
@@ -67,6 +77,8 @@ class Deps:
     wait_for_urls: Callable = wait_for_urls
     prepare_set: Callable = instagram.prepare_set
     publish_set: Callable = instagram.publish_set
+    sync_repo: Callable = sync_repo
+    head_sha: Callable = head_sha
 
 
 # ---------- helpers ----------
@@ -80,9 +92,17 @@ def _entries(log: Path):
             continue
 
 
+def day_status(log: Path, day: date):
+    """Latest recorded status for the day: publishing, published, partial, or None."""
+    last = None
+    for e in _entries(log):
+        if e.get("date") == day.isoformat() and e.get("status") in ("publishing", "published", "partial"):
+            last = e["status"]
+    return last
+
+
 def already_posted(log: Path, day: date) -> bool:
-    return any(e.get("date") == day.isoformat() and e.get("status") in ("publishing", "published", "partial")
-               for e in _entries(log))
+    return day_status(log, day) is not None
 
 
 def _append(log: Path, entry: dict) -> None:
@@ -115,9 +135,15 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         print("IG_ACCESS_TOKEN and IG_USER_ID must be set")
         return 1
     log = root / "logs" / "posts.jsonl"
-    if mode == "post" and already_posted(log, day):
-        print(f"{day} already posted: nothing to do")
-        return 0
+    if mode == "post":
+        deps.sync_repo()
+        status = day_status(log, day)
+        if status == "published":
+            print(f"{day} already posted: nothing to do")
+            return 0
+        if status is not None:
+            print(f"{day}: an earlier run stopped at '{status}'. Check Instagram by hand; nothing was posted again.")
+            return 1
 
     apps = apps or load_apps()
     banks = banks or {a: load_bank(a) for a in apps}
@@ -148,11 +174,12 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         prune_old(out_root, day)
         deps.git_publish([out_root], f"media for {day}")
         repo = env.get("GITHUB_REPOSITORY", DEFAULT_REPO)
-        base = f"https://raw.githubusercontent.com/{repo}/main/out/{day.isoformat()}"
+        base = f"https://raw.githubusercontent.com/{repo}/{deps.head_sha()}/out/{day.isoformat()}"
         urls = SetUrls(slides=[f"{base}/{p.name}" for p in rs.slides], reel=f"{base}/{rs.reel.name}",
                        story=f"{base}/{rs.story.name}")
         expected = {u: p.stat().st_size for u, p in zip(urls.slides, rs.slides)}
         expected[urls.reel] = rs.reel.stat().st_size
+        expected[urls.story] = rs.story.stat().st_size
         deps.wait_for_urls(expected)
 
         post_cap, reel_cap = build_captions(apps[sel.app], sel.item)
@@ -165,7 +192,13 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
                  "at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
         _append(log, entry)
         deps.git_publish([log], f"log: publishing {day}")
-        ids = deps.publish_set(ig_id, token, prepared)
+        try:
+            ids = deps.publish_set(ig_id, token, prepared)
+        except PartialPublish as e:
+            _append(log, dict(entry, status="partial", ids=e.ids))
+            deps.git_publish([log], f"log: partial publish {day}")
+            print(f"run failed: {e}")
+            return 1
         _append(log, dict(entry, status="published", ids=ids))
         deps.git_publish([log], f"log: published {day}")
         print(f"published {sel.item['id']}: {ids}")

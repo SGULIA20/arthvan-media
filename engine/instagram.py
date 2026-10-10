@@ -18,6 +18,14 @@ class InstagramError(Exception):
     pass
 
 
+class PartialPublish(InstagramError):
+    """Publishing stopped midway; `ids` holds what is already live."""
+
+    def __init__(self, message: str, ids: dict):
+        super().__init__(message)
+        self.ids = ids
+
+
 @dataclass(frozen=True)
 class SetUrls:
     slides: list
@@ -92,7 +100,10 @@ def prepare_set(ig_id: str, token: str, urls: SetUrls, captions: Captions, thumb
 def publish_set(ig_id: str, token: str, prepared: Prepared) -> dict:
     ids = {}
     for label in ("post", "reel", "story"):
-        out = call("POST", f"/{ig_id}/media_publish", token, {"creation_id": getattr(prepared, label)})
+        try:
+            out = call("POST", f"/{ig_id}/media_publish", token, {"creation_id": getattr(prepared, label)})
+        except InstagramError as e:
+            raise PartialPublish(f"publishing {label} failed after {sorted(ids)} were live: {e}", dict(ids)) from None
         ids[label] = out["id"]
     return ids
 

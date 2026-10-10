@@ -4,7 +4,7 @@ import urllib.error
 import pytest
 
 from engine import instagram
-from engine.instagram import Captions, InstagramError, SetUrls, prepare_set, publish_set, refresh_token
+from engine.instagram import Captions, InstagramError, PartialPublish, SetUrls, prepare_set, publish_set, refresh_token
 
 TOKEN = "SECRET-TOKEN-123"
 URLS = SetUrls(slides=["https://x/s1.jpg", "https://x/s2.jpg", "https://x/s3.jpg"], reel="https://x/r.mp4", story="https://x/r.mp4")
@@ -97,3 +97,17 @@ def test_refresh_token_calls_the_refresh_endpoint(monkeypatch):
     out = refresh_token(TOKEN)
     assert seen["path"].endswith("/refresh_access_token") and seen["params"]["grant_type"] == "ig_refresh_token"
     assert out == {"access_token": "NEW", "expires_in": 5184000}
+
+
+def test_publish_failure_reports_what_was_already_published(monkeypatch):
+    fake = Fake()
+    prepared = run_prepare(fake, monkeypatch)
+
+    def failing(method, path, token, params=None):
+        if path.endswith("/media_publish") and params["creation_id"] == "c5":
+            raise InstagramError("reel failed")
+        return fake(method, path, token, params)
+    monkeypatch.setattr(instagram, "call", failing)
+    with pytest.raises(PartialPublish) as e:
+        publish_set("17841", TOKEN, prepared)
+    assert e.value.ids == {"post": "m-c4"}

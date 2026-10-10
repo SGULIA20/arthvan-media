@@ -243,7 +243,7 @@
  {
   "id": "smb-cost-split",
   "template": "ink",
-  "caption": "Where does each rupee of sales go? An example split shows what is left over.",
+  "caption": "Where does each hundred rupees of sales go? An example split shows what is left over.",
   "hashtags": [
    "#Costs",
    "#Margins"
@@ -251,7 +251,7 @@
   "slides": [
    {
     "kind": "hook",
-    "text": "Where does each rupee of sales go?"
+    "text": "Where does each hundred rupees of sales go?"
    },
    {
     "kind": "bars",

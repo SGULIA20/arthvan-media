@@ -2,7 +2,7 @@
  {
   "id": "wp-new-name",
   "template": "ink",
-  "caption": "A new name every day. Tomorrow you will be someone else. Waypoint is free on Google Play.",
+  "caption": "A fresh name and avatar every day. Waypoint is free on Google Play.",
   "hashtags": [
    "#Waypoint",
    "#NewApp"
@@ -10,11 +10,11 @@
   "slides": [
    {
     "kind": "hook",
-    "text": "A new name every day."
+    "text": "A fresh name every day."
    },
    {
     "kind": "quote",
-    "text": "Tomorrow you will be someone else."
+    "text": "Open the app. Meet today's name."
    },
    {
     "kind": "steps",
@@ -35,7 +35,7 @@
  {
   "id": "wp-voice",
   "template": "dusk",
-  "caption": "Say it out loud. Hear it in another voice. Voice posts on Waypoint are re-spoken before they reach the Wall.",
+  "caption": "Say it out loud. Voice posts on Waypoint are re-spoken before they reach the Wall.",
   "hashtags": [
    "#VoicePosts",
    "#Waypoint"
@@ -43,7 +43,7 @@
   "slides": [
    {
     "kind": "hook",
-    "text": "Say it out loud. Hear it in another voice."
+    "text": "Say it out loud."
    },
    {
     "kind": "stat",
@@ -52,7 +52,7 @@
    },
    {
     "kind": "quote",
-    "text": "Your words stay. The voice changes."
+    "text": "Speak. Waypoint does the rest."
    },
    {
     "kind": "steps",
@@ -68,7 +68,7 @@
  {
   "id": "wp-cross-paths",
   "template": "spark",
-  "caption": "Cross paths with one person for a timed chat. Then you both move on.",
+  "caption": "Cross paths with one person for a timed chat on Waypoint.",
   "hashtags": [
    "#Waypoint",
    "#NewApp"
@@ -81,7 +81,7 @@
    {
     "kind": "stat",
     "value": "A timed chat",
-    "text": "with someone who is listening."
+    "text": "with one person on Waypoint."
    },
    {
     "kind": "quote",
@@ -101,7 +101,7 @@
  {
   "id": "wp-wall",
   "template": "ink",
-  "caption": "The Wall is where you say it. Posts are checked by an automated filter before they appear.",
+  "caption": "The Wall is where posts appear on Waypoint. Post, read and react.",
   "hashtags": [
    "#Waypoint",
    "#TheWall"
@@ -109,7 +109,7 @@
   "slides": [
    {
     "kind": "hook",
-    "text": "The Wall is where you say it."
+    "text": "The Wall is where posts appear."
    },
    {
     "kind": "steps",
@@ -122,8 +122,8 @@
    },
    {
     "kind": "stat",
-    "value": "Posts",
-    "text": "are checked by an automated filter before they appear."
+    "value": "The Wall",
+    "text": "is shared by everyone on Waypoint."
    },
    {
     "kind": "quote",
@@ -160,7 +160,7 @@
    },
    {
     "kind": "quote",
-    "text": "Let it out. Then carry on."
+    "text": "Swing. Break. Repeat."
    }
   ]
  },
@@ -268,7 +268,7 @@
  {
   "id": "wp-say-it",
   "template": "spark",
-  "caption": "The thing you cannot say anywhere else. Try saying it on Waypoint.",
+  "caption": "Something on your mind? Write it, speak it, or break something on Waypoint.",
   "hashtags": [
    "#Waypoint",
    "#SayIt"
@@ -276,11 +276,11 @@
   "slides": [
    {
     "kind": "hook",
-    "text": "The thing you cannot say anywhere else."
+    "text": "Something on your mind?"
    },
    {
     "kind": "quote",
-    "text": "Try saying it here."
+    "text": "Put it on the Wall."
    },
    {
     "kind": "steps",
@@ -351,7 +351,7 @@
    },
    {
     "kind": "quote",
-    "text": "Who will you be today?"
+    "text": "Your name for today is waiting."
    },
    {
     "kind": "steps",
@@ -433,7 +433,7 @@
  {
   "id": "wp-heard",
   "template": "dusk",
-  "caption": "Sometimes you want to be heard. Sometimes you want to listen. Waypoint has room for both.",
+  "caption": "Post, read or chat. Waypoint has room for all three.",
   "hashtags": [
    "#Waypoint",
    "#Community"
@@ -441,16 +441,16 @@
   "slides": [
    {
     "kind": "hook",
-    "text": "Sometimes you just want to be heard."
+    "text": "Post. Read. Chat."
    },
    {
     "kind": "quote",
-    "text": "Sometimes you want to listen."
+    "text": "Pick any one today."
    },
    {
     "kind": "stat",
     "value": "Waypoint",
-    "text": "has room for both."
+    "text": "has room for all three."
    },
    {
     "kind": "steps",
@@ -492,7 +492,7 @@
    {
     "kind": "stat",
     "value": "Re-spoken",
-    "text": "in a different voice."
+    "text": "in a synthetic voice."
    }
   ]
  },

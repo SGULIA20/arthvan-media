@@ -39,3 +39,9 @@ def test_refresh_workflow_runs_weekly():
     wf = load("refresh-token.yml")
     assert wf["on"]["schedule"] == [{"cron": "30 12 * * 0"}]
     assert "secrets.IG_ACCESS_TOKEN" in (WF / "refresh-token.yml").read_text()
+
+
+def test_checkout_always_takes_the_latest_main_so_reruns_see_the_log():
+    steps = load("daily-post.yml")["jobs"]["post"]["steps"]
+    checkout = [x for x in steps if str(x.get("uses", "")).startswith("actions/checkout")][0]
+    assert checkout["with"]["ref"] == "main"

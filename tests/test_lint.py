@@ -13,7 +13,7 @@ def item(**kw):
         "caption": "Plain words about the app.",
         "hashtags": ["#One", "#Two"],
         "slides": [
-            {"kind": "hook", "text": "A calm headline"},
+            {"kind": "hook", "text": "A clear headline"},
             {"kind": "steps", "text": "Three things", "items": ["one", "two", "three"]},
             {"kind": "quote", "text": "A closing line"},
         ],
@@ -83,3 +83,16 @@ def test_hashtags_are_capped_at_five_with_item_tags_first():
     post, _ = build_captions(APPS["scoremybiz"], copy.deepcopy(it))
     tags = [w for w in post.split() if w.startswith("#")]
     assert len(tags) == 5 and tags[:4] == ["#A", "#B", "#C", "#D"]
+
+
+def test_waypoint_identity_moderation_and_emotional_claims_are_blocked():
+    for bad in ("Tomorrow you will be someone else", "Posts are checked by an automated filter", "Let it out",
+                "Talk to someone who is listening", "Say what you cannot say anywhere else", "Your real name stays hidden",
+                "Good for stress", "You are not alone", "A place to vent", "Moderated by us", "We protect you"):
+        assert lint_item(APPS["waypoint"], item(caption=bad)), bad
+
+
+def test_scoremybiz_regulated_and_money_size_claims_are_blocked():
+    for bad in ("Get a loan faster", "Improve your CIBIL", "Save tax with us", "Certified by experts",
+                "Earn two lakh more", "Ten percent growth", "Costs fell 5%", "A crore in sales"):
+        assert lint_item(APPS["scoremybiz"], item(caption=bad)), bad

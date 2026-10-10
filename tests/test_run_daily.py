@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from engine.instagram import Prepared
+from engine.instagram import PartialPublish, Prepared
 from engine.render import RenderedSet
 from engine.run_daily import Deps, already_posted, prune_old, run, wait_for_urls
 
@@ -19,7 +19,8 @@ class World:
         self.fail_wait = False
         self.deps = Deps(
             render_set=self.render_set, verify_set=lambda rs: [], git_publish=self.git_publish,
-            wait_for_urls=self.wait_for_urls, prepare_set=self.prepare_set, publish_set=self.publish_set)
+            wait_for_urls=self.wait_for_urls, prepare_set=self.prepare_set, publish_set=self.publish_set,
+            sync_repo=lambda: None, head_sha=lambda: "deadbeef")
 
     def render_set(self, sel, app_cfg, out_dir, fps=30):
         self.rendered_ids.append(sel.item["id"])
@@ -42,6 +43,7 @@ class World:
         self.events.append(("wait", len(expected)))
 
     def prepare_set(self, ig_id, token, urls, captions, **kw):
+        self.last_urls = urls
         self.events.append(("prepare", urls.reel.split("/")[-2]))
         return Prepared("a", "b", "c")
 
@@ -152,3 +154,49 @@ def test_prune_old_removes_only_old_day_folders(tmp_path):
     (out / "notes").mkdir()
     prune_old(out, DAY, keep_days=14)
     assert sorted(p.name for p in out.iterdir()) == ["2026-10-05", "2026-10-11", "notes"]
+
+
+def log_path(tmp_path):
+    return tmp_path / "logs" / "posts.jsonl"
+
+
+def seed_log(tmp_path, status, ids=None):
+    lp = log_path(tmp_path)
+    lp.parent.mkdir(parents=True, exist_ok=True)
+    entry = {"date": DAY.isoformat(), "status": status}
+    if ids:
+        entry["ids"] = ids
+    lp.write_text(json.dumps(entry) + "\n")
+
+
+def test_repo_is_synced_before_the_already_posted_check(tmp_path):
+    w = World(tmp_path)
+    w.deps.sync_repo = lambda: seed_log(tmp_path, "published")
+    assert go(w) == 0
+    assert w.rendered_ids == [] and w.count("publish") == 0
+
+
+def test_a_day_stuck_at_publishing_fails_loudly_and_never_posts_again(tmp_path):
+    w = World(tmp_path)
+    seed_log(tmp_path, "publishing")
+    assert go(w) == 1
+    assert w.rendered_ids == [] and w.count("publish") == 0
+
+
+def test_a_partial_publish_is_recorded_with_its_ids_and_fails(tmp_path):
+    w = World(tmp_path)
+
+    def half(ig, tok, prep):
+        raise PartialPublish("reel failed", {"post": "1"})
+    w.deps.publish_set = half
+    assert go(w) == 1
+    last = json.loads(log_path(tmp_path).read_text().splitlines()[-1])
+    assert last["status"] == "partial" and last["ids"] == {"post": "1"}
+    assert go(w) == 1 and w.count("prepare") == 1  # the rerun posts nothing new
+
+
+def test_media_urls_pin_the_pushed_commit_not_a_branch(tmp_path):
+    w = World(tmp_path)
+    assert go(w) == 0
+    for u in [*w.last_urls.slides, w.last_urls.reel, w.last_urls.story]:
+        assert "/deadbeef/out/2026-10-11/" in u and "/main/" not in u

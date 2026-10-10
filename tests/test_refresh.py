@@ -21,3 +21,11 @@ def test_api_errors_and_missing_token_fail(monkeypatch):
     monkeypatch.setattr(instagram, "refresh_token", boom)
     assert refresh.main({"IG_ACCESS_TOKEN": "t"}) == 1
     assert refresh.main({}) == 1
+
+
+def test_a_token_younger_than_a_day_is_not_a_failure(monkeypatch, capsys):
+    def young(t):
+        raise instagram.InstagramError("HTTP 400: token must be at least 24 hours old")
+    monkeypatch.setattr(instagram, "refresh_token", young)
+    assert refresh.main({"IG_ACCESS_TOKEN": "t"}) == 0
+    assert "too new" in capsys.readouterr().out

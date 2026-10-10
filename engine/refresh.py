@@ -14,6 +14,9 @@ def main(env=None) -> int:
     try:
         out = instagram.refresh_token(token)
     except instagram.InstagramError as e:
+        if "24 hours" in str(e):
+            print("Token is too new to refresh (Instagram needs it to be a day old); nothing to do yet")
+            return 0
         print(f"::error::token refresh failed: {e}")
         return 1
     if out.get("access_token") != token:
