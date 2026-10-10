@@ -1,1 +1,663 @@
-[]
+[
+ {
+  "id": "wp-new-name",
+  "template": "ink",
+  "caption": "A new name every day. Tomorrow you will be someone else. Waypoint is free on Google Play.",
+  "hashtags": [
+   "#Waypoint",
+   "#NewApp"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "A new name every day."
+   },
+   {
+    "kind": "quote",
+    "text": "Tomorrow you will be someone else."
+   },
+   {
+    "kind": "steps",
+    "text": "Each day",
+    "items": [
+     "Open Waypoint",
+     "Meet today's name",
+     "Say something on the Wall"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "Free",
+    "text": "on Google Play."
+   }
+  ]
+ },
+ {
+  "id": "wp-voice",
+  "template": "dusk",
+  "caption": "Say it out loud. Hear it in another voice. Voice posts on Waypoint are re-spoken before they reach the Wall.",
+  "hashtags": [
+   "#VoicePosts",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Say it out loud. Hear it in another voice."
+   },
+   {
+    "kind": "stat",
+    "value": "Voice posts",
+    "text": "are re-spoken in a synthetic voice."
+   },
+   {
+    "kind": "quote",
+    "text": "Your words stay. The voice changes."
+   },
+   {
+    "kind": "steps",
+    "text": "How it works",
+    "items": [
+     "Record a short voice post",
+     "Waypoint re-speaks it",
+     "It goes to the Wall"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wp-cross-paths",
+  "template": "spark",
+  "caption": "Cross paths with one person for a timed chat. Then you both move on.",
+  "hashtags": [
+   "#Waypoint",
+   "#NewApp"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Cross paths with one person."
+   },
+   {
+    "kind": "stat",
+    "value": "A timed chat",
+    "text": "with someone who is listening."
+   },
+   {
+    "kind": "quote",
+    "text": "When the time is up, you both move on."
+   },
+   {
+    "kind": "steps",
+    "text": "What to expect",
+    "items": [
+     "One person",
+     "One short chat",
+     "Then a fresh start"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wp-wall",
+  "template": "ink",
+  "caption": "The Wall is where you say it. Posts are checked by an automated filter before they appear.",
+  "hashtags": [
+   "#Waypoint",
+   "#TheWall"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "The Wall is where you say it."
+   },
+   {
+    "kind": "steps",
+    "text": "On the Wall you can",
+    "items": [
+     "Post what is on your mind",
+     "Read what others posted",
+     "React to a post"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "Posts",
+    "text": "are checked by an automated filter before they appear."
+   },
+   {
+    "kind": "quote",
+    "text": "Say it your way."
+   }
+  ]
+ },
+ {
+  "id": "wp-break-room",
+  "template": "dusk",
+  "caption": "A room made for breaking things. The Break Room in Waypoint takes ninety seconds, once a day.",
+  "hashtags": [
+   "#BreakRoom",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "A room made for breaking things."
+   },
+   {
+    "kind": "stat",
+    "value": "90 seconds",
+    "text": "once a day in the Break Room."
+   },
+   {
+    "kind": "steps",
+    "text": "In the Break Room",
+    "items": [
+     "Swipe to swing",
+     "Break what is in front of you",
+     "Come back tomorrow"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Let it out. Then carry on."
+   }
+  ]
+ },
+ {
+  "id": "wp-daily-path",
+  "template": "spark",
+  "caption": "One question a day. Daily Path brings you a new one every day.",
+  "hashtags": [
+   "#DailyPath",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "One question a day."
+   },
+   {
+    "kind": "stat",
+    "value": "Daily Path",
+    "text": "sends a new question each day."
+   },
+   {
+    "kind": "quote",
+    "text": "Take a minute with it."
+   },
+   {
+    "kind": "steps",
+    "text": "Your day on Waypoint",
+    "items": [
+     "Read today's question",
+     "Think about it",
+     "Answer when you are ready"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wp-languages",
+  "template": "ink",
+  "caption": "Waypoint speaks your language, with sixteen languages inside the app.",
+  "hashtags": [
+   "#Languages",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Waypoint speaks your language."
+   },
+   {
+    "kind": "stat",
+    "value": "16 languages",
+    "text": "inside the app."
+   },
+   {
+    "kind": "steps",
+    "text": "Including",
+    "items": [
+     "Hindi",
+     "Bengali",
+     "Tamil",
+     "Spanish",
+     "Swahili"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Chat across languages with auto-translate."
+   }
+  ]
+ },
+ {
+  "id": "wp-mira",
+  "template": "dusk",
+  "caption": "Meet Mira, an AI guide inside Waypoint. Say hello whenever you like.",
+  "hashtags": [
+   "#Waypoint",
+   "#AIGuide"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Meet Mira."
+   },
+   {
+    "kind": "stat",
+    "value": "Mira",
+    "text": "is an AI guide inside Waypoint."
+   },
+   {
+    "kind": "quote",
+    "text": "Say hello whenever you like."
+   },
+   {
+    "kind": "steps",
+    "text": "Mira can",
+    "items": [
+     "Say hello",
+     "Chat about your day",
+     "Help you find your way around"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wp-say-it",
+  "template": "spark",
+  "caption": "The thing you cannot say anywhere else. Try saying it on Waypoint.",
+  "hashtags": [
+   "#Waypoint",
+   "#SayIt"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "The thing you cannot say anywhere else."
+   },
+   {
+    "kind": "quote",
+    "text": "Try saying it here."
+   },
+   {
+    "kind": "steps",
+    "text": "Three ways to say it",
+    "items": [
+     "Write it",
+     "Speak it",
+     "Break something"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "Free",
+    "text": "on Google Play."
+   }
+  ]
+ },
+ {
+  "id": "wp-timed-chat",
+  "template": "ink",
+  "caption": "Short chats, on purpose. A timed chat ends when the time is up.",
+  "hashtags": [
+   "#Waypoint",
+   "#Chat"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Short chats. On purpose."
+   },
+   {
+    "kind": "quote",
+    "text": "A timed chat ends when the time is up."
+   },
+   {
+    "kind": "stat",
+    "value": "One person",
+    "text": "at a time."
+   },
+   {
+    "kind": "steps",
+    "text": "How it goes",
+    "items": [
+     "You are matched",
+     "You chat until time runs out",
+     "You both move on"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wp-fresh-name",
+  "template": "dusk",
+  "caption": "Wake up. Get a new name. A fresh name and avatar every day on Waypoint.",
+  "hashtags": [
+   "#Waypoint",
+   "#NewApp"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Wake up. Get a new name."
+   },
+   {
+    "kind": "stat",
+    "value": "Every day",
+    "text": "a fresh name and avatar."
+   },
+   {
+    "kind": "quote",
+    "text": "Who will you be today?"
+   },
+   {
+    "kind": "steps",
+    "text": "You choose",
+    "items": [
+     "What to post",
+     "Whether to chat",
+     "When to log off"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wp-three-ways",
+  "template": "spark",
+  "caption": "Three ways to spend five minutes on Waypoint.",
+  "hashtags": [
+   "#Waypoint",
+   "#AppOfTheDay"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Three ways to spend five minutes on Waypoint."
+   },
+   {
+    "kind": "steps",
+    "text": "Pick one",
+    "items": [
+     "Read the Wall",
+     "Answer the daily question",
+     "Visit the Break Room"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "90 seconds",
+    "text": "is all the Break Room takes."
+   },
+   {
+    "kind": "quote",
+    "text": "Small visits count."
+   }
+  ]
+ },
+ {
+  "id": "wp-on-play",
+  "template": "ink",
+  "caption": "Waypoint is on Google Play. Android first, free to install.",
+  "hashtags": [
+   "#AndroidApps",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Waypoint is on Google Play."
+   },
+   {
+    "kind": "steps",
+    "text": "Get it",
+    "items": [
+     "Open Google Play",
+     "Search Waypoint",
+     "Install it free"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Android first."
+   },
+   {
+    "kind": "stat",
+    "value": "Free",
+    "text": "to install."
+   }
+  ]
+ },
+ {
+  "id": "wp-heard",
+  "template": "dusk",
+  "caption": "Sometimes you want to be heard. Sometimes you want to listen. Waypoint has room for both.",
+  "hashtags": [
+   "#Waypoint",
+   "#Community"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Sometimes you just want to be heard."
+   },
+   {
+    "kind": "quote",
+    "text": "Sometimes you want to listen."
+   },
+   {
+    "kind": "stat",
+    "value": "Waypoint",
+    "text": "has room for both."
+   },
+   {
+    "kind": "steps",
+    "text": "Waypoint gives you",
+    "items": [
+     "The Wall to post on",
+     "A chat with one person",
+     "A guide called Mira"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wp-voice-how",
+  "template": "spark",
+  "caption": "Voice posts, explained, step by step.",
+  "hashtags": [
+   "#VoicePosts",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Voice posts, explained."
+   },
+   {
+    "kind": "steps",
+    "text": "Step by step",
+    "items": [
+     "Tap to record",
+     "Waypoint re-speaks your words",
+     "Your post appears on the Wall"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "The words are yours."
+   },
+   {
+    "kind": "stat",
+    "value": "Re-spoken",
+    "text": "in a different voice."
+   }
+  ]
+ },
+ {
+  "id": "wp-break-room-how",
+  "template": "ink",
+  "caption": "How the Break Room works, in three steps.",
+  "hashtags": [
+   "#BreakRoom",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "How the Break Room works."
+   },
+   {
+    "kind": "steps",
+    "text": "Three steps",
+    "items": [
+     "Enter the room",
+     "Swipe to swing",
+     "Watch things break"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "90 seconds",
+    "text": "once a day."
+   },
+   {
+    "kind": "quote",
+    "text": "Back again tomorrow."
+   }
+  ]
+ },
+ {
+  "id": "wp-auto-translate",
+  "template": "dusk",
+  "caption": "Read it in your language. Auto-translate is one tap away in chat and on the Wall.",
+  "hashtags": [
+   "#Translate",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Read it in your language."
+   },
+   {
+    "kind": "stat",
+    "value": "Auto-translate",
+    "text": "is one tap away."
+   },
+   {
+    "kind": "steps",
+    "text": "Works in",
+    "items": [
+     "Chat",
+     "The Wall"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Say it in yours. Read it in theirs."
+   }
+  ]
+ },
+ {
+  "id": "wp-new-here",
+  "template": "spark",
+  "caption": "New here? Start small. Open the app, read the Wall, try the Break Room.",
+  "hashtags": [
+   "#Waypoint",
+   "#NewApp"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "New here? Start small."
+   },
+   {
+    "kind": "steps",
+    "text": "Your first visit",
+    "items": [
+     "Open the app",
+     "Read the Wall",
+     "Try the Break Room"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "No pressure to post."
+   },
+   {
+    "kind": "stat",
+    "value": "Free",
+    "text": "on Google Play."
+   }
+  ]
+ },
+ {
+  "id": "wp-built-by",
+  "template": "ink",
+  "caption": "Built by a small team. Waypoint is new, so some parts are rough. Tell us what to fix.",
+  "hashtags": [
+   "#IndieApp",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Built by a small team."
+   },
+   {
+    "kind": "quote",
+    "text": "It is new, so some parts are rough."
+   },
+   {
+    "kind": "steps",
+    "text": "Help us improve",
+    "items": [
+     "Try Waypoint",
+     "Tell us what broke",
+     "Tell us what you want next"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "Free",
+    "text": "on Google Play."
+   }
+  ]
+ },
+ {
+  "id": "wp-daily-rhythm",
+  "template": "dusk",
+  "caption": "A small daily rhythm: a fresh name, a new question, a short break.",
+  "hashtags": [
+   "#Waypoint",
+   "#DailyHabits"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "A small daily rhythm."
+   },
+   {
+    "kind": "steps",
+    "text": "Every day",
+    "items": [
+     "A fresh name",
+     "A new question",
+     "A short break in the Break Room"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "Waypoint",
+    "text": "is built for daily visits."
+   },
+   {
+    "kind": "quote",
+    "text": "Come back tomorrow."
+   }
+  ]
+ }
+]

@@ -1,1 +1,751 @@
-[]
+[
+ {
+  "id": "smb-profit-vs-cash",
+  "template": "ink",
+  "caption": "Profit on paper is not cash in hand. Here is the difference, and how to see it in minutes.",
+  "hashtags": [
+   "#CashFlow",
+   "#BusinessTips"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Profit on paper is not cash in hand.",
+    "sub": "Both can be true on the same day."
+   },
+   {
+    "kind": "bars",
+    "text": "An example month",
+    "rows": [
+     {
+      "label": "Profit on paper",
+      "value": 100,
+      "display": "₹50,000"
+     },
+     {
+      "label": "Cash in hand",
+      "value": 20,
+      "display": "₹10,000"
+     }
+    ],
+    "sample": true
+   },
+   {
+    "kind": "stat",
+    "value": "₹40,000",
+    "text": "is waiting with customers.",
+    "sample": true
+   },
+   {
+    "kind": "quote",
+    "text": "Know where your money is."
+   }
+  ]
+ },
+ {
+  "id": "smb-seven-areas",
+  "template": "dusk",
+  "caption": "Seven areas decide how healthy your business is. ScoreMyBiz checks all of them in one score.",
+  "hashtags": [
+   "#BusinessHealth",
+   "#SME"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Seven areas decide how healthy your business is."
+   },
+   {
+    "kind": "steps",
+    "text": "The first four",
+    "items": [
+     "Profitability",
+     "Cash flow",
+     "Working capital",
+     "Liquidity"
+    ]
+   },
+   {
+    "kind": "steps",
+    "text": "And the next three",
+    "items": [
+     "Cost efficiency",
+     "Growth",
+     "Debt burden"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "7",
+    "text": "areas checked in one score."
+   }
+  ]
+ },
+ {
+  "id": "smb-eight-numbers",
+  "template": "spark",
+  "caption": "Eight numbers from your month. A few minutes. One score.",
+  "hashtags": [
+   "#SmallBusiness",
+   "#Accounting"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Eight numbers from your month."
+   },
+   {
+    "kind": "steps",
+    "text": "A few of them",
+    "items": [
+     "Monthly sales",
+     "Monthly costs",
+     "Cash in hand",
+     "Customer dues"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "5",
+    "text": "minutes to your score."
+   },
+   {
+    "kind": "quote",
+    "text": "Then see where you stand."
+   }
+  ]
+ },
+ {
+  "id": "smb-sales-vs-cash",
+  "template": "ink",
+  "caption": "Sales were good. So where did the cash go? A sample month shows how it happens.",
+  "hashtags": [
+   "#CashFlow",
+   "#Retail"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Sales were good. Where did the cash go?"
+   },
+   {
+    "kind": "bars",
+    "text": "A sample month",
+    "rows": [
+     {
+      "label": "Sales",
+      "value": 100,
+      "display": "₹1,20,000"
+     },
+     {
+      "label": "Costs",
+      "value": 56,
+      "display": "₹66,854"
+     },
+     {
+      "label": "Cash in hand",
+      "value": 5,
+      "display": "₹6,404"
+     }
+    ],
+    "sample": true
+   },
+   {
+    "kind": "stat",
+    "value": "₹6,404",
+    "text": "left in hand.",
+    "sample": true
+   },
+   {
+    "kind": "quote",
+    "text": "Enter the numbers. See the story."
+   }
+  ]
+ },
+ {
+  "id": "smb-unpaid-bills",
+  "template": "dusk",
+  "caption": "Unpaid bills are quiet cash problems. Three questions to ask this week.",
+  "hashtags": [
+   "#Receivables",
+   "#BusinessTips"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Unpaid bills are quiet cash problems."
+   },
+   {
+    "kind": "steps",
+    "text": "Three questions to ask this week",
+    "items": [
+     "Who owes me money?",
+     "Which bills are overdue?",
+     "Who can I call today?"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Older bills are usually harder to collect."
+   },
+   {
+    "kind": "stat",
+    "value": "₹40,000",
+    "text": "stuck with customers in this example.",
+    "sample": true
+   }
+  ]
+ },
+ {
+  "id": "smb-emi-weight",
+  "template": "spark",
+  "caption": "Is your monthly EMI too heavy for the business? Compare two numbers.",
+  "hashtags": [
+   "#Debt",
+   "#MSME"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Is your monthly EMI too heavy?"
+   },
+   {
+    "kind": "steps",
+    "text": "Compare two things",
+    "items": [
+     "What you pay in EMI each month",
+     "What the business earns each month"
+    ]
+   },
+   {
+    "kind": "bars",
+    "text": "An example",
+    "rows": [
+     {
+      "label": "Monthly profit",
+      "value": 100,
+      "display": "₹30,000"
+     },
+     {
+      "label": "EMI",
+      "value": 40,
+      "display": "₹12,000"
+     }
+    ],
+    "sample": true
+   },
+   {
+    "kind": "quote",
+    "text": "Debt burden is one of the seven areas."
+   }
+  ]
+ },
+ {
+  "id": "smb-cost-split",
+  "template": "ink",
+  "caption": "Where does each rupee of sales go? An example split shows what is left over.",
+  "hashtags": [
+   "#Costs",
+   "#Margins"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Where does each rupee of sales go?"
+   },
+   {
+    "kind": "bars",
+    "text": "An example split",
+    "rows": [
+     {
+      "label": "Stock",
+      "value": 60,
+      "display": "₹60"
+     },
+     {
+      "label": "Staff",
+      "value": 15,
+      "display": "₹15"
+     },
+     {
+      "label": "Rent",
+      "value": 10,
+      "display": "₹10"
+     },
+     {
+      "label": "Left over",
+      "value": 15,
+      "display": "₹15"
+     }
+    ],
+    "sample": true
+   },
+   {
+    "kind": "stat",
+    "value": "Cost efficiency",
+    "text": "shows how much is left."
+   },
+   {
+    "kind": "quote",
+    "text": "Small leaks add up."
+   }
+  ]
+ },
+ {
+  "id": "smb-working-capital",
+  "template": "dusk",
+  "caption": "Money in stock is money not in your hand. Ask these before you buy more.",
+  "hashtags": [
+   "#WorkingCapital",
+   "#Stock"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Money in stock is money not in your hand."
+   },
+   {
+    "kind": "stat",
+    "value": "Working capital",
+    "text": "is what keeps the shop running."
+   },
+   {
+    "kind": "steps",
+    "text": "Before buying more stock, ask",
+    "items": [
+     "Is last month's stock sold?",
+     "Can I pay my bills first?",
+     "Will it sell this month?"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Buy what sells. Hold less of what does not."
+   }
+  ]
+ },
+ {
+  "id": "smb-liquidity",
+  "template": "spark",
+  "caption": "Could you pay this month's bills from cash today? That is liquidity, in plain words.",
+  "hashtags": [
+   "#Liquidity",
+   "#BusinessTips"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Could you pay this month's bills from cash today?"
+   },
+   {
+    "kind": "quote",
+    "text": "That is liquidity, in plain words."
+   },
+   {
+    "kind": "steps",
+    "text": "Check these",
+    "items": [
+     "Cash in hand",
+     "Money in the bank",
+     "Bills due this month"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "Liquidity",
+    "text": "is one of the seven areas."
+   }
+  ]
+ },
+ {
+  "id": "smb-growth",
+  "template": "ink",
+  "caption": "Compare this month with last month. Not with your neighbour's shop.",
+  "hashtags": [
+   "#Growth",
+   "#Entrepreneur"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Compare this month with last month."
+   },
+   {
+    "kind": "quote",
+    "text": "Not with your neighbour's shop."
+   },
+   {
+    "kind": "stat",
+    "value": "Growth",
+    "text": "is one of the seven areas ScoreMyBiz checks."
+   },
+   {
+    "kind": "steps",
+    "text": "Ask each month",
+    "items": [
+     "Did sales go up?",
+     "Did costs go up faster?",
+     "Did cash go up too?"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "smb-weekly-habit",
+  "template": "dusk",
+  "caption": "Check your numbers every week. Small weekly moves beat one big yearly panic.",
+  "hashtags": [
+   "#BusinessHabits",
+   "#SmallBusiness"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Check your numbers every week."
+   },
+   {
+    "kind": "steps",
+    "text": "A weekly habit",
+    "items": [
+     "Look at your score",
+     "Read the suggested moves",
+     "Pick one thing to do"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Small weekly moves beat one big yearly panic."
+   },
+   {
+    "kind": "stat",
+    "value": "Free",
+    "text": "for 30 days. No credit card."
+   }
+  ]
+ },
+ {
+  "id": "smb-advisor",
+  "template": "spark",
+  "caption": "Ask in your own language. ScoreMyBiz Advisor is there for your business questions.",
+  "hashtags": [
+   "#BusinessAdvice",
+   "#India"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Ask in your own language."
+   },
+   {
+    "kind": "stat",
+    "value": "ScoreMyBiz Advisor",
+    "text": "answers your business questions."
+   },
+   {
+    "kind": "quote",
+    "text": "What is worrying you most about your business right now?"
+   },
+   {
+    "kind": "steps",
+    "text": "Try asking",
+    "items": [
+     "Why is my cash low?",
+     "Who owes me money?",
+     "What should I fix first?"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "smb-free-trial",
+  "template": "ink",
+  "caption": "Try ScoreMyBiz free for 30 days. No credit card needed.",
+  "hashtags": [
+   "#FreeTrial",
+   "#SmallBusiness"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Try it free for 30 days."
+   },
+   {
+    "kind": "steps",
+    "text": "What you do",
+    "items": [
+     "Enter a few numbers",
+     "Get your Business Health Score",
+     "See what to fix first"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "No",
+    "text": "credit card needed."
+   },
+   {
+    "kind": "quote",
+    "text": "Know where your money is."
+   }
+  ]
+ },
+ {
+  "id": "smb-kirana-sample",
+  "template": "dusk",
+  "caption": "A sample score for a kirana store. The weakest area is the first thing to fix.",
+  "hashtags": [
+   "#Kirana",
+   "#BusinessHealth"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "A sample score for a kirana store."
+   },
+   {
+    "kind": "stat",
+    "value": "58",
+    "text": "At Watch.",
+    "sample": true
+   },
+   {
+    "kind": "bars",
+    "text": "Sample breakdown",
+    "rows": [
+     {
+      "label": "Profitability",
+      "value": 70,
+      "display": "70"
+     },
+     {
+      "label": "Cash flow",
+      "value": 36,
+      "display": "36"
+     },
+     {
+      "label": "Working capital",
+      "value": 50,
+      "display": "50"
+     },
+     {
+      "label": "Liquidity",
+      "value": 62,
+      "display": "62"
+     }
+    ],
+    "sample": true
+   },
+   {
+    "kind": "quote",
+    "text": "The weakest area is the first thing to fix."
+   }
+  ]
+ },
+ {
+  "id": "smb-myth",
+  "template": "spark",
+  "caption": "Myth: if you made a profit, you have the cash. Fact: they can be far apart.",
+  "hashtags": [
+   "#CashFlow",
+   "#Myths"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Myth: if you made a profit, you have the cash."
+   },
+   {
+    "kind": "quote",
+    "text": "Fact: profit and cash can be far apart."
+   },
+   {
+    "kind": "bars",
+    "text": "Same month, two numbers",
+    "rows": [
+     {
+      "label": "Profit",
+      "value": 100,
+      "display": "₹50,000"
+     },
+     {
+      "label": "Cash",
+      "value": 20,
+      "display": "₹10,000"
+     }
+    ],
+    "sample": true
+   },
+   {
+    "kind": "stat",
+    "value": "Check both",
+    "text": "every month."
+   }
+  ]
+ },
+ {
+  "id": "smb-cash-stuck",
+  "template": "ink",
+  "caption": "Three signs your cash is stuck, and a quick way to check.",
+  "hashtags": [
+   "#CashFlow",
+   "#MSME"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Three signs your cash is stuck."
+   },
+   {
+    "kind": "steps",
+    "text": "Watch for",
+    "items": [
+     "Sales are fine but the till is thin",
+     "Suppliers wait for you",
+     "You borrow to pay routine bills"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "A score makes these visible."
+   },
+   {
+    "kind": "stat",
+    "value": "5",
+    "text": "minutes to find out."
+   }
+  ]
+ },
+ {
+  "id": "smb-why-score",
+  "template": "dusk",
+  "caption": "Why a score? A number you can compare each month is easier than a pile of notes.",
+  "hashtags": [
+   "#BusinessTips",
+   "#Tracking"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Why a score?"
+   },
+   {
+    "kind": "quote",
+    "text": "A number you can compare each month is easier than a pile of notes."
+   },
+   {
+    "kind": "steps",
+    "text": "It helps you",
+    "items": [
+     "See where you stand",
+     "Spot the weakest area",
+     "Track change over time"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "7",
+    "text": "areas in one score."
+   }
+  ]
+ },
+ {
+  "id": "smb-month-end",
+  "template": "spark",
+  "caption": "A simple month-end routine for any small business.",
+  "hashtags": [
+   "#MonthEnd",
+   "#BusinessHabits"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "A simple month-end routine."
+   },
+   {
+    "kind": "steps",
+    "text": "Do this",
+    "items": [
+     "Note your sales and costs",
+     "Note cash in hand",
+     "Note who owes you",
+     "Check your score"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Short and regular beats long and rare."
+   },
+   {
+    "kind": "stat",
+    "value": "Free",
+    "text": "for 30 days. No credit card."
+   }
+  ]
+ },
+ {
+  "id": "smb-made-for",
+  "template": "ink",
+  "caption": "Made for small businesses across India. Shops, traders and service businesses.",
+  "hashtags": [
+   "#India",
+   "#SmallBusiness"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "You run the business. Let the numbers talk."
+   },
+   {
+    "kind": "stat",
+    "value": "ScoreMyBiz",
+    "text": "turns your numbers into a score."
+   },
+   {
+    "kind": "steps",
+    "text": "Made for",
+    "items": [
+     "Small shops",
+     "Traders",
+     "Service businesses"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Works for businesses across India."
+   }
+  ]
+ },
+ {
+  "id": "smb-brand",
+  "template": "dusk",
+  "caption": "Know the health of your business. ScoreMyBiz is on Google Play.",
+  "hashtags": [
+   "#ScoreMyBiz",
+   "#BusinessHealth"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Know the health of your business."
+   },
+   {
+    "kind": "stat",
+    "value": "5",
+    "text": "minutes. 8 numbers."
+   },
+   {
+    "kind": "steps",
+    "text": "You get",
+    "items": [
+     "Your Business Health Score",
+     "Seven areas, one view",
+     "What to fix first"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Know where your money is."
+   }
+  ]
+ }
+]
