@@ -1,0 +1,53 @@
+name: daily-post
+
+on:
+  schedule:
+    - cron: '0 17 * * *'   # 18:00 Lagos time (WAT, UTC+1, no daylight saving)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'render = draw only, prepare = everything except publishing, post = publish'
+        type: choice
+        options: [render, prepare, post]
+        default: render
+      date:
+        description: 'Lagos date YYYY-MM-DD (optional)'
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Install Python packages
+        run: pip install -r requirements.txt
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+      - name: Unit tests
+        run: python -m pytest -q -m "not slow"
+      - name: Git identity
+        run: |
+          git config user.name "arthvan-autoposter"
+          git config user.email "autoposter@users.noreply.github.com"
+      - name: Run the daily set
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          PAUSE: ${{ vars.PAUSE }}
+          MODE: ${{ github.event.inputs.mode || 'post' }}
+          RUN_DATE: ${{ github.event.inputs.date }}
+        run: python -m engine.run_daily --mode "$MODE" ${RUN_DATE:+--date "$RUN_DATE"}
