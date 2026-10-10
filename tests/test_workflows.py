@@ -45,3 +45,9 @@ def test_checkout_always_takes_the_latest_main_so_reruns_see_the_log():
     steps = load("daily-post.yml")["jobs"]["post"]["steps"]
     checkout = [x for x in steps if str(x.get("uses", "")).startswith("actions/checkout")][0]
     assert checkout["with"]["ref"] == "main"
+
+
+def test_linkedin_credentials_reach_the_daily_job_and_the_token_date_reaches_the_weekly_job():
+    daily = (WF / "daily-post.yml").read_text()
+    assert "secrets.LINKEDIN_ACCESS_TOKEN" in daily and "secrets.LINKEDIN_PERSON_URN" in daily
+    assert "vars.LINKEDIN_TOKEN_DATE" in (WF / "refresh-token.yml").read_text()

@@ -96,3 +96,28 @@ def test_scoremybiz_regulated_and_money_size_claims_are_blocked():
     for bad in ("Get a loan faster", "Improve your CIBIL", "Save tax with us", "Certified by experts",
                 "Earn two lakh more", "Ten percent growth", "Costs fell 5%", "A crore in sales"):
         assert lint_item(APPS["scoremybiz"], item(caption=bad)), bad
+
+
+def sample_item():
+    it = item(hashtags=["#A", "#B"])
+    it["slides"][0] = {"kind": "stat", "value": "Rs 50,000", "text": "profit on paper", "sample": True}
+    return it
+
+
+def test_linkedin_text_has_a_clickable_link_not_link_in_bio_and_the_disclaimer():
+    from engine.lint import build_linkedin_text
+    text, tags = build_linkedin_text(APPS["scoremybiz"], sample_item())
+    assert APPS["scoremybiz"]["play_url"] in text and "Link in bio" not in text
+    assert "Not financial advice" in text and "#" not in text
+    assert tags[:2] == ["#A", "#B"] and len(tags) <= 5
+    wtext, _ = build_linkedin_text(APPS["waypoint"], item())
+    assert APPS["waypoint"]["play_url"] in wtext and "financial advice" not in wtext
+
+
+def test_alt_texts_cover_every_slide_plus_the_end_card():
+    from engine.lint import alt_texts
+    it = sample_item()
+    alts = alt_texts(APPS["scoremybiz"], it)
+    assert len(alts) == len(it["slides"]) + 1
+    assert all(a and len(a) <= 300 for a in alts)
+    assert "ScoreMyBiz" in alts[-1]

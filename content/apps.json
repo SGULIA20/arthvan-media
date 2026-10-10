@@ -78,7 +78,10 @@
       "support"
     ],
     "money_disclaimer": null,
-    "end_line": "Free on Google Play"
+    "end_line": "Free on Google Play",
+    "linkedin_footer": [
+      "Free on Google Play: {play_url}"
+    ]
   },
   "scoremybiz": {
     "name": "ScoreMyBiz",
@@ -122,7 +125,12 @@
       "grow your sales"
     ],
     "money_disclaimer": "Example figures for illustration. Not financial advice.",
-    "end_line": "Free for 30 days. No credit card."
+    "end_line": "Free for 30 days. No credit card.",
+    "linkedin_footer": [
+      "Free for 30 days. No credit card.",
+      "Google Play: {play_url}",
+      "scoremybiz.com"
+    ]
   },
   "_global": {
     "banned_phrases": [

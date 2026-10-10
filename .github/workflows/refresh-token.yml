@@ -20,4 +20,5 @@ jobs:
       - name: Refresh the Instagram token
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          LINKEDIN_TOKEN_DATE: ${{ vars.LINKEDIN_TOKEN_DATE }}
         run: python -m engine.refresh

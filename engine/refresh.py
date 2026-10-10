@@ -1,12 +1,41 @@
 """Weekly Instagram token refresh. Exit 1 whenever a human has to look."""
 import os
 import sys
+from datetime import date
 
 from . import instagram
 
 
-def main(env=None) -> int:
+LINKEDIN_WARN_DAYS = 50
+
+
+def linkedin_age_problem(env, today: date):
+    """LinkedIn self-serve tokens last about 60 days and cannot be refreshed by a program."""
+    raw = env.get("LINKEDIN_TOKEN_DATE")
+    if not raw:
+        return None
+    try:
+        created = date.fromisoformat(raw)
+    except ValueError:
+        return f"LINKEDIN_TOKEN_DATE is not a date: {raw!r}"
+    age = (today - created).days
+    if age >= LINKEDIN_WARN_DAYS:
+        return (f"LinkedIn token is {age} days old and expires at 60 (the {LINKEDIN_WARN_DAYS} day warning). "
+                "Run python -m engine.linkedin_auth on your Mac to renew it.")
+    return None
+
+
+def main(env=None, today=None) -> int:
     env = os.environ if env is None else env
+    rc = _refresh_instagram(env)
+    problem = linkedin_age_problem(env, today or date.today())
+    if problem:
+        print(f"::error::{problem}")
+        rc = 1
+    return rc
+
+
+def _refresh_instagram(env) -> int:
     token = env.get("IG_ACCESS_TOKEN")
     if not token:
         print("::error::IG_ACCESS_TOKEN is not set")

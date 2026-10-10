@@ -5,6 +5,7 @@ from pathlib import Path
 import pytest
 
 from engine.instagram import PartialPublish, Prepared
+from engine.linkedin import LinkedInError
 from engine.render import RenderedSet
 from engine.run_daily import Deps, already_posted, prune_old, run, wait_for_urls
 
@@ -17,10 +18,11 @@ class World:
     def __init__(self, tmp_path):
         self.root, self.events, self.rendered_ids = tmp_path, [], []
         self.fail_wait = False
+        self.li_calls, self.li_fail = [], 0
         self.deps = Deps(
             render_set=self.render_set, verify_set=lambda rs: [], git_publish=self.git_publish,
             wait_for_urls=self.wait_for_urls, prepare_set=self.prepare_set, publish_set=self.publish_set,
-            sync_repo=lambda: None, head_sha=lambda: "deadbeef")
+            sync_repo=lambda: None, head_sha=lambda: "deadbeef", post_linkedin=self.post_linkedin)
 
     def render_set(self, sel, app_cfg, out_dir, fps=30):
         self.rendered_ids.append(sel.item["id"])
@@ -50,6 +52,13 @@ class World:
     def publish_set(self, ig_id, token, prepared):
         self.events.append(("publish",))
         return {"post": "1", "reel": "2", "story": "3"}
+
+    def post_linkedin(self, token, urn, text, tags, slides, alts):
+        self.li_calls.append({"token": token, "urn": urn, "text": text, "tags": tags, "slides": slides, "alts": alts})
+        if self.li_fail:
+            self.li_fail -= 1
+            raise LinkedInError("token expired")
+        return "urn:li:share:99"
 
     def count(self, name):
         return sum(1 for e in self.events if e[0] == name)
@@ -200,3 +209,40 @@ def test_media_urls_pin_the_pushed_commit_not_a_branch(tmp_path):
     assert go(w) == 0
     for u in [*w.last_urls.slides, w.last_urls.reel, w.last_urls.story]:
         assert "/deadbeef/out/2026-10-11/" in u and "/main/" not in u
+
+
+LI_ENV = dict(ENV, LINKEDIN_ACCESS_TOKEN="litok", LINKEDIN_PERSON_URN="urn:li:person:me")
+
+
+def last_entry(tmp_path, channel):
+    rows = [json.loads(x) for x in log_path(tmp_path).read_text().splitlines()]
+    return [r for r in rows if r.get("channel", "instagram") == channel][-1]
+
+
+def test_linkedin_posts_after_instagram_with_the_same_slides_and_a_clickable_link(tmp_path):
+    w = World(tmp_path)
+    assert go(w, env=LI_ENV) == 0
+    assert w.count("publish") == 1 and len(w.li_calls) == 1
+    call = w.li_calls[0]
+    assert call["token"] == "litok" and call["urn"] == "urn:li:person:me" and len(call["slides"]) == 3
+    assert "https://play.google.com/store/apps/details?id=com.arthvananalytics.waypoint" in call["text"]
+    assert "Link in bio" not in call["text"] and len(call["alts"]) == 4
+    assert last_entry(tmp_path, "linkedin")["status"] == "published"
+
+
+def test_linkedin_is_skipped_quietly_without_credentials_and_in_prepare_mode(tmp_path):
+    w = World(tmp_path)
+    assert go(w) == 0 and w.li_calls == []
+    w2 = World(tmp_path / "b")
+    assert go(w2, mode="prepare", env=LI_ENV) == 0 and w2.li_calls == []
+
+
+def test_linkedin_failure_exits_1_keeps_instagram_published_and_a_rerun_retries_only_linkedin(tmp_path):
+    w = World(tmp_path)
+    w.li_fail = 1
+    assert go(w, env=LI_ENV) == 1
+    assert w.count("publish") == 1 and last_entry(tmp_path, "linkedin")["status"] == "failed"
+    assert last_entry(tmp_path, "instagram")["status"] == "published"
+    assert go(w, env=LI_ENV) == 0
+    assert w.count("publish") == 1 and w.rendered_ids == ["w0"] and len(w.li_calls) == 2
+    assert go(w, env=LI_ENV) == 0 and len(w.li_calls) == 2  # already on LinkedIn: nothing more

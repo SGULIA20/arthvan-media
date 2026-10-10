@@ -15,10 +15,11 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable
 
-from . import instagram, render
+from . import instagram, linkedin, render
 from .config import ROOT, load_apps, load_bank
 from .instagram import Captions, InstagramError, PartialPublish, SetUrls
-from .lint import build_captions, lint_item
+from .lint import alt_texts, build_captions, build_linkedin_text, lint_item
+from .linkedin import LinkedInError
 from .select_item import lagos_date, pick
 
 MAX_FALLBACKS = 5
@@ -79,6 +80,7 @@ class Deps:
     publish_set: Callable = instagram.publish_set
     sync_repo: Callable = sync_repo
     head_sha: Callable = head_sha
+    post_linkedin: Callable = linkedin.post_set
 
 
 # ---------- helpers ----------
@@ -92,11 +94,12 @@ def _entries(log: Path):
             continue
 
 
-def day_status(log: Path, day: date):
-    """Latest recorded status for the day: publishing, published, partial, or None."""
+def day_status(log: Path, day: date, channel: str = "instagram"):
+    """Latest recorded status for the day on a channel: publishing, published, partial, or None."""
     last = None
     for e in _entries(log):
-        if e.get("date") == day.isoformat() and e.get("status") in ("publishing", "published", "partial"):
+        if (e.get("date") == day.isoformat() and e.get("channel", "instagram") == channel
+                and e.get("status") in ("publishing", "published", "partial")):
             last = e["status"]
     return last
 
@@ -123,6 +126,34 @@ def prune_old(out_root: Path, today: date, keep_days: int = KEEP_DAYS) -> None:
             shutil.rmtree(d)
 
 
+def _do_linkedin(day: date, app_cfg: dict, item: dict, slides: list, deps: Deps, log: Path, token: str, urn: str) -> bool:
+    text, tags = build_linkedin_text(app_cfg, item)
+    entry = {"date": day.isoformat(), "channel": "linkedin", "item": item["id"]}
+    try:
+        post_urn = deps.post_linkedin(token, urn, text, tags, slides, alt_texts(app_cfg, item))
+    except LinkedInError as e:
+        _append(log, dict(entry, status="failed", error=str(e)[:300]))
+        deps.git_publish([log], f"log: linkedin failed {day}")
+        print(f"LinkedIn failed: {e}")
+        return False
+    _append(log, dict(entry, status="published", id=post_urn))
+    deps.git_publish([log], f"log: linkedin published {day}")
+    print(f"LinkedIn published {post_urn}")
+    return True
+
+
+def _linkedin_retry(day: date, root: Path, log: Path, apps: dict, banks: dict, deps: Deps, token: str, urn: str) -> int:
+    """Instagram already went out today; only LinkedIn is missing."""
+    rows = [e for e in _entries(log) if e.get("date") == day.isoformat() and e.get("status") == "published"
+            and e.get("channel", "instagram") == "instagram"]
+    item = next((i for i in banks.get(rows[-1]["app"], []) if i["id"] == rows[-1]["item"]), None) if rows else None
+    slides = sorted((root / "out" / day.isoformat()).glob("slide_*.jpg"), key=lambda p: int(p.stem.split("_")[1]))
+    if item is None or not slides:
+        print("cannot retry LinkedIn: today's item or slides are missing")
+        return 1
+    return 0 if _do_linkedin(day, apps[rows[-1]["app"]], item, slides, deps, log, token, urn) else 1
+
+
 # ---------- the run ----------
 def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None, banks=None, apps=None) -> int:
     env = os.environ if env is None else env
@@ -135,18 +166,22 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         print("IG_ACCESS_TOKEN and IG_USER_ID must be set")
         return 1
     log = root / "logs" / "posts.jsonl"
+    apps = apps or load_apps()
+    banks = banks or {a: load_bank(a) for a in apps}
+    li_token, li_urn = env.get("LINKEDIN_ACCESS_TOKEN"), env.get("LINKEDIN_PERSON_URN")
+    li_on = bool(li_token and li_urn)
     if mode == "post":
         deps.sync_repo()
         status = day_status(log, day)
         if status == "published":
+            if li_on and day_status(log, day, "linkedin") != "published":
+                return _linkedin_retry(day, root, log, apps, banks, deps, li_token, li_urn)
             print(f"{day} already posted: nothing to do")
             return 0
         if status is not None:
             print(f"{day}: an earlier run stopped at '{status}'. Check Instagram by hand; nothing was posted again.")
             return 1
 
-    apps = apps or load_apps()
-    banks = banks or {a: load_bank(a) for a in apps}
     sel = None
     for skip in range(MAX_FALLBACKS):
         cand = pick(day, banks, skip=skip)
@@ -202,6 +237,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         _append(log, dict(entry, status="published", ids=ids))
         deps.git_publish([log], f"log: published {day}")
         print(f"published {sel.item['id']}: {ids}")
+        if li_on:
+            return 0 if _do_linkedin(day, apps[sel.app], sel.item, rs.slides, deps, log, li_token, li_urn) else 1
         return 0
     except (TimeoutError, InstagramError, subprocess.CalledProcessError) as e:
         print(f"run failed: {type(e).__name__}: {e}")

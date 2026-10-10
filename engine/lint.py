@@ -81,3 +81,31 @@ def build_captions(app_cfg: dict, item: dict) -> tuple:
         return "\n\n".join(parts)
 
     return make(item["caption"]), make(item.get("reel_caption", item["caption"]))
+
+
+def build_linkedin_text(app_cfg: dict, item: dict) -> tuple:
+    """LinkedIn has no 'link in bio': the Play Store URL is written out and becomes clickable."""
+    footer = "\n".join(line.format(play_url=app_cfg["play_url"]) for line in app_cfg["linkedin_footer"])
+    has_sample = any(s.get("sample") for s in item["slides"])
+    parts = [item["caption"], footer]
+    if has_sample and app_cfg.get("money_disclaimer"):
+        parts.append(app_cfg["money_disclaimer"])
+    tags = list(dict.fromkeys(item["hashtags"] + app_cfg["base_hashtags"]))[:MAX_TAGS]
+    return "\n\n".join(parts), tags
+
+
+def alt_texts(app_cfg: dict, item: dict) -> list:
+    """One short description per slide, for screen readers, plus the end card."""
+    out = []
+    for s in item["slides"]:
+        if s["kind"] == "stat":
+            t = f"{s['value']} {s['text']}"
+        elif s["kind"] == "steps":
+            t = f"{s['text']}: " + ", ".join(s["items"])
+        elif s["kind"] == "bars":
+            t = f"{s['text']}: " + ", ".join(f"{r['label']} {r['display']}" for r in s["rows"])
+        else:
+            t = s["text"]
+        out.append(t[:290])
+    out.append(f"{app_cfg['name']} on Google Play. {app_cfg['end_line']}.")
+    return out

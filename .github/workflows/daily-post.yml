@@ -49,6 +49,8 @@ jobs:
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
           PAUSE: ${{ vars.PAUSE }}
           MODE: ${{ github.event.inputs.mode || 'post' }}
           RUN_DATE: ${{ github.event.inputs.date }}
