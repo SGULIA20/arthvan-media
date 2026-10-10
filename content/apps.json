@@ -52,7 +52,8 @@
       "support group",
       "lonel"
     ],
-    "money_disclaimer": null
+    "money_disclaimer": null,
+    "end_line": "Free on Google Play"
   },
   "scoremybiz": {
     "name": "ScoreMyBiz",
@@ -85,7 +86,8 @@
       "30 days"
     ],
     "banned_phrases": [],
-    "money_disclaimer": "Example figures for illustration. Not financial advice."
+    "money_disclaimer": "Example figures for illustration. Not financial advice.",
+    "end_line": "Free for 30 days. No credit card."
   },
   "_global": {
     "banned_phrases": [

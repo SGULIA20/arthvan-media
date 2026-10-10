@@ -1,0 +1,192 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;font-weight:800;src:url(../fonts/Inter-800.ttf)}
+@font-face{font-family:Inter;font-weight:600;src:url(../fonts/Inter-600.ttf)}
+@font-face{font-family:Plex;font-weight:500;src:url(../fonts/Plex-500.ttf)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;overflow:hidden;background:#000}
+#root{position:relative;width:1080px;overflow:hidden;font-family:Inter,sans-serif;color:var(--fg)}
+.abs{position:absolute}
+.slide{position:absolute;inset:0;display:none}
+.stage{position:absolute;left:90px;right:90px;display:flex;flex-direction:column;justify-content:center}
+.center .stage{align-items:center;text-align:center}
+.r{opacity:0}
+.zw{display:flex;flex-direction:column;align-items:inherit;text-align:inherit;transform-origin:left center}
+.center .zw{transform-origin:center center}
+.h1{font-weight:800;letter-spacing:-.035em;line-height:1.04}
+.sub{font-weight:600;color:var(--muted);margin-top:40px;line-height:1.3}
+.ttl{font-weight:800;letter-spacing:-.025em;line-height:1.08;margin-bottom:50px}
+.lbl{font-weight:600;color:var(--muted);font-size:44px;margin:0 0 14px}
+.track{height:74px;border-radius:20px;background:rgba(255,255,255,.08);overflow:hidden;position:relative}
+.fill{height:100%;border-radius:20px}
+.disp{font-weight:800;font-size:50px;margin-top:12px}
+.row{margin-bottom:46px;width:100%}
+.step{display:flex;align-items:center;gap:30px;margin-bottom:34px;text-align:left}
+.num{flex:none;width:84px;height:84px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:800 44px Inter;color:var(--bg);background:var(--accent)}
+.stepText{font-weight:600;font-size:54px;line-height:1.15}
+.qm{font-weight:800;font-size:260px;line-height:.7;color:var(--accent);height:140px}
+.pill{position:absolute;right:90px;font:500 30px Plex;letter-spacing:.08em;color:var(--accent);border:2px solid var(--accent);border-radius:999px;padding:8px 22px}
+.brand{position:absolute;left:90px;display:flex;align-items:center;gap:22px;font-weight:800;font-size:44px}
+.brand img{width:84px;height:84px;border-radius:22px}
+.endname{font-weight:800;font-size:124px;letter-spacing:-.03em;margin-top:34px}
+.endline{font-weight:600;font-size:54px;color:var(--muted);margin-top:22px}
+.link{font-weight:800;font-size:60px;color:var(--accent);margin-top:34px}
+.disc{position:absolute;left:90px;right:90px;text-align:center;font:500 28px Plex;color:var(--muted)}
+.swipe{position:absolute;right:90px;font:500 32px Plex;color:var(--muted)}
+.count{position:absolute;left:90px;font:500 32px Plex;color:var(--muted)}
+.seg{position:absolute;top:96px;height:8px;border-radius:4px;background:rgba(255,255,255,.18);overflow:hidden}
+.seg i{display:block;height:100%;width:0;background:var(--fg)}
+</style></head>
+<body><div id="root"></div>
+<script>
+const D = window.DECK, FMT = window.FORMAT;            // injected by render.py
+const P = D.app.palette, H = FMT === 'post' ? 1350 : 1920;
+const LAYOUT = FMT === 'post' ? {top: 210, bottom: 170, brand: 64} : {top: 370, bottom: 430, brand: 150};
+const DUR = {hook: 3.2, stat: 3.2, bars: 4.0, steps: 4.2, quote: 3.4};
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const eo = x => 1 - Math.pow(1 - clamp(x), 3);
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+
+const root = document.getElementById('root');
+root.style.height = H + 'px';
+for (const k in P) root.style.setProperty('--' + k, P[k]);
+root.className = D.item.template === 'dusk' ? 'center' : '';
+
+// ---------- timeline ----------
+let t0 = 0; const S = [];
+D.item.slides.forEach(s => { S.push({s, kind: s.kind, start: t0, end: t0 + DUR[s.kind]}); t0 += DUR[s.kind]; });
+const END = {kind: 'end', start: t0, end: t0 + 4.2};
+if (END.end < 15.5) END.end = 15.5;
+S.push(END);
+window.TOTAL = END.end;
+window.SLIDE_COUNT = S.length;
+window.settleTime = i => S[i].start + (S[i].kind === 'end' ? 2.2 : 2.6);
+
+// ---------- background ----------
+const bg = document.createElement('div'); bg.className = 'abs'; bg.style.cssText = `inset:0;`;
+root.appendChild(bg);
+const orbs = [];
+if (D.item.template === 'dusk') {
+  bg.style.background = `linear-gradient(180deg,${P.bg} 0%,${P.bg2} 100%)`;
+  [[P.accent, .30, 1100], [P.good, .26, 1000]].forEach(([c, a, size]) => {
+    const o = document.createElement('div'); o.className = 'abs';
+    o.style.cssText = `width:${size}px;height:${size}px;border-radius:50%;background:radial-gradient(closest-side,${c} 0%,transparent 100%);opacity:${a}`;
+    bg.appendChild(o); orbs.push(o);
+  });
+} else if (D.item.template === 'spark') {
+  bg.style.background = P.bg;
+  const grid = document.createElement('div'); grid.className = 'abs';
+  grid.style.cssText = `inset:-90px;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:90px 90px`;
+  bg.appendChild(grid); orbs.push(grid);
+  const glow = document.createElement('div'); glow.className = 'abs';
+  glow.style.cssText = `right:-300px;top:-300px;width:1100px;height:1100px;border-radius:50%;background:radial-gradient(closest-side,${P.accent} 0%,transparent 100%);opacity:.30`;
+  bg.appendChild(glow);
+} else {
+  bg.style.background = `radial-gradient(900px 700px at 90% 6%,${P.accent}33,transparent 60%),radial-gradient(800px 700px at 0% 100%,${P.good}29,transparent 60%),${P.bg}`;
+}
+
+// ---------- brand row and progress ----------
+const brand = document.createElement('div'); brand.className = 'brand'; brand.style.top = LAYOUT.brand + 'px';
+brand.innerHTML = `<img src="${D.assets.icon}"><span>${esc(D.app.name)}</span>`;
+root.appendChild(brand);
+const segs = [];
+if (FMT === 'reel') {
+  const gap = 10, w = (900 - gap * (S.length - 1)) / S.length;
+  S.forEach((sl, i) => {
+    const d = document.createElement('div'); d.className = 'seg';
+    d.style.left = (90 + i * (w + gap)) + 'px'; d.style.width = w + 'px'; d.innerHTML = '<i></i>';
+    root.appendChild(d); segs.push(d.firstChild);
+  });
+}
+
+// ---------- slides ----------
+const fs = (len, big, mid, small) => len <= 26 ? big : len <= 52 ? mid : small;
+const KMAX = FMT === 'post' ? 1.12 : 1.3;
+function stageHTML(inner) { return `<div class="stage" style="top:${LAYOUT.top}px;bottom:${LAYOUT.bottom}px"><div class="zw">${inner}</div></div>`; }
+function fit(el) {
+  el.style.display = 'block';
+  const stage = el.querySelector('.stage'), w = el.querySelector('.zw'), avail = stage.clientHeight;
+  let k = KMAX;
+  for (let i = 0; i < 4; i++) {
+    w.style.width = (900 / k) + 'px'; w.style.transform = `scale(${k})`;
+    const h = w.offsetHeight * k;
+    if (h <= avail * .97) break;
+    k = k * avail * .95 / h;
+  }
+  el.style.display = 'none';
+}
+function build(sl, idx) {
+  const el = document.createElement('div'); el.className = 'slide';
+  const s = sl.s; let html = '';
+  if (sl.kind === 'hook') {
+    const size = fs(s.text.length, 124, 100, 80);
+    html = `<div class="h1 r" data-r="0" style="font-size:${size}px">${esc(s.text)}</div>` + (s.sub ? `<div class="sub r" data-r="1" style="font-size:48px">${esc(s.sub)}</div>` : '');
+  } else if (sl.kind === 'stat') {
+    const v = String(s.value); const size = v.length <= 4 ? 300 : v.length <= 8 ? 210 : v.length <= 12 ? 130 : 96;
+    const m = v.match(/^(\D*)([\d,]+)$/);
+    const cu = m ? `data-cu="${m[2].replace(/,/g, '')}" data-pre="${esc(m[1])}"` : '';
+    html = `<div class="h1 r cu" data-r="0" ${cu} style="font-size:${size}px;color:var(--accent)">${esc(v)}</div><div class="sub r" data-r="1" style="font-size:58px;color:var(--fg)">${esc(s.text)}</div>`;
+  } else if (sl.kind === 'bars') {
+    const cols = [P.good, P.accent, P.bad, P.muted];
+    html = `<div class="ttl r" data-r="0" style="font-size:68px">${esc(s.text)}</div>` + s.rows.map((r, i) =>
+      `<div class="row r" data-r="${i + 1}"><div class="lbl">${esc(r.label)}</div><div class="track"><div class="fill" data-w="${r.value}" data-bar="${i + 1}" style="width:0;background:${cols[i % 4]}"></div></div><div class="disp">${esc(r.display)}</div></div>`).join('');
+  } else if (sl.kind === 'steps') {
+    html = `<div class="ttl r" data-r="0" style="font-size:72px">${esc(s.text)}</div>` + s.items.map((it, i) =>
+      `<div class="step r" data-r="${i + 1}"><div class="num">${i + 1}</div><div class="stepText">${esc(it)}</div></div>`).join('');
+  } else if (sl.kind === 'quote') {
+    const size = fs(s.text.length, 96, 80, 64);
+    html = `<div class="qm r" data-r="0">&ldquo;</div><div class="h1 r" data-r="1" style="font-size:${size}px;margin-top:20px">${esc(s.text)}</div>`;
+  } else { // end card
+    html = `<img class="r" data-r="0" src="${D.assets.icon}" style="width:210px;height:210px;border-radius:50px"><div class="endname r" data-r="1">${esc(D.app.name)}</div>` +
+      `<div class="endline r" data-r="2">${esc(D.app.end_line)}</div><img class="r" data-r="3" src="${D.assets.badge}" style="width:540px;margin-top:46px"><div class="link r" data-r="4">Link in bio</div>`;
+  }
+  el.innerHTML = stageHTML(html);
+  if (s && s.sample) {
+    el.insertAdjacentHTML('beforeend', `<div class="pill" style="top:${LAYOUT.top - 70}px">EXAMPLE</div>`);
+  }
+  if (sl.kind === 'end') {
+    const disc = D.disclaimer ? `<div class="disc" style="bottom:${FMT === 'post' ? 70 : 370}px">${esc(D.disclaimer)}</div>` : '';
+    el.insertAdjacentHTML('beforeend', disc);
+  } else if (FMT === 'post') {
+    el.insertAdjacentHTML('beforeend', `<div class="count" style="bottom:70px">${idx + 1} / ${S.length}</div><div class="swipe" style="bottom:70px">Swipe &rsaquo;</div>`);
+  }
+  root.appendChild(el); sl.el = el;
+  sl.rs = [...el.querySelectorAll('[data-r]')];
+}
+S.forEach(build);
+S.forEach(sl => fit(sl.el));
+
+// ---------- render(t) ----------
+window.render = function (t, noExit) {
+  const clock = t;
+  // background drift
+  if (D.item.template === 'dusk') {
+    orbs[0].style.left = (-300 + 90 * Math.sin(clock * .5)) + 'px'; orbs[0].style.top = (-100 + 90 * Math.cos(clock * .4)) + 'px';
+    orbs[1].style.left = (480 + 90 * Math.cos(clock * .45)) + 'px'; orbs[1].style.top = (H - 650 + 80 * Math.sin(clock * .35)) + 'px';
+  } else if (D.item.template === 'spark') {
+    orbs[0].style.transform = `translate(${(clock * 12) % 90}px,${(clock * 7) % 90}px)`;
+  }
+  S.forEach((sl, i) => {
+    const local = t - sl.start, on = t >= sl.start - 1e-6 && t < sl.end;
+    sl.el.style.display = on ? 'block' : 'none';
+    if (segs[i]) segs[i].style.width = (clamp((t - sl.start) / (sl.end - sl.start)) * 100) + '%';
+    if (!on) return;
+    const exit = (noExit || sl === END) ? 1 : eo((sl.end - t) / .35);
+    sl.el.style.opacity = exit;
+    sl.rs.forEach(n => {
+      const r = +n.dataset.r, p = eo((local - .12 - r * .16) / .55);
+      n.style.opacity = p; n.style.transform = `translateY(${(1 - p) * 46}px)`;
+      if (n.dataset.cu !== undefined) {
+        const q = eo((local - .2) / 1.3), val = Math.round(+n.dataset.cu * q);
+        n.textContent = n.dataset.pre + val.toLocaleString('en-IN');
+      }
+    });
+    sl.el.querySelectorAll('[data-bar]').forEach(f => {
+      const r = +f.dataset.bar, q = eo((local - .45 - r * .22) / .9);
+      f.style.width = (q * +f.dataset.w) + '%';
+    });
+  });
+};
+render(0);
+</script></body></html>
