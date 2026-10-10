@@ -3,26 +3,114 @@
     "name": "Waypoint",
     "play_url": "https://play.google.com/store/apps/details?id=com.arthvananalytics.waypoint",
     "icon": "engine/assets/waypoint-icon.png",
-    "palette": {"bg": "#150F1E", "bg2": "#2A1E3D", "fg": "#F3EFFA", "muted": "#B7AECB", "accent": "#FF8066", "good": "#5EEAD4", "bad": "#FF8066"},
-    "footer": ["Free on Google Play: {play_url}", "Link in bio."],
-    "base_hashtags": ["#Waypoint", "#NewApp", "#AndroidApps"],
-    "allowed_numbers": ["16 languages", "90 seconds", "24 hours"],
-    "banned_phrases": ["nobody", "no one", "never", "private", "privacy", "secure", "security", "encrypt", "safe", "untrace", "anonymous", "anonymity", "therap", "anxiety", "depress", "mental health", "cure", "heal", "treatment", "counsel", "suicid", "self-harm", "support group", "lonel"],
+    "palette": {
+      "bg": "#150F1E",
+      "bg2": "#2A1E3D",
+      "fg": "#F3EFFA",
+      "muted": "#B7AECB",
+      "accent": "#FF8066",
+      "good": "#5EEAD4",
+      "bad": "#FF8066"
+    },
+    "footer": [
+      "Free on Google Play: {play_url}",
+      "Link in bio."
+    ],
+    "base_hashtags": [
+      "#Waypoint",
+      "#NewApp",
+      "#AndroidApps"
+    ],
+    "allowed_numbers": [
+      "16 languages",
+      "90 seconds",
+      "24 hours"
+    ],
+    "banned_phrases": [
+      "nobody",
+      "no one",
+      "never",
+      "private",
+      "privacy",
+      "secure",
+      "security",
+      "encrypt",
+      "safe",
+      "untrace",
+      "anonymous",
+      "anonymity",
+      "therap",
+      "anxiety",
+      "depress",
+      "mental health",
+      "cure",
+      "heal",
+      "treatment",
+      "counsel",
+      "suicid",
+      "self-harm",
+      "support group",
+      "lonel"
+    ],
     "money_disclaimer": null
   },
   "scoremybiz": {
     "name": "ScoreMyBiz",
     "play_url": "https://play.google.com/store/apps/details?id=com.scoremybiz.app",
     "icon": "engine/assets/scoremybiz-icon.png",
-    "palette": {"bg": "#06184A", "bg2": "#152559", "fg": "#FFFFFF", "muted": "#9FB0D6", "accent": "#F2B454", "good": "#4FAF6E", "bad": "#D9634A"},
-    "footer": ["Free for 30 days. No credit card.", "Google Play: {play_url}", "Link in bio, or scoremybiz.com"],
-    "base_hashtags": ["#ScoreMyBiz", "#SmallBusiness", "#MSME"],
-    "allowed_numbers": ["8 numbers", "5 minutes", "7 areas", "7 parts", "30 days"],
+    "palette": {
+      "bg": "#06184A",
+      "bg2": "#152559",
+      "fg": "#FFFFFF",
+      "muted": "#9FB0D6",
+      "accent": "#F2B454",
+      "good": "#4FAF6E",
+      "bad": "#D9634A"
+    },
+    "footer": [
+      "Free for 30 days. No credit card.",
+      "Google Play: {play_url}",
+      "Link in bio, or scoremybiz.com"
+    ],
+    "base_hashtags": [
+      "#ScoreMyBiz",
+      "#SmallBusiness",
+      "#MSME"
+    ],
+    "allowed_numbers": [
+      "8 numbers",
+      "5 minutes",
+      "7 areas",
+      "7 parts",
+      "30 days"
+    ],
     "banned_phrases": [],
     "money_disclaimer": "Example figures for illustration. Not financial advice."
   },
   "_global": {
-    "banned_phrases": ["best ", "number one", "#1", "guarantee", "risk-free", "risk free", "double your", "increase your profit", "get rich", "100%"],
-    "allowed_count_words": ["things", "questions", "ways", "steps", "signs", "checks", "habits", "mistakes", "moves", "reasons", "minutes"]
+    "banned_phrases": [
+      "best ",
+      "number one",
+      "#1",
+      "guarantee",
+      "risk-free",
+      "risk free",
+      "double your",
+      "increase your profit",
+      "get rich",
+      "100%"
+    ],
+    "allowed_count_words": [
+      "things",
+      "questions",
+      "ways",
+      "steps",
+      "signs",
+      "checks",
+      "habits",
+      "mistakes",
+      "moves",
+      "reasons"
+    ]
   }
 }
