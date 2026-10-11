@@ -57,3 +57,11 @@ def test_threads_credentials_reach_both_jobs():
     assert "secrets.THREADS_ACCESS_TOKEN" in (WF / "daily-post.yml").read_text()
     assert "secrets.THREADS_USER_ID" in (WF / "daily-post.yml").read_text()
     assert "secrets.THREADS_ACCESS_TOKEN" in (WF / "refresh-token.yml").read_text()
+
+
+def test_weekly_report_runs_monday_morning_and_can_open_issues():
+    wf = load("weekly-report.yml")
+    assert wf["on"]["schedule"] == [{"cron": "23 6 * * 1"}]
+    assert wf["permissions"] == {"contents": "write", "issues": "write"}
+    text = (WF / "weekly-report.yml").read_text()
+    assert "secrets.IG_ACCESS_TOKEN" in text and "gh issue create" in text
