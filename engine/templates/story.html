@@ -1,0 +1,63 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Inter;font-weight:800;src:url(../fonts/Inter-800.ttf)}
+@font-face{font-family:Inter;font-weight:600;src:url(../fonts/Inter-600.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#06184A}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:Inter,sans-serif;color:#fff}
+.abs{position:absolute}
+.scene{position:absolute;inset:0;display:none}
+.sub{position:absolute;left:70px;right:70px;bottom:110px;text-align:center;font-weight:600;font-size:44px;line-height:1.3;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.sub span{background:rgba(6,24,74,.75);padding:6px 18px;border-radius:14px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.title{position:absolute;left:70px;right:70px;top:140px;font-weight:800;font-size:92px;line-height:1.05;letter-spacing:-.02em;text-align:center}
+.screen{position:absolute;left:50%;transform:translateX(-50%);width:600px;height:1230px;border-radius:70px;background:#0b0b0f;padding:14px;box-shadow:0 40px 90px rgba(0,0,0,.6)}
+.screen img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:58px;display:block}
+.brand{position:absolute;left:70px;top:70px;display:flex;align-items:center;gap:18px;font-weight:800;font-size:40px}
+.brand img{width:76px;height:76px;border-radius:20px}
+</style></head><body><div id="root"></div>
+<script>
+const D=window.STORY; const root=document.getElementById('root');
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)); const eo=x=>1-Math.pow(1-clamp(x),3);
+// ---------- Lumi: a small glowing lamp character. Same drawing every time. ----------
+function lumi(x,y,s,mood){ // mood: 'calm'|'worried'|'bright'
+  const glow=mood==='bright'?1:mood==='worried'?.45:.7, col='#F2B454';
+  const brow=mood==='worried'?'<path d="M-26,-30 L-10,-22" stroke="#06184A" stroke-width="5" stroke-linecap="round"/><path d="M26,-30 L10,-22" stroke="#06184A" stroke-width="5" stroke-linecap="round"/>':'';
+  const mouth=mood==='worried'?'M-14,22 Q0,12 14,22':mood==='bright'?'M-18,14 Q0,34 18,14':'M-12,18 Q0,26 12,18';
+  return `<g transform="translate(${x},${y}) scale(${s})">
+   <circle r="160" fill="${col}" opacity="${0.18*glow}"/><circle r="110" fill="${col}" opacity="${0.25*glow}"/>
+   <path d="M-54,-70 C-54,-130 54,-130 54,-70 C54,-30 30,-10 30,20 L-30,20 C-30,-10 -54,-30 -54,-70 Z" fill="#FFE39A" stroke="#F2B454" stroke-width="6"/>
+   <rect x="-30" y="20" width="60" height="18" rx="5" fill="#22346F"/><rect x="-24" y="38" width="48" height="12" rx="4" fill="#152559"/>
+   <circle cx="-18" cy="-60" r="7" fill="#06184A"/><circle cx="18" cy="-60" r="7" fill="#06184A"/>${brow}
+   <path d="${mouth}" transform="translate(0,-52)" fill="none" stroke="#06184A" stroke-width="5" stroke-linecap="round"/>
+  </g>`;
+}
+function counter(){return `<rect x="0" y="1180" width="1080" height="740" fill="#2B1E12"/><rect x="0" y="1180" width="1080" height="40" fill="#5C3F26"/><rect x="60" y="1120" width="960" height="70" rx="12" fill="#7A5433"/>`;}
+function bolts(t){let h='';const cols=['#D9634A','#4FAF6E','#2951FF','#F2B454','#C5CFE8'];for(let i=0;i<5;i++){h+=`<rect x="${90+i*190}" y="${700+((i*37)%60)}" width="150" height="400" rx="18" fill="${cols[i]}" opacity=".9"/>`;}return h;}
+function notebook(x,y,s){return `<g transform="translate(${x},${y}) scale(${s})"><rect x="-150" y="-200" width="300" height="400" rx="14" fill="#FBF6E6" stroke="#B89A6A" stroke-width="6"/>${[0,1,2,3,4,5].map(i=>`<line x1="-110" y1="${-140+i*55}" x2="110" y2="${-140+i*55}" stroke="#8A7A5A" stroke-width="4" opacity=".6"/>`).join('')}<text x="-120" y="-150" font-size="28" font-family="Inter" font-weight="600" fill="#22346F">रमेश ट्रेडर्स</text><text x="40" y="-150" font-size="28" font-family="Inter" font-weight="600" fill="#D9634A">₹18,500</text><text x="-120" y="-95" font-size="28" font-family="Inter" font-weight="600" fill="#22346F">सुनीता देवी</text><text x="40" y="-95" font-size="28" font-family="Inter" font-weight="600" fill="#D9634A">₹4,200</text><text x="-120" y="-40" font-size="28" font-family="Inter" font-weight="600" fill="#22346F">अली हार्डवेयर</text><text x="40" y="-40" font-size="28" font-family="Inter" font-weight="600" fill="#D9634A">₹9,800</text></g>`;}
+function phone(x,y,s,msg){return `<g transform="translate(${x},${y}) scale(${s})"><rect x="-110" y="-220" width="220" height="440" rx="34" fill="#0b0b0f"/><rect x="-98" y="-206" width="196" height="412" rx="26" fill="#111827"/><rect x="-84" y="-120" width="168" height="110" rx="16" fill="#1f5b3f"/><text x="-70" y="-78" font-size="22" font-family="Inter" font-weight="600" fill="#fff">सप्लायर</text><text x="-70" y="-44" font-size="24" font-family="Inter" font-weight="800" fill="#fff">${msg}</text></g>`;}
+function money(t,n){let h='';for(let i=0;i<n;i++){const p=clamp((t-i*.35)/1.2);h+=`<g transform="translate(${900-p*560},${1560+Math.sin(p*6+i)*30-p*120}) rotate(${-20+p*40})" opacity="${eo(p)}"><rect x="-70" y="-32" width="140" height="64" rx="8" fill="#4FAF6E" stroke="#2F7A4C" stroke-width="4"/><text x="-22" y="12" font-size="34" font-family="Inter" font-weight="800" fill="#fff">₹</text></g>`;}return h;}
+function envelope(t){const p=eo((t-.6)/1.2);return `<g transform="translate(${360+p*300},${1500}) rotate(${-6+p*6})"><rect x="-120" y="-70" width="240" height="140" rx="10" fill="#F6EDD9" stroke="#B89A6A" stroke-width="5"/><path d="M-120,-70 L0,20 L120,-70" fill="none" stroke="#B89A6A" stroke-width="5"/><text x="-68" y="52" font-size="30" font-family="Inter" font-weight="800" fill="#22346F">शुक्रवार</text></g>`;}
+const S=D.scenes; let T=0; S.forEach(s=>{s.start=T; T+=s.dur;}); window.TOTAL=T;
+function bg(kind,t){ const dawn=kind==='shop_dawn'; return `<rect width="1080" height="1920" fill="${dawn?'#1b2a63':'#06184A'}"/>${dawn?`<circle cx="860" cy="${520-eo(t/4)*80}" r="150" fill="#F2B454" opacity=".9"/>`:''}`; }
+function sceneSVG(s,t){ // t local
+  let g='';
+  if(s.kind==='shop_dawn'){ g+=bg(s.kind,t)+bolts(t)+counter()+lumi(540,900,1.4,'calm'); }
+  if(s.kind==='message'){ g+=bg(s.kind,t)+counter()+notebook(300,760,1.0)+`<g opacity="${.85+.15*Math.sin(t*9)}">${phone(780,760,1.3,'शुक्रवार तक?')}</g>`+lumi(540,1450,1.1,'worried'); }
+  if(s.kind==='photo'){ const f=clamp((t-.8)/.25); g+=bg(s.kind,t)+notebook(540,420,0.9)+lumi(170,1520,0.9,t<2?'calm':'bright')+`<rect width="1080" height="1920" fill="#fff" opacity="${f>0&&t<1.6?(1-clamp((t-1.05)/.5)):0}"/>`; }
+  if(s.kind==='collect'){ g+=bg(s.kind,t)+lumi(170,1520,0.9,t>3?'bright':'calm')+money(t-2.6,6); }
+  if(s.kind==='friday'){ g+=bg(s.kind,t)+lumi(170,1520,0.9,'bright')+envelope(t); }
+  if(s.kind==='end'){ g+=bg(s.kind,t)+lumi(540,700,1.8,'bright'); }
+  return `<svg class="abs" width="1080" height="1920" viewBox="0 0 1080 1920" style="left:0;top:0">${g}</svg>`;
+}
+function screenHTML(s,t){ if(!s.screen) return ''; const p=eo((t-1.6)/.6); const y=(s.kind==='photo'?380:300); return `<div class="screen" style="top:${y+(1-p)*80}px;opacity:${p};height:1000px"><img src="${D.shots}/${s.screen}"></div>`; }
+function endHTML(t){ const p=i=>eo((t-.4-i*.25)/.5); return `<div class="abs" style="left:0;right:0;top:1000px;text-align:center"><img src="${D.icon}" style="width:180px;height:180px;border-radius:44px;opacity:${p(0)}"><div style="font-weight:800;font-size:110px;letter-spacing:-.03em;opacity:${p(1)}">ScoreMyBiz</div><div style="font-weight:600;font-size:52px;color:#C5CFE8;margin-top:10px;opacity:${p(2)}">${D.end_line}</div><img src="${D.badge}" style="width:480px;margin-top:40px;opacity:${p(3)}"><div style="font-weight:800;font-size:54px;color:#F2B454;margin-top:30px;opacity:${p(4)}">Link in bio</div><div style="font-size:26px;color:#9FB0D6;margin-top:50px;opacity:${p(4)}">${D.disclaimer}</div></div>`; }
+window.render=function(t){
+  let s=S[S.length-1]; for(const x of S){ if(t>=x.start && t<x.start+x.dur){ s=x; break; } }
+  const local=t-s.start, fade=Math.min(eo(local/.4), eo((s.start+s.dur-t)/.4));
+  let h=`<div class="abs" style="inset:0;opacity:${fade}">${sceneSVG(s,local)}${screenHTML(s,local)}${s.kind==='end'?endHTML(local):''}</div>`;
+  if(s.kind!=='end') h+=`<div class="brand" style="opacity:.9"><img src="${D.icon}"><span>ScoreMyBiz</span></div>`;
+  if(s.kind==='shop_dawn' && local<2.2) h+=`<div class="title" style="opacity:${eo(local/.5)*eo((2.2-local)/.4)}">${D.title}</div>`;
+  if(s.sub && s.kind!=='end') h+=`<div class="sub" style="opacity:${fade}"><span>${s.sub}</span></div>`;
+  root.innerHTML=h;
+};
+render(0);
+</script></body></html>
