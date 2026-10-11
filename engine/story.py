@@ -11,7 +11,8 @@ from playwright.sync_api import sync_playwright
 from .config import ROOT, load_apps
 from .music import synth, write_m4a
 
-TEMPLATE = ROOT / "engine" / "templates" / "story.html"
+TEMPLATE = ROOT / "engine" / "templates" / "story2.html"
+CHAR_DIR = ROOT / "engine" / "assets" / "characters"
 BADGE = ROOT / "engine" / "assets" / "google-play-badge.png"
 FPS = 30
 
@@ -38,10 +39,29 @@ def build(story_path: Path, out_dir: Path) -> Path:
             s["dur"] = round(max(s.get("min", 4), d + 1.2), 2)
             clips.append((wav, d))
         total = sum(s["dur"] for s in story["scenes"])
+        # voice loudness per frame (drives the mouth): lay the clips on the timeline first
+        sr = 44100
+        vo = np.zeros((int(total * sr) + sr, 2), dtype=np.float32)
+        t0 = 0.0
+        for s, (wav, d) in zip(story["scenes"], clips):
+            with wave.open(str(wav)) as w:
+                a = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16).astype(np.float32).reshape(-1, 2) / 32768
+            start = int((t0 + 0.4) * sr); vo[start:start + len(a)] += a * 0.95; t0 += s["dur"]
+        vo = vo[: int(total * sr)]
+        hop = sr // FPS
+        env = [float(np.sqrt(np.mean(vo[i:i + hop, 0] ** 2))) for i in range(0, len(vo), hop)]
+        peak = max(env) or 1.0
+        env = [round(e / peak, 3) for e in env]
+        # screens in the ad's language when captured, else English
+        lang = story.get("lang", "en").split("-")[0]
+        shots = ROOT / "store" / "shots" / story["app"] / lang
+        if not shots.exists():
+            shots = ROOT / "store" / "shots" / story["app"]
         # 2. frames
-        deck = {"scenes": story["scenes"], "title": story["title"], "end_line": app["end_line"],
+        deck = {"scenes": story["scenes"], "title": story["title"], "end_line": app["end_line"], "app_name": app["name"],
+                "palette": app["palette"], "chars": story["character"], "char_base": CHAR_DIR.as_uri(), "vo_env": env,
                 "disclaimer": app.get("money_disclaimer") or "", "icon": (ROOT / app["icon"]).as_uri(),
-                "badge": BADGE.as_uri(), "shots": (ROOT / "store" / "shots" / story["app"]).as_uri()}
+                "badge": BADGE.as_uri(), "shots": shots.as_uri()}
         frames = tmp / "frames"; frames.mkdir()
         with sync_playwright() as p:
             b = p.chromium.launch()
@@ -54,15 +74,7 @@ def build(story_path: Path, out_dir: Path) -> Path:
                 pg.evaluate(f"render({f / FPS})")
                 pg.screenshot(path=str(frames / f"f{f:04d}.jpg"), type="jpeg", quality=92)
             b.close()
-        # 3. voice track laid on the timeline, music underneath (ducked)
-        sr = 44100
-        vo = np.zeros((int(total * sr) + sr, 2), dtype=np.float32)
-        t0 = 0.0
-        for s, (wav, d) in zip(story["scenes"], clips):
-            with wave.open(str(wav)) as w:
-                a = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16).astype(np.float32).reshape(-1, 2) / 32768
-            start = int((t0 + 0.4) * sr); vo[start:start + len(a)] += a * 0.95; t0 += s["dur"]
-        vo = vo[: int(total * sr)]
+        # 3. music underneath the voice (ducked)
         music = synth(story["app"], 7, total) * 0.28
         mix = np.clip(vo + music, -0.98, 0.98)
         audio = tmp / "mix.m4a"; write_m4a(mix, audio)

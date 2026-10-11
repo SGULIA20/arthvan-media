@@ -1,12 +1,12 @@
 {
- "id": "lumi-friday-hi", "app": "scoremybiz", "lang": "hi-IN", "voice": "Lekha", "rate": 170,
+ "id": "lumi-friday-hi", "app": "scoremybiz", "lang": "hi-IN", "voice": "Lekha", "rate": 170, "character": "lumi",
  "title": "शुक्रवार",
  "scenes": [
-  {"kind": "shop_dawn",   "vo": "दिवाली का माल आ गया था। बिक्री भी अच्छी थी।", "sub": "The Diwali stock had come. Sales were good too.", "min": 5},
-  {"kind": "message",     "vo": "फिर भी शुक्रवार को सप्लायर को देने के लिए पैसा नहीं था।", "sub": "And still, on Friday, there was nothing to pay the supplier with.", "min": 5},
-  {"kind": "photo",       "vo": "मैंने बस अपनी बही की फोटो खींची। मुनाफ़ा था, नकद नहीं था। पैसा ग्राहकों के पास अटका था।", "sub": "I just took a photo of my notebook. The profit was there, the cash was not. It was stuck with customers.", "min": 7, "screen": "cash-reality.png"},
-  {"kind": "collect",     "vo": "तीन ग्राहकों को एक एक टैप में याद दिलाया। शाम तक दो ने भुगतान कर दिया।", "sub": "Three customers reminded, one tap each. By evening, two had paid.", "min": 7, "screen": "dashboard.png"},
-  {"kind": "friday",      "vo": "शुक्रवार को सप्लायर को पूरा पैसा मिला।", "sub": "On Friday the supplier was paid in full.", "min": 5, "screen": "score-history.png"},
-  {"kind": "end",         "vo": "स्कोर माय बिज़। अपने धंधे की सेहत जानिए। तीस दिन मुफ़्त।", "sub": "ScoreMyBiz. Know the health of your business. Free for 30 days.", "min": 5}
+  {"layout": "talk",    "pose": "head_neutral", "title": "शुक्रवार", "vo": "मीना की साड़ी की दुकान। दिवाली का माल आ गया था, बिक्री भी अच्छी थी।", "sub": "Meena's saree shop. The Diwali stock had come, and sales were good too.", "min": 5},
+  {"layout": "scene",   "pose": "worried", "card": "सप्लायर: “शुक्रवार तक?”", "vo": "फिर भी शुक्रवार को सप्लायर को देने के लिए पैसा नहीं था।", "sub": "And still, on Friday, there was nothing to pay the supplier with.", "min": 5},
+  {"layout": "present", "pose": "phone", "screen": "cash-reality.png", "vo": "उसने बस अपनी बही की फोटो खींची। मुनाफ़ा था, नकद नहीं था। पैसा ग्राहकों के पास अटका था।", "sub": "She just took a photo of her notebook. The profit was there, the cash was not. It was stuck with customers.", "min": 7},
+  {"layout": "present", "pose": "explaining_right", "screen": "dashboard.png", "vo": "तीन ग्राहकों को एक एक टैप में याद दिलाया। शाम तक दो ने भुगतान कर दिया।", "sub": "Three customers reminded, one tap each. By evening, two had paid.", "min": 7},
+  {"layout": "present", "pose": "pointing_up", "screen": "score-history.png", "vo": "शुक्रवार को सप्लायर को पूरा पैसा मिला। और उसका स्कोर ऊपर गया।", "sub": "On Friday the supplier was paid in full. And her score went up.", "min": 6},
+  {"layout": "end",     "pose": "front_happy", "vo": "स्कोर माय बिज़। अपने धंधे की सेहत जानिए। तीस दिन मुफ़्त।", "sub": "ScoreMyBiz. Know the health of your business. Free for 30 days.", "min": 5}
  ]
 }
