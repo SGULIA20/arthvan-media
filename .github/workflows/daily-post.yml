@@ -2,7 +2,7 @@ name: daily-post
 
 on:
   schedule:
-    - cron: '0 17 * * *'   # 18:00 Lagos time (WAT, UTC+1, no daylight saving)
+    - cron: '37 16 * * *'  # about 18:00 Lagos (UTC+1); GitHub delays jobs queued at :00, so an off-peak minute lands closer
   workflow_dispatch:
     inputs:
       mode:

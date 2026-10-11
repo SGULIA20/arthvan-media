@@ -14,7 +14,7 @@ def load(name):
 
 def test_daily_post_runs_at_18_00_lagos_which_is_17_00_utc():
     wf = load("daily-post.yml")
-    assert wf["on"]["schedule"] == [{"cron": "0 17 * * *"}]
+    assert wf["on"]["schedule"] == [{"cron": "37 16 * * *"}]
     assert wf["permissions"] == {"contents": "write"}
     assert wf["concurrency"]["cancel-in-progress"] is False
 

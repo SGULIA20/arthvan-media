@@ -11,7 +11,7 @@
 **Spec:** docs/superpowers/specs/2026-10-10-daily-autoposter-design.md
 
 ## Global Constraints
-- Run time 17:00 UTC (18:00 Lagos, UTC+1, no DST). The set date is the Lagos calendar date.
+- Run time 16:37 UTC cron, lands about 18:00 Lagos (GitHub queues :00 jobs late). The set date is the Lagos calendar date.
 - Apps alternate by date; epoch 2026-10-11 is Waypoint, next day ScoreMyBiz.
 - Reel and Story: 1080x1920, 30 fps, H.264 + AAC, 15 to 30 seconds. Post slides: 1080x1350 baseline JPEG.
 - Captions end with the app's Play Store link and "Link in bio". Links: ScoreMyBiz https://play.google.com/store/apps/details?id=com.scoremybiz.app, Waypoint https://play.google.com/store/apps/details?id=com.arthvananalytics.waypoint
