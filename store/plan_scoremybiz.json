@@ -1,0 +1,9 @@
+{"screens":[
+ {"file":"score-history.png","h1":"Know the <em>health</em> of your business.","sub":"One score out of 100, from your own numbers."},
+ {"file":"dashboard.png","h1":"Sold. Bought. <em>Spent.</em>","sub":"Write your day in one tap. No accountant words."},
+ {"file":"cash-reality.png","h1":"Profit on paper is not <em>cash in hand</em>.","sub":"See the gap, and where the money is stuck."},
+ {"file":"profit-loss.png","h1":"Your <em>profit</em>, worked out for you.","sub":"Sales, costs and what is left, every month."},
+ {"file":"book.png","h1":"Your whole <em>book</em> in one place.","sub":"Sales, purchases, expenses and rent, every month."},
+ {"file":"advisor.png","h1":"Ask in your <em>own language</em>.","sub":"The Advisor answers from your real numbers."}
+],
+ "feature":{"shot":"score-history.png","h1":"Know the <em>health</em> of your business.","sub":"Enter 8 numbers. Your score in 5 minutes. Free for 30 days."}}

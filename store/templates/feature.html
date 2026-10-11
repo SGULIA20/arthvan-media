@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Inter;font-weight:800;src:url(../../engine/fonts/Inter-800.ttf)}
+@font-face{font-family:Inter;font-weight:600;src:url(../../engine/fonts/Inter-600.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1024px;height:500px;overflow:hidden}
+body{font-family:Inter,sans-serif;color:var(--fg);position:relative;background:var(--bg)}
+.bg{position:absolute;inset:0;background:linear-gradient(180deg,var(--bg),var(--bg2))}
+.o1{position:absolute;right:-120px;top:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(closest-side,var(--accent),transparent);opacity:.32}
+.o2{position:absolute;left:-200px;bottom:-300px;width:600px;height:600px;border-radius:50%;background:radial-gradient(closest-side,var(--good),transparent);opacity:.22}
+.l{position:absolute;left:64px;top:0;bottom:0;width:560px;display:flex;flex-direction:column;justify-content:center}
+.brand{display:flex;align-items:center;gap:18px;font-weight:800;font-size:34px;margin-bottom:26px}
+.brand img{width:64px;height:64px;border-radius:16px}
+.h1{font-weight:800;font-size:58px;line-height:1.04;letter-spacing:-.03em}
+.h1 em{font-style:normal;color:var(--accent)}
+.sub{font-weight:600;font-size:26px;color:var(--muted);margin-top:18px}
+.phone{position:absolute;right:70px;top:60px;width:300px;height:620px;border-radius:40px;background:#0b0b0f;padding:8px;box-shadow:0 30px 60px rgba(0,0,0,.5);transform:rotate(-6deg)}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:32px;display:block}
+</style></head><body>
+<div class="bg"></div><div class="o1"></div><div class="o2"></div>
+<div class="l"><div class="brand"><img id="icon"><span id="name"></span></div><div class="h1" id="h1"></div><div class="sub" id="sub"></div></div>
+<div class="phone"><img id="shot"></div>
+<script>
+const P=JSON.parse(decodeURIComponent(new URLSearchParams(location.search).get('p')));
+for(const k in P.palette) document.body.style.setProperty('--'+k,P.palette[k]);
+icon.src=P.icon; name.textContent=P.name; h1.innerHTML=P.h1; sub.textContent=P.sub||''; shot.src=P.shot;
+</script></body></html>

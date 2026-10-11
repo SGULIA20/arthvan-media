@@ -1,0 +1,34 @@
+{
+ "screens": [
+  {
+   "file": "s0.png",
+   "h1": "A new <em>name</em> every day.",
+   "sub": "Say what is on your mind. Tomorrow, a fresh start."
+  },
+  {
+   "file": "s2.png",
+   "h1": "The <em>Wall</em>.",
+   "sub": "Post what is on your mind. Read what others posted. React."
+  },
+  {
+   "file": "s3.png",
+   "h1": "One question <em>a day</em>.",
+   "sub": "The Daily Path. See how everyone answered."
+  },
+  {
+   "file": "s4.png",
+   "h1": "Write it, <em>speak it</em>, or ask a poll.",
+   "sub": "Voice posts are re-spoken in a synthetic voice."
+  },
+  {
+   "file": "s1.png",
+   "h1": "Cross paths with <em>one person</em>.",
+   "sub": "A short, timed chat. Then you both move on."
+  }
+ ],
+ "feature": {
+  "shot": "s2.png",
+  "h1": "A new <em>name</em> every day.",
+  "sub": "Post, chat, and answer the Daily Path. Free on Google Play."
+ }
+}
