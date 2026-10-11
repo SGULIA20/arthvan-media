@@ -56,3 +56,27 @@ def test_threads_refresh_runs_only_when_configured_and_flags_rotation(monkeypatc
     monkeypatch.setattr(threads, "refresh_token", lambda t: {"access_token": "other", "expires_in": 1})
     assert refresh.main({"IG_ACCESS_TOKEN": "a", "THREADS_ACCESS_TOKEN": "b"}) == 1
     assert refresh.main({"IG_ACCESS_TOKEN": "a"}) == 0
+
+
+def test_a_rotated_instagram_token_is_stored_when_a_writer_is_available(monkeypatch):
+    monkeypatch.setattr(instagram, "refresh_token", lambda t: {"access_token": "NEW-TOKEN", "expires_in": 5184000})
+    stored = {}
+    rc = refresh.main({"IG_ACCESS_TOKEN": "OLD"}, store_secret=lambda name, value: stored.__setitem__(name, value))
+    assert rc == 0 and stored == {"IG_ACCESS_TOKEN": "NEW-TOKEN"}
+
+
+def test_a_rotated_token_without_a_writer_still_fails_loudly(monkeypatch, capsys):
+    monkeypatch.setattr(instagram, "refresh_token", lambda t: {"access_token": "NEW-TOKEN", "expires_in": 5184000})
+    assert refresh.main({"IG_ACCESS_TOKEN": "OLD"}) == 1
+    assert "NEW-TOKEN" not in capsys.readouterr().out
+
+
+def test_gh_secret_writer_is_used_only_when_a_pat_is_present(monkeypatch):
+    calls = []
+    monkeypatch.setattr(refresh.subprocess, "run", lambda *a, **k: calls.append((a, k)) or type("R", (), {"returncode": 0})())
+    assert refresh.secret_writer({}) is None
+    w = refresh.secret_writer({"ACTIONS_PAT": "pat", "GITHUB_REPOSITORY": "o/r"})
+    w("IG_ACCESS_TOKEN", "NEW")
+    args, kw = calls[0]
+    assert args[0][:3] == ["gh", "secret", "set"] and "IG_ACCESS_TOKEN" in args[0] and kw["input"] == b"NEW"
+    assert kw["env"]["GH_TOKEN"] == "pat" and "NEW" not in " ".join(args[0])

@@ -1,5 +1,6 @@
 """Weekly Instagram token refresh. Exit 1 whenever a human has to look."""
 import os
+import subprocess
 import sys
 from datetime import date
 
@@ -25,11 +26,27 @@ def linkedin_age_problem(env, today: date):
     return None
 
 
-def main(env=None, today=None) -> int:
+def secret_writer(env):
+    """Returns a function(name, value) that updates a repository secret, or None when no PAT is configured.
+    GITHUB_TOKEN cannot write secrets, so this needs a fine-grained PAT with 'Secrets: write' stored as ACTIONS_PAT."""
+    pat, repo = env.get("ACTIONS_PAT"), env.get("GITHUB_REPOSITORY")
+    if not pat or not repo:
+        return None
+
+    def write(name: str, value: str) -> None:
+        r = subprocess.run(["gh", "secret", "set", name, "--repo", repo], input=value.encode(),
+                           env={**os.environ, "GH_TOKEN": pat}, capture_output=True)
+        if r.returncode != 0:
+            raise RuntimeError(f"gh secret set {name} failed")
+    return write
+
+
+def main(env=None, today=None, store_secret=None) -> int:
     env = os.environ if env is None else env
-    rc = _refresh_instagram(env)
+    store = store_secret or secret_writer(env)
+    rc = _refresh_instagram(env, store)
     if env.get("THREADS_ACCESS_TOKEN"):
-        rc = _refresh_threads(env) or rc
+        rc = _refresh_threads(env, store) or rc
     problem = linkedin_age_problem(env, today or date.today())
     if problem:
         print(f"::error::{problem}")
@@ -37,7 +54,21 @@ def main(env=None, today=None) -> int:
     return rc
 
 
-def _refresh_instagram(env) -> int:
+def _store_or_fail(name: str, new_token: str, store) -> int:
+    if store is None:
+        print(f"::error::{name}: the platform returned a new token but ACTIONS_PAT is not set, so it cannot be stored. "
+              "Add a fine-grained PAT with Secrets: write as the ACTIONS_PAT secret, or update the secret by hand.")
+        return 1
+    try:
+        store(name, new_token)
+    except Exception as e:
+        print(f"::error::{name}: storing the new token failed: {type(e).__name__}")
+        return 1
+    print(f"{name}: new token stored")
+    return 0
+
+
+def _refresh_instagram(env, store=None) -> int:
     token = env.get("IG_ACCESS_TOKEN")
     if not token:
         print("::error::IG_ACCESS_TOKEN is not set")
@@ -51,9 +82,7 @@ def _refresh_instagram(env) -> int:
         print(f"::error::token refresh failed: {e}")
         return 1
     if out.get("access_token") != token:
-        print("::error::Instagram returned a different token. Generate a new token in the Meta developer "
-              "dashboard and update the IG_ACCESS_TOKEN secret.")
-        return 1
+        return _store_or_fail("IG_ACCESS_TOKEN", out["access_token"], store)
     print(f"Token refreshed, valid for {int(out.get('expires_in', 0)) // 86400} days")
     return 0
 
@@ -62,7 +91,7 @@ if __name__ == "__main__":
     sys.exit(main())
 
 
-def _refresh_threads(env) -> int:
+def _refresh_threads(env, store=None) -> int:
     token = env["THREADS_ACCESS_TOKEN"]
     try:
         out = threads.refresh_token(token)
@@ -73,7 +102,6 @@ def _refresh_threads(env) -> int:
         print(f"::error::Threads token refresh failed: {e}")
         return 1
     if out.get("access_token") != token:
-        print("::error::Threads returned a different token. Generate a new one in the Meta dashboard and update THREADS_ACCESS_TOKEN.")
-        return 1
+        return _store_or_fail("THREADS_ACCESS_TOKEN", out["access_token"], store)
     print(f"Threads token refreshed, valid for {int(out.get('expires_in', 0)) // 86400} days")
     return 0
