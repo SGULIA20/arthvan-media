@@ -11,7 +11,7 @@ from pathlib import Path
 from .config import ROOT
 from .instagram import InstagramError, call
 
-METRICS = "reach,views,saves,shares"
+METRICS = "reach,views,saved,shares"
 LABEL = {"REELS": "Reel", "FEED": "Post", "STORY": "Story"}
 
 
@@ -26,7 +26,7 @@ def collect(token: str, week_end: date) -> dict:
         when = datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
         if when < start:
             continue
-        row = dict(m, reach=None, views=None, saves=None, shares=None)
+        row = dict(m, reach=None, views=None, saved=None, shares=None)
         try:
             ins = call("GET", f"/{m['id']}/insights", token, {"metric": METRICS}).get("data", [])
             for i in ins:
@@ -54,7 +54,7 @@ def render_markdown(rep: dict, posted: dict) -> str:
         who = posted.get(day, {})
         out.append(f"| {day} | {LABEL.get(r['media_product_type'], r['media_product_type'])} | {who.get('app', '-')} | "
                    f"{who.get('item', '-')} | {_n(r['reach'])} | {_n(r['views'])} | {_n(r.get('like_count'))} | "
-                   f"{_n(r.get('comments_count'))} | {_n(r["saves"])} | {_n(r['shares'])} | [open]({r['permalink']}) |")
+                   f"{_n(r.get('comments_count'))} | {_n(r["saved"])} | {_n(r['shares'])} | [open]({r['permalink']}) |")
     reach = sum(r["reach"] or 0 for r in rows)
     likes = sum(r.get("like_count") or 0 for r in rows)
     out += ["", f"Total reach: {_n(reach)}. Total likes: {_n(likes)}. Posts: {len(rows)}.", ""]

@@ -11,7 +11,7 @@ MEDIA = [
     {"id": "9", "media_product_type": "FEED", "media_type": "IMAGE", "permalink": "https://ig/p/old",
      "timestamp": "2026-09-01T10:00:00+0000", "caption": "old", "like_count": 1, "comments_count": 0},
 ]
-INSIGHTS = {"1": {"reach": 400, "views": 520, "saves": 3, "shares": 2}, "2": {"reach": 1500, "views": 2100, "saves": 8, "shares": 11}}
+INSIGHTS = {"1": {"reach": 400, "views": 520, "saved": 3, "shares": 2}, "2": {"reach": 1500, "views": 2100, "saved": 8, "shares": 11}}
 
 
 def fake_call(method, path, token, params=None):
@@ -29,7 +29,7 @@ def test_collect_keeps_only_the_last_seven_days_and_attaches_insights(monkeypatc
     monkeypatch.setattr(digest, "call", fake_call)
     rep = collect("tok", date(2026, 10, 12))
     assert [m["id"] for m in rep["media"]] == ["1", "2"]
-    assert rep["media"][1]["reach"] == 1500 and rep["media"][0]["saves"] == 3
+    assert rep["media"][1]["reach"] == 1500 and rep["media"][0]["saved"] == 3
     assert rep["followers"] == 18010
 
 
