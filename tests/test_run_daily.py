@@ -6,6 +6,7 @@ import pytest
 
 from engine.instagram import PartialPublish, Prepared
 from engine.linkedin import LinkedInError
+from engine.threads import ThreadsError
 from engine.render import RenderedSet
 from engine.run_daily import Deps, already_posted, prune_old, run, wait_for_urls
 
@@ -19,10 +20,12 @@ class World:
         self.root, self.events, self.rendered_ids = tmp_path, [], []
         self.fail_wait = False
         self.li_calls, self.li_fail = [], 0
+        self.th_calls, self.th_fail = [], 0
         self.deps = Deps(
             render_set=self.render_set, verify_set=lambda rs: [], git_publish=self.git_publish,
             wait_for_urls=self.wait_for_urls, prepare_set=self.prepare_set, publish_set=self.publish_set,
-            sync_repo=lambda: None, head_sha=lambda: "deadbeef", post_linkedin=self.post_linkedin)
+            sync_repo=lambda: None, head_sha=lambda: "deadbeef", post_linkedin=self.post_linkedin,
+            post_threads=self.post_threads)
 
     def render_set(self, sel, app_cfg, out_dir, fps=30):
         self.rendered_ids.append(sel.item["id"])
@@ -59,6 +62,13 @@ class World:
             self.li_fail -= 1
             raise LinkedInError("token expired")
         return "urn:li:share:99"
+
+    def post_threads(self, uid, token, urls, text):
+        self.th_calls.append({"uid": uid, "token": token, "urls": urls, "text": text})
+        if self.th_fail:
+            self.th_fail -= 1
+            raise ThreadsError("boom")
+        return "th-1"
 
     def count(self, name):
         return sum(1 for e in self.events if e[0] == name)
@@ -264,3 +274,35 @@ def test_a_rerun_on_a_non_linkedin_day_never_posts_to_linkedin(tmp_path):
     w = World(tmp_path)
     assert go(w, env=LI_ENV, day=date(2026, 10, 12)) == 0
     assert go(w, env=LI_ENV, day=date(2026, 10, 12)) == 0 and w.li_calls == []
+
+
+TH_ENV = dict(ENV, THREADS_ACCESS_TOKEN="thtok", THREADS_USER_ID="9001")
+
+
+def test_threads_posts_daily_after_instagram_with_the_pinned_slide_urls(tmp_path):
+    w = World(tmp_path)
+    assert go(w, env=TH_ENV) == 0 and go(w, env=TH_ENV, day=date(2026, 10, 12)) == 0
+    assert len(w.th_calls) == 2
+    c = w.th_calls[0]
+    assert c["uid"] == "9001" and c["token"] == "thtok" and len(c["urls"]) == 3
+    assert all("/deadbeef/out/2026-10-11/" in u for u in c["urls"])
+    assert "play.google.com" in c["text"] and last_entry(tmp_path, "threads")["status"] == "published"
+
+
+def test_threads_failure_is_isolated_and_retried_on_rerun(tmp_path):
+    w = World(tmp_path)
+    w.th_fail = 1
+    assert go(w, env=TH_ENV) == 1
+    assert last_entry(tmp_path, "instagram")["status"] == "published"
+    assert last_entry(tmp_path, "threads")["status"] == "failed"
+    assert go(w, env=TH_ENV) == 0 and len(w.th_calls) == 2 and w.count("publish") == 1
+    assert go(w, env=TH_ENV) == 0 and len(w.th_calls) == 2
+
+
+def test_threads_and_linkedin_both_retry_when_both_failed_on_a_tuesday(tmp_path):
+    w = World(tmp_path)
+    w.th_fail, w.li_fail = 1, 1
+    env = dict(TH_ENV, **{k: v for k, v in LI_ENV.items() if k.startswith("LINKEDIN")})
+    assert go(w, env=env, day=TUE) == 1
+    assert go(w, env=env, day=TUE) == 0
+    assert len(w.th_calls) == 2 and len(w.li_calls) == 2 and w.count("publish") == 1

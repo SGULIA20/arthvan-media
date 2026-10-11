@@ -51,3 +51,9 @@ def test_linkedin_credentials_reach_the_daily_job_and_the_token_date_reaches_the
     daily = (WF / "daily-post.yml").read_text()
     assert "secrets.LINKEDIN_ACCESS_TOKEN" in daily and "secrets.LINKEDIN_PERSON_URN" in daily
     assert "vars.LINKEDIN_TOKEN_DATE" in (WF / "refresh-token.yml").read_text()
+
+
+def test_threads_credentials_reach_both_jobs():
+    assert "secrets.THREADS_ACCESS_TOKEN" in (WF / "daily-post.yml").read_text()
+    assert "secrets.THREADS_USER_ID" in (WF / "daily-post.yml").read_text()
+    assert "secrets.THREADS_ACCESS_TOKEN" in (WF / "refresh-token.yml").read_text()

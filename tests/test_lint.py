@@ -121,3 +121,15 @@ def test_alt_texts_cover_every_slide_plus_the_end_card():
     assert len(alts) == len(it["slides"]) + 1
     assert all(a and len(a) <= 300 for a in alts)
     assert "ScoreMyBiz" in alts[-1]
+
+
+def test_threads_text_fits_500_characters_with_link_and_tags_for_every_bank_item():
+    from engine.config import load_bank
+    from engine.lint import build_threads_text
+    for app in ("waypoint", "scoremybiz"):
+        for it in load_bank(app):
+            t = build_threads_text(APPS[app], it)
+            assert len(t) <= 500, (it["id"], len(t))
+            assert APPS[app]["play_url"] in t and "Link in bio" not in t
+    t = build_threads_text(APPS["scoremybiz"], sample_item())
+    assert "Not financial advice" in t and "#A" in t

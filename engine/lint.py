@@ -109,3 +109,20 @@ def alt_texts(app_cfg: dict, item: dict) -> list:
         out.append(t[:290])
     out.append(f"{app_cfg['name']} on Google Play. {app_cfg['end_line']}.")
     return out
+
+
+def build_threads_text(app_cfg: dict, item: dict) -> str:
+    """Threads: 500 characters, links are clickable, no 'link in bio'."""
+    has_sample = any(s.get("sample") for s in item["slides"])
+    tags = list(dict.fromkeys(item["hashtags"] + app_cfg["base_hashtags"]))[:3]
+    parts = [item["caption"], app_cfg["play_url"]]
+    if has_sample and app_cfg.get("money_disclaimer"):
+        parts.append(app_cfg["money_disclaimer"])
+    parts.append(" ".join(tags))
+    text = "\n\n".join(parts)
+    if len(text) > 500:  # drop tags first, then trim the caption
+        text = "\n\n".join(parts[:-1])
+    if len(text) > 500:
+        keep = 500 - len(text) + len(item["caption"]) - 1
+        text = "\n\n".join([item["caption"][:keep].rstrip() + "…"] + parts[1:-1])
+    return text

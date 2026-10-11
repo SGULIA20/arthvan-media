@@ -3,7 +3,7 @@ import os
 import sys
 from datetime import date
 
-from . import instagram
+from . import instagram, threads
 
 
 LINKEDIN_WARN_DAYS = 50
@@ -28,6 +28,8 @@ def linkedin_age_problem(env, today: date):
 def main(env=None, today=None) -> int:
     env = os.environ if env is None else env
     rc = _refresh_instagram(env)
+    if env.get("THREADS_ACCESS_TOKEN"):
+        rc = _refresh_threads(env) or rc
     problem = linkedin_age_problem(env, today or date.today())
     if problem:
         print(f"::error::{problem}")
@@ -58,3 +60,20 @@ def _refresh_instagram(env) -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+def _refresh_threads(env) -> int:
+    token = env["THREADS_ACCESS_TOKEN"]
+    try:
+        out = threads.refresh_token(token)
+    except threads.ThreadsError as e:
+        if "24 hours" in str(e):
+            print("Threads token is too new to refresh; nothing to do yet")
+            return 0
+        print(f"::error::Threads token refresh failed: {e}")
+        return 1
+    if out.get("access_token") != token:
+        print("::error::Threads returned a different token. Generate a new one in the Meta dashboard and update THREADS_ACCESS_TOKEN.")
+        return 1
+    print(f"Threads token refreshed, valid for {int(out.get('expires_in', 0)) // 86400} days")
+    return 0

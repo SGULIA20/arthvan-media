@@ -24,6 +24,13 @@ One-time setup: create the app at linkedin.com/developers (products: Share on Li
 OpenID Connect), add redirect URL `http://localhost:3000/callback`, put the client id and secret in
 `~/arthvan-social/.env`.
 
+## Threads
+Every day, after Instagram, the same slides go to the founder's Threads profile (sanjeev_gulia) as one carousel with
+up to 500 characters of text and the clickable Play Store link (`engine/threads.py`). Runs only when the secrets
+`THREADS_ACCESS_TOKEN` and `THREADS_USER_ID` exist. Failure is isolated like LinkedIn; a re-run retries only Threads.
+The token lasts 60 days and is refreshed by the weekly job. Setup: a Meta app with the Threads use case, your account
+as Threads Tester (accept under Threads app > Settings > Account > Website permissions), token from the dashboard.
+
 ## Pause, run, inspect
 - Pause everything: set the repository variable `PAUSE` to `1` (Settings, Secrets and variables, Variables), or add a file named `PAUSE`.
 - Manual run: Actions, daily-post, Run workflow. `render` only draws, `prepare` does everything except publish, `post` publishes.

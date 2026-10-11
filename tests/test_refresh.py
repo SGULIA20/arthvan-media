@@ -46,3 +46,13 @@ def test_main_fails_when_the_linkedin_token_is_old_even_if_instagram_is_fine(mon
     env = {"IG_ACCESS_TOKEN": "t", "LINKEDIN_TOKEN_DATE": "2026-10-01"}
     assert refresh.main(env, today=date(2026, 12, 1)) == 1
     assert refresh.main(dict(env, LINKEDIN_TOKEN_DATE="2026-11-20"), today=date(2026, 12, 1)) == 0
+
+
+def test_threads_refresh_runs_only_when_configured_and_flags_rotation(monkeypatch):
+    from engine import threads
+    monkeypatch.setattr(instagram, "refresh_token", lambda t: {"access_token": t, "expires_in": 5184000})
+    monkeypatch.setattr(threads, "refresh_token", lambda t: {"access_token": t, "expires_in": 5184000})
+    assert refresh.main({"IG_ACCESS_TOKEN": "a", "THREADS_ACCESS_TOKEN": "b"}) == 0
+    monkeypatch.setattr(threads, "refresh_token", lambda t: {"access_token": "other", "expires_in": 1})
+    assert refresh.main({"IG_ACCESS_TOKEN": "a", "THREADS_ACCESS_TOKEN": "b"}) == 1
+    assert refresh.main({"IG_ACCESS_TOKEN": "a"}) == 0

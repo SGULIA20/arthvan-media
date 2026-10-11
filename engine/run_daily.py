@@ -15,11 +15,12 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable
 
-from . import instagram, linkedin, render
+from . import instagram, linkedin, render, threads
 from .config import ROOT, load_apps, load_bank, load_global
 from .instagram import Captions, InstagramError, PartialPublish, SetUrls
-from .lint import alt_texts, build_captions, build_linkedin_text, lint_item
+from .lint import alt_texts, build_captions, build_linkedin_text, build_threads_text, lint_item
 from .linkedin import LinkedInError
+from .threads import ThreadsError
 from .select_item import lagos_date, pick
 
 MAX_FALLBACKS = 5
@@ -81,6 +82,7 @@ class Deps:
     sync_repo: Callable = sync_repo
     head_sha: Callable = head_sha
     post_linkedin: Callable = linkedin.post_set
+    post_threads: Callable = threads.post_carousel
 
 
 # ---------- helpers ----------
@@ -126,32 +128,55 @@ def prune_old(out_root: Path, today: date, keep_days: int = KEEP_DAYS) -> None:
             shutil.rmtree(d)
 
 
-def _do_linkedin(day: date, app_cfg: dict, item: dict, slides: list, deps: Deps, log: Path, token: str, urn: str) -> bool:
-    text, tags = build_linkedin_text(app_cfg, item)
-    entry = {"date": day.isoformat(), "channel": "linkedin", "item": item["id"]}
+def _channel(day: date, channel: str, item_id: str, deps: Deps, log: Path, action) -> bool:
+    """Run one extra channel; its failure is logged and isolated, never affecting Instagram."""
+    entry = {"date": day.isoformat(), "channel": channel, "item": item_id}
     try:
-        post_urn = deps.post_linkedin(token, urn, text, tags, slides, alt_texts(app_cfg, item))
-    except LinkedInError as e:
+        post_id = action()
+    except (LinkedInError, ThreadsError) as e:
         _append(log, dict(entry, status="failed", error=str(e)[:300]))
-        deps.git_publish([log], f"log: linkedin failed {day}")
-        print(f"LinkedIn failed: {e}")
+        deps.git_publish([log], f"log: {channel} failed {day}")
+        print(f"{channel} failed: {e}")
         return False
-    _append(log, dict(entry, status="published", id=post_urn))
-    deps.git_publish([log], f"log: linkedin published {day}")
-    print(f"LinkedIn published {post_urn}")
+    _append(log, dict(entry, status="published", id=post_id))
+    deps.git_publish([log], f"log: {channel} published {day}")
+    print(f"{channel} published {post_id}")
     return True
 
 
-def _linkedin_retry(day: date, root: Path, log: Path, apps: dict, banks: dict, deps: Deps, token: str, urn: str) -> int:
-    """Instagram already went out today; only LinkedIn is missing."""
+def _do_linkedin(day, app_cfg, item, slides, deps, log, token, urn) -> bool:
+    text, tags = build_linkedin_text(app_cfg, item)
+    return _channel(day, "linkedin", item["id"], deps, log,
+                    lambda: deps.post_linkedin(token, urn, text, tags, slides, alt_texts(app_cfg, item)))
+
+
+def _do_threads(day, app_cfg, item, slide_urls, deps, log, token, uid) -> bool:
+    return _channel(day, "threads", item["id"], deps, log,
+                    lambda: deps.post_threads(uid, token, slide_urls, build_threads_text(app_cfg, item)))
+
+
+def _extras(day, app_cfg, item, slides, slide_urls, deps, log, chans) -> int:
+    """Post to every enabled extra channel that has not succeeded today. Returns 0 when all are fine."""
+    ok = True
+    if chans.get("threads") and day_status(log, day, "threads") != "published":
+        ok &= _do_threads(day, app_cfg, item, slide_urls, deps, log, *chans["threads"])
+    if chans.get("linkedin") and day_status(log, day, "linkedin") != "published":
+        ok &= _do_linkedin(day, app_cfg, item, slides, deps, log, *chans["linkedin"])
+    return 0 if ok else 1
+
+
+def _extras_retry(day, root, log, apps, banks, deps, chans, env) -> int:
+    """Instagram already went out today; only an extra channel is missing."""
     rows = [e for e in _entries(log) if e.get("date") == day.isoformat() and e.get("status") == "published"
             and e.get("channel", "instagram") == "instagram"]
     item = next((i for i in banks.get(rows[-1]["app"], []) if i["id"] == rows[-1]["item"]), None) if rows else None
     slides = sorted((root / "out" / day.isoformat()).glob("slide_*.jpg"), key=lambda p: int(p.stem.split("_")[1]))
     if item is None or not slides:
-        print("cannot retry LinkedIn: today's item or slides are missing")
+        print("cannot retry: today's item or slides are missing")
         return 1
-    return 0 if _do_linkedin(day, apps[rows[-1]["app"]], item, slides, deps, log, token, urn) else 1
+    sha = rows[-1].get("sha") or deps.head_sha()
+    base = f"https://raw.githubusercontent.com/{env.get('GITHUB_REPOSITORY', DEFAULT_REPO)}/{sha}/out/{day.isoformat()}"
+    return _extras(day, apps[rows[-1]["app"]], item, slides, [f"{base}/{p.name}" for p in slides], deps, log, chans)
 
 
 # ---------- the run ----------
@@ -168,15 +193,21 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     log = root / "logs" / "posts.jsonl"
     apps = apps or load_apps()
     banks = banks or {a: load_bank(a) for a in apps}
+    chans = {}
     li_token, li_urn = env.get("LINKEDIN_ACCESS_TOKEN"), env.get("LINKEDIN_PERSON_URN")
     # LinkedIn gets one post a week, on the day set in content/apps.json (Tuesday)
-    li_on = bool(li_token and li_urn) and day.weekday() == load_global().get("linkedin_weekday", 1)
+    if li_token and li_urn and day.weekday() == load_global().get("linkedin_weekday", 1):
+        chans["linkedin"] = (li_token, li_urn)
+    th_token, th_uid = env.get("THREADS_ACCESS_TOKEN"), env.get("THREADS_USER_ID")
+    if th_token and th_uid:
+        chans["threads"] = (th_token, th_uid)
     if mode == "post":
         deps.sync_repo()
         status = day_status(log, day)
         if status == "published":
-            if li_on and day_status(log, day, "linkedin") != "published":
-                return _linkedin_retry(day, root, log, apps, banks, deps, li_token, li_urn)
+            missing = [c for c in chans if day_status(log, day, c) != "published"]
+            if missing:
+                return _extras_retry(day, root, log, apps, banks, deps, chans, env)
             print(f"{day} already posted: nothing to do")
             return 0
         if status is not None:
@@ -225,7 +256,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
             return 0
 
         entry = {"date": day.isoformat(), "app": sel.app, "item": sel.item["id"], "status": "publishing",
-                 "at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+                 "sha": deps.head_sha(), "at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
         _append(log, entry)
         deps.git_publish([log], f"log: publishing {day}")
         try:
@@ -238,9 +269,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         _append(log, dict(entry, status="published", ids=ids))
         deps.git_publish([log], f"log: published {day}")
         print(f"published {sel.item['id']}: {ids}")
-        if li_on:
-            return 0 if _do_linkedin(day, apps[sel.app], sel.item, rs.slides, deps, log, li_token, li_urn) else 1
-        return 0
+        return _extras(day, apps[sel.app], sel.item, rs.slides, urls.slides, deps, log, chans)
     except (TimeoutError, InstagramError, subprocess.CalledProcessError) as e:
         print(f"run failed: {type(e).__name__}: {e}")
         return 1
