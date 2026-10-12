@@ -1,0 +1,1305 @@
+{
+ "_note": "Prompt library for Veo B-roll. engine.broll_library generates the unmade ones, in order, up to the day's rupee target, so the Google Cloud credit is finished by 10 Dec 2026 and never exceeded.",
+ "shots": [
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a kirana store in a Mumbai lane: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a kirana store in a Mumbai lane: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a kirana store in a Mumbai lane: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a kirana store in a Mumbai lane: the owner looking at a phone at the counter, thinking, late afternoon light."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a kirana store in a Mumbai lane: festival decorations going up outside the shop, string lights, evening."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a kirana store in a Mumbai lane: rain outside the shop door, the owner waiting for customers, warm light inside."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a hardware shop in Delhi: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a hardware shop in Delhi: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a hardware shop in Delhi: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a hardware shop in Delhi: the owner looking at a phone at the counter, thinking, late afternoon light."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a hardware shop in Delhi: festival decorations going up outside the shop, string lights, evening."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a hardware shop in Delhi: rain outside the shop door, the owner waiting for customers, warm light inside."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a small pharmacy in Jaipur: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a small pharmacy in Jaipur: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a small pharmacy in Jaipur: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a small pharmacy in Jaipur: the owner looking at a phone at the counter, thinking, late afternoon light."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a small pharmacy in Jaipur: festival decorations going up outside the shop, string lights, evening."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a small pharmacy in Jaipur: rain outside the shop door, the owner waiting for customers, warm light inside."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a tailor's shop in Lucknow: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a tailor's shop in Lucknow: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a tailor's shop in Lucknow: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a tailor's shop in Lucknow: the owner looking at a phone at the counter, thinking, late afternoon light."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a tailor's shop in Lucknow: festival decorations going up outside the shop, string lights, evening."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a tailor's shop in Lucknow: rain outside the shop door, the owner waiting for customers, warm light inside."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a sweet shop in Kolkata: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a sweet shop in Kolkata: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a sweet shop in Kolkata: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a sweet shop in Kolkata: the owner looking at a phone at the counter, thinking, late afternoon light."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a sweet shop in Kolkata: festival decorations going up outside the shop, string lights, evening."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a sweet shop in Kolkata: rain outside the shop door, the owner waiting for customers, warm light inside."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a mobile-repair stall in Chennai: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a mobile-repair stall in Chennai: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a mobile-repair stall in Chennai: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a mobile-repair stall in Chennai: the owner looking at a phone at the counter, thinking, late afternoon light."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a mobile-repair stall in Chennai: festival decorations going up outside the shop, string lights, evening."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "IN",
+   "prompt": "a mobile-repair stall in Chennai: rain outside the shop door, the owner waiting for customers, warm light inside."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a provisions store in Lagos: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a provisions store in Lagos: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a provisions store in Lagos: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a tailor's shop in Abuja: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a tailor's shop in Abuja: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a tailor's shop in Abuja: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a spare-parts shop in Onitsha market: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a spare-parts shop in Onitsha market: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a spare-parts shop in Onitsha market: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a small pharmacy in Ibadan: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a small pharmacy in Ibadan: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a small pharmacy in Ibadan: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a hair salon in Lagos: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a hair salon in Lagos: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a hair salon in Lagos: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a phone-accessories kiosk in Port Harcourt: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a phone-accessories kiosk in Port Harcourt: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NG",
+   "prompt": "a phone-accessories kiosk in Port Harcourt: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a provisions shop in Accra: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a provisions shop in Accra: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a provisions shop in Accra: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a market stall at Makola market: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a market stall at Makola market: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a market stall at Makola market: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a tailor's shop in Kumasi: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a tailor's shop in Kumasi: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a tailor's shop in Kumasi: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a small chop bar in Accra: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a small chop bar in Accra: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a small chop bar in Accra: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a hardware shop in Tema: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a hardware shop in Tema: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a hardware shop in Tema: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a mobile-money kiosk in Accra: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a mobile-money kiosk in Accra: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GH",
+   "prompt": "a mobile-money kiosk in Accra: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a duka in Nairobi: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a duka in Nairobi: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a duka in Nairobi: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a mitumba clothes stall in Gikomba market: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a mitumba clothes stall in Gikomba market: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a mitumba clothes stall in Gikomba market: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a small chemist in Mombasa: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a small chemist in Mombasa: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a small chemist in Mombasa: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a hardware shop in Nakuru: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a hardware shop in Nakuru: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a hardware shop in Nakuru: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a salon in Nairobi: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a salon in Nairobi: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a salon in Nairobi: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a fruit stall in Kisumu: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a fruit stall in Kisumu: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "KE",
+   "prompt": "a fruit stall in Kisumu: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a cafeteria in old Dubai: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a cafeteria in old Dubai: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a cafeteria in old Dubai: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a spice shop in Deira souk: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a spice shop in Deira souk: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a spice shop in Deira souk: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a tailor in Sharjah: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a tailor in Sharjah: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a tailor in Sharjah: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a mobile shop in Bur Dubai: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a mobile shop in Bur Dubai: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a mobile shop in Bur Dubai: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a small grocery in Abu Dhabi: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a small grocery in Abu Dhabi: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a small grocery in Abu Dhabi: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a perfume shop in Dubai: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a perfume shop in Dubai: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AE",
+   "prompt": "a perfume shop in Dubai: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a corner shop in Birmingham: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a corner shop in Birmingham: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a corner shop in Birmingham: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a barber in East London: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a barber in East London: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a barber in East London: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a small cafe in Manchester: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a small cafe in Manchester: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a small cafe in Manchester: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a market stall in Leicester: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a market stall in Leicester: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a market stall in Leicester: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a dry cleaner in Glasgow: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a dry cleaner in Glasgow: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a dry cleaner in Glasgow: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a bakery in Bristol: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a bakery in Bristol: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "GB",
+   "prompt": "a bakery in Bristol: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a bodega in Queens: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a bodega in Queens: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a bodega in Queens: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a hardware store in a small Ohio town: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a hardware store in a small Ohio town: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a hardware store in a small Ohio town: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a nail salon in Houston: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a nail salon in Houston: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a nail salon in Houston: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a taco truck in Los Angeles: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a taco truck in Los Angeles: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a taco truck in Los Angeles: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a family restaurant in New Jersey: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a family restaurant in New Jersey: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a family restaurant in New Jersey: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a bike shop in Portland: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a bike shop in Portland: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "US",
+   "prompt": "a bike shop in Portland: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a milk bar in Melbourne: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a milk bar in Melbourne: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a milk bar in Melbourne: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a cafe in Sydney: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a cafe in Sydney: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a cafe in Sydney: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a butcher in Brisbane: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a butcher in Brisbane: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a butcher in Brisbane: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a surf shop in Perth: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a surf shop in Perth: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a surf shop in Perth: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a newsagent in Adelaide: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a newsagent in Adelaide: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a newsagent in Adelaide: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a fruit shop in Darwin: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a fruit shop in Darwin: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "AU",
+   "prompt": "a fruit shop in Darwin: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a corner dairy in Auckland: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a corner dairy in Auckland: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a corner dairy in Auckland: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a cafe in Wellington: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a cafe in Wellington: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a cafe in Wellington: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a fish and chip shop in Christchurch: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a fish and chip shop in Christchurch: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a fish and chip shop in Christchurch: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a bookshop in Dunedin: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a bookshop in Dunedin: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a bookshop in Dunedin: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a hardware store in Hamilton: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a hardware store in Hamilton: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a hardware store in Hamilton: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a market stall in Rotorua: the owner rolling up the shutter at sunrise and switching on the lights."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a market stall in Rotorua: the owner counting notes from the cash drawer at closing time, shelves full behind."
+  },
+  {
+   "app": "scoremybiz",
+   "country": "NZ",
+   "prompt": "a market stall in Rotorua: a regular customer being served with a smile, a notebook ledger open on the counter."
+  },
+  {
+   "app": "waypoint",
+   "country": "Mumbai",
+   "prompt": "Mumbai, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Mumbai",
+   "prompt": "Mumbai, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Mumbai",
+   "prompt": "Mumbai, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Mumbai",
+   "prompt": "Mumbai, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Delhi",
+   "prompt": "Delhi, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Delhi",
+   "prompt": "Delhi, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Delhi",
+   "prompt": "Delhi, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Delhi",
+   "prompt": "Delhi, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Bengaluru",
+   "prompt": "Bengaluru, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Bengaluru",
+   "prompt": "Bengaluru, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Bengaluru",
+   "prompt": "Bengaluru, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Bengaluru",
+   "prompt": "Bengaluru, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Lagos",
+   "prompt": "Lagos, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Lagos",
+   "prompt": "Lagos, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Lagos",
+   "prompt": "Lagos, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Lagos",
+   "prompt": "Lagos, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Accra",
+   "prompt": "Accra, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Accra",
+   "prompt": "Accra, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Accra",
+   "prompt": "Accra, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Accra",
+   "prompt": "Accra, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Nairobi",
+   "prompt": "Nairobi, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Nairobi",
+   "prompt": "Nairobi, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Nairobi",
+   "prompt": "Nairobi, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Nairobi",
+   "prompt": "Nairobi, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Dubai",
+   "prompt": "Dubai, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Dubai",
+   "prompt": "Dubai, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Dubai",
+   "prompt": "Dubai, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Dubai",
+   "prompt": "Dubai, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "London",
+   "prompt": "London, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "London",
+   "prompt": "London, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "London",
+   "prompt": "London, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "London",
+   "prompt": "London, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "New York",
+   "prompt": "New York, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "New York",
+   "prompt": "New York, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "New York",
+   "prompt": "New York, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "New York",
+   "prompt": "New York, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Sydney",
+   "prompt": "Sydney, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Sydney",
+   "prompt": "Sydney, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Sydney",
+   "prompt": "Sydney, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Sydney",
+   "prompt": "Sydney, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Auckland",
+   "prompt": "Auckland, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Auckland",
+   "prompt": "Auckland, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Auckland",
+   "prompt": "Auckland, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Auckland",
+   "prompt": "Auckland, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Jakarta",
+   "prompt": "Jakarta, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Jakarta",
+   "prompt": "Jakarta, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Jakarta",
+   "prompt": "Jakarta, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Jakarta",
+   "prompt": "Jakarta, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "São Paulo",
+   "prompt": "São Paulo, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "São Paulo",
+   "prompt": "São Paulo, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "São Paulo",
+   "prompt": "São Paulo, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "São Paulo",
+   "prompt": "São Paulo, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Paris",
+   "prompt": "Paris, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Paris",
+   "prompt": "Paris, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Paris",
+   "prompt": "Paris, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Paris",
+   "prompt": "Paris, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Berlin",
+   "prompt": "Berlin, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Berlin",
+   "prompt": "Berlin, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Berlin",
+   "prompt": "Berlin, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Berlin",
+   "prompt": "Berlin, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Lisbon",
+   "prompt": "Lisbon, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Lisbon",
+   "prompt": "Lisbon, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Lisbon",
+   "prompt": "Lisbon, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Lisbon",
+   "prompt": "Lisbon, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "waypoint",
+   "country": "Karachi",
+   "prompt": "Karachi, a young man at an apartment window at night, city lights below, phone in hand."
+  },
+  {
+   "app": "waypoint",
+   "country": "Karachi",
+   "prompt": "Karachi, a young woman on a late bus, rain on the window, earphones in, looking out."
+  },
+  {
+   "app": "waypoint",
+   "country": "Karachi",
+   "prompt": "Karachi, someone alone on a rooftop at dusk, the city glowing, a quiet moment."
+  },
+  {
+   "app": "waypoint",
+   "country": "Karachi",
+   "prompt": "Karachi, a small hostel room at midnight, one lamp, a person typing one line on a phone."
+  },
+  {
+   "app": "both",
+   "occasion": "halloween",
+   "prompt": "a quiet suburban street in the US on Halloween night, carved pumpkins glowing, a figure in a hoodie walking alone."
+  },
+  {
+   "app": "both",
+   "occasion": "diwali",
+   "prompt": "a lane of Indian shops lit with diyas and string lights on Diwali night, shoppers, warm glow."
+  },
+  {
+   "app": "both",
+   "occasion": "diwali",
+   "prompt": "a shopkeeper lighting a diya at the counter of a small Indian shop, marigold garland, soft bokeh."
+  },
+  {
+   "app": "both",
+   "occasion": "thanksgiving",
+   "prompt": "a family dinner table in an American home at Thanksgiving, candles, one empty chair."
+  },
+  {
+   "app": "both",
+   "occasion": "christmas",
+   "prompt": "a Lagos street market at Christmas, fairy lights, trade going on at dusk."
+  },
+  {
+   "app": "both",
+   "occasion": "christmas",
+   "prompt": "a London corner shop in the snow with a Christmas tree in the window."
+  },
+  {
+   "app": "both",
+   "occasion": "new_year",
+   "prompt": "fireworks over a city seen from a small balcony, one person watching, phone in hand."
+  },
+  {
+   "app": "both",
+   "occasion": "uae_national_day",
+   "prompt": "Dubai skyline at night with national flags along a souk street."
+  },
+  {
+   "app": "both",
+   "occasion": "jamhuri_day",
+   "prompt": "a Nairobi street with Kenyan flags, a duka open, afternoon light."
+  },
+  {
+   "app": "both",
+   "occasion": "holi",
+   "prompt": "colour powder in the air in an Indian lane, laughing shopkeepers, a shop front splashed with colour."
+  },
+  {
+   "app": "both",
+   "occasion": "pongal",
+   "prompt": "a Tamil village kitchen, pongal pot boiling over, kolam on the floor, morning light."
+  },
+  {
+   "app": "both",
+   "occasion": "ramadan",
+   "prompt": "a Dubai cafeteria at iftar, dates and water on the counter, lanterns."
+  }
+ ]
+}
