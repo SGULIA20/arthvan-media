@@ -18,5 +18,100 @@
   "front_happy": "She wears a festive mustard-yellow kurta with a thin maroon border and small earrings instead of her usual clothes. Standing, big warm smile, hands loosely clasped in front.",
   "phone": "She wears a festive mustard-yellow kurta with a thin maroon border and small earrings instead of her usual clothes. Standing, holding a smartphone in her right hand at chest height and looking at it.",
   "explaining_right": "She wears a festive mustard-yellow kurta with a thin maroon border and small earrings instead of her usual clothes. Standing, turned slightly to her right, gesturing to the right with an open palm as if presenting a phone screen beside her."
+ },
+ "founder_kurta": {
+  "front_happy": "He wears a festive cream kurta with a deep-blue Nehru jacket and no tie, instead of the suit. Standing, warm smile, hands relaxed.",
+  "phone": "He wears a festive cream kurta with a deep-blue Nehru jacket and no tie, instead of the suit. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "He wears a festive cream kurta with a deep-blue Nehru jacket and no tie, instead of the suit. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "mira_festive": {
+  "front_happy": "Mira (the reference character) wears a soft rose-pink anarkali kurta with light gold work and small jhumka earrings, instead of her hoodie. Standing, warm smile, hands relaxed.",
+  "phone": "Mira (the reference character) wears a soft rose-pink anarkali kurta with light gold work and small jhumka earrings, instead of her hoodie. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Mira (the reference character) wears a soft rose-pink anarkali kurta with light gold work and small jhumka earrings, instead of her hoodie. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "mira_halloween": {
+  "front_happy": "Mira (the reference character) wears her usual lilac hoodie plus a tiny black witch hat and a small orange pumpkin pin on the hoodie; playful, nothing scary. Standing, warm smile, hands relaxed.",
+  "phone": "Mira (the reference character) wears her usual lilac hoodie plus a tiny black witch hat and a small orange pumpkin pin on the hoodie; playful, nothing scary. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Mira (the reference character) wears her usual lilac hoodie plus a tiny black witch hat and a small orange pumpkin pin on the hoodie; playful, nothing scary. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "founder_casual_halloween": {
+  "front_happy": "He wears his usual casual shirt plus a simple black cat-ear headband; playful, nothing scary. Standing, warm smile, hands relaxed.",
+  "phone": "He wears his usual casual shirt plus a simple black cat-ear headband; playful, nothing scary. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "He wears his usual casual shirt plus a simple black cat-ear headband; playful, nothing scary. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "lumi_autumn": {
+  "front_happy": "Lumi (the reference character) wears a rust-orange knit sweater and a thin mustard scarf, instead of her blazer. Standing, warm smile, hands relaxed.",
+  "phone": "Lumi (the reference character) wears a rust-orange knit sweater and a thin mustard scarf, instead of her blazer. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Lumi (the reference character) wears a rust-orange knit sweater and a thin mustard scarf, instead of her blazer. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "mira_winter": {
+  "front_happy": "Mira (the reference character) wears a cream chunky knit sweater and a grey beanie, instead of her hoodie. Standing, warm smile, hands relaxed.",
+  "phone": "Mira (the reference character) wears a cream chunky knit sweater and a grey beanie, instead of her hoodie. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Mira (the reference character) wears a cream chunky knit sweater and a grey beanie, instead of her hoodie. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "founder_casual_winter": {
+  "front_happy": "He wears a dark-green knit sweater and a grey beanie, instead of his shirt. Standing, warm smile, hands relaxed.",
+  "phone": "He wears a dark-green knit sweater and a grey beanie, instead of his shirt. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "He wears a dark-green knit sweater and a grey beanie, instead of his shirt. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "lumi_abaya_festive": {
+  "front_happy": "Lumi (the reference character) wears an elegant navy abaya with a thin gold border and a loose cream headscarf, instead of her blazer. Standing, warm smile, hands relaxed.",
+  "phone": "Lumi (the reference character) wears an elegant navy abaya with a thin gold border and a loose cream headscarf, instead of her blazer. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Lumi (the reference character) wears an elegant navy abaya with a thin gold border and a loose cream headscarf, instead of her blazer. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "lumi_kente": {
+  "front_happy": "Lumi (the reference character) wears a tailored kente-cloth dress in gold, green and black, and a matching headwrap, instead of her blazer. Standing, warm smile, hands relaxed.",
+  "phone": "Lumi (the reference character) wears a tailored kente-cloth dress in gold, green and black, and a matching headwrap, instead of her blazer. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Lumi (the reference character) wears a tailored kente-cloth dress in gold, green and black, and a matching headwrap, instead of her blazer. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "lumi_kitenge": {
+  "front_happy": "Lumi (the reference character) wears a bright kitenge dress in blue and orange print and a matching headwrap, instead of her blazer. Standing, warm smile, hands relaxed.",
+  "phone": "Lumi (the reference character) wears a bright kitenge dress in blue and orange print and a matching headwrap, instead of her blazer. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Lumi (the reference character) wears a bright kitenge dress in blue and orange print and a matching headwrap, instead of her blazer. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "lumi_christmas": {
+  "front_happy": "Lumi (the reference character) wears her usual navy blazer plus a red knit scarf and a small red Santa hat. Standing, warm smile, hands relaxed.",
+  "phone": "Lumi (the reference character) wears her usual navy blazer plus a red knit scarf and a small red Santa hat. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Lumi (the reference character) wears her usual navy blazer plus a red knit scarf and a small red Santa hat. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "mira_christmas": {
+  "front_happy": "Mira (the reference character) wears a red hoodie with white snowflake pattern and a small red Santa hat, instead of her lilac hoodie. Standing, warm smile, hands relaxed.",
+  "phone": "Mira (the reference character) wears a red hoodie with white snowflake pattern and a small red Santa hat, instead of her lilac hoodie. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Mira (the reference character) wears a red hoodie with white snowflake pattern and a small red Santa hat, instead of her lilac hoodie. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "founder_casual_christmas": {
+  "front_happy": "He wears a red knit sweater with a white reindeer band and a small red Santa hat, instead of his shirt. Standing, warm smile, hands relaxed.",
+  "phone": "He wears a red knit sweater with a white reindeer band and a small red Santa hat, instead of his shirt. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "He wears a red knit sweater with a white reindeer band and a small red Santa hat, instead of his shirt. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "founder_suit_christmas": {
+  "front_happy": "He wears his navy suit plus a red tie and a small red Santa hat. Standing, warm smile, hands relaxed.",
+  "phone": "He wears his navy suit plus a red tie and a small red Santa hat. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "He wears his navy suit plus a red tie and a small red Santa hat. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "lumi_newyear": {
+  "front_happy": "Lumi (the reference character) wears a black sequined evening dress with a thin gold belt and a small gold party hat, instead of her blazer. Standing, warm smile, hands relaxed.",
+  "phone": "Lumi (the reference character) wears a black sequined evening dress with a thin gold belt and a small gold party hat, instead of her blazer. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Lumi (the reference character) wears a black sequined evening dress with a thin gold belt and a small gold party hat, instead of her blazer. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "mira_newyear": {
+  "front_happy": "Mira (the reference character) wears a silver sequined top under her open lilac hoodie and a small gold party hat. Standing, warm smile, hands relaxed.",
+  "phone": "Mira (the reference character) wears a silver sequined top under her open lilac hoodie and a small gold party hat. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Mira (the reference character) wears a silver sequined top under her open lilac hoodie and a small gold party hat. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "lumi_pongal": {
+  "front_happy": "Lumi (the reference character) wears a cream silk saree with a wide red and gold border and jasmine in her hair, instead of her blazer. Standing, warm smile, hands relaxed.",
+  "phone": "Lumi (the reference character) wears a cream silk saree with a wide red and gold border and jasmine in her hair, instead of her blazer. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Lumi (the reference character) wears a cream silk saree with a wide red and gold border and jasmine in her hair, instead of her blazer. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "lumi_holi": {
+  "front_happy": "Lumi (the reference character) wears a plain white kurta splashed with pink, yellow and green colour powder, instead of her blazer. Standing, warm smile, hands relaxed.",
+  "phone": "Lumi (the reference character) wears a plain white kurta splashed with pink, yellow and green colour powder, instead of her blazer. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Lumi (the reference character) wears a plain white kurta splashed with pink, yellow and green colour powder, instead of her blazer. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
+ },
+ "mira_holi": {
+  "front_happy": "Mira (the reference character) wears a plain white kurta splashed with pink, yellow and green colour powder, instead of her hoodie. Standing, warm smile, hands relaxed.",
+  "phone": "Mira (the reference character) wears a plain white kurta splashed with pink, yellow and green colour powder, instead of her hoodie. Standing, holding a smartphone in the right hand at chest height, looking at it.",
+  "explaining_right": "Mira (the reference character) wears a plain white kurta splashed with pink, yellow and green colour powder, instead of her hoodie. Standing, turned slightly to the right, gesturing to the right with an open palm as if presenting a phone screen."
  }
 }

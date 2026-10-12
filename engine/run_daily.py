@@ -229,9 +229,11 @@ def scheduled_story(root: Path, day: date, log: Path = None):
             st = json.loads(p.read_text())
         except ValueError:
             continue
+        rendered = (root / "stories" / "out" / f"{st['id']}.mp4").exists()
+        if st.get("occasion") and st.get("post_on") == day.isoformat() and st["id"] not in done and rendered:
+            return st                                   # a festival or national day wins its date, whatever the cycle says
         if (st.get("post_on") and st["post_on"] <= day.isoformat() and st["id"] not in done
-                and (st["app"], story_lead(st)) == slot(day)
-                and (root / "stories" / "out" / f"{st['id']}.mp4").exists()):
+                and (st["app"], story_lead(st)) == slot(day) and rendered):
             cands.append(st)
     return min(cands, key=lambda s: s["post_on"]) if cands else None
 

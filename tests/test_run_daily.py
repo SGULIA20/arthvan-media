@@ -423,3 +423,26 @@ def test_a_founder_story_waits_for_a_male_slot_of_its_app(tmp_path):
     assert go(w, day=date(2026, 10, 13)) == 0 and last_entry(tmp_path, "instagram")["item"] != "f-wp"   # Waypoint + female day
     assert go(w, day=date(2026, 10, 14)) == 0 and last_entry(tmp_path, "instagram")["item"] != "f-wp"   # ScoreMyBiz day
     assert go(w, day=date(2026, 10, 15)) == 0 and last_entry(tmp_path, "instagram")["item"] == "f-wp"   # Waypoint + male day
+
+
+def test_an_occasion_story_wins_its_date_whatever_the_cycle_says(tmp_path):
+    w = World(tmp_path)
+    (tmp_path / "stories" / "out").mkdir(parents=True)
+    (tmp_path / "stories" / "out" / "lumi-diwali-hi.mp4").write_bytes(b"v")
+    (tmp_path / "stories" / "lumi_diwali_hi.json").write_text(json.dumps({"id": "lumi-diwali-hi", "app": "scoremybiz", "post_on": "2026-11-08", "occasion": "diwali", "character": "lumi", "caption": "c", "hashtags": [], "title": "t"}))
+    from engine.select_item import slot
+    assert slot(date(2026, 11, 8)) != ("scoremybiz", "female")            # Diwali does not fall on Lumi's slot
+    assert go(w, day=date(2026, 11, 8)) == 0 and last_entry(tmp_path, "instagram")["item"] == "lumi-diwali-hi"
+    assert go(w, day=date(2026, 11, 9)) == 0 and last_entry(tmp_path, "instagram")["item"] != "lumi-diwali-hi"   # never again
+
+
+def test_occasions_calendar_is_valid():
+    from engine.config import ROOT
+    cal = json.loads((ROOT / "content" / "occasions.json").read_text())["occasions"]
+    cat = json.loads((ROOT / "engine" / "assets" / "poses.json").read_text())
+    base = {"lumi", "mira", "founder_suit", "founder_casual"}
+    for o in cal:
+        date.fromisoformat(o["date"])
+        assert o["apps"] and set(o["apps"]) <= {"scoremybiz", "waypoint"}
+        for who, costume in o["costumes"].items():
+            assert who in base and (costume in cat or costume in base), (o["key"], costume)

@@ -49,5 +49,5 @@ def test_no_key_is_a_clear_error(tmp_path):
 
 def test_catalogue_is_valid_and_names_real_characters():
     cat = json.loads(poses.CATALOGUE.read_text())
-    assert set(cat) <= {"founder_suit", "founder_casual", "lumi_kurta", "lumi", "mira"}
+    assert all(c.split("_")[0] in {"founder", "lumi", "mira"} for c in cat)       # every costume belongs to a real character
     assert all(isinstance(p, str) and len(p) > 10 for poses_ in cat.values() for p in poses_.values())

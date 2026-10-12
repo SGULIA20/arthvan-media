@@ -92,7 +92,10 @@ def make_pose(character: str, pose: str, prompt: str, *, reference: Path = None,
 def _reference(character: str, out_dir: Path) -> Path:
     """The character's own full-body source picture (jpg under SOURCE_DIR), else its PNG."""
     base = character.split("_")[0]
-    for name in (f"{character}_front_standing", f"{character}_front_neutral", f"{base}_front_standing", f"{base}_front_neutral"):
+    names = [f"{character}_front_standing", f"{character}_front_neutral"]
+    for stem in (character.rsplit("_", 1)[0], base, f"{base}_suit", f"{base}_casual"):   # costume → its base character
+        names += [f"{stem}_front_standing", f"{stem}_front_neutral"]
+    for name in names:
         for p in (SOURCE_DIR / base / f"{name}.jpg", Path(out_dir) / f"{name}.png"):
             if p.exists():
                 return p
