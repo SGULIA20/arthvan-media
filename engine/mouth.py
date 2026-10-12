@@ -42,17 +42,16 @@ def _mouth_mask(base, warped):
 
 def build(char: str) -> list:
     base = cv2.imread(str(CHARS / f"{char}_head_neutral.png"), cv2.IMREAD_UNCHANGED)
+    warped = {v: _align(base, cv2.imread(str(CHARS / f"{char}_head_talk_{v}.png"), cv2.IMREAD_UNCHANGED)) for v in ("a", "b")}
+    a, centre = _mouth_mask(base, warped["b"])      # the wide-open mouth gives the reliable location; reuse it for 'a'
     out = []
     for v in ("a", "b"):
-        talk = cv2.imread(str(CHARS / f"{char}_head_talk_{v}.png"), cv2.IMREAD_UNCHANGED)
-        warped = _align(base, talk)
-        a, centre = _mouth_mask(base, warped)
         res = base.astype(np.float32).copy()
         for c in range(4):
-            res[:, :, c] = base[:, :, c] * (1 - a) + warped[:, :, c] * a
+            res[:, :, c] = base[:, :, c] * (1 - a) + warped[v][:, :, c] * a
         p = CHARS / f"{char}_head_talk_{v}_al.png"
-        cv2.imwrite(str(p), res.astype(np.uint8)); out.append((p.name, centre))
-    return out
+        cv2.imwrite(str(p), res.astype(np.uint8)); out.append(p.name)
+    return [centre] + out
 
 
 if __name__ == "__main__":

@@ -33,11 +33,12 @@
   },
   {
    "layout": "present",
-   "pose": "explaining_right",
+   "pose": "front_neutral",
    "screen": "dashboard.png",
    "vo": "तीन ग्राहकों को एक एक टैप में याद दिलाया। शाम तक दो ने भुगतान कर दिया।",
    "sub": "Three customers reminded, one tap each. By evening, two had paid.",
-   "min": 7
+   "min": 7,
+   "who": "founder_suit"
   },
   {
    "layout": "present",
@@ -48,14 +49,11 @@
    "min": 6
   },
   {
-   "layout": "duo_end",
+   "layout": "end",
    "pose": "front_happy",
-   "who2": "founder_suit",
-   "pose2": "wave",
-   "voice": "Rishi",
-   "vo": "I'm Sanjeev. I built ScoreMyBiz for shops like Meena's. Know the health of your business. Free for thirty days.",
+   "vo": "स्कोर माय बिज़। अपने धंधे की सेहत जानिए। तीस दिन मुफ़्त।",
    "sub": "",
-   "min": 6
+   "min": 5
   }
  ],
  "post_on": "2026-10-14",

@@ -17,19 +17,21 @@
   },
   {
    "layout": "scene",
-   "pose": "listening",
+   "pose": "window",
    "card": "11:48 PM",
    "vo": "There is one thing he has not said out loud, to anyone.",
    "sub": "There is one thing he has not said out loud, to anyone.",
-   "min": 5
+   "min": 5,
+   "who": "founder_casual"
   },
   {
    "layout": "present",
-   "pose": "phone_night",
+   "pose": "phone_sofa",
    "screen": "create_typed.png",
    "vo": "On Waypoint he gets a new name today. He types the sentence. His thumb hovers. He posts it.",
    "sub": "On Waypoint he gets a new name today. He types the sentence. His thumb hovers. He posts it.",
-   "min": 7
+   "min": 7,
+   "who": "founder_casual"
   },
   {
    "layout": "present",
@@ -53,15 +55,13 @@
    "screen": "matching.png",
    "vo": "When he wants to talk, Waypoint crosses his path with one person. A short chat. Then both move on.",
    "sub": "When he wants to talk, Waypoint crosses his path with one person. A short chat. Then both move on.",
-   "min": 6
+   "min": 6,
+   "who": "founder_casual"
   },
   {
-   "layout": "duo_end",
+   "layout": "end",
    "pose": "wave",
-   "who2": "founder_casual",
-   "pose2": "wave",
-   "voice": "Rishi",
-   "vo": "I'm Sanjeev. I built Waypoint. Say it once. Free on Google Play.",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
    "sub": "",
    "min": 5
   }
