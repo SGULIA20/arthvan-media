@@ -7,6 +7,7 @@ import pytest
 from engine.instagram import PartialPublish, Prepared
 from engine.linkedin import LinkedInError
 from engine.threads import ThreadsError
+from engine.youtube import YouTubeError
 from engine.render import RenderedSet
 from engine.run_daily import Deps, already_posted, prune_old, run, wait_for_urls
 
@@ -26,7 +27,7 @@ class World:
             wait_for_urls=self.wait_for_urls, prepare_set=self.prepare_set, publish_set=self.publish_set,
             sync_repo=lambda: None, head_sha=lambda: "deadbeef", post_linkedin=self.post_linkedin,
             post_threads=self.post_threads, prepare_video_set=self.prepare_video_set,
-            post_linkedin_video=lambda *a: "urn:li:ugcPost:0")
+            post_linkedin_video=lambda *a: "urn:li:ugcPost:0", post_youtube=lambda *a: "VID0")
 
     def render_set(self, sel, app_cfg, out_dir, fps=30):
         self.rendered_ids.append(sel.item["id"])
@@ -344,3 +345,27 @@ def test_a_missed_story_is_posted_on_the_next_run_and_never_twice(tmp_path):
     assert go(w, day=date(2026, 10, 17)) == 0 and last_entry(tmp_path, "instagram")["item"] == "s-wed"
     assert go(w, day=date(2026, 10, 18)) == 0 and last_entry(tmp_path, "instagram")["item"] == "s0"
     assert w.count("publish") == 3
+
+
+def test_youtube_short_is_uploaded_after_instagram_when_the_channel_is_configured(tmp_path):
+    w = World(tmp_path)
+    ups = []
+    w.deps.post_youtube = lambda channel, path, title, desc, play, tags: ups.append((channel["refresh_token"], str(path), title, play)) or "VID1"
+    env = dict(ENV, YT_CLIENT_ID="cid", YT_CLIENT_SECRET="sec", YT_WAYPOINT_REFRESH_TOKEN="rt-wp")
+    assert go(w, env=env) == 0                                    # waypoint day
+    assert len(ups) == 1 and ups[0][0] == "rt-wp" and ups[0][1].endswith("reel.mp4") and "arthvananalytics.waypoint" in ups[0][3]
+    assert last_entry(tmp_path, "youtube")["status"] == "published" and last_entry(tmp_path, "youtube")["id"] == "VID1"
+    assert go(w, env=env, day=date(2026, 10, 12)) == 0 and len(ups) == 1   # scoremybiz day: no channel token, skipped quietly
+
+
+def test_youtube_failure_is_isolated_and_retried(tmp_path):
+    w = World(tmp_path)
+    calls = []
+    def flaky(channel, path, title, desc, play, tags):
+        calls.append(1)
+        if len(calls) == 1: raise YouTubeError("quota")
+        return "VID2"
+    w.deps.post_youtube = flaky
+    env = dict(ENV, YT_CLIENT_ID="cid", YT_CLIENT_SECRET="sec", YT_WAYPOINT_REFRESH_TOKEN="rt")
+    assert go(w, env=env) == 1 and last_entry(tmp_path, "instagram")["status"] == "published"
+    assert go(w, env=env) == 0 and len(calls) == 2 and w.count("publish") == 1

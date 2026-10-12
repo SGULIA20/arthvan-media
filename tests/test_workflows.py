@@ -70,3 +70,9 @@ def test_weekly_report_runs_monday_morning_and_can_open_issues():
 def test_weekly_report_includes_the_ad_radar():
     text = (WF / "weekly-report.yml").read_text()
     assert "radar.collect" in text and "radar.report" in text and "radar/snapshots" in text
+
+
+def test_youtube_secrets_reach_the_daily_job():
+    text = (WF / "daily-post.yml").read_text()
+    for k in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_SCOREMYBIZ_REFRESH_TOKEN", "YT_WAYPOINT_REFRESH_TOKEN"):
+        assert f"secrets.{k}" in text

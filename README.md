@@ -64,3 +64,10 @@ Before writing any new script: re-capture the app screens from the latest build 
 Every Monday the weekly report also runs `radar/collect.py` (public Play listings + newest YouTube videos for the apps in
 `radar/watchlist.json`) and `radar/report.py` (theme counts, who pushes what, changes since last week, suggested themes).
 No Meta scraping, no paid data. Snapshots in `radar/snapshots/`, reports in `radar/reports/`. Add competitors by editing the watch list.
+
+## YouTube Shorts
+Every day's Reel (and every story ad) also uploads as a public Short to the channel mapped to that app:
+ScoreMyBiz → SGLearning, Waypoint → Arthvan (ex SGMythWorld). Needs secrets `YT_CLIENT_ID`, `YT_CLIENT_SECRET` and
+`YT_<APP>_REFRESH_TOKEN`, created once with `python -m engine.youtube_auth scoremybiz|waypoint` (browser consent, choose
+the channel). Title gets "#Shorts", description carries the Play link (clickable on YouTube). One quota unit per upload
+of the 10,000 daily allowance. A YouTube failure never affects the other channels; a re-run retries YouTube only.

@@ -54,6 +54,10 @@ jobs:
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_SCOREMYBIZ_REFRESH_TOKEN: ${{ secrets.YT_SCOREMYBIZ_REFRESH_TOKEN }}
+          YT_WAYPOINT_REFRESH_TOKEN: ${{ secrets.YT_WAYPOINT_REFRESH_TOKEN }}
           PAUSE: ${{ vars.PAUSE }}
           MODE: ${{ github.event.inputs.mode || 'post' }}
           RUN_DATE: ${{ github.event.inputs.date }}

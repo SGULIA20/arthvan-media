@@ -15,12 +15,13 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable
 
-from . import instagram, linkedin, render, threads
+from . import instagram, linkedin, render, threads, youtube
 from .config import ROOT, load_apps, load_bank, load_global
 from .instagram import Captions, InstagramError, PartialPublish, SetUrls
 from .lint import alt_texts, build_captions, build_linkedin_text, build_threads_text, lint_item, story_captions
 from .linkedin import LinkedInError
 from .threads import ThreadsError
+from .youtube import YouTubeError
 from .select_item import lagos_date, pick
 
 MAX_FALLBACKS = 5
@@ -85,6 +86,7 @@ class Deps:
     post_threads: Callable = threads.post_carousel
     prepare_video_set: Callable = instagram.prepare_video_set
     post_linkedin_video: Callable = linkedin.post_video
+    post_youtube: Callable = youtube.post_short
 
 
 # ---------- helpers ----------
@@ -135,7 +137,7 @@ def _channel(day: date, channel: str, item_id: str, deps: Deps, log: Path, actio
     entry = {"date": day.isoformat(), "channel": channel, "item": item_id}
     try:
         post_id = action()
-    except (LinkedInError, ThreadsError) as e:
+    except (LinkedInError, ThreadsError, YouTubeError) as e:
         _append(log, dict(entry, status="failed", error=str(e)[:300]))
         deps.git_publish([log], f"log: {channel} failed {day}")
         print(f"{channel} failed: {e}")
@@ -157,9 +159,21 @@ def _do_threads(day, app_cfg, item, slide_urls, deps, log, token, uid) -> bool:
                     lambda: deps.post_threads(uid, token, slide_urls, build_threads_text(app_cfg, item)))
 
 
+def _do_youtube(day, app_cfg, item, video_path, deps, log, channel, title, desc) -> bool:
+    return _channel(day, "youtube", item["id"], deps, log,
+                    lambda: deps.post_youtube(channel, video_path, title, desc, app_cfg["play_url"],
+                                              [t.lstrip("#") for t in item.get("hashtags", [])] + app_cfg["base_hashtags"]))
+
+
 def _extras(day, app_cfg, item, slides, slide_urls, deps, log, chans) -> int:
     """Post to every enabled extra channel that has not succeeded today. Returns 0 when all are fine."""
     ok = True
+    yt = chans.get("youtube", {}).get(app_cfg["name"].lower().replace(" ", ""))
+    if yt and day_status(log, day, "youtube") != "published" and slides:
+        video = Path(slides[0]).parent / "reel.mp4"
+        if video.exists():
+            title = item["slides"][0]["text"] if item.get("slides") else item["caption"][:80]
+            ok &= _do_youtube(day, app_cfg, item, video, deps, log, yt, title, item["caption"])
     if chans.get("threads") and day_status(log, day, "threads") != "published":
         ok &= _do_threads(day, app_cfg, item, slide_urls, deps, log, *chans["threads"])
     if chans.get("linkedin") and day_status(log, day, "linkedin") != "published":
@@ -230,6 +244,9 @@ def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log
         _append(log, dict(entry, status="published", ids=ids)); deps.git_publish([log], f"log: published {day}")
         print(f"published story {st['id']}: {ids}")
         ok = True
+        yt = chans.get("youtube", {}).get(st["app"])
+        if yt and day_status(log, day, "youtube") != "published":
+            ok &= _do_youtube(day, app_cfg, st, dst, deps, log, yt, st.get("title", app_cfg["name"]), st["caption"])
         if chans.get("linkedin_any") and day_status(log, day, "linkedin") != "published":
             tok, urn = chans["linkedin_any"]
             ok &= _channel(day, "linkedin", st["id"], deps, log,
@@ -263,11 +280,14 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     th_token, th_uid = env.get("THREADS_ACCESS_TOKEN"), env.get("THREADS_USER_ID")
     if th_token and th_uid:
         chans["threads"] = (th_token, th_uid)
+    chans["youtube"] = {app: {"client_id": env["YT_CLIENT_ID"], "client_secret": env["YT_CLIENT_SECRET"],
+                              "refresh_token": env[f"YT_{app.upper()}_REFRESH_TOKEN"]}
+                        for app in apps if env.get("YT_CLIENT_ID") and env.get("YT_CLIENT_SECRET") and env.get(f"YT_{app.upper()}_REFRESH_TOKEN")}
     if mode == "post":
         deps.sync_repo()
         status = day_status(log, day)
         if status == "published":
-            missing = [c for c in chans if c != "linkedin_any" and day_status(log, day, c) != "published"]
+            missing = [c for c in chans if c not in ("linkedin_any", "youtube") and day_status(log, day, c) != "published"] + [f"youtube" for a in [chans.get("youtube", {})] if a and day_status(log, day, "youtube") != "published"]
             if missing:
                 return _extras_retry(day, root, log, apps, banks, deps, chans, env)
             print(f"{day} already posted: nothing to do")
@@ -279,7 +299,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     story = scheduled_story(root, day, log)
     if story is not None:
         if mode == "post" and day_status(log, day) is not None:
-            missing = [c for c in chans if c != "linkedin_any" and day_status(log, day, c) != "published"]
+            missing = [c for c in chans if c not in ("linkedin_any", "youtube") and day_status(log, day, c) != "published"] + [f"youtube" for a in [chans.get("youtube", {})] if a and day_status(log, day, "youtube") != "published"]
             print(f"{day} story already posted")
             return 0
         return _run_story(story, day, root, env, deps, apps, log, chans, token, ig_id, mode)
