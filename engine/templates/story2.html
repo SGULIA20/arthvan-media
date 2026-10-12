@@ -47,6 +47,11 @@ window.render=function(t){
     h+=screen(s,local,480,250)+fullBody(s.pose||'explaining_right',-330,1050,local,5,s.who);
   } else if(s.layout==='scene'){    // full body centre, prop text above
     h+=`<div class="abs" style="left:70px;right:70px;top:300px;text-align:center;font-weight:800;font-size:72px;line-height:1.1;opacity:${eo((local-.3)/.5)}">${s.card||''}</div>`+fullBody(s.pose||'front_neutral',-110,1300,local,6,s.who);
+  } else if(s.layout==='clip'){     // a generated shot fills the frame; optional small character and card
+    const c=(D.clips||{})[String(S.indexOf(s))]; if(c){ const k=Math.min(c.n, Math.max(1, Math.floor(local*30)+1));
+      h+=`<div class="abs" style="inset:0;overflow:hidden"><img src="${c.dir}/f${String(k).padStart(4,'0')}.jpg" style="width:100%;height:100%;object-fit:cover;transform:scale(${(1+local*0.01).toFixed(4)})"></div>`; }
+    if(s.card) h+=`<div class="abs" style="left:70px;right:70px;top:260px;text-align:center;font-weight:800;font-size:72px;line-height:1.1;text-shadow:0 4px 24px rgba(0,0,0,.6);opacity:${eo((local-.3)/.5)}">${s.card}</div>`;
+    if(s.pose) h+=fullBody(s.pose,-200,760,local,4,s.who);
   } else if(s.layout==='duo_end'){   // main character left, founder right, end card centred above
     h+=endHTML(local,true)+`<div style="position:absolute;left:-360px;bottom:-90px;width:1150px;height:1150px"><img src="${charImg(s.pose||'front_happy')}" style="width:100%;height:100%;object-fit:contain;object-position:bottom"></div>`
       +`<div style="position:absolute;right:-360px;bottom:-90px;width:1150px;height:1150px"><img src="${charImg(s.pose2||'wave',s.who2||'founder_suit')}" style="width:100%;height:100%;object-fit:contain;object-position:bottom"></div>`;

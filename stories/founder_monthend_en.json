@@ -24,12 +24,12 @@
    "min": 7
   },
   {
-   "layout": "scene",
-   "pose": "worried",
+   "layout": "clip",
+   "clip": "A small Indian hardware shop at closing time: the owner, a middle-aged man in a checked shirt, opens the cash drawer, looks at a few notes, then at the full shelves behind him, and exhales. Slow push-in.",
    "card": "Where did it go?",
    "vo": "Sales were good. The shelf was full. The drawer was not.",
    "sub": "Sales were good. The shelf was full. The drawer was not.",
-   "min": 5
+   "min": 8
   },
   {
    "layout": "present",

@@ -11,6 +11,7 @@ from playwright.sync_api import sync_playwright
 from .config import ROOT, load_apps
 from .music import synth, write_m4a
 from .tts import gemini_clip, pick_voice
+from . import broll
 
 TEMPLATE = ROOT / "engine" / "templates" / "story2.html"
 CHAR_DIR = ROOT / "engine" / "assets" / "characters"
@@ -79,6 +80,12 @@ def build(story_path: Path, out_dir: Path) -> Path:
                 "palette": app["palette"], "chars": story["character"], "char_base": CHAR_DIR.as_uri(), "vo_env": env, "vo_amp": amp,
                 "disclaimer": app.get("money_disclaimer") or "", "icon": (ROOT / app["icon"]).as_uri(),
                 "badge": BADGE.as_uri(), "shots": shots.as_uri()}
+        clips = {}
+        for i, s in enumerate(story["scenes"]):
+            if s.get("clip"):
+                mp4 = broll.clip(s["clip"]); d = tmp / f"clip{i}"
+                clips[str(i)] = {"dir": d.as_uri(), "n": broll.frames(mp4, d, FPS)}
+        deck["clips"] = clips
         frames = tmp / "frames"; frames.mkdir()
         with sync_playwright() as p:
             b = p.chromium.launch()
