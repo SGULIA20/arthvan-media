@@ -383,3 +383,20 @@ def test_whatsapp_status_video_goes_to_the_founder_after_instagram_and_retries_a
     assert last_entry(tmp_path, "whatsapp")["status"] == "published"
     assert go(w, env=env) == 0 and len(sent) == 1
     assert go(w, env=dict(ENV), day=date(2026, 10, 12)) == 0 and len(sent) == 1   # not configured: skipped
+
+
+def test_a_pending_whatsapp_template_is_waiting_not_a_failure_and_is_retried(tmp_path):
+    from engine.whatsapp import WhatsAppNotReady
+    w = World(tmp_path)
+    attempts = []
+    def send(cfg, url, app, caption):
+        attempts.append(1)
+        if len(attempts) == 1:
+            raise WhatsAppNotReady("template daily_status_video (en) is not approved yet")
+        return "gs-7"
+    w.deps.send_whatsapp = send
+    env = dict(ENV, GUPSHUP_APP_ID="a", GUPSHUP_API_KEY="k", WA_STATUS_TO="+2348120000000", WA_STATUS_TEMPLATE="daily_status_video")
+    assert go(w, env=env) == 0                      # the run is green: nothing is wrong, Meta is just slow
+    assert last_entry(tmp_path, "whatsapp")["status"] == "waiting"
+    assert go(w, env=env) == 0 and len(attempts) == 2   # the next run tries again and succeeds
+    assert last_entry(tmp_path, "whatsapp")["status"] == "published"

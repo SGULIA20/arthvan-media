@@ -18,6 +18,10 @@ class WhatsAppError(Exception):
     pass
 
 
+class WhatsAppNotReady(WhatsAppError):
+    """The template is still with Meta: nothing is wrong, try again next run."""
+
+
 def call(method: str, url: str, *, form=None, json_body=None, headers=None):
     hdrs = dict(headers or {})
     data = None
@@ -56,7 +60,7 @@ def _template_id(cfg: dict) -> str:
     for t in body.get("templates") or []:
         if t.get("elementName") == cfg["template"] and t.get("status") == "APPROVED" and t.get("languageCode", lang) == lang:
             return t["id"]
-    raise WhatsAppError(f"template {cfg['template']} ({lang}) is not approved yet on app {cfg['app_id']}")
+    raise WhatsAppNotReady(f"template {cfg['template']} ({lang}) is not approved yet on app {cfg['app_id']}")
 
 
 def send_status_video(cfg: dict, video_url: str, app_name: str, caption: str) -> str:

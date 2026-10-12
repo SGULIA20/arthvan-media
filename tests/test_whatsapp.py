@@ -3,7 +3,7 @@ import json
 import pytest
 
 from engine import whatsapp
-from engine.whatsapp import WhatsAppError, send_status_video
+from engine.whatsapp import WhatsAppError, WhatsAppNotReady, send_status_video
 
 TEMPLATES = {"status": "success", "templates": [
     {"id": "T-OLD", "elementName": "daily_status_video", "status": "REJECTED", "languageCode": "en"},
@@ -56,9 +56,10 @@ def test_template_lookup_asks_only_for_approved_templates(monkeypatch):
 def test_a_pending_template_is_a_clear_error(monkeypatch):
     fake = Fake(templates={"status": "success", "templates": [TEMPLATES["templates"][0]]})
     monkeypatch.setattr(whatsapp, "call", fake)
-    with pytest.raises(WhatsAppError, match="not approved yet"):
+    with pytest.raises(WhatsAppNotReady, match="not approved yet"):
         send_status_video(CFG, "u", "a", "c")
     assert fake.sends == 0
+    assert issubclass(WhatsAppNotReady, WhatsAppError)
 
 
 def test_retries_the_send_once(monkeypatch):

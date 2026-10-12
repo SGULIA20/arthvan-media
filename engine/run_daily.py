@@ -22,7 +22,7 @@ from .lint import alt_texts, build_captions, build_linkedin_text, build_threads_
 from .linkedin import LinkedInError
 from .threads import ThreadsError
 from .youtube import YouTubeError
-from .whatsapp import WhatsAppError
+from .whatsapp import WhatsAppError, WhatsAppNotReady
 from .select_item import lagos_date, pick
 
 MAX_FALLBACKS = 5
@@ -140,6 +140,11 @@ def _channel(day: date, channel: str, item_id: str, deps: Deps, log: Path, actio
     entry = {"date": day.isoformat(), "channel": channel, "item": item_id}
     try:
         post_id = action()
+    except WhatsAppNotReady as e:
+        _append(log, dict(entry, status="waiting", note=str(e)[:300]))
+        deps.git_publish([log], f"log: {channel} waiting {day}")
+        print(f"{channel} waiting: {e}")
+        return True
     except (LinkedInError, ThreadsError, YouTubeError, WhatsAppError) as e:
         _append(log, dict(entry, status="failed", error=str(e)[:300]))
         deps.git_publish([log], f"log: {channel} failed {day}")
