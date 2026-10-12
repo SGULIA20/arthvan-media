@@ -1,0 +1,22 @@
+{
+ "founder_suit": {
+  "explaining_right": "Standing, turned slightly to his right, gesturing to the right with an open palm as if presenting a phone screen beside him. Friendly expression.",
+  "explaining_left": "Standing, turned slightly to his left, gesturing to the left with an open palm as if presenting a phone screen beside him. Friendly expression.",
+  "phone": "Standing, holding a smartphone in his right hand at chest height and looking at it with a calm, interested expression.",
+  "pointing_up": "Standing, right index finger raised as if making one clear point, confident half smile.",
+  "thinking": "Standing, right hand on his chin, eyes slightly up, thinking.",
+  "worried": "Standing, shoulders a little dropped, one hand rubbing the back of his neck, worried expression.",
+  "sitting_laptop": "Sitting on a plain stool, a laptop on his lap, typing, looking at the screen."
+ },
+ "founder_casual": {
+  "explaining_right": "Standing, turned slightly to his right, gesturing to the right with an open palm as if presenting a phone screen beside him. Easy smile.",
+  "pointing_up": "Standing, right index finger raised as if making one clear point, easy smile.",
+  "front_standing": "Standing straight, hands relaxed at his sides, easy smile."
+ },
+ "lumi_kurta": {
+  "front_neutral": "She wears a festive mustard-yellow kurta with a thin maroon border and small earrings instead of her usual clothes. Standing straight, hands relaxed, warm neutral expression.",
+  "front_happy": "She wears a festive mustard-yellow kurta with a thin maroon border and small earrings instead of her usual clothes. Standing, big warm smile, hands loosely clasped in front.",
+  "phone": "She wears a festive mustard-yellow kurta with a thin maroon border and small earrings instead of her usual clothes. Standing, holding a smartphone in her right hand at chest height and looking at it.",
+  "explaining_right": "She wears a festive mustard-yellow kurta with a thin maroon border and small earrings instead of her usual clothes. Standing, turned slightly to her right, gesturing to the right with an open palm as if presenting a phone screen beside her."
+ }
+}
