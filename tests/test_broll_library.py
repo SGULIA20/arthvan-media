@@ -35,3 +35,17 @@ def test_library_prompts_are_valid():
     shots = json.loads((ROOT / "content" / "shots.json").read_text())["shots"]
     assert len(shots) >= 100 and all(s["prompt"].endswith(".") and s["app"] in ("scoremybiz", "waypoint", "both") for s in shots)
     assert len({s["prompt"] for s in shots}) == len(shots)                           # no duplicates, no double spend
+
+
+def test_a_filtered_prompt_is_remembered_and_never_retried(tmp_path):
+    from engine.broll import BRollFiltered
+    import pytest
+    def gen(prompt, seconds, token): raise BRollFiltered("content filter: x")
+    with pytest.raises(BRollFiltered):
+        broll.clip("rainy shop", cache=tmp_path / "c", ledger_path=tmp_path / "l.json", generate=gen, token="T", today=date(2026, 10, 13))
+    assert broll.key_for("rainy shop", 8) in json.loads((tmp_path / "l.json").read_text())["filtered"]
+    assert unmade([{"prompt": "rainy shop"}, {"prompt": "sunny shop"}], tmp_path / "c", tmp_path / "l.json") == [{"prompt": "sunny shop"}]
+    calls = []
+    with pytest.raises(BRollFiltered):      # second time: no call to Veo at all
+        broll.clip("rainy shop", cache=tmp_path / "c", ledger_path=tmp_path / "l.json", generate=lambda *a: calls.append(1) or b"x", token="T", today=date(2026, 10, 13))
+    assert calls == []

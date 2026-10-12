@@ -14,8 +14,15 @@ from .config import ROOT
 SHOTS = ROOT / "content" / "shots.json"
 
 
-def unmade(shots: list, cache: Path = broll.BROLL_DIR) -> list:
-    return [s for s in shots if not (Path(cache) / (broll.key_for(s["prompt"], s.get("seconds", 8)) + ".mp4")).exists()]
+def unmade(shots: list, cache: Path = broll.BROLL_DIR, ledger_path: Path = broll.LEDGER) -> list:
+    """Prompts with no clip yet, leaving out the ones the content filter declined."""
+    filtered = set(broll._ledger(ledger_path).get("filtered", []))
+    out = []
+    for s in shots:
+        key = broll.key_for(s["prompt"], s.get("seconds", 8))
+        if key not in filtered and not (Path(cache) / f"{key}.mp4").exists():
+            out.append(s)
+    return out
 
 
 def plan(shots: list, *, today: date = None, ledger_path: Path = broll.LEDGER, cache: Path = broll.BROLL_DIR, inr: float = None) -> list:
@@ -27,7 +34,7 @@ def plan(shots: list, *, today: date = None, ledger_path: Path = broll.LEDGER, c
     budget = (p["target_inr"] - p["spent_inr"]) if inr is None else inr
     budget = min(budget, p["credit_inr"] - p["spent_inr"])
     chosen, cost = [], 0.0
-    for s in unmade(shots, cache):
+    for s in unmade(shots, cache, ledger_path):
         c = s.get("seconds", 8) * broll.INR_PER_SECOND
         if cost + c > budget:
             break
@@ -48,6 +55,8 @@ def main(argv=None) -> int:
         try:
             broll.clip(s["prompt"], seconds=s.get("seconds", 8)); made += 1
             print(f"made: {s['prompt'][:80]}")
+        except broll.BRollFiltered as e:
+            print(f"skipped (content filter): {s['prompt'][:80]} — {e}"); continue
         except broll.BRollError as e:
             print(f"stopped: {e}"); break
     print(f"{made} shot(s) made. {broll.status_line()}")

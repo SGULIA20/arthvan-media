@@ -38,6 +38,10 @@ class BRollError(Exception):
     pass
 
 
+class BRollFiltered(BRollError):
+    """Veo's content filter declined this prompt: skip it, never retry it, carry on with the next."""
+
+
 def gcloud() -> str:
     for p in (shutil.which("gcloud"), Path.home() / "google-cloud-sdk-dl" / "google-cloud-sdk" / "bin" / "gcloud", Path.home() / "google-cloud-sdk" / "bin" / "gcloud"):
         if p and Path(p).exists():
@@ -79,6 +83,9 @@ def _generate(prompt: str, seconds: int, token: str, model: str = MODEL) -> byte
             vids = (b.get("response") or {}).get("videos") or []
             if vids and vids[0].get("bytesBase64Encoded"):
                 return base64.b64decode(vids[0]["bytesBase64Encoded"])
+            resp = b.get("response") or {}
+            if resp.get("raiMediaFilteredCount"):
+                raise BRollFiltered("content filter: " + "; ".join(resp.get("raiMediaFilteredReasons") or ["no reason given"])[:200])
             raise BRollError("Veo finished without a video: " + str(b)[:300])
     raise BRollError("Veo took longer than 15 minutes")
 
@@ -125,7 +132,15 @@ def clip(prompt: str, *, seconds: int = 8, cache: Path = BROLL_DIR, ledger_path:
         raise BRollError("the Google Cloud trial credit expired on 10 Dec 2026: no more shots, nothing is charged")
     if spent + cost > credit:
         raise BRollError(f"the video credit is finished: ₹{spent:.0f} of ₹{credit:.0f} used; no more shots, nothing is charged")
-    data = generate(STYLE + prompt, seconds, token if token is not None else access_token())
+    key = out.stem
+    if key in led.get("filtered", []):
+        raise BRollFiltered("this prompt was declined by the content filter before; not retried")
+    try:
+        data = generate(STYLE + prompt, seconds, token if token is not None else access_token())
+    except BRollFiltered:
+        led.setdefault("filtered", []).append(key)
+        Path(ledger_path).parent.mkdir(parents=True, exist_ok=True); Path(ledger_path).write_text(json.dumps(led, indent=1))
+        raise
     out.write_bytes(data)
     led["spent_inr"] = round(spent + cost, 2)
     led["seconds"] = int(led.get("seconds", 0)) + seconds
