@@ -80,3 +80,13 @@ def test_gh_secret_writer_is_used_only_when_a_pat_is_present(monkeypatch):
     args, kw = calls[0]
     assert args[0][:3] == ["gh", "secret", "set"] and "IG_ACCESS_TOKEN" in args[0] and kw["input"] == b"NEW"
     assert kw["env"]["GH_TOKEN"] == "pat" and "NEW" not in " ".join(args[0])
+
+
+def test_script_entry_point_is_the_last_statement_so_every_function_exists_when_run_as_a_module():
+    import ast, pathlib
+    src = pathlib.Path(refresh.__file__).read_text()
+    tree = ast.parse(src)
+    last = tree.body[-1]
+    assert isinstance(last, ast.If) and "__main__" in ast.unparse(last.test)
+    names = {n.name for n in tree.body if isinstance(n, ast.FunctionDef)}
+    assert {"_refresh_instagram", "_refresh_threads", "linkedin_age_problem", "secret_writer", "main"} <= names

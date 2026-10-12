@@ -87,9 +87,6 @@ def _refresh_instagram(env, store=None) -> int:
     return 0
 
 
-if __name__ == "__main__":
-    sys.exit(main())
-
 
 def _refresh_threads(env, store=None) -> int:
     token = env["THREADS_ACCESS_TOKEN"]
@@ -105,3 +102,7 @@ def _refresh_threads(env, store=None) -> int:
         return _store_or_fail("THREADS_ACCESS_TOKEN", out["access_token"], store)
     print(f"Threads token refreshed, valid for {int(out.get('expires_in', 0)) // 86400} days")
     return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
