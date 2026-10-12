@@ -1,0 +1,56 @@
+{
+ "scoremybiz": [
+  {
+   "name": "Khatabook",
+   "play": "com.vaibhavkalpe.android.khatabook",
+   "yt": "Khatabook ad"
+  },
+  {
+   "name": "OkCredit",
+   "play": "in.okcredit.merchant",
+   "yt": "OkCredit ad"
+  },
+  {
+   "name": "Vyapar",
+   "play": "in.android.vyapar",
+   "yt": "Vyapar app ad"
+  },
+  {
+   "name": "myBillBook",
+   "play": "com.valorem.flobooks",
+   "yt": "myBillBook ad"
+  },
+  {
+   "name": "Zoho Books",
+   "play": "com.zoho.books",
+   "yt": "Zoho Books India"
+  }
+ ],
+ "waypoint": [
+  {
+   "name": "Tellonym",
+   "play": "de.tellonym.app",
+   "yt": "Tellonym"
+  },
+  {
+   "name": "Whisper",
+   "play": "sh.whisper",
+   "yt": "Whisper app"
+  },
+  {
+   "name": "Ombro Amigo",
+   "play": "com.twocatsapp.ombroamigo",
+   "yt": "Ombro Amigo app"
+  },
+  {
+   "name": "Calm",
+   "play": "com.calm.android",
+   "yt": "Calm app ad"
+  },
+  {
+   "name": "Headspace",
+   "play": "com.getsomeheadspace.android",
+   "yt": "Headspace ad"
+  }
+ ]
+}

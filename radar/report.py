@@ -1,0 +1,79 @@
+"""Turn the newest snapshot (and the previous one) into a themes report. Rules only, no model.
+python -m radar.report            prints Markdown; writes radar/reports/YYYY-MM-DD.md
+"""
+import json, re, sys
+from collections import Counter
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+THEMES = {
+ "scoremybiz": {
+  "collect dues / udhar": r"\budhar\b|\bdues?\b|\bcollect|\breminder|\bkhata\b|\bbaki\b|\bpayment reminder",
+  "GST and bills": r"\bgst\b|\binvoice|\bbills?\b|\bbilling\b|\be-?way\b|\be-?invoice",
+  "cash and profit visibility": r"\bcash\b|\bprofit|\bloss\b|\bbalance\b|\bcash ?flow",
+  "stock and inventory": r"\bstock\b|\binventory",
+  "free / trial / price": r"\bfree\b|\btrial\b|\bno credit card|\bpaid\b|\bsubscription",
+  "WhatsApp and sharing": r"\bwhatsapp\b|\bshare\b",
+  "offline and simple": r"\boffline\b|\bsimple\b|\beasy\b|\bno accountant",
+  "festival season": r"\bdiwali\b|\bfestival|\bnavratri|\bdussehra|\bseason",
+  "security / backup": r"\bsecure|\bbackup|\bsafe\b|\bdata\b"},
+ "waypoint": {
+  "anonymous / no identity": r"\banonym|\bsecret|\bno name|\bidentity",
+  "say what you can't": r"\bconfess|\bhonest|\bsay (it|what|anything)|\bvent\b|\bshare your",
+  "questions and prompts": r"\bquestion|\bask me|\bq&a|\bprompt",
+  "calm / sleep / stress": r"\bcalm\b|\bsleep\b|\bstress|\bmeditat|\banxi|\bbreath",
+  "meet people / chat": r"\bchat\b|\bmeet\b|\bstranger|\btalk to|\bconversation|\bfriends?\b",
+  "community / belonging": r"\bcommunity|\btogether|\bnot alone|\bbelong",
+  "free / premium": r"\bfree\b|\bpremium\b|\bsubscri",
+  "safety / moderation": r"\bsafe\b|\bmoderat|\breport\b|\bblock\b"},
+}
+
+
+def texts(row: dict) -> str:
+    p = row.get("play") or {}
+    return " ".join(filter(None, [p.get("title"), p.get("short"), p.get("about")] + [v["title"] for v in row.get("youtube", [])])).lower()
+
+
+def score(app: str, row: dict) -> Counter:
+    t = texts(row)
+    return Counter({name: len(re.findall(rx, t)) for name, rx in THEMES[app].items()})
+
+
+def main() -> int:
+    snaps = sorted((HERE / "snapshots").glob("*.json"))
+    if not snaps:
+        print("no snapshots"); return 1
+    cur = json.loads(snaps[-1].read_text())
+    prev = json.loads(snaps[-2].read_text()) if len(snaps) > 1 else None
+    out = [f"# Ad radar — week to {cur['date']}", ""]
+    for app, comps in cur["apps"].items():
+        total = Counter(); per = {}
+        for name, row in comps.items():
+            sc = score(app, row); per[name] = sc; total.update(sc)
+        out += [f"## {app}", "", "| Theme | Mentions this week | Who pushes it most |", "|---|---|---|"]
+        for theme, n in total.most_common():
+            if n == 0: continue
+            top = max(per, key=lambda k: per[k][theme])
+            out.append(f"| {theme} | {n} | {top} ({per[top][theme]}) |")
+        out += ["", "**Newest videos found:**"]
+        for name, row in comps.items():
+            for v in row.get("youtube", [])[:2]:
+                out.append(f"- {name}: [{v['title']}](https://www.youtube.com/watch?v={v['id']})")
+        if prev and app in prev["apps"]:
+            moves = []
+            for name, row in comps.items():
+                p0 = (prev["apps"][app].get(name) or {}).get("play") or {}; p1 = row.get("play") or {}
+                if p0.get("short") and p1.get("short") and p0["short"] != p1["short"]:
+                    moves.append(f"- {name} changed its store tagline: “{p0['short'][:70]}” → “{p1['short'][:70]}”")
+                new = [v for v in row.get("youtube", []) if v["id"] not in {x["id"] for x in (prev["apps"][app].get(name) or {}).get("youtube", [])}]
+                if new: moves.append(f"- {name}: {len(new)} new video(s), e.g. “{new[0]['title'][:60]}”")
+            out += ["", "**Changed since last week:**"] + (moves or ["- nothing"])
+        top3 = [t for t, n in total.most_common(3) if n]
+        out += ["", f"**Suggested themes for next week's {app} content:** " + ", ".join(top3), ""]
+    md = "\n".join(out)
+    (HERE / "reports").mkdir(exist_ok=True); (HERE / "reports" / f"{cur['date']}.md").write_text(md)
+    print(md); return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

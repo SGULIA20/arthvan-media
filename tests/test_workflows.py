@@ -65,3 +65,8 @@ def test_weekly_report_runs_monday_morning_and_can_open_issues():
     assert wf["permissions"] == {"contents": "write", "issues": "write"}
     text = (WF / "weekly-report.yml").read_text()
     assert "secrets.IG_ACCESS_TOKEN" in text and "gh issue create" in text
+
+
+def test_weekly_report_includes_the_ad_radar():
+    text = (WF / "weekly-report.yml").read_text()
+    assert "radar.collect" in text and "radar.report" in text and "radar/snapshots" in text
