@@ -181,16 +181,24 @@ def _extras_retry(day, root, log, apps, banks, deps, chans, env) -> int:
     return _extras(day, apps[rows[-1]["app"]], item, slides, [f"{base}/{p.name}" for p in slides], deps, log, chans)
 
 
-def scheduled_story(root: Path, day: date):
-    """A story JSON with post_on == day and a rendered MP4 beside it in stories/out/."""
+def scheduled_story(root: Path, day: date, log: Path = None):
+    """The earliest story whose post_on is today or earlier, has a rendered MP4 in stories/out/, and has not been
+    published yet. A story missed while posting was down goes out on the first working day after."""
+    done = set()
+    if log is not None:
+        for e in _entries(log):
+            if e.get("status") == "published" and e.get("channel", "instagram") == "instagram":
+                done.add(e.get("item"))
+    cands = []
     for p in sorted((root / "stories").glob("*.json")):
         try:
             st = json.loads(p.read_text())
         except ValueError:
             continue
-        if st.get("post_on") == day.isoformat() and (root / "stories" / "out" / f"{st['id']}.mp4").exists():
-            return st
-    return None
+        if (st.get("post_on") and st["post_on"] <= day.isoformat() and st["id"] not in done
+                and (root / "stories" / "out" / f"{st['id']}.mp4").exists()):
+            cands.append(st)
+    return min(cands, key=lambda s: s["post_on"]) if cands else None
 
 
 def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log: Path, chans: dict, token: str, ig_id: str, mode: str) -> int:
@@ -268,7 +276,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
             print(f"{day}: an earlier run stopped at '{status}'. Check Instagram by hand; nothing was posted again.")
             return 1
 
-    story = scheduled_story(root, day)
+    story = scheduled_story(root, day, log)
     if story is not None:
         if mode == "post" and day_status(log, day) is not None:
             missing = [c for c in chans if c != "linkedin_any" and day_status(log, day, c) != "published"]

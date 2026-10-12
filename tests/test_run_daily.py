@@ -331,3 +331,16 @@ def test_a_scheduled_story_replaces_the_bank_item_and_posts_reel_story_and_linke
     assert last_entry(tmp_path, "instagram")["item"] == "lumi-friday-hi" and last_entry(tmp_path, "linkedin")["status"] == "published"
     assert w.th_calls == []                                     # Threads needs images; skipped on story days
     assert go(w, env=env, day=date(2026, 10, 12)) == 0 and w.count("publish") == 1
+
+
+def test_a_missed_story_is_posted_on_the_next_run_and_never_twice(tmp_path):
+    w = World(tmp_path)
+    (tmp_path / "stories" / "out").mkdir(parents=True)
+    for sid, day in (("s-tue", "2026-10-13"), ("s-wed", "2026-10-14")):
+        (tmp_path / "stories" / "out" / f"{sid}.mp4").write_bytes(b"v")
+        (tmp_path / "stories" / f"{sid}.json").write_text(json.dumps({"id": sid, "app": "waypoint", "post_on": day, "character": "mira", "caption": "c", "hashtags": [], "title": "t"}))
+    # access returns on Friday: Tuesday's story goes first, Saturday gets Wednesday's, Sunday is a normal day
+    assert go(w, day=date(2026, 10, 16)) == 0 and last_entry(tmp_path, "instagram")["item"] == "s-tue"
+    assert go(w, day=date(2026, 10, 17)) == 0 and last_entry(tmp_path, "instagram")["item"] == "s-wed"
+    assert go(w, day=date(2026, 10, 18)) == 0 and last_entry(tmp_path, "instagram")["item"] == "w0"
+    assert w.count("publish") == 3
