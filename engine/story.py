@@ -1,4 +1,4 @@
-"""Character story ads: voice (macOS say) + animated SVG scenes (Playwright) + music + subtitles → MP4.
+"""Character story ads: voice (Gemini TTS, or macOS say when "tts" is "say") + animated scenes (Playwright) + music + subtitles → MP4.
 
 python -m engine.story stories/lumi_friday_hi.json out_dir
 """
@@ -10,6 +10,7 @@ from playwright.sync_api import sync_playwright
 
 from .config import ROOT, load_apps
 from .music import synth, write_m4a
+from .tts import gemini_clip, pick_voice
 
 TEMPLATE = ROOT / "engine" / "templates" / "story2.html"
 CHAR_DIR = ROOT / "engine" / "assets" / "characters"
@@ -35,7 +36,10 @@ def build(story_path: Path, out_dir: Path) -> Path:
         clips = []
         for i, s in enumerate(story["scenes"]):
             wav = tmp / f"vo{i}.wav"
-            d = voice_clip(s["vo"], s.get("voice", story["voice"]), s.get("rate", story.get("rate", 175)), wav)
+            if story.get("tts", "gemini") == "say":
+                d = voice_clip(s["vo"], s.get("voice", story["voice"]), s.get("rate", story.get("rate", 175)), wav)
+            else:
+                d = gemini_clip(s["vo"], pick_voice({"character": story["character"], "voice": s.get("voice")}), wav)
             s["dur"] = round(max(s.get("min", 4), d + 1.2), 2)
             clips.append((wav, d))
         total = sum(s["dur"] for s in story["scenes"])

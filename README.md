@@ -77,3 +77,6 @@ After Instagram, the day's video is sent to the founder's own WhatsApp through t
 approved template with a video header. Settings: secrets `GUPSHUP_APP_ID`, `GUPSHUP_API_KEY` (the App API Key on the app's
 Settings tab at gupshup.ai), `WA_STATUS_TO`; variables `WA_STATUS_TEMPLATE` (template name), `GUPSHUP_APP_NAME`, `GUPSHUP_SOURCE`.
 He posts it as a status in two taps. No automation touches his personal WhatsApp; nothing is sent to customers.
+
+## Story voices
+Stories are voiced by Gemini text-to-speech (`engine/tts.py`): one fixed voice per character (Lumi Kore, Mira Leda, founder Charon), any language, cached in `stories/cache/` so unchanged lines are never paid for twice. The key is `GEMINI_API_KEY` in the environment or `~/arthvan-social/.env`; rendering happens on the founder's Mac, never in CI. A story with `"tts": "say"` falls back to the macOS voices.

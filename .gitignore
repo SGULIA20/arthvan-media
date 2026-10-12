@@ -5,3 +5,4 @@ __pycache__/
 .frames/
 samples/
 .DS_Store
+stories/cache/
