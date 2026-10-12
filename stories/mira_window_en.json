@@ -26,7 +26,7 @@
   {
    "layout": "present",
    "pose": "phone_night",
-   "screen": "s4.png",
+   "screen": "create_typed.png",
    "vo": "On Waypoint he gets a new name today. He types the sentence. His thumb hovers. He posts it.",
    "sub": "On Waypoint he gets a new name today. He types the sentence. His thumb hovers. He posts it.",
    "min": 7
@@ -34,24 +34,35 @@
   {
    "layout": "present",
    "pose": "curious",
-   "screen": "s3.png",
-   "vo": "Then the Daily Path. One question, the same for everyone. He answers, and sees how hundreds of others answered yesterday.",
-   "sub": "Then the Daily Path. One question, the same for everyone. He answers, and sees how hundreds of others answered yesterday.",
-   "min": 8
+   "screen": "daily-path.png",
+   "vo": "Then the Daily Path. One question, the same for everyone. He answers, and sees how others answered yesterday.",
+   "sub": "Then the Daily Path. One question, the same for everyone. He answers, and sees how others answered yesterday.",
+   "min": 7
   },
   {
    "layout": "present",
    "pose": "relieved",
-   "screen": "s2.png",
-   "vo": "Turns out it's not just him. Ten minutes. Then he closes the phone, and breathes.",
-   "sub": "Turns out it's not just him. Ten minutes. Then he closes the phone, and breathes.",
+   "screen": "wall.png",
+   "vo": "On the Wall, he reads what others posted tonight. Turns out it's not just him. He closes the phone, and breathes.",
+   "sub": "On the Wall, he reads what others posted tonight. Turns out it's not just him. He closes the phone, and breathes.",
    "min": 7
   },
   {
-   "layout": "end",
+   "layout": "present",
+   "pose": "listening",
+   "screen": "matching.png",
+   "vo": "When he wants to talk, Waypoint crosses his path with one person. A short chat. Then both move on.",
+   "sub": "When he wants to talk, Waypoint crosses his path with one person. A short chat. Then both move on.",
+   "min": 6
+  },
+  {
+   "layout": "duo_end",
    "pose": "wave",
-   "vo": "I'm Mira, from Waypoint. Say it once. Free on Google Play.",
-   "sub": "I'm Mira, from Waypoint. Say it once. Free on Google Play.",
+   "who2": "founder_casual",
+   "pose2": "wave",
+   "voice": "Rishi",
+   "vo": "I'm Sanjeev. I built Waypoint. Say it once. Free on Google Play.",
+   "sub": "",
    "min": 5
   }
  ],

@@ -35,7 +35,7 @@ def build(story_path: Path, out_dir: Path) -> Path:
         clips = []
         for i, s in enumerate(story["scenes"]):
             wav = tmp / f"vo{i}.wav"
-            d = voice_clip(s["vo"], story["voice"], story.get("rate", 175), wav)
+            d = voice_clip(s["vo"], s.get("voice", story["voice"]), s.get("rate", story.get("rate", 175)), wav)
             s["dur"] = round(max(s.get("min", 4), d + 1.2), 2)
             clips.append((wav, d))
         total = sum(s["dur"] for s in story["scenes"])
@@ -49,9 +49,19 @@ def build(story_path: Path, out_dir: Path) -> Path:
             start = int((t0 + 0.4) * sr); vo[start:start + len(a)] += a * 0.95; t0 += s["dur"]
         vo = vo[: int(total * sr)]
         hop = sr // FPS
-        env = [float(np.sqrt(np.mean(vo[i:i + hop, 0] ** 2))) for i in range(0, len(vo), hop)]
-        peak = max(env) or 1.0
-        env = [round(e / peak, 3) for e in env]
+        raw = np.array([float(np.sqrt(np.mean(vo[i:i + hop, 0] ** 2))) for i in range(0, len(vo), hop)])
+        raw = raw / (raw.max() or 1.0)
+        # mouth timing: smooth, then open on syllables with hysteresis and a minimum hold, so it reads as speech
+        sm = np.convolve(raw, np.ones(3) / 3, mode="same")
+        env, opened, hold = [], False, 0
+        for v in sm:
+            if opened:
+                hold += 1
+                if v < 0.12 and hold >= 4: opened = False
+            elif v > 0.22:
+                opened, hold = True, 0
+            env.append(1.0 if opened else 0.0)
+        env = [round(float(e), 1) for e in env]
         # screens in the ad's language when captured, else English
         lang = story.get("lang", "en").split("-")[0]
         shots = ROOT / "store" / "shots" / story["app"] / lang

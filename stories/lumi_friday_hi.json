@@ -48,11 +48,14 @@
    "min": 6
   },
   {
-   "layout": "end",
+   "layout": "duo_end",
    "pose": "front_happy",
-   "vo": "मैं लूमी, स्कोर माय बिज़ से। अपने धंधे की सेहत जानिए। तीस दिन मुफ़्त।",
-   "sub": "I'm Lumi, from ScoreMyBiz. Know the health of your business. Free for 30 days.",
-   "min": 5
+   "who2": "founder_suit",
+   "pose2": "wave",
+   "voice": "Rishi",
+   "vo": "I'm Sanjeev. I built ScoreMyBiz for shops like Meena's. Know the health of your business. Free for thirty days.",
+   "sub": "",
+   "min": 6
   }
  ],
  "post_on": "2026-10-14",

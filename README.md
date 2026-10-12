@@ -50,3 +50,12 @@ after editing; the tests lint every item. Facts only; sample figures need `"samp
 ## Known limits
 Captions cannot contain clickable links (Instagram rule), so every caption says "Link in bio" and shows the Play URL as text.
 GitHub disables scheduled workflows after 60 days without repository activity; the daily commits keep it active.
+
+## Story ads (characters)
+Lumi (ScoreMyBiz), Mira (Waypoint) and the founder (suit for ScoreMyBiz, casual for Waypoint) are Pixar-style images the
+founder makes in the Gemini app; cut-outs live in `engine/assets/characters/`. `python -m engine.mouth` builds the aligned
+talking-head frames; `python -m engine.story stories/<id>.json <out>` renders a story on the Mac (voices are macOS `say`).
+A story with `post_on` and its MP4 in `stories/out/` replaces that day's post: Instagram Reel + Story, LinkedIn native video.
+
+Before writing any new script: re-capture the app screens from the latest build (`store/capture_scoremybiz.py <lang> <dir>`,
+`store/capture_waypoint.py <dir>`), read the app repos' recent commits for new features, and keep screens in the ad's language.
