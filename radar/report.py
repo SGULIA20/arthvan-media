@@ -1,9 +1,13 @@
-"""Turn the newest snapshot (and the previous one) into a themes report. Rules only, no model.
+"""Turn the newest snapshot (and the previous one) into a themes report: rules for the counts, and, when a
+GEMINI_API_KEY is available, three story ideas per app in our characters' voices (ideas, never copies).
 python -m radar.report            prints Markdown; writes radar/reports/YYYY-MM-DD.md
 """
 import json, re, sys
 from collections import Counter
 from pathlib import Path
+
+from engine.gemini import GeminiError, ask
+from engine.tts import api_key
 
 HERE = Path(__file__).resolve().parent
 THEMES = {
@@ -39,12 +43,22 @@ def score(app: str, row: dict) -> Counter:
     return Counter({name: len(re.findall(rx, t)) for name, rx in THEMES[app].items()})
 
 
-def main() -> int:
-    snaps = sorted((HERE / "snapshots").glob("*.json"))
-    if not snaps:
-        print("no snapshots"); return 1
-    cur = json.loads(snaps[-1].read_text())
-    prev = json.loads(snaps[-2].read_text()) if len(snaps) > 1 else None
+CHARACTERS = {"scoremybiz": "Lumi (a warm, practical guide for Indian shopkeepers) and the founder character (a calm man in a suit)",
+              "waypoint": "Mira (a gentle young woman) and the founder character (a casual young man)"}
+RULES = ("Rules: give three ideas, each in two or three lines: title, the person and their moment, which app screen we show. "
+         "Use the competitors only for the IDEA behind their message; never copy their words, scenes or metaphors "
+         "(for example, no doctor or check-up metaphor if a competitor used one). Plain shopkeeper words for ScoreMyBiz: "
+         "Sold, Bought, Spent; never accountant terms. No claims about privacy, safety, mental health or numbers. "
+         "No 'I built this' lines. Answer in Markdown as a numbered list, nothing else.")
+
+
+def ideas_prompt(app: str, comps: dict) -> str:
+    lines = [f"- {name}: {texts(row)[:400]}" for name, row in comps.items()]
+    return (f"You write 45-second story ads for the app {app}, told by {CHARACTERS.get(app, 'our characters')}. "
+            f"This week's competitor listings and video titles:\n" + "\n".join(lines) + "\n\n" + RULES)
+
+
+def render(cur: dict, prev, gemini: bool) -> str:
     out = [f"# Ad radar — week to {cur['date']}", ""]
     for app, comps in cur["apps"].items():
         total = Counter(); per = {}
@@ -70,7 +84,21 @@ def main() -> int:
             out += ["", "**Changed since last week:**"] + (moves or ["- nothing"])
         top3 = [t for t, n in total.most_common(3) if n]
         out += ["", f"**Suggested themes for next week's {app} content:** " + ", ".join(top3), ""]
-    md = "\n".join(out)
+        if gemini:
+            try:
+                out += ["**Three story ideas (Gemini):**", "", ask(ideas_prompt(app, comps)), ""]
+            except GeminiError as e:
+                out += [f"_Story ideas skipped: {e}_", ""]
+    return "\n".join(out)
+
+
+def main() -> int:
+    snaps = sorted((HERE / "snapshots").glob("*.json"))
+    if not snaps:
+        print("no snapshots"); return 1
+    cur = json.loads(snaps[-1].read_text())
+    prev = json.loads(snaps[-2].read_text()) if len(snaps) > 1 else None
+    md = render(cur, prev, gemini=bool(api_key()))
     (HERE / "reports").mkdir(exist_ok=True); (HERE / "reports" / f"{cur['date']}.md").write_text(md)
     print(md); return 0
 
