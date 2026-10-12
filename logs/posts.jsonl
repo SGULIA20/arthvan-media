@@ -10,3 +10,4 @@
 {"date": "2026-10-12", "app": "scoremybiz", "item": "smb-profit-vs-cash", "status": "publishing", "sha": "1442ef572031914947af33c65e279b9aff456dee", "at": "2026-10-12T17:48:02+00:00"}
 {"date": "2026-10-12", "app": "scoremybiz", "item": "smb-profit-vs-cash", "status": "published", "sha": "1442ef572031914947af33c65e279b9aff456dee", "at": "2026-10-12T17:48:02+00:00", "ids": {"post": "18098952503378498", "reel": "18029770943914079", "story": "18143948242590541"}}
 {"date": "2026-10-12", "channel": "whatsapp", "item": "smb-profit-vs-cash", "status": "failed", "error": "Gupshup login failed (403)"}
+{"date": "2026-10-12", "channel": "youtube:sglearning", "item": "smb-profit-vs-cash", "status": "published", "id": "NBn-l1qnusY"}
