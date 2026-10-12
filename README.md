@@ -59,3 +59,8 @@ A story with `post_on` and its MP4 in `stories/out/` replaces that day's post: I
 
 Before writing any new script: re-capture the app screens from the latest build (`store/capture_scoremybiz.py <lang> <dir>`,
 `store/capture_waypoint.py <dir>`), read the app repos' recent commits for new features, and keep screens in the ad's language.
+
+## Ad radar (competitors)
+Every Monday the weekly report also runs `radar/collect.py` (public Play listings + newest YouTube videos for the apps in
+`radar/watchlist.json`) and `radar/report.py` (theme counts, who pushes what, changes since last week, suggested themes).
+No Meta scraping, no paid data. Snapshots in `radar/snapshots/`, reports in `radar/reports/`. Add competitors by editing the watch list.
