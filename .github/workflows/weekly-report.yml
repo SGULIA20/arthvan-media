@@ -30,6 +30,7 @@ jobs:
         run: |
           python -m radar.collect
           python -m radar.report > radar.md
+          python -m radar.comments >> radar.md
           printf '\n\n---\n\n' >> report.md
           cat radar.md >> report.md
       - name: Save it in the repo
