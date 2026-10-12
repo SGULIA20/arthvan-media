@@ -23,7 +23,7 @@ from .linkedin import LinkedInError
 from .threads import ThreadsError
 from .youtube import YouTubeError
 from .whatsapp import WhatsAppError, WhatsAppNotReady
-from .select_item import lagos_date, pick
+from .select_item import lagos_date, pick, slot, story_lead
 
 MAX_FALLBACKS = 5
 KEEP_DAYS = 14
@@ -215,8 +215,9 @@ def _extras_retry(day, root, log, apps, banks, deps, chans, env) -> int:
 
 
 def scheduled_story(root: Path, day: date, log: Path = None):
-    """The earliest story whose post_on is today or earlier, has a rendered MP4 in stories/out/, and has not been
-    published yet. A story missed while posting was down goes out on the first working day after."""
+    """The earliest story that fits today's slot (app and lead, see select_item.slot), whose post_on is today or
+    earlier (post_on means "not before"), has a rendered MP4 in stories/out/ and has not been published yet.
+    A story missed while posting was down goes out on the next day with a matching slot."""
     done = set()
     if log is not None:
         for e in _entries(log):
@@ -229,6 +230,7 @@ def scheduled_story(root: Path, day: date, log: Path = None):
         except ValueError:
             continue
         if (st.get("post_on") and st["post_on"] <= day.isoformat() and st["id"] not in done
+                and (st["app"], story_lead(st)) == slot(day)
                 and (root / "stories" / "out" / f"{st['id']}.mp4").exists()):
             cands.append(st)
     return min(cands, key=lambda s: s["post_on"]) if cands else None

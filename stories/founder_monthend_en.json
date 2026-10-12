@@ -1,0 +1,67 @@
+{
+ "id": "founder-monthend-en",
+ "app": "scoremybiz",
+ "lang": "en",
+ "voice": "Aman",
+ "rate": 165,
+ "character": "founder_suit",
+ "title": "Month end",
+ "post_on": "2026-10-16",
+ "caption": "Suresh's drawer did not match his shelf. The founder tells how one number a week changed his month end.",
+ "linkedin_text": "Sales good, shelf full, drawer empty. Most small shops only find out at month end.\n\nScoreMyBiz reads the shop's own book and gives one number out of 100 for its health, with three moves for the week. The founder character tells Suresh's story; every screen is the real app.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#MonthEnd"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "pose": "head_neutral",
+   "title": "Month end",
+   "vo": "Hello. This is Suresh's story. He runs a hardware shop. Every month end, the same question: where did the money go?",
+   "sub": "Hello. This is Suresh's story. He runs a hardware shop. Every month end, the same question: where did the money go?",
+   "min": 7
+  },
+  {
+   "layout": "scene",
+   "pose": "front_standing",
+   "card": "Where did it go?",
+   "vo": "Sales were good. The shelf was full. The drawer was not.",
+   "sub": "Sales were good. The shelf was full. The drawer was not.",
+   "min": 5
+  },
+  {
+   "layout": "present",
+   "pose": "front_standing",
+   "screen": "profit-loss.png",
+   "vo": "ScoreMyBiz reads his own book and shows it plainly. Sold. Bought. Spent. What is left.",
+   "sub": "ScoreMyBiz reads his own book and shows it plainly. Sold. Bought. Spent. What is left.",
+   "min": 7
+  },
+  {
+   "layout": "present",
+   "pose": "explaining_right",
+   "who": "lumi",
+   "screen": "dashboard.png",
+   "vo": "Lumi points at the real problem: festival stock, still sitting on the shelf. Money, parked.",
+   "sub": "Lumi points at the real problem: festival stock, still sitting on the shelf. Money, parked.",
+   "min": 7
+  },
+  {
+   "layout": "present",
+   "pose": "front_standing",
+   "screen": "score-history.png",
+   "vo": "One number out of a hundred for the shop's health, and three moves for the week. He does them. Next month end, the drawer agrees with the shelf.",
+   "sub": "One number out of 100 for the shop's health, and three moves for the week. He does them. Next month end, the drawer agrees with the shelf.",
+   "min": 9
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

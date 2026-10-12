@@ -29,7 +29,7 @@ const S=D.scenes; let T=0; S.forEach(s=>{s.start=T; T+=s.dur;}); window.TOTAL=T;
 // while the voice is loud the mouth cycles closed → half → open → half at 5 Hz; "half" is the open frame at 45 % over the closed one,
 // so the lips move but never flap wide open on every syllable
 function mouthOpen(t){ const i=Math.floor(t*30); const e=(D.vo_env[i]||0); if(e<=0.5) return null;
-  const a=(D.vo_amp&&D.vo_amp[i])||0.6; return Math.min(0.85, [0.25,0.6,1,0.6][Math.floor(t*4)%4]*a*1.1); }
+  const a=(D.vo_amp&&D.vo_amp[i])||0.6; return Math.min(0.7, [0.25,0.6,1,0.6][Math.floor(t*4)%4]*a*1.1); }
 function charImg(pose,who){ return D.char_base+'/'+(who||C)+'_'+pose+'.png'; }
 function fullBody(pose,x,w,t,bob,who){ const dy=Math.sin(t*2.1)*bob; return `<div class="char" style="left:${x}px;width:${w}px;height:${w*1.0}px;transform:translateY(${dy}px)"><img src="${charImg(pose,who)}"></div>`; }
 function headShot(base,x,y,w,t){ const m=mouthOpen(t); const box=`left:${x}px;top:${y}px;width:${w}px;height:${w}px`;
@@ -42,7 +42,7 @@ window.render=function(t){
   const local=t-s.start, fade=Math.min(eo(local/.4), eo((s.start+s.dur-t)/.4));
   let h=`<div class="bg"></div><div class="o1"></div><div class="o2"></div><div class="abs" style="inset:0;opacity:${fade}">`;
   if(s.layout==='talk'){            // big head, speaking to camera
-    h+=headShot(s.pose||'head_neutral',90,330,900,local);
+    h+=headShot(s.pose||'head_neutral',240,380,600,local);   // medium shot: a 600 px head reads as a person, not a mouth
   } else if(s.layout==='present'){  // full body left, phone screen right
     h+=screen(s,local,480,250)+fullBody(s.pose||'explaining_right',-330,1050,local,5,s.who);
   } else if(s.layout==='scene'){    // full body centre, prop text above

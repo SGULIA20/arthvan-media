@@ -326,13 +326,13 @@ def test_a_scheduled_story_replaces_the_bank_item_and_posts_reel_story_and_linke
     w.li_videos = []
     w.deps.post_linkedin_video = lambda token, urn, text, tags, path, title: w.li_videos.append((text, str(path), title)) or "urn:li:ugcPost:5"
     env = dict(ENV, LINKEDIN_ACCESS_TOKEN="litok", LINKEDIN_PERSON_URN="urn:li:person:me")
-    assert go(w, env=env, day=date(2026, 10, 12)) == 0
+    assert go(w, env=env, day=date(2026, 10, 14)) == 0        # 14 Oct is a ScoreMyBiz + female-lead slot
     assert w.rendered_ids == []                                 # no bank item rendered
-    assert w.count("publish") == 1 and w.prepared_video == "https://raw.githubusercontent.com/o/r/deadbeef/out/2026-10-12/story.mp4"
+    assert w.count("publish") == 1 and w.prepared_video == "https://raw.githubusercontent.com/o/r/deadbeef/out/2026-10-14/story.mp4"
     assert len(w.li_videos) == 1 and "play.google.com" in w.li_videos[0][0] and w.li_videos[0][2] == "शुक्रवार"
     assert last_entry(tmp_path, "instagram")["item"] == "lumi-friday-hi" and last_entry(tmp_path, "linkedin")["status"] == "published"
     assert w.th_calls == []                                     # Threads needs images; skipped on story days
-    assert go(w, env=env, day=date(2026, 10, 12)) == 0 and w.count("publish") == 1
+    assert go(w, env=env, day=date(2026, 10, 14)) == 0 and w.count("publish") == 1
 
 
 def test_a_missed_story_is_posted_on_the_next_run_and_never_twice(tmp_path):
@@ -341,11 +341,13 @@ def test_a_missed_story_is_posted_on_the_next_run_and_never_twice(tmp_path):
     for sid, day in (("s-tue", "2026-10-13"), ("s-wed", "2026-10-14")):
         (tmp_path / "stories" / "out" / f"{sid}.mp4").write_bytes(b"v")
         (tmp_path / "stories" / f"{sid}.json").write_text(json.dumps({"id": sid, "app": "waypoint", "post_on": day, "character": "mira", "caption": "c", "hashtags": [], "title": "t"}))
-    # access returns on Friday: Tuesday's story goes first, Saturday gets Wednesday's, Sunday is a normal day
-    assert go(w, day=date(2026, 10, 16)) == 0 and last_entry(tmp_path, "instagram")["item"] == "s-tue"
-    assert go(w, day=date(2026, 10, 17)) == 0 and last_entry(tmp_path, "instagram")["item"] == "s-wed"
-    assert go(w, day=date(2026, 10, 18)) == 0 and last_entry(tmp_path, "instagram")["item"] == "s0"
-    assert w.count("publish") == 3
+    # Mira stories fit Waypoint + female slots (17, 21 Oct ...). Access returns on the 16th (a ScoreMyBiz day):
+    # a normal set goes out; the 17th gets the older story, the 19th (Waypoint + male) is a normal day, the 21st the next
+    assert go(w, day=date(2026, 10, 16)) == 0 and last_entry(tmp_path, "instagram")["item"] not in ("s-tue", "s-wed")
+    assert go(w, day=date(2026, 10, 17)) == 0 and last_entry(tmp_path, "instagram")["item"] == "s-tue"
+    assert go(w, day=date(2026, 10, 19)) == 0 and last_entry(tmp_path, "instagram")["item"] not in ("s-tue", "s-wed")
+    assert go(w, day=date(2026, 10, 21)) == 0 and last_entry(tmp_path, "instagram")["item"] == "s-wed"
+    assert w.count("publish") == 4
 
 
 def test_youtube_short_is_uploaded_after_instagram_when_the_channel_is_configured(tmp_path):
@@ -400,3 +402,24 @@ def test_a_pending_whatsapp_template_is_waiting_not_a_failure_and_is_retried(tmp
     assert last_entry(tmp_path, "whatsapp")["status"] == "waiting"
     assert go(w, env=env) == 0 and len(attempts) == 2   # the next run tries again and succeeds
     assert last_entry(tmp_path, "whatsapp")["status"] == "published"
+
+
+def test_the_four_day_cycle_alternates_app_and_lead():
+    from engine.select_item import slot, story_lead
+    want = {date(2026, 10, 14): ("scoremybiz", "female"), date(2026, 10, 15): ("waypoint", "male"),
+            date(2026, 10, 16): ("scoremybiz", "male"), date(2026, 10, 17): ("waypoint", "female"),
+            date(2026, 10, 18): ("scoremybiz", "female"), date(2026, 10, 13): ("waypoint", "female")}
+    for d, s in want.items():
+        assert slot(d) == s, d
+    assert story_lead({"character": "founder_suit"}) == "male" and story_lead({"character": "lumi"}) == "female"
+    assert story_lead({"character": "lumi", "lead": "male"}) == "male"
+
+
+def test_a_founder_story_waits_for_a_male_slot_of_its_app(tmp_path):
+    w = World(tmp_path)
+    (tmp_path / "stories" / "out").mkdir(parents=True)
+    (tmp_path / "stories" / "out" / "f-wp.mp4").write_bytes(b"v")
+    (tmp_path / "stories" / "f_wp.json").write_text(json.dumps({"id": "f-wp", "app": "waypoint", "post_on": "2026-10-13", "character": "founder_casual", "caption": "c", "hashtags": [], "title": "t"}))
+    assert go(w, day=date(2026, 10, 13)) == 0 and last_entry(tmp_path, "instagram")["item"] != "f-wp"   # Waypoint + female day
+    assert go(w, day=date(2026, 10, 14)) == 0 and last_entry(tmp_path, "instagram")["item"] != "f-wp"   # ScoreMyBiz day
+    assert go(w, day=date(2026, 10, 15)) == 0 and last_entry(tmp_path, "instagram")["item"] == "f-wp"   # Waypoint + male day

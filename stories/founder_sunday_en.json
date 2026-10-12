@@ -1,0 +1,75 @@
+{
+ "id": "founder-sunday-en",
+ "app": "waypoint",
+ "lang": "en",
+ "voice": "Aman",
+ "rate": 165,
+ "character": "founder_casual",
+ "title": "Sunday, 9 PM",
+ "post_on": "2026-10-15",
+ "caption": "New city, new job, and a day that stays untold. The founder tells Rohan's story.",
+ "linkedin_text": "New city, new job, a flat that is too quiet. The weekend is the loud part.\n\nWaypoint lets a person say one true sentence under a fresh name, read tonight's sentences from others, and cross paths with one person when they want a real conversation. The founder character tells Rohan's story; every screen is the real app.",
+ "hashtags": [
+  "#Waypoint",
+  "#NewCity",
+  "#SayItOnce"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "pose": "head_neutral",
+   "title": "Sunday, 9 PM",
+   "vo": "Hi. This is Rohan's story. New city, new job, big flat. The day ends, and it stays untold.",
+   "sub": "Hi. This is Rohan's story. New city, new job, big flat. The day ends, and it stays untold.",
+   "min": 6
+  },
+  {
+   "layout": "scene",
+   "pose": "window",
+   "card": "Sunday, 9 PM",
+   "vo": "Weekends are the loud part. Everyone is somewhere. He is at the window.",
+   "sub": "Weekends are the loud part. Everyone is somewhere. He is at the window.",
+   "min": 5
+  },
+  {
+   "layout": "present",
+   "pose": "phone_sofa",
+   "screen": "create_typed.png",
+   "vo": "On Waypoint he gets a name of his own for today. He types one true sentence. That is all it asks.",
+   "sub": "On Waypoint he gets a name of his own for today. He types one true sentence. That is all it asks.",
+   "min": 7
+  },
+  {
+   "layout": "present",
+   "pose": "listening",
+   "who": "mira",
+   "screen": "wall.png",
+   "vo": "Mira shows him the Wall: tonight's sentences from people like him. Different cities, same nine o'clock.",
+   "sub": "Mira shows him the Wall: tonight's sentences from people like him. Different cities, same nine o'clock.",
+   "min": 7
+  },
+  {
+   "layout": "present",
+   "pose": "relieved",
+   "screen": "matching.png",
+   "vo": "When he wants a real conversation, Waypoint crosses his path with one person. Just two sentences, and a reply.",
+   "sub": "When he wants a real conversation, Waypoint crosses his path with one person. Just two sentences, and a reply.",
+   "min": 7
+  },
+  {
+   "layout": "present",
+   "pose": "thinking",
+   "screen": "calm.png",
+   "vo": "And on the nights he does not want to talk, the Calm kit. Two minutes, then sleep.",
+   "sub": "And on the nights he does not want to talk, the Calm kit. Two minutes, then sleep.",
+   "min": 6
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

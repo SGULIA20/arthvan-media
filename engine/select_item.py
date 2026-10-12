@@ -4,6 +4,20 @@ from datetime import date, datetime, timedelta, timezone
 
 EPOCH = date(2026, 10, 11)  # first scheduled run: Waypoint
 ORDER = ("waypoint", "scoremybiz")
+# Founder rule (12 Oct 2026): one video a day, apps alternate daily, and each app alternates its lead, so the
+# four-day cycle is ScoreMyBiz+Lumi, Waypoint+founder, ScoreMyBiz+founder, Waypoint+Mira. Day n since EPOCH:
+LEADS = ("male", "male", "female", "female")
+
+
+def slot(day: date) -> tuple:
+    """(app, lead) wanted on this day: e.g. 14 Oct 2026 -> ("scoremybiz", "female")."""
+    n = (day - EPOCH).days
+    return ORDER[n % 2], LEADS[n % 4]
+
+
+def story_lead(story: dict) -> str:
+    """A story's lead: its "lead" field, else male for a founder character and female for Lumi or Mira."""
+    return story.get("lead") or ("male" if str(story.get("character", "")).startswith("founder") else "female")
 
 
 @dataclass(frozen=True)
