@@ -62,6 +62,9 @@ def build(story_path: Path, out_dir: Path) -> Path:
                 opened, hold = True, 0
             env.append(1.0 if opened else 0.0)
         env = [round(float(e), 1) for e in env]
+        # per-frame loudness (0..1, lightly smoothed) so the mouth opens with the syllable's energy, not a fixed flap
+        amp = np.convolve(raw, np.ones(2) / 2, mode="same")
+        amp = [round(float(min(1.0, a * 1.25)), 2) for a in amp]
         # screens in the ad's language when captured, else English
         lang = story.get("lang", "en").split("-")[0]
         shots = ROOT / "store" / "shots" / story["app"] / lang
@@ -69,7 +72,7 @@ def build(story_path: Path, out_dir: Path) -> Path:
             shots = ROOT / "store" / "shots" / story["app"]
         # 2. frames
         deck = {"scenes": story["scenes"], "title": story["title"], "end_line": app["end_line"], "app_name": app["name"],
-                "palette": app["palette"], "chars": story["character"], "char_base": CHAR_DIR.as_uri(), "vo_env": env,
+                "palette": app["palette"], "chars": story["character"], "char_base": CHAR_DIR.as_uri(), "vo_env": env, "vo_amp": amp,
                 "disclaimer": app.get("money_disclaimer") or "", "icon": (ROOT / app["icon"]).as_uri(),
                 "badge": BADGE.as_uri(), "shots": shots.as_uri()}
         frames = tmp / "frames"; frames.mkdir()
