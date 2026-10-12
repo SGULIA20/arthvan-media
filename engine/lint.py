@@ -41,10 +41,14 @@ def lint_item(app_cfg: dict, item: dict) -> list:
     banned = [(p, _phrase_pattern(p)) for p in glob["banned_phrases"] + app_cfg["banned_phrases"]]
     allowed = [re.compile(re.escape(a), re.I) for a in app_cfg["allowed_numbers"]]
     counts = re.compile(r"\b\d+\s+(?:%s)\b" % "|".join(glob["allowed_count_words"]), re.I)
+    allowed_names = [re.compile(re.escape(a), re.I) for a in app_cfg.get("allowed_phrases", [])]
     problems = []
     for where, text, sample, check_digits in _segments(item):
+        scrubbed = text
+        for a in allowed_names:
+            scrubbed = a.sub(" ", scrubbed)
         for phrase, pat in banned:
-            if pat.search(text):
+            if pat.search(scrubbed):
                 problems.append(f"{where}: banned phrase {phrase.strip()!r}")
         if check_digits and not sample:
             clean = text

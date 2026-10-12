@@ -81,6 +81,9 @@
     "end_line": "Free on Google Play",
     "linkedin_footer": [
       "Free on Google Play: {play_url}"
+    ],
+    "allowed_phrases": [
+      "Calm kit"
     ]
   },
   "scoremybiz": {
@@ -111,7 +114,8 @@
       "5 minutes",
       "7 areas",
       "7 parts",
-      "30 days"
+      "30 days",
+      "out of 100"
     ],
     "banned_phrases": [
       "loan",
@@ -130,7 +134,8 @@
       "Free for 30 days. No credit card.",
       "Google Play: {play_url}",
       "scoremybiz.com"
-    ]
+    ],
+    "allowed_phrases": []
   },
   "_global": {
     "banned_phrases": [

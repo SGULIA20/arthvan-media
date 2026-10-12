@@ -1,0 +1,67 @@
+{
+ "id": "mira-calmkit-en",
+ "app": "waypoint",
+ "lang": "en",
+ "voice": "Tara",
+ "rate": 165,
+ "character": "mira",
+ "title": "Two minutes.",
+ "post_on": "2026-10-17",
+ "caption": "Two minutes. No account, nothing saved. Mira shows the Calm kit inside Waypoint.",
+ "linkedin_text": "A small addition to Waypoint this week: the Calm kit. Breathe, ground yourself, wind down. Two minutes each, no account, nothing saved. Mira shows it on the real app. It is a feature, not a promise.",
+ "hashtags": [
+  "#Mira",
+  "#Waypoint",
+  "#TwoMinutes"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "pose": "head_neutral",
+   "title": "Two minutes.",
+   "vo": "Hi, I'm Mira. This is Priya's story. Her day runs on a timetable. Her evenings do not.",
+   "sub": "Hi, I'm Mira. This is Priya's story. Her day runs on a timetable. Her evenings do not.",
+   "min": 6
+  },
+  {
+   "layout": "scene",
+   "pose": "listening",
+   "card": "Late evening",
+   "vo": "Some nights she just wants two minutes that belong to her.",
+   "sub": "Some nights she just wants two minutes that belong to her.",
+   "min": 5
+  },
+  {
+   "layout": "present",
+   "pose": "phone_night",
+   "screen": "calm.png",
+   "vo": "Waypoint has a Calm kit now. Breathe. Ground yourself. Wind down. Two minutes each, no account, nothing saved.",
+   "sub": "Waypoint has a Calm kit now. Breathe. Ground yourself. Wind down. Two minutes each, no account, nothing saved.",
+   "min": 8
+  },
+  {
+   "layout": "present",
+   "pose": "relieved",
+   "screen": "daily-path.png",
+   "vo": "Then the Daily Path, one question for everyone. She answers it slower tonight.",
+   "sub": "Then the Daily Path, one question for everyone. She answers it slower tonight.",
+   "min": 6
+  },
+  {
+   "layout": "present",
+   "pose": "listening",
+   "who": "founder_casual",
+   "screen": "wall.png",
+   "vo": "And on the Wall, another person had the same kind of evening.",
+   "sub": "And on the Wall, another person had the same kind of evening.",
+   "min": 5
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Two minutes that are yours. Free on Google Play.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

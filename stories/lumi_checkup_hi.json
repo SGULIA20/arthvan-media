@@ -1,0 +1,68 @@
+{
+ "id": "lumi-checkup-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "voice": "Lekha",
+ "rate": 170,
+ "character": "lumi",
+ "title": "जाँच",
+ "post_on": "2026-10-16",
+ "caption": "Raju checks his shop the way he checks his bike: only when it stops. Lumi shows a better habit.",
+ "linkedin_text": "Most shop owners check their business the way they check their bike: only when it stops.\n\nScoreMyBiz gives a small business one number out of 100, from its own book, with the seven areas behind it and three moves for the week. Lumi tells Raju's story in Hindi with English subtitles; every screen is the real app.",
+ "hashtags": [
+  "#Lumi",
+  "#BusinessHealth",
+  "#ScoreMyBiz"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "pose": "head_neutral",
+   "title": "जाँच",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह राजू की कहानी है। राजू अपनी बाइक की जाँच तभी करता है जब वह रुक जाती है।",
+   "sub": "Hi, I'm Lumi. This is Raju's story. Raju checks his bike only when it stops.",
+   "min": 6
+  },
+  {
+   "layout": "scene",
+   "pose": "front_standing",
+   "who": "founder_suit",
+   "card": "दुकान भी वैसे ही?",
+   "vo": "दुकान भी वैसे ही। महीने के आख़िर में पता चलता है कि कहाँ कमी रह गई।",
+   "sub": "The shop, the same way. Only at month end does he learn where it went wrong.",
+   "min": 5
+  },
+  {
+   "layout": "present",
+   "pose": "phone",
+   "screen": "score-history.png",
+   "vo": "स्कोर माय बिज़ में उसकी बही से हर हफ़्ते एक स्कोर बनता है। सौ में से एक अंक। और सात हिस्से जो बताते हैं कि दबाव कहाँ है।",
+   "sub": "In ScoreMyBiz his book makes a score every week. One number out of 100, and seven areas that show where the pressure is.",
+   "min": 8
+  },
+  {
+   "layout": "present",
+   "pose": "explaining_right",
+   "screen": "dashboard.png",
+   "vo": "इस हफ़्ते दबाव वसूली में था। तीन ग्राहक, तीन टैप।",
+   "sub": "This week the pressure was in collections. Three customers, three taps.",
+   "min": 6
+  },
+  {
+   "layout": "present",
+   "pose": "front_standing",
+   "who": "founder_suit",
+   "screen": "cash-reality.png",
+   "vo": "अगले हफ़्ते स्कोर ऊपर। हाथ में नकद भी।",
+   "sub": "Next week the score is up. So is the cash in hand.",
+   "min": 5
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "हर हफ़्ते जाँच। रुकने से पहले। स्कोर माय बिज़, तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
