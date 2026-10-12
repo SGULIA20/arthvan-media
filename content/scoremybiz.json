@@ -767,5 +767,105 @@
    }
   ],
   "feature": "brand"
+ },
+ {
+  "id": "smb-voice-entry",
+  "template": "spark",
+  "feature": "voice-entry",
+  "caption": "Say it, don't type it. Speak your day's Sold, Bought and Spent in your own language.",
+  "hashtags": [
+   "#VoiceEntry",
+   "#ScoreMyBiz"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Say it. Don't type it."
+   },
+   {
+    "kind": "quote",
+    "text": "\"Sold 2,000. Bought 500. Spent 200.\"",
+    "sample": true
+   },
+   {
+    "kind": "steps",
+    "text": "Your evening entry",
+    "items": [
+     "Tap the mic",
+     "Say the day's numbers",
+     "Check, then save"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "Your language",
+    "text": "Hindi, Tamil, Yoruba, Swahili and more."
+   }
+  ]
+ },
+ {
+  "id": "smb-invite-friend",
+  "template": "ink",
+  "feature": "invite-friend",
+  "caption": "Know a shopkeeper who should see their score? Send them your invite link from the app.",
+  "hashtags": [
+   "#InviteAFriend",
+   "#SmallBusiness"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Know a shopkeeper who should see their score?"
+   },
+   {
+    "kind": "steps",
+    "text": "Invite a friend",
+    "items": [
+     "Open your score",
+     "Tap Invite a friend",
+     "Share the link on WhatsApp"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "The advice a shop trusts most comes from another shop."
+   }
+  ]
+ },
+ {
+  "id": "smb-dues-reminders",
+  "template": "spark",
+  "feature": "dues-reminders",
+  "caption": "One tap sends a polite reminder to a customer who owes you. No awkward call.",
+  "hashtags": [
+   "#Udhar",
+   "#Collections"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "One tap. A polite reminder."
+   },
+   {
+    "kind": "quote",
+    "text": "\"Namaste Rakesh ji, a small reminder: ₹4,500 is due this Friday.\"",
+    "sample": true
+   },
+   {
+    "kind": "steps",
+    "text": "How it goes",
+    "items": [
+     "Open who owes you",
+     "Tap Remind next to the name",
+     "The message goes on WhatsApp"
+    ]
+   },
+   {
+    "kind": "stat",
+    "value": "₹4,500",
+    "text": "collected before Friday, in this example.",
+    "sample": true
+   }
+  ]
  }
 ]

@@ -679,5 +679,34 @@
    }
   ],
   "feature": "daily-path"
+ },
+ {
+  "id": "wp-calm-kit",
+  "template": "spark",
+  "feature": "calm-kit",
+  "caption": "Two minutes that are yours. Breathe, ground yourself, wind down: the Calm kit is in Waypoint now.",
+  "hashtags": [
+   "#TwoMinutes",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Two minutes that are yours."
+   },
+   {
+    "kind": "steps",
+    "text": "The Calm kit",
+    "items": [
+     "Breathe",
+     "Ground yourself",
+     "Wind down"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "For the nights you do not want to talk."
+   }
+  ]
  }
 ]
