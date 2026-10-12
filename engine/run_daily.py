@@ -297,8 +297,10 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     th_token, th_uid = env.get("THREADS_ACCESS_TOKEN"), env.get("THREADS_USER_ID")
     if th_token and th_uid:
         chans["threads"] = (th_token, th_uid)
-    if all(env.get(k) for k in ("GUPSHUP_APP_ID", "GUPSHUP_EMAIL", "GUPSHUP_ACCOUNT_SECRET", "WA_STATUS_TO", "WA_STATUS_TEMPLATE")):
-        chans["whatsapp"] = {"app_id": env["GUPSHUP_APP_ID"], "email": env["GUPSHUP_EMAIL"], "secret": env["GUPSHUP_ACCOUNT_SECRET"],
+    if all(env.get(k) for k in ("GUPSHUP_APP_ID", "GUPSHUP_API_KEY", "WA_STATUS_TO", "WA_STATUS_TEMPLATE")):
+        chans["whatsapp"] = {"app_id": env["GUPSHUP_APP_ID"], "api_key": env["GUPSHUP_API_KEY"],
+                             "app_name": env.get("GUPSHUP_APP_NAME") or "scoremybizapp",
+                             "source": env.get("GUPSHUP_SOURCE") or "2348125666665",
                              "to": env["WA_STATUS_TO"], "template": env["WA_STATUS_TEMPLATE"]}
     chans["youtube"] = {ch: {"client_id": env["YT_CLIENT_ID"], "client_secret": env["YT_CLIENT_SECRET"],
                              "refresh_token": env[f"YT_{ch.upper()}_REFRESH_TOKEN"]}

@@ -80,5 +80,5 @@ def test_youtube_secrets_reach_the_daily_job():
 
 def test_whatsapp_status_settings_reach_the_daily_job():
     text = (WF / "daily-post.yml").read_text()
-    for k in ("secrets.GUPSHUP_APP_ID", "secrets.GUPSHUP_ACCOUNT_SECRET", "secrets.WA_STATUS_TO", "vars.WA_STATUS_TEMPLATE"):
+    for k in ("secrets.GUPSHUP_APP_ID", "secrets.GUPSHUP_API_KEY", "secrets.WA_STATUS_TO", "vars.WA_STATUS_TEMPLATE", "vars.GUPSHUP_APP_NAME"):
         assert k in text

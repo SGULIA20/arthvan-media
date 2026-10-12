@@ -74,5 +74,6 @@ of the 10,000 daily allowance. A YouTube failure never affects the other channel
 
 ## WhatsApp status pack
 After Instagram, the day's video is sent to the founder's own WhatsApp through the ScoreMyBiz Gupshup account using an
-approved template with a video header (`WA_STATUS_TEMPLATE` repository variable, `WA_STATUS_TO` secret, Gupshup secrets).
+approved template with a video header. Settings: secrets `GUPSHUP_APP_ID`, `GUPSHUP_API_KEY` (the App API Key on the app's
+Settings tab at gupshup.ai), `WA_STATUS_TO`; variables `WA_STATUS_TEMPLATE` (template name), `GUPSHUP_APP_NAME`, `GUPSHUP_SOURCE`.
 He posts it as a status in two taps. No automation touches his personal WhatsApp; nothing is sent to customers.

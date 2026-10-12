@@ -59,8 +59,9 @@ jobs:
           YT_SGLEARNING_REFRESH_TOKEN: ${{ secrets.YT_SGLEARNING_REFRESH_TOKEN }}
           YT_ARTHVAN_REFRESH_TOKEN: ${{ secrets.YT_ARTHVAN_REFRESH_TOKEN }}
           GUPSHUP_APP_ID: ${{ secrets.GUPSHUP_APP_ID }}
-          GUPSHUP_EMAIL: ${{ secrets.GUPSHUP_EMAIL }}
-          GUPSHUP_ACCOUNT_SECRET: ${{ secrets.GUPSHUP_ACCOUNT_SECRET }}
+          GUPSHUP_API_KEY: ${{ secrets.GUPSHUP_API_KEY }}
+          GUPSHUP_APP_NAME: ${{ vars.GUPSHUP_APP_NAME }}
+          GUPSHUP_SOURCE: ${{ vars.GUPSHUP_SOURCE }}
           WA_STATUS_TO: ${{ secrets.WA_STATUS_TO }}
           WA_STATUS_TEMPLATE: ${{ vars.WA_STATUS_TEMPLATE }}
           PAUSE: ${{ vars.PAUSE }}

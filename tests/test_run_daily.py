@@ -377,7 +377,7 @@ def test_whatsapp_status_video_goes_to_the_founder_after_instagram_and_retries_a
     w = World(tmp_path)
     sent = []
     w.deps.send_whatsapp = lambda cfg, url, app, caption: sent.append((cfg["to"], url, app)) or "wamid.9"
-    env = dict(ENV, GUPSHUP_APP_ID="a", GUPSHUP_EMAIL="e", GUPSHUP_ACCOUNT_SECRET="s", WA_STATUS_TO="+2348120000000", WA_STATUS_TEMPLATE="daily_status_video")
+    env = dict(ENV, GUPSHUP_APP_ID="a", GUPSHUP_API_KEY="k", WA_STATUS_TO="+2348120000000", WA_STATUS_TEMPLATE="daily_status_video")
     assert go(w, env=env) == 0
     assert len(sent) == 1 and sent[0][0] == "+2348120000000" and sent[0][1].endswith("/reel.mp4") and sent[0][2] == "Waypoint"
     assert last_entry(tmp_path, "whatsapp")["status"] == "published"
