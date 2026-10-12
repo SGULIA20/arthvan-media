@@ -342,5 +342,5 @@ def test_a_missed_story_is_posted_on_the_next_run_and_never_twice(tmp_path):
     # access returns on Friday: Tuesday's story goes first, Saturday gets Wednesday's, Sunday is a normal day
     assert go(w, day=date(2026, 10, 16)) == 0 and last_entry(tmp_path, "instagram")["item"] == "s-tue"
     assert go(w, day=date(2026, 10, 17)) == 0 and last_entry(tmp_path, "instagram")["item"] == "s-wed"
-    assert go(w, day=date(2026, 10, 18)) == 0 and last_entry(tmp_path, "instagram")["item"] == "w0"
+    assert go(w, day=date(2026, 10, 18)) == 0 and last_entry(tmp_path, "instagram")["item"] == "s0"
     assert w.count("publish") == 3
