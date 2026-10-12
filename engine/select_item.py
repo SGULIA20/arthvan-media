@@ -33,11 +33,20 @@ def lagos_date(now_utc: datetime) -> date:
     return (now_utc.astimezone(timezone.utc) + timedelta(hours=1)).date()
 
 
-def pick(day: date, banks: dict, skip: int = 0) -> Selection:
+NO_REPEAT = 4   # a feature shown in the app's last 4 posts is not shown again (founder rule 12 Oct: rotate functions, never repeat back to back)
+
+
+def pick(day: date, banks: dict, skip: int = 0, recent_features: list = None) -> Selection:
+    """The day's app and bank item: the bank in order, one step per posting day, skipping items whose feature the app
+    showed in its last NO_REPEAT posts. `skip` moves on when lint rejects an item."""
     n = (day - EPOCH).days
     app = ORDER[n % 2]
     bank = banks[app]
     if not bank:
         raise ValueError(f"bank for {app} is empty")
-    idx = (n // 2 + skip) % len(bank)
+    avoid = set((recent_features or [])[-NO_REPEAT:])
+    start = n // 2
+    order = [(start + i) % len(bank) for i in range(len(bank))]
+    fresh = [i for i in order if bank[i].get("feature") not in avoid] or order
+    idx = fresh[skip % len(fresh)]
     return Selection(app=app, item=bank[idx], bank_index=idx, day=day)

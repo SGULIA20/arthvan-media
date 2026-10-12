@@ -26,6 +26,9 @@ CATALOGUE = ROOT / "engine" / "assets" / "poses.json"
 STYLE = ("Same character as the reference image: identical face, hair, skin tone, build and clothes. Pixar-style 3D render, "
          "soft studio light. Full body, head to shoes. Plain pure white background, no ground shadow, no text, no props "
          "other than those named. Portrait 9:16.")
+HEAD_STYLE = ("Same character as the reference image: identical face, hair, skin tone and clothes. Pixar-style 3D render, soft studio "
+              "light. Head and shoulders only, facing the camera straight on, centred, same framing as a passport photo. Plain pure "
+              "white background, no text. Square 1:1.")
 _CAFILE = "/etc/ssl/cert.pem"
 _CTX = ssl.create_default_context(cafile=_CAFILE) if os.path.exists(_CAFILE) else ssl.create_default_context()
 
@@ -37,7 +40,7 @@ class PoseError(Exception):
 def _generate(prompt: str, reference: bytes, key: str, model: str = MODEL) -> bytes:
     body = {"contents": [{"parts": [{"inlineData": {"mimeType": "image/jpeg", "data": base64.b64encode(reference).decode()}},
                                     {"text": prompt}]}],
-            "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": "9:16"}}}
+            "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": "1:1" if "Square 1:1" in prompt else "9:16"}}}
     req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
                                  data=json.dumps(body).encode(), method="POST",
                                  headers={"Content-Type": "application/json", "x-goog-api-key": key})
@@ -70,7 +73,7 @@ def cutout(bgr: np.ndarray, tol: int = 14) -> np.ndarray:
 
 
 def make_pose(character: str, pose: str, prompt: str, *, reference: Path = None, key: str = None,
-              generate=_generate, out_dir: Path = CHAR_DIR, source_dir: Path = SOURCE_DIR) -> Path:
+              generate=_generate, out_dir: Path = CHAR_DIR, source_dir: Path = SOURCE_DIR, style: str = None) -> Path:
     out = Path(out_dir) / f"{character}_{pose}.png"
     if out.exists():
         return out
@@ -78,7 +81,8 @@ def make_pose(character: str, pose: str, prompt: str, *, reference: Path = None,
     if not key:
         raise PoseError("GEMINI_API_KEY is not set")
     reference = Path(reference) if reference else _reference(character, out_dir)
-    jpg = generate(STYLE + " " + prompt, reference.read_bytes(), key)
+    style = (HEAD_STYLE if pose.startswith("head_") else STYLE) if style is None else style
+    jpg = generate(style + " " + prompt, reference.read_bytes(), key)
     src = Path(source_dir) / character.split("_")[0] / f"{character}_{pose}.jpg"
     src.parent.mkdir(parents=True, exist_ok=True); src.write_bytes(jpg)
     bgr = cv2.imdecode(np.frombuffer(jpg, np.uint8), cv2.IMREAD_COLOR)
@@ -92,7 +96,7 @@ def make_pose(character: str, pose: str, prompt: str, *, reference: Path = None,
 def _reference(character: str, out_dir: Path) -> Path:
     """The character's own full-body source picture (jpg under SOURCE_DIR), else its PNG."""
     base = character.split("_")[0]
-    names = [f"{character}_front_standing", f"{character}_front_neutral"]
+    names = [f"{character}_front_standing", f"{character}_front_neutral", f"{character}_front_happy"]
     for stem in (character.rsplit("_", 1)[0], base, f"{base}_suit", f"{base}_casual"):   # costume → its base character
         names += [f"{stem}_front_standing", f"{stem}_front_neutral"]
     for name in names:

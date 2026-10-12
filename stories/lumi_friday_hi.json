@@ -63,5 +63,6 @@
   "#Lumi",
   "#CashFlow",
   "#ScoreMyBiz"
- ]
+ ],
+ "feature": "payables"
 }

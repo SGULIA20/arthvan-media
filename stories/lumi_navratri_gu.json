@@ -1,0 +1,73 @@
+{
+ "id": "lumi-navratri-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi_garba",
+ "occasion": "navratri",
+ "title": "નવરાત્રિ",
+ "post_on": "2026-10-14",
+ "caption": "Nine nights, double the crowd, and no idea what is in the drawer. Lumi tells Bhavini's Navratri in Gujarati.",
+ "linkedin_text": "Navratri doubles the footfall at small shops in Gujarat and leaves most owners guessing what the nine nights actually earned.\n\nScoreMyBiz turns the shop's own book into one number for its health and three moves for the week. Lumi tells Bhavini's story in Gujarati with English subtitles; every screen is the real app in Gujarati.",
+ "hashtags": [
+  "#Navratri",
+  "#Lumi",
+  "#ScoreMyBiz"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "pose": "head_neutral",
+   "title": "નવરાત્રિ",
+   "vo": "નમસ્તે, હું લૂમી છું. વાત છે નવરાત્રિની. નવ રાત, નવ રંગ, અને ભાવિનીની દુકાન મોડી રાત સુધી ખુલ્લી.",
+   "sub": "Hi, I'm Lumi. This is a Navratri story. Nine nights, nine colours, and Bhavini's shop open till late.",
+   "min": 7
+  },
+  {
+   "layout": "clip",
+   "clip": "a lane of small shops in Ahmedabad on a Navratri night: string lights, a chaniya choli shop glowing, a snack stall busy with young people in garba dress, music in the air, slow push-in.",
+   "card": "ગરબા પછી, દુકાને",
+   "vo": "ગરબા પછી ભીડ સીધી દુકાને આવે છે. વેચાણ ડબલ. પણ ગલ્લામાં હિસાબ? એ ખબર નથી.",
+   "sub": "After garba the crowd comes straight to the shop. Sales double. But what is in the drawer? No idea.",
+   "min": 8
+  },
+  {
+   "layout": "present",
+   "pose": "phone",
+   "screen": "book.png",
+   "vo": "સ્કોર માય બિઝમાં ભાવિની ફટાફટ નોંધે છે: વેચ્યું, ખરીદ્યું, ખર્ચ્યું. બાકીનું બધું ઍપ સંભાળે.",
+   "sub": "In ScoreMyBiz Bhavini jots it down fast: Sold, Bought, Spent. The app handles the rest.",
+   "min": 7
+  },
+  {
+   "layout": "present",
+   "pose": "explaining_right",
+   "screen": "dashboard.png",
+   "vo": "ત્રણ ગ્રાહકોનું ઉધાર બાકી હતું. એક ટૅપથી યાદ અપાવ્યું. દશેરા પહેલાં બે જણાએ ચૂકવી દીધું.",
+   "sub": "Three customers owed her. One tap sent the reminders. Two paid before Dussehra.",
+   "min": 7
+  },
+  {
+   "layout": "clip",
+   "clip": "inside a small Gujarati provisions shop late at night during Navratri, the owner in a kurta counting the day's cash at the counter, a diya and marigolds by the till, tired but happy.",
+   "vo": "નવ રાત પછી સ્કોર ઉપર. ગલ્લામાં રોકડ પણ. નવરાત્રિ માત્ર ભીડની નહીં, નફાની રહી.",
+   "sub": "After nine nights the score is up. So is the cash in the drawer. A Navratri of profit, not just of crowds.",
+   "min": 8
+  },
+  {
+   "layout": "present",
+   "pose": "front_happy",
+   "screen": "score-history.png",
+   "vo": "દર અઠવાડિયે એક નંબર. સો માંથી. અને અઠવાડિયાનાં ત્રણ કામ.",
+   "sub": "One number every week, out of 100, and three moves for the week.",
+   "min": 6
+  },
+  {
+   "layout": "end",
+   "pose": "dandiya",
+   "vo": "સ્કોર માય બિઝ. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ મફત.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "feature": "book"
+}

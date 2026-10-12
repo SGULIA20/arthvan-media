@@ -73,5 +73,6 @@
   "#Mira",
   "#DailyPath",
   "#Waypoint"
- ]
+ ],
+ "feature": "create"
 }

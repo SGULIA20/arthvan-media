@@ -71,5 +71,6 @@
    "sub": "",
    "min": 5
   }
- ]
+ ],
+ "feature": "wall"
 }

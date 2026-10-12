@@ -40,7 +40,8 @@
     "kind": "quote",
     "text": "Know where your money is."
    }
-  ]
+  ],
+  "feature": "cash-reality"
  },
  {
   "id": "smb-seven-areas",
@@ -79,7 +80,8 @@
     "value": "7",
     "text": "areas checked in one score."
    }
-  ]
+  ],
+  "feature": "score-areas"
  },
  {
   "id": "smb-eight-numbers",
@@ -113,7 +115,8 @@
     "kind": "quote",
     "text": "Then see where you stand."
    }
-  ]
+  ],
+  "feature": "book"
  },
  {
   "id": "smb-sales-vs-cash",
@@ -160,7 +163,8 @@
     "kind": "quote",
     "text": "Enter the numbers. See the story."
    }
-  ]
+  ],
+  "feature": "cash-reality"
  },
  {
   "id": "smb-unpaid-bills",
@@ -194,7 +198,8 @@
     "text": "stuck with customers in this example.",
     "sample": true
    }
-  ]
+  ],
+  "feature": "payables"
  },
  {
   "id": "smb-emi-weight",
@@ -238,7 +243,8 @@
     "kind": "quote",
     "text": "Debt burden is one of the seven areas."
    }
-  ]
+  ],
+  "feature": "emi"
  },
  {
   "id": "smb-cost-split",
@@ -289,7 +295,8 @@
     "kind": "quote",
     "text": "Small leaks add up."
    }
-  ]
+  ],
+  "feature": "cost-split"
  },
  {
   "id": "smb-working-capital",
@@ -322,7 +329,8 @@
     "kind": "quote",
     "text": "Buy what sells. Hold less of what does not."
    }
-  ]
+  ],
+  "feature": "stock"
  },
  {
   "id": "smb-liquidity",
@@ -355,7 +363,8 @@
     "value": "Liquidity",
     "text": "is one of the seven areas."
    }
-  ]
+  ],
+  "feature": "liquidity"
  },
  {
   "id": "smb-growth",
@@ -388,7 +397,8 @@
      "Did cash go up too?"
     ]
    }
-  ]
+  ],
+  "feature": "growth"
  },
  {
   "id": "smb-weekly-habit",
@@ -421,7 +431,8 @@
     "value": "Free",
     "text": "for 30 days. No credit card."
    }
-  ]
+  ],
+  "feature": "weekly-score"
  },
  {
   "id": "smb-advisor",
@@ -454,7 +465,8 @@
      "What should I fix first?"
     ]
    }
-  ]
+  ],
+  "feature": "advisor"
  },
  {
   "id": "smb-free-trial",
@@ -487,7 +499,8 @@
     "kind": "quote",
     "text": "Know where your money is."
    }
-  ]
+  ],
+  "feature": "trial"
  },
  {
   "id": "smb-kirana-sample",
@@ -539,7 +552,8 @@
     "kind": "quote",
     "text": "The weakest area is the first thing to fix."
    }
-  ]
+  ],
+  "feature": "sample-score"
  },
  {
   "id": "smb-myth",
@@ -580,7 +594,8 @@
     "value": "Check both",
     "text": "every month."
    }
-  ]
+  ],
+  "feature": "cash-reality"
  },
  {
   "id": "smb-cash-stuck",
@@ -613,7 +628,8 @@
     "value": "5",
     "text": "minutes to find out."
    }
-  ]
+  ],
+  "feature": "cash-stuck"
  },
  {
   "id": "smb-why-score",
@@ -646,7 +662,8 @@
     "value": "7",
     "text": "areas in one score."
    }
-  ]
+  ],
+  "feature": "score"
  },
  {
   "id": "smb-month-end",
@@ -680,7 +697,8 @@
     "value": "Free",
     "text": "for 30 days. No credit card."
    }
-  ]
+  ],
+  "feature": "month-end"
  },
  {
   "id": "smb-made-for",
@@ -713,7 +731,8 @@
     "kind": "quote",
     "text": "Works for businesses across India."
    }
-  ]
+  ],
+  "feature": "brand"
  },
  {
   "id": "smb-brand",
@@ -746,6 +765,7 @@
     "kind": "quote",
     "text": "Know where your money is."
    }
-  ]
+  ],
+  "feature": "brand"
  }
 ]

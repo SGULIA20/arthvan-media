@@ -446,3 +446,17 @@ def test_occasions_calendar_is_valid():
         assert o["apps"] and set(o["apps"]) <= {"scoremybiz", "waypoint"}
         for who, costume in o["costumes"].items():
             assert who in base and (costume in cat or costume in base), (o["key"], costume)
+
+
+def test_recent_features_come_from_the_apps_own_published_posts(tmp_path):
+    from engine.run_daily import recent_features
+    log = tmp_path / "posts.jsonl"
+    rows = [{"date": "2026-10-10", "app": "scoremybiz", "item": "a", "status": "published", "feature": "cash-reality"},
+            {"date": "2026-10-11", "app": "waypoint", "item": "b", "status": "published", "feature": "wall"},
+            {"date": "2026-10-12", "app": "scoremybiz", "item": "c", "status": "failed", "feature": "book"},
+            {"date": "2026-10-12", "app": "scoremybiz", "item": "c", "status": "published", "feature": "book"},
+            {"date": "2026-10-12", "channel": "threads", "app": "scoremybiz", "item": "c", "status": "published", "feature": "book"}]
+    log.write_text("\n".join(json.dumps(r) for r in rows) + "\n")
+    assert recent_features(log, "scoremybiz") == ["cash-reality", "book"]
+    assert recent_features(log, "waypoint") == ["wall"]
+    assert recent_features(tmp_path / "missing.jsonl", "waypoint") == []

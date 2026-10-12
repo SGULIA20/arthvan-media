@@ -64,5 +64,6 @@
    "sub": "",
    "min": 5
   }
- ]
+ ],
+ "feature": "weekly-score"
 }

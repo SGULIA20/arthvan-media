@@ -30,7 +30,8 @@
     "value": "Free",
     "text": "on Google Play."
    }
-  ]
+  ],
+  "feature": "fresh-name"
  },
  {
   "id": "wp-voice",
@@ -63,7 +64,8 @@
      "It goes to the Wall"
     ]
    }
-  ]
+  ],
+  "feature": "voice"
  },
  {
   "id": "wp-cross-paths",
@@ -96,7 +98,8 @@
      "Then a fresh start"
     ]
    }
-  ]
+  ],
+  "feature": "matching"
  },
  {
   "id": "wp-wall",
@@ -129,7 +132,8 @@
     "kind": "quote",
     "text": "Say it your way."
    }
-  ]
+  ],
+  "feature": "wall"
  },
  {
   "id": "wp-break-room",
@@ -162,7 +166,8 @@
     "kind": "quote",
     "text": "Swing. Break. Repeat."
    }
-  ]
+  ],
+  "feature": "break-room"
  },
  {
   "id": "wp-daily-path",
@@ -195,7 +200,8 @@
      "Answer when you are ready"
     ]
    }
-  ]
+  ],
+  "feature": "daily-path"
  },
  {
   "id": "wp-languages",
@@ -230,7 +236,8 @@
     "kind": "quote",
     "text": "Chat across languages with auto-translate."
    }
-  ]
+  ],
+  "feature": "languages"
  },
  {
   "id": "wp-mira",
@@ -263,7 +270,8 @@
      "Help you find your way around"
     ]
    }
-  ]
+  ],
+  "feature": "mira"
  },
  {
   "id": "wp-say-it",
@@ -296,7 +304,8 @@
     "value": "Free",
     "text": "on Google Play."
    }
-  ]
+  ],
+  "feature": "create"
  },
  {
   "id": "wp-timed-chat",
@@ -329,7 +338,8 @@
      "You both move on"
     ]
    }
-  ]
+  ],
+  "feature": "timed-chat"
  },
  {
   "id": "wp-fresh-name",
@@ -362,7 +372,8 @@
      "When to log off"
     ]
    }
-  ]
+  ],
+  "feature": "fresh-name"
  },
  {
   "id": "wp-three-ways",
@@ -395,7 +406,8 @@
     "kind": "quote",
     "text": "Small visits count."
    }
-  ]
+  ],
+  "feature": "overview"
  },
  {
   "id": "wp-on-play",
@@ -428,7 +440,8 @@
     "value": "Free",
     "text": "to install."
    }
-  ]
+  ],
+  "feature": "brand"
  },
  {
   "id": "wp-heard",
@@ -461,7 +474,8 @@
      "A guide called Mira"
     ]
    }
-  ]
+  ],
+  "feature": "overview"
  },
  {
   "id": "wp-voice-how",
@@ -494,7 +508,8 @@
     "value": "Re-spoken",
     "text": "in a synthetic voice."
    }
-  ]
+  ],
+  "feature": "voice"
  },
  {
   "id": "wp-break-room-how",
@@ -527,7 +542,8 @@
     "kind": "quote",
     "text": "Back again tomorrow."
    }
-  ]
+  ],
+  "feature": "break-room"
  },
  {
   "id": "wp-auto-translate",
@@ -559,7 +575,8 @@
     "kind": "quote",
     "text": "Say it in yours. Read it in theirs."
    }
-  ]
+  ],
+  "feature": "languages"
  },
  {
   "id": "wp-new-here",
@@ -592,7 +609,8 @@
     "value": "Free",
     "text": "on Google Play."
    }
-  ]
+  ],
+  "feature": "onboarding"
  },
  {
   "id": "wp-built-by",
@@ -625,7 +643,8 @@
     "value": "Free",
     "text": "on Google Play."
    }
-  ]
+  ],
+  "feature": "brand"
  },
  {
   "id": "wp-daily-rhythm",
@@ -658,6 +677,7 @@
     "kind": "quote",
     "text": "Come back tomorrow."
    }
-  ]
+  ],
+  "feature": "daily-path"
  }
 ]

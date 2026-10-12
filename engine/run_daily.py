@@ -23,7 +23,7 @@ from .linkedin import LinkedInError
 from .threads import ThreadsError
 from .youtube import YouTubeError
 from .whatsapp import WhatsAppError, WhatsAppNotReady
-from .select_item import lagos_date, pick, slot, story_lead
+from .select_item import ORDER, EPOCH, lagos_date, pick, slot, story_lead, NO_REPEAT
 
 MAX_FALLBACKS = 5
 KEEP_DAYS = 14
@@ -235,7 +235,22 @@ def scheduled_story(root: Path, day: date, log: Path = None):
         if (st.get("post_on") and st["post_on"] <= day.isoformat() and st["id"] not in done
                 and (st["app"], story_lead(st)) == slot(day) and rendered):
             cands.append(st)
-    return min(cands, key=lambda s: s["post_on"]) if cands else None
+    if not cands:
+        return None
+    avoid = set(recent_features(log, cands[0]["app"]))
+    fresh = [c for c in cands if c.get("feature") not in avoid]
+    return min(fresh or cands, key=lambda s: s["post_on"])
+
+
+def recent_features(log: Path, app: str, n: int = NO_REPEAT) -> list:
+    """Features of the app's last n published Instagram posts, oldest first (bank items and stories alike)."""
+    if log is None or not log.exists():
+        return []
+    feats = []
+    for e in _entries(log):
+        if e.get("status") == "published" and e.get("channel", "instagram") == "instagram" and e.get("app") == app and e.get("feature"):
+            feats.append(e["feature"])
+    return feats[-n:]
 
 
 def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log: Path, chans: dict, token: str, ig_id: str, mode: str) -> int:
@@ -256,7 +271,7 @@ def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log
         prepared = deps.prepare_video_set(ig_id, token, url, ig_caption)
         if mode == "prepare":
             return 0
-        entry = {"date": day.isoformat(), "app": st["app"], "item": st["id"], "status": "publishing", "kind": "story",
+        entry = {"date": day.isoformat(), "app": st["app"], "item": st["id"], "status": "publishing", "kind": "story", "feature": st.get("feature"),
                  "sha": deps.head_sha(), "at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
         _append(log, entry); deps.git_publish([log], f"log: publishing {day}")
         try:
@@ -336,7 +351,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         return _run_story(story, day, root, env, deps, apps, log, chans, token, ig_id, mode)
     sel = None
     for skip in range(MAX_FALLBACKS):
-        cand = pick(day, banks, skip=skip)
+        cand = pick(day, banks, skip=skip, recent_features=recent_features(log, ORDER[(day - EPOCH).days % 2]))
         problems = lint_item(apps[cand.app], cand.item)
         if not problems:
             sel = cand
@@ -375,7 +390,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         if mode == "prepare":
             return 0
 
-        entry = {"date": day.isoformat(), "app": sel.app, "item": sel.item["id"], "status": "publishing",
+        entry = {"date": day.isoformat(), "app": sel.app, "item": sel.item["id"], "status": "publishing", "feature": sel.item.get("feature"),
                  "sha": deps.head_sha(), "at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
         _append(log, entry)
         deps.git_publish([log], f"log: publishing {day}")
