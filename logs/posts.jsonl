@@ -7,3 +7,9 @@
 {"date": "2026-10-11", "app": "waypoint", "item": "wp-new-name", "status": "published", "at": "2026-10-11T18:11:12+00:00", "ids": {"post": "18125533082296782", "reel": "18116827327993715", "story": "18130319539684402"}}
 {"date": "2026-10-13", "channel": "youtube:sglearning", "item": "mira-window-en", "status": "published", "id": "Ml00ohR_ia0", "note": "manual test upload 12 Oct"}
 {"date": "2026-10-13", "channel": "youtube:arthvan", "item": "mira-window-en", "status": "published", "id": "7nfp1PCXmiE", "note": "manual test upload 12 Oct"}
+{"date": "2026-10-12", "app": "scoremybiz", "item": "smb-profit-vs-cash", "status": "publishing", "sha": "1442ef572031914947af33c65e279b9aff456dee", "at": "2026-10-12T17:48:02+00:00"}
+{"date": "2026-10-12", "app": "scoremybiz", "item": "smb-profit-vs-cash", "status": "published", "sha": "1442ef572031914947af33c65e279b9aff456dee", "at": "2026-10-12T17:48:02+00:00", "ids": {"post": "18098952503378498", "reel": "18029770943914079", "story": "18143948242590541"}}
+{"date": "2026-10-12", "channel": "whatsapp", "item": "smb-profit-vs-cash", "status": "failed", "error": "Gupshup login failed (403)"}
+{"date": "2026-10-12", "channel": "youtube:sglearning", "item": "smb-profit-vs-cash", "status": "published", "id": "NBn-l1qnusY"}
+{"date": "2026-10-12", "channel": "youtube:arthvan", "item": "smb-profit-vs-cash", "status": "published", "id": "J5qwMdCsF7I"}
+{"date": "2026-10-12", "channel": "threads", "item": "smb-profit-vs-cash", "status": "published", "id": "18117301706069786"}
