@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 .frames/
 samples/
+.DS_Store
