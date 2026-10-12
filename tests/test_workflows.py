@@ -76,3 +76,9 @@ def test_youtube_secrets_reach_the_daily_job():
     text = (WF / "daily-post.yml").read_text()
     for k in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_SGLEARNING_REFRESH_TOKEN", "YT_ARTHVAN_REFRESH_TOKEN"):
         assert f"secrets.{k}" in text
+
+
+def test_whatsapp_status_settings_reach_the_daily_job():
+    text = (WF / "daily-post.yml").read_text()
+    for k in ("secrets.GUPSHUP_APP_ID", "secrets.GUPSHUP_ACCOUNT_SECRET", "secrets.WA_STATUS_TO", "vars.WA_STATUS_TEMPLATE"):
+        assert k in text

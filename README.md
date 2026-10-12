@@ -71,3 +71,8 @@ BOTH channels, SGLearning and Arthvan (ex SGMythWorld), for both apps. Needs sec
 `YT_SGLEARNING_REFRESH_TOKEN` and `YT_ARTHVAN_REFRESH_TOKEN`, created once with `python -m engine.youtube_auth sglearning|arthvan`
 (browser consent, choose that channel). Title gets "#Shorts", description carries the Play link (clickable on YouTube). One quota unit per upload
 of the 10,000 daily allowance. A YouTube failure never affects the other channels; a re-run retries YouTube only.
+
+## WhatsApp status pack
+After Instagram, the day's video is sent to the founder's own WhatsApp through the ScoreMyBiz Gupshup account using an
+approved template with a video header (`WA_STATUS_TEMPLATE` repository variable, `WA_STATUS_TO` secret, Gupshup secrets).
+He posts it as a status in two taps. No automation touches his personal WhatsApp; nothing is sent to customers.

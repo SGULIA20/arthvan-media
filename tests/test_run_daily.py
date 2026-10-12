@@ -27,7 +27,8 @@ class World:
             wait_for_urls=self.wait_for_urls, prepare_set=self.prepare_set, publish_set=self.publish_set,
             sync_repo=lambda: None, head_sha=lambda: "deadbeef", post_linkedin=self.post_linkedin,
             post_threads=self.post_threads, prepare_video_set=self.prepare_video_set,
-            post_linkedin_video=lambda *a: "urn:li:ugcPost:0", post_youtube=lambda *a: "VID0")
+            post_linkedin_video=lambda *a: "urn:li:ugcPost:0", post_youtube=lambda *a: "VID0",
+            send_whatsapp=lambda *a: "wamid.0")
 
     def render_set(self, sel, app_cfg, out_dir, fps=30):
         self.rendered_ids.append(sel.item["id"])
@@ -370,3 +371,15 @@ def test_youtube_failure_is_isolated_and_retried(tmp_path):
     env = dict(ENV, YT_CLIENT_ID="cid", YT_CLIENT_SECRET="sec", YT_SGLEARNING_REFRESH_TOKEN="rt")
     assert go(w, env=env) == 1 and last_entry(tmp_path, "instagram")["status"] == "published"
     assert go(w, env=env) == 0 and len(calls) == 2 and w.count("publish") == 1
+
+
+def test_whatsapp_status_video_goes_to_the_founder_after_instagram_and_retries_alone(tmp_path):
+    w = World(tmp_path)
+    sent = []
+    w.deps.send_whatsapp = lambda cfg, url, app, caption: sent.append((cfg["to"], url, app)) or "wamid.9"
+    env = dict(ENV, GUPSHUP_APP_ID="a", GUPSHUP_EMAIL="e", GUPSHUP_ACCOUNT_SECRET="s", WA_STATUS_TO="+2348120000000", WA_STATUS_TEMPLATE="daily_status_video")
+    assert go(w, env=env) == 0
+    assert len(sent) == 1 and sent[0][0] == "+2348120000000" and sent[0][1].endswith("/reel.mp4") and sent[0][2] == "Waypoint"
+    assert last_entry(tmp_path, "whatsapp")["status"] == "published"
+    assert go(w, env=env) == 0 and len(sent) == 1
+    assert go(w, env=dict(ENV), day=date(2026, 10, 12)) == 0 and len(sent) == 1   # not configured: skipped

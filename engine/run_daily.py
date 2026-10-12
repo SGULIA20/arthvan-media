@@ -15,13 +15,14 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable
 
-from . import instagram, linkedin, render, threads, youtube
+from . import instagram, linkedin, render, threads, whatsapp, youtube
 from .config import ROOT, load_apps, load_bank, load_global
 from .instagram import Captions, InstagramError, PartialPublish, SetUrls
 from .lint import alt_texts, build_captions, build_linkedin_text, build_threads_text, lint_item, story_captions
 from .linkedin import LinkedInError
 from .threads import ThreadsError
 from .youtube import YouTubeError
+from .whatsapp import WhatsAppError
 from .select_item import lagos_date, pick
 
 MAX_FALLBACKS = 5
@@ -88,6 +89,7 @@ class Deps:
     prepare_video_set: Callable = instagram.prepare_video_set
     post_linkedin_video: Callable = linkedin.post_video
     post_youtube: Callable = youtube.post_short
+    send_whatsapp: Callable = whatsapp.send_status_video
 
 
 # ---------- helpers ----------
@@ -138,7 +140,7 @@ def _channel(day: date, channel: str, item_id: str, deps: Deps, log: Path, actio
     entry = {"date": day.isoformat(), "channel": channel, "item": item_id}
     try:
         post_id = action()
-    except (LinkedInError, ThreadsError, YouTubeError) as e:
+    except (LinkedInError, ThreadsError, YouTubeError, WhatsAppError) as e:
         _append(log, dict(entry, status="failed", error=str(e)[:300]))
         deps.git_publish([log], f"log: {channel} failed {day}")
         print(f"{channel} failed: {e}")
@@ -175,6 +177,11 @@ def _do_youtube(day, app_cfg, item, video_path, deps, log, channels: dict, title
 def _extras(day, app_cfg, item, slides, slide_urls, deps, log, chans) -> int:
     """Post to every enabled extra channel that has not succeeded today. Returns 0 when all are fine."""
     ok = True
+    wa = chans.get("whatsapp")
+    if wa and day_status(log, day, "whatsapp") != "published" and slide_urls:
+        reel_url = slide_urls[0].rsplit("/", 1)[0] + "/reel.mp4"
+        caption = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + app_cfg["play_url"]
+        ok &= _channel(day, "whatsapp", item["id"], deps, log, lambda: deps.send_whatsapp(wa, reel_url, app_cfg["name"], caption))
     yt = chans.get("youtube", {})
     if yt and slides:
         video = Path(slides[0]).parent / "reel.mp4"
@@ -251,6 +258,9 @@ def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log
         _append(log, dict(entry, status="published", ids=ids)); deps.git_publish([log], f"log: published {day}")
         print(f"published story {st['id']}: {ids}")
         ok = True
+        wa = chans.get("whatsapp")
+        if wa and day_status(log, day, "whatsapp") != "published":
+            ok &= _channel(day, "whatsapp", st["id"], deps, log, lambda: deps.send_whatsapp(wa, url, app_cfg["name"], st["caption"] + " " + app_cfg["play_url"]))
         yt = chans.get("youtube", {})
         if yt:
             ok &= _do_youtube(day, app_cfg, st, dst, deps, log, yt, st.get("title", app_cfg["name"]), st["caption"])
@@ -287,6 +297,9 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     th_token, th_uid = env.get("THREADS_ACCESS_TOKEN"), env.get("THREADS_USER_ID")
     if th_token and th_uid:
         chans["threads"] = (th_token, th_uid)
+    if all(env.get(k) for k in ("GUPSHUP_APP_ID", "GUPSHUP_EMAIL", "GUPSHUP_ACCOUNT_SECRET", "WA_STATUS_TO", "WA_STATUS_TEMPLATE")):
+        chans["whatsapp"] = {"app_id": env["GUPSHUP_APP_ID"], "email": env["GUPSHUP_EMAIL"], "secret": env["GUPSHUP_ACCOUNT_SECRET"],
+                             "to": env["WA_STATUS_TO"], "template": env["WA_STATUS_TEMPLATE"]}
     chans["youtube"] = {ch: {"client_id": env["YT_CLIENT_ID"], "client_secret": env["YT_CLIENT_SECRET"],
                              "refresh_token": env[f"YT_{ch.upper()}_REFRESH_TOKEN"]}
                         for ch in YT_CHANNELS if env.get("YT_CLIENT_ID") and env.get("YT_CLIENT_SECRET") and env.get(f"YT_{ch.upper()}_REFRESH_TOKEN")}

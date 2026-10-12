@@ -58,6 +58,11 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_SGLEARNING_REFRESH_TOKEN: ${{ secrets.YT_SGLEARNING_REFRESH_TOKEN }}
           YT_ARTHVAN_REFRESH_TOKEN: ${{ secrets.YT_ARTHVAN_REFRESH_TOKEN }}
+          GUPSHUP_APP_ID: ${{ secrets.GUPSHUP_APP_ID }}
+          GUPSHUP_EMAIL: ${{ secrets.GUPSHUP_EMAIL }}
+          GUPSHUP_ACCOUNT_SECRET: ${{ secrets.GUPSHUP_ACCOUNT_SECRET }}
+          WA_STATUS_TO: ${{ secrets.WA_STATUS_TO }}
+          WA_STATUS_TEMPLATE: ${{ vars.WA_STATUS_TEMPLATE }}
           PAUSE: ${{ vars.PAUSE }}
           MODE: ${{ github.event.inputs.mode || 'post' }}
           RUN_DATE: ${{ github.event.inputs.date }}
