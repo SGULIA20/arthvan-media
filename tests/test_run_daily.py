@@ -376,10 +376,10 @@ def test_youtube_failure_is_isolated_and_retried(tmp_path):
 def test_whatsapp_status_video_goes_to_the_founder_after_instagram_and_retries_alone(tmp_path):
     w = World(tmp_path)
     sent = []
-    w.deps.send_whatsapp = lambda cfg, url, app, caption: sent.append((cfg["to"], url, app)) or "wamid.9"
-    env = dict(ENV, GUPSHUP_APP_ID="a", GUPSHUP_API_KEY="k", WA_STATUS_TO="+2348120000000", WA_STATUS_TEMPLATE="daily_status_video")
+    w.deps.send_whatsapp = lambda cfg, url, app, caption: sent.append((cfg["to"], url, app, cfg["api_key"])) or "wamid.9"
+    env = dict(ENV, GUPSHUP_APP_ID="a", GUPSHUP_API_KEY=" k\n", WA_STATUS_TO="+2348120000000", WA_STATUS_TEMPLATE="daily_status_video")
     assert go(w, env=env) == 0
-    assert len(sent) == 1 and sent[0][0] == "+2348120000000" and sent[0][1].endswith("/reel.mp4") and sent[0][2] == "Waypoint"
+    assert len(sent) == 1 and sent[0][0] == "+2348120000000" and sent[0][1].endswith("/reel.mp4") and sent[0][2] == "Waypoint" and sent[0][3] == "k"
     assert last_entry(tmp_path, "whatsapp")["status"] == "published"
     assert go(w, env=env) == 0 and len(sent) == 1
     assert go(w, env=dict(ENV), day=date(2026, 10, 12)) == 0 and len(sent) == 1   # not configured: skipped

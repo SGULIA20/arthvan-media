@@ -298,7 +298,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     if th_token and th_uid:
         chans["threads"] = (th_token, th_uid)
     if all(env.get(k) for k in ("GUPSHUP_APP_ID", "GUPSHUP_API_KEY", "WA_STATUS_TO", "WA_STATUS_TEMPLATE")):
-        chans["whatsapp"] = {"app_id": env["GUPSHUP_APP_ID"], "api_key": env["GUPSHUP_API_KEY"],
+        chans["whatsapp"] = {"app_id": env["GUPSHUP_APP_ID"], "api_key": env["GUPSHUP_API_KEY"].strip(),
                              "app_name": env.get("GUPSHUP_APP_NAME") or "scoremybizapp",
                              "source": env.get("GUPSHUP_SOURCE") or "2348125666665",
                              "to": env["WA_STATUS_TO"], "template": env["WA_STATUS_TEMPLATE"]}
