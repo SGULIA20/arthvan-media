@@ -45,6 +45,13 @@ def score(app: str, row: dict) -> Counter:
 
 CHARACTERS = {"scoremybiz": "Lumi (a warm, practical guide for Indian shopkeepers) and the founder character (a calm man in a suit)",
               "waypoint": "Mira (a gentle young woman) and the founder character (a casual young man)"}
+FEATURES = {
+ "scoremybiz": "Real screens only: Dashboard (today's Sold, Bought, Spent, money in hand, who owes you with one-tap reminders); "
+               "Book (daily entries); Profit & Loss (plain words); Cash reality (profit on paper vs cash in hand); "
+               "Score history (one number out of 100 for the shop's health, seven areas); Advisor (three moves for the week); Tasks.",
+ "waypoint": "Real screens only: Create (one true sentence under a new name you get each day); Daily Path (one question, the same for everyone); "
+             "Wall (tonight's sentences from others); Matching (cross paths with one person for a short conversation); Calm kit (breathe, ground, wind down); Explore.",
+}
 RULES = ("Rules: give three ideas, each in two or three lines: title, the person and their moment, which app screen we show. "
          "Use the competitors only for the IDEA behind their message; never copy their words, scenes or metaphors "
          "(for example, no doctor or check-up metaphor if a competitor used one). Plain shopkeeper words for ScoreMyBiz: "
@@ -55,7 +62,8 @@ RULES = ("Rules: give three ideas, each in two or three lines: title, the person
 def ideas_prompt(app: str, comps: dict) -> str:
     lines = [f"- {name}: {texts(row)[:400]}" for name, row in comps.items()]
     return (f"You write 45-second story ads for the app {app}, told by {CHARACTERS.get(app, 'our characters')}. "
-            f"This week's competitor listings and video titles:\n" + "\n".join(lines) + "\n\n" + RULES)
+            f"This week's competitor listings and video titles:\n" + "\n".join(lines) + "\n\n"
+            f"{FEATURES.get(app, '')} Invent no other feature or screen.\n\n" + RULES)
 
 
 def render(cur: dict, prev, gemini: bool) -> str:
