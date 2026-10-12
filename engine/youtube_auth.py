@@ -1,6 +1,6 @@
 """One-time YouTube authorisation per channel (SGLearning, Arthvan).
 
-python -m engine.youtube_auth <channel-key>        e.g. scoremybiz or waypoint
+python -m engine.youtube_auth sglearning|arthvan
 Reads YT_CLIENT_ID / YT_CLIENT_SECRET from ~/arthvan-social/.env, opens Google's consent page, catches the
 redirect on localhost:3001, stores YT_<KEY>_REFRESH_TOKEN in the same file and as a GitHub secret. Never printed.
 """
@@ -60,8 +60,8 @@ def update_env(path: Path, key: str, value: str) -> None:
 
 def main() -> int:
     key = (sys.argv[1] if len(sys.argv) > 1 else "").upper()
-    if key not in ("SCOREMYBIZ", "WAYPOINT"):
-        print("usage: python -m engine.youtube_auth scoremybiz|waypoint"); return 1
+    if key not in ("SGLEARNING", "ARTHVAN"):
+        print("usage: python -m engine.youtube_auth sglearning|arthvan"); return 1
     env_path = Path.home() / "arthvan-social" / ".env"
     env = {l.split("=", 1)[0]: l.split("=", 1)[1] for l in env_path.read_text().splitlines() if "=" in l and not l.startswith("#")}
     cid, sec = env.get("YT_CLIENT_ID"), env.get("YT_CLIENT_SECRET")

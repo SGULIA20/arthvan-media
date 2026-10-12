@@ -74,5 +74,5 @@ def test_weekly_report_includes_the_ad_radar():
 
 def test_youtube_secrets_reach_the_daily_job():
     text = (WF / "daily-post.yml").read_text()
-    for k in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_SCOREMYBIZ_REFRESH_TOKEN", "YT_WAYPOINT_REFRESH_TOKEN"):
+    for k in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_SGLEARNING_REFRESH_TOKEN", "YT_ARTHVAN_REFRESH_TOKEN"):
         assert f"secrets.{k}" in text

@@ -351,11 +351,12 @@ def test_youtube_short_is_uploaded_after_instagram_when_the_channel_is_configure
     w = World(tmp_path)
     ups = []
     w.deps.post_youtube = lambda channel, path, title, desc, play, tags: ups.append((channel["refresh_token"], str(path), title, play)) or "VID1"
-    env = dict(ENV, YT_CLIENT_ID="cid", YT_CLIENT_SECRET="sec", YT_WAYPOINT_REFRESH_TOKEN="rt-wp")
-    assert go(w, env=env) == 0                                    # waypoint day
-    assert len(ups) == 1 and ups[0][0] == "rt-wp" and ups[0][1].endswith("reel.mp4") and "arthvananalytics.waypoint" in ups[0][3]
-    assert last_entry(tmp_path, "youtube")["status"] == "published" and last_entry(tmp_path, "youtube")["id"] == "VID1"
-    assert go(w, env=env, day=date(2026, 10, 12)) == 0 and len(ups) == 1   # scoremybiz day: no channel token, skipped quietly
+    env = dict(ENV, YT_CLIENT_ID="cid", YT_CLIENT_SECRET="sec", YT_SGLEARNING_REFRESH_TOKEN="rt-sg", YT_ARTHVAN_REFRESH_TOKEN="rt-ar")
+    assert go(w, env=env) == 0                                    # waypoint day: both channels
+    assert sorted(u[0] for u in ups) == ["rt-ar", "rt-sg"] and all(u[1].endswith("reel.mp4") and "arthvananalytics.waypoint" in u[3] for u in ups)
+    assert last_entry(tmp_path, "youtube:sglearning")["status"] == "published" and last_entry(tmp_path, "youtube:arthvan")["id"] == "VID1"
+    assert go(w, env=env, day=date(2026, 10, 12)) == 0 and len(ups) == 4   # scoremybiz day: both channels again
+    assert go(w, env=dict(ENV), day=date(2026, 10, 13)) == 0 and len(ups) == 4  # no YouTube config: skipped quietly
 
 
 def test_youtube_failure_is_isolated_and_retried(tmp_path):
@@ -366,6 +367,6 @@ def test_youtube_failure_is_isolated_and_retried(tmp_path):
         if len(calls) == 1: raise YouTubeError("quota")
         return "VID2"
     w.deps.post_youtube = flaky
-    env = dict(ENV, YT_CLIENT_ID="cid", YT_CLIENT_SECRET="sec", YT_WAYPOINT_REFRESH_TOKEN="rt")
+    env = dict(ENV, YT_CLIENT_ID="cid", YT_CLIENT_SECRET="sec", YT_SGLEARNING_REFRESH_TOKEN="rt")
     assert go(w, env=env) == 1 and last_entry(tmp_path, "instagram")["status"] == "published"
     assert go(w, env=env) == 0 and len(calls) == 2 and w.count("publish") == 1

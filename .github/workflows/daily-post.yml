@@ -56,8 +56,8 @@ jobs:
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
-          YT_SCOREMYBIZ_REFRESH_TOKEN: ${{ secrets.YT_SCOREMYBIZ_REFRESH_TOKEN }}
-          YT_WAYPOINT_REFRESH_TOKEN: ${{ secrets.YT_WAYPOINT_REFRESH_TOKEN }}
+          YT_SGLEARNING_REFRESH_TOKEN: ${{ secrets.YT_SGLEARNING_REFRESH_TOKEN }}
+          YT_ARTHVAN_REFRESH_TOKEN: ${{ secrets.YT_ARTHVAN_REFRESH_TOKEN }}
           PAUSE: ${{ vars.PAUSE }}
           MODE: ${{ github.event.inputs.mode || 'post' }}
           RUN_DATE: ${{ github.event.inputs.date }}

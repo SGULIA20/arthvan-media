@@ -67,7 +67,7 @@ No Meta scraping, no paid data. Snapshots in `radar/snapshots/`, reports in `rad
 
 ## YouTube Shorts
 Every day's Reel (and every story ad) also uploads as a public Short to the channel mapped to that app:
-ScoreMyBiz → SGLearning, Waypoint → Arthvan (ex SGMythWorld). Needs secrets `YT_CLIENT_ID`, `YT_CLIENT_SECRET` and
-`YT_<APP>_REFRESH_TOKEN`, created once with `python -m engine.youtube_auth scoremybiz|waypoint` (browser consent, choose
-the channel). Title gets "#Shorts", description carries the Play link (clickable on YouTube). One quota unit per upload
+BOTH channels, SGLearning and Arthvan (ex SGMythWorld), for both apps. Needs secrets `YT_CLIENT_ID`, `YT_CLIENT_SECRET`,
+`YT_SGLEARNING_REFRESH_TOKEN` and `YT_ARTHVAN_REFRESH_TOKEN`, created once with `python -m engine.youtube_auth sglearning|arthvan`
+(browser consent, choose that channel). Title gets "#Shorts", description carries the Play link (clickable on YouTube). One quota unit per upload
 of the 10,000 daily allowance. A YouTube failure never affects the other channels; a re-run retries YouTube only.
