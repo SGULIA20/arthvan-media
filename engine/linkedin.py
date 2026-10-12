@@ -3,6 +3,7 @@ import json
 import os
 import re
 import ssl
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -93,3 +94,50 @@ def post_set(token: str, person_urn: str, text: str, tags: list, slide_paths: li
     body = commentary(text, tags)
     urns = [upload_image(token, person_urn, p) for p in slide_paths]
     return create_multi_image_post(token, person_urn, body, urns, alts)
+
+
+PART = 4194304  # LinkedIn splits uploads into 4 MiB parts
+
+
+def upload_video(token: str, owner_urn: str, path, sleep=time.sleep, max_polls: int = 60) -> str:
+    """Multipart video upload (3 s to 30 min, MP4, under 500 MB). Returns the video URN once AVAILABLE."""
+    data = Path(path).read_bytes()
+    _, _, body = call("POST", f"{API}/rest/videos?action=initializeUpload", token,
+                      json_body={"initializeUploadRequest": {"owner": owner_urn, "fileSizeBytes": len(data),
+                                                             "uploadCaptions": False, "uploadThumbnail": False}})
+    v = body["value"]
+    etags = []
+    for part in v["uploadInstructions"]:
+        chunk = data[part["firstByte"]: part["lastByte"] + 1]
+        status, headers, _ = call("PUT", part["uploadUrl"], token, data=chunk, headers={"Content-Type": "application/octet-stream"})
+        if status not in (200, 201) or "etag" not in headers:
+            raise LinkedInError(f"video part upload returned {status} without an etag")
+        etags.append(headers["etag"])
+    call("POST", f"{API}/rest/videos?action=finalizeUpload", token,
+         json_body={"finalizeUploadRequest": {"video": v["video"], "uploadToken": v.get("uploadToken", ""), "uploadedPartIds": etags}})
+    for _ in range(max_polls):
+        _, _, info = call("GET", f"{API}/rest/videos/{urllib.parse.quote(v['video'], safe='')}", token)
+        if info.get("status") == "AVAILABLE":
+            return v["video"]
+        if info.get("status") == "PROCESSING_FAILED":
+            raise LinkedInError(f"video processing failed: {info.get('processingFailureReason')}")
+        sleep(5)
+    raise LinkedInError("video never became available")
+
+
+def create_video_post(token: str, author_urn: str, text: str, video_urn: str, title: str) -> str:
+    body = {
+        "author": author_urn, "commentary": text, "visibility": "PUBLIC",
+        "distribution": {"feedDistribution": "MAIN_FEED", "targetEntities": [], "thirdPartyDistributionChannels": []},
+        "lifecycleState": "PUBLISHED", "isReshareDisabledByAuthor": False,
+        "content": {"media": {"id": video_urn, "title": title}},
+    }
+    status, headers, _ = call("POST", f"{API}/rest/posts", token, json_body=body)
+    if status != 201 or "x-restli-id" not in headers:
+        raise LinkedInError(f"video post creation returned {status} without an id")
+    return headers["x-restli-id"]
+
+
+def post_video(token: str, person_urn: str, text: str, tags: list, video_path, title: str) -> str:
+    body = commentary(text, tags)
+    return create_video_post(token, person_urn, body, upload_video(token, person_urn, video_path), title)

@@ -1,0 +1,66 @@
+{
+ "id": "mira-window-en",
+ "app": "waypoint",
+ "lang": "en",
+ "voice": "Tara",
+ "rate": 165,
+ "character": "mira",
+ "title": "Say it once.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "pose": "head_neutral",
+   "title": "Say it once.",
+   "vo": "Hi, I'm Mira. This is Arjun's story. All day, he is fine. At night, in Mumbai, he isn't.",
+   "sub": "Hi, I'm Mira. This is Arjun's story. All day, he is fine. At night, in Mumbai, he isn't.",
+   "min": 6
+  },
+  {
+   "layout": "scene",
+   "pose": "listening",
+   "card": "11:48 PM",
+   "vo": "There is one thing he has not said out loud, to anyone.",
+   "sub": "There is one thing he has not said out loud, to anyone.",
+   "min": 5
+  },
+  {
+   "layout": "present",
+   "pose": "phone_night",
+   "screen": "s4.png",
+   "vo": "On Waypoint he gets a new name today. He types the sentence. His thumb hovers. He posts it.",
+   "sub": "On Waypoint he gets a new name today. He types the sentence. His thumb hovers. He posts it.",
+   "min": 7
+  },
+  {
+   "layout": "present",
+   "pose": "curious",
+   "screen": "s3.png",
+   "vo": "Then the Daily Path. One question, the same for everyone. He answers, and sees how hundreds of others answered yesterday.",
+   "sub": "Then the Daily Path. One question, the same for everyone. He answers, and sees how hundreds of others answered yesterday.",
+   "min": 8
+  },
+  {
+   "layout": "present",
+   "pose": "relieved",
+   "screen": "s2.png",
+   "vo": "Turns out it's not just him. Ten minutes. Then he closes the phone, and breathes.",
+   "sub": "Turns out it's not just him. Ten minutes. Then he closes the phone, and breathes.",
+   "min": 7
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "I'm Mira, from Waypoint. Say it once. Free on Google Play.",
+   "sub": "I'm Mira, from Waypoint. Say it once. Free on Google Play.",
+   "min": 5
+  }
+ ],
+ "post_on": "2026-10-13",
+ "caption": "All day he is fine. At night he isn't. Mira tells Arjun's story.",
+ "linkedin_text": "A small design note from Waypoint, told by Mira, our new guide.\n\nMost apps ask \"what's on your mind?\" and get silence. Waypoint asks one specific question a day, the same for everyone, and shows how others answered yesterday. Specific beats open-ended. This short story shows the real app.",
+ "hashtags": [
+  "#Mira",
+  "#DailyPath",
+  "#Waypoint"
+ ]
+}

@@ -25,7 +25,8 @@ class World:
             render_set=self.render_set, verify_set=lambda rs: [], git_publish=self.git_publish,
             wait_for_urls=self.wait_for_urls, prepare_set=self.prepare_set, publish_set=self.publish_set,
             sync_repo=lambda: None, head_sha=lambda: "deadbeef", post_linkedin=self.post_linkedin,
-            post_threads=self.post_threads)
+            post_threads=self.post_threads, prepare_video_set=self.prepare_video_set,
+            post_linkedin_video=lambda *a: "urn:li:ugcPost:0")
 
     def render_set(self, sel, app_cfg, out_dir, fps=30):
         self.rendered_ids.append(sel.item["id"])
@@ -46,6 +47,11 @@ class World:
         if self.fail_wait:
             raise TimeoutError("urls not live")
         self.events.append(("wait", len(expected)))
+
+    def prepare_video_set(self, ig_id, token, url, caption, **kw):
+        self.prepared_video = url
+        self.events.append(("prepare", url.split("/")[-2]))
+        return Prepared(None, "b", "c")
 
     def prepare_set(self, ig_id, token, urls, captions, **kw):
         self.last_urls = urls
@@ -306,3 +312,22 @@ def test_threads_and_linkedin_both_retry_when_both_failed_on_a_tuesday(tmp_path)
     assert go(w, env=env, day=TUE) == 1
     assert go(w, env=env, day=TUE) == 0
     assert len(w.th_calls) == 2 and len(w.li_calls) == 2 and w.count("publish") == 1
+
+
+def test_a_scheduled_story_replaces_the_bank_item_and_posts_reel_story_and_linkedin_video(tmp_path):
+    w = World(tmp_path)
+    (tmp_path / "stories" / "out").mkdir(parents=True)
+    (tmp_path / "stories" / "out" / "lumi-friday-hi.mp4").write_bytes(b"v" * 30)
+    (tmp_path / "stories" / "lumi_friday_hi.json").write_text(json.dumps({
+        "id": "lumi-friday-hi", "app": "scoremybiz", "lang": "hi-IN", "post_on": "2026-10-12", "character": "lumi",
+        "caption": "Meena's Friday, told by Lumi.", "hashtags": ["#Lumi"], "linkedin_text": "Meena's Friday.", "title": "शुक्रवार"}))
+    w.li_videos = []
+    w.deps.post_linkedin_video = lambda token, urn, text, tags, path, title: w.li_videos.append((text, str(path), title)) or "urn:li:ugcPost:5"
+    env = dict(ENV, LINKEDIN_ACCESS_TOKEN="litok", LINKEDIN_PERSON_URN="urn:li:person:me")
+    assert go(w, env=env, day=date(2026, 10, 12)) == 0
+    assert w.rendered_ids == []                                 # no bank item rendered
+    assert w.count("publish") == 1 and w.prepared_video == "https://raw.githubusercontent.com/o/r/deadbeef/out/2026-10-12/story.mp4"
+    assert len(w.li_videos) == 1 and "play.google.com" in w.li_videos[0][0] and w.li_videos[0][2] == "शुक्रवार"
+    assert last_entry(tmp_path, "instagram")["item"] == "lumi-friday-hi" and last_entry(tmp_path, "linkedin")["status"] == "published"
+    assert w.th_calls == []                                     # Threads needs images; skipped on story days
+    assert go(w, env=env, day=date(2026, 10, 12)) == 0 and w.count("publish") == 1

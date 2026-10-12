@@ -126,3 +126,14 @@ def build_threads_text(app_cfg: dict, item: dict) -> str:
         keep = 500 - len(text) + len(item["caption"]) - 1
         text = "\n\n".join([item["caption"][:keep].rstrip() + "…"] + parts[1:-1])
     return text
+
+
+def story_captions(app_cfg: dict, story: dict) -> tuple:
+    """(instagram caption, linkedin text, tags) for a story ad. Links written out; Instagram adds 'Link in bio'."""
+    tags = list(dict.fromkeys(story.get("hashtags", []) + app_cfg["base_hashtags"]))[:MAX_TAGS]
+    footer = "\n".join(line.format(play_url=app_cfg["play_url"]) for line in app_cfg["footer"])
+    li_footer = "\n".join(line.format(play_url=app_cfg["play_url"]) for line in app_cfg["linkedin_footer"])
+    disc = app_cfg.get("money_disclaimer")
+    ig = "\n\n".join([story["caption"], footer] + ([disc] if disc else []) + [" ".join(tags)])
+    li = "\n\n".join([story.get("linkedin_text", story["caption"]), li_footer] + ([disc] if disc else []))
+    return ig, li, tags

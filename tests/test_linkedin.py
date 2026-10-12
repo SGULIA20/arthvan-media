@@ -94,3 +94,39 @@ def test_requests_carry_the_version_and_protocol_headers(monkeypatch):
     linkedin.call("POST", "https://api.linkedin.com/rest/posts", TOKEN, json_body={"a": 1})
     assert seen["linkedin-version"] == linkedin.VERSION and seen["x-restli-protocol-version"] == "2.0.0"
     assert seen["authorization"] == "Bearer " + TOKEN and seen["content-type"] == "application/json"
+
+
+def test_video_upload_initialises_puts_parts_in_order_finalises_with_etags_and_waits(tmp_path, monkeypatch):
+    from engine.linkedin import upload_video
+    vid = tmp_path / "v.mp4"; vid.write_bytes(b"A" * 5000000)   # two parts at 4 MiB
+    calls = []
+    def fake(method, url, token, *, json_body=None, data=None, headers=None):
+        calls.append((method, url, json_body, len(data) if data else 0))
+        if url.endswith("/rest/videos?action=initializeUpload"):
+            assert json_body["initializeUploadRequest"]["owner"] == PERSON and json_body["initializeUploadRequest"]["fileSizeBytes"] == 5000000
+            return 200, {}, {"value": {"video": "urn:li:video:V1", "uploadToken": "tok",
+                   "uploadInstructions": [{"uploadUrl": "https://u/1", "firstByte": 0, "lastByte": 4194303},
+                                          {"uploadUrl": "https://u/2", "firstByte": 4194304, "lastByte": 4999999}]}}
+        if method == "PUT":
+            return 200, {"etag": "e-" + url[-1]}, {}
+        if url.endswith("/rest/videos?action=finalizeUpload"):
+            assert json_body["finalizeUploadRequest"] == {"video": "urn:li:video:V1", "uploadToken": "tok", "uploadedPartIds": ["e-1", "e-2"]}
+            return 200, {}, {}
+        if "/rest/videos/" in url:
+            return 200, {}, {"status": "AVAILABLE"}
+        raise AssertionError(url)
+    monkeypatch.setattr(linkedin, "call", fake)
+    assert upload_video(TOKEN, PERSON, vid, sleep=lambda s: None) == "urn:li:video:V1"
+    puts = [c for c in calls if c[0] == "PUT"]
+    assert [c[3] for c in puts] == [4194304, 805696]
+
+
+def test_video_post_body(monkeypatch):
+    from engine.linkedin import create_video_post
+    seen = {}
+    def fake(method, url, token, *, json_body=None, data=None, headers=None):
+        seen.update(body=json_body); return 201, {"x-restli-id": "urn:li:ugcPost:77"}, {}
+    monkeypatch.setattr(linkedin, "call", fake)
+    assert create_video_post(TOKEN, PERSON, "text", "urn:li:video:V1", "Friday") == "urn:li:ugcPost:77"
+    assert seen["body"]["content"]["media"] == {"id": "urn:li:video:V1", "title": "Friday"}
+    assert seen["body"]["author"] == PERSON and seen["body"]["lifecycleState"] == "PUBLISHED"

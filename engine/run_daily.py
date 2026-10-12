@@ -18,7 +18,7 @@ from typing import Callable
 from . import instagram, linkedin, render, threads
 from .config import ROOT, load_apps, load_bank, load_global
 from .instagram import Captions, InstagramError, PartialPublish, SetUrls
-from .lint import alt_texts, build_captions, build_linkedin_text, build_threads_text, lint_item
+from .lint import alt_texts, build_captions, build_linkedin_text, build_threads_text, lint_item, story_captions
 from .linkedin import LinkedInError
 from .threads import ThreadsError
 from .select_item import lagos_date, pick
@@ -83,6 +83,8 @@ class Deps:
     head_sha: Callable = head_sha
     post_linkedin: Callable = linkedin.post_set
     post_threads: Callable = threads.post_carousel
+    prepare_video_set: Callable = instagram.prepare_video_set
+    post_linkedin_video: Callable = linkedin.post_video
 
 
 # ---------- helpers ----------
@@ -179,6 +181,56 @@ def _extras_retry(day, root, log, apps, banks, deps, chans, env) -> int:
     return _extras(day, apps[rows[-1]["app"]], item, slides, [f"{base}/{p.name}" for p in slides], deps, log, chans)
 
 
+def scheduled_story(root: Path, day: date):
+    """A story JSON with post_on == day and a rendered MP4 beside it in stories/out/."""
+    for p in sorted((root / "stories").glob("*.json")):
+        try:
+            st = json.loads(p.read_text())
+        except ValueError:
+            continue
+        if st.get("post_on") == day.isoformat() and (root / "stories" / "out" / f"{st['id']}.mp4").exists():
+            return st
+    return None
+
+
+def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log: Path, chans: dict, token: str, ig_id: str, mode: str) -> int:
+    app_cfg = apps[st["app"]]
+    src = root / "stories" / "out" / f"{st['id']}.mp4"
+    out_dir = root / "out" / day.isoformat(); out_dir.mkdir(parents=True, exist_ok=True)
+    dst = out_dir / "story.mp4"; shutil.copy(src, dst)
+    print(f"story day: {st['id']} ({st['app']})")
+    if mode == "render":
+        return 0
+    try:
+        prune_old(root / "out", day)
+        deps.git_publish([root / "out"], f"story media for {day}")
+        repo = env.get("GITHUB_REPOSITORY", DEFAULT_REPO)
+        url = f"https://raw.githubusercontent.com/{repo}/{deps.head_sha()}/out/{day.isoformat()}/story.mp4"
+        deps.wait_for_urls({url: dst.stat().st_size})
+        ig_caption, li_text, tags = story_captions(app_cfg, st)
+        prepared = deps.prepare_video_set(ig_id, token, url, ig_caption)
+        if mode == "prepare":
+            return 0
+        entry = {"date": day.isoformat(), "app": st["app"], "item": st["id"], "status": "publishing", "kind": "story",
+                 "sha": deps.head_sha(), "at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+        _append(log, entry); deps.git_publish([log], f"log: publishing {day}")
+        try:
+            ids = deps.publish_set(ig_id, token, prepared)
+        except PartialPublish as e:
+            _append(log, dict(entry, status="partial", ids=e.ids)); deps.git_publish([log], f"log: partial publish {day}")
+            print(f"run failed: {e}"); return 1
+        _append(log, dict(entry, status="published", ids=ids)); deps.git_publish([log], f"log: published {day}")
+        print(f"published story {st['id']}: {ids}")
+        ok = True
+        if chans.get("linkedin_any") and day_status(log, day, "linkedin") != "published":
+            tok, urn = chans["linkedin_any"]
+            ok &= _channel(day, "linkedin", st["id"], deps, log,
+                           lambda: deps.post_linkedin_video(tok, urn, li_text, tags, dst, st.get("title", app_cfg["name"])))
+        return 0 if ok else 1
+    except (TimeoutError, InstagramError, subprocess.CalledProcessError) as e:
+        print(f"run failed: {type(e).__name__}: {e}"); return 1
+
+
 # ---------- the run ----------
 def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None, banks=None, apps=None) -> int:
     env = os.environ if env is None else env
@@ -198,6 +250,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     # LinkedIn gets one post a week, on the day set in content/apps.json (Tuesday)
     if li_token and li_urn and day.weekday() == load_global().get("linkedin_weekday", 1):
         chans["linkedin"] = (li_token, li_urn)
+    if li_token and li_urn:
+        chans["linkedin_any"] = (li_token, li_urn)   # story ads go to LinkedIn whatever the weekday
     th_token, th_uid = env.get("THREADS_ACCESS_TOKEN"), env.get("THREADS_USER_ID")
     if th_token and th_uid:
         chans["threads"] = (th_token, th_uid)
@@ -205,7 +259,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         deps.sync_repo()
         status = day_status(log, day)
         if status == "published":
-            missing = [c for c in chans if day_status(log, day, c) != "published"]
+            missing = [c for c in chans if c != "linkedin_any" and day_status(log, day, c) != "published"]
             if missing:
                 return _extras_retry(day, root, log, apps, banks, deps, chans, env)
             print(f"{day} already posted: nothing to do")
@@ -214,6 +268,13 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
             print(f"{day}: an earlier run stopped at '{status}'. Check Instagram by hand; nothing was posted again.")
             return 1
 
+    story = scheduled_story(root, day)
+    if story is not None:
+        if mode == "post" and day_status(log, day) is not None:
+            missing = [c for c in chans if c != "linkedin_any" and day_status(log, day, c) != "published"]
+            print(f"{day} story already posted")
+            return 0
+        return _run_story(story, day, root, env, deps, apps, log, chans, token, ig_id, mode)
     sel = None
     for skip in range(MAX_FALLBACKS):
         cand = pick(day, banks, skip=skip)

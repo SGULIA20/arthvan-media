@@ -26,7 +26,7 @@ for(const k in D.palette) document.documentElement.style.setProperty('--'+k,D.pa
 const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)); const eo=x=>1-Math.pow(1-clamp(x),3);
 const S=D.scenes; let T=0; S.forEach(s=>{s.start=T; T+=s.dur;}); window.TOTAL=T;
 // mouth: open while the voice is loud (D.vo_env = per-frame loudness 0..1 for the whole timeline at 30 fps)
-function mouthOpen(t){ const i=Math.floor(t*30); const e=(D.vo_env[i]||0); return e>0.25 ? (Math.floor(t*12)%2 ? 'talk_b':'talk_a') : null; }
+function mouthOpen(t){ const i=Math.floor(t*30); const e=(D.vo_env[i]||0); return e>0.25 ? (Math.floor(t*12)%2 ? 'head_talk_b':'head_talk_a') : null; }
 function charImg(pose){ return D.char_base+'/'+C+'_'+pose+'.png'; }
 function fullBody(pose,x,w,t,bob){ const dy=Math.sin(t*2.1)*bob; return `<div class="char" style="left:${x}px;width:${w}px;height:${w*1.0}px;transform:translateY(${dy}px)"><img src="${charImg(pose)}"></div>`; }
 function headShot(base,x,y,w,t){ const m=mouthOpen(t); const pose=m||base; const dy=Math.sin(t*1.7)*6, rot=Math.sin(t*0.9)*1.2; return `<div class="head" style="left:${x}px;top:${y}px;width:${w}px;height:${w}px;transform:translateY(${dy}px) rotate(${rot}deg)"><img src="${charImg(pose)}"></div>`; }

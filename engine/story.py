@@ -76,7 +76,8 @@ def build(story_path: Path, out_dir: Path) -> Path:
             b.close()
         # 3. music underneath the voice (ducked)
         music = synth(story["app"], 7, total) * 0.28
-        mix = np.clip(vo + music, -0.98, 0.98)
+        n = min(len(vo), len(music))
+        mix = np.clip(vo[:n] + music[:n], -0.98, 0.98)
         audio = tmp / "mix.m4a"; write_m4a(mix, audio)
         out = out_dir / f"{story['id']}.mp4"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "f%04d.jpg"), "-i", str(audio),

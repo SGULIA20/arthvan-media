@@ -97,9 +97,23 @@ def prepare_set(ig_id: str, token: str, urls: SetUrls, captions: Captions, thumb
     return Prepared(post=post, reel=reel, story=story)
 
 
+def prepare_video_set(ig_id: str, token: str, video_url: str, caption: str, thumb_offset_ms: int = 2000,
+                      sleep=time.sleep, max_polls: int = 90, poll_s: float = 4) -> Prepared:
+    """A story ad: Reel + Story from one MP4, no carousel."""
+    path = f"/{ig_id}/media"
+    reel = call("POST", path, token, {"media_type": "REELS", "video_url": video_url, "caption": caption,
+                                      "share_to_feed": "true", "thumb_offset": str(thumb_offset_ms)})["id"]
+    story = call("POST", path, token, {"media_type": "STORIES", "video_url": video_url})["id"]
+    for label, cid in (("reel", reel), ("story", story)):
+        _wait(cid, token, label, sleep, max_polls, poll_s)
+    return Prepared(post=None, reel=reel, story=story)
+
+
 def publish_set(ig_id: str, token: str, prepared: Prepared) -> dict:
     ids = {}
     for label in ("post", "reel", "story"):
+        if getattr(prepared, label) is None:
+            continue
         try:
             out = call("POST", f"/{ig_id}/media_publish", token, {"creation_id": getattr(prepared, label)})
         except InstagramError as e:

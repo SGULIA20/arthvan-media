@@ -111,3 +111,15 @@ def test_publish_failure_reports_what_was_already_published(monkeypatch):
     with pytest.raises(PartialPublish) as e:
         publish_set("17841", TOKEN, prepared)
     assert e.value.ids == {"post": "m-c4"}
+
+
+def test_prepare_video_set_makes_reel_and_story_only_and_publish_skips_the_missing_post(monkeypatch):
+    from engine.instagram import prepare_video_set
+    fake = Fake()
+    monkeypatch.setattr(instagram, "call", fake)
+    prepared = prepare_video_set("17841", TOKEN, "https://x/story.mp4", "reel caption", sleep=lambda s: None)
+    media = [c[2] for c in fake.posts("/media")]
+    assert media[0]["media_type"] == "REELS" and media[0]["video_url"] == "https://x/story.mp4" and media[0]["caption"] == "reel caption"
+    assert media[1]["media_type"] == "STORIES" and prepared.post is None
+    ids = publish_set("17841", TOKEN, prepared)
+    assert list(ids) == ["reel", "story"]
