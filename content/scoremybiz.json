@@ -867,5 +867,243 @@
     "sample": true
    }
   ]
+ },
+ {
+  "id": "smb-balance-sheet",
+  "template": "ink",
+  "feature": "balance-sheet",
+  "caption": "What you own, what you owe, what is left. ScoreMyBiz draws it from your own book.",
+  "hashtags": [
+   "#BalanceSheet",
+   "#SmallBusiness"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "What you own. What you owe. What is left."
+   },
+   {
+    "kind": "steps",
+    "text": "Three lines, from your own entries",
+    "items": [
+     "Stock and cash you hold",
+     "Money customers owe you",
+     "Bills you still have to pay"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "No accountant words. Just the three lines."
+   },
+   {
+    "kind": "stat",
+    "value": "₹1,20,000",
+    "text": "left after everything, in this sample shop.",
+    "sample": true
+   }
+  ]
+ },
+ {
+  "id": "smb-recurring",
+  "template": "dusk",
+  "feature": "recurring",
+  "caption": "Rent, salaries, the same bills every month. Set them once; ScoreMyBiz enters them for you.",
+  "hashtags": [
+   "#Recurring",
+   "#ShopOwner"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "The same bills, every month."
+   },
+   {
+    "kind": "steps",
+    "text": "Set once, entered every month",
+    "items": [
+     "Shop rent",
+     "Staff salary",
+     "Electricity and phone"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "One less thing to remember on the first of the month."
+   },
+   {
+    "kind": "stat",
+    "value": "Once",
+    "text": "is how many times you type a monthly bill."
+   }
+  ]
+ },
+ {
+  "id": "smb-tasks",
+  "template": "dusk",
+  "feature": "tasks",
+  "caption": "Three moves for the week, chosen from your own numbers. Tick them off as you go.",
+  "hashtags": [
+   "#WeeklyTasks",
+   "#ShopOwner"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Three moves for the week."
+   },
+   {
+    "kind": "steps",
+    "text": "Picked from your own numbers",
+    "items": [
+     "Call the two biggest overdue customers",
+     "Hold new stock until Friday",
+     "Check Saturday's cash before buying"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Small moves, every week, add up."
+   },
+   {
+    "kind": "stat",
+    "value": "3",
+    "text": "moves a week. Not thirty."
+   }
+  ]
+ },
+ {
+  "id": "smb-bills-to-pay",
+  "template": "ink",
+  "feature": "bills-to-pay",
+  "caption": "Who do you have to pay this week? The supplier list, with due dates, in one place.",
+  "hashtags": [
+   "#Suppliers",
+   "#CashPlanning"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Who do you have to pay this week?"
+   },
+   {
+    "kind": "steps",
+    "text": "Your supplier list",
+    "items": [
+     "Each bill with its due date",
+     "Paid and unpaid, clearly marked",
+     "Total due before you buy more"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Pay on time, and the supplier gives you time."
+   }
+  ]
+ },
+ {
+  "id": "smb-nine-countries",
+  "template": "dusk",
+  "feature": "countries",
+  "caption": "Built for shops in India, Nigeria, Kenya, Ghana, the UAE, the UK, the US, Australia and New Zealand.",
+  "hashtags": [
+   "#SmallBusiness",
+   "#ScoreMyBiz"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "A shop is a shop, in any country."
+   },
+   {
+    "kind": "steps",
+    "text": "Your currency, your words",
+    "items": [
+     "Rupees, naira, shillings, cedis, dirhams",
+     "Pounds, dollars, in your own format",
+     "The same score, out of 100, everywhere"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Lagos to Lucknow, the drawer works the same way."
+   }
+  ]
+ },
+ {
+  "id": "smb-streak",
+  "template": "spark",
+  "feature": "streak",
+  "caption": "Enter today's numbers and keep the streak alive. Shops that enter daily see the score move.",
+  "hashtags": [
+   "#DailyHabit",
+   "#ShopOwner"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Keep the streak alive."
+   },
+   {
+    "kind": "stat",
+    "value": "Day 12",
+    "text": "of entering the day's numbers, in this example.",
+    "sample": true
+   },
+   {
+    "kind": "quote",
+    "text": "Two minutes a day beats two hours at month end."
+   },
+   {
+    "kind": "steps",
+    "text": "The evening habit",
+    "items": [
+     "Close the shop",
+     "Say or type the day's numbers",
+     "See the score move"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "smb-profit-loss",
+  "template": "ink",
+  "feature": "profit-loss",
+  "caption": "Profit and loss in plain words: what came in, what went out, what stayed.",
+  "hashtags": [
+   "#ProfitAndLoss",
+   "#SmallBusiness"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Profit and loss, in plain words."
+   },
+   {
+    "kind": "bars",
+    "text": "This month, in the sample shop",
+    "rows": [
+     {
+      "label": "Came in",
+      "value": 100,
+      "display": "₹1,50,000"
+     },
+     {
+      "label": "Went out",
+      "value": 80,
+      "display": "₹1,20,000"
+     },
+     {
+      "label": "Stayed",
+      "value": 20,
+      "display": "₹30,000"
+     }
+    ],
+    "sample": true
+   },
+   {
+    "kind": "quote",
+    "text": "If you can read a bill, you can read this."
+   }
+  ]
  }
 ]

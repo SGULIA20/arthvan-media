@@ -708,5 +708,121 @@
     "text": "For the nights you do not want to talk."
    }
   ]
+ },
+ {
+  "id": "wp-explore",
+  "template": "ink",
+  "feature": "explore",
+  "caption": "Explore shows you what people are saying tonight, by theme. Read first, post when you are ready.",
+  "hashtags": [
+   "#Explore",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "See what tonight sounds like."
+   },
+   {
+    "kind": "steps",
+    "text": "Explore",
+    "items": [
+     "Pick a theme",
+     "Read tonight's sentences",
+     "Post yours when you are ready"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "You are not the only one awake."
+   }
+  ]
+ },
+ {
+  "id": "wp-my-waypoints",
+  "template": "dusk",
+  "feature": "my-waypoints",
+  "caption": "Every sentence you have said, in one place. My Waypoints is your own quiet record.",
+  "hashtags": [
+   "#MyWaypoints",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Every sentence you said. In one place."
+   },
+   {
+    "kind": "quote",
+    "text": "Read last month's you. See how far you came."
+   },
+   {
+    "kind": "steps",
+    "text": "My Waypoints",
+    "items": [
+     "Your sentences, by day",
+     "The replies you got",
+     "Delete any of it, any time"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "wp-invite",
+  "template": "spark",
+  "feature": "invite",
+  "caption": "Know someone who needs a place to say it once? Send them Waypoint from inside the app.",
+  "hashtags": [
+   "#Invite",
+   "#Waypoint"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "Know someone who needs this?"
+   },
+   {
+    "kind": "steps",
+    "text": "Invite",
+    "items": [
+     "Open the menu",
+     "Tap Invite",
+     "Share the link, no names needed"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "Pass it on quietly."
+   }
+  ]
+ },
+ {
+  "id": "wp-reply",
+  "template": "ink",
+  "feature": "reply",
+  "caption": "When someone replies to your sentence, it is one person, one reply, and you choose whether to answer.",
+  "hashtags": [
+   "#Waypoint",
+   "#SayItOnce"
+  ],
+  "slides": [
+   {
+    "kind": "hook",
+    "text": "One reply. One person."
+   },
+   {
+    "kind": "steps",
+    "text": "How a reply works",
+    "items": [
+     "Someone reads your sentence",
+     "They send one reply",
+     "You answer, or you let it rest"
+    ]
+   },
+   {
+    "kind": "quote",
+    "text": "No crowd. No thread. Just one reply."
+   }
+  ]
  }
 ]
