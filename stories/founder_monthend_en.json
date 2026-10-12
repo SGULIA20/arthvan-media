@@ -25,7 +25,7 @@
   },
   {
    "layout": "scene",
-   "pose": "front_standing",
+   "pose": "worried",
    "card": "Where did it go?",
    "vo": "Sales were good. The shelf was full. The drawer was not.",
    "sub": "Sales were good. The shelf was full. The drawer was not.",
@@ -33,7 +33,7 @@
   },
   {
    "layout": "present",
-   "pose": "front_standing",
+   "pose": "phone",
    "screen": "profit-loss.png",
    "vo": "ScoreMyBiz reads his own book and shows it plainly. Sold. Bought. Spent. What is left.",
    "sub": "ScoreMyBiz reads his own book and shows it plainly. Sold. Bought. Spent. What is left.",
@@ -50,7 +50,7 @@
   },
   {
    "layout": "present",
-   "pose": "front_standing",
+   "pose": "explaining_right",
    "screen": "score-history.png",
    "vo": "One number out of a hundred for the shop's health, and three moves for the week. He does them. Next month end, the drawer agrees with the shelf.",
    "sub": "One number out of 100 for the shop's health, and three moves for the week. He does them. Next month end, the drawer agrees with the shelf.",
