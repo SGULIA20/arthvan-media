@@ -83,7 +83,8 @@ def build(story_path: Path, out_dir: Path) -> Path:
         clips = {}
         for i, s in enumerate(story["scenes"]):
             if s.get("clip"):
-                mp4 = broll.clip(s["clip"]); d = tmp / f"clip{i}"
+                refs = [broll.reference_picture(c) for c in s.get("refs", [])]
+                mp4 = broll.clip(s["clip"], references=refs or None); d = tmp / f"clip{i}"
                 clips[str(i)] = {"dir": d.as_uri(), "n": broll.frames(mp4, d, FPS)}
         deck["clips"] = clips
         frames = tmp / "frames"; frames.mkdir()

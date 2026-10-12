@@ -52,3 +52,14 @@ def test_frames_cover_crop_to_the_story_canvas(tmp_path):
     import cv2
     im = cv2.imread(str(tmp_path / "fr" / "f0001.jpg"))
     assert im.shape[:2] == (1920, 1080)
+
+
+def test_reference_pictures_change_the_key_and_reach_the_generator(tmp_path):
+    ref = tmp_path / "mira.jpg"; ref.write_bytes(b"\xff\xd8mira")
+    calls = []
+    def gen(prompt, seconds, token, references=None): calls.append(references); return b"mp4"
+    a = clip("mira at a window", cache=tmp_path / "c", ledger_path=tmp_path / "l.json", generate=gen, token="T", today=date(2026, 10, 13), library=tmp_path / "lib")
+    b = clip("mira at a window", references=[ref], cache=tmp_path / "c", ledger_path=tmp_path / "l.json", generate=gen, token="T", today=date(2026, 10, 13), library=tmp_path / "lib")
+    assert a != b and calls == [None, [ref]]
+    idx = (tmp_path / "lib" / "index.md").read_text()
+    assert "mira-at-a-window" in idx and "refs: mira.jpg" in idx and len(list((tmp_path / "lib").glob("*.mp4"))) == 2

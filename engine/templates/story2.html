@@ -51,6 +51,7 @@ window.render=function(t){
     const c=(D.clips||{})[String(S.indexOf(s))]; if(c){ const k=Math.min(c.n, Math.max(1, Math.floor(local*30)+1));
       h+=`<div class="abs" style="inset:0;overflow:hidden"><img src="${c.dir}/f${String(k).padStart(4,'0')}.jpg" style="width:100%;height:100%;object-fit:cover;transform:scale(${(1+local*0.01).toFixed(4)})"></div>`; }
     if(s.card) h+=`<div class="abs" style="left:70px;right:70px;top:260px;text-align:center;font-weight:800;font-size:72px;line-height:1.1;text-shadow:0 4px 24px rgba(0,0,0,.6);opacity:${eo((local-.3)/.5)}">${s.card}</div>`;
+    if(s.screen) h+=`<div class="abs" style="inset:0;background:rgba(10,12,30,.35)"></div>`+screen(s,local,300,300);
     if(s.pose) h+=fullBody(s.pose,-200,760,local,4,s.who);
   } else if(s.layout==='duo_end'){   // main character left, founder right, end card centred above
     h+=endHTML(local,true)+`<div style="position:absolute;left:-360px;bottom:-90px;width:1150px;height:1150px"><img src="${charImg(s.pose||'front_happy')}" style="width:100%;height:100%;object-fit:contain;object-position:bottom"></div>`

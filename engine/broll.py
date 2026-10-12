@@ -3,6 +3,7 @@ monthly cap on generated seconds enforced here, in code, on top of the Cloud bud
 Auth is the founder's gcloud sign-in on this Mac; rendering never happens in CI."""
 import base64
 import hashlib
+import re
 import json
 import os
 import shutil
@@ -21,6 +22,7 @@ LOCATION = "us-central1"
 MODEL = "veo-3.1-fast-generate-001"
 BROLL_DIR = ROOT / "stories" / "broll"
 LEDGER = BROLL_DIR / "ledger.json"
+LIBRARY = Path.home() / "arthvan-social" / "shots"          # readable copies: <slug>.mp4 + index.md with the prompts
 # Founder's rule (12 Oct 2026): spend the Google Cloud trial credit on video, all of it, before it expires on
 # 10 Dec 2026; then STOP and tell him. Never a paid run. The ledger below is the code-side stop; Cloud budget alerts
 # are the second line of defence. INR_PER_SECOND is the Veo 3.1 Fast (720p, no audio) list price in rupees; adjust
@@ -66,10 +68,15 @@ def _call(method, url, token, body=None):
         return e.code, {"error": e.read()[:300].decode(errors="replace")}
 
 
-def _generate(prompt: str, seconds: int, token: str, model: str = MODEL) -> bytes:
+def _generate(prompt: str, seconds: int, token: str, model: str = MODEL, references: list = None) -> bytes:
     base = f"https://{LOCATION}-aiplatform.googleapis.com/v1/projects/{PROJECT}/locations/{LOCATION}/publishers/google/models/{model}"
+    inst = {"prompt": prompt}
+    if references:
+        inst["referenceImages"] = [{"image": {"bytesBase64Encoded": base64.b64encode(Path(r).read_bytes()).decode(),
+                                              "mimeType": "image/png" if str(r).lower().endswith(".png") else "image/jpeg"},
+                                    "referenceType": "asset"} for r in references[:3]]
     st, body = _call("POST", f"{base}:predictLongRunning", token,
-                     {"instances": [{"prompt": prompt}],
+                     {"instances": [inst],
                       "parameters": {"aspectRatio": "9:16", "durationSeconds": seconds, "sampleCount": 1, "generateAudio": False, "resolution": "720p"}})
     if st != 200:
         raise BRollError(f"Veo refused ({st}): {str(body)[:200]}")
@@ -90,8 +97,23 @@ def _generate(prompt: str, seconds: int, token: str, model: str = MODEL) -> byte
     raise BRollError("Veo took longer than 15 minutes")
 
 
-def key_for(prompt: str, seconds: int, model: str = MODEL) -> str:
-    return hashlib.sha1(f"{model}|{seconds}|{STYLE}{prompt}".encode()).hexdigest()
+def key_for(prompt: str, seconds: int, model: str = MODEL, references: list = None) -> str:
+    refs = "|".join(hashlib.sha1(Path(r).read_bytes()).hexdigest()[:12] for r in (references or []))
+    return hashlib.sha1(f"{model}|{seconds}|{STYLE}{prompt}|{refs}".encode()).hexdigest()
+
+
+def slug(prompt: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", prompt.lower()).strip("-")[:70]
+
+
+def file_in_library(out: Path, prompt: str, references: list = None, library: Path = None) -> Path:
+    """A readable copy of the clip next to an index of prompts, for browsing and reuse by hand."""
+    library = Path(library or LIBRARY); library.mkdir(parents=True, exist_ok=True)
+    name = f"{slug(prompt)}-{out.stem[:6]}.mp4"
+    shutil.copy(out, library / name)
+    with (library / "index.md").open("a") as f:
+        f.write(f"- `{name}` — {prompt}" + (f" (refs: {', '.join(Path(r).name for r in references)})" if references else "") + "\n")
+    return library / name
 
 
 def _ledger(path: Path) -> dict:
@@ -119,11 +141,12 @@ def status_line(ledger_path: Path = LEDGER, today: date = None) -> str:
     return f"Veo video credit: ₹{p['spent_inr']} used of ₹{int(p['credit_inr'])}; on-plan figure for today ₹{p['target_inr']}; {p['days_left']} days to 10 Dec."
 
 
-def clip(prompt: str, *, seconds: int = 8, cache: Path = BROLL_DIR, ledger_path: Path = LEDGER, credit: float = CREDIT_INR,
-         generate=_generate, token: str = None, today: date = None) -> Path:
-    """The cached MP4 for this prompt, generating it (and charging the rupee ledger) only when it does not exist."""
+def clip(prompt: str, *, seconds: int = 8, references: list = None, cache: Path = BROLL_DIR, ledger_path: Path = LEDGER,
+         credit: float = CREDIT_INR, generate=_generate, token: str = None, today: date = None, library: Path = None) -> Path:
+    """The cached MP4 for this prompt (and reference pictures), generating it, charging the rupee ledger and filing a
+    readable copy in the library only when it does not exist yet."""
     cache = Path(cache); cache.mkdir(parents=True, exist_ok=True)
-    out = cache / f"{key_for(prompt, seconds)}.mp4"
+    out = cache / f"{key_for(prompt, seconds, references=references)}.mp4"
     if out.exists():
         return out
     today = today or date.today()
@@ -136,15 +159,21 @@ def clip(prompt: str, *, seconds: int = 8, cache: Path = BROLL_DIR, ledger_path:
     if key in led.get("filtered", []):
         raise BRollFiltered("this prompt was declined by the content filter before; not retried")
     try:
-        data = generate(STYLE + prompt, seconds, token if token is not None else access_token())
+        data = generate(STYLE + prompt, seconds, token if token is not None else access_token(), references=references) if references \
+            else generate(STYLE + prompt, seconds, token if token is not None else access_token())
     except BRollFiltered:
         led.setdefault("filtered", []).append(key)
         Path(ledger_path).parent.mkdir(parents=True, exist_ok=True); Path(ledger_path).write_text(json.dumps(led, indent=1))
         raise
     out.write_bytes(data)
+    try:
+        file_in_library(out, prompt, references, library)
+    except OSError:
+        pass
     led["spent_inr"] = round(spent + cost, 2)
     led["seconds"] = int(led.get("seconds", 0)) + seconds
-    led.setdefault("shots", []).append({"day": today.isoformat(), "seconds": seconds, "inr": cost, "key": out.stem, "prompt": prompt[:120]})
+    led.setdefault("shots", []).append({"day": today.isoformat(), "seconds": seconds, "inr": cost, "key": out.stem, "prompt": prompt[:120],
+                                        "refs": [Path(r).name for r in (references or [])]})
     Path(ledger_path).parent.mkdir(parents=True, exist_ok=True)
     Path(ledger_path).write_text(json.dumps(led, indent=1))
     return out
@@ -156,3 +185,15 @@ def frames(mp4: Path, out_dir: Path, fps: int = 30, width: int = 1080, height: i
     vf = f"fps={fps},scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height}"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(mp4), "-vf", vf, "-q:v", "3", str(out_dir / "f%04d.jpg")], check=True)
     return len(list(out_dir.glob("f*.jpg")))
+
+
+def reference_picture(character: str) -> Path:
+    """The picture Veo gets so a character looks like itself: the source photo on white, else the cut-out PNG."""
+    base = character.split("_")[0]
+    for cand in (Path.home() / "arthvan-social" / "characters" / base / f"{character}_front_neutral.jpg",
+                 Path.home() / "arthvan-social" / "characters" / base / f"{character}_front_happy.jpg",
+                 ROOT / "engine" / "assets" / "characters" / f"{character}_front_neutral.png",
+                 ROOT / "engine" / "assets" / "characters" / f"{character}_front_happy.png"):
+        if cand.exists():
+            return cand
+    raise BRollError(f"no reference picture for {character}")
