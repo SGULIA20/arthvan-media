@@ -140,7 +140,7 @@ def build(story_path: Path, out_dir: Path) -> Path:
         audio = tmp / "mix.m4a"; write_m4a(mix, audio)
         out = out_dir / f"{story['id']}.mp4"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "f%04d.jpg"), "-i", str(audio),
-                        "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-r", str(FPS),
+                        "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "slow", "-crf", "24", "-maxrate", "1700k", "-bufsize", "3400k", "-pix_fmt", "yuv420p", "-r", str(FPS),
                         "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(out)], check=True)
         print(f"{out} {total:.1f}s")
         return out

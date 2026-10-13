@@ -26,6 +26,7 @@ from .whatsapp import WhatsAppError, WhatsAppNotReady
 from .select_item import ORDER, EPOCH, lagos_date, pick, slot, story_lead, NO_REPEAT
 
 MAX_FALLBACKS = 5
+WA_MAX_BYTES = 15 * 1024 * 1024   # WhatsApp rejects template videos above 16 MB
 KEEP_DAYS = 14
 DEFAULT_REPO = "SGULIA20/arthvan-media"
 YT_CHANNELS = ("sglearning", "arthvan")   # every Short goes to both channels
@@ -283,6 +284,9 @@ def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log
         print(f"published story {st['id']}: {ids}")
         ok = True
         wa = chans.get("whatsapp")
+        if wa and dst.stat().st_size > WA_MAX_BYTES:
+            print(f"whatsapp skipped: {dst.stat().st_size / 1048576:.1f} MB is over WhatsApp's 16 MB video limit")
+            wa = None
         if wa and day_status(log, day, "whatsapp") != "published":
             ok &= _channel(day, "whatsapp", st["id"], deps, log, lambda: deps.send_whatsapp(wa, url, app_cfg["name"], st["caption"] + " " + app_cfg["play_url"]))
         yt = chans.get("youtube", {})
