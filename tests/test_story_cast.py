@@ -48,3 +48,36 @@ def test_a_filmed_story_converts_to_the_in_house_cutout_style_without_any_shot()
     assert all("clip" not in s and "refs" not in s for s in c["scenes"]) and st["scenes"][1]["layout"] == "clip"      # the original is untouched
     from engine.story import CHAR_DIR
     assert all((CHAR_DIR / f"lumi_{s['pose']}.png").exists() for s in c["scenes"] if s["layout"] != "end")
+
+
+def test_prefetch_makes_each_missing_shot_once_in_parallel_and_names_a_declined_scene(tmp_path, monkeypatch):
+    import threading, time
+    from engine import broll, story
+    monkeypatch.setattr(broll, "BROLL_DIR", tmp_path)
+    monkeypatch.setattr(broll, "reference_picture", lambda c: tmp_path / "ref.jpg")
+    (tmp_path / "ref.jpg").write_bytes(b"x")
+    live, peak, made = [0], [0], []
+    lock = threading.Lock()
+    def fake_clip(prompt, references=None, **kw):
+        with lock: live[0] += 1; peak[0] = max(peak[0], live[0])
+        time.sleep(0.05)
+        made.append(prompt)
+        with lock: live[0] -= 1
+        return tmp_path / "x.mp4"
+    monkeypatch.setattr(broll, "clip", fake_clip)
+    st = {"id": "x", "cast": {}, "scenes": [{"clip": f"shot {n}"} for n in range(5)] + [{"clip": "shot 0"}, {"vo": "no shot"}]}
+    assert story.prefetch_shots(st, workers=3) == 5 and sorted(made) == [f"shot {n}" for n in range(5)] and 2 <= peak[0] <= 3
+    def declines(prompt, **kw):
+        raise broll.BRollFiltered("content filter")
+    monkeypatch.setattr(broll, "clip", declines)
+    import pytest
+    with pytest.raises(SystemExit, match="scene 0 of x"):
+        story.prefetch_shots(st, workers=2)
+
+
+def test_blank_frames_are_single_frame_size_dips_not_ramps(tmp_path):
+    from engine.story import blank_frames
+    sizes = [100, 100, 20, 100, 100, 90, 70, 50, 40, 40, 100]        # frame 2 is a dip; 5..9 is a fade ramp, not a dip
+    for i, n in enumerate(sizes):
+        (tmp_path / f"f{i:04d}.jpg").write_bytes(b"x" * n)
+    assert blank_frames(tmp_path) == [2]

@@ -19,6 +19,17 @@ BADGE = ROOT / "engine" / "assets" / "google-play-badge.png"
 FPS = 30
 
 
+WAIT_IMAGES = ("Promise.all([...document.images].map(i => (i.complete && i.naturalWidth) "
+               "? (i.decode ? i.decode().catch(() => 0) : 0) : new Promise(r => { i.onload = i.onerror = r; })))")
+
+
+def blank_frames(frames_dir: Path, ratio: float = 0.55) -> list:
+    """Frames whose JPEG is much smaller than BOTH neighbours: an empty frame compresses far smaller than a picture, and a
+    real scene change is a ramp, not a one-frame dip. A safety net behind the image wait."""
+    sizes = [p.stat().st_size for p in sorted(Path(frames_dir).glob("f*.jpg"))]
+    return [i for i in range(1, len(sizes) - 1) if sizes[i] < ratio * min(sizes[i - 1], sizes[i + 1])]
+
+
 def cast_prompt(prompt: str, cast: dict) -> str:
     """{meena} in a shot prompt becomes the cast description, so a supporting character looks the same in every shot."""
     def sub(m):
@@ -70,6 +81,27 @@ def cutout_story(story: dict) -> dict:
         sc.pop("clip", None); sc.pop("refs", None); sc["min"] = min(sc.get("min", 6), 7)
     st.pop("cast", None); st["style"] = "cutout"
     return st
+
+
+def prefetch_shots(story: dict, workers: int = 3) -> int:
+    """Make all of a story's missing shots up to `workers` at a time (the ledger is lock-safe), so a Reel takes about as
+    long as its slowest shot, not the sum. Returns how many were made. A shot Veo declines names its scene."""
+    from concurrent.futures import ThreadPoolExecutor
+    todo, seen = [], set()
+    for i, prompt, refs, cached in shot_plan(story):
+        key = broll.key_for(prompt, 8, references=refs or None)
+        if not cached and key not in seen:
+            seen.add(key); todo.append((i, prompt, refs))
+    if not todo:
+        return 0
+    with ThreadPoolExecutor(max_workers=min(workers, len(todo))) as ex:
+        futs = [(i, prompt, ex.submit(broll.clip, prompt, references=refs or None)) for i, prompt, refs in todo]
+        for i, prompt, fut in futs:
+            try:
+                fut.result()
+            except broll.BRollFiltered as e:
+                raise SystemExit(f"scene {i} of {story['id']}: Veo declined the shot prompt, rephrase it: {prompt[:90]} ({e})")
+    return len(todo)
 
 
 def film_available() -> bool:
@@ -163,6 +195,7 @@ def build(story_path: Path, out_dir: Path) -> Path:
                 "disclaimer": app.get("money_disclaimer") or "", "icon": (ROOT / app["icon"]).as_uri(),
                 "badge": BADGE.as_uri(), "shots": shots.as_uri()}
         clips = {}
+        prefetch_shots(story)
         for i, s in enumerate(story["scenes"]):
             if s.get("clip"):
                 refs = [broll.reference_picture(c) for c in s.get("refs", [])]
@@ -184,8 +217,16 @@ def build(story_path: Path, out_dir: Path) -> Path:
             n = int(round(total * FPS))
             for f in range(n):
                 pg.evaluate(f"render({f / FPS})")
+                # every frame rebuilds the page, so a filmed frame is a brand-new <img>: wait until it is loaded AND decoded,
+                # otherwise the screenshot catches an empty frame and the video blinks (measured 13 Oct: 60+ dark frames per Reel)
+                pg.evaluate(WAIT_IMAGES)
                 pg.screenshot(path=str(frames / f"f{f:04d}.jpg"), type="jpeg", quality=92)
             b.close()
+        blank = blank_frames(frames)
+        if blank:
+            print(f"note: {len(blank)} frames looked empty and were repeated from the previous frame", flush=True)
+            for f in blank:
+                shutil.copy(frames / f"f{f - 1:04d}.jpg", frames / f"f{f:04d}.jpg")
         # 3. music underneath the voice (ducked)
         music = synth(story["app"], 7, total) * 0.28
         n = min(len(vo), len(music))
@@ -196,6 +237,12 @@ def build(story_path: Path, out_dir: Path) -> Path:
                         "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "slow", "-crf", "24", "-maxrate", "1700k", "-bufsize", "3400k", "-pix_fmt", "yuv420p", "-r", str(FPS),
                         "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(out)], check=True)
         print(f"{out} {total:.1f}s")
+        try:
+            from .qa import blink_count
+            blinks = blink_count(out)
+            print(f"blink check: {blinks} single-frame flashes" + ("  <-- TOO MANY, do not post" if blinks > 12 else "  (good)"), flush=True)
+        except Exception as e:                                   # a QA failure never stops a render
+            print("blink check skipped:", e)
         try:
             print("filed in", file_in_reels_folder(out, story["id"]))
         except OSError as e:
