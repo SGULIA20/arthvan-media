@@ -244,9 +244,22 @@ def build(story_path: Path, out_dir: Path) -> Path:
         mix = np.clip(vo[:n] + music[:n], -0.98, 0.98)
         audio = tmp / "mix.m4a"; write_m4a(mix, audio)
         out = out_dir / f"{story['id']}.mp4"
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "f%04d.jpg"), "-i", str(audio),
-                        "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "slow", "-crf", "24", "-maxrate", "1700k", "-bufsize", "3400k", "-pix_fmt", "yuv420p", "-r", str(FPS),
-                        "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(out)], check=True)
+        # encode to a private temp file, check the WHOLE file decodes, and only then move it into place: a second render of the
+        # same story, a crash or a full disk can never leave a damaged Reel (13 Oct: lumi-scan-en was corrupted by two queues)
+        part = out.with_name(f".{out.stem}.{os.getpid()}.part.mp4")
+        for attempt in (1, 2):
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "f%04d.jpg"), "-i", str(audio),
+                            "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "slow", "-crf", "24", "-maxrate", "1700k", "-bufsize", "3400k", "-pix_fmt", "yuv420p", "-r", str(FPS),
+                            "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(part)], check=True)
+            from .qa import decode_errors
+            bad = decode_errors(part)
+            if bad == 0:
+                break
+            print(f"encode attempt {attempt}: {bad} decoder complaints, retrying", flush=True)
+        else:
+            part.unlink(missing_ok=True)
+            raise RuntimeError(f"{story['id']}: the encoded video is damaged after two attempts; nothing was written")
+        part.replace(out)
         print(f"{out} {total:.1f}s")
         try:
             from .qa import blink_count
