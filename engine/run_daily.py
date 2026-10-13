@@ -15,7 +15,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable
 
-from . import instagram, linkedin, render, telegram, threads, whatsapp, youtube
+from . import instagram, linkedin, notify, render, telegram, threads, whatsapp, youtube
 from .config import ROOT, load_apps, load_bank, load_global
 from .instagram import Captions, InstagramError, PartialPublish, SetUrls
 from .lint import alt_texts, build_captions, build_linkedin_text, build_threads_text, lint_item, story_captions
@@ -478,7 +478,16 @@ def main(argv=None) -> int:
     ap.add_argument("--date", help="YYYY-MM-DD (Lagos date); default: today in Lagos")
     args = ap.parse_args(argv)
     day = date.fromisoformat(args.date) if args.date else lagos_date(datetime.now(timezone.utc))
-    return run(args.mode, day)
+    if args.mode != "post":
+        return run(args.mode, day)
+    before = len(notify.entries(ROOT / "logs" / "posts.jsonl"))
+    try:
+        code = run(args.mode, day)
+    except Exception:
+        notify.after_run(ROOT, day, 1, before)         # a crash still reaches the founder; the traceback is in the GitHub run
+        raise
+    notify.after_run(ROOT, day, code, before)          # failure -> alert, something posted -> summary, nothing to do -> silence
+    return code
 
 
 if __name__ == "__main__":

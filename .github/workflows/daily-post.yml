@@ -47,6 +47,7 @@ jobs:
           git config user.name "arthvan-autoposter"
           git config user.email "autoposter@users.noreply.github.com"
       - name: Run the daily set
+        id: run
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
@@ -70,3 +71,10 @@ jobs:
           MODE: ${{ github.event.inputs.mode || 'post' }}
           RUN_DATE: ${{ github.event.inputs.date }}
         run: python -m engine.run_daily --mode "$MODE" ${RUN_DATE:+--date "$RUN_DATE"}
+      - name: Tell the founder if the workflow broke before the engine could report
+        if: failure() && steps.run.outcome != 'failure'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python -m engine.notify --text "⚠️ The daily post workflow stopped before it could post (tests or setup failed). Details: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"

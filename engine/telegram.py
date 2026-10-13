@@ -45,6 +45,38 @@ def send_video(cfg: dict, video_url: str, caption: str) -> str:
     return str(res["result"]["message_id"])
 
 
+def send_message(cfg: dict, text: str) -> str:
+    """A plain text message to the founder's chat (alerts, summaries). Returns the message id."""
+    res = _call(cfg["token"], "sendMessage", {"chat_id": cfg["chat_id"], "text": text[:4000], "disable_web_page_preview": True})
+    if not res.get("ok"):
+        raise TelegramError(f"Telegram refused the message: {str(res)[:200].replace(cfg['token'], '<token>')}")
+    return str(res["result"]["message_id"])
+
+
+def send_video_file(cfg: dict, path, caption: str = "") -> str:
+    """Upload a local video (bots may upload up to 50 MB) instead of giving Telegram a URL."""
+    from pathlib import Path
+    path = Path(path)
+    boundary = "----arthvan" + str(int(time.time() * 1000))
+    def field(name, value):
+        return f'--{boundary}\r\nContent-Disposition: form-data; name="{name}"\r\n\r\n{value}\r\n'.encode()
+    body = (field("chat_id", cfg["chat_id"]) + field("caption", caption[:1000]) + field("supports_streaming", "true")
+            + f'--{boundary}\r\nContent-Disposition: form-data; name="video"; filename="{path.name}"\r\nContent-Type: video/mp4\r\n\r\n'.encode()
+            + path.read_bytes() + f"\r\n--{boundary}--\r\n".encode())
+    req = urllib.request.Request(f"{API}/bot{cfg['token']}/sendVideo", data=body, method="POST",
+                                 headers={"Content-Type": f"multipart/form-data; boundary={boundary}"})
+    try:
+        with urllib.request.urlopen(req, timeout=300, context=_CTX) as r:
+            res = json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        raise TelegramError(f"Telegram sendVideo upload failed ({e.code}): {e.read().decode(errors='replace')[:200].replace(cfg['token'], '<token>')}") from None
+    except Exception as e:
+        raise TelegramError(f"Telegram sendVideo upload failed: {type(e).__name__}: {str(e).replace(cfg['token'], '<token>')[:150]}") from None
+    if not res.get("ok"):
+        raise TelegramError(f"Telegram refused the video: {str(res)[:200].replace(cfg['token'], '<token>')}")
+    return str(res["result"]["message_id"])
+
+
 def find_chat_id(token: str) -> str:
     """After the founder has sent the bot any message: the chat id of the latest conversation."""
     res = _call(token, "getUpdates", {})

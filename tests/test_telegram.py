@@ -5,7 +5,7 @@ import urllib.error
 import pytest
 
 from engine import telegram
-from engine.telegram import TelegramError, find_chat_id, send_video
+from engine.telegram import TelegramError, find_chat_id, send_message, send_video, send_video_file
 
 
 class Resp:
@@ -41,3 +41,22 @@ def test_find_chat_id_takes_the_latest_conversation_and_explains_when_there_is_n
     monkeypatch.setattr(telegram, "_call", lambda token, method, body: {"result": []})
     with pytest.raises(TelegramError, match="send the bot"):
         find_chat_id("T")
+
+
+def test_send_message_trims_to_telegrams_limit(monkeypatch):
+    seen = {}
+    def fake(req, timeout=None, context=None):
+        seen["body"] = json.loads(req.data); seen["url"] = req.full_url; return Resp({"ok": True, "result": {"message_id": 3}})
+    monkeypatch.setattr(telegram.urllib.request, "urlopen", fake)
+    assert send_message({"token": "TOK", "chat_id": "9"}, "x" * 6000) == "3"
+    assert seen["url"].endswith("/botTOK/sendMessage") and len(seen["body"]["text"]) == 4000
+
+
+def test_send_video_file_uploads_the_bytes_as_multipart(monkeypatch, tmp_path):
+    f = tmp_path / "a.mp4"; f.write_bytes(b"VIDEOBYTES")
+    seen = {}
+    def fake(req, timeout=None, context=None):
+        seen["ct"] = req.get_header("Content-type"); seen["data"] = req.data; return Resp({"ok": True, "result": {"message_id": 5}})
+    monkeypatch.setattr(telegram.urllib.request, "urlopen", fake)
+    assert send_video_file({"token": "TOK", "chat_id": "9"}, f, "cap") == "5"
+    assert seen["ct"].startswith("multipart/form-data; boundary=") and b"VIDEOBYTES" in seen["data"] and b'name="chat_id"' in seen["data"] and b"cap" in seen["data"]
