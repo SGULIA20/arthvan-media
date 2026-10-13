@@ -16,6 +16,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 from .config import ROOT
+from . import claims
 from .select_item import NO_REPEAT_DAYS, slot, story_lead
 
 SCHEDULE = ROOT / "content" / "schedule.json"
@@ -28,6 +29,7 @@ def load_schedule(root: Path = ROOT):
 
 def load_stories(root: Path = ROOT) -> list:
     out = []
+    feats_smap = claims.load(root)
     for p in sorted((Path(root) / "stories").glob("*.json")):
         try:
             st = json.loads(p.read_text())
@@ -35,6 +37,7 @@ def load_stories(root: Path = ROOT) -> list:
             continue
         if st.get("id") and st.get("app"):
             st["rendered"] = (Path(root) / "stories" / "out" / f"{st['id']}.mp4").exists()
+            st["problems"] = claims.story_problems(st, *feats_smap)
             out.append(st)
     return out
 
@@ -47,6 +50,7 @@ def build_plan(start: date, days: int, stories: list, *, published: dict = None,
     plan = dict(keep or {})
     used = set(published) | {v for k, v in plan.items() if v}
     by_id = {s["id"]: s for s in stories}
+    stories = [s for s in stories if not s.get("problems")]          # nothing false or premature is ever planned
     fixed = {s["post_on"]: s for s in stories if s.get("occasion") and s.get("rendered") and s.get("post_on")}
 
     def recent(app, d):
@@ -97,6 +101,9 @@ def violations(plan: dict, stories: list) -> list:
     """Rule breaches in a plan (used by the tests and printed by the CLI)."""
     by_id = {s["id"]: s for s in stories}; bad = []
     days = sorted(plan)
+    for d in days:
+        if plan[d] and by_id.get(plan[d], {}).get("problems"):
+            bad.append(f"{d}: {plan[d]} has claim problems: {by_id[plan[d]]['problems'][0]}")
     for k, d in enumerate(days):
         sid = plan[d]
         if not sid:
@@ -160,6 +167,9 @@ def main(argv=None) -> int:
         sid = plan[d]; sl = slot(date.fromisoformat(d))
         tag = "" if not sid else (" [earlier-made]" if by_id[sid].get("legacy") else (" [festival]" if by_id[sid].get("occasion") else " [new]"))
         print(f"{d}  {sl[0]:11s} {sl[1]:7s}  {(sid or '-- graphics set; Reel still to make --')}{tag}  {by_id[sid].get('feature') if sid else ''}")
+    held = [x for x in stories if x.get("rendered") and x.get("problems")]
+    for x in held:
+        print(f"HELD BACK: {x['id']}: {x['problems'][0]}" + (f" (+{len(x['problems']) - 1} more)" if len(x['problems']) > 1 else ""))
     for v in violations({d: x for d, x in plan.items() if d >= today.isoformat()}, stories):
         print("RULE BREACH:", v)
     if write:

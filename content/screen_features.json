@@ -1,0 +1,12 @@
+{
+ "waypoint": {
+  "create_typed.png": "write-post",
+  "daily-path.png": "daily-path",
+  "wall.png": "wall-feed",
+  "matching.png": "matching",
+  "calm.png": "calm-kit",
+  "explore.png": "daily-news",
+  "welcome.png": "fresh-name"
+ },
+ "scoremybiz": {}
+}

@@ -65,7 +65,7 @@
     ]
    }
   ],
-  "feature": "voice"
+  "feature": "voice-posts"
  },
  {
   "id": "wp-cross-paths",
@@ -133,7 +133,7 @@
     "text": "Say it your way."
    }
   ],
-  "feature": "wall"
+  "feature": "wall-feed"
  },
  {
   "id": "wp-break-room",
@@ -271,7 +271,7 @@
     ]
    }
   ],
-  "feature": "mira"
+  "feature": "mira-guide"
  },
  {
   "id": "wp-say-it",
@@ -305,7 +305,7 @@
     "text": "on Google Play."
    }
   ],
-  "feature": "create"
+  "feature": "write-post"
  },
  {
   "id": "wp-timed-chat",
@@ -339,7 +339,7 @@
     ]
    }
   ],
-  "feature": "timed-chat"
+  "feature": "chat"
  },
  {
   "id": "wp-fresh-name",
@@ -509,7 +509,7 @@
     "text": "in a synthetic voice."
    }
   ],
-  "feature": "voice"
+  "feature": "voice-posts"
  },
  {
   "id": "wp-break-room-how",
@@ -712,7 +712,7 @@
  {
   "id": "wp-explore",
   "template": "ink",
-  "feature": "explore",
+  "feature": "daily-news",
   "caption": "Explore shows you what people are saying tonight, by theme. Read first, post when you are ready.",
   "hashtags": [
    "#Explore",
@@ -742,7 +742,7 @@
   "id": "wp-my-waypoints",
   "template": "dusk",
   "feature": "my-waypoints",
-  "caption": "Every sentence you have said, in one place. My Waypoints is your own quiet record.",
+  "caption": "Your own posts from the last 30 days, your points and your rank, in one place. That is My Waypoints.",
   "hashtags": [
    "#MyWaypoints",
    "#Waypoint"
@@ -750,19 +750,19 @@
   "slides": [
    {
     "kind": "hook",
-    "text": "Every sentence you said. In one place."
+    "text": "Your last 30 days, in one place."
    },
    {
     "kind": "quote",
-    "text": "Read last month's you. See how far you came."
+    "text": "Read back what you posted, and see how it landed."
    },
    {
     "kind": "steps",
     "text": "My Waypoints",
     "items": [
-     "Your sentences, by day",
-     "The replies you got",
-     "Delete any of it, any time"
+     "Your own posts, newest first",
+     "Your points and your rank",
+     "Delete any post yourself"
     ]
    }
   ]
@@ -799,7 +799,7 @@
  {
   "id": "wp-reply",
   "template": "ink",
-  "feature": "reply",
+  "feature": "private-replies",
   "caption": "When someone replies to your sentence, it is one person, one reply, and you choose whether to answer.",
   "hashtags": [
    "#Waypoint",

@@ -23,6 +23,7 @@ from .linkedin import LinkedInError
 from .threads import ThreadsError
 from .youtube import YouTubeError
 from .whatsapp import WhatsAppError, WhatsAppNotReady
+from . import claims
 from .calendar_plan import load_schedule, load_stories, planned_features
 from .select_item import ORDER, EPOCH, lagos_date, pick, slot, story_lead, NO_REPEAT_DAYS
 
@@ -229,11 +230,11 @@ def scheduled_story(root: Path, day: date, log: Path = None):
     if sched is not None:                       # a planned calendar (engine.calendar_plan) decides which Reel goes out, and when
         by_id = {s["id"]: s for s in load_stories(root)}
         today = by_id.get(sched.get(day.isoformat()))
-        if today and today["rendered"] and today["id"] not in done:
+        if today and today["rendered"] and today["id"] not in done and not today["problems"]:
             return today                                                    # today's own Reel comes first
         for d in sorted(sched):                                             # else one missed in the last 3 days
             st = by_id.get(sched[d])
-            if st and st["rendered"] and st["id"] not in done and (day - timedelta(days=3)).isoformat() < d < day.isoformat():
+            if st and st["rendered"] and not st["problems"] and st["id"] not in done and (day - timedelta(days=3)).isoformat() < d < day.isoformat():
                 return st
         return None
     cands = []
@@ -242,7 +243,7 @@ def scheduled_story(root: Path, day: date, log: Path = None):
             st = json.loads(p.read_text())
         except ValueError:
             continue
-        rendered = (root / "stories" / "out" / f"{st['id']}.mp4").exists()
+        rendered = (root / "stories" / "out" / f"{st['id']}.mp4").exists() and not claims.story_problems(st, *claims.load(root))
         if st.get("occasion") and st.get("post_on") == day.isoformat() and st["id"] not in done and rendered:
             return st                                   # a festival or national day wins its date, whatever the cycle says
         if (st.get("post_on") and st["post_on"] <= day.isoformat() and st["id"] not in done
@@ -329,6 +330,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     log = root / "logs" / "posts.jsonl"
     apps = apps or load_apps()
     banks = banks or {a: load_bank(a) for a in apps}
+    _feats, _smap = claims.load(root)
+    banks = {a: [i for i in b if not claims.item_problems(a, i, _feats)] or b for a, b in banks.items()}   # nothing false or premature is picked
     chans = {}
     li_token, li_urn = env.get("LINKEDIN_ACCESS_TOKEN"), env.get("LINKEDIN_PERSON_URN")
     # LinkedIn gets one post a week, on the day set in content/apps.json (Tuesday)
