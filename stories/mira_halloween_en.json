@@ -36,7 +36,7 @@
   {
    "layout": "clip",
    "screen": "create_typed.png",
-   "clip": "The same young man in a plain hoodie sitting alone on a porch step late on Halloween night, the glow of his phone on his face, two pumpkins beside him, the party muffled behind the door.",
+   "clip": "The same young man in a plain hoodie sitting alone on a porch step late on Halloween night, the glow of his phone on his face, two pumpkins beside him, the party muffled behind the door, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "On Waypoint he takes the mask off. A new name, just for tonight. One true sentence. That is all it asks.",
    "sub": "On Waypoint he takes the mask off. A new name, just for tonight. One true sentence. That is all it asks.",
    "min": 8
@@ -44,7 +44,7 @@
   {
    "layout": "clip",
    "screen": "wall.png",
-   "clip": "A city at night seen from above, windows lighting up one by one across apartment blocks, a few jack-o-lanterns glowing on balconies, slow drift of the camera.",
+   "clip": "A city at night seen from above, windows lighting up one by one across apartment blocks, a few jack-o-lanterns glowing on balconies, slow drift of the camera, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "On the Wall, tonight's sentences from other people in other costumes. Different streets, same hour.",
    "sub": "On the Wall, tonight's sentences from other people in other costumes. Different streets, same hour.",
    "min": 8
@@ -52,7 +52,7 @@
   {
    "layout": "clip",
    "screen": "matching.png",
-   "clip": "Two phones glowing on two different windowsills in two different cities at night, rain on one window, city lights behind the other, a reply arriving on each screen.",
+   "clip": "Two phones glowing on two different windowsills in two different cities at night, rain on one window, city lights behind the other, a reply arriving on each screen, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "When he wants a real conversation, Waypoint crosses his path with one person. Two sentences, and a reply.",
    "sub": "When he wants a real conversation, Waypoint crosses his path with one person. Two sentences, and a reply.",
    "min": 8

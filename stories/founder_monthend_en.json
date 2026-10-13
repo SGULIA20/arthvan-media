@@ -36,7 +36,7 @@
   },
   {
    "layout": "clip",
-   "clip": "Close on a hardware shop counter: a handwritten notebook, a calculator, a phone, the owner's hand turning a page, warm lamp light.",
+   "clip": "Close on a hardware shop counter: {suresh} turning the page of a handwritten notebook beside a calculator and a phone, warm lamp light, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "ScoreMyBiz reads his own book and shows it plainly. Sold. Bought. Spent. What is left.",
    "sub": "ScoreMyBiz reads his own book and shows it plainly. Sold. Bought. Spent. What is left.",
    "min": 8,
@@ -44,7 +44,7 @@
   },
   {
    "layout": "clip",
-   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, points at a shelf of unsold festival stock in a hardware shop while the owner, a middle-aged man in a checked shirt, scratches his head.",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, points at a shelf of unsold festival stock in a hardware shop while {suresh} scratches his head, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "Lumi points at the real problem: festival stock, still sitting on the shelf. Money, parked.",
    "sub": "Lumi points at the real problem: festival stock, still sitting on the shelf. Money, parked.",
    "min": 8,
@@ -55,7 +55,7 @@
   },
   {
    "layout": "clip",
-   "clip": "The hardware shop owner at closing time a month later, opening the cash drawer and finding it full, a quiet satisfied smile, shelves behind.",
+   "clip": "{suresh} at the counter of his hardware shop at closing time a month later, opening the cash drawer and finding it full, a quiet satisfied smile, shelves of rope and paint behind, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "One number out of a hundred for the shop's health, and three moves for the week. He does them. Next month end, the drawer agrees with the shelf.",
    "sub": "One number out of 100 for the shop's health, and three moves for the week. He does them. Next month end, the drawer agrees with the shelf.",
    "min": 9,
@@ -69,5 +69,8 @@
    "min": 5
   }
  ],
- "feature": "profit-loss"
+ "feature": "profit-loss",
+ "cast": {
+  "suresh": "Suresh, a middle-aged Indian man with thinning hair, round glasses and a blue checked shirt"
+ }
 }

@@ -28,7 +28,7 @@
   },
   {
    "layout": "clip",
-   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, stands in a small Indian shop doorway at month end, a worried shopkeeper beside him looking at an empty cash drawer, late evening.",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, stands in a small Indian shop doorway at month end, {raju}, worried, beside him looking at an empty cash drawer, late evening.",
    "vo": "दुकान भी वैसे ही। महीने के आख़िर में पता चलता है कि कहाँ कमी रह गई।",
    "sub": "The shop, the same way. Only at month end does he learn where it went wrong.",
    "min": 8,
@@ -39,7 +39,7 @@
   },
   {
    "layout": "clip",
-   "clip": "A shopkeeper at his counter looking at a phone, a weekly chart glowing on it, shop shelves behind, afternoon light.",
+   "clip": "{raju} at his counter looking at a phone, a weekly chart glowing on it, shop shelves behind, afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "स्कोर माय बिज़ में उसकी बही से हर हफ़्ते एक स्कोर बनता है। सौ में से एक अंक। और सात हिस्से जो बताते हैं कि दबाव कहाँ है।",
    "sub": "In ScoreMyBiz his book makes a score every week. One number out of 100, and seven areas that show where the pressure is.",
    "min": 8,
@@ -47,7 +47,7 @@
   },
   {
    "layout": "clip",
-   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, at the shop counter gesturing to the phone while the shopkeeper taps three times and smiles.",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, at the shop counter gesturing to the phone while {raju} taps three times and smiles, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "इस हफ़्ते दबाव वसूली में था। तीन ग्राहक, तीन टैप।",
    "sub": "This week the pressure was in collections. Three customers, three taps.",
    "min": 8,
@@ -58,7 +58,7 @@
   },
   {
    "layout": "clip",
-   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, standing beside the shopkeeper who is counting notes from a full drawer, both smiling, warm shop light.",
+   "clip": "The founder, a young Indian man with a short beard in a navy suit and striped tie, standing beside {raju} who is counting notes from a full drawer, both smiling, warm shop light, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "अगले हफ़्ते स्कोर ऊपर। हाथ में नकद भी।",
    "sub": "Next week the score is up. So is the cash in hand.",
    "min": 8,
@@ -75,5 +75,8 @@
    "min": 5
   }
  ],
- "feature": "weekly-score"
+ "feature": "weekly-score",
+ "cast": {
+  "raju": "Raju, a young Indian shopkeeper with a thin moustache in a maroon half-sleeve shirt"
+ }
 }

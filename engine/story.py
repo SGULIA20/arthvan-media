@@ -2,7 +2,7 @@
 
 python -m engine.story stories/lumi_friday_hi.json out_dir
 """
-import json, subprocess, sys, tempfile, wave
+import json, re, subprocess, sys, tempfile, wave
 from pathlib import Path
 
 import numpy as np
@@ -17,6 +17,16 @@ TEMPLATE = ROOT / "engine" / "templates" / "story2.html"
 CHAR_DIR = ROOT / "engine" / "assets" / "characters"
 BADGE = ROOT / "engine" / "assets" / "google-play-badge.png"
 FPS = 30
+
+
+def cast_prompt(prompt: str, cast: dict) -> str:
+    """{meena} in a shot prompt becomes the cast description, so a supporting character looks the same in every shot."""
+    def sub(m):
+        name = m.group(1)
+        if name not in cast:
+            raise KeyError(f"shot prompt names {{{name}}} but the story's cast has no {name}")
+        return cast[name]
+    return re.sub(r"\{([a-z_]+)\}", sub, prompt)
 
 
 def voice_clip(text: str, voice: str, rate: int, out_wav: Path) -> float:
@@ -84,7 +94,12 @@ def build(story_path: Path, out_dir: Path) -> Path:
         for i, s in enumerate(story["scenes"]):
             if s.get("clip"):
                 refs = [broll.reference_picture(c) for c in s.get("refs", [])]
-                mp4 = broll.clip(s["clip"], references=refs or None); d = tmp / f"clip{i}"
+                prompt = cast_prompt(s["clip"], story.get("cast", {}))
+                try:
+                    mp4 = broll.clip(prompt, references=refs or None)
+                except broll.BRollFiltered as e:
+                    raise SystemExit(f"scene {i} of {story['id']}: Veo declined the shot prompt, rephrase it: {s['clip'][:90]} ({e})")
+                d = tmp / f"clip{i}"
                 clips[str(i)] = {"dir": d.as_uri(), "n": broll.frames(mp4, d, FPS)}
         deck["clips"] = clips
         frames = tmp / "frames"; frames.mkdir()

@@ -17,7 +17,7 @@
  "scenes": [
   {
    "layout": "clip",
-   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, stands in a quiet kitchen late at night, one lamp on, turns to the camera with a gentle smile, a kettle steaming.",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, stands facing the camera in a quiet kitchen late at night, one lamp on, a kettle steaming behind her, and smiles gently.",
    "vo": "Hi, I'm Mira. This is Priya's story. Her day runs on a timetable. Her evenings do not.",
    "sub": "Hi, I'm Mira. This is Priya's story. Her day runs on a timetable. Her evenings do not.",
    "min": 8,
@@ -28,7 +28,7 @@
   },
   {
    "layout": "clip",
-   "clip": "A young woman in office clothes on a late evening commuter train, head against the window, city lights streaking past, tired.",
+   "clip": "{priya} on a late evening commuter train, head against the window, city lights streaking past, tired.",
    "vo": "Some nights she just wants two minutes that belong to her.",
    "sub": "Some nights she just wants two minutes that belong to her.",
    "min": 8,
@@ -36,7 +36,7 @@
   },
   {
    "layout": "clip",
-   "clip": "The same young woman sitting on the edge of her bed at night, phone in both hands, eyes closed, breathing slowly, soft lamp light.",
+   "clip": "{priya} sitting in an armchair by a window at night, a phone resting in her hands, eyes closed, breathing slowly, one warm lamp, rain on the glass, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "Waypoint has a Calm kit now. Breathe. Ground yourself. Wind down. Two minutes each, no account, nothing saved.",
    "sub": "Waypoint has a Calm kit now. Breathe. Ground yourself. Wind down. Two minutes each, no account, nothing saved.",
    "min": 8,
@@ -44,7 +44,7 @@
   },
   {
    "layout": "clip",
-   "clip": "A phone on a pillow showing a single glowing question, a young woman's hand reaching for it, night, warm light.",
+   "clip": "A phone on a wooden side table showing a single glowing question, the hand of {priya} reaching for it, night, warm lamp light, a cup of tea beside it, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "Then the Daily Path, one question for everyone. She answers it slower tonight.",
    "sub": "Then the Daily Path, one question for everyone. She answers it slower tonight.",
    "min": 8,
@@ -52,12 +52,12 @@
   },
   {
    "layout": "clip",
-   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, sits on a balcony at night reading his phone and nodding slowly, as if someone else had the same evening, city glow behind.",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, on an apartment balcony at night on the left of the frame, facing the camera, reading her phone and nodding slowly, the city glowing behind her.",
    "vo": "And on the Wall, another person had the same kind of evening.",
    "sub": "And on the Wall, another person had the same kind of evening.",
    "min": 8,
    "refs": [
-    "founder_casual"
+    "mira"
    ],
    "screen": "wall.png"
   },
@@ -69,5 +69,8 @@
    "min": 5
   }
  ],
- "feature": "calm-kit"
+ "feature": "calm-kit",
+ "cast": {
+  "priya": "Priya, an Indian woman in her late twenties with shoulder-length dark hair, in a grey office blazer over a white top"
+ }
 }

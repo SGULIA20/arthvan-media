@@ -35,7 +35,7 @@
   },
   {
    "layout": "clip",
-   "clip": "A woman shopkeeper in a festive kurta jotting quickly in a phone at a busy snack counter at night, customers in garba dress waiting, lights overhead.",
+   "clip": "{bhavini} jotting quickly in a phone at her busy snack counter at night, customers in garba dress waiting, lights overhead, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "સ્કોર માય બિઝમાં ભાવિની ફટાફટ નોંધે છે: વેચ્યું, ખરીદ્યું, ખર્ચ્યું. બાકીનું બધું ઍપ સંભાળે.",
    "sub": "In ScoreMyBiz Bhavini jots it down fast: Sold, Bought, Spent. The app handles the rest.",
    "min": 8,
@@ -43,7 +43,7 @@
   },
   {
    "layout": "clip",
-   "clip": "Lumi, a young Indian woman with long dark hair in a festive red and green chaniya choli with a bandhani dupatta, beside the shop counter, pointing at a phone while the woman shopkeeper taps, both smiling, Navratri lights behind.",
+   "clip": "Lumi, a young Indian woman with long dark hair in a festive red and green chaniya choli with a bandhani dupatta, beside the shop counter pointing at a phone while {bhavini} taps, both smiling, Navratri lights behind, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "ત્રણ ગ્રાહકોનું ઉધાર બાકી હતું. એક ટૅપથી યાદ અપાવ્યું. દશેરા પહેલાં બે જણાએ ચૂકવી દીધું.",
    "sub": "Three customers owed her. One tap sent the reminders. Two paid before Dussehra.",
    "min": 8,
@@ -61,7 +61,7 @@
   },
   {
    "layout": "clip",
-   "clip": "A weekly score rising on a phone screen held by a woman shopkeeper outside her shop at dawn after Navratri, lights still up, quiet street.",
+   "clip": "{bhavini} outside her shop at dawn after Navratri holding a phone with a weekly score rising on it, lights still up, quiet street, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "દર અઠવાડિયે એક નંબર. સો માંથી. અને અઠવાડિયાનાં ત્રણ કામ.",
    "sub": "One number every week, out of 100, and three moves for the week.",
    "min": 8,
@@ -75,5 +75,8 @@
    "min": 5
   }
  ],
- "feature": "book"
+ "feature": "book",
+ "cast": {
+  "bhavini": "Bhavini, a Gujarati woman in her thirties in a mirror-work festive kurta with a long braid"
+ }
 }
