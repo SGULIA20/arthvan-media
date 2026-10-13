@@ -1,7 +1,18 @@
 [
- {"on": "2026-10-15", "text": "Check Google Cloud Billing: the Veo usage should show as fully covered by your trial credit (no amount to pay)."},
- {"from": "2026-10-13", "every_days": 7, "until": "2026-12-10", "text": "Waiting on you: a valid OpenAI key for the ScoreMyBiz WhatsApp bot (voice notes fail without it), and the Facebook Page / X account decisions."},
- {"on": "2026-11-26", "text": "Instagram, Threads and LinkedIn tokens run out around 9 Dec. Check that the token refresh worked, or tell me and I will renew them."},
- {"on": "2026-12-03", "text": "Your Google trial credit ends on 10 Dec. We stop paid video generation then and decide the next step together."},
- {"on": "2026-12-10", "text": "Google credit deadline is today. Paid video generation stops; the in-house cut-out Reels take over."}
+ {
+  "on": "2026-10-15",
+  "text": "Check Google Cloud Billing: the Veo usage should show as fully covered by your trial credit (no amount to pay)."
+ },
+ {
+  "on": "2026-11-26",
+  "text": "Instagram, Threads and LinkedIn tokens run out around 9 Dec. Check that the token refresh worked, or tell me and I will renew them."
+ },
+ {
+  "on": "2026-12-03",
+  "text": "Your Google trial credit ends on 10 Dec. We stop paid video generation then and decide the next step together."
+ },
+ {
+  "on": "2026-12-10",
+  "text": "Google credit deadline is today. Paid video generation stops; the in-house cut-out Reels take over."
+ }
 ]
