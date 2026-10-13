@@ -66,6 +66,7 @@ jobs:
           WA_STATUS_TO: ${{ secrets.WA_STATUS_TO }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHANNEL: ${{ secrets.TELEGRAM_CHANNEL }}
           WA_STATUS_TEMPLATE: ${{ vars.WA_STATUS_TEMPLATE }}
           PAUSE: ${{ vars.PAUSE }}
           MODE: ${{ github.event.inputs.mode || 'post' }}

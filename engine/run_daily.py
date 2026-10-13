@@ -197,6 +197,11 @@ def _extras(day, app_cfg, item, slides, slide_urls, deps, log, chans) -> int:
         reel_url = slide_urls[0].rsplit("/", 1)[0] + "/reel.mp4"
         caption = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + app_cfg["play_url"]
         ok &= _channel(day, "telegram", item["id"], deps, log, lambda: deps.send_telegram(tg, reel_url, caption))
+    tgc = chans.get("telegram_channel")
+    if tgc and day_status(log, day, "telegram_channel") != "published" and slide_urls:
+        reel_url = slide_urls[0].rsplit("/", 1)[0] + "/reel.mp4"
+        caption = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + app_cfg["play_url"]
+        ok &= _channel(day, "telegram_channel", item["id"], deps, log, lambda: deps.send_telegram(tgc, reel_url, caption))
     yt = chans.get("youtube", {})
     if yt and slides:
         video = Path(slides[0]).parent / "reel.mp4"
@@ -291,6 +296,9 @@ def _story_extras(st, day, app_cfg, dst, url, deps, log, chans, li_text, tags) -
     tg = chans.get("telegram")
     if tg and day_status(log, day, "telegram") != "published":
         ok &= _channel(day, "telegram", st["id"], deps, log, lambda: deps.send_telegram(tg, url, st["caption"] + " " + app_cfg["play_url"]))
+    tgc = chans.get("telegram_channel")
+    if tgc and day_status(log, day, "telegram_channel") != "published":
+        ok &= _channel(day, "telegram_channel", st["id"], deps, log, lambda: deps.send_telegram(tgc, url, st["caption"] + " " + app_cfg["play_url"]))
     yt = chans.get("youtube", {})
     if yt:
         ok &= _do_youtube(day, app_cfg, st, dst, deps, log, yt, st.get("title", app_cfg["name"]), st["caption"])
@@ -388,6 +396,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
                              "to": env["WA_STATUS_TO"], "template": env["WA_STATUS_TEMPLATE"]}
     if env.get("TELEGRAM_BOT_TOKEN") and env.get("TELEGRAM_CHAT_ID"):
         chans["telegram"] = {"token": env["TELEGRAM_BOT_TOKEN"].strip(), "chat_id": env["TELEGRAM_CHAT_ID"].strip()}
+    if env.get("TELEGRAM_BOT_TOKEN") and env.get("TELEGRAM_CHANNEL"):          # a public channel the founder owns, e.g. @arthvanapps (the bot must be its admin)
+        chans["telegram_channel"] = {"token": env["TELEGRAM_BOT_TOKEN"].strip(), "chat_id": env["TELEGRAM_CHANNEL"].strip()}
     chans["youtube"] = {ch: {"client_id": env["YT_CLIENT_ID"], "client_secret": env["YT_CLIENT_SECRET"],
                              "refresh_token": env[f"YT_{ch.upper()}_REFRESH_TOKEN"]}
                         for ch in YT_CHANNELS if env.get("YT_CLIENT_ID") and env.get("YT_CLIENT_SECRET") and env.get(f"YT_{ch.upper()}_REFRESH_TOKEN")}

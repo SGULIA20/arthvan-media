@@ -500,3 +500,19 @@ def test_the_daily_video_also_goes_to_telegram_once_and_a_failure_is_retried_alo
     assert go(w, env=env) == 1 and last_entry(tmp_path, "instagram")["status"] == "published"      # Telegram failed; Instagram is safe
     assert go(w, env=env) == 0 and sent and sent[0][0] == "555" and sent[0][1].endswith("/reel.mp4")
     assert go(w, env=env) == 0 and len(sent) == 1                                                  # never twice
+
+
+def test_the_daily_video_also_goes_to_the_public_telegram_channel_separately_from_the_private_chat(tmp_path):
+    from engine.telegram import TelegramError
+    w = World(tmp_path)
+    sent = []
+    def send(cfg, url, caption):
+        if cfg["chat_id"] == "@arthvanapps" and not any(c == "@arthvanapps" for c, _ in sent) and len(sent) == 1:
+            sent.append(("fail", url)); raise TelegramError("bot is not an admin")
+        sent.append((cfg["chat_id"], url)); return "1"
+    w.deps.send_telegram = send
+    env = dict(ENV, TELEGRAM_BOT_TOKEN="T", TELEGRAM_CHAT_ID="555", TELEGRAM_CHANNEL="@arthvanapps")
+    assert go(w, env=env) == 1                                                  # the channel failed, the private chat is safe
+    assert last_entry(tmp_path, "telegram")["status"] == "published" and last_entry(tmp_path, "telegram_channel")["status"] == "failed"
+    assert go(w, env=env) == 0                                                  # retry sends only the channel
+    assert [c for c, _ in sent if c != "fail"] == ["555", "@arthvanapps"]
