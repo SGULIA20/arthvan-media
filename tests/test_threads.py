@@ -83,3 +83,14 @@ def test_http_errors_never_leak_the_token(monkeypatch):
     with pytest.raises(ThreadsError) as e:
         threads.call("GET", "/me", TOKEN)
     assert TOKEN not in str(e.value)
+
+
+def test_post_video_creates_waits_for_the_video_and_publishes(monkeypatch):
+    from engine.threads import post_video
+    fake = Fake(statuses={"c1": ["IN_PROGRESS", "FINISHED"]})
+    monkeypatch.setattr(threads, "call", fake)
+    assert post_video(UID, TOKEN, "https://v/x.mp4", "text", sleep=lambda s: None) == "post-c1"
+    created = fake.posts("/threads")[0][2]
+    assert created["media_type"] == "VIDEO" and created["video_url"] == "https://v/x.mp4" and created["text"] == "text"
+    with pytest.raises(ThreadsError, match="500"):
+        post_video(UID, TOKEN, "u", "x" * 501, sleep=lambda s: None)

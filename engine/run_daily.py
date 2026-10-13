@@ -89,6 +89,7 @@ class Deps:
     head_sha: Callable = head_sha
     post_linkedin: Callable = linkedin.post_set
     post_threads: Callable = threads.post_carousel
+    post_threads_video: Callable = threads.post_video
     prepare_video_set: Callable = instagram.prepare_video_set
     post_linkedin_video: Callable = linkedin.post_video
     post_youtube: Callable = youtube.post_short
@@ -207,6 +208,8 @@ def _extras_retry(day, root, log, apps, banks, deps, chans, env) -> int:
     """Instagram already went out today; only an extra channel is missing."""
     rows = [e for e in _entries(log) if e.get("date") == day.isoformat() and e.get("status") == "published"
             and e.get("channel", "instagram") == "instagram"]
+    if rows and rows[-1].get("kind") == "story":
+        return _story_retry(rows[-1], day, root, log, apps, deps, chans, env)
     item = next((i for i in banks.get(rows[-1]["app"], []) if i["id"] == rows[-1]["item"]), None) if rows else None
     slides = sorted((root / "out" / day.isoformat()).glob("slide_*.jpg"), key=lambda p: int(p.stem.split("_")[1]))
     if item is None or not slides:
@@ -269,6 +272,46 @@ def recent_features(log: Path, app: str, day: date, days: int = NO_REPEAT_DAYS) 
     return feats
 
 
+def _story_extras(st, day, app_cfg, dst, url, deps, log, chans, li_text, tags) -> bool:
+    """Every extra channel for a story day: WhatsApp status video, YouTube (both channels), LinkedIn video, Threads video.
+    Each is skipped when it already succeeded today, so this is also the retry."""
+    ok = True
+    wa = chans.get("whatsapp")
+    if wa and dst.stat().st_size > WA_MAX_BYTES:
+        print(f"whatsapp skipped: {dst.stat().st_size / 1048576:.1f} MB is over WhatsApp's 16 MB video limit")
+        wa = None
+    if wa and day_status(log, day, "whatsapp") != "published":
+        ok &= _channel(day, "whatsapp", st["id"], deps, log, lambda: deps.send_whatsapp(wa, url, app_cfg["name"], st["caption"] + " " + app_cfg["play_url"]))
+    yt = chans.get("youtube", {})
+    if yt:
+        ok &= _do_youtube(day, app_cfg, st, dst, deps, log, yt, st.get("title", app_cfg["name"]), st["caption"])
+    if chans.get("linkedin_any") and day_status(log, day, "linkedin") != "published":
+        tok, urn = chans["linkedin_any"]
+        ok &= _channel(day, "linkedin", st["id"], deps, log,
+                       lambda: deps.post_linkedin_video(tok, urn, li_text, tags, dst, st.get("title", app_cfg["name"])))
+    if chans.get("threads") and day_status(log, day, "threads") != "published":
+        th_token, th_uid = chans["threads"]
+        text = build_threads_text(app_cfg, {"caption": st["caption"], "hashtags": st.get("hashtags", []), "slides": []})
+        ok &= _channel(day, "threads", st["id"], deps, log, lambda: deps.post_threads_video(th_uid, th_token, url, text))
+    return ok
+
+
+def _story_retry(row, day, root, log, apps, deps, chans, env) -> int:
+    """A story went out on Instagram earlier today; post the channels that are still missing."""
+    st = next((s for s in load_stories(root) if s["id"] == row["item"]), None)
+    if st is None:
+        print("cannot retry: today's story file is missing"); return 1
+    app_cfg = apps[st["app"]]
+    dst = root / "out" / day.isoformat() / "story.mp4"
+    if not dst.exists():
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(root / "stories" / "out" / f"{st['id']}.mp4", dst)
+    repo = env.get("GITHUB_REPOSITORY", DEFAULT_REPO)
+    url = f"https://raw.githubusercontent.com/{repo}/{row.get('sha') or deps.head_sha()}/out/{day.isoformat()}/story.mp4"
+    _, li_text, tags = story_captions(app_cfg, st)
+    return 0 if _story_extras(st, day, app_cfg, dst, url, deps, log, chans, li_text, tags) else 1
+
+
 def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log: Path, chans: dict, token: str, ig_id: str, mode: str) -> int:
     app_cfg = apps[st["app"]]
     src = root / "stories" / "out" / f"{st['id']}.mp4"
@@ -297,20 +340,7 @@ def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log
             print(f"run failed: {e}"); return 1
         _append(log, dict(entry, status="published", ids=ids)); deps.git_publish([log], f"log: published {day}")
         print(f"published story {st['id']}: {ids}")
-        ok = True
-        wa = chans.get("whatsapp")
-        if wa and dst.stat().st_size > WA_MAX_BYTES:
-            print(f"whatsapp skipped: {dst.stat().st_size / 1048576:.1f} MB is over WhatsApp's 16 MB video limit")
-            wa = None
-        if wa and day_status(log, day, "whatsapp") != "published":
-            ok &= _channel(day, "whatsapp", st["id"], deps, log, lambda: deps.send_whatsapp(wa, url, app_cfg["name"], st["caption"] + " " + app_cfg["play_url"]))
-        yt = chans.get("youtube", {})
-        if yt:
-            ok &= _do_youtube(day, app_cfg, st, dst, deps, log, yt, st.get("title", app_cfg["name"]), st["caption"])
-        if chans.get("linkedin_any") and day_status(log, day, "linkedin") != "published":
-            tok, urn = chans["linkedin_any"]
-            ok &= _channel(day, "linkedin", st["id"], deps, log,
-                           lambda: deps.post_linkedin_video(tok, urn, li_text, tags, dst, st.get("title", app_cfg["name"])))
+        ok = _story_extras(st, day, app_cfg, dst, url, deps, log, chans, li_text, tags)
         return 0 if ok else 1
     except (TimeoutError, InstagramError, subprocess.CalledProcessError) as e:
         print(f"run failed: {type(e).__name__}: {e}"); return 1

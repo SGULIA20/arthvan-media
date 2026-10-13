@@ -66,6 +66,15 @@ def post_carousel(uid: str, token: str, image_urls: list, text: str, sleep=time.
     return call("POST", f"/{uid}/threads_publish", token, {"creation_id": cid})["id"]
 
 
+def post_video(uid: str, token: str, video_url: str, text: str, sleep=time.sleep, max_polls: int = 60, poll_s: float = 10) -> str:
+    """One Reel as a Threads video post (9:16, up to five minutes). The URL must be public."""
+    if len(text) > MAX_TEXT:
+        raise ThreadsError(f"text is {len(text)} characters, Threads allows {MAX_TEXT}")
+    cid = call("POST", f"/{uid}/threads", token, {"media_type": "VIDEO", "video_url": video_url, "text": text})["id"]
+    _wait(cid, token, "video", sleep, max_polls, poll_s)
+    return call("POST", f"/{uid}/threads_publish", token, {"creation_id": cid})["id"]
+
+
 def me(token: str) -> dict:
     return call("GET", "/me", token, {"fields": "id,username"})
 

@@ -28,7 +28,7 @@ class World:
             sync_repo=lambda: None, head_sha=lambda: "deadbeef", post_linkedin=self.post_linkedin,
             post_threads=self.post_threads, prepare_video_set=self.prepare_video_set,
             post_linkedin_video=lambda *a: "urn:li:ugcPost:0", post_youtube=lambda *a: "VID0",
-            send_whatsapp=lambda *a: "wamid.0")
+            send_whatsapp=lambda *a: "wamid.0", post_threads_video=lambda *a: "TV0")
 
     def render_set(self, sel, app_cfg, out_dir, fps=30):
         self.rendered_ids.append(sel.item["id"])
@@ -464,3 +464,24 @@ def test_recent_features_are_the_apps_own_posts_of_the_last_ten_days(tmp_path):
     assert recent_features(log, "waypoint", day) == ["wall"]
     assert recent_features(log, "scoremybiz", date(2026, 10, 21)) == ["book", "today"]   # 11 days on, the 10 Oct post has aged out (exactly 10 days still counts)
     assert recent_features(tmp_path / "missing.jsonl", "waypoint", day) == []
+
+
+def test_a_story_day_also_posts_a_threads_video_and_a_later_run_retries_only_what_is_missing(tmp_path):
+    w = World(tmp_path)
+    (tmp_path / "stories" / "out").mkdir(parents=True)
+    (tmp_path / "stories" / "out" / "s-en.mp4").write_bytes(b"v" * 100)
+    (tmp_path / "stories" / "s_en.json").write_text(json.dumps({"id": "s-en", "app": "scoremybiz", "post_on": "2026-10-14", "character": "lumi", "caption": "Cap", "hashtags": ["#A"], "title": "T"}))
+    tv, yt = [], []
+    w.deps.post_threads_video = lambda uid, tok, url, text: tv.append((uid, url, text)) or "TV1"
+    flaky = {"n": 0}
+    def post_youtube(channel, path, title, desc, play, tags):
+        flaky["n"] += 1
+        if flaky["n"] <= 2: raise YouTubeError("quota")
+        yt.append(channel["refresh_token"]); return "V"
+    w.deps.post_youtube = post_youtube
+    env = dict(ENV, THREADS_ACCESS_TOKEN="th", THREADS_USER_ID="77", YT_CLIENT_ID="c", YT_CLIENT_SECRET="s", YT_SGLEARNING_REFRESH_TOKEN="a", YT_ARTHVAN_REFRESH_TOKEN="b")
+    assert go(w, env=env, day=date(2026, 10, 14)) == 1                       # both YouTube channels failed: the run is red, the rest went out
+    assert last_entry(tmp_path, "threads")["status"] == "published" and len(tv) == 1 and tv[0][0] == "77" and tv[0][1].endswith("/out/2026-10-14/story.mp4") and "Cap" in tv[0][2]
+    assert w.count("publish") == 1
+    assert go(w, env=env, day=date(2026, 10, 14)) == 0                       # retry: only YouTube is attempted again
+    assert len(tv) == 1 and sorted(yt) == ["a", "b"] and w.count("publish") == 1
