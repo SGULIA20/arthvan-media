@@ -9,6 +9,7 @@ from pathlib import Path
 from engine.gemini import GeminiError, ask
 from engine.tts import api_key
 from engine.broll import status_line
+from engine.coverage import summary_line as coverage_line
 
 HERE = Path(__file__).resolve().parent
 THEMES = {
@@ -98,7 +99,7 @@ def render(cur: dict, prev, gemini: bool) -> str:
                 out += ["**Three story ideas (Gemini):**", "", ask(ideas_prompt(app, comps)), ""]
             except GeminiError as e:
                 out += [f"_Story ideas skipped: {e}_", ""]
-    out += ["", status_line(), ""]
+    out += ["", status_line(), coverage_line(), ""]
     return "\n".join(out)
 
 

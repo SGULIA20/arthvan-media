@@ -32,3 +32,19 @@ def test_every_new_reel_is_filed_in_the_one_folder_and_nothing_is_replaced(tmp_p
     assert file_in_reels_folder(mp4, "first-en", folder).read_bytes() == b"one"           # an existing Reel is never replaced
     assert file_in_reels_folder(mp4, "third-en", folder).read_bytes() == b"three"
     assert sorted(f.name for f in folder.glob("*.mp4")) == ["01-first-en.mp4", "02-second-hi.mp4", "03-third-en.mp4"]
+
+
+def test_a_filmed_story_converts_to_the_in_house_cutout_style_without_any_shot():
+    from engine.story import cutout_story, shot_plan
+    st = {"id": "x", "character": "lumi", "cast": {"a": "Asha"}, "scenes": [
+        {"layout": "clip", "clip": "{a} talks", "refs": ["lumi"], "vo": "Hi", "sub": "Hi", "title": "T", "min": 8},
+        {"layout": "clip", "clip": "{a} counts", "vo": "One", "sub": "One", "card": "Night", "min": 8},
+        {"layout": "clip", "clip": "{a} taps", "screen": "book.png", "vo": "Two", "sub": "Two", "min": 8},
+        {"layout": "end", "pose": "front_happy", "vo": "End", "sub": "", "min": 5}]}
+    c = cutout_story(st)
+    assert shot_plan(c) == [] and c["style"] == "cutout"
+    assert [s["layout"] for s in c["scenes"]] == ["talk", "scene", "present", "end"]
+    assert c["scenes"][0]["pose"] == "head_neutral" and c["scenes"][1]["card"] == "Night" and c["scenes"][2]["screen"] == "book.png"
+    assert all("clip" not in s and "refs" not in s for s in c["scenes"]) and st["scenes"][1]["layout"] == "clip"      # the original is untouched
+    from engine.story import CHAR_DIR
+    assert all((CHAR_DIR / f"lumi_{s['pose']}.png").exists() for s in c["scenes"] if s["layout"] != "end")

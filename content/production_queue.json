@@ -1,0 +1,381 @@
+[
+ {
+  "date": "2026-10-27",
+  "app": "waypoint",
+  "lead": "male",
+  "hero": "invite",
+  "also": [],
+  "names": [
+   "Invite with a code"
+  ]
+ },
+ {
+  "date": "2026-10-29",
+  "app": "waypoint",
+  "lead": "female",
+  "hero": "mira-guide",
+  "also": [],
+  "names": [
+   "Mira, the AI guide"
+  ]
+ },
+ {
+  "date": "2026-11-02",
+  "app": "waypoint",
+  "lead": "female",
+  "hero": "mood-log",
+  "also": [],
+  "names": [
+   "Daily feelings log"
+  ]
+ },
+ {
+  "date": "2026-11-04",
+  "app": "waypoint",
+  "lead": "male",
+  "hero": "reveal",
+  "also": [],
+  "names": [
+   "Name reveal and reminder"
+  ]
+ },
+ {
+  "date": "2026-11-06",
+  "app": "waypoint",
+  "lead": "female",
+  "hero": "saved-posts",
+  "also": [],
+  "names": [
+   "Saved posts"
+  ]
+ },
+ {
+  "date": "2026-11-07",
+  "app": "scoremybiz",
+  "lead": "female",
+  "hero": "same-every-month",
+  "also": [
+   "undo-after-remove",
+   "entries-without-signal"
+  ],
+  "names": [
+   "Same-every-month costs",
+   "Undo after removing",
+   "Entries saved without signal"
+  ]
+ },
+ {
+  "date": "2026-11-08",
+  "app": "waypoint",
+  "lead": "male",
+  "hero": "wrapped",
+  "also": [],
+  "names": [
+   "Monthly recap"
+  ]
+ },
+ {
+  "date": "2026-11-09",
+  "app": "scoremybiz",
+  "lead": "male",
+  "hero": "whatsapp-daily-update",
+  "also": [
+   "whatsapp-menu-reports",
+   "voice-entry"
+  ],
+  "names": [
+   "Record the day on WhatsApp",
+   "WhatsApp menu and quick reports",
+   "Say your entry out loud"
+  ]
+ },
+ {
+  "date": "2026-11-10",
+  "app": "waypoint",
+  "lead": "female",
+  "hero": "chat",
+  "also": [],
+  "names": [
+   "Timed one-to-one chat"
+  ]
+ },
+ {
+  "date": "2026-11-11",
+  "app": "scoremybiz",
+  "lead": "female",
+  "hero": "money-now",
+  "also": [
+   "money-to-collect",
+   "money-to-pay"
+  ],
+  "names": [
+   "Money I have right now",
+   "Money to collect",
+   "Money I have to pay"
+  ]
+ },
+ {
+  "date": "2026-11-12",
+  "app": "waypoint",
+  "lead": "male",
+  "hero": "delete-own-post",
+  "also": [],
+  "names": [
+   "Delete your own post"
+  ]
+ },
+ {
+  "date": "2026-11-13",
+  "app": "scoremybiz",
+  "lead": "male",
+  "hero": "customer-history",
+  "also": [
+   "customer-reminders",
+   "sold-bought-spent-lists"
+  ],
+  "names": [
+   "One customer's full history",
+   "Reminders to customers",
+   "Lists of sold, bought, spent"
+  ]
+ },
+ {
+  "date": "2026-11-14",
+  "app": "waypoint",
+  "lead": "female",
+  "hero": "leaderboard",
+  "also": [],
+  "names": [
+   "Points and leaderboard"
+  ]
+ },
+ {
+  "date": "2026-11-15",
+  "app": "scoremybiz",
+  "lead": "female",
+  "hero": "cash-book-by-day",
+  "also": [
+   "year-end-close",
+   "file-for-accountant"
+  ],
+  "names": [
+   "Cash book, day by day",
+   "Year-end close",
+   "File for my accountant"
+  ]
+ },
+ {
+  "date": "2026-11-16",
+  "app": "waypoint",
+  "lead": "male",
+  "hero": "moments",
+  "also": [],
+  "names": [
+   "Moments picture status"
+  ]
+ },
+ {
+  "date": "2026-11-17",
+  "app": "scoremybiz",
+  "lead": "male",
+  "hero": "bills-for-customers",
+  "also": [
+   "quotes-for-customers",
+   "items-and-prices"
+  ],
+  "names": [
+   "Bills for customers",
+   "Quotes before the order",
+   "My items and prices"
+  ]
+ },
+ {
+  "date": "2026-11-18",
+  "app": "waypoint",
+  "lead": "female",
+  "hero": "reactions",
+  "also": [],
+  "names": [
+   "Reactions on posts"
+  ]
+ },
+ {
+  "date": "2026-11-19",
+  "app": "scoremybiz",
+  "lead": "female",
+  "hero": "bills-tax-settings",
+  "also": [
+   "printable-daily-sheet",
+   "score-from-my-book"
+  ],
+  "names": [
+   "Bill numbers and tax settings",
+   "Printable daily sheet",
+   "Score that follows my book"
+  ]
+ },
+ {
+  "date": "2026-11-20",
+  "app": "waypoint",
+  "lead": "male",
+  "hero": "share-cards",
+  "also": [],
+  "names": [
+   "Share as an image"
+  ]
+ },
+ {
+  "date": "2026-11-21",
+  "app": "scoremybiz",
+  "lead": "male",
+  "hero": "risk-flags-behind-score",
+  "also": [
+   "personal-health-score",
+   "share-score-picture"
+  ],
+  "names": [
+   "Risk flags behind the score",
+   "Personal Health Score",
+   "Share my score picture"
+  ]
+ },
+ {
+  "date": "2026-11-22",
+  "app": "waypoint",
+  "lead": "female",
+  "hero": "translate-content",
+  "also": [],
+  "names": [
+   "Translate posts and chats"
+  ]
+ },
+ {
+  "date": "2026-11-23",
+  "app": "scoremybiz",
+  "lead": "female",
+  "hero": "share-my-week-picture",
+  "also": [
+   "streak-and-challenge",
+   "ask-the-advisor"
+  ],
+  "names": [
+   "Share my week picture",
+   "Daily streak and weekly challenge",
+   "Ask the Advisor"
+  ]
+ },
+ {
+  "date": "2026-11-24",
+  "app": "waypoint",
+  "lead": "male",
+  "hero": "wall-sort-search-surprise",
+  "also": [],
+  "names": [
+   "Top posts, search, surprise"
+  ]
+ },
+ {
+  "date": "2026-11-25",
+  "app": "scoremybiz",
+  "lead": "male",
+  "hero": "reminders-in-my-words",
+  "also": [
+   "open-shop-and-sell-more-plans"
+  ],
+  "names": [
+   "Reminders in my own words",
+   "Open-a-shop and sell-more plans"
+  ]
+ },
+ {
+  "date": "2026-11-27",
+  "app": "scoremybiz",
+  "lead": "female",
+  "hero": "break-even",
+  "also": [
+   "what-if-simulator"
+  ],
+  "names": [
+   "Break-even: how much to sell",
+   "What-if simulator"
+  ]
+ },
+ {
+  "date": "2026-11-29",
+  "app": "scoremybiz",
+  "lead": "male",
+  "hero": "decision-practice",
+  "also": [
+   "free-calculators"
+  ],
+  "names": [
+   "Three-round decision practice",
+   "Free profit and cash calculators"
+  ]
+ },
+ {
+  "date": "2026-12-01",
+  "app": "scoremybiz",
+  "lead": "female",
+  "hero": "offer-posters",
+  "also": [
+   "business-network"
+  ],
+  "names": [
+   "Offer posters and WhatsApp status",
+   "Business network"
+  ]
+ },
+ {
+  "date": "2026-12-03",
+  "app": "scoremybiz",
+  "lead": "male",
+  "hero": "schemes-and-weather",
+  "also": [
+   "invite-a-friend"
+  ],
+  "names": [
+   "Government schemes and weather",
+   "Invite a friend"
+  ]
+ },
+ {
+  "date": "2026-12-05",
+  "app": "scoremybiz",
+  "lead": "female",
+  "hero": "notifications-inbox",
+  "also": [
+   "works-in-your-language"
+  ],
+  "names": [
+   "Notifications inbox",
+   "Works in 25 languages"
+  ]
+ },
+ {
+  "date": "2026-12-07",
+  "app": "scoremybiz",
+  "lead": "male",
+  "hero": "nineteen-countries",
+  "also": [
+   "free-month-and-plans"
+  ],
+  "names": [
+   "Works in 19 countries",
+   "Free month and plans"
+  ]
+ },
+ {
+  "date": "2026-12-09",
+  "app": "scoremybiz",
+  "lead": "female",
+  "hero": "helpers-with-own-login",
+  "also": [
+   "several-shops"
+  ],
+  "names": [
+   "Helpers with their own login",
+   "Several shops, one login"
+  ]
+ }
+]

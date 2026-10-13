@@ -2,7 +2,7 @@
 
 python -m engine.story stories/lumi_friday_hi.json out_dir
 """
-import json, re, shutil, subprocess, sys, tempfile, wave
+import json, os, re, shutil, subprocess, sys, tempfile, wave
 from pathlib import Path
 
 import numpy as np
@@ -46,6 +46,37 @@ def file_in_reels_folder(mp4: Path, story_id: str, folder: Path = None) -> Path:
     return dst
 
 
+_PRESENT_POSES = ("explaining_right", "phone", "phone_sofa", "curious", "front_standing", "pointing_up", "thinking", "relieved", "listening", "front_happy", "front_neutral")
+
+
+def cutout_story(story: dict) -> dict:
+    """The in-house style of the first Reels (cut-out character on a gradient with the real app screens), made from a
+    filmed story: no Veo shots are needed. A scene with a screen becomes a 'present' scene, a scene without becomes a
+    'scene' with its card, the first scene a talking head, the end card stays."""
+    import copy
+    st = copy.deepcopy(story); who = st["character"]; n = 0
+    have = lambda pose: (CHAR_DIR / f"{who}_{pose}.png").exists()
+    poses = [p for p in _PRESENT_POSES if have(p)] or ["front_neutral"]
+    for i, sc in enumerate(st["scenes"]):
+        if sc.get("layout") != "clip":
+            continue
+        if i == 0 and have("head_neutral"):
+            sc["layout"] = "talk"; sc["pose"] = "head_neutral"
+        elif sc.get("screen"):
+            sc["layout"] = "present"; sc["pose"] = poses[n % len(poses)]; n += 1
+        else:
+            sc["layout"] = "scene"; sc["pose"] = poses[n % len(poses)]; n += 1
+            sc.setdefault("card", sc.get("title") or "")
+        sc.pop("clip", None); sc.pop("refs", None); sc["min"] = min(sc.get("min", 6), 7)
+    st.pop("cast", None); st["style"] = "cutout"
+    return st
+
+
+def film_available() -> bool:
+    """New Veo shots can only be made while the Google trial credit lasts (see engine.broll)."""
+    return not broll.pace()["finished"]
+
+
 def shot_plan(story: dict) -> list:
     """Every filmed shot a story needs: (scene number, prompt, reference pictures, cached?). Reading only, spends nothing."""
     out = []
@@ -74,7 +105,12 @@ def voice_clip(text: str, voice: str, rate: int, out_wav: Path) -> float:
 
 def build(story_path: Path, out_dir: Path) -> Path:
     story = json.loads(Path(story_path).read_text())
-    print(price_line(story), flush=True)
+    plan = shot_plan(story)
+    if plan and (os.environ.get("REEL_STYLE") == "cutout" or (any(not c for (_i, _p, _r, c) in plan) and not film_available())):
+        print("film shots are not available (or REEL_STYLE=cutout): making the cut-out style Reel", flush=True)
+        story = cutout_story(story)
+    else:
+        print(price_line(story), flush=True)
     app = load_apps()[story["app"]]
     out_dir = Path(out_dir); out_dir.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as tmp:

@@ -1,0 +1,26 @@
+{
+ "_note": "Features that are real but are not marketing material (safety, legal, account admin). Founder can overrule any line: delete it and the feature joins the Reel queue.",
+ "not_advertised": {
+  "waypoint": {
+   "report-and-block": "safety tool; advertising it invites misreading",
+   "helpline-pause": "crisis support behaviour; never marketing",
+   "delete-account": "account admin",
+   "pre-post-screening": "moderation internals",
+   "welcome-age-gate": "age gate",
+   "not-official-label": "label on posts",
+   "push-notifications": "system behaviour",
+   "update-and-offline": "system behaviour",
+   "help-faq-legal": "legal and help pages",
+   "feedback": "support form",
+   "whats-new": "release notes screen",
+   "removed-account-appeal": "moderation process"
+  },
+  "scoremybiz": {
+   "report-a-problem": "support form",
+   "download-or-delete-my-data": "privacy admin",
+   "change-or-recover-number": "account admin",
+   "sign-in-whatsapp-code": "login mechanics",
+   "my-business-details": "profile form"
+  }
+ }
+}
