@@ -1,0 +1,77 @@
+{
+ "id": "founder-breakroom-en",
+ "app": "waypoint",
+ "lang": "en",
+ "character": "founder_casual",
+ "feature": "break-room",
+ "title": "90 seconds",
+ "post_on": "2026-10-15",
+ "caption": "Some days need a room to break things in. Imran's takes ninety seconds. The founder tells his story.",
+ "linkedin_text": "Some working days end with a clenched jaw and a long ride home.\n\nWaypoint has a Break Room: a small drawn room, a bat, twenty things that crack and break with sound and vibration, and ninety seconds, once a day. The founder character tells Imran's story; every screen is the real app.",
+ "hashtags": [
+  "#BreakRoom",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "imran": "Imran, a young Indian man in his late twenties with short black hair, a light blue office shirt with rolled sleeves and a lanyard"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a rooftop at dusk, warm city lights beginning to glow behind him, a relaxed smile.",
+   "vo": "Hi. This is Imran's story. Some days end with a clenched jaw and nowhere to put it.",
+   "sub": "Hi. This is Imran's story. Some days end with a clenched jaw and nowhere to put it.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "90 seconds"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} at an office desk in the evening, a stack of files, shoulders tight, jaw set, a laptop screen glowing, the office nearly empty.",
+   "vo": "Eight hours of emails. One call that went badly. And a long ride home to get through.",
+   "sub": "Eight hours of emails. One call that went badly. And a long ride home to get through.",
+   "min": 8,
+   "card": "Long day"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} sitting on a parked motorbike outside his building at dusk, holding his phone, a thoughtful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "On Waypoint there is a Break Room. Tap the bat, and swing it through a little drawn room.",
+   "sub": "On Waypoint there is a Break Room. Tap the bat, and swing it through a little drawn room.",
+   "min": 8,
+   "screen": "break-room.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Close on a thumb swiping fast across a phone screen, a small determined smile on the face behind it, dusk light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Twenty things crack and break, with sound and a buzz. A few push back, so it is not too easy.",
+   "sub": "Twenty things crack and break, with sound and a buzz. A few push back, so it is not too easy.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} laughing softly at his phone on the parked motorbike, shoulders loosened, streetlights coming on, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Ninety seconds, once a day. Your top count is kept, and you can share the score as a picture.",
+   "sub": "Ninety seconds, once a day. Your top count is kept, and you can share the score as a picture.",
+   "min": 8,
+   "screen": "break-room.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} riding a motorbike home through warm evening city traffic, relaxed, the sky turning orange behind the buildings.",
+   "vo": "Then you ride home. The room will be there tomorrow.",
+   "sub": "Then you ride home. The room will be there tomorrow.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

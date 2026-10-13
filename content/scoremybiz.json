@@ -41,7 +41,7 @@
     "text": "Know where your money is."
    }
   ],
-  "feature": "cash-reality"
+  "feature": "profit-on-paper-vs-cash"
  },
  {
   "id": "smb-seven-areas",
@@ -81,7 +81,7 @@
     "text": "areas checked in one score."
    }
   ],
-  "feature": "score-areas"
+  "feature": "business-health-score"
  },
  {
   "id": "smb-eight-numbers",
@@ -116,7 +116,7 @@
     "text": "Then see where you stand."
    }
   ],
-  "feature": "book"
+  "feature": "sold-bought-spent-entry"
  },
  {
   "id": "smb-sales-vs-cash",
@@ -164,7 +164,7 @@
     "text": "Enter the numbers. See the story."
    }
   ],
-  "feature": "cash-reality"
+  "feature": "profit-on-paper-vs-cash"
  },
  {
   "id": "smb-unpaid-bills",
@@ -199,7 +199,7 @@
     "sample": true
    }
   ],
-  "feature": "payables"
+  "feature": "money-to-collect"
  },
  {
   "id": "smb-emi-weight",
@@ -244,7 +244,7 @@
     "text": "Debt burden is one of the seven areas."
    }
   ],
-  "feature": "emi"
+  "feature": "business-health-score"
  },
  {
   "id": "smb-cost-split",
@@ -296,7 +296,7 @@
     "text": "Small leaks add up."
    }
   ],
-  "feature": "cost-split"
+  "feature": "business-health-score"
  },
  {
   "id": "smb-working-capital",
@@ -330,7 +330,7 @@
     "text": "Buy what sells. Hold less of what does not."
    }
   ],
-  "feature": "stock"
+  "feature": "business-health-score"
  },
  {
   "id": "smb-liquidity",
@@ -364,7 +364,7 @@
     "text": "is one of the seven areas."
    }
   ],
-  "feature": "liquidity"
+  "feature": "business-health-score"
  },
  {
   "id": "smb-growth",
@@ -398,7 +398,7 @@
     ]
    }
   ],
-  "feature": "growth"
+  "feature": "score-history"
  },
  {
   "id": "smb-weekly-habit",
@@ -432,7 +432,7 @@
     "text": "for 30 days. No credit card."
    }
   ],
-  "feature": "weekly-score"
+  "feature": "score-history"
  },
  {
   "id": "smb-advisor",
@@ -466,7 +466,7 @@
     ]
    }
   ],
-  "feature": "advisor"
+  "feature": "ask-the-advisor"
  },
  {
   "id": "smb-free-trial",
@@ -500,7 +500,7 @@
     "text": "Know where your money is."
    }
   ],
-  "feature": "trial"
+  "feature": "free-month-and-plans"
  },
  {
   "id": "smb-kirana-sample",
@@ -553,7 +553,7 @@
     "text": "The weakest area is the first thing to fix."
    }
   ],
-  "feature": "sample-score"
+  "feature": "business-health-score"
  },
  {
   "id": "smb-myth",
@@ -595,7 +595,7 @@
     "text": "every month."
    }
   ],
-  "feature": "cash-reality"
+  "feature": "profit-on-paper-vs-cash"
  },
  {
   "id": "smb-cash-stuck",
@@ -629,7 +629,7 @@
     "text": "minutes to find out."
    }
   ],
-  "feature": "cash-stuck"
+  "feature": "profit-on-paper-vs-cash"
  },
  {
   "id": "smb-why-score",
@@ -663,7 +663,7 @@
     "text": "areas in one score."
    }
   ],
-  "feature": "score"
+  "feature": "business-health-score"
  },
  {
   "id": "smb-month-end",
@@ -698,7 +698,7 @@
     "text": "for 30 days. No credit card."
    }
   ],
-  "feature": "month-end"
+  "feature": "cash-book-by-day"
  },
  {
   "id": "smb-made-for",
@@ -806,7 +806,7 @@
  {
   "id": "smb-invite-friend",
   "template": "ink",
-  "feature": "invite-friend",
+  "feature": "invite-a-friend",
   "caption": "Know a shopkeeper who should see their score? Send them your invite link from the app.",
   "hashtags": [
    "#InviteAFriend",
@@ -835,7 +835,7 @@
  {
   "id": "smb-dues-reminders",
   "template": "spark",
-  "feature": "dues-reminders",
+  "feature": "customer-reminders",
   "caption": "One tap sends a polite reminder to a customer who owes you. No awkward call.",
   "hashtags": [
    "#Udhar",
@@ -871,7 +871,7 @@
  {
   "id": "smb-balance-sheet",
   "template": "ink",
-  "feature": "balance-sheet",
+  "feature": "what-i-have-and-owe",
   "caption": "What you own, what you owe, what is left. ScoreMyBiz draws it from your own book.",
   "hashtags": [
    "#BalanceSheet",
@@ -906,7 +906,7 @@
  {
   "id": "smb-recurring",
   "template": "dusk",
-  "feature": "recurring",
+  "feature": "same-every-month",
   "caption": "Rent, salaries, the same bills every month. Set them once; ScoreMyBiz enters them for you.",
   "hashtags": [
    "#Recurring",
@@ -940,7 +940,7 @@
  {
   "id": "smb-tasks",
   "template": "dusk",
-  "feature": "tasks",
+  "feature": "next-moves",
   "caption": "Three moves for the week, chosen from your own numbers. Tick them off as you go.",
   "hashtags": [
    "#WeeklyTasks",
@@ -974,7 +974,7 @@
  {
   "id": "smb-bills-to-pay",
   "template": "ink",
-  "feature": "bills-to-pay",
+  "feature": "money-to-pay",
   "caption": "Who do you have to pay this week? The supplier list, with due dates, in one place.",
   "hashtags": [
    "#Suppliers",
@@ -1001,10 +1001,10 @@
   ]
  },
  {
-  "id": "smb-nine-countries",
+  "id": "smb-nineteen-countries",
   "template": "dusk",
-  "feature": "countries",
-  "caption": "Built for shops in India, Nigeria, Kenya, Ghana, the UAE, the UK, the US, Australia and New Zealand.",
+  "feature": "nineteen-countries",
+  "caption": "Built for shops in India, Nigeria, Kenya, Ghana, the UAE, the UK, the US, Australia, New Zealand and ten euro countries.",
   "hashtags": [
    "#SmallBusiness",
    "#ScoreMyBiz"
@@ -1018,8 +1018,8 @@
     "kind": "steps",
     "text": "Your currency, your words",
     "items": [
-     "Rupees, naira, shillings, cedis, dirhams",
-     "Pounds, dollars, in your own format",
+     "Your own money, tax word and rates",
+     "25 languages, including Arabic and Urdu",
      "The same score, out of 100, everywhere"
     ]
    },
@@ -1032,7 +1032,7 @@
  {
   "id": "smb-streak",
   "template": "spark",
-  "feature": "streak",
+  "feature": "streak-and-challenge",
   "caption": "Enter today's numbers and keep the streak alive. Shops that enter daily see the score move.",
   "hashtags": [
    "#DailyHabit",
@@ -1067,7 +1067,7 @@
  {
   "id": "smb-profit-loss",
   "template": "ink",
-  "feature": "profit-loss",
+  "feature": "profit-report",
   "caption": "Profit and loss in plain words: what came in, what went out, what stayed.",
   "hashtags": [
    "#ProfitAndLoss",

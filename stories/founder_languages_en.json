@@ -1,0 +1,78 @@
+{
+ "id": "founder-languages-en",
+ "app": "waypoint",
+ "lang": "en",
+ "character": "founder_casual",
+ "feature": "languages",
+ "title": "Your language",
+ "post_on": "2026-10-23",
+ "caption": "He thinks in Swahili and scrolls in English. Joseph switches on Waypoint's languages. The founder tells his story.",
+ "linkedin_text": "Most apps ask people to read in a language that is not their first.\n\nWaypoint works in 16 languages, and a post written in another language can be translated with one tap, or automatically. The founder character tells Joseph's story; every screen is the real app.",
+ "hashtags": [
+  "#Languages",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "joseph": "Joseph, a young Kenyan man in his twenties with short hair, a green polo shirt and a student backpack"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera in a busy colourful street market in the afternoon, a warm smile.",
+   "vo": "Hi. This is Joseph's story. He thinks in Swahili and scrolls in English.",
+   "sub": "Hi. This is Joseph's story. He thinks in Swahili and scrolls in English.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "Your language"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} at a bus stop in Nairobi holding his phone with a slightly tired look, a matatu minibus passing behind him, afternoon light.",
+   "vo": "Most apps ask him to read in a language that is not his first.",
+   "sub": "Most apps ask him to read in a language that is not his first.",
+   "min": 8,
+   "card": "Not his first"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} sitting on a bench in a sunny park scrolling his phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Waypoint has sixteen languages. Everyone picks their own.",
+   "sub": "Waypoint has sixteen languages. Everyone picks their own.",
+   "min": 8,
+   "screen": "language.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} smiling at his phone as he reads, a friend looking over his shoulder, afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A post comes in from another language. One tap, and it is translated.",
+   "sub": "A post comes in from another language. One tap, and it is translated.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} on a minibus seat reading his phone with a relaxed grin, bright street passing the window, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Or he can switch on auto-translate, and the Wall reads in his language.",
+   "sub": "Or he can switch on auto-translate, and the Wall reads in his language.",
+   "min": 8,
+   "screen": "my-waypoints.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} laughing with friends outside a university building in warm light, phone in hand.",
+   "vo": "Same Wall. His own words.",
+   "sub": "Same Wall. His own words.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

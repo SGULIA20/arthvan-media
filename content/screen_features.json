@@ -6,7 +6,26 @@
   "matching.png": "matching",
   "calm.png": "calm-kit",
   "explore.png": "daily-news",
-  "welcome.png": "fresh-name"
+  "welcome.png": "fresh-name",
+  "break-room.png": "break-room",
+  "poll.png": "polls",
+  "voice.png": "voice-posts",
+  "my-waypoints.png": "my-waypoints",
+  "wrapped.png": "wrapped",
+  "reveal.png": "fresh-name",
+  "language.png": "languages",
+  "saved.png": "saved-posts",
+  "customize.png": "customize-name",
+  "whats-new.png": "whats-new"
  },
- "scoremybiz": {}
+ "scoremybiz": {
+  "advisor.png": "ask-the-advisor",
+  "book.png": "sold-bought-spent-entry",
+  "cash-reality.png": "profit-on-paper-vs-cash",
+  "dashboard.png": "home-screen",
+  "profit-loss.png": "profit-report",
+  "score-history.png": "score-history",
+  "result.png": "business-health-score",
+  "tasks.png": "next-moves"
+ }
 }

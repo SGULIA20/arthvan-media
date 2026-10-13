@@ -542,5 +542,979 @@
    "status": "general"
   }
  },
- "scoremybiz": {}
+ "scoremybiz": {
+  "sold-bought-spent-entry": {
+   "name": "Sold, Bought, Spent entries",
+   "summary": "From Home he taps Sold, Bought or Spent, types the amount, who, optional items and whether it was paid now or will be paid later with a due date, and it goes into the one book that every report and the score read.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "A customer takes goods now and says he will pay next week, and the shopkeeper wants it written down before the next person reaches the counter.",
+   "avoid_words": [
+    "Do not call it accounting or tax software and do not say it files anything.",
+    "Do not say a pay-later sale counts as cash until it is marked paid.",
+    "Do not promise the customer will be reminded or will pay."
+   ],
+   "app_route": "/book"
+  },
+  "daily-totals-update": {
+   "name": "Today's totals in one go",
+   "summary": "When short of time he types just the day's sales and spending, optionally the cash in hand and bank balance, and the book takes them as that day's totals without itemising.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "It was a busy day with no time to write each sale, so he gives only the three totals before closing the shop.",
+   "avoid_words": [
+    "Do not say it changes the score by itself at once; the score is rebuilt from the book later.",
+    "If the day was already itemised in the book, the typed totals are ignored (only cash in hand applies), so do not promise it overwrites."
+   ],
+   "app_route": "/daily-update"
+  },
+  "photo-entry": {
+   "name": "Read numbers from a photo",
+   "summary": "He photographs a bill or a notebook page (or picks a photo) and the app reads the numbers into the entry form or the score form for him to check before he saves.",
+   "status": "gated",
+   "gate": "Needs AI: free month (30 photos a month) or Monthly/Yearly plan (100 a month per the plan screen). Not on the Lifetime plan (the card is hidden and the server answers 'Not in your plan'). Needs an account.",
+   "demo_possible": false,
+   "story_hook": "The shopkeeper has a handwritten notebook page and a stack of supplier bills and does not want to type each number again.",
+   "avoid_words": [
+    "Do not say it is always accurate or reads any handwriting; always say 'check it, then Save'.",
+    "Do not offer it to Lifetime-plan owners.",
+    "Do not say unlimited; there is a monthly pool.",
+    "Do not promise the Yearly plan gets 100 a month until the cap bug in notes is fixed."
+   ],
+   "app_route": "/book",
+   "show_ok": true
+  },
+  "voice-entry": {
+   "name": "Say your entry out loud",
+   "summary": "He speaks one sentence of up to 60 seconds such as 'Sold 2,000 to Raju on credit' and the app writes down what, how much and who into the entry form or score form for him to check before saving.",
+   "status": "gated",
+   "gate": "Needs AI: free month (30 voice entries a month) or Monthly/Yearly plan (60 a month per the plan screen). Not on the Lifetime plan. Needs microphone permission and an account.",
+   "demo_possible": false,
+   "story_hook": "His hands are full of stock at the counter, so he says the sale instead of typing it.",
+   "avoid_words": [
+    "Do not say it understands every language or accent; the code comment says Assamese could not be confirmed.",
+    "Do not say it saves by itself; he reviews the filled form and presses Save.",
+    "Do not promise the Yearly plan gets 60 a month until the cap bug (see photo-entry notes) is fixed."
+   ],
+   "app_route": "/book",
+   "show_ok": true
+  },
+  "whatsapp-daily-update": {
+   "name": "Record the day on WhatsApp",
+   "summary": "He messages the ScoreMyBiz WhatsApp number 'sales 5000 expenses 1200 cash 3000' and it is recorded at once, or sends a photo of his daily notebook or a voice note, the bot reads it back and it goes into the book only after he replies YES.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": false,
+   "story_hook": "At closing time he is tired, so he sends the day's three numbers from the chat he already has open.",
+   "avoid_words": [
+    "Do not show or describe the guided back-and-forth chat on examples.html (Becha/Kharida/Diya questions); that page itself says it is illustrative. The bot takes one message with all three numbers.",
+    "Do not say he can type a natural sentence like 'sold 5000 cash'; only the three-number format, a photo or a voice note work.",
+    "Do not promise instant replies or unlimited use; there is a daily action ceiling.",
+    "Photo and voice on WhatsApp are not on the Lifetime plan."
+   ],
+   "app_route": null
+  },
+  "whatsapp-menu-reports": {
+   "name": "WhatsApp menu and quick reports",
+   "summary": "A 'hi' or 'menu' on WhatsApp returns a numbered list (score and numbers, profit, who owes me, add today's sales, renew, report a problem, ask the Advisor) and the report words answer from his own book without AI.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": false,
+   "story_hook": "He is at the wholesaler and wants to know who still owes him money without opening the app.",
+   "avoid_words": [
+    "Asking the Advisor on WhatsApp is not on the Lifetime plan and has a daily ceiling.",
+    "Do not say the Advisor replies like a person; it is an AI and can be wrong.",
+    "Do not claim all replies are in perfect local language; they are machine translated."
+   ],
+   "app_route": null
+  },
+  "evening-whatsapp-reminder": {
+   "name": "Evening WhatsApp reminder",
+   "summary": "If he has recorded nothing for two quiet days, a short WhatsApp reaches him at 7 pm his time with a button to add today's sales, and he can reply STOP to switch it off.",
+   "status": "gated",
+   "gate": "Free month or Monthly/Yearly plan only; never on the Lifetime plan or to a lapsed owner; at most 3 a week; paused after 30 days with nothing recorded; the approved template is English only.",
+   "demo_possible": false,
+   "story_hook": "Two days slip by without a single entry and a gentle nudge brings him back to the habit.",
+   "avoid_words": [
+    "Do not say it messages every day.",
+    "Do not say it is available in his language; the Meta template is English only.",
+    "Do not promise it on the Lifetime plan."
+   ],
+   "app_route": null
+  },
+  "money-to-collect": {
+   "name": "Money to collect",
+   "summary": "He sees every customer who owes him with the amount and days overdue, the five worth calling first, a one-tap WhatsApp reminder, and Mark paid for a full or part payment that also lands in the book.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "Month-end arrives and he cannot remember which customers still owe him or since when.",
+   "avoid_words": [
+    "'Likelihood' and 'moves your Cash Flow score ~N points' are estimates; never present them as predictions or promised gains.",
+    "The MSME Samadhaan note (India only, 45+ days overdue) is a pointer, not legal advice; do not say it recovers money.",
+    "Do not use the word ledger in customer copy."
+   ],
+   "app_route": "/cash-flow"
+  },
+  "customer-reminders": {
+   "name": "Reminders to customers",
+   "summary": "On the due day and 3, 7, 15 and 30 days later ScoreMyBiz sends the customer a polite WhatsApp reminder in the shop's name, and on any plan he can also send one himself in one tap from his own WhatsApp.",
+   "status": "gated",
+   "gate": "Automatic sends: free month or Monthly/Yearly plan; never on Lifetime (that plan gets the one-tap reminder from his own WhatsApp) or to a lapsed owner. Only for customers with a saved phone and a due date; 100 sends per account per month (supplier texts count too); sent at the owner's local 10:00; approved template is English only.",
+   "demo_possible": true,
+   "story_hook": "A regular customer forgot an old bill and the shopkeeper does not want an awkward phone call.",
+   "avoid_words": [
+    "Do not say customers will pay or that it recovers money.",
+    "Do not say unlimited or in the customer's language (English template only).",
+    "Do not say ScoreMyBiz calls or chases customers; it sends one polite message.",
+    "Do not promise it on the Lifetime plan."
+   ],
+   "app_route": "/cash-flow",
+   "show_ok": true
+  },
+  "money-to-pay": {
+   "name": "Money I have to pay",
+   "summary": "Supplier bills are grouped by supplier with what is overdue and what falls due this week, so he knows who to pay first, and he gets an in-app note (and a best-effort WhatsApp text) on the due day and three days before.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "The wholesaler's bill is due this week and he wants to set the money aside before it becomes a problem.",
+   "avoid_words": [
+    "The WhatsApp text only lands inside a 24-hour window and is skipped for lapsed or STOPped owners; the in-app note is the record.",
+    "Do not say it pays suppliers; it only reminds him."
+   ],
+   "app_route": "/payables"
+  },
+  "customer-history": {
+   "name": "One customer's full history",
+   "summary": "He picks a customer or supplier and sees every sale, purchase and payment with a running total, then shares it as a message.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "A customer disputes how much he owes and the shopkeeper wants to show every entry in order.",
+   "avoid_words": [
+    "Do not call it an audited or legal statement of account.",
+    "Do not use the word ledger in customer copy."
+   ],
+   "app_route": "/ledger-statement"
+  },
+  "bills-for-customers": {
+   "name": "Bills for customers",
+   "summary": "He makes a numbered bill with items, tax if he charges it and his bank or UPI details, shares it as a PDF or WhatsApp message, marks it paid, and can photograph an old paper bill to fill the form.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "A regular customer asks for a proper bill with the shop's name on it for his own records.",
+   "avoid_words": [
+    "Do not call it a tax-authority e-invoice, e-way bill or GST filing; it is a PDF/message bill.",
+    "Tax on the bill is what the owner enters or picks, not tax advice.",
+    "The photo-read of an old bill is AI and not on the Lifetime plan."
+   ],
+   "app_route": "/invoices"
+  },
+  "quotes-for-customers": {
+   "name": "Quotes before the order",
+   "summary": "He makes a quotation for a customer, keeps it in a list, changes or copies it for another customer, shares it as a PDF, and turns it into a recorded sale with all its items in one tap.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "A contractor asks for prices before ordering and the shopkeeper wants to send something clean the same hour.",
+   "avoid_words": [
+    "Do not say a quotation is a legal contract."
+   ],
+   "app_route": "/quotations"
+  },
+  "items-and-prices": {
+   "name": "My items and prices",
+   "summary": "A list of what he sells and buys with the last selling rate and last cost, which grows by itself from every Sold/Bought entry and bill with items, and which he can add to, change or hide.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "He cannot remember what he charged for the same item last month and wants the last rate in front of him.",
+   "avoid_words": [
+    "It is a price list, not stock counting; nothing here tracks quantities on the shelf."
+   ],
+   "app_route": "/items"
+  },
+  "bills-tax-settings": {
+   "name": "Bill numbers and tax settings",
+   "summary": "He sets how his bills are numbered, what terms, bank details and tax they show, and sees the tax his bills charged by rate for any period.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "His accountant asks how much tax his bills charged last quarter and he wants the total by rate.",
+   "avoid_words": [
+    "The summary shows tax COLLECTED on his bills only, never tax payable or owed; do not say it prepares or files returns.",
+    "Purchase-side tax is not captured."
+   ],
+   "app_route": "/billing-settings"
+  },
+  "money-now": {
+   "name": "Money I have right now",
+   "summary": "He counts the cash in the till and the money in the bank, the app shows what the book expected and the gap, and what he typed becomes the new starting point.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "At closing he counts the till and wants to know whether the book agrees with the drawer.",
+   "avoid_words": [
+    "Do not say a gap means theft or a mistake; the page says it usually means an entry was missed."
+   ],
+   "app_route": "/money-now"
+  },
+  "cash-book-by-day": {
+   "name": "Cash book, day by day",
+   "summary": "For each day he sees what he started with, every entry that moved money, what he ended with and, when he counted, how far the count was from the book.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "He wants to see exactly which day the drawer stopped matching the book.",
+   "avoid_words": [
+    "A figure the book cannot know is shown as 'not known yet'; never claim a balance it does not have.",
+    "Period is at most 92 days."
+   ],
+   "app_route": "/cash-book"
+  },
+  "sold-bought-spent-lists": {
+   "name": "Lists of sold, bought, spent",
+   "summary": "He opens searchable lists of everything sold, bought, spent, received and paid, with totals by name and by category, and downloads them as a spreadsheet file.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "His CA asks for the month's purchases in a spreadsheet and he wants to hand it over without retyping.",
+   "avoid_words": [
+    "Do not call these statutory registers or books of account."
+   ],
+   "app_route": "/registers"
+  },
+  "profit-report": {
+   "name": "Profit report",
+   "summary": "For any period he sees sales, the cost of what he bought to sell, what is left, his running costs by category and what he actually kept, all worked out from his own entries.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "He sold a lot this month but wants to know what was left after stock and costs.",
+   "avoid_words": [
+    "The screen carries its own disclaimer: it is a view of the book, not a CA's statutory accounts, with no tax or formal accounting adjustments.",
+    "Equipment purchases are shown separately and not in profit."
+   ],
+   "app_route": "/profit-loss"
+  },
+  "what-i-have-and-owe": {
+   "name": "What I have and owe",
+   "summary": "One page shows what the business has (cash, bank, stock, money to collect, equipment) and owes (suppliers, loans) and what it is worth on paper, with loans and older equipment he can add and remove.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "Before talking to a bank manager he wants one page showing what he has against what he owes.",
+   "avoid_words": [
+    "'Worth on paper' is not a valuation, not audited, and has no depreciation.",
+    "Do not say it helps get a loan or shows loan eligibility.",
+    "Do not use the words assets or liabilities in copy."
+   ],
+   "app_route": "/balance-sheet"
+  },
+  "profit-on-paper-vs-cash": {
+   "name": "Profit on paper vs cash",
+   "summary": "It sets the profit his sales suggest against the cash he really has after what customers still owe and he owes suppliers, and lists plain warnings such as slow-paying customers or a private loan.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "The month looked profitable but the till is empty and he wants to see why.",
+   "avoid_words": [
+    "Warnings are rule-based from his entries; do not present them as advice or as a forecast."
+   ],
+   "app_route": "/cash-reality"
+  },
+  "year-end-close": {
+   "name": "Year-end close",
+   "summary": "At the end of the financial year he previews the year's sales, costs, profit and closing figures, closes it so all twelve months are locked, and the next year opens from the closing figures; he can reopen it.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "His CA wants the year closed so nothing changes after the figures are handed over.",
+   "avoid_words": [
+    "Not a statutory close or tax filing; the CA still prepares those.",
+    "Year start follows the country (April to March in India, UK and NZ; July in Australia; January elsewhere)."
+   ],
+   "app_route": "/year-end"
+  },
+  "lock-finished-month": {
+   "name": "Lock a finished month",
+   "summary": "He closes a month so no entry dated in it can be added, changed, removed or marked paid by accident, and can unlock it later; his CA can lock it too once linked and consented.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "The month's figures went to his CA and he does not want a helper changing them afterwards.",
+   "avoid_words": [
+    "Do not say it makes the book tamper-proof; the owner can unlock and every lock is logged."
+   ],
+   "app_route": "/book-locks"
+  },
+  "who-changed-what": {
+   "name": "Who changed what",
+   "summary": "A list, newest first, of every add, change, removal and mark-paid in the book in plain words such as 'Sale of 5,000 changed to 4,500', with who did it (owner, helper or CA).",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "A figure looks wrong and he wants to see which helper changed it and when.",
+   "avoid_words": [
+    "Shows the latest 200 changes only; do not call it a full forensic audit.",
+    "Owner only; a helper login cannot open it."
+   ],
+   "app_route": "/book-changes"
+  },
+  "file-for-accountant": {
+   "name": "File for my accountant",
+   "summary": "He picks a period and a format (one combined file, or the bank-style files that QuickBooks and Xero import) and shares the file with his accountant.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "His accountant uses different software and wants the month's money in and out as a file.",
+   "avoid_words": [
+    "It makes a file they import; it is not a live connection to QuickBooks or Xero.",
+    "Unpaid pay-later entries are left out because no money moved.",
+    "Do not say it prepares or files taxes."
+   ],
+   "app_route": "/export-book"
+  },
+  "email-last-month-book": {
+   "name": "Email me last month's book",
+   "summary": "A button sends last month's registers to his verified email now, and on the 2nd of every month the same file arrives by itself if he had any entries.",
+   "status": "gated",
+   "gate": "Needs a verified email on the account and the email service key (RESEND_API_KEY) to be set in Netlify; the job skips quietly without it. The memory notes listed that key as not yet set on 21 Sep; code cannot show whether it is set today.",
+   "demo_possible": false,
+   "story_hook": "He wants his own copy of last month's book outside the app, in case his phone is lost.",
+   "avoid_words": [
+    "Do not promise the email until the email key and a verified email are confirmed.",
+    "Shop books are not emailed separately; the owner's backup covers every shop."
+   ],
+   "app_route": "/recovery-contacts"
+  },
+  "documents-from-my-ca": {
+   "name": "Documents from my CA",
+   "summary": "Papers his accountant uploads for him, such as filings and returns, show up in one list for him to open.",
+   "status": "gated",
+   "gate": "Account type: only has content when a CA on ScoreMyBiz (India) is linked to the owner and uploads files (uploads capped at 4 MB each). Empty otherwise.",
+   "demo_possible": true,
+   "story_hook": "His CA finished the return and he would rather find it in the app than dig through WhatsApp chats.",
+   "avoid_words": [
+    "ScoreMyBiz does not prepare or file GST or income-tax returns; it only stores what the CA uploads.",
+    "Do not imply every owner has a CA."
+   ],
+   "app_route": "/my-documents"
+  },
+  "bank-statement-reading": {
+   "name": "Bank statement reading",
+   "summary": "On the website he uploads a bank statement (PDF, CSV or photo), the AI reads the lines and suggests what each is, he ticks the ones to keep, and they go into the book as bank payments; the app has this built but switched off.",
+   "status": "partial",
+   "gate": "App: the import card is hidden because book.tsx has REPORT_ONLY = true (the code comment says it moved to Home, but Home has no import), so there is no way to start an import in the app today. Website My Book has it. Also needs AI: free month or Monthly/Yearly plan, not Lifetime, 3 statements a month.",
+   "demo_possible": false,
+   "story_hook": "A month of bank payments would take an evening to type and he would rather upload the statement.",
+   "avoid_words": [
+    "Do not show or promise bank statement import in the app until the card is switched back on.",
+    "It is an upload, not a live bank connection; do not say 'syncs with your bank'.",
+    "Do not say it is always right; each line is confirmed by him."
+   ],
+   "app_route": null
+  },
+  "bank-vs-my-book": {
+   "name": "Bank vs my book",
+   "summary": "It puts the bank and UPI entries he typed next to the ones read from a bank statement and points out likely double entries, which he can merge or tick off as matched.",
+   "status": "partial",
+   "gate": "The screen works, but it compares typed entries with entries read from a bank statement, and the app cannot start a statement import right now (see bank-statement-reading), so the bank side is empty unless the import was done on the website.",
+   "demo_possible": true,
+   "story_hook": "He typed a bank payment himself and then imported the statement, and wants to be sure it is not counted twice.",
+   "avoid_words": [
+    "Cash entries are not checked against the bank.",
+    "Do not describe it as bank reconciliation for audit."
+   ],
+   "app_route": "/reconcile"
+  },
+  "same-every-month": {
+   "name": "Same-every-month costs",
+   "summary": "When he records a fixed monthly cost such as rent, salary or an instalment he can choose 'Yes, every month' and it is added to the book by itself on his chosen day, and he can pause or stop it.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "Rent is the same on the 5th every month and he is tired of typing it.",
+   "avoid_words": [
+    "Only fixed running costs repeat; stock purchases stay manual.",
+    "Day of month is limited to 1 to 28."
+   ],
+   "app_route": "/book"
+  },
+  "entries-without-signal": {
+   "name": "Entries saved without signal",
+   "summary": "If there is no signal at the counter, a Sold, Bought or Spent entry is kept safely on the phone, shown as waiting, and goes into the book by itself when the signal returns without being added twice.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": false,
+   "story_hook": "The shop is in a basement market with weak signal and he still wants every sale written down.",
+   "avoid_words": [
+    "Do not say the whole app works offline; only the entry form queues, reports need signal.",
+    "Up to 200 entries wait on a phone; entries on this phone are not in totals until sent."
+   ],
+   "app_route": "/offline-entries"
+  },
+  "undo-after-remove": {
+   "name": "Undo after removing",
+   "summary": "When he removes an entry, a monthly repeat, a quotation, a helper or a photo, it disappears at once with a 'Removed - Undo' bar for five seconds instead of an 'Are you sure?' box.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": false,
+   "story_hook": "A thumb slips on the wrong row and one tap brings the entry back.",
+   "avoid_words": [
+    "Undo works only for five seconds; do not promise recovery of older removals."
+   ],
+   "app_route": null
+  },
+  "business-health-score": {
+   "name": "Business Health Score",
+   "summary": "He types eight numbers (or fills them from his book, a photo or a spoken note) and gets a 0-100 score across seven areas with his strong and weak points, saved to his history; the form can be tried before signing up.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "He feels the business is fine but cannot say how healthy it really is and wants one number to start from.",
+   "avoid_words": [
+    "Not a credit score, not accepted by banks or lenders, not an audit or certification, not financial advice.",
+    "Do not promise the score will rise or that it gets a loan approved.",
+    "Do not say 'AI-powered'; the scoring is a published fixed formula with weights 25/20/15/15/10/10/5."
+   ],
+   "app_route": "/calculator"
+  },
+  "score-from-my-book": {
+   "name": "Score that follows my book",
+   "summary": "Once his book has enough entries, opening Home rebuilds his score from the book itself, shows it, and saves a new one at most once a day, so he never has to retype the eight numbers.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "He records sales every day and would like the score to follow without a month-end form.",
+   "avoid_words": [
+    "It only appears when every figure is known and sales are above zero; cash needs a counted figure.",
+    "Do not promise daily score changes; a score is saved at most once a day and only when it moved."
+   ],
+   "app_route": "/dashboard"
+  },
+  "risk-flags-behind-score": {
+   "name": "Risk flags behind the score",
+   "summary": "After a score he can open risk flags, insights that link two areas, a data-quality check on which numbers he typed or the book supplied, and a short summary, all built from his own numbers.",
+   "status": "gated",
+   "gate": "Free month or any paid plan (client check via check-plan); after the free month without a plan the screen shows 'Subscribe to see this'.",
+   "demo_possible": true,
+   "story_hook": "The score is 58 but he wants to know which one thing is pulling it down.",
+   "avoid_words": [
+    "Flags are rule-based on the numbers entered; they are not advice or a prediction.",
+    "Do not use the word subscribe in marketing until paying works."
+   ],
+   "app_route": "/result",
+   "show_ok": true
+  },
+  "score-history": {
+   "name": "Score history and what worked",
+   "summary": "He sees every saved score with the change since the last, a trend, and whether the moves he marked Done were followed by a better, same or worse score.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "Three months on, he wants to see whether things have actually got better.",
+   "avoid_words": [
+    "'What worked' compares scores before and after; it does not prove the move caused the change.",
+    "Past scores are never recalculated."
+   ],
+   "app_route": "/score-history"
+  },
+  "compare-with-similar-shops": {
+   "name": "Compare with similar shops",
+   "summary": "Under his score he sees how his score and a few ratios compare with the average of other businesses of the same kind and region, shown only when enough of them exist.",
+   "status": "gated",
+   "gate": "Appears only when at least 5 other businesses with a recent score share his business type (and state if possible); otherwise it says there is not enough data. Outside India it is shown only when the server has data.",
+   "demo_possible": true,
+   "story_hook": "He wonders whether a thin profit margin is normal for shops like his.",
+   "avoid_words": [
+    "Averages only; no other business is ever named.",
+    "Do not quote a peer average the app does not have; it can be missing."
+   ],
+   "app_route": "/result"
+  },
+  "personal-health-score": {
+   "name": "Personal Health Score",
+   "summary": "A separate score for his own money from income, spending, savings, debts, insurance and family, with six bands and a 'ready to go full-time on my business' view; a salary slip or passbook photo can fill the numbers.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "Home money and shop money are tangled and he wants to see his own side clearly.",
+   "avoid_words": [
+    "Not investment or insurance advice.",
+    "The photo fill is AI and not on the Lifetime plan.",
+    "Founder notes say some personal-score assumptions are still India-specific; check before using abroad."
+   ],
+   "app_route": "/personal-calculator"
+  },
+  "goals-and-timelines": {
+   "name": "Goals and timelines",
+   "summary": "He sets a target amount and a number of months, tells it the monthly surplus he can set aside, and sees how long it takes at that pace, how much more to save to hit the date, and progress over time.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "He wants a second delivery van and asks how long it takes at today's pace.",
+   "avoid_words": [
+    "Progress is time-based, not tied to actual savings.",
+    "The 'what if collections improve' line assumes 30 percent of the improvement reaches surplus; it is an illustration, never a promise of money saved."
+   ],
+   "app_route": "/goals"
+  },
+  "break-even": {
+   "name": "Break-even: how much to sell",
+   "summary": "He enters monthly fixed costs, sales and the cost of what he sells and sees how much he must sell each month to cover his costs and how much safety margin he has above that line.",
+   "status": "gated",
+   "gate": "Free month or any paid plan; after that the screen shows 'Subscribe to use the Break-Even Calculator'.",
+   "demo_possible": true,
+   "story_hook": "Before taking a bigger shop he wants to know the least he must sell each month.",
+   "avoid_words": [
+    "Maths on the numbers he types; not a forecast and not a profit promise."
+   ],
+   "app_route": "/break-even",
+   "show_ok": true
+  },
+  "what-if-simulator": {
+   "name": "What-if simulator",
+   "summary": "On a saved score he nudges revenue, expenses and how fast customers pay by percentages and sees the real score move, not a guess.",
+   "status": "gated",
+   "gate": "Free month or any paid plan; needs a calculated score first (inputs come from the result screen).",
+   "demo_possible": true,
+   "story_hook": "He wonders what collecting from slow customers would do to his score before he starts chasing.",
+   "avoid_words": [
+    "A what-if on his own numbers, not a forecast; do not promise the score will move that way.",
+    "Do not confuse it with the three-round decision practice or the game; they are different tools."
+   ],
+   "app_route": "/business-simulator",
+   "show_ok": true
+  },
+  "decision-practice": {
+   "name": "Three-round decision practice",
+   "summary": "Starting from his own score, he makes three business decisions picked for his kind of business and sees the real score change after each, then a summary of the biggest swing.",
+   "status": "gated",
+   "gate": "Free month or any paid plan; only opens from a calculated score (inputs passed from the result screen).",
+   "demo_possible": true,
+   "story_hook": "A supplier offers a discount for buying more stock and he can try the choice on paper first.",
+   "avoid_words": [
+    "A practice exercise, not advice on what to decide.",
+    "Different from the 14-day Business Decision Game."
+   ],
+   "app_route": "/decision-simulation",
+   "show_ok": true
+  },
+  "decision-game": {
+   "name": "Business Decision Game",
+   "summary": "A game with a new two-round business challenge every 14 days where he runs a pretend shop of his type through market events, ends with a net worth, and sees where he ranks on that round's leaderboard.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "In a quiet hour he plays a few minutes of pretend business and compares with others.",
+   "avoid_words": [
+    "It is a game with pretend money; make no claim that it teaches results in real business.",
+    "The leaderboard shows other players' names (users.name), so do not screenshot real names; sample mode is safe.",
+    "Do not say 'win' or prizes; there are none."
+   ],
+   "app_route": "/game"
+  },
+  "ask-the-advisor": {
+   "name": "Ask the Advisor",
+   "summary": "He types a business question in his own language and gets an answer that already uses his own numbers, with a few questions a day.",
+   "status": "gated",
+   "gate": "Needs AI: free month (3 questions a day) or Monthly plan (5 a day). Not on the Lifetime plan. The code gives a Yearly plan the free-month cap (see photo-entry notes).",
+   "demo_possible": true,
+   "story_hook": "He is unsure whether to buy more stock before a festival and wants a second opinion based on his own figures.",
+   "avoid_words": [
+    "The system prompt forbids guarantees and says it is not certified financial, legal or tax advice; never present answers as advice, and say it can make mistakes.",
+    "Memory is only the last 6 messages.",
+    "Only business questions are answered (personal questions only in personal mode).",
+    "Do not describe it as a CA or lawyer."
+   ],
+   "app_route": "/advisor",
+   "show_ok": true
+  },
+  "reminders-in-my-words": {
+   "name": "Reminders in my own words",
+   "summary": "He types something like 'call supplier Raju about cement Friday', the app turns it into a task with a category and due date, and his phone reminds him the evening before and the morning of.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "Ten small things float in his head and he would rather type them once.",
+   "avoid_words": [
+    "Phone reminders arrive only if notifications are allowed; the screen says so when they are off.",
+    "Adding new tasks needs the free month or a plan; existing ones stay readable."
+   ],
+   "app_route": "/tasks"
+  },
+  "next-moves": {
+   "name": "Next moves from my score",
+   "summary": "After a score the app lists three to five moves worked out from his own numbers, he marks each Done, Later or Stuck, and a Monday check-in asks how it went.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "The score shows weak collections, and a clear next step is better than a long report.",
+   "avoid_words": [
+    "Moves are rule-based from his numbers (no AI, no invented targets); never promise score gains.",
+    "The check-in is an in-app note and a free push, never WhatsApp.",
+    "Android push is not connected yet (no google-services.json), so say iPhone only for push."
+   ],
+   "app_route": "/tasks"
+  },
+  "open-shop-and-sell-more-plans": {
+   "name": "Open-a-shop and sell-more plans",
+   "summary": "He answers a few questions the book cannot know (rent, setup cost, expected sales, or the sales rise he wants and how) and gets the monthly profit, payback months, cash needed and three to five moves he can save as reminders.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "A cousin offers a second shop and he wants rough numbers before saying yes.",
+   "avoid_words": [
+    "A calculation from his current margin and his own guesses; not a forecast and not loan or investment advice.",
+    "'Explain this plan' uses the Advisor and is hidden on the Lifetime plan."
+   ],
+   "app_route": "/plan"
+  },
+  "streak-and-challenge": {
+   "name": "Daily streak and weekly challenge",
+   "summary": "A Home card shows how many days in a row he has recorded, this week's small challenge and his anonymous rank among similar businesses.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "Keeping the book every day becomes a small game he does not want to break.",
+   "avoid_words": [
+    "The rank is the top 10 current streaks within his own business type, anonymous; do not say a higher rank means a better business.",
+    "A missed day resets the streak."
+   ],
+   "app_route": "/dashboard"
+  },
+  "schemes-and-weather": {
+   "name": "Government schemes and weather",
+   "summary": "It matches Indian small-business schemes to his business type, city and size with a likely or possible fit and the official link, plus a four-day weather watch with plain business alerts such as rain and stock.",
+   "status": "gated",
+   "gate": "India only (the Home tile is hidden for other countries) and free month or a paid plan (the server refuses a lapsed owner).",
+   "demo_possible": true,
+   "story_hook": "A rain forecast for the week reminds him to move stock off the floor.",
+   "avoid_words": [
+    "Never say he qualifies or will get a scheme, loan or subsidy; fit is 'likely / possible / unlikely' on 2026 public criteria and the official link is the truth.",
+    "Weather comes from a free service (Open-Meteo) with a 6-second timeout and may be missing.",
+    "Not available outside India."
+   ],
+   "app_route": "/alerts",
+   "show_ok": true
+  },
+  "notifications-inbox": {
+   "name": "Notifications inbox",
+   "summary": "A bell on Home opens an in-app list of reminders, supplier-due notes, weekly check-ins, challenge updates and (in India) network leads, with an unread badge.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "He wants one place to see what the app wanted him to notice this week.",
+   "avoid_words": [
+    "Phone push works on iPhone; Android push is not connected yet because the Firebase file is missing, so do not promise push alerts on Android.",
+    "Notes are shown in the owner's language."
+   ],
+   "app_route": "/notifications"
+  },
+  "business-network": {
+   "name": "Business network",
+   "summary": "He posts one line such as 'need 50 bags of cement in Jaipur this week' and it is shown anonymously to matching businesses nearby, and leads from others in his trade appear in his own list.",
+   "status": "gated",
+   "gate": "India only (Home tile hidden elsewhere). Posting is free; responding to leads needs the free month or a paid plan. Only useful as other members join.",
+   "demo_possible": true,
+   "story_hook": "He needs a bulk order filled this week and wants to reach nearby sellers without sharing his number.",
+   "avoid_words": [
+    "Do not promise leads, buyers or sales; matches depend on who has registered.",
+    "Phone numbers are never shared; ScoreMyBiz only introduces and prices, payment and delivery are between the two businesses.",
+    "Posts stay open 14 days."
+   ],
+   "app_route": "/network",
+   "show_ok": true
+  },
+  "business-card": {
+   "name": "My business card",
+   "summary": "From the details he already gave, the app builds a card with his name, trade, phone, WhatsApp, address, opening hours and a WhatsApp QR code that he sends to customers as a PDF, a message or straight on WhatsApp.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "A new customer asks for his number and address and he would rather send a neat card than read it out.",
+   "avoid_words": [
+    "Fields he has not filled in are left off the card; do not promise a complete card without an address.",
+    "The QR image comes from an outside QR service."
+   ],
+   "app_route": "/business-card"
+  },
+  "offer-posters": {
+   "name": "Offer posters and WhatsApp status",
+   "summary": "On the website he types an offer, the price or discount, a valid-until date, his name and phone and gets a WhatsApp message, a Status image, an A4 poster and a banner made on his own device, with a festival calendar to suggest the next offer.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "Diwali is near and he wants a poster for the shop door and a picture for his WhatsApp status.",
+   "avoid_words": [
+    "This is a WEBSITE tool only; the app has no poster maker (the app only has the business card and two share pictures). Do not show it as an app feature.",
+    "Never claim it raises sales.",
+    "Page tells owners to follow local pricing and advertising rules; lunar festival dates can shift by a day, so confirm before printing.",
+    "Features page says 'in your language'; the live page translates its labels but check before claiming all 25."
+   ],
+   "app_route": null
+  },
+  "share-score-picture": {
+   "name": "Share my score picture",
+   "summary": "When his score is in a Healthy or Thriving band he can share a square picture of the score ring, band and business name on his WhatsApp status; it never shows money amounts.",
+   "status": "gated",
+   "gate": "Offered only when the score band is Healthy or Thriving (same rule as the website).",
+   "demo_possible": true,
+   "story_hook": "After a good month he wants customers and suppliers to see his shop is in good shape.",
+   "avoid_words": [
+    "Do not present the score as certification or endorsement by anyone.",
+    "No money amounts are on the card, so do not describe it as showing sales."
+   ],
+   "app_route": "/result",
+   "show_ok": true
+  },
+  "share-my-week-picture": {
+   "name": "Share my week picture",
+   "summary": "He can share a square picture for WhatsApp status showing moves done out of moves planned and how his score moved, with no money amounts and no customer names.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "He finished his list this week and wants to show it without revealing any figures.",
+   "avoid_words": [
+    "Counts and scores only; do not say it shows earnings."
+   ],
+   "app_route": "/tasks"
+  },
+  "google-listing-helper": {
+   "name": "Google listing helper",
+   "summary": "He saves his address, opening hours, WhatsApp number, description and shop photos once, and the app builds ready-to-paste listing text and opens Google's own page; ScoreMyBiz does not create or publish the Google listing.",
+   "status": "partial",
+   "gate": "Preparation only: nothing is published to Google. The More-menu row is India only (the first-time registration step shows it everywhere). Creating profiles through Google's API needs a separate access application that GO-LIVE section 3 says is not started.",
+   "demo_possible": true,
+   "story_hook": "Customers keep asking for his address and opening hours and he has never put the shop on Google.",
+   "avoid_words": [
+    "Never say 'we put you on Google', 'get found on Google' or 'rank higher'; features.html still carries the 'get found when customers search for you on Google' claim and the app text 'we will create your Google listing for you once our verification is complete' promises something the docs say is not started.",
+    "Google verifies a profile itself (phone, video or postcard) and that can take days."
+   ],
+   "app_route": "/listing"
+  },
+  "several-shops": {
+   "name": "Several shops, one login",
+   "summary": "He adds up to five shops under one login, switches which shop he is recording in from Home, and each shop keeps its own book, helpers and bill numbers.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": false,
+   "story_hook": "He opened a second branch and wants the two books kept apart but under one phone number.",
+   "avoid_words": [
+    "Maximum five including the main shop.",
+    "Removing a shop that has entries needs typing DELETE and removes everything in it.",
+    "The owner's monthly backup email covers every shop in one file."
+   ],
+   "app_route": "/shops"
+  },
+  "helpers-with-own-login": {
+   "name": "Helpers with their own login",
+   "summary": "He gives up to three helpers their own WhatsApp-code login; a helper sees only a simple screen to add sales, purchases and spending and count the till, never reports, settings or the Advisor, and every change is attributed to them.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "A helper at the counter should be able to write sales but not see profit or delete anything.",
+   "avoid_words": [
+    "Three helpers maximum; there are no custom permission levels.",
+    "A helper cannot change or remove entries; do not describe helpers as managers."
+   ],
+   "app_route": "/staff"
+  },
+  "ca-network": {
+   "name": "CA portal and client link",
+   "summary": "A Chartered Accountant opens a free account and gets a code; clients who register with it appear in the CA's portfolio with score trend, who needs a call, a WhatsApp check-in, an email draft in the CA's voice, monthly report and document uploads, and the CA gets a shareable card.",
+   "status": "gated",
+   "gate": "Account type: this is for accountants (and the owners who register under their code), not for shopkeepers on their own. India only in the app menu. Every CA starts on the free tier: card billing for the paid CA tiers is not live (partners.html lists CA Starter to CA Pro at 1,499 to 9,999 rupees a month but they cannot be bought). A CA sees a client only when linked and the client consented.",
+   "demo_possible": true,
+   "story_hook": "An accountant with many small clients wants one list showing who needs attention first.",
+   "avoid_words": [
+    "Do not promise CAs commission income: payouts wait on the company bank account and commission starts from a client's first renewal.",
+    "Do not imply any ICAI endorsement.",
+    "Do not say the paid CA tiers can be bought."
+   ],
+   "app_route": "/ca-portfolio"
+  },
+  "invite-a-friend": {
+   "name": "Invite a friend",
+   "summary": "He shares a personal link, the friend's registration is credited to him, and credit from the friend's renewals can be set against his own next renewal.",
+   "status": "partial",
+   "gate": "Invite link and credit tracking are built, but credit only arises from payments and paying cannot be completed yet; cash withdrawal is 'once payouts are live' and also waits on the company bank account.",
+   "demo_possible": true,
+   "story_hook": "A friend in the same trade asks how he keeps his accounts and he can send a link in one tap.",
+   "avoid_words": [
+    "Do not promise earnings: the commission is 10 percent of the friend's payments starting from their first renewal and lasting 12 renewals; the first payment earns nothing; a Lifetime purchase pays one commission of about 10 percent.",
+    "Payouts are not live yet.",
+    "Credit is applied to his own renewal only."
+   ],
+   "app_route": "/plans",
+   "show_ok": true
+  },
+  "works-in-your-language": {
+   "name": "Works in 25 languages",
+   "summary": "The whole app runs in 25 languages, including right-to-left Arabic and Urdu, and his WhatsApp replies, notes, emails and Advisor answers follow the language he chooses.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "He thinks and counts in Marathi, so the app talks to him in Marathi.",
+   "avoid_words": [
+    "The count is 25 UI languages in the app (25 locale files: English plus 24) and 25 in Translations/ui on the website; features.html, pricing.html and the footers still say '13 languages' (stale, India's 13 only). Use 25.",
+    "Translations are machine generated (Gemini via translate-text), not by native translators; do not say professionally translated.",
+    "The scheduled WhatsApp templates (nudge, reminders, plan ending) are English only until Meta approves per-language copies.",
+    "Voice reading is not confirmed for every language (Assamese flagged in code)."
+   ],
+   "app_route": "/more"
+  },
+  "nineteen-countries": {
+   "name": "Works in 19 countries",
+   "summary": "The app and WhatsApp bot use each country's own money, tax word and rates, phone numbers, financial-year start and ways of being paid, for India, Nigeria, the UAE, Kenya, Ghana, the UK, the US, Australia, New Zealand and ten euro countries.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "A shop owner in Lagos or Nairobi sees amounts in naira or shillings and pays by M-Pesa or transfer, not rupees and UPI.",
+   "avoid_words": [
+    "The founder's 'nine countries' is out of date: the country table has 19 (the first wave was 9, then ten euro countries were added). Use 19, but note a real phone proof per country has NOT been done (production test N/T).",
+    "Do not say 'launched' or 'available to buy' abroad; payment, refunds and the store listing per country are blocked.",
+    "EU and UK legal pages still need the Article 27 representative decision.",
+    "Tax rates are the statute-book rates; do not present them as tax advice."
+   ],
+   "app_route": "/register"
+  },
+  "free-month-and-plans": {
+   "name": "Free month and plans",
+   "summary": "He gets 30 days with everything, then can pick a Monthly, Yearly or Lifetime plan on a Plans screen with restore-purchase, manage-subscription and a refund note; the Lifetime plan leaves out the AI help and the messages sent on his behalf.",
+   "status": "partial",
+   "gate": "Paying cannot be completed yet: Razorpay keys do not exist (waits for the company bank account) and the store products starter_monthly, starter_yearly and lifetime are not created in Play Console, App Store Connect or RevenueCat (blocked, confirmed 29 Sep per memory). The Plans screen itself says 'Paying inside the app is being switched on'.",
+   "demo_possible": false,
+   "story_hook": "He wants to try everything for a month before deciding whether it is worth paying for.",
+   "avoid_words": [
+    "No 'subscribe now' or 'buy now'; never say where a plan is bought or that anything is 'sold separately' (founder rule).",
+    "terms.html still describes two plans, a '10-year plan' and AI help 'sold separately'; it disagrees with the app ('yours for good', three plans). Do not quote the terms page.",
+    "Lifetime plan has no Advisor, photo, voice, bank statement reading, daily WhatsApp update or automatic reminders.",
+    "After the free month an unpaid account becomes read-only; do not imply data is deleted. Refund promise: full refund within 7 days on the first payment.",
+    "India list prices are 299 a month, 2,990 a year, 9,999 once; abroad prices come from the stores."
+   ],
+   "app_route": "/plans",
+   "show_ok": true
+  },
+  "my-business-details": {
+   "name": "My business details",
+   "summary": "He keeps his business name, address, opening hours, tax number and UPI ID in one place and they flow into his bills, card and listing.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "He changed the shop's address and wants every bill and card to show the new one.",
+   "avoid_words": [
+    "The tax-id label follows the country (GSTIN, TIN, VAT number); the UPI line is India only."
+   ],
+   "app_route": "/edit-profile"
+  },
+  "change-or-recover-number": {
+   "name": "Change or recover my number",
+   "summary": "He can move his account to a new WhatsApp number with a code, add a backup email and second number, and if he loses his number recover the account with a code to the second number or email, or ask the team to check.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": false,
+   "story_hook": "His phone fell in water and the old number is gone, but his book is still there.",
+   "avoid_words": [
+    "With no verified backup the team replies within 72 hours; do not say instant.",
+    "The email path needs the email service key; the code shows it as 'not available yet' without it."
+   ],
+   "app_route": "/change-phone"
+  },
+  "sign-in-whatsapp-code": {
+   "name": "Sign in with WhatsApp code",
+   "summary": "He enters his WhatsApp number, WhatsApp opens with a ready message to send, and a six-digit code comes back in that chat; there is no password to remember.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": false,
+   "story_hook": "He does not want another password; the WhatsApp he already uses is enough.",
+   "avoid_words": [
+    "Do not promise a code that arrives by itself: the direct code message needs Meta's otp_login template, still unapproved, so today he taps send on a prefilled WhatsApp message first.",
+    "The SMS backup is not switched on until the SMS service is set up (MSG91 pending).",
+    "Codes: 3 per number per 10 minutes, 5 wrong tries delete a code."
+   ],
+   "app_route": "/login"
+  },
+  "report-a-problem": {
+   "name": "Report a problem",
+   "summary": "He writes what went wrong in the app or sends 'PROBLEM ...' on WhatsApp, gets a ticket number, and can see the reply in the app within a day.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "An entry did not show up and he wants someone to look at it.",
+   "avoid_words": [
+    "'Within 24 hours' is a stated target, not a guarantee; do not promise 24/7 support."
+   ],
+   "app_route": "/support"
+  },
+  "download-or-delete-my-data": {
+   "name": "Download or delete my data",
+   "summary": "From Account he can download everything the app holds about him as a file, or delete the account and its data for good after two confirmations.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": false,
+   "story_hook": "He wants to leave and take a copy of his book with him.",
+   "avoid_words": [
+    "Deletion is immediate and cannot be undone; a shop owner with several shops must keep or empty the main shop first.",
+    "Inactive accounts are purged on a schedule per the privacy page; do not claim data is kept forever."
+   ],
+   "app_route": "/more"
+  },
+  "printable-daily-sheet": {
+   "name": "Printable daily sheet",
+   "summary": "He prints a free A5 daily sheet, writes sales, collections and purchases through the day, photographs it at closing and sends it on WhatsApp, where it is read and recorded only after he confirms.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "He likes writing on paper and wants the numbers to reach the book without retyping.",
+   "avoid_words": [
+    "The photo read is AI on WhatsApp: limits apply, not on the Lifetime plan, and nothing is saved until he confirms.",
+    "Do not say it reads every handwriting."
+   ],
+   "app_route": null
+  },
+  "free-calculators": {
+   "name": "Free profit and cash calculators",
+   "summary": "Two free web calculators, one for cash flow and one for profit margin, that anyone can use without an account.",
+   "status": "live",
+   "gate": null,
+   "demo_possible": true,
+   "story_hook": "Someone just curious about his margin can check it in a minute before signing up.",
+   "avoid_words": [
+    "Website only, not in the app.",
+    "Generic maths; not advice."
+   ],
+   "app_route": null
+  },
+  "buy-or-sell-a-business": {
+   "name": "Buy or sell a business",
+   "summary": "A planned marketplace where owners list a business to sell and buyers browse with the health score visible; the page only collects early-access interest.",
+   "status": "not_live",
+   "gate": null,
+   "demo_possible": false,
+   "story_hook": "Not available; do not build a story on it.",
+   "avoid_words": [
+    "Do not mention it as a feature: the page is marked 'New - Coming Soon' with a 'Get Early Access' button and has no function behind it.",
+    "No 'no brokers' or 'no hidden surprises' claims."
+   ],
+   "app_route": null
+  },
+  "home-screen": {
+   "name": "The Home screen",
+   "status": "general"
+  },
+  "brand": {
+   "name": "brand",
+   "status": "general"
+  },
+  "overview": {
+   "name": "overview",
+   "status": "general"
+  }
+ }
 }

@@ -1,0 +1,77 @@
+{
+ "id": "mira-polls-en",
+ "app": "waypoint",
+ "lang": "en",
+ "character": "mira",
+ "feature": "polls",
+ "title": "Ask the Path",
+ "post_on": "2026-10-17",
+ "caption": "Everyone she asks has an opinion about her. Neha asks a poll instead. Mira tells her story.",
+ "linkedin_text": "A big decision gets a dozen different opinions from a dozen well-meaning friends.\n\nOn Waypoint, Ask the Path lets you put one question and two to four options on the Wall; people vote once and everyone sees how the votes split. Mira tells Neha's story; every screen is the real app.",
+ "hashtags": [
+  "#Polls",
+  "#Waypoint",
+  "#AskThePath"
+ ],
+ "cast": {
+  "neha": "Neha, a young Indian woman in her mid twenties with shoulder-length dark hair, a mustard cardigan and small silver earrings"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera at a window table in a cosy cafe in the evening, a notebook beside her, a gentle smile.",
+   "vo": "Hi, I'm Mira. This is Neha's story. She has a big decision, and every friend gives a different answer.",
+   "sub": "Hi, I'm Mira. This is Neha's story. She has a big decision, and every friend gives a different answer.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Ask the Path"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} at a cafe table with a laptop showing two email offers, chin on her hand, thoughtful, rain on the window behind her.",
+   "vo": "A new city for a new job, or stay close to home. Everyone she asks has an opinion about her, not about the choice.",
+   "sub": "A new city for a new job, or stay close to home. Everyone she asks has an opinion about her, not about the choice.",
+   "min": 8,
+   "card": "New city?"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} on a late evening bus holding her phone, city lights streaking past the window, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "On Waypoint she opens Ask the Path. One question, and two to four options.",
+   "sub": "On Waypoint she opens Ask the Path. One question, and two to four options.",
+   "min": 8,
+   "screen": "poll.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} reading her phone at the cafe table, a small smile, a cup of tea steaming, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "People on the Wall vote once each. No essays. No advice. Just a tap.",
+   "sub": "People on the Wall vote once each. No essays. No advice. Just a tap.",
+   "min": 8,
+   "screen": "poll.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} watching her phone with wide-eyed interest, the cafe warm and blurred behind her.",
+   "vo": "She sees how the votes split as they come in.",
+   "sub": "She sees how the votes split as they come in.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} at her apartment window at dusk, the city lights beginning to glow, a calm decided smile.",
+   "vo": "It is still her decision. But now she knows how the room leans.",
+   "sub": "It is still her decision. But now she knows how the room leans.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

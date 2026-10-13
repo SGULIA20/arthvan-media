@@ -1,0 +1,77 @@
+{
+ "id": "mira-freshname-en",
+ "app": "waypoint",
+ "lang": "en",
+ "character": "mira",
+ "feature": "fresh-name",
+ "title": "New every morning",
+ "post_on": "2026-10-21",
+ "caption": "Every morning Zoya wakes up with a new name on Waypoint. Mira tells her story.",
+ "linkedin_text": "Most apps keep you as the same profile forever.\n\nOn Waypoint the app gives you a new generated name and avatar every day, and you can choose your own for the day if you like. Mira tells Zoya's story; every screen is the real app.",
+ "hashtags": [
+  "#FreshStart",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "zoya": "Zoya, a young Indian woman in her twenties with a long braid, a teal kurta and round glasses"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera on a sunny rooftop at sunrise, soft golden light, a gentle smile.",
+   "vo": "Hi, I'm Mira. This is Zoya's story. Every morning on Waypoint she wakes up with a new name.",
+   "sub": "Hi, I'm Mira. This is Zoya's story. Every morning on Waypoint she wakes up with a new name.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "New every morning"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} in a bright kitchen at sunrise holding a phone and a cup of tea, curious, steam rising, warm light.",
+   "vo": "Yesterday was yesterday. This morning the app hands her a fresh start.",
+   "sub": "Yesterday was yesterday. This morning the app hands her a fresh start.",
+   "min": 8,
+   "card": "Good morning"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} at her kitchen counter looking at her phone with a delighted smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It picks a name and an avatar for her, and it resets tomorrow.",
+   "sub": "It picks a name and an avatar for her, and it resets tomorrow.",
+   "min": 8,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} thoughtfully picking on her phone at a sunny window, tea beside her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "If she likes, she can choose her own name and avatar for the day.",
+   "sub": "If she likes, she can choose her own name and avatar for the day.",
+   "min": 8,
+   "screen": "customize.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} laughing with a friend over coffee at a sunny cafe table, relaxed, warm morning light.",
+   "vo": "Same Zoya. A different name. And a lighter start.",
+   "sub": "Same Zoya. A different name. And a lighter start.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} walking to work through a sunny street, a bag on her shoulder, an easy confident smile.",
+   "vo": "Say today's sentence. Let the name change tomorrow.",
+   "sub": "Say today's sentence. Let the name change tomorrow.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

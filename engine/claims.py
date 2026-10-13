@@ -25,7 +25,7 @@ def feature_problem(app: str, key, feats: dict):
     f = cat.get(key)
     if f is None:
         return f"feature '{key}' is not in the verified catalogue"
-    if f.get("status") not in OK:
+    if f.get("status") not in OK and not f.get("show_ok"):
         return f"feature '{key}' is {f.get('status')}" + (f" ({str(f.get('gate'))[:60]})" if f.get("gate") else "")
     return None
 
