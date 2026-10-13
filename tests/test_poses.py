@@ -1,7 +1,9 @@
 import json
-import numpy as np
-import cv2
+
 import pytest
+
+np = pytest.importorskip("numpy")
+cv2 = pytest.importorskip("cv2", reason="OpenCV is only needed on the founder's Mac, to make character pictures")
 
 from engine import poses
 from engine.poses import PoseError, cutout, make_pose, missing

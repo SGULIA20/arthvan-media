@@ -49,7 +49,7 @@ def test_frames_cover_crop_to_the_story_canvas(tmp_path):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "color=c=red:s=720x1280:d=1", "-r", "24", str(src)], check=True)
     n = broll.frames(src, tmp_path / "fr", fps=30)
     assert n in (30, 31)
-    import cv2
+    cv2 = pytest.importorskip("cv2")
     im = cv2.imread(str(tmp_path / "fr" / "f0001.jpg"))
     assert im.shape[:2] == (1920, 1080)
 
