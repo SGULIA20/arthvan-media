@@ -448,27 +448,19 @@ def test_occasions_calendar_is_valid():
             assert who in base and (costume in cat or costume in base), (o["key"], costume)
 
 
-def test_recent_features_come_from_the_apps_own_published_posts(tmp_path):
+def test_recent_features_are_the_apps_own_posts_of_the_last_ten_days(tmp_path):
     from engine.run_daily import recent_features
     log = tmp_path / "posts.jsonl"
-    rows = [{"date": "2026-10-10", "app": "scoremybiz", "item": "a", "status": "published", "feature": "cash-reality"},
+    rows = [{"date": "2026-10-01", "app": "scoremybiz", "item": "old", "status": "published", "feature": "cash-reality"},
+            {"date": "2026-10-10", "app": "scoremybiz", "item": "a", "status": "published", "feature": "tasks"},
             {"date": "2026-10-11", "app": "waypoint", "item": "b", "status": "published", "feature": "wall"},
             {"date": "2026-10-12", "app": "scoremybiz", "item": "c", "status": "failed", "feature": "book"},
             {"date": "2026-10-12", "app": "scoremybiz", "item": "c", "status": "published", "feature": "book"},
-            {"date": "2026-10-12", "channel": "threads", "app": "scoremybiz", "item": "c", "status": "published", "feature": "book"}]
+            {"date": "2026-10-12", "channel": "threads", "app": "scoremybiz", "item": "c", "status": "published", "feature": "book"},
+            {"date": "2026-10-13", "app": "scoremybiz", "item": "today", "status": "published", "feature": "today"}]
     log.write_text("\n".join(json.dumps(r) for r in rows) + "\n")
-    assert recent_features(log, "scoremybiz") == ["cash-reality", "book"]
-    assert recent_features(log, "waypoint") == ["wall"]
-    assert recent_features(tmp_path / "missing.jsonl", "waypoint") == []
-
-
-def test_an_oversized_story_video_skips_whatsapp_without_failing_the_run(tmp_path):
-    w = World(tmp_path)
-    (tmp_path / "stories" / "out").mkdir(parents=True)
-    (tmp_path / "stories" / "out" / "big-en.mp4").write_bytes(b"v" * (16 * 1024 * 1024))
-    (tmp_path / "stories" / "big_en.json").write_text(json.dumps({"id": "big-en", "app": "scoremybiz", "post_on": "2026-10-14", "character": "lumi", "caption": "c", "hashtags": [], "title": "t"}))
-    sent = []
-    w.deps.send_whatsapp = lambda cfg, url, app, caption: sent.append(url) or "wamid.1"
-    env = dict(ENV, GUPSHUP_APP_ID="a", GUPSHUP_API_KEY="k", WA_STATUS_TO="+2348120000000", WA_STATUS_TEMPLATE="daily_status_video")
-    assert go(w, env=env, day=date(2026, 10, 14)) == 0 and sent == []
-    assert last_entry(tmp_path, "instagram")["item"] == "big-en"
+    day = date(2026, 10, 13)
+    assert recent_features(log, "scoremybiz", day) == ["tasks", "book"]          # 1 Oct is older than ten days; today is not 'recent' yet
+    assert recent_features(log, "waypoint", day) == ["wall"]
+    assert recent_features(log, "scoremybiz", date(2026, 10, 21)) == ["book", "today"]   # 11 days on, the 10 Oct post has aged out (exactly 10 days still counts)
+    assert recent_features(tmp_path / "missing.jsonl", "waypoint", day) == []

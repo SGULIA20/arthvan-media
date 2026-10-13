@@ -74,5 +74,6 @@
    "sub": "",
    "min": 5
   }
- ]
+ ],
+ "legacy": true
 }

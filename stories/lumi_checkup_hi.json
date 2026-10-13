@@ -78,5 +78,6 @@
  "feature": "weekly-score",
  "cast": {
   "raju": "Raju, a young Indian shopkeeper with a thin moustache in a maroon half-sleeve shirt"
- }
+ },
+ "legacy": true
 }

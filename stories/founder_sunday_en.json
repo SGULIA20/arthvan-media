@@ -80,5 +80,6 @@
  "feature": "wall",
  "cast": {
   "rohan": "Rohan, a young Indian man in his twenties with short hair, a plain grey hoodie and glasses"
- }
+ },
+ "legacy": true
 }

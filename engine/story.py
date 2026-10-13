@@ -2,7 +2,7 @@
 
 python -m engine.story stories/lumi_friday_hi.json out_dir
 """
-import json, re, subprocess, sys, tempfile, wave
+import json, re, shutil, subprocess, sys, tempfile, wave
 from pathlib import Path
 
 import numpy as np
@@ -27,6 +27,23 @@ def cast_prompt(prompt: str, cast: dict) -> str:
             raise KeyError(f"shot prompt names {{{name}}} but the story's cast has no {name}")
         return cast[name]
     return re.sub(r"\{([a-z_]+)\}", sub, prompt)
+
+
+REELS_FOLDER = Path.home() / "Desktop" / "Arthvan-Reels"
+
+
+def file_in_reels_folder(mp4: Path, story_id: str, folder: Path = None) -> Path:
+    """Every Reel made goes into one folder the founder can open anytime. Numbered in the order made; a Reel already
+    in the folder is never replaced or deleted."""
+    folder = Path(folder or REELS_FOLDER); folder.mkdir(parents=True, exist_ok=True)
+    existing = sorted(folder.glob("*.mp4"))
+    for f in existing:
+        if f.stem.split("-", 1)[-1] == story_id:
+            return f
+    nums = [int(f.name.split("-", 1)[0]) for f in existing if f.name.split("-", 1)[0].isdigit()]
+    dst = folder / f"{(max(nums) + 1 if nums else 1):02d}-{story_id}.mp4"
+    shutil.copy2(mp4, dst)
+    return dst
 
 
 def shot_plan(story: dict) -> list:
@@ -143,6 +160,10 @@ def build(story_path: Path, out_dir: Path) -> Path:
                         "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "slow", "-crf", "24", "-maxrate", "1700k", "-bufsize", "3400k", "-pix_fmt", "yuv420p", "-r", str(FPS),
                         "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(out)], check=True)
         print(f"{out} {total:.1f}s")
+        try:
+            print("filed in", file_in_reels_folder(out, story["id"]))
+        except OSError as e:
+            print("could not file in the Reels folder:", e)
         return out
 
 

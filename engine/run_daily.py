@@ -23,7 +23,8 @@ from .linkedin import LinkedInError
 from .threads import ThreadsError
 from .youtube import YouTubeError
 from .whatsapp import WhatsAppError, WhatsAppNotReady
-from .select_item import ORDER, EPOCH, lagos_date, pick, slot, story_lead, NO_REPEAT
+from .calendar_plan import load_schedule, load_stories, planned_features
+from .select_item import ORDER, EPOCH, lagos_date, pick, slot, story_lead, NO_REPEAT_DAYS
 
 MAX_FALLBACKS = 5
 WA_MAX_BYTES = 15 * 1024 * 1024   # WhatsApp rejects template videos above 16 MB
@@ -224,6 +225,17 @@ def scheduled_story(root: Path, day: date, log: Path = None):
         for e in _entries(log):
             if e.get("status") == "published" and e.get("channel", "instagram") == "instagram":
                 done.add(e.get("item"))
+    sched = load_schedule(root)
+    if sched is not None:                       # a planned calendar (engine.calendar_plan) decides which Reel goes out, and when
+        by_id = {s["id"]: s for s in load_stories(root)}
+        today = by_id.get(sched.get(day.isoformat()))
+        if today and today["rendered"] and today["id"] not in done:
+            return today                                                    # today's own Reel comes first
+        for d in sorted(sched):                                             # else one missed in the last 3 days
+            st = by_id.get(sched[d])
+            if st and st["rendered"] and st["id"] not in done and (day - timedelta(days=3)).isoformat() < d < day.isoformat():
+                return st
+        return None
     cands = []
     for p in sorted((root / "stories").glob("*.json")):
         try:
@@ -238,20 +250,22 @@ def scheduled_story(root: Path, day: date, log: Path = None):
             cands.append(st)
     if not cands:
         return None
-    avoid = set(recent_features(log, cands[0]["app"]))
+    avoid = set(recent_features(log, cands[0]["app"], day))
     fresh = [c for c in cands if c.get("feature") not in avoid]
     return min(fresh or cands, key=lambda s: s["post_on"])
 
 
-def recent_features(log: Path, app: str, n: int = NO_REPEAT) -> list:
-    """Features of the app's last n published Instagram posts, oldest first (bank items and stories alike)."""
+def recent_features(log: Path, app: str, day: date, days: int = NO_REPEAT_DAYS) -> list:
+    """Features the app published on Instagram in the `days` days before `day`, oldest first (bank items and stories alike)."""
     if log is None or not log.exists():
         return []
+    since = (day - timedelta(days=days)).isoformat()
     feats = []
     for e in _entries(log):
-        if e.get("status") == "published" and e.get("channel", "instagram") == "instagram" and e.get("app") == app and e.get("feature"):
+        if (e.get("status") == "published" and e.get("channel", "instagram") == "instagram" and e.get("app") == app
+                and e.get("feature") and since <= e.get("date", "") < day.isoformat()):
             feats.append(e["feature"])
-    return feats[-n:]
+    return feats
 
 
 def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log: Path, chans: dict, token: str, ig_id: str, mode: str) -> int:
@@ -355,7 +369,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         return _run_story(story, day, root, env, deps, apps, log, chans, token, ig_id, mode)
     sel = None
     for skip in range(MAX_FALLBACKS):
-        cand = pick(day, banks, skip=skip, recent_features=recent_features(log, ORDER[(day - EPOCH).days % 2]))
+        cand = pick(day, banks, skip=skip, recent_features=recent_features(log, ORDER[(day - EPOCH).days % 2], day) + planned_features(root, ORDER[(day - EPOCH).days % 2], day))
         problems = lint_item(apps[cand.app], cand.item)
         if not problems:
             sel = cand

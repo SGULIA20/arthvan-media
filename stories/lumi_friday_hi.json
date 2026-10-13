@@ -72,5 +72,6 @@
  "feature": "payables",
  "cast": {
   "meena": "Meena, an Indian woman in her forties in a plain blue cotton saree with her hair in a bun"
- }
+ },
+ "legacy": true
 }

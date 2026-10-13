@@ -77,5 +77,6 @@
  ],
  "cast": {
   "dev": "Dev, a young Black man in his twenties with short twisted hair and a plain charcoal hoodie"
- }
+ },
+ "legacy": true
 }

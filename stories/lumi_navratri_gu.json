@@ -78,5 +78,6 @@
  "feature": "book",
  "cast": {
   "bhavini": "Bhavini, a Gujarati woman in her thirties in a mirror-work festive kurta with a long braid"
- }
+ },
+ "legacy": true
 }

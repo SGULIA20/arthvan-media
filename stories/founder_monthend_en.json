@@ -72,5 +72,6 @@
  "feature": "profit-loss",
  "cast": {
   "suresh": "Suresh, a middle-aged Indian man with thinning hair, round glasses and a blue checked shirt"
- }
+ },
+ "legacy": true
 }

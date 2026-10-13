@@ -77,5 +77,6 @@
  "feature": "create",
  "cast": {
   "arjun": "Arjun, a young Indian man in his late twenties with short dark hair and a plain navy hoodie"
- }
+ },
+ "legacy": true
 }
