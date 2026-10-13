@@ -40,11 +40,24 @@ def _rows(obj):
     return []
 
 
+def _json_from(text: str):
+    """The first JSON value in the CLI's output, which can start with a line like "Initialising login role..."."""
+    start = next((i for i, c in enumerate(text) if c in "[{"), None)
+    if start is None:
+        raise ValueError("no JSON in the answer")
+    return json.JSONDecoder().raw_decode(text[start:])[0]
+
+
 def user_counts(ref: str, sql: str, run=subprocess.run) -> dict:
-    got = run(["supabase", "db", "query", "--project-ref", ref, "--output-format", "json", sql], capture_output=True, text=True, timeout=120)
+    got = run(["supabase", "db", "query", "--linked", "--project-ref", ref, "--output-format", "json", sql], capture_output=True, text=True, timeout=120)
     if got.returncode != 0:
-        raise RuntimeError((got.stderr or got.stdout).strip().splitlines()[-1][:150] if (got.stderr or got.stdout).strip() else "the query failed")
-    rows = _rows(json.loads(got.stdout[got.stdout.index(next(c for c in got.stdout if c in "[{")):]))
+        said = (got.stderr or "") + (got.stdout or "")
+        try:
+            said = _json_from(said)["error"]["message"]
+        except (ValueError, KeyError, TypeError):
+            said = said.strip().splitlines()[-1] if said.strip() else "the query failed"
+        raise RuntimeError(said[:150])
+    rows = _rows(_json_from(got.stdout))
     if not rows:
         raise RuntimeError("the answer had no rows")
     return {k: int(v) for k, v in rows[0].items() if v is not None}

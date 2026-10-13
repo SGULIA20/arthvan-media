@@ -9,6 +9,7 @@ DAY = date(2026, 10, 17)
 
 def runner(answers):
     def run(cmd, **kw):
+        assert "--linked" in cmd and "--project-ref" in cmd         # --project-ref alone is refused by the CLI
         ref = cmd[cmd.index("--project-ref") + 1]
         out = answers[ref]
         return R(returncode=0, stdout=out, stderr="") if not out.startswith("ERR") else R(returncode=1, stdout="", stderr=out[4:])
@@ -61,3 +62,16 @@ def test_wallet_call_reads_the_balance(tmp_path):
     seen = {}
     def opener(req, timeout=None): seen["url"] = req.full_url; seen["key"] = req.get_header("Apikey"); return Resp()
     assert wr.wallet_usd("APP", "K", opener) == 9.932 and seen["url"].endswith("/wa/app/APP/wallet/balance") and seen["key"] == "K"
+
+
+def test_the_real_cli_output_with_its_banner_and_boundary_is_read():
+    real = 'Initialising login role...\n{\n  "boundary": "65cf25",\n  "rows": [{"total": 6, "new_7d": "3", "paid": 1}]\n}\n'
+    assert wr.user_counts("x", "select 1", runner({"x": real})) == {"total": 6, "new_7d": 3, "paid": 1}
+
+
+def test_a_cli_error_is_reduced_to_its_message():
+    err = '{"_tag":"Error","error":{"code":"X","message":"--project-ref only applies when targeting the linked project"}}'
+    try:
+        wr.user_counts("x", "select 1", runner({"x": "ERR " + err}))
+    except RuntimeError as e:
+        assert str(e) == "--project-ref only applies when targeting the linked project"
