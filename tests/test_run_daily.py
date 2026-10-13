@@ -28,7 +28,7 @@ class World:
             sync_repo=lambda: None, head_sha=lambda: "deadbeef", post_linkedin=self.post_linkedin,
             post_threads=self.post_threads, prepare_video_set=self.prepare_video_set,
             post_linkedin_video=lambda *a: "urn:li:ugcPost:0", post_youtube=lambda *a: "VID0",
-            send_whatsapp=lambda *a: "wamid.0", post_threads_video=lambda *a: "TV0")
+            send_whatsapp=lambda *a: "wamid.0", post_threads_video=lambda *a: "TV0", send_telegram=lambda *a: "TG0")
 
     def render_set(self, sel, app_cfg, out_dir, fps=30):
         self.rendered_ids.append(sel.item["id"])
@@ -485,3 +485,18 @@ def test_a_story_day_also_posts_a_threads_video_and_a_later_run_retries_only_wha
     assert w.count("publish") == 1
     assert go(w, env=env, day=date(2026, 10, 14)) == 0                       # retry: only YouTube is attempted again
     assert len(tv) == 1 and sorted(yt) == ["a", "b"] and w.count("publish") == 1
+
+
+def test_the_daily_video_also_goes_to_telegram_once_and_a_failure_is_retried_alone(tmp_path):
+    from engine.telegram import TelegramError
+    w = World(tmp_path)
+    sent, n = [], {"n": 0}
+    def send(cfg, url, caption):
+        n["n"] += 1
+        if n["n"] == 1: raise TelegramError("down")
+        sent.append((cfg["chat_id"], url, caption)); return "42"
+    w.deps.send_telegram = send
+    env = dict(ENV, TELEGRAM_BOT_TOKEN="T", TELEGRAM_CHAT_ID="555")
+    assert go(w, env=env) == 1 and last_entry(tmp_path, "instagram")["status"] == "published"      # Telegram failed; Instagram is safe
+    assert go(w, env=env) == 0 and sent and sent[0][0] == "555" and sent[0][1].endswith("/reel.mp4")
+    assert go(w, env=env) == 0 and len(sent) == 1                                                  # never twice

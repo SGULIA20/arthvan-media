@@ -15,7 +15,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable
 
-from . import instagram, linkedin, render, threads, whatsapp, youtube
+from . import instagram, linkedin, render, telegram, threads, whatsapp, youtube
 from .config import ROOT, load_apps, load_bank, load_global
 from .instagram import Captions, InstagramError, PartialPublish, SetUrls
 from .lint import alt_texts, build_captions, build_linkedin_text, build_threads_text, lint_item, story_captions
@@ -90,6 +90,7 @@ class Deps:
     post_linkedin: Callable = linkedin.post_set
     post_threads: Callable = threads.post_carousel
     post_threads_video: Callable = threads.post_video
+    send_telegram: Callable = telegram.send_video
     prepare_video_set: Callable = instagram.prepare_video_set
     post_linkedin_video: Callable = linkedin.post_video
     post_youtube: Callable = youtube.post_short
@@ -149,7 +150,7 @@ def _channel(day: date, channel: str, item_id: str, deps: Deps, log: Path, actio
         deps.git_publish([log], f"log: {channel} waiting {day}")
         print(f"{channel} waiting: {e}")
         return True
-    except (LinkedInError, ThreadsError, YouTubeError, WhatsAppError) as e:
+    except (LinkedInError, ThreadsError, YouTubeError, WhatsAppError, telegram.TelegramError) as e:
         _append(log, dict(entry, status="failed", error=str(e)[:300]))
         deps.git_publish([log], f"log: {channel} failed {day}")
         print(f"{channel} failed: {e}")
@@ -191,6 +192,11 @@ def _extras(day, app_cfg, item, slides, slide_urls, deps, log, chans) -> int:
         reel_url = slide_urls[0].rsplit("/", 1)[0] + "/reel.mp4"
         caption = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + app_cfg["play_url"]
         ok &= _channel(day, "whatsapp", item["id"], deps, log, lambda: deps.send_whatsapp(wa, reel_url, app_cfg["name"], caption))
+    tg = chans.get("telegram")
+    if tg and day_status(log, day, "telegram") != "published" and slide_urls:
+        reel_url = slide_urls[0].rsplit("/", 1)[0] + "/reel.mp4"
+        caption = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + app_cfg["play_url"]
+        ok &= _channel(day, "telegram", item["id"], deps, log, lambda: deps.send_telegram(tg, reel_url, caption))
     yt = chans.get("youtube", {})
     if yt and slides:
         video = Path(slides[0]).parent / "reel.mp4"
@@ -282,6 +288,9 @@ def _story_extras(st, day, app_cfg, dst, url, deps, log, chans, li_text, tags) -
         wa = None
     if wa and day_status(log, day, "whatsapp") != "published":
         ok &= _channel(day, "whatsapp", st["id"], deps, log, lambda: deps.send_whatsapp(wa, url, app_cfg["name"], st["caption"] + " " + app_cfg["play_url"]))
+    tg = chans.get("telegram")
+    if tg and day_status(log, day, "telegram") != "published":
+        ok &= _channel(day, "telegram", st["id"], deps, log, lambda: deps.send_telegram(tg, url, st["caption"] + " " + app_cfg["play_url"]))
     yt = chans.get("youtube", {})
     if yt:
         ok &= _do_youtube(day, app_cfg, st, dst, deps, log, yt, st.get("title", app_cfg["name"]), st["caption"])
@@ -377,6 +386,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
                              "app_name": env.get("GUPSHUP_APP_NAME") or "scoremybizapp",
                              "source": env.get("GUPSHUP_SOURCE") or "2348125666665",
                              "to": env["WA_STATUS_TO"], "template": env["WA_STATUS_TEMPLATE"]}
+    if env.get("TELEGRAM_BOT_TOKEN") and env.get("TELEGRAM_CHAT_ID"):
+        chans["telegram"] = {"token": env["TELEGRAM_BOT_TOKEN"].strip(), "chat_id": env["TELEGRAM_CHAT_ID"].strip()}
     chans["youtube"] = {ch: {"client_id": env["YT_CLIENT_ID"], "client_secret": env["YT_CLIENT_SECRET"],
                              "refresh_token": env[f"YT_{ch.upper()}_REFRESH_TOKEN"]}
                         for ch in YT_CHANNELS if env.get("YT_CLIENT_ID") and env.get("YT_CLIENT_SECRET") and env.get(f"YT_{ch.upper()}_REFRESH_TOKEN")}

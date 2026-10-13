@@ -63,6 +63,8 @@ jobs:
           GUPSHUP_APP_NAME: ${{ vars.GUPSHUP_APP_NAME }}
           GUPSHUP_SOURCE: ${{ vars.GUPSHUP_SOURCE }}
           WA_STATUS_TO: ${{ secrets.WA_STATUS_TO }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           WA_STATUS_TEMPLATE: ${{ vars.WA_STATUS_TEMPLATE }}
           PAUSE: ${{ vars.PAUSE }}
           MODE: ${{ github.event.inputs.mode || 'post' }}
