@@ -30,6 +30,17 @@ def blank_frames(frames_dir: Path, ratio: float = 0.55) -> list:
     return [i for i in range(1, len(sizes) - 1) if sizes[i] < ratio * min(sizes[i - 1], sizes[i + 1])]
 
 
+def end_languages(app_cfg: dict) -> dict:
+    """The line every Reel's end card shows next to the Play Store badge: how many languages the app speaks, and their names.
+    Raises when an app has none configured, so a Reel can never be rendered without it (founder rule 13 Oct 2026)."""
+    langs = app_cfg.get("languages") or []
+    if not langs:
+        raise ValueError(f"{app_cfg.get('name', 'app')} has no languages configured in content/apps.json: every Reel must name them on its end card")
+    # each name keeps its dot attached and never splits across lines, so a line can never start with a separator
+    line = " ".join(f'<span style="white-space:nowrap">{n}{" ·" if i < len(langs) - 1 else ""}</span>' for i, n in enumerate(langs))
+    return {"label": app_cfg.get("languages_phrase", "Available in {n} languages").format(n=len(langs)), "line": line}
+
+
 def cast_prompt(prompt: str, cast: dict) -> str:
     """{meena} in a shot prompt becomes the cast description, so a supporting character looks the same in every shot."""
     def sub(m):
@@ -193,7 +204,7 @@ def build(story_path: Path, out_dir: Path) -> Path:
         deck = {"scenes": story["scenes"], "title": story["title"], "end_line": app["end_line"], "app_name": app["name"],
                 "palette": app["palette"], "chars": story["character"], "char_base": CHAR_DIR.as_uri(), "vo_env": env, "vo_amp": amp,
                 "disclaimer": app.get("money_disclaimer") or "", "icon": (ROOT / app["icon"]).as_uri(),
-                "badge": BADGE.as_uri(), "shots": shots.as_uri()}
+                "badge": BADGE.as_uri(), "shots": shots.as_uri(), "langs": end_languages(app)}
         clips = {}
         prefetch_shots(story)
         for i, s in enumerate(story["scenes"]):
@@ -244,6 +255,8 @@ def build(story_path: Path, out_dir: Path) -> Path:
         except Exception as e:                                   # a QA failure never stops a render
             print("blink check skipped:", e)
         try:
+            if os.environ.get("REELS_FOLDER_OFF"):
+                return out
             print("filed in", file_in_reels_folder(out, story["id"]))
         except OSError as e:
             print("could not file in the Reels folder:", e)

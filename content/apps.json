@@ -85,7 +85,26 @@
   ],
   "allowed_phrases": [
    "Calm kit"
-  ]
+  ],
+  "languages": [
+   "English",
+   "हिन्दी",
+   "বাংলা",
+   "தமிழ்",
+   "తెలుగు",
+   "मराठी",
+   "ગુજરાતી",
+   "ಕನ್ನಡ",
+   "മലയാളം",
+   "ਪੰਜਾਬੀ",
+   "Español",
+   "Français",
+   "Deutsch",
+   "Português",
+   "Bahasa Indonesia",
+   "Kiswahili"
+  ],
+  "languages_phrase": "Speaks {n} languages"
  },
  "scoremybiz": {
   "name": "ScoreMyBiz",
@@ -137,7 +156,35 @@
    "Google Play: {play_url}",
    "scoremybiz.com"
   ],
-  "allowed_phrases": []
+  "allowed_phrases": [],
+  "languages": [
+   "English",
+   "हिन्दी",
+   "বাংলা",
+   "தமிழ்",
+   "తెలుగు",
+   "मराठी",
+   "ગુજરાતી",
+   "ಕನ್ನಡ",
+   "മലയാളം",
+   "ਪੰਜਾਬੀ",
+   "ଓଡ଼ିଆ",
+   "অসমীয়া",
+   "اردو",
+   "العربية",
+   "Kiswahili",
+   "Yorùbá",
+   "Hausa",
+   "Igbo",
+   "Deutsch",
+   "Français",
+   "Español",
+   "Italiano",
+   "Português",
+   "Nederlands",
+   "Suomi"
+  ],
+  "languages_phrase": "Works in {n} languages"
  },
  "_global": {
   "banned_phrases": [
