@@ -27,6 +27,42 @@ class TTSError(Exception):
     pass
 
 
+MAX_DAILY_WAIT = 9 * 3600
+WAIT_NOTE = Path.home() / "arthvan-social" / "logs" / "tts-wait.json"      # read by the live status page
+
+
+def daily_quota_wait(body) -> "float | None":
+    """Seconds until Google's PER-DAY voice allowance resets (plus a minute), or None when the 429 is only a per-minute limit."""
+    daily, delay = False, None
+    for d in ((body or {}).get("error") or {}).get("details", []):
+        kind = str(d.get("@type", ""))
+        if kind.endswith("QuotaFailure"):
+            daily = daily or any("PerDay" in str(v.get("quotaId", "")) for v in d.get("violations", []))
+        elif kind.endswith("RetryInfo"):
+            try:
+                delay = float(str(d.get("retryDelay", "")).rstrip("s"))
+            except ValueError:
+                pass
+    return None if not daily else (delay if delay is not None else 6 * 3600.0) + 60
+
+
+def _wait_for_reset(seconds: float) -> None:
+    """Sleep in short steps by the wall clock (a sleeping Mac must not stretch the wait), leaving a note for the status page."""
+    until = time.time() + seconds
+    try:
+        WAIT_NOTE.parent.mkdir(parents=True, exist_ok=True)
+        WAIT_NOTE.write_text(json.dumps({"until": until, "text": "Google's daily voice allowance is used up"}))
+    except OSError:
+        pass
+    print(f"Gemini voice allowance for today is used up; waiting {seconds / 3600:.1f} h for it to reset", flush=True)
+    while time.time() < until:
+        time.sleep(min(30, max(1, until - time.time())))
+    try:
+        WAIT_NOTE.unlink()
+    except OSError:
+        pass
+
+
 def api_key(env=None) -> str:
     env = os.environ if env is None else env
     if env.get("GEMINI_API_KEY"):
@@ -75,12 +111,17 @@ def gemini_clip(text: str, voice: str, out_wav: Path, *, key: str = None, cache:
     cache = Path(cache); cache.mkdir(parents=True, exist_ok=True)
     raw = cache / (hashlib.sha1(f"{model}|{voice}|{STYLE}{text}".encode()).hexdigest() + ".wav")
     if not raw.exists():
-        for attempt in range(6):
+        tries = daily_waits = 0
+        while True:
             status, body = _generate(model, STYLE + text, voice, key)
             if status == 200:
                 break
-            if attempt < 5 and status in (429, 500, 503):      # a per-minute quota or a busy server: wait it out, politely
-                time.sleep(8 if status != 429 else 20 + 15 * attempt); continue
+            wait = daily_quota_wait(body) if status == 429 else None
+            if wait is not None and wait <= MAX_DAILY_WAIT and daily_waits < 2:     # today's allowance is used up: sleep until it resets
+                daily_waits += 1; _wait_for_reset(wait); continue
+            tries += 1
+            if tries < 6 and status in (429, 500, 503):        # a per-minute quota or a busy server: wait it out, politely
+                time.sleep(8 if status != 429 else 20 + 15 * (tries - 1)); continue
             raise TTSError(f"Gemini TTS failed ({status}): {str((body.get('error') or {}).get('message') or body)[:200].replace(key, '<key>')}")
         part = body["candidates"][0]["content"]["parts"][0]["inlineData"]
         data = base64.b64decode(part["data"])

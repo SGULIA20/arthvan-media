@@ -80,3 +80,27 @@ def test_a_quota_error_is_waited_out_for_several_tries_and_a_real_error_is_not(t
     monkeypatch.setattr(tts, "_generate", lambda *a: (400, {"error": {"message": "bad"}}))
     with pytest.raises(TTSError, match="400"):
         gemini_clip("y", "Kore", tmp_path / "b.wav", key="K", cache=tmp_path / "c")
+
+
+DAILY = {"error": {"message": "quota", "details": [
+    {"@type": "type.googleapis.com/google.rpc.QuotaFailure", "violations": [{"quotaId": "GenerateRequestsPerDayPerProjectPerModel"}]},
+    {"@type": "type.googleapis.com/google.rpc.RetryInfo", "retryDelay": "15659s"}]}}
+MINUTE = {"error": {"message": "quota", "details": [
+    {"@type": "type.googleapis.com/google.rpc.QuotaFailure", "violations": [{"quotaId": "GenerateRequestsPerMinutePerProjectPerModel"}]}]}}
+
+
+def test_daily_quota_wait_reads_the_reset_time_and_ignores_per_minute_limits():
+    assert tts.daily_quota_wait(DAILY) == 15659 + 60
+    assert tts.daily_quota_wait(MINUTE) is None and tts.daily_quota_wait({"error": {"message": "quota"}}) is None
+
+
+def test_a_used_up_daily_allowance_is_slept_through_without_using_the_retry_budget(tmp_path, monkeypatch):
+    slept, calls = [], []
+    monkeypatch.setattr(tts, "_wait_for_reset", lambda s: slept.append(s))
+    monkeypatch.setattr(tts.time, "sleep", lambda s: None)
+    def gen(model, text, voice, key):
+        calls.append(1)
+        return (429, DAILY) if len(calls) <= 2 else FakeAPI()(model, text, voice, key)
+    monkeypatch.setattr(tts, "_generate", gen)
+    assert gemini_clip("z", "Kore", tmp_path / "a.wav", key="K", cache=tmp_path / "c") > 0
+    assert slept == [15719, 15719] and len(calls) == 3
