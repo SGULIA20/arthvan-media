@@ -1,0 +1,78 @@
+{
+ "id": "lumi-goals-en",
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "lumi",
+ "feature": "goals-and-timelines",
+ "title": "A date, not a wish",
+ "post_on": "2026-10-30",
+ "caption": "The shop needs a second display fridge. Farida turns the wish into a date. Lumi tells her story.",
+ "linkedin_text": "Most small shops have a purchase in mind and no plan to reach it.\n\nIn ScoreMyBiz you set a goal with an amount and a number of months, see how long it takes at your current pace, and test what happens if customers pay a little faster. Lumi tells Farida's story; every screen is the real app.",
+ "hashtags": [
+  "#Goals",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "farida": "Farida, a cheerful Indian woman in her forties who runs an ice cream shop, in a pink kurta with a dupatta over one shoulder"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a colourful ice cream shop with a glass display behind her, a bright smile.",
+   "vo": "Hi, I'm Lumi. This is Farida's story. Her ice cream shop needs a second display fridge.",
+   "sub": "Hi, I'm Lumi. This is Farida's story. Her ice cream shop needs a second display fridge.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "A date, not a wish"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} behind the counter of her ice cream shop looking at the single crowded display fridge with a hopeful frown, colourful tubs inside, evening light.",
+   "vo": "She has a number in her head, and no plan for it.",
+   "sub": "She has a number in her head, and no plan for it.",
+   "min": 8,
+   "card": "One fridge"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} at a small table in her ice cream shop looking at her phone and thinking, a cone beside her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz she sets a goal: the amount, and how many months.",
+   "sub": "In ScoreMyBiz she sets a goal: the amount, and how many months.",
+   "min": 8,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} tapping her phone with a slow growing smile, the ice cream display glowing behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "The app shows how long it takes at her current pace.",
+   "sub": "The app shows how long it takes at her current pace.",
+   "min": 8,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} chatting with a regular customer who hands over money at the counter, a friendly exchange, afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "And what happens if her customers pay a little faster.",
+   "sub": "And what happens if her customers pay a little faster.",
+   "min": 8,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} proudly standing beside a gleaming new second display fridge full of colourful ice cream tubs, hands clasped, a big joyful smile.",
+   "vo": "Now the fridge is a date, not a wish.",
+   "sub": "Now the fridge is a date, not a wish.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

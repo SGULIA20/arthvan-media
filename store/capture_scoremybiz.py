@@ -6,6 +6,11 @@ BASE="http://localhost:8091"; LOCAL="http://localhost:9999/.netlify/functions/"
 SESSION={"phone":"","sessionToken":"","name":"Ramesh","businessName":"Sharma General Store","businessType":"Retail / Shop","plan":"starter","founder":True,"isAdmin":False,"country":{"code":"IN"}}
 PLAN={"plan":"trial","businessName":"Sharma General Store","phone":"9876543210","registeredAt":"2026-10-01T00:00:00Z","planExpiresAt":None,"planLabel":None,"aiIncluded":True,"planEndsAt":None,"actor":"owner","staffName":None,"staffId":None,"shop":None,"shops":1,"country":{"code":"IN","name":"India","currency":"INR","symbol":"₹"},"hasAccess":True,"trialDays":30,"trialDaysLeft":21}
 ROUTES=["dashboard","book","result","cash-reality","profit-loss","score-history","advisor","tasks"]
+# the other verified, demo-able features (content/features.json): python3 capture_scoremybiz.py <lang> <outdir> more
+MORE=["business-card","daily-update","cash-flow","payables","invoices","quotations","items","money-now","cash-book","registers","balance-sheet","year-end",
+      "goals","game","notifications","plan","staff","calculator","personal-calculator","alerts","network","edit-profile","export-book","book-locks","book-changes","break-even",
+      "business-simulator","decision-simulation","ledger-statement","reconcile","support"]
+if len(sys.argv)>3 and sys.argv[3]=="more": ROUTES=MORE
 def handle(route, req):
     fn=req.url.split("/functions/")[1].split("?")[0]
     if fn=="check-plan":

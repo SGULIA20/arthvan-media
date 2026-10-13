@@ -1,0 +1,78 @@
+{
+ "id": "founder-game-en",
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "founder_suit",
+ "feature": "decision-game",
+ "title": "Practice",
+ "post_on": "2026-11-05",
+ "caption": "He is good at his shop and nervous about the next big decision. Bilal practises first. The founder tells his story.",
+ "linkedin_text": "Every shop owner has a big decision coming and one chance to get it right.\n\nScoreMyBiz has a Business Decision Game: pick the type of business closest to yours and make fourteen days of choices, from buying stock to hiring, and see how each one plays out. It is practice, not advice. The founder character tells Bilal's story; every screen is the real app.",
+ "hashtags": [
+  "#DecisionGame",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "bilal": "Bilal, a young Indian electronics shop owner with a trimmed beard, a grey t-shirt and a shop apron"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a bright electronics shop with phones and gadgets on shelves behind him, an easy smile.",
+   "vo": "Hi. This is Bilal's story. He is good at his shop, and nervous about his next big decision.",
+   "sub": "Hi. This is Bilal's story. He is good at his shop, and nervous about his next big decision.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Practice"
+  },
+  {
+   "layout": "clip",
+   "clip": "{bilal} sitting behind the counter of his electronics shop at closing, a stack of boxes in front of him, wondering, afternoon light.",
+   "vo": "He wonders what would have happened if he had bought more stock last Diwali.",
+   "sub": "He wonders what would have happened if he had bought more stock last Diwali.",
+   "min": 8,
+   "card": "What if?"
+  },
+  {
+   "layout": "clip",
+   "clip": "{bilal} tapping his phone at the shop counter with curiosity, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz has a Business Decision Game. He picks the type of business closest to his own.",
+   "sub": "ScoreMyBiz has a Business Decision Game. He picks the type of business closest to his own.",
+   "min": 8,
+   "screen": "game.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{bilal} leaning in over his phone with a serious focused look, gadgets glowing behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Each round puts a real choice in front of him: buy stock, hire, repay, spend.",
+   "sub": "Each round puts a real choice in front of him: buy stock, hire, repay, spend.",
+   "min": 8,
+   "screen": "game.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{bilal} laughing at his phone after a round, a customer chatting beside him at the counter, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Fourteen days of choices, and he sees how each one plays out.",
+   "sub": "Fourteen days of choices, and he sees how each one plays out.",
+   "min": 8,
+   "screen": "game.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{bilal} standing at his shop entrance in the evening with arms crossed and a confident smile, the shutters half up.",
+   "vo": "It is practice, not advice. And it is free to try.",
+   "sub": "It is practice, not advice. And it is free to try.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

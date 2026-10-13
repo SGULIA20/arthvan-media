@@ -1,0 +1,77 @@
+{
+ "id": "lumi-daily-en",
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "lumi",
+ "feature": "daily-totals-update",
+ "title": "One minute at closing",
+ "post_on": "2026-11-03",
+ "caption": "She closes at nine and is tired by eight. Anita uses four boxes. Lumi tells her story.",
+ "linkedin_text": "At closing time, itemising a day of sales is a job for someone with more energy.\n\nScoreMyBiz has Today's Business Update: sales, spending, cash in hand and bank, in one minute at the counter. If the day is already itemised, the totals are not counted twice. Lumi tells Anita's story; every screen is the real app.",
+ "hashtags": [
+  "#DailyUpdate",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "anita": "Anita, an Indian woman in her thirties who runs a boutique, in a mustard kurta with silver earrings and a tired friendly smile"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small boutique with clothes on racks behind her, a warm tired smile.",
+   "vo": "Hi, I'm Lumi. This is Anita's story. Her boutique closes at nine, and she is tired by eight.",
+   "sub": "Hi, I'm Lumi. This is Anita's story. Her boutique closes at nine, and she is tired by eight.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "One minute at closing"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} behind the counter of her boutique near closing time, rubbing her eyes, a heap of receipts beside the till, warm lamp light.",
+   "vo": "Itemising every sale is a job for someone with more energy.",
+   "sub": "Itemising every sale is a job for someone with more energy.",
+   "min": 8,
+   "card": "Nine o'clock"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} at the boutique counter tapping her phone, a small relieved smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz she fills just four things: sales, spending, cash in hand and the bank.",
+   "sub": "In ScoreMyBiz she fills just four things: sales, spending, cash in hand and the bank.",
+   "min": 8,
+   "screen": "daily-update.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} finishing on her phone with a quick nod as a mannequin stands behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A minute at the counter, and the day is done.",
+   "sub": "A minute at the counter, and the day is done.",
+   "min": 8,
+   "screen": "daily-update.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} pulling down the boutique shutter at night with a content smile, a bag over her shoulder, warm street light.",
+   "vo": "If the day is already itemised, the totals are not counted twice.",
+   "sub": "If the day is already itemised, the totals are not counted twice.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} walking home on an evening street, relaxed, humming, the city lights soft behind her.",
+   "vo": "The book is up to date, and so is she.",
+   "sub": "The book is up to date, and so is she.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

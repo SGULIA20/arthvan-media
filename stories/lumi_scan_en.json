@@ -1,0 +1,78 @@
+{
+ "id": "lumi-scan-en",
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "lumi",
+ "feature": "photo-entry",
+ "title": "Skip the typing",
+ "post_on": "2026-10-26",
+ "caption": "Her whole month is in a notebook. Sunita photographs a page instead of typing it. Lumi tells her story.",
+ "linkedin_text": "Typing a month of handwritten sales into an app is an evening most shop owners do not have.\n\nIn ScoreMyBiz you can scan a photo of a bill or notebook page, or speak your numbers; the numbers fill in for you to check, and nothing is saved until you do. The AI features are part of the free first month. Lumi tells Sunita's story; every screen is the real app.",
+ "hashtags": [
+  "#ScanAPhoto",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "sunita": "Sunita, an Indian woman in her fifties who owns a grocery shop, in a green cotton saree with reading glasses on a chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera inside a small bright grocery shop with shelves of packets behind her, a friendly smile.",
+   "vo": "Hi, I'm Lumi. This is Sunita's story. Her whole month is in a notebook, in her own handwriting.",
+   "sub": "Hi, I'm Lumi. This is Sunita's story. Her whole month is in a notebook, in her own handwriting.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Skip the typing"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} at the counter of her grocery shop turning pages of a thick handwritten notebook, a pen behind her ear, a tired smile, evening light.",
+   "vo": "Typing it all in would take an evening she does not have.",
+   "sub": "Typing it all in would take an evening she does not have.",
+   "min": 8,
+   "card": "The notebook"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} holding her phone above an open notebook page on the counter as if taking a photo, glasses on, concentrating, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz she taps Scan a photo, and photographs a page of the notebook.",
+   "sub": "In ScoreMyBiz she taps Scan a photo, and photographs a page of the notebook.",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} looking closely at her phone with a small nod, a pencil in her hand, the grocery shop behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "The numbers fill in for her to check. She fixes one, and only then she saves.",
+   "sub": "The numbers fill in for her to check. She fixes one, and only then she saves.",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} speaking into her phone while standing between grocery shelves, a relaxed smile, soft shop light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Or she can speak her numbers instead.",
+   "sub": "Or she can speak her numbers instead.",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} closing the shop shutter in the evening with a light relieved smile, the notebook tucked under her arm.",
+   "vo": "Check it, then save. The book stays hers.",
+   "sub": "Check it, then save. The book stays hers.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

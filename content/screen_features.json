@@ -26,6 +26,14 @@
   "profit-loss.png": "profit-report",
   "score-history.png": "score-history",
   "result.png": "business-health-score",
-  "tasks.png": "next-moves"
+  "tasks.png": "next-moves",
+  "business-card.png": "business-card",
+  "calculator.png": "business-health-score",
+  "balance-sheet.png": "what-i-have-and-owe",
+  "goals.png": "goals-and-timelines",
+  "book-locks.png": "lock-finished-month",
+  "book-changes.png": "who-changed-what",
+  "daily-update.png": "daily-totals-update",
+  "game.png": "decision-game"
  }
 }

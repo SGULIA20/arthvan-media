@@ -1,0 +1,77 @@
+{
+ "id": "founder-lock-en",
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "founder_suit",
+ "feature": "lock-finished-month",
+ "title": "Lock the month",
+ "post_on": "2026-11-01",
+ "caption": "Last month's sale changed and nobody remembers who did it. Gopal fixes that. The founder tells his story.",
+ "linkedin_text": "When two or three people can edit a shop's book, last month's numbers need an owner.\n\nScoreMyBiz keeps a record of who added, changed or removed what and when, and a finished month can be locked so nothing in it changes. The founder character tells Gopal's story; every screen is the real app.",
+ "hashtags": [
+  "#BookKeeping",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "gopal": "Gopal, a middle-aged Indian shop owner with a thin moustache, a maroon half-sleeve shirt and a small tilak"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a neat shop office with filing cabinets behind him, a thoughtful smile.",
+   "vo": "Hi. This is Gopal's story. He runs a shop with two helpers and one rule: last month's book is not to be touched.",
+   "sub": "Hi. This is Gopal's story. He runs a shop with two helpers and one rule: last month's book is not to be touched.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Lock the month"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gopal} at his shop desk looking at a ledger page and frowning, a helper in the background looking away, afternoon light.",
+   "vo": "Then one day last month's sale is different, and nobody remembers who changed it.",
+   "sub": "Then one day last month's sale is different, and nobody remembers who changed it.",
+   "min": 8,
+   "card": "Who changed it?"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gopal} at his desk reading his phone carefully, a cup of tea beside him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz keeps a list: who added, changed or removed what, and when.",
+   "sub": "ScoreMyBiz keeps a list: who added, changed or removed what, and when.",
+   "min": 8,
+   "screen": "book-changes.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gopal} tapping a lock on his phone with a decided nod, shelves of stock behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "And he can lock a finished month, so nothing in it can change.",
+   "sub": "And he can lock a finished month, so nothing in it can change.",
+   "min": 8,
+   "screen": "book-locks.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "A professional accountant in glasses at an office desk tapping a laptop, a quiet confident nod, morning light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Even his accountant can lock a month once it is filed.",
+   "sub": "Even his accountant can lock a month once it is filed.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{gopal} and his two helpers laughing together at the shop counter, relaxed, the notebook closed on the desk.",
+   "vo": "Now the questions have answers.",
+   "sub": "Now the questions have answers.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
