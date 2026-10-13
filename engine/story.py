@@ -29,6 +29,24 @@ def cast_prompt(prompt: str, cast: dict) -> str:
     return re.sub(r"\{([a-z_]+)\}", sub, prompt)
 
 
+def shot_plan(story: dict) -> list:
+    """Every filmed shot a story needs: (scene number, prompt, reference pictures, cached?). Reading only, spends nothing."""
+    out = []
+    for i, sc in enumerate(story["scenes"]):
+        if sc.get("clip"):
+            refs = [broll.reference_picture(c) for c in sc.get("refs", [])]
+            prompt = cast_prompt(sc["clip"], story.get("cast", {}))
+            cached = (broll.BROLL_DIR / f"{broll.key_for(prompt, 8, references=refs or None)}.mp4").exists()
+            out.append((i, prompt, refs, cached))
+    return out
+
+
+def price_line(story: dict) -> str:
+    plan = shot_plan(story); new = [p for p in plan if not p[3]]
+    return (f"{story['id']}: {len(plan)} filmed shots, {len(plan) - len(new)} already made, {len(new)} new "
+            f"= about ₹{round(len(new) * 8 * broll.INR_PER_SECOND)} of credit. {broll.status_line()}")
+
+
 def voice_clip(text: str, voice: str, rate: int, out_wav: Path) -> float:
     aiff = out_wav.with_suffix(".aiff")
     subprocess.run(["say", "-v", voice, "-r", str(rate), "-o", str(aiff), text], check=True)
@@ -39,6 +57,7 @@ def voice_clip(text: str, voice: str, rate: int, out_wav: Path) -> float:
 
 def build(story_path: Path, out_dir: Path) -> Path:
     story = json.loads(Path(story_path).read_text())
+    print(price_line(story), flush=True)
     app = load_apps()[story["app"]]
     out_dir = Path(out_dir); out_dir.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as tmp:
@@ -128,4 +147,8 @@ def build(story_path: Path, out_dir: Path) -> Path:
 
 
 if __name__ == "__main__":
-    build(Path(sys.argv[1]), Path(sys.argv[2]))
+    if sys.argv[1] == "--plan":          # price check, spends nothing: python -m engine.story --plan stories/x.json ...
+        for f in sys.argv[2:]:
+            print(price_line(json.loads(Path(f).read_text())))
+    else:
+        build(Path(sys.argv[1]), Path(sys.argv[2]))

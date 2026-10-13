@@ -30,7 +30,7 @@ LIBRARY = Path.home() / "arthvan-social" / "shots"          # readable copies: <
 CREDIT_INR = 28000.0
 DEADLINE = date(2026, 12, 10)
 START = date(2026, 10, 12)
-INR_PER_SECOND = 7.0
+INR_PER_SECOND = 8.5      # measured 13 Oct: ₹7,744 billed for 120 shots (₹8.1/s) + headroom for billing lag
 STYLE = "Cinematic 3D animated film style, warm light, shallow depth of field, slow camera move, no text, no logos, no captions. "
 _CAFILE = "/etc/ssl/cert.pem"
 _CTX = ssl.create_default_context(cafile=_CAFILE) if os.path.exists(_CAFILE) else ssl.create_default_context()
@@ -42,6 +42,10 @@ class BRollError(Exception):
 
 class BRollFiltered(BRollError):
     """Veo's content filter declined this prompt: skip it, never retry it, carry on with the next."""
+
+
+class BRollLost(BRollError):
+    """The job was accepted by Veo but the clip never reached us (timeout, dropped connection): it may still be billed."""
 
 
 class BRollBadReference(BRollError):
@@ -111,9 +115,12 @@ def _generate(prompt: str, seconds: int, token: str, model: str = MODEL, referen
     op = body["name"]; t0 = time.time()
     while time.time() - t0 < 900:
         time.sleep(15)
-        st, b = _call("POST", f"{base}:fetchPredictOperation", token, {"operationName": op})
+        try:
+            st, b = _call("POST", f"{base}:fetchPredictOperation", token, {"operationName": op})
+        except BRollError as e:
+            raise BRollLost(str(e)) from e
         if st != 200:
-            raise BRollError(f"Veo poll failed ({st}): {str(b)[:200]}")
+            raise BRollLost(f"Veo poll failed ({st}): {str(b)[:200]}")
         if b.get("done"):
             err = b.get("error") or {}
             if "input image" in str(err.get("message", "")).lower():
@@ -124,8 +131,8 @@ def _generate(prompt: str, seconds: int, token: str, model: str = MODEL, referen
             resp = b.get("response") or {}
             if resp.get("raiMediaFilteredCount"):
                 raise BRollFiltered("content filter: " + "; ".join(resp.get("raiMediaFilteredReasons") or ["no reason given"])[:200])
-            raise BRollError("Veo finished without a video: " + str(b)[:300])
-    raise BRollError("Veo took longer than 15 minutes")
+            raise BRollLost("Veo finished without a video: " + str(b)[:300])
+    raise BRollLost("Veo took longer than 15 minutes")
 
 
 def key_for(prompt: str, seconds: int, model: str = MODEL, references: list = None) -> str:
@@ -151,8 +158,57 @@ def _ledger(path: Path) -> dict:
     return json.loads(path.read_text()) if path.exists() else {}
 
 
+def spent(led: dict) -> float:
+    """Rupees used: Google's own figure at the last calibration plus every shot recorded since, else the running total."""
+    cal = led.get("calibration")
+    if cal:
+        return float(cal["billed_inr"]) + sum(float(x.get("inr", 0)) for x in led.get("shots", [])[int(cal["shots_counted"]):])
+    return float(led.get("spent_inr", 0.0))
+
+
+class _Locked:
+    """Read-modify-write the ledger under an exclusive file lock, so parallel renders can never overwrite each other."""
+    def __init__(self, path: Path): self.path = Path(path)
+    def __enter__(self):
+        import fcntl
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self._lock = open(self.path.with_suffix(".lock"), "w"); fcntl.flock(self._lock, fcntl.LOCK_EX)
+        self.led = _ledger(self.path); self._before = len(self.led.get("shots", [])); return self.led
+    def __exit__(self, et, ev, tb):
+        import fcntl
+        if et is None:
+            if self.led.get("calibration"):
+                self.led["spent_inr"] = round(spent(self.led), 2)
+            else:       # no calibration yet: the running total grows by the shots recorded in this session
+                added = sum(float(x.get("inr", 0)) for x in self.led.get("shots", [])[self._before:])
+                self.led["spent_inr"] = round(float(self.led.get("spent_inr", 0.0)) + added, 2)
+            tmp = self.path.with_suffix(".tmp"); tmp.write_text(json.dumps(self.led, indent=1)); tmp.replace(self.path)
+        fcntl.flock(self._lock, fcntl.LOCK_UN); self._lock.close()
+
+
 def spent_inr(ledger_path: Path = LEDGER) -> float:
-    return float(_ledger(ledger_path).get("spent_inr", 0.0))
+    return spent(_ledger(ledger_path))
+
+
+def reconcile(ledger_path: Path = LEDGER, cache: Path = BROLL_DIR, seconds: int = 8) -> int:
+    """Record every clip file on disk that the ledger does not know (earlier parallel renders overwrote entries)."""
+    n = 0
+    with _Locked(ledger_path) as led:
+        known = {x.get("key") for x in led.get("shots", [])}
+        for f in sorted(Path(cache).glob("*.mp4")):
+            if f.stem not in known:
+                led.setdefault("shots", []).append({"day": date.fromtimestamp(f.stat().st_mtime).isoformat(), "seconds": seconds,
+                                                    "inr": seconds * INR_PER_SECOND, "key": f.stem, "prompt": "(reconciled from the file)", "note": "reconciled"})
+                n += 1
+    return n
+
+
+def calibrate(billed_inr: float, today: date = None, ledger_path: Path = LEDGER) -> float:
+    """Pin the ledger to the figure on Google's Credits page: ₹ used so far on the trial credit, as of now."""
+    with _Locked(ledger_path) as led:
+        led["calibration"] = {"day": (today or date.today()).isoformat(), "billed_inr": float(billed_inr), "shots_counted": len(led.get("shots", []))}
+        total = spent(led)
+    return total
 
 
 def pace(ledger_path: Path = LEDGER, today: date = None, credit: float = CREDIT_INR) -> dict:
@@ -181,39 +237,51 @@ def clip(prompt: str, *, seconds: int = 8, references: list = None, cache: Path 
     if out.exists():
         return out
     today = today or date.today()
-    led = _ledger(ledger_path); spent = float(led.get("spent_inr", 0.0)); cost = seconds * INR_PER_SECOND
+    cost = seconds * INR_PER_SECOND
     if today > DEADLINE:
         raise BRollError("the Google Cloud trial credit expired on 10 Dec 2026: no more shots, nothing is charged")
-    if spent + cost > credit:
-        raise BRollError(f"the video credit is finished: ₹{spent:.0f} of ₹{credit:.0f} used; no more shots, nothing is charged")
     key = out.stem
-    if key in led.get("filtered", []):
-        raise BRollFiltered("this prompt was declined by the content filter before; not retried")
+    with _Locked(ledger_path) as led:
+        used = spent(led) + float(led.get("reserved_inr", 0.0))
+        if key in led.get("filtered", []):
+            raise BRollFiltered("this prompt was declined by the content filter before; not retried")
+        if used + cost > credit:
+            raise BRollError(f"the video credit is finished: ₹{used:.0f} of ₹{credit:.0f} used or reserved; no more shots, nothing is charged")
+        led["reserved_inr"] = round(float(led.get("reserved_inr", 0.0)) + cost, 2)
     tok = _Token(token)
+    outcome = "error"
     try:
-        if references:
-            try:
-                data = generate(STYLE + prompt, seconds, tok, references=references)
-            except BRollBadReference:
-                references = None                                   # the description alone, then
+        try:
+            if references:
+                try:
+                    data = generate(STYLE + prompt, seconds, tok, references=references)
+                except BRollBadReference:
+                    references = None                               # the description alone, then
+                    data = generate(STYLE + prompt, seconds, tok)
+            else:
                 data = generate(STYLE + prompt, seconds, tok)
-        else:
-            data = generate(STYLE + prompt, seconds, tok)
-    except BRollFiltered:
-        led.setdefault("filtered", []).append(key)
-        Path(ledger_path).parent.mkdir(parents=True, exist_ok=True); Path(ledger_path).write_text(json.dumps(led, indent=1))
-        raise
-    out.write_bytes(data)
+            outcome = "ok"
+        except BRollFiltered:
+            outcome = "filtered"; raise
+        except BRollLost:
+            outcome = "lost"; raise
+    finally:
+        with _Locked(ledger_path) as led:
+            led["reserved_inr"] = round(max(0.0, float(led.get("reserved_inr", 0.0)) - cost), 2)
+            if outcome == "ok":
+                out.write_bytes(data)
+                led["seconds"] = int(led.get("seconds", 0)) + seconds
+                led.setdefault("shots", []).append({"day": today.isoformat(), "seconds": seconds, "inr": cost, "key": key, "prompt": prompt[:120],
+                                                    "refs": [Path(r).name for r in (references or [])]})
+            elif outcome == "filtered":
+                led.setdefault("filtered", []).append(key)
+            elif outcome == "lost":     # accepted by Veo, never delivered: may be billed, so it counts
+                led.setdefault("shots", []).append({"day": today.isoformat(), "seconds": seconds, "inr": cost, "key": None,
+                                                    "prompt": prompt[:120], "note": "lost after submission, counted as billed"})
     try:
         file_in_library(out, prompt, references, library)
     except OSError:
         pass
-    led["spent_inr"] = round(spent + cost, 2)
-    led["seconds"] = int(led.get("seconds", 0)) + seconds
-    led.setdefault("shots", []).append({"day": today.isoformat(), "seconds": seconds, "inr": cost, "key": out.stem, "prompt": prompt[:120],
-                                        "refs": [Path(r).name for r in (references or [])]})
-    Path(ledger_path).parent.mkdir(parents=True, exist_ok=True)
-    Path(ledger_path).write_text(json.dumps(led, indent=1))
     return out
 
 

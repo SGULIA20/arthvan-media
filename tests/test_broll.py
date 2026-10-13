@@ -97,3 +97,45 @@ def test_call_retries_a_timeout_and_refreshes_the_token_on_401(monkeypatch):
     monkeypatch.setattr(broll.json, "load", lambda r: {"ok": 1})
     st, body = broll._call("GET", "https://x/y", broll._Token())
     assert st == 200 and attempts == ["Bearer T1", "Bearer T1", "Bearer T2"]
+
+
+def test_parallel_renders_never_overwrite_each_others_ledger_entries(tmp_path):
+    import threading
+    gen = lambda prompt, seconds, token: b"mp4"
+    def one(i):
+        clip(f"shot number {i}", cache=tmp_path / "c", ledger_path=tmp_path / "l.json", generate=gen, token="T", today=date(2026, 10, 13), library=tmp_path / "lib")
+    threads = [threading.Thread(target=one, args=(i,)) for i in range(12)]
+    [x.start() for x in threads]; [x.join() for x in threads]
+    led = json.loads((tmp_path / "l.json").read_text())
+    assert len(led["shots"]) == 12 and spent_inr(tmp_path / "l.json") == 12 * 8 * broll.INR_PER_SECOND and led["reserved_inr"] == 0
+
+
+def test_reservations_hold_the_credit_line_while_a_shot_is_in_flight(tmp_path):
+    (tmp_path / "l.json").write_text(json.dumps({"spent_inr": 0.0, "reserved_inr": 27990.0}))
+    with pytest.raises(BRollError, match="finished"):
+        clip("one more", cache=tmp_path / "c", ledger_path=tmp_path / "l.json", generate=lambda *a: b"x", token="T", today=date(2026, 10, 13))
+
+
+def test_a_shot_lost_after_submission_is_counted_as_billed_and_the_reservation_released(tmp_path):
+    from engine.broll import BRollLost
+    def gen(prompt, seconds, token): raise BRollLost("timeout while polling")
+    with pytest.raises(BRollLost):
+        clip("lost shot", cache=tmp_path / "c", ledger_path=tmp_path / "l.json", generate=gen, token="T", today=date(2026, 10, 13))
+    led = json.loads((tmp_path / "l.json").read_text())
+    assert led["reserved_inr"] == 0 and spent_inr(tmp_path / "l.json") == 8 * broll.INR_PER_SECOND and led["shots"][0]["note"].startswith("lost")
+
+
+def test_reconcile_adds_clip_files_the_ledger_never_saw_and_calibrate_pins_google_figure(tmp_path):
+    (tmp_path / "c").mkdir()
+    for k in ("aaa", "bbb", "ccc"): (tmp_path / "c" / f"{k}.mp4").write_bytes(b"x")
+    (tmp_path / "l.json").write_text(json.dumps({"spent_inr": 100.0, "shots": [{"key": "aaa", "inr": 56}]}))
+    assert broll.reconcile(tmp_path / "l.json", tmp_path / "c") == 2
+    assert broll.reconcile(tmp_path / "l.json", tmp_path / "c") == 0              # idempotent
+    assert broll.calibrate(7744, date(2026, 10, 13), tmp_path / "l.json") == 7744
+    clip("a fresh shot", cache=tmp_path / "c", ledger_path=tmp_path / "l.json", generate=lambda *a: b"x", token="T", today=date(2026, 10, 14), library=tmp_path / "lib")
+    assert spent_inr(tmp_path / "l.json") == 7744 + 8 * broll.INR_PER_SECOND        # Google's figure plus only what came after
+
+
+def test_cache_keys_never_change_silently():
+    """A changed key format orphans every paid-for clip and makes the engine buy them again (it happened on 13 Oct)."""
+    assert key_for("a lane of shops at night", 8) == "cc05b7c09fe1ae44e843da1e92d2a627840e8861"
