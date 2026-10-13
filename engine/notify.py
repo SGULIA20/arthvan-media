@@ -13,7 +13,7 @@ from . import telegram
 ROOT = Path(__file__).resolve().parent.parent
 BUFFER_TARGET = 7
 NAMES = {"instagram": "Instagram", "youtube:sglearning": "YouTube (Learning with SG)", "youtube:arthvan": "YouTube (SG-MYTH-WORLD)",
-         "threads": "Threads", "linkedin": "LinkedIn", "whatsapp": "WhatsApp", "telegram": "Telegram", "telegram_channel": "Telegram channel", "facebook": "Facebook", "x": "X"}
+         "threads": "Threads", "linkedin": "LinkedIn", "whatsapp": "WhatsApp", "telegram": "Telegram", "telegram_channel": "Telegram channel"}
 APP_NAMES = {"scoremybiz": "ScoreMyBiz", "waypoint": "Waypoint"}
 
 
