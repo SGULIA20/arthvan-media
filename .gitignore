@@ -6,4 +6,5 @@ __pycache__/
 samples/
 .DS_Store
 stories/cache/
-\nstories/broll/*.mp4\nlogs/broll_library.log
+stories/broll/*.mp4
+logs/broll_library.log

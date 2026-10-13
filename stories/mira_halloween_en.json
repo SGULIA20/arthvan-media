@@ -36,7 +36,7 @@
   {
    "layout": "clip",
    "screen": "create_typed.png",
-   "clip": "The same young man in a plain hoodie sitting alone on a porch step late on Halloween night, the glow of his phone on his face, two pumpkins beside him, the party muffled behind the door, the subject on the left of the frame, the right third of the frame kept clear.",
+   "clip": "{dev} sitting alone on a porch step late on Halloween night, the glow of his phone on his face, two pumpkins beside him, the party muffled behind the door, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "On Waypoint he takes the mask off. A new name, just for tonight. One true sentence. That is all it asks.",
    "sub": "On Waypoint he takes the mask off. A new name, just for tonight. One true sentence. That is all it asks.",
    "min": 8
@@ -74,5 +74,8 @@
    "sub": "",
    "min": 5
   }
- ]
+ ],
+ "cast": {
+  "dev": "Dev, a young Black man in his twenties with short twisted hair and a plain charcoal hoodie"
+ }
 }

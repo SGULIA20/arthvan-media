@@ -1,0 +1,78 @@
+{
+ "id": "founder-dussehra-hi",
+ "app": "scoremybiz",
+ "lang": "hi",
+ "character": "founder_suit",
+ "feature": "tasks",
+ "occasion": "dussehra",
+ "title": "दशहरा",
+ "post_on": "2026-10-20",
+ "caption": "Dussehra, and the season of festival buying begins. The founder tells Mohan's story: clear the old dues first.",
+ "linkedin_text": "Dussehra opens the festival buying season, and most small shops start it with last season's dues still unpaid.\n\nScoreMyBiz turns a shop's own book into one number for its health and three moves for the week, with the first move usually the oldest dues. The founder character tells Mohan's story in Hindi with English subtitles; every screen is the real app.",
+ "hashtags": [
+  "#Dussehra",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "mohan": "Mohan, a middle-aged Indian man with a grey-streaked moustache in a cream kurta, owner of a cloth shop"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera on a lively Indian market street at dusk, festival lights and fireworks glowing softly in the sky behind him, a warm smile.",
+   "vo": "नमस्ते, दशहरा की शुभकामनाएँ। यह मोहन की कहानी है।",
+   "sub": "Hello, happy Dussehra. This is Mohan's story.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "दशहरा"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mohan} at the counter of his cloth shop with a thick ledger open, a pile of old handwritten bills beside it, festival lights outside the window, a worried frown.",
+   "vo": "त्योहारों का मौसम शुरू। दिवाली के माल से पहले, मोहन ने पुरानी बकाया की ढेरी देखी।",
+   "sub": "The festival season starts. Before the Diwali stock, Mohan looked at the pile of old dues.",
+   "min": 8,
+   "card": "पुरानी बकाया"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mohan} at his cloth shop counter looking at his phone, rolls of colourful cloth on the shelves behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ ने इस हफ़्ते के तीन काम सुझाए। सबसे ऊपर: बड़े बकाया वालों को याद दिलाओ।",
+   "sub": "ScoreMyBiz suggested three moves for the week. At the top: remind the biggest overdue customers.",
+   "min": 8,
+   "screen": "tasks.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mohan} tapping his phone at the counter and nodding, a customer in the background reading a message on his own phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "एक टैप में याद दिलाया। दशहरे की शाम तक दो ने भुगतान कर दिया।",
+   "sub": "One tap sent the reminders. Two customers paid by Dussehra evening.",
+   "min": 8,
+   "screen": "dashboard.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mohan} counting notes at his shop counter at closing time, cartons of new festival stock stacked by the door, a satisfied smile.",
+   "vo": "अब दिवाली का माल खरीदने के लिए हाथ में नकद है।",
+   "sub": "Now there is cash in hand for the Diwali stock.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{mohan} standing outside his cloth shop at dusk watching fireworks light up the sky over a town, shutters half up, a calm smile.",
+   "vo": "पुरानी बकाया निपटी। नई शुरुआत।",
+   "sub": "The old dues are cleared. A fresh start.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "स्कोर माय बिज़। अपने धंधे की सेहत जानिए। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "id": "mira-examweek-en",
+ "app": "waypoint",
+ "lang": "en",
+ "character": "mira",
+ "feature": "daily-path",
+ "title": "Exam week",
+ "post_on": "2026-10-21",
+ "caption": "Exam week, and everyone asks how it is going. Mira tells Sana's story.",
+ "linkedin_text": "During exam week every friend asks the same question and gets the same answer: fine.\n\nWaypoint's Daily Path asks one specific question a day, the same for everyone, and shows how others answered. Mira tells Sana's story; every screen is the real app.",
+ "hashtags": [
+  "#Waypoint",
+  "#DailyPath",
+  "#ExamWeek"
+ ],
+ "cast": {
+  "sana": "Sana, a young Indian woman with short curly hair in a mustard cardigan, a college student"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera in a quiet university library after hours, stacks of books behind her, a gentle smile.",
+   "vo": "Hi, I'm Mira. This is Sana's story. Exam week. Everyone asks her the same question: how is it going?",
+   "sub": "Hi, I'm Mira. This is Sana's story. Exam week. Everyone asks her the same question: how is it going?",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Exam week"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} in a university library at night surrounded by open books, a friend passing by and she answers with a quick polite smile, the smile fading as he leaves.",
+   "vo": "She says fine. Every time. Fine, fine, fine.",
+   "sub": "She says fine. Every time. Fine, fine, fine.",
+   "min": 8,
+   "card": "Exam week"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} on a late bus with her phone, rain on the window, city lights streaking past, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "On Waypoint she finds the Daily Path. One question a day, the same for everyone.",
+   "sub": "On Waypoint she finds the Daily Path. One question a day, the same for everyone.",
+   "min": 8,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} at a canteen table late at night with a cup of chai, her phone in both hands, taking her time to answer, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Today's question was easy to read and hard to answer. She took her time.",
+   "sub": "Today's question was easy to read and hard to answer. She took her time.",
+   "min": 8,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} reading her phone in a quiet corridor with a soft look of recognition, a window with night sky behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Then she saw how others had answered. Different answers. The same pause before typing.",
+   "sub": "Then she saw how others had answered. Different answers. The same pause before typing.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} closing her laptop and walking out of the library into the cool night, a small genuine smile.",
+   "vo": "Back to the notes. Same exams. And she slept earlier that night.",
+   "sub": "Back to the notes. Same exams. And she slept earlier that night.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

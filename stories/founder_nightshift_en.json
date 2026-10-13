@@ -1,0 +1,78 @@
+{
+ "id": "founder-nightshift-en",
+ "app": "waypoint",
+ "lang": "en",
+ "character": "founder_casual",
+ "feature": "explore",
+ "title": "3 AM",
+ "post_on": "2026-10-19",
+ "caption": "Night shift, empty office, everyone he knows asleep. The founder tells Karan's story.",
+ "linkedin_text": "Night shift workers see the city when it is quiet and rarely get to talk about it.\n\nWaypoint's Explore shows what people are saying tonight, by theme, so a person can read first and post one true sentence when they are ready. The founder character tells Karan's story; every screen is the real app.",
+ "hashtags": [
+  "#Waypoint",
+  "#NightShift",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "karan": "Karan, an Indian man in his late twenties with short hair and stubble, a black t-shirt and a lanyard around his neck"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera at a roadside tea stall at night, steam rising from a glass of tea, warm string lights, a gentle smile.",
+   "vo": "Hi. This is Karan's story. He works nights. Most people he knows are asleep.",
+   "sub": "Hi. This is Karan's story. He works nights. Most people he knows are asleep.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "3 AM"
+  },
+  {
+   "layout": "clip",
+   "clip": "{karan} at a desk in a large empty office at three in the morning, one monitor glowing, rows of dark desks behind him, a paper cup of tea beside the keyboard.",
+   "vo": "At three in the morning the office is quiet. His phone is the only thing that talks to him.",
+   "sub": "At three in the morning the office is quiet. His phone is the only thing that talks to him.",
+   "min": 8,
+   "card": "3 AM"
+  },
+  {
+   "layout": "clip",
+   "clip": "{karan} standing outside the office at a tea stall at night, scrolling his phone, a few motorbikes passing behind, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "On Waypoint there is Explore. He picks a theme and reads what people wrote tonight.",
+   "sub": "On Waypoint there is Explore. He picks a theme and reads what people wrote tonight.",
+   "min": 8,
+   "screen": "explore.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{karan} reading his phone on a bench at night with a small smile, city lights glowing in the distance, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Same hour, other cities. Someone in Pune, someone in Lagos, awake like him.",
+   "sub": "Same hour, other cities. Someone in Pune, someone in Lagos, awake like him.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{karan} typing slowly on his phone at his desk at night, a thoughtful look, the empty office behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Then he writes his own. One true sentence. That is all it asks.",
+   "sub": "Then he writes his own. One true sentence. That is all it asks.",
+   "min": 8,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{karan} walking out of the office building at sunrise, golden light on the street, bag on one shoulder, a slow relaxed smile.",
+   "vo": "Morning comes. The sentence is out there, and the walk home feels lighter.",
+   "sub": "Morning comes. The sentence is out there, and the walk home feels lighter.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
