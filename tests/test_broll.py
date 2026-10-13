@@ -63,3 +63,37 @@ def test_reference_pictures_change_the_key_and_reach_the_generator(tmp_path):
     assert a != b and calls == [None, [ref]]
     idx = (tmp_path / "lib" / "index.md").read_text()
     assert "mira-at-a-window" in idx and "refs: mira.jpg" in idx and len(list((tmp_path / "lib").glob("*.mp4"))) == 2
+
+
+def test_a_refused_reference_picture_falls_back_to_the_description_alone(tmp_path):
+    from engine.broll import BRollBadReference
+    ref = tmp_path / "f.jpg"; ref.write_bytes(b"\xff\xd8f")
+    calls = []
+    def gen(prompt, seconds, token, references=None):
+        calls.append(references)
+        if references: raise BRollBadReference("input image violates")
+        return b"mp4"
+    out = clip("the founder at a counter", references=[ref], cache=tmp_path / "c", ledger_path=tmp_path / "l.json", generate=gen, token="T", today=date(2026, 10, 13), library=tmp_path / "lib")
+    assert out.exists() and calls == [[ref], None]
+
+
+def test_call_retries_a_timeout_and_refreshes_the_token_on_401(monkeypatch):
+    import urllib.error, io
+    attempts = []
+    class R:
+        status = 200
+        def __enter__(self): return self
+        def __exit__(self, *a): pass
+        def read(self): return b'{"ok": 1}'
+    def fake_open(req, timeout=None, context=None):
+        attempts.append(req.get_header("Authorization"))
+        if len(attempts) == 1: raise TimeoutError("slow")
+        if len(attempts) == 2: raise urllib.error.HTTPError(req.full_url, 401, "expired", {}, io.BytesIO(b"expired"))
+        return R()
+    monkeypatch.setattr(broll.urllib.request, "urlopen", fake_open)
+    monkeypatch.setattr(broll.time, "sleep", lambda s: None)
+    tokens = iter(["T1", "T2"])
+    monkeypatch.setattr(broll, "access_token", lambda: next(tokens))
+    monkeypatch.setattr(broll.json, "load", lambda r: {"ok": 1})
+    st, body = broll._call("GET", "https://x/y", broll._Token())
+    assert st == 200 and attempts == ["Bearer T1", "Bearer T1", "Bearer T2"]

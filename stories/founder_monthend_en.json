@@ -16,12 +16,15 @@
  ],
  "scenes": [
   {
-   "layout": "talk",
-   "pose": "head_neutral",
-   "title": "Month end",
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, stands in a hardware shop aisle among coils of rope and tins of paint, turns to the camera and speaks calmly, warm evening light.",
    "vo": "Hello. This is Suresh's story. He runs a hardware shop. Every month end, the same question: where did the money go?",
    "sub": "Hello. This is Suresh's story. He runs a hardware shop. Every month end, the same question: where did the money go?",
-   "min": 7
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Month end"
   },
   {
    "layout": "clip",
@@ -32,29 +35,31 @@
    "min": 8
   },
   {
-   "layout": "present",
-   "pose": "phone",
-   "screen": "profit-loss.png",
+   "layout": "clip",
+   "clip": "Close on a hardware shop counter: a handwritten notebook, a calculator, a phone, the owner's hand turning a page, warm lamp light.",
    "vo": "ScoreMyBiz reads his own book and shows it plainly. Sold. Bought. Spent. What is left.",
    "sub": "ScoreMyBiz reads his own book and shows it plainly. Sold. Bought. Spent. What is left.",
-   "min": 7
+   "min": 8,
+   "screen": "profit-loss.png"
   },
   {
-   "layout": "present",
-   "pose": "explaining_right",
-   "who": "lumi",
-   "screen": "dashboard.png",
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, points at a shelf of unsold festival stock in a hardware shop while the owner, a middle-aged man in a checked shirt, scratches his head.",
    "vo": "Lumi points at the real problem: festival stock, still sitting on the shelf. Money, parked.",
    "sub": "Lumi points at the real problem: festival stock, still sitting on the shelf. Money, parked.",
-   "min": 7
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "screen": "dashboard.png"
   },
   {
-   "layout": "present",
-   "pose": "explaining_right",
-   "screen": "score-history.png",
+   "layout": "clip",
+   "clip": "The hardware shop owner at closing time a month later, opening the cash drawer and finding it full, a quiet satisfied smile, shelves behind.",
    "vo": "One number out of a hundred for the shop's health, and three moves for the week. He does them. Next month end, the drawer agrees with the shelf.",
    "sub": "One number out of 100 for the shop's health, and three moves for the week. He does them. Next month end, the drawer agrees with the shelf.",
-   "min": 9
+   "min": 9,
+   "screen": "score-history.png"
   },
   {
    "layout": "end",

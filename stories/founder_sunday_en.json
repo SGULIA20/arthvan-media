@@ -16,53 +16,58 @@
  ],
  "scenes": [
   {
-   "layout": "talk",
-   "pose": "head_neutral",
-   "title": "Sunday, 9 PM",
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, stands on a quiet apartment balcony at dusk in a new city, turns to the camera with an easy smile, city lights beginning to glow.",
    "vo": "Hi. This is Rohan's story. New city, new job, big flat. The day ends, and it stays untold.",
    "sub": "Hi. This is Rohan's story. New city, new job, big flat. The day ends, and it stays untold.",
-   "min": 6
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "Sunday, 9 PM"
   },
   {
-   "layout": "scene",
-   "pose": "window",
-   "card": "Sunday, 9 PM",
+   "layout": "clip",
+   "clip": "A young man alone at a large apartment window on a Sunday night, the city alive below, his reflection in the glass, a mug going cold on the sill.",
    "vo": "Weekends are the loud part. Everyone is somewhere. He is at the window.",
    "sub": "Weekends are the loud part. Everyone is somewhere. He is at the window.",
-   "min": 5
+   "min": 8,
+   "card": "Sunday, 9 PM"
   },
   {
-   "layout": "present",
-   "pose": "phone_sofa",
-   "screen": "create_typed.png",
+   "layout": "clip",
+   "clip": "The same young man on a sofa in a dim flat, phone glow on his face, typing one line slowly, a half-unpacked box beside him.",
    "vo": "On Waypoint he gets a name of his own for today. He types one true sentence. That is all it asks.",
    "sub": "On Waypoint he gets a name of his own for today. He types one true sentence. That is all it asks.",
-   "min": 7
+   "min": 8,
+   "screen": "create_typed.png"
   },
   {
-   "layout": "present",
-   "pose": "listening",
-   "who": "mira",
-   "screen": "wall.png",
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, sits on a rooftop at night with a phone, reading, the city spread behind her, soft smile, lanterns strung nearby.",
    "vo": "Mira shows him the Wall: tonight's sentences from people like him. Different cities, same nine o'clock.",
    "sub": "Mira shows him the Wall: tonight's sentences from people like him. Different cities, same nine o'clock.",
-   "min": 7
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "screen": "wall.png"
   },
   {
-   "layout": "present",
-   "pose": "relieved",
-   "screen": "matching.png",
+   "layout": "clip",
+   "clip": "Two apartment windows in two different buildings across a night city, each lit, a person at each one holding a phone.",
    "vo": "When he wants a real conversation, Waypoint crosses his path with one person. Just two sentences, and a reply.",
    "sub": "When he wants a real conversation, Waypoint crosses his path with one person. Just two sentences, and a reply.",
-   "min": 7
+   "min": 8,
+   "screen": "matching.png"
   },
   {
-   "layout": "present",
-   "pose": "thinking",
-   "screen": "calm.png",
+   "layout": "clip",
+   "clip": "A dark bedroom at night, a phone face-down on the bedside table, soft blue light, a young man breathing slowly with eyes closed.",
    "vo": "And on the nights he does not want to talk, the Calm kit. Two minutes, then sleep.",
    "sub": "And on the nights he does not want to talk, the Calm kit. Two minutes, then sleep.",
-   "min": 6
+   "min": 8,
+   "screen": "calm.png"
   },
   {
    "layout": "end",

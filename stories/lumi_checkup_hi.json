@@ -16,46 +16,56 @@
  ],
  "scenes": [
   {
-   "layout": "talk",
-   "pose": "head_neutral",
-   "title": "जाँच",
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, stands beside a parked motorbike outside a small Indian shop, turns to the camera and smiles, morning light.",
    "vo": "नमस्ते, मैं लूमी हूँ। यह राजू की कहानी है। राजू अपनी बाइक की जाँच तभी करता है जब वह रुक जाती है।",
    "sub": "Hi, I'm Lumi. This is Raju's story. Raju checks his bike only when it stops.",
-   "min": 6
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "जाँच"
   },
   {
-   "layout": "scene",
-   "pose": "front_standing",
-   "who": "founder_suit",
-   "card": "दुकान भी वैसे ही?",
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, stands in a small Indian shop doorway at month end, a worried shopkeeper beside him looking at an empty cash drawer, late evening.",
    "vo": "दुकान भी वैसे ही। महीने के आख़िर में पता चलता है कि कहाँ कमी रह गई।",
    "sub": "The shop, the same way. Only at month end does he learn where it went wrong.",
-   "min": 5
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "card": "दुकान भी वैसे ही?"
   },
   {
-   "layout": "present",
-   "pose": "phone",
-   "screen": "score-history.png",
+   "layout": "clip",
+   "clip": "A shopkeeper at his counter looking at a phone, a weekly chart glowing on it, shop shelves behind, afternoon light.",
    "vo": "स्कोर माय बिज़ में उसकी बही से हर हफ़्ते एक स्कोर बनता है। सौ में से एक अंक। और सात हिस्से जो बताते हैं कि दबाव कहाँ है।",
    "sub": "In ScoreMyBiz his book makes a score every week. One number out of 100, and seven areas that show where the pressure is.",
-   "min": 8
+   "min": 8,
+   "screen": "score-history.png"
   },
   {
-   "layout": "present",
-   "pose": "explaining_right",
-   "screen": "dashboard.png",
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, at the shop counter gesturing to the phone while the shopkeeper taps three times and smiles.",
    "vo": "इस हफ़्ते दबाव वसूली में था। तीन ग्राहक, तीन टैप।",
    "sub": "This week the pressure was in collections. Three customers, three taps.",
-   "min": 6
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "screen": "dashboard.png"
   },
   {
-   "layout": "present",
-   "pose": "front_standing",
-   "who": "founder_suit",
-   "screen": "cash-reality.png",
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, standing beside the shopkeeper who is counting notes from a full drawer, both smiling, warm shop light.",
    "vo": "अगले हफ़्ते स्कोर ऊपर। हाथ में नकद भी।",
    "sub": "Next week the score is up. So is the cash in hand.",
-   "min": 5
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "screen": "cash-reality.png"
   },
   {
    "layout": "end",

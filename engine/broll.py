@@ -44,6 +44,10 @@ class BRollFiltered(BRollError):
     """Veo's content filter declined this prompt: skip it, never retry it, carry on with the next."""
 
 
+class BRollBadReference(BRollError):
+    """Veo refused a reference picture: make the shot from the description alone."""
+
+
 def gcloud() -> str:
     for p in (shutil.which("gcloud"), Path.home() / "google-cloud-sdk-dl" / "google-cloud-sdk" / "bin" / "gcloud", Path.home() / "google-cloud-sdk" / "bin" / "gcloud"):
         if p and Path(p).exists():
@@ -58,14 +62,38 @@ def access_token() -> str:
         raise BRollError("gcloud is not signed in: run  gcloud auth login --update-adc") from e
 
 
-def _call(method, url, token, body=None):
-    req = urllib.request.Request(url, data=json.dumps(body).encode() if body else None, method=method,
-                                 headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=120, context=_CTX) as r:
-            return r.status, json.load(r)
-    except urllib.error.HTTPError as e:
-        return e.code, {"error": e.read()[:300].decode(errors="replace")}
+class _Token:
+    """gcloud access tokens live about an hour; a long batch outlives one, so fetch again on a 401."""
+    def __init__(self, fixed=None): self.fixed, self.value = fixed, fixed
+    def get(self):
+        if self.value is None: self.value = access_token()
+        return self.value
+    def refresh(self):
+        if self.fixed is None: self.value = access_token()
+
+
+def _call(method, url, token, body=None, tries: int = 4):
+    import http.client
+    tok = token if isinstance(token, _Token) else _Token(token)
+    last = None
+    for attempt in range(tries):
+        req = urllib.request.Request(url, data=json.dumps(body).encode() if body else None, method=method,
+                                     headers={"Authorization": f"Bearer {tok.get()}", "Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=600, context=_CTX) as r:
+                return r.status, json.load(r)
+        except urllib.error.HTTPError as e:
+            text = e.read()[:300].decode(errors="replace")
+            if e.code == 401 and attempt < tries - 1:
+                tok.refresh(); continue
+            if e.code in (429, 500, 502, 503, 504) and attempt < tries - 1:
+                time.sleep(20 * (attempt + 1)); continue
+            return e.code, {"error": text}
+        except (TimeoutError, http.client.IncompleteRead, urllib.error.URLError, ConnectionError, OSError) as e:
+            last = e
+            if attempt < tries - 1:
+                time.sleep(15 * (attempt + 1)); continue
+    raise BRollError(f"Veo request kept failing: {type(last).__name__}: {str(last)[:120]}")
 
 
 def _generate(prompt: str, seconds: int, token: str, model: str = MODEL, references: list = None) -> bytes:
@@ -87,6 +115,9 @@ def _generate(prompt: str, seconds: int, token: str, model: str = MODEL, referen
         if st != 200:
             raise BRollError(f"Veo poll failed ({st}): {str(b)[:200]}")
         if b.get("done"):
+            err = b.get("error") or {}
+            if "input image" in str(err.get("message", "")).lower():
+                raise BRollBadReference(str(err.get("message"))[:200])
             vids = (b.get("response") or {}).get("videos") or []
             if vids and vids[0].get("bytesBase64Encoded"):
                 return base64.b64decode(vids[0]["bytesBase64Encoded"])
@@ -158,9 +189,16 @@ def clip(prompt: str, *, seconds: int = 8, references: list = None, cache: Path 
     key = out.stem
     if key in led.get("filtered", []):
         raise BRollFiltered("this prompt was declined by the content filter before; not retried")
+    tok = _Token(token)
     try:
-        data = generate(STYLE + prompt, seconds, token if token is not None else access_token(), references=references) if references \
-            else generate(STYLE + prompt, seconds, token if token is not None else access_token())
+        if references:
+            try:
+                data = generate(STYLE + prompt, seconds, tok, references=references)
+            except BRollBadReference:
+                references = None                                   # the description alone, then
+                data = generate(STYLE + prompt, seconds, tok)
+        else:
+            data = generate(STYLE + prompt, seconds, tok)
     except BRollFiltered:
         led.setdefault("filtered", []).append(key)
         Path(ledger_path).parent.mkdir(parents=True, exist_ok=True); Path(ledger_path).write_text(json.dumps(led, indent=1))

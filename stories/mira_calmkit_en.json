@@ -16,45 +16,50 @@
  ],
  "scenes": [
   {
-   "layout": "talk",
-   "pose": "head_neutral",
-   "title": "Two minutes.",
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, stands in a quiet kitchen late at night, one lamp on, turns to the camera with a gentle smile, a kettle steaming.",
    "vo": "Hi, I'm Mira. This is Priya's story. Her day runs on a timetable. Her evenings do not.",
    "sub": "Hi, I'm Mira. This is Priya's story. Her day runs on a timetable. Her evenings do not.",
-   "min": 6
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Two minutes."
   },
   {
-   "layout": "scene",
-   "pose": "listening",
-   "card": "Late evening",
+   "layout": "clip",
+   "clip": "A young woman in office clothes on a late evening commuter train, head against the window, city lights streaking past, tired.",
    "vo": "Some nights she just wants two minutes that belong to her.",
    "sub": "Some nights she just wants two minutes that belong to her.",
-   "min": 5
+   "min": 8,
+   "card": "Late evening"
   },
   {
-   "layout": "present",
-   "pose": "phone_night",
-   "screen": "calm.png",
+   "layout": "clip",
+   "clip": "The same young woman sitting on the edge of her bed at night, phone in both hands, eyes closed, breathing slowly, soft lamp light.",
    "vo": "Waypoint has a Calm kit now. Breathe. Ground yourself. Wind down. Two minutes each, no account, nothing saved.",
    "sub": "Waypoint has a Calm kit now. Breathe. Ground yourself. Wind down. Two minutes each, no account, nothing saved.",
-   "min": 8
+   "min": 8,
+   "screen": "calm.png"
   },
   {
-   "layout": "present",
-   "pose": "relieved",
-   "screen": "daily-path.png",
+   "layout": "clip",
+   "clip": "A phone on a pillow showing a single glowing question, a young woman's hand reaching for it, night, warm light.",
    "vo": "Then the Daily Path, one question for everyone. She answers it slower tonight.",
    "sub": "Then the Daily Path, one question for everyone. She answers it slower tonight.",
-   "min": 6
+   "min": 8,
+   "screen": "daily-path.png"
   },
   {
-   "layout": "present",
-   "pose": "listening",
-   "who": "founder_casual",
-   "screen": "wall.png",
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, sits on a balcony at night reading his phone and nodding slowly, as if someone else had the same evening, city glow behind.",
    "vo": "And on the Wall, another person had the same kind of evening.",
    "sub": "And on the Wall, another person had the same kind of evening.",
-   "min": 5
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "screen": "wall.png"
   },
   {
    "layout": "end",

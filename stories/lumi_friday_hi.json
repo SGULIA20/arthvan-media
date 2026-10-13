@@ -8,45 +8,50 @@
  "title": "शुक्रवार",
  "scenes": [
   {
-   "layout": "talk",
-   "pose": "head_neutral",
-   "title": "शुक्रवार",
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, stands at the counter of a small Indian general store stacked with Diwali goods, string lights above, she turns to the camera and smiles warmly.",
    "vo": "नमस्ते, मैं लूमी हूँ। यह मीना की कहानी है। दिवाली का माल आ गया था, बिक्री भी अच्छी थी।",
    "sub": "Hi, I'm Lumi. This is Meena's story. The Diwali stock had come, and sales were good too.",
-   "min": 5
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "शुक्रवार"
   },
   {
-   "layout": "scene",
-   "pose": "worried",
-   "card": "सप्लायर: “शुक्रवार तक?”",
+   "layout": "clip",
+   "clip": "A woman shopkeeper in a cotton saree at the counter of a small Indian store, a supplier in a checked shirt across the counter tapping a bill, Diwali stock piled behind, tense afternoon light.",
    "vo": "फिर भी शुक्रवार को सप्लायर को देने के लिए पैसा नहीं था।",
    "sub": "And still, on Friday, there was nothing to pay the supplier with.",
-   "min": 5
+   "min": 8,
+   "card": "सप्लायर: “शुक्रवार तक?”"
   },
   {
-   "layout": "present",
-   "pose": "phone",
-   "screen": "cash-reality.png",
+   "layout": "clip",
+   "clip": "Close on a woman's hands photographing a handwritten ledger with a phone at a shop counter, Diwali lights in the background, warm evening.",
    "vo": "उसने बस अपनी बही की फोटो खींची। मुनाफ़ा था, नकद नहीं था। पैसा ग्राहकों के पास अटका था।",
    "sub": "She just took a photo of her notebook. The profit was there, the cash was not. It was stuck with customers.",
-   "min": 7
+   "min": 8,
+   "screen": "cash-reality.png"
   },
   {
-   "layout": "present",
-   "pose": "front_neutral",
-   "screen": "dashboard.png",
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, stands beside the shop counter looking at a phone and nodding, the woman shopkeeper beside him relieved, warm shop light.",
    "vo": "तीन ग्राहकों को एक एक टैप में याद दिलाया। शाम तक दो ने भुगतान कर दिया।",
    "sub": "Three customers reminded, one tap each. By evening, two had paid.",
-   "min": 7,
-   "who": "founder_suit"
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "screen": "dashboard.png"
   },
   {
-   "layout": "present",
-   "pose": "pointing_up",
-   "screen": "score-history.png",
+   "layout": "clip",
+   "clip": "A supplier counting notes with a smile at a small Indian shop counter on a Friday afternoon, the woman shopkeeper handing them over, Diwali lanterns above.",
    "vo": "शुक्रवार को सप्लायर को पूरा पैसा मिला। और उसका स्कोर ऊपर गया।",
    "sub": "On Friday the supplier was paid in full. And her score went up.",
-   "min": 6
+   "min": 8,
+   "screen": "score-history.png"
   },
   {
    "layout": "end",
