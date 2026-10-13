@@ -10,6 +10,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg)}
 .o2{position:absolute;left:-300px;bottom:-200px;width:900px;height:900px;border-radius:50%;background:radial-gradient(closest-side,var(--good),transparent);opacity:.18}
 .sub{position:absolute;left:60px;right:60px;bottom:90px;text-align:center;font-weight:600;font-size:46px;line-height:1.3;text-shadow:0 2px 12px rgba(0,0,0,.6)}
 .sub span{background:rgba(0,0,0,.45);padding:6px 18px;border-radius:14px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.sub .nat{font-size:50px;font-weight:800;line-height:1.25}.sub .en{font-size:34px;font-weight:600;opacity:.92;background:none;padding:0}
+.langchip{position:absolute;left:60px;top:170px;padding:12px 26px;border-radius:40px;background:rgba(255,255,255,.92);color:#10131f;font-weight:800;font-size:40px;box-shadow:0 8px 26px rgba(0,0,0,.35)}
 .title{position:absolute;left:70px;right:70px;top:150px;font-weight:800;font-size:96px;line-height:1.05;letter-spacing:-.02em;text-align:center}
 .screen{position:absolute;width:560px;height:1100px;border-radius:66px;background:#0b0b0f;padding:12px;box-shadow:0 40px 90px rgba(0,0,0,.6)}
 .screen img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:56px;display:block}
@@ -63,7 +65,8 @@ window.render=function(t){
   h+='</div>';
   if(s.layout!=='end'&&s.layout!=='duo_end') h+=`<div class="brand"><img src="${D.icon}"><span>${D.app_name}</span></div>`;
   if(s.title && local<2.4) h+=`<div class="title" style="opacity:${eo(local/.5)*eo((2.4-local)/.4)}">${s.title}</div>`;
-  if(s.sub && s.layout!=='end' && s.layout!=='duo_end') h+=`<div class="sub" style="opacity:${fade}"><span>${s.sub}</span></div>`;
+  if(s.sub && s.layout!=='end' && s.layout!=='duo_end') h+=`<div class="sub" style="opacity:${fade}"><span>${s.native?`<b class="nat">${s.native}</b><br><span class="en">${s.sub}</span>`:s.sub}</span></div>`;
+  if(s.chip) h+=`<div class="langchip" style="opacity:${fade*eo((local-.2)/.4)}">${s.chip}</div>`;       // the language being spoken in this scene
   root.innerHTML=h;
 };
 render(0);

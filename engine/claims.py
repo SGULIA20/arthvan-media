@@ -5,6 +5,7 @@ says which feature each captured screen shows. A story whose feature or screens 
 back automatically, and a graphics post whose feature is not live is never picked.
 """
 import json
+import os
 from pathlib import Path
 
 from .config import ROOT
@@ -40,7 +41,7 @@ def story_problems(story: dict, feats: dict, smap: dict) -> list:
     for i, sc in enumerate(story.get("scenes", [])):
         shot = sc.get("screen")
         if shot and (smap.get(app) or {}):
-            key = smap[app].get(shot)
+            key = smap[app].get(os.path.basename(shot))
             if key is None:
                 out.append(f"scene {i}: screen {shot} is not mapped to a verified feature")
             else:

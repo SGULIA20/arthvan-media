@@ -75,12 +75,12 @@ def gemini_clip(text: str, voice: str, out_wav: Path, *, key: str = None, cache:
     cache = Path(cache); cache.mkdir(parents=True, exist_ok=True)
     raw = cache / (hashlib.sha1(f"{model}|{voice}|{STYLE}{text}".encode()).hexdigest() + ".wav")
     if not raw.exists():
-        for attempt in range(2):
+        for attempt in range(6):
             status, body = _generate(model, STYLE + text, voice, key)
             if status == 200:
                 break
-            if attempt == 0 and status in (429, 500, 503):
-                time.sleep(8); continue
+            if attempt < 5 and status in (429, 500, 503):      # a per-minute quota or a busy server: wait it out, politely
+                time.sleep(8 if status != 429 else 20 + 15 * attempt); continue
             raise TTSError(f"Gemini TTS failed ({status}): {str((body.get('error') or {}).get('message') or body)[:200].replace(key, '<key>')}")
         part = body["candidates"][0]["content"]["parts"][0]["inlineData"]
         data = base64.b64decode(part["data"])

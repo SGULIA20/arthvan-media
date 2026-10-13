@@ -4,6 +4,8 @@ python3 capture_waypoint_features.py <outdir>"""
 import sys
 from playwright.sync_api import sync_playwright
 BASE = "http://localhost:8092"; OUT = sys.argv[1] if len(sys.argv) > 1 else "."
+ONLY = sys.argv[3].split(",") if len(sys.argv) > 3 else None          # e.g. reveal,customize (poll and voice only when named)
+LANGUAGE = sys.argv[2] if len(sys.argv) > 2 else "en"      # app language code, e.g. hi, es, sw, pt, bn, ta
 ROUTES = {"break-room": "/break-room", "my-waypoints": "/my-waypoints", "wrapped": "/wrapped", "reveal": "/reveal", "language": "/language",
           "saved": "/saved", "customize": "/customize", "how-it-works": "/how-it-works", "whats-new": "/whats-new"}
 
@@ -14,13 +16,18 @@ def go(pg, path, wait=2500):
 
 with sync_playwright() as p:
     b = p.chromium.launch(); ctx = b.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=3, is_mobile=True, has_touch=True)
+    ctx.add_init_script("try{localStorage.setItem('appLanguage','%s');}catch(e){}" % LANGUAGE)
     pg = ctx.new_page()
     for name, path in ROUTES.items():
+        if ONLY and name not in ONLY:
+            continue
         try:
             go(pg, path); pg.screenshot(path=f"{OUT}/{name}.png"); print(name, "ok")
         except Exception as e:
             print(name, "ERR", str(e)[:80])
     for name, label, fill in (("poll", "Ask the Path", True), ("voice", "Voice", False)):
+        if not ONLY or name not in ONLY:
+            continue
         try:
             go(pg, "/create", 2000)
             pg.get_by_text(label, exact=False).first.click(); pg.wait_for_timeout(1000)

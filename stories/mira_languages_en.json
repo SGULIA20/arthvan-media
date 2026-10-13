@@ -1,0 +1,118 @@
+{
+ "id": "mira-languages-en",
+ "app": "waypoint",
+ "lang": "en",
+ "character": "mira",
+ "feature": "languages",
+ "also": [
+  "translate-content",
+  "fresh-name"
+ ],
+ "title": "Say it your way",
+ "post_on": "2026-11-13",
+ "caption": "Waypoint speaks sixteen languages. Mira says hello in six of them.",
+ "linkedin_text": "Most people think in a language other than the one their apps speak.\n\nWaypoint works in 16 languages, shows its own words in the one you pick, and can translate a post with one tap. Mira says hello in six of them; every screen is the real app in that language.",
+ "hashtags": [
+  "#Languages",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera on a bright rooftop with a view of a city at golden hour, smiling warmly.",
+   "vo": "Hi, I'm Mira. Waypoint speaks sixteen languages. Listen.",
+   "sub": "Hi, I'm Mira. Waypoint speaks sixteen languages. Listen.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Say it your way"
+  },
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, sitting on a Delhi rooftop with a young man who reads his phone and smiles, evening light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "हर सुबह, एक नया नाम। और जब चाहें, एक सच्ची बात।",
+   "sub": "Every morning, a new name. One true sentence, whenever you want.",
+   "min": 8,
+   "native": "हर सुबह, एक नया नाम। और जब चाहें, एक सच्ची बात।",
+   "chip": "हिन्दी · Hindi",
+   "screen": "../hi/reveal.png",
+   "refs": [
+    "mira"
+   ]
+  },
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, at a sunny plaza cafe in Mexico City with a young woman looking at her phone, warm daylight, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Lee el Wall en español. Con un solo toque traduces cualquier publicación.",
+   "sub": "Read the Wall in Spanish. One tap translates any post.",
+   "min": 8,
+   "native": "Lee el Wall en español. Con un solo toque traduces cualquier publicación.",
+   "chip": "Español · Spanish",
+   "screen": "../es/reveal.png",
+   "refs": [
+    "mira"
+   ]
+  },
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, on a bench in a Nairobi park with a young man holding his phone, a gentle smile, afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Waypoint inazungumza Kiswahili pia. Sema mara moja.",
+   "sub": "Waypoint speaks Swahili too. Say it once.",
+   "min": 8,
+   "native": "Waypoint inazungumza Kiswahili pia. Sema mara moja.",
+   "chip": "Kiswahili · Swahili",
+   "screen": "../sw/reveal.png",
+   "refs": [
+    "mira"
+   ]
+  },
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, at a beachfront kiosk in Rio de Janeiro with a young woman checking her phone, golden light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Um nome novo todas as manhãs, em português.",
+   "sub": "A new name every morning, in Portuguese.",
+   "min": 8,
+   "native": "Um nome novo todas as manhãs, em português.",
+   "chip": "Português · Portuguese",
+   "screen": "../pt/reveal.png",
+   "refs": [
+    "mira"
+   ]
+  },
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, on a Kolkata balcony with a young man reading his phone, tea cups on a small table, soft evening light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "একটি সত্যি বাক্য লিখুন।",
+   "sub": "Write one true sentence, in Bengali.",
+   "min": 8,
+   "native": "একটি সত্যি বাক্য লিখুন।",
+   "chip": "বাংলা · Bengali",
+   "screen": "../bn/reveal.png",
+   "refs": [
+    "mira"
+   ]
+  },
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, in a Chennai courtyard with a young woman showing her phone, a kolam on the floor, morning light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "உங்க Wall, தமிழ்ல.",
+   "sub": "Your Wall, in Tamil.",
+   "min": 8,
+   "native": "உங்க Wall, தமிழ்ல.",
+   "chip": "தமிழ் · Tamil",
+   "screen": "../ta/reveal.png",
+   "refs": [
+    "mira"
+   ]
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

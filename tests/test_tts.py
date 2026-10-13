@@ -64,3 +64,19 @@ def test_each_character_has_a_fixed_gemini_voice():
     assert pick_voice({"character": "mira"}) == "Leda"
     assert pick_voice({"character": "founder_suit"}) == pick_voice({"character": "founder_casual"}) == "Charon"
     assert pick_voice({"character": "lumi", "voice": "Aoede"}) == "Aoede"       # explicit wins
+
+
+def test_a_quota_error_is_waited_out_for_several_tries_and_a_real_error_is_not(tmp_path, monkeypatch):
+    waits = []
+    monkeypatch.setattr(tts.time, "sleep", lambda s: waits.append(s))
+    class Quota:
+        def __init__(self): self.n = 0
+        def __call__(self, model, text, voice, key):
+            self.n += 1
+            if self.n <= 3: return 429, {"error": {"message": "quota"}}
+            return FakeAPI()(model, text, voice, key)
+    q = Quota(); monkeypatch.setattr(tts, "_generate", q)
+    assert gemini_clip("x", "Kore", tmp_path / "a.wav", key="K", cache=tmp_path / "c") > 0 and q.n == 4 and waits == [20, 35, 50]
+    monkeypatch.setattr(tts, "_generate", lambda *a: (400, {"error": {"message": "bad"}}))
+    with pytest.raises(TTSError, match="400"):
+        gemini_clip("y", "Kore", tmp_path / "b.wav", key="K", cache=tmp_path / "c")
