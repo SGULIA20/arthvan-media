@@ -45,9 +45,10 @@
   {
    "layout": "clip",
    "clip": "{sunil} opening a list on his phone with an easy smile, the subject on the left of the frame, the right third of the frame kept clear.",
-   "vo": "Filings and returns, in one place, ready to open.",
-   "sub": "Filings and returns, in one place, ready to open.",
-   "min": 8
+   "vo": "There is a My Documents list in his app. Once his CA uploads something, it shows up there.",
+   "sub": "There is a My Documents list in his app. Once his CA uploads something, it shows up there.",
+   "min": 8,
+   "screen": "my-documents.png"
   },
   {
    "layout": "clip",

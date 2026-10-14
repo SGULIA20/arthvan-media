@@ -36,6 +36,11 @@
   "daily-update.png": "daily-totals-update",
   "game.png": "decision-game",
   "whatsapp-menu.png": "whatsapp-menu-reports",
-  "whatsapp-numbers.png": "whatsapp-daily-update"
+  "whatsapp-numbers.png": "whatsapp-daily-update",
+  "ca-portfolio.png": "ca-network",
+  "ca-card.png": "ca-network",
+  "export-book.png": "file-for-accountant",
+  "my-documents.png": "documents-from-my-ca",
+  "year-end.png": "year-end-close"
  }
 }

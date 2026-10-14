@@ -17,6 +17,12 @@ MORE=["business-card","daily-update","cash-flow","payables","invoices","quotatio
       "business-simulator","decision-simulation","ledger-statement","reconcile","support"]
 if len(sys.argv)>3 and sys.argv[3]=="more": ROUTES=MORE
 elif len(sys.argv)>3 and sys.argv[3]!="core": ROUTES=sys.argv[3].split(",")        # e.g. daily-update,book
+CLEAN_JS = r"""() => {   // remove the dev-build warning bubble and any "Founder test mode" notice, with the box that holds only that text
+  const pat = /cannot contain a nest|Founder test mode|Unhandled|Warning:/i;
+  const norm = s => (s || '').replace(/\s+/g, '');
+  const hits = [...document.querySelectorAll('*')].filter(e => pat.test(e.innerText || '') && (e.innerText || '').length < 1500 && ![...e.children].some(c => pat.test(c.innerText || '')));
+  hits.forEach(e => { let n = e; while (n.parentElement && n.parentElement !== document.body && norm(n.parentElement.innerText) === norm(n.innerText)) n = n.parentElement; n.remove(); });
+}"""
 def handle(route, req):
     fn=req.url.split("/functions/")[1].split("?")[0]
     if fn=="check-plan":
@@ -38,6 +44,7 @@ with sync_playwright() as p:
     for r in ROUTES:
         try:
             pg.goto(f"{BASE}/{r}", wait_until="networkidle", timeout=60000); pg.wait_for_timeout(4000)
+            pg.evaluate(CLEAN_JS); pg.wait_for_timeout(400)
             pg.screenshot(path=f"{OUT}/{r}.png"); print(r,"ok")
         except Exception as e: print(r,"ERR",str(e)[:70])
     b.close()

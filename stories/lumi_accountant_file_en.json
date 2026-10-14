@@ -38,16 +38,18 @@
   {
    "layout": "clip",
    "clip": "{nadia} tapping her phone behind the counter, flour on her apron, the subject on the left of the frame, the right third of the frame kept clear.",
-   "vo": "In ScoreMyBiz she opens File for my accountant, and picks the period.",
-   "sub": "In ScoreMyBiz she opens File for my accountant, and picks the period.",
-   "min": 8
+   "vo": "In ScoreMyBiz she opens Export for my accountant, and picks the period.",
+   "sub": "In ScoreMyBiz she opens Export for my accountant, and picks the period.",
+   "min": 8,
+   "screen": "export-book.png"
   },
   {
    "layout": "clip",
    "clip": "{nadia} choosing on her phone with a curious look, the subject on the left of the frame, the right third of the frame kept clear.",
-   "vo": "Then the format: one combined file, or the bank-style files that QuickBooks and Xero can import.",
-   "sub": "Then the format: one combined file, or the bank-style files that QuickBooks and Xero can import.",
-   "min": 8
+   "vo": "Then a format: a file for any spreadsheet, or the bank-style imports for QuickBooks, Wave and Xero.",
+   "sub": "Then a format: a file for any spreadsheet, or the bank-style imports for QuickBooks, Wave and Xero.",
+   "min": 8,
+   "screen": "export-book.png"
   },
   {
    "layout": "clip",
