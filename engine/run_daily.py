@@ -15,10 +15,11 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable
 
-from . import instagram, linkedin, notify, render, telegram, threads, whatsapp, youtube
+from . import facebook, instagram, linkedin, notify, render, telegram, threads, whatsapp, youtube
 from .config import ROOT, load_apps, load_bank, load_global
 from .instagram import Captions, InstagramError, PartialPublish, SetUrls
 from .lint import alt_texts, build_captions, build_linkedin_text, build_threads_text, lint_item, story_captions
+from .facebook import FacebookError
 from .linkedin import LinkedInError
 from .threads import ThreadsError
 from .youtube import YouTubeError
@@ -91,6 +92,8 @@ class Deps:
     post_threads: Callable = threads.post_carousel
     post_threads_video: Callable = threads.post_video
     send_telegram: Callable = telegram.send_video
+    post_facebook_reel: Callable = facebook.post_reel
+    post_facebook_story: Callable = facebook.post_story
     prepare_video_set: Callable = instagram.prepare_video_set
     post_linkedin_video: Callable = linkedin.post_video
     post_youtube: Callable = youtube.post_short
@@ -116,6 +119,13 @@ def day_status(log: Path, day: date, channel: str = "instagram"):
                 and e.get("status") in ("publishing", "published", "partial")):
             last = e["status"]
     return last
+
+
+def _missing(chans: dict, log: Path, day: date) -> list:
+    out = [c for c in chans if c not in ("linkedin_any", "youtube") and day_status(log, day, c) != "published"]
+    if "facebook" in chans and day_status(log, day, "facebook_story") != "published":
+        out.append("facebook_story")
+    return out + [f"youtube:{n}" for n in chans.get("youtube", {}) if day_status(log, day, f"youtube:{n}") != "published"]
 
 
 def already_posted(log: Path, day: date) -> bool:
@@ -150,7 +160,7 @@ def _channel(day: date, channel: str, item_id: str, deps: Deps, log: Path, actio
         deps.git_publish([log], f"log: {channel} waiting {day}")
         print(f"{channel} waiting: {e}")
         return True
-    except (LinkedInError, ThreadsError, YouTubeError, WhatsAppError, telegram.TelegramError) as e:
+    except (LinkedInError, ThreadsError, YouTubeError, WhatsAppError, FacebookError, telegram.TelegramError) as e:
         _append(log, dict(entry, status="failed", error=str(e)[:300]))
         deps.git_publish([log], f"log: {channel} failed {day}")
         print(f"{channel} failed: {e}")
@@ -202,6 +212,14 @@ def _extras(day, app_cfg, item, slides, slide_urls, deps, log, chans) -> int:
         reel_url = slide_urls[0].rsplit("/", 1)[0] + "/reel.mp4"
         caption = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + app_cfg["play_url"]
         ok &= _channel(day, "telegram_channel", item["id"], deps, log, lambda: deps.send_telegram(tgc, reel_url, caption))
+    fb = chans.get("facebook")
+    if fb and slides:
+        fb_reel, fb_story = Path(slides[0]).parent / "reel.mp4", Path(slides[0]).parent / "story.mp4"
+        fb_text = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + app_cfg["play_url"]
+        if day_status(log, day, "facebook") != "published" and fb_reel.exists():
+            ok &= _channel(day, "facebook", item["id"], deps, log, lambda: deps.post_facebook_reel(fb, fb_reel, fb_text))
+        if day_status(log, day, "facebook_story") != "published" and fb_story.exists():
+            ok &= _channel(day, "facebook_story", item["id"], deps, log, lambda: deps.post_facebook_story(fb, fb_story))
     yt = chans.get("youtube", {})
     if yt and slides:
         video = Path(slides[0]).parent / "reel.mp4"
@@ -299,6 +317,12 @@ def _story_extras(st, day, app_cfg, dst, url, deps, log, chans, li_text, tags) -
     tgc = chans.get("telegram_channel")
     if tgc and day_status(log, day, "telegram_channel") != "published":
         ok &= _channel(day, "telegram_channel", st["id"], deps, log, lambda: deps.send_telegram(tgc, url, st["caption"] + " " + app_cfg["play_url"]))
+    fb = chans.get("facebook")
+    if fb:
+        if day_status(log, day, "facebook") != "published":
+            ok &= _channel(day, "facebook", st["id"], deps, log, lambda: deps.post_facebook_reel(fb, dst, st["caption"] + " " + app_cfg["play_url"]))
+        if day_status(log, day, "facebook_story") != "published":
+            ok &= _channel(day, "facebook_story", st["id"], deps, log, lambda: deps.post_facebook_story(fb, dst))
     yt = chans.get("youtube", {})
     if yt:
         ok &= _do_youtube(day, app_cfg, st, dst, deps, log, yt, st.get("title", app_cfg["name"]), st["caption"])
@@ -398,6 +422,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         chans["telegram"] = {"token": env["TELEGRAM_BOT_TOKEN"].strip(), "chat_id": env["TELEGRAM_CHAT_ID"].strip()}
     if env.get("TELEGRAM_BOT_TOKEN") and env.get("TELEGRAM_CHANNEL"):          # a public channel the founder owns, e.g. @arthvanapps (the bot must be its admin)
         chans["telegram_channel"] = {"token": env["TELEGRAM_BOT_TOKEN"].strip(), "chat_id": env["TELEGRAM_CHANNEL"].strip()}
+    if env.get("FB_PAGE_ID") and env.get("FB_PAGE_ACCESS_TOKEN"):
+        chans["facebook"] = {"page_id": env["FB_PAGE_ID"].strip(), "token": env["FB_PAGE_ACCESS_TOKEN"].strip()}
     chans["youtube"] = {ch: {"client_id": env["YT_CLIENT_ID"], "client_secret": env["YT_CLIENT_SECRET"],
                              "refresh_token": env[f"YT_{ch.upper()}_REFRESH_TOKEN"]}
                         for ch in YT_CHANNELS if env.get("YT_CLIENT_ID") and env.get("YT_CLIENT_SECRET") and env.get(f"YT_{ch.upper()}_REFRESH_TOKEN")}
@@ -405,7 +431,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         deps.sync_repo()
         status = day_status(log, day)
         if status == "published":
-            missing = [c for c in chans if c not in ("linkedin_any", "youtube") and day_status(log, day, c) != "published"] + [f"youtube:{n}" for n in chans.get("youtube", {}) if day_status(log, day, f"youtube:{n}") != "published"]
+            missing = _missing(chans, log, day)
             if missing:
                 return _extras_retry(day, root, log, apps, banks, deps, chans, env)
             print(f"{day} already posted: nothing to do")
@@ -417,7 +443,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     story = scheduled_story(root, day, log)
     if story is not None:
         if mode == "post" and day_status(log, day) is not None:
-            missing = [c for c in chans if c not in ("linkedin_any", "youtube") and day_status(log, day, c) != "published"] + [f"youtube:{n}" for n in chans.get("youtube", {}) if day_status(log, day, f"youtube:{n}") != "published"]
+            missing = _missing(chans, log, day)
             print(f"{day} story already posted")
             return 0
         return _run_story(story, day, root, env, deps, apps, log, chans, token, ig_id, mode)

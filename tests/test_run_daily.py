@@ -516,3 +516,39 @@ def test_the_daily_video_also_goes_to_the_public_telegram_channel_separately_fro
     assert last_entry(tmp_path, "telegram")["status"] == "published" and last_entry(tmp_path, "telegram_channel")["status"] == "failed"
     assert go(w, env=env) == 0                                                  # retry sends only the channel
     assert [c for c, _ in sent if c != "fail"] == ["555", "@arthvanapps"]
+
+
+def test_a_story_day_posts_a_facebook_reel_and_story_and_a_failed_story_is_retried_alone(tmp_path):
+    from engine.facebook import FacebookError
+    w = World(tmp_path)
+    (tmp_path / "stories" / "out").mkdir(parents=True)
+    (tmp_path / "stories" / "out" / "s-en.mp4").write_bytes(b"v" * 100)
+    (tmp_path / "stories" / "s_en.json").write_text(json.dumps({"id": "s-en", "app": "scoremybiz", "post_on": "2026-10-14", "character": "lumi", "caption": "Cap", "hashtags": ["#A"], "title": "T"}))
+    reels, stories, n = [], [], {"story": 0}
+    w.deps.post_facebook_reel = lambda cfg, path, text: reels.append((cfg["page_id"], Path(path).name, text)) or "R1"
+    def story(cfg, path):
+        n["story"] += 1
+        if n["story"] == 1: raise FacebookError("story refused")
+        stories.append(Path(path).name); return "S1"
+    w.deps.post_facebook_story = story
+    env = dict(ENV, FB_PAGE_ID="PG", FB_PAGE_ACCESS_TOKEN="T")
+    assert go(w, env=env, day=date(2026, 10, 14)) == 1                       # the Story failed; Instagram and the Facebook Reel are safe
+    assert last_entry(tmp_path, "facebook")["status"] == "published" and last_entry(tmp_path, "facebook_story")["status"] == "failed"
+    assert reels == [("PG", "story.mp4", reels[0][2])] and "Cap" in reels[0][2] and w.count("publish") == 1
+    assert go(w, env=env, day=date(2026, 10, 14)) == 0                       # retry: only the Story
+    assert len(reels) == 1 and stories == ["story.mp4"]
+    assert go(w, env=env, day=date(2026, 10, 14)) == 0 and len(reels) == 1 and len(stories) == 1      # never twice
+
+
+def test_a_graphics_day_also_posts_the_facebook_reel_and_story_once(tmp_path):
+    w = World(tmp_path)
+    reels, stories = [], []
+    real_render = w.deps.render_set
+    def render_with_story(sel, app_cfg, out_dir, fps=30):          # the real renderer writes a separate story.mp4 next to reel.mp4
+        rs = real_render(sel, app_cfg, out_dir, fps); (Path(out_dir) / "story.mp4").write_bytes(b"s"); return rs
+    w.deps.render_set = render_with_story
+    w.deps.post_facebook_reel = lambda cfg, path, text: reels.append(Path(path).name) or "R1"
+    w.deps.post_facebook_story = lambda cfg, path: stories.append(Path(path).name) or "S1"
+    env = dict(ENV, FB_PAGE_ID="PG", FB_PAGE_ACCESS_TOKEN="T")
+    assert go(w, env=env) == 0 and reels == ["reel.mp4"] and stories == ["story.mp4"]
+    assert go(w, env=env) == 0 and len(reels) == 1 and len(stories) == 1
