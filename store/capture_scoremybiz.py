@@ -18,7 +18,7 @@ MORE=["business-card","daily-update","cash-flow","payables","invoices","quotatio
 if len(sys.argv)>3 and sys.argv[3]=="more": ROUTES=MORE
 elif len(sys.argv)>3 and sys.argv[3]!="core": ROUTES=sys.argv[3].split(",")        # e.g. daily-update,book
 CLEAN_JS = r"""() => {   // remove the dev-build warning bubble and any "Founder test mode" notice, with the box that holds only that text
-  const pat = /cannot contain a nest|Founder test mode|This is sample mode|Sample mode|Unhandled|Warning:/i;
+  const pat = /cannot contain a nest|Founder test mode|This is sample mode|Sample mode|सैंपल मोड|सैम्पल मोड|Unhandled|Warning:/i;
   const norm = s => (s || '').replace(/\s+/g, '');
   const hits = [...document.querySelectorAll('*')].filter(e => pat.test(e.innerText || '') && (e.innerText || '').length < 1500 && ![...e.children].some(c => pat.test(c.innerText || '')));
   hits.forEach(e => { let n = e; while (n.parentElement && n.parentElement !== document.body && norm(n.parentElement.innerText) === norm(n.innerText)) n = n.parentElement; n.remove(); });
