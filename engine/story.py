@@ -19,8 +19,12 @@ BADGE = ROOT / "engine" / "assets" / "google-play-badge.png"
 FPS = 30
 
 
-WAIT_IMAGES = ("Promise.all([...document.images].map(i => (i.complete && i.naturalWidth) "
-               "? (i.decode ? i.decode().catch(() => 0) : 0) : new Promise(r => { i.onload = i.onerror = r; })))")
+# An image that has already FAILED (complete but no width) never fires load or error again, so waiting for it would freeze the render for ever
+# (14 Oct: lumi-accountant-file-en sat at 0% CPU for 20+ minutes). Broken images count as done, and the whole wait is capped at 5 s.
+WAIT_IMAGES = ("Promise.race([Promise.all([...document.images].map(i => (i.complete && i.naturalWidth) "
+               "? (i.decode ? i.decode().catch(() => 0) : 0) : (i.complete ? 0 : new Promise(r => { i.onload = i.onerror = r; })))), "
+               "new Promise(r => setTimeout(r, 5000))])")
+BROKEN_IMAGES = "[...document.images].filter(i => i.complete && !i.naturalWidth).map(i => i.src)"
 
 
 def blank_frames(frames_dir: Path, ratio: float = 0.55) -> list:
@@ -146,8 +150,28 @@ def voice_clip(text: str, voice: str, rate: int, out_wav: Path) -> float:
         return w.getnframes() / w.getframerate()
 
 
+def missing_pictures(story: dict, root: Path = None) -> list:
+    """Pictures a script names that do not exist: character poses and phone screens. Checked before anything is generated."""
+    root = Path(root) if root else ROOT
+    char_dir = root / "engine" / "assets" / "characters"
+    lang = story.get("lang", "en").split("-")[0]                       # same rule as the renderer: hi-IN looks in the hi folder
+    shots = root / "store" / "shots" / story["app"] / lang
+    if not shots.exists():
+        shots = root / "store" / "shots" / story["app"]
+    out = []
+    for i, sc in enumerate(story["scenes"]):
+        if sc.get("pose") and not sc.get("who") and not (char_dir / f"{story['character']}_{sc['pose']}.png").exists():
+            out.append(f"scene {i}: no picture of {story['character']} in the pose '{sc['pose']}'")
+        if sc.get("screen") and not (shots / sc["screen"]).exists() and not (root / "store" / "shots" / story["app"] / sc["screen"]).exists():
+            out.append(f"scene {i}: screen {sc['screen']} not found")
+    return out
+
+
 def build(story_path: Path, out_dir: Path) -> Path:
     story = json.loads(Path(story_path).read_text())
+    problems = missing_pictures(story)
+    if problems:
+        raise SystemExit(f"{story['id']}: cannot render, {'; '.join(problems)}")
     plan = shot_plan(story)
     if plan and (os.environ.get("REEL_STYLE") == "cutout" or (any(not c for (_i, _p, _r, c) in plan) and not film_available())):
         print("film shots are not available (or REEL_STYLE=cutout): making the cut-out style Reel", flush=True)
@@ -231,6 +255,10 @@ def build(story_path: Path, out_dir: Path) -> Path:
                 # every frame rebuilds the page, so a filmed frame is a brand-new <img>: wait until it is loaded AND decoded,
                 # otherwise the screenshot catches an empty frame and the video blinks (measured 13 Oct: 60+ dark frames per Reel)
                 pg.evaluate(WAIT_IMAGES)
+                if f % 120 == 0:
+                    broken = pg.evaluate(BROKEN_IMAGES)
+                    if broken:
+                        print(f"warning: broken image at frame {f}: {broken[0][-90:]}", flush=True)
                 pg.screenshot(path=str(frames / f"f{f:04d}.jpg"), type="jpeg", quality=92)
             b.close()
         blank = blank_frames(frames)

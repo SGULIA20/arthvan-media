@@ -81,3 +81,14 @@ def test_blank_frames_are_single_frame_size_dips_not_ramps(tmp_path):
     for i, n in enumerate(sizes):
         (tmp_path / f"f{i:04d}.jpg").write_bytes(b"x" * n)
     assert blank_frames(tmp_path) == [2]
+
+
+def test_a_script_naming_a_picture_that_does_not_exist_is_refused_before_anything_is_spent(tmp_path):
+    from engine.story import missing_pictures
+    (tmp_path / "engine" / "assets" / "characters").mkdir(parents=True); (tmp_path / "store" / "shots" / "scoremybiz" / "en").mkdir(parents=True)
+    (tmp_path / "engine" / "assets" / "characters" / "lumi_front_happy.png").write_bytes(b"x")
+    (tmp_path / "store" / "shots" / "scoremybiz" / "en" / "book.png").write_bytes(b"x")
+    ok = {"app": "scoremybiz", "lang": "en", "character": "lumi", "scenes": [{"layout": "clip", "screen": "book.png"}, {"layout": "end", "pose": "front_happy"}]}
+    assert missing_pictures(ok, tmp_path) == []
+    bad = {"app": "scoremybiz", "lang": "en", "character": "lumi", "scenes": [{"layout": "clip", "screen": "nope.png"}, {"layout": "end", "pose": "front_standing"}]}
+    assert missing_pictures(bad, tmp_path) == ["scene 0: screen nope.png not found", "scene 1: no picture of lumi in the pose 'front_standing'"]
