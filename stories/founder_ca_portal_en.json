@@ -1,0 +1,74 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "post_on": "2026-11-10",
+ "id": "founder-ca-portal-en",
+ "character": "founder_suit",
+ "feature": "ca-network",
+ "title": "One list",
+ "caption": "Rakesh is a Chartered Accountant with forty small clients. One list shows who needs a call first. The founder tells his story.",
+ "linkedin_text": "For Chartered Accountants in India: a free ScoreMyBiz CA account gives you a code. Clients who register with it appear in one portfolio with their score trend and who needs a call, with a WhatsApp check-in, an email draft and monthly reports from the same place.",
+ "hashtags": [
+  "#CharteredAccountant",
+  "#ScoreMyBiz",
+  "#CAIndia"
+ ],
+ "cast": {
+  "rakesh": "Rakesh, a middle-aged Indian chartered accountant with grey-streaked hair and glasses, in a light blue shirt and a dark waistcoat"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a tidy modern accountant's office with files on shelves behind him, a warm smile.",
+   "vo": "Hi. This is Rakesh's story. He is a Chartered Accountant in India, with forty small clients.",
+   "sub": "Hi. This is Rakesh's story. He is a Chartered Accountant in India, with forty small clients.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "One list"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} at his office desk among file folders, his phone lighting up with messages, a patient tired smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Every month he wonders which client needs a call first, and which one is quietly in trouble.",
+   "sub": "Every month he wonders which client needs a call first, and which one is quietly in trouble.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} typing at his laptop in warm afternoon light, focused, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "On ScoreMyBiz he opens a free CA account, and gets his own code.",
+   "sub": "On ScoreMyBiz he opens a free CA account, and gets his own code.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} reading his phone with a pleased nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Clients who register with his code appear in one list, each with a score trend.",
+   "sub": "Clients who register with his code appear in one list, each with a score trend.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} on a phone call by his office window, calm and helpful, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He sees who needs a call first. A WhatsApp check-in or an email draft is one tap away.",
+   "sub": "He sees who needs a call first. A WhatsApp check-in or an email draft is one tap away.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} standing by his bookshelf with a satisfied smile, arms folded.",
+   "vo": "Monthly reports and documents go to each client from the same place.",
+   "sub": "Monthly reports and documents go to each client from the same place.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "post_on": "2026-11-10",
+ "id": "founder-ca-documents-en",
+ "character": "founder_suit",
+ "feature": "documents-from-my-ca",
+ "title": "In one place",
+ "caption": "Sunil's CA has finished the return, and Sunil does not want to dig through WhatsApp for it. The founder tells his story.",
+ "linkedin_text": "In India, if your CA is on ScoreMyBiz, the filings and returns they upload appear in one list in your app. ScoreMyBiz does not prepare or file any return; it only keeps what your CA sends you.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#CAIndia"
+ ],
+ "cast": {
+  "sunil": "Sunil, a middle-aged Indian garment shop owner with a moustache, in a cream kurta and a gold wristwatch"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera outside a bustling garment shop in the afternoon, colourful fabrics hanging behind him, a warm smile.",
+   "vo": "Hi. This is Sunil's story. His CA has finished his return, and he does not want to dig through WhatsApp for it.",
+   "sub": "Hi. This is Sunil's story. His CA has finished his return, and he does not want to dig through WhatsApp for it.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "In one place"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} scrolling through his phone behind his shop counter, frowning, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Papers from his CA are scattered across months of chats.",
+   "sub": "Papers from his CA are scattered across months of chats.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} tapping his phone with a hopeful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In India, if your CA is on ScoreMyBiz, what your CA uploads shows up in one list in your app.",
+   "sub": "In India, if your CA is on ScoreMyBiz, what your CA uploads shows up in one list in your app.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} opening a list on his phone with an easy smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Filings and returns, in one place, ready to open.",
+   "sub": "Filings and returns, in one place, ready to open.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} nodding thoughtfully, folded cloth stacked behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz does not file anything. It only keeps what his CA sends.",
+   "sub": "ScoreMyBiz does not file anything. It only keeps what his CA sends.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} standing at his shop door in the sun, relaxed, arms folded.",
+   "vo": "No more searching through chats.",
+   "sub": "No more searching through chats.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

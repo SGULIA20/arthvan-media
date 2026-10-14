@@ -1,0 +1,74 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "post_on": "2026-11-10",
+ "id": "lumi-accountant-file-en",
+ "character": "lumi",
+ "feature": "file-for-accountant",
+ "title": "A file, not a retype",
+ "caption": "Nadia's accountant wants the month's money in and out as a file. Lumi tells her story.",
+ "linkedin_text": "A shop owner's accountant uses different software and wants the month as a file. In ScoreMyBiz, File for my accountant lets the owner pick a period and a format: one combined file, or the bank-style files that QuickBooks and Xero import, then share it.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Accountant"
+ ],
+ "cast": {
+  "nadia": "Nadia, a young woman who runs a small bakery, in a flour-dusted apron with her hair tied back"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small neat bakery with warm morning light and trays of bread behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Nadia's story. She runs a bakery, and her accountant needs the month's numbers.",
+   "sub": "Hi, I'm Lumi. This is Nadia's story. She runs a bakery, and her accountant needs the month's numbers.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "A file, not a retype"
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} on a phone call at her bakery counter, a thoughtful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Her accountant uses different software, and wants the month's money in and out as a file.",
+   "sub": "Her accountant uses different software, and wants the month's money in and out as a file.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} tapping her phone behind the counter, flour on her apron, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz she opens File for my accountant, and picks the period.",
+   "sub": "In ScoreMyBiz she opens File for my accountant, and picks the period.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} choosing on her phone with a curious look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Then the format: one combined file, or the bank-style files that QuickBooks and Xero can import.",
+   "sub": "Then the format: one combined file, or the bank-style files that QuickBooks and Xero can import.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} pressing send on her phone with a small smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She shares it with her accountant straight from her phone.",
+   "sub": "She shares it with her accountant straight from her phone.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} wiping her hands and smiling at the camera, bread on the shelves behind her.",
+   "vo": "Nothing to retype. Her accountant imports the file.",
+   "sub": "Nothing to retype. Her accountant imports the file.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
