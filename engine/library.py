@@ -7,7 +7,8 @@
 stories/out/<id>.mp4 stays the source of truth (it is what the daily post reads); this library is the founder's copy. Numbers run per folder,
 in the order made. A Reel already filed is never replaced by filing; `sync` is the one deliberate refresh (after a re-render).
 python -m engine.library migrate   move any old flat NN-id.mp4 files into the folders (nothing is deleted)
-python -m engine.library sync      file new Reels and refresh any whose finished video changed"""
+python -m engine.library sync      file new Reels and refresh any whose finished video changed
+python -m engine.library coverage how many Reels each language has against English, per app"""
 import json
 import shutil
 import sys
@@ -92,11 +93,68 @@ def sync(library: Path = LIBRARY, root: Path = ROOT) -> dict:
     return out
 
 
+# ---------- language coverage: every English Reel should exist in every target language ----------
+TARGETS = ["hi", "gu", "mr", "ta", "te", "bn", "kn", "ml", "ur"]          # Indian languages whose Google voice was verified (Waypoint/ScoreMyBiz both have them)
+
+
+def _base(story_id: str) -> str:
+    return story_id.rsplit("-", 1)[0]
+
+
+def coverage(root: Path = ROOT, targets: list = None) -> dict:
+    """{app: {"english": n, "rows": [{lang, name, made, scripted, todo, own}]}}.
+    English is the yardstick: its Reels that can be posted (no claims problem, not a multi-language Reel), finished or scripted.
+    made = finished in that language, scripted = script written but video not made yet, todo = not started, own = Reels in that
+    language with no English twin (the festival Reels)."""
+    from . import calendar_plan
+    root = Path(root); targets = targets or TARGETS
+    done = {p.stem for p in (root / "stories" / "out").glob("*.mp4")}
+    held = {s["id"] for s in calendar_plan.load_stories(root) if s["problems"]}
+    stories = [json.loads(p.read_text()) for p in sorted((root / "stories").glob("*.json"))]
+    out = {}
+    for app in APPS:
+        mine = [s for s in stories if s["app"] == app and s["id"] not in held and not any("native" in sc for sc in s["scenes"])]
+        eng = {_base(s["id"]) for s in mine if s.get("lang", "en").split("-")[0] == "en"}
+        if not eng:
+            continue
+        langs = list(targets) + sorted({s.get("lang", "en").split("-")[0] for s in mine} - {"en"} - set(targets))
+        rows = []
+        for lang in langs:
+            theirs = [s for s in mine if s.get("lang", "en").split("-")[0] == lang]
+            made = {_base(s["id"]) for s in theirs if s["id"] in done}
+            scripted = {_base(s["id"]) for s in theirs if s["id"] not in done}
+            rows.append({"lang": lang, "name": LANGUAGES.get(lang, lang), "made": len(made & eng), "scripted": len(scripted & eng - made),
+                         "todo": len(eng - made - scripted), "own": len((made | scripted) - eng)})
+        out[app] = {"english": len(eng), "english_made": len({_base(s["id"]) for s in mine if s["id"] in done and s.get("lang", "en").split("-")[0] == "en"}), "rows": rows}
+    return out
+
+
+def coverage_text(root: Path = ROOT) -> str:
+    lines = []
+    for app, c in coverage(root).items():
+        lines.append(f"{APPS[app]}: {c['english']} English Reels ({c['english_made']} made). Every language should have the same {c['english']}.")
+        for r in c["rows"]:
+            own = f", plus {r['own']} festival Reel{'s' if r['own'] != 1 else ''} of its own" if r["own"] else ""
+            lines.append(f"  {r['name']:<10} made {r['made']:>2} of {c['english']:>2} | scripted, video not made {r['scripted']:>2} | not started {r['todo']:>2}{own}")
+    return "\n".join(lines)
+
+
+def coverage_html(root: Path = ROOT) -> str:
+    out = []
+    for app, c in coverage(root).items():
+        rows = "".join(f"<tr><td>{r['name']}</td><td style='text-align:right'><b>{r['made']}</b> of {c['english']}</td><td style='color:#b8860b'>+{r['scripted']} scripted</td>"
+                       f"<td style='color:#d33'>{r['todo']} not started</td></tr>" for r in c["rows"])
+        out.append(f"<h3>{APPS[app]}: {c['english']} English Reels, every language needs the same</h3><table cellpadding=5>{rows}</table>")
+    return "".join(out)
+
+
 def main(argv=None) -> int:
     cmd = (sys.argv[1:] if argv is None else argv)[:1]
     if cmd == ["migrate"]:
         for a, b in migrate():
             print(f"moved {a} -> {b}")
+    elif cmd == ["coverage"]:
+        print(coverage_text())
     elif cmd == ["sync"]:
         r = sync(); print(f"filed {len(r['filed'])}, refreshed {len(r['refreshed'])}"); [print("  +", x) for x in r["filed"]]; [print("  ~", x) for x in r["refreshed"]]
     else:

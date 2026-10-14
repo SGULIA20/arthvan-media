@@ -10,7 +10,7 @@ import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import broll, notify
+from . import broll, library, notify
 
 STATE = Path.home() / "arthvan-social" / "logs" / "weekly-state.json"
 ENV_FILE = Path.home() / "arthvan-social" / ".env"
@@ -102,6 +102,18 @@ def build(day: date, *, run=subprocess.run, wallet=None, state_path: Path = STAT
             lines.append(f"• {name}: {c['total']} in total, {c['new_7d']} new in the last 7 days{extra}{change}")
         except Exception as e:
             lines.append(f"• {name}: could not read ({str(e)[:110]})")
+    lines += ["", "Languages (Reels made, against the English Reels of each app)"]
+    try:
+        for app, c in library.coverage().items():
+            started = [r for r in c["rows"] if r["made"] or r["scripted"] or r["own"]]
+            lines.append(f"• {library.APPS[app]}: {c['english']} English ({c['english_made']} made)")
+            for r in started:
+                lines.append(f"    {r['name']}: {r['made']} made, {r['scripted']} scripted" + (f", {r['own']} festival" if r["own"] else ""))
+            idle = [r["name"] for r in c["rows"] if r not in started]
+            if idle:
+                lines.append(f"    Not started: {', '.join(idle)}")
+    except Exception as e:
+        lines.append(f"• could not read the language counts ({str(e)[:80]})")
     lines += ["", "Spend so far"]
     used = round(broll.spent_inr(ledger))
     prev_used = last.get("veo_inr")

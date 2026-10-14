@@ -10,7 +10,7 @@ import urllib.request
 from datetime import datetime
 from pathlib import Path
 
-from . import broll, tts
+from . import broll, library, tts
 from .config import ROOT
 
 FOLDER = Path.home() / "Desktop" / "Arthvan-Reels"
@@ -25,6 +25,13 @@ def _reach(url: str) -> bool:
     from urllib.parse import urlparse
     from .netfix import reachable
     return reachable(urlparse(url).hostname)
+
+
+def _coverage_html() -> str:
+    try:
+        return library.coverage_html()
+    except Exception as e:                       # the page must always render
+        return f"<p>language table unavailable: {html.escape(str(e))}</p>"
 
 
 def snapshot() -> dict:
@@ -42,7 +49,7 @@ def snapshot() -> dict:
         pass
     reels = sorted(FOLDER.rglob("[0-9]*.mp4"))
     newest = max(reels, key=lambda p: p.stat().st_mtime) if reels else None
-    return {"now": datetime.now().strftime("%d %b %H:%M:%S"), "jobs": jobs, "voice_wait": voice_wait, "reels": len(reels),
+    return {"now": datetime.now().strftime("%d %b %H:%M:%S"), "jobs": jobs, "voice_wait": voice_wait, "languages": _coverage_html(), "reels": len(reels),
             "newest": (newest.name, datetime.fromtimestamp(newest.stat().st_mtime).strftime("%H:%M")) if newest else None,
             "credit": broll.status_line(), "net": {"Google": _reach("https://www.google.com/generate_204"),
                                                     "GitHub": _reach("https://api.github.com"), "Veo (Vertex AI)": _reach("https://us-central1-aiplatform.googleapis.com")}}
@@ -61,6 +68,7 @@ def render(s: dict) -> str:
 <p style="font-size:22px"><b>Updated {s['now']}</b><br><span style="font-size:14px;color:#666">This clock moves every 30 seconds. If it stops, the Mac or the job has stopped. Reload the page to see the latest.</span></p>
 {wait}<h3>Working on now</h3><table cellpadding=6>{rows}</table>
 <h3>Finished</h3><p>{s['reels']} Reels in this folder. Newest: {newest}.</p>
+<h3>Languages: how many Reels each language has, against English</h3>{s.get('languages', '')}
 <h3>Google credit</h3><p>{html.escape(s['credit'])}</p>
 <h3>Internet</h3><table cellpadding=6>{net}</table></body>"""
 

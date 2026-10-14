@@ -45,3 +45,23 @@ def test_sync_files_new_reels_and_refreshes_a_changed_one_only(tmp_path):
     (root / "stories" / "out" / "a-en.mp4").write_bytes(b"version two")
     r = lib.sync(library, root)
     assert r["filed"] == [] and r["refreshed"] == ["ScoreMyBiz/English/01-a-en.mp4"] and (library / "ScoreMyBiz" / "English" / "01-a-en.mp4").read_bytes() == b"version two"
+
+
+def test_coverage_compares_every_language_with_english_per_app(tmp_path):
+    root = tmp_path / "repo"; (root / "stories" / "out").mkdir(parents=True); (root / "content").mkdir()
+    def story(sid, app, lang, native=False):
+        sc = [{"layout": "clip", "native": "x"}] if native else [{"layout": "clip"}]
+        (root / "stories" / f"{sid.replace('-', '_')}.json").write_text(json.dumps({"id": sid, "app": app, "lang": lang, "scenes": sc, "feature": "k"}))
+    for sid, app, lang in (("a-en", "scoremybiz", "en"), ("b-en", "scoremybiz", "en"), ("c-en", "scoremybiz", "en"), ("a-hi", "scoremybiz", "hi-IN"), ("b-hi", "scoremybiz", "hi"),
+                           ("fest-hi", "scoremybiz", "hi"), ("fest-gu", "scoremybiz", "gu"), ("w-en", "waypoint", "en")):
+        story(sid, app, lang)
+    story("multi-en", "scoremybiz", "en", native=True)                        # a multi-language Reel is not a yardstick
+    for sid in ("a-en", "b-en", "a-hi", "fest-hi", "fest-gu"):
+        (root / "stories" / "out" / f"{sid}.mp4").write_bytes(b"x")
+    c = lib.coverage(root, ["hi", "gu"])
+    smb = c["scoremybiz"]
+    hi = next(r for r in smb["rows"] if r["lang"] == "hi"); gu = next(r for r in smb["rows"] if r["lang"] == "gu")
+    # english yardstick = a, b, c, fest (fest-hi/fest-gu bases are not english, so they are 'own')
+    assert smb["english"] == 3 and hi["made"] == 1 and hi["scripted"] == 1 and hi["todo"] == 1 and hi["own"] == 1
+    assert gu["made"] == 0 and gu["todo"] == 3 and gu["own"] == 1
+    assert c["waypoint"]["english"] == 1 and "multi" not in str(c)
