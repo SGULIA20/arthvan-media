@@ -1,0 +1,77 @@
+{
+ "id": "founder-breakroom-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "founder_casual",
+ "feature": "break-room",
+ "title": "नब्बे सेकंड",
+ "post_on": "2026-11-21",
+ "caption": "कुछ दिनों को चीज़ें तोड़ने के लिए एक कमरा चाहिए। इमरान का कमरा नब्बे सेकंड का है। संस्थापक उसकी कहानी सुनाते हैं।",
+ "linkedin_text": "Some working days end with a clenched jaw and a long ride home.\n\nWaypoint has a Break Room: a small drawn room, a bat, twenty things that crack and break with sound and vibration, and ninety seconds, once a day. The founder character tells Imran's story; every screen is the real app.",
+ "hashtags": [
+  "#BreakRoom",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "imran": "Imran, a young Indian man in his late twenties with short black hair, a light blue office shirt with rolled sleeves and a lanyard"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a rooftop at dusk, warm city lights beginning to glow behind him, a relaxed smile.",
+   "vo": "नमस्ते। यह इमरान की कहानी है। कुछ दिन ऐसे ख़त्म होते हैं कि जबड़ा भिंचा रहता है और निकालने की जगह नहीं मिलती।",
+   "sub": "नमस्ते। यह इमरान की कहानी है। कुछ दिन ऐसे ख़त्म होते हैं कि जबड़ा भिंचा रहता है और निकालने की जगह नहीं मिलती।",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "90 seconds"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} at an office desk in the evening, a stack of files, shoulders tight, jaw set, a laptop screen glowing, the office nearly empty.",
+   "vo": "आठ घंटे ईमेल। एक कॉल जो बिगड़ गई। और घर तक का लंबा सफ़र।",
+   "sub": "आठ घंटे ईमेल। एक कॉल जो बिगड़ गई। और घर तक का लंबा सफ़र।",
+   "min": 8,
+   "card": "लंबा दिन"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} sitting on a parked motorbike outside his building at dusk, holding his phone, a thoughtful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वेपॉइंट पर एक ब्रेक रूम है। बल्ले पर टैप कीजिए, और उसे एक छोटे से बने हुए कमरे में घुमाइए।",
+   "sub": "वेपॉइंट पर एक ब्रेक रूम है। बल्ले पर टैप कीजिए, और उसे एक छोटे से बने हुए कमरे में घुमाइए।",
+   "min": 8,
+   "screen": "break-room.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Close on a thumb swiping fast across a phone screen, a small determined smile on the face behind it, dusk light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "बीस चीज़ें चटकती और टूटती हैं, आवाज़ और कंपन के साथ। कुछ पलटकर वार भी करती हैं, ताकि बहुत आसान न हो।",
+   "sub": "बीस चीज़ें चटकती और टूटती हैं, आवाज़ और कंपन के साथ। कुछ पलटकर वार भी करती हैं, ताकि बहुत आसान न हो।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} laughing softly at his phone on the parked motorbike, shoulders loosened, streetlights coming on, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "रोज़ एक बार, नब्बे सेकंड। आपकी सबसे ऊँची गिनती सँभालकर रखी जाती है, और स्कोर को तस्वीर बनाकर शेयर कर सकते हैं।",
+   "sub": "रोज़ एक बार, नब्बे सेकंड। आपकी सबसे ऊँची गिनती सँभालकर रखी जाती है, और स्कोर को तस्वीर बनाकर शेयर कर सकते हैं।",
+   "min": 8,
+   "screen": "break-room.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} riding a motorbike home through warm evening city traffic, relaxed, the sky turning orange behind the buildings.",
+   "vo": "फिर आप घर की ओर चल पड़ते हैं। कमरा कल भी वहीं रहेगा।",
+   "sub": "फिर आप घर की ओर चल पड़ते हैं। कमरा कल भी वहीं रहेगा।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "वेपॉइंट। एक बार कहिए। गूगल प्ले पर मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

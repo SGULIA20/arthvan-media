@@ -1,0 +1,78 @@
+{
+ "id": "lumi-goals-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "goals-and-timelines",
+ "title": "इच्छा नहीं, तारीख़",
+ "post_on": "2026-11-17",
+ "caption": "दुकान को दूसरे डिस्प्ले फ़्रिज की ज़रूरत है। फ़रीदा इच्छा को तारीख़ में बदलती है। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "Most small shops have a purchase in mind and no plan to reach it.\n\nIn ScoreMyBiz you set a goal with an amount and a number of months, see how long it takes at your current pace, and test what happens if customers pay a little faster. Lumi tells Farida's story; every screen is the real app.",
+ "hashtags": [
+  "#Goals",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "farida": "Farida, a cheerful Indian woman in her forties who runs an ice cream shop, in a pink kurta with a dupatta over one shoulder"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a colourful ice cream shop with a glass display behind her, a bright smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह फ़रीदा की कहानी है। उसकी आइसक्रीम की दुकान को एक और डिस्प्ले फ़्रिज चाहिए।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह फ़रीदा की कहानी है। उसकी आइसक्रीम की दुकान को एक और डिस्प्ले फ़्रिज चाहिए।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "A date, not a wish"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} behind the counter of her ice cream shop looking at the single crowded display fridge with a hopeful frown, colourful tubs inside, evening light.",
+   "vo": "रक़म उसके दिमाग़ में है, पर उसके लिए कोई योजना नहीं।",
+   "sub": "रक़म उसके दिमाग़ में है, पर उसके लिए कोई योजना नहीं।",
+   "min": 8,
+   "card": "एक फ़्रिज"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} at a small table in her ice cream shop looking at her phone and thinking, a cone beside her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में वह लक्ष्य तय करती है: कितनी रक़म, और कितने महीनों में।",
+   "sub": "स्कोर माय बिज़ में वह लक्ष्य तय करती है: कितनी रक़म, और कितने महीनों में।",
+   "min": 8,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} tapping her phone with a slow growing smile, the ice cream display glowing behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ऐप बताता है कि उसकी मौजूदा रफ़्तार से इसमें कितना समय लगेगा।",
+   "sub": "ऐप बताता है कि उसकी मौजूदा रफ़्तार से इसमें कितना समय लगेगा।",
+   "min": 8,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} chatting with a regular customer who hands over money at the counter, a friendly exchange, afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "और अगर उसके ग्राहक थोड़ा जल्दी पैसे दें, तो क्या बदलेगा।",
+   "sub": "और अगर उसके ग्राहक थोड़ा जल्दी पैसे दें, तो क्या बदलेगा।",
+   "min": 8,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} proudly standing beside a gleaming new second display fridge full of colourful ice cream tubs, hands clasped, a big joyful smile.",
+   "vo": "अब फ़्रिज एक इच्छा नहीं, एक तारीख़ है।",
+   "sub": "अब फ़्रिज एक इच्छा नहीं, एक तारीख़ है।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

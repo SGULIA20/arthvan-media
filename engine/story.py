@@ -162,7 +162,7 @@ def missing_pictures(story: dict, root: Path = None) -> list:
     for i, sc in enumerate(story["scenes"]):
         if sc.get("pose") and not sc.get("who") and not (char_dir / f"{story['character']}_{sc['pose']}.png").exists():
             out.append(f"scene {i}: no picture of {story['character']} in the pose '{sc['pose']}'")
-        if sc.get("screen") and not (shots / sc["screen"]).exists() and not (root / "store" / "shots" / story["app"] / sc["screen"]).exists():
+        if sc.get("screen") and not any((d / sc["screen"]).exists() for d in (shots, root / "store" / "shots" / story["app"] / "en", root / "store" / "shots" / story["app"])):
             out.append(f"scene {i}: screen {sc['screen']} not found")
     return out
 
@@ -224,6 +224,11 @@ def build(story_path: Path, out_dir: Path) -> Path:
         shots = ROOT / "store" / "shots" / story["app"] / lang
         if not shots.exists():
             shots = ROOT / "store" / "shots" / story["app"]
+        elif shots.name == lang and lang != "en":                       # a language folder may hold only some screens: the rest come from English
+            for sc in story["scenes"]:
+                name = sc.get("screen")
+                if name and not (shots / name).exists() and (ROOT / "store" / "shots" / story["app"] / "en" / name).exists():
+                    sc["screen"] = "../en/" + name
         # 2. frames
         deck = {"scenes": story["scenes"], "title": story["title"], "end_line": app["end_line"], "app_name": app["name"],
                 "palette": app["palette"], "chars": story["character"], "char_base": CHAR_DIR.as_uri(), "vo_env": env, "vo_amp": amp,

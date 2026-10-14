@@ -1,0 +1,77 @@
+{
+ "id": "lumi-daily-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "daily-totals-update",
+ "title": "बंद करते वक़्त एक मिनट",
+ "post_on": "2026-11-16",
+ "caption": "वह नौ बजे दुकान बंद करती है और आठ बजे तक थक जाती है। अनीता सिर्फ़ चार खाने भरती है। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "At closing time, itemising a day of sales is a job for someone with more energy.\n\nScoreMyBiz has Today's Business Update: sales, spending, cash in hand and bank, in one minute at the counter. If the day is already itemised, the totals are not counted twice. Lumi tells Anita's story; every screen is the real app.",
+ "hashtags": [
+  "#DailyUpdate",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "anita": "Anita, an Indian woman in her thirties who runs a boutique, in a mustard kurta with silver earrings and a tired friendly smile"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small boutique with clothes on racks behind her, a warm tired smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह अनीता की कहानी है। उसका बुटीक नौ बजे बंद होता है, और वह आठ बजे तक थक चुकी होती है।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह अनीता की कहानी है। उसका बुटीक नौ बजे बंद होता है, और वह आठ बजे तक थक चुकी होती है।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "One minute at closing"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} behind the counter of her boutique near closing time, rubbing her eyes, a heap of receipts beside the till, warm lamp light.",
+   "vo": "हर बिक्री को अलग-अलग लिखने की ताक़त शाम तक नहीं बचती।",
+   "sub": "हर बिक्री को अलग-अलग लिखने की ताक़त शाम तक नहीं बचती।",
+   "min": 8,
+   "card": "रात के नौ बजे"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} at the boutique counter tapping her phone, a small relieved smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में वह सिर्फ़ चार चीज़ें भरती है: बिक्री, ख़र्च, हाथ में नक़द और बैंक।",
+   "sub": "स्कोर माय बिज़ में वह सिर्फ़ चार चीज़ें भरती है: बिक्री, ख़र्च, हाथ में नक़द और बैंक।",
+   "min": 8,
+   "screen": "daily-update.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} finishing on her phone with a quick nod as a mannequin stands behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "काउंटर पर एक मिनट, और दिन का हिसाब पूरा।",
+   "sub": "काउंटर पर एक मिनट, और दिन का हिसाब पूरा।",
+   "min": 8,
+   "screen": "daily-update.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} pulling down the boutique shutter at night with a content smile, a bag over her shoulder, warm street light.",
+   "vo": "अगर दिन का हिसाब पहले ही अलग-अलग लिखा है, तो कुल दोबारा नहीं गिना जाता।",
+   "sub": "अगर दिन का हिसाब पहले ही अलग-अलग लिखा है, तो कुल दोबारा नहीं गिना जाता।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} walking home on an evening street, relaxed, humming, the city lights soft behind her.",
+   "vo": "बही हिसाब से पूरी है, और अनीता भी आराम से।",
+   "sub": "बही हिसाब से पूरी है, और अनीता भी आराम से।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

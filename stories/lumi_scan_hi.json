@@ -1,0 +1,78 @@
+{
+ "id": "lumi-scan-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "photo-entry",
+ "title": "टाइपिंग छोड़िए",
+ "post_on": "2026-11-18",
+ "caption": "उसका पूरा महीना एक कॉपी में है। सुनीता पन्ने की फ़ोटो लेती है, टाइप नहीं करती। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "Typing a month of handwritten sales into an app is an evening most shop owners do not have.\n\nIn ScoreMyBiz you can scan a photo of a bill or notebook page, or speak your numbers; the numbers fill in for you to check, and nothing is saved until you do. The AI features are part of the free first month. Lumi tells Sunita's story; every screen is the real app.",
+ "hashtags": [
+  "#ScanAPhoto",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "sunita": "Sunita, an Indian woman in her fifties who owns a grocery shop, in a green cotton saree with reading glasses on a chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera inside a small bright grocery shop with shelves of packets behind her, a friendly smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह सुनीता की कहानी है। उसका पूरा महीना एक कॉपी में है, उसकी अपनी लिखावट में।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह सुनीता की कहानी है। उसका पूरा महीना एक कॉपी में है, उसकी अपनी लिखावट में।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Skip the typing"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} at the counter of her grocery shop turning pages of a thick handwritten notebook, a pen behind her ear, a tired smile, evening light.",
+   "vo": "सब कुछ टाइप करने में पूरी शाम लग जाएगी, जो उसके पास नहीं है।",
+   "sub": "सब कुछ टाइप करने में पूरी शाम लग जाएगी, जो उसके पास नहीं है।",
+   "min": 8,
+   "card": "वो कॉपी"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} holding her phone above an open notebook page on the counter as if taking a photo, glasses on, concentrating, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में वह फ़ोटो स्कैन करने का बटन दबाती है, और कॉपी के एक पन्ने की फ़ोटो लेती है।",
+   "sub": "स्कोर माय बिज़ में वह फ़ोटो स्कैन करने का बटन दबाती है, और कॉपी के एक पन्ने की फ़ोटो लेती है।",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} looking closely at her phone with a small nod, a pencil in her hand, the grocery shop behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "आँकड़े अपने आप भर जाते हैं, उसके जाँचने के लिए। वह एक को सुधारती है, और तभी सेव करती है।",
+   "sub": "आँकड़े अपने आप भर जाते हैं, उसके जाँचने के लिए। वह एक को सुधारती है, और तभी सेव करती है।",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} speaking into her phone while standing between grocery shelves, a relaxed smile, soft shop light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "या वह अपने आँकड़े बोलकर भी बता सकती है।",
+   "sub": "या वह अपने आँकड़े बोलकर भी बता सकती है।",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} closing the shop shutter in the evening with a light relieved smile, the notebook tucked under her arm.",
+   "vo": "जाँचिए, फिर सेव कीजिए। बही आपकी ही रहती है।",
+   "sub": "जाँचिए, फिर सेव कीजिए। बही आपकी ही रहती है।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
