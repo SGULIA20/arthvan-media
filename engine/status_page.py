@@ -40,7 +40,7 @@ def snapshot() -> dict:
             voice_wait = datetime.fromtimestamp(note["until"]).strftime("%H:%M")
     except (OSError, ValueError, KeyError):
         pass
-    reels = sorted(FOLDER.glob("[0-9]*.mp4"))
+    reels = sorted(FOLDER.rglob("[0-9]*.mp4"))
     newest = max(reels, key=lambda p: p.stat().st_mtime) if reels else None
     return {"now": datetime.now().strftime("%d %b %H:%M:%S"), "jobs": jobs, "voice_wait": voice_wait, "reels": len(reels),
             "newest": (newest.name, datetime.fromtimestamp(newest.stat().st_mtime).strftime("%H:%M")) if newest else None,

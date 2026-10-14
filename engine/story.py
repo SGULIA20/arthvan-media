@@ -59,17 +59,10 @@ REELS_FOLDER = Path.home() / "Desktop" / "Arthvan-Reels"
 
 
 def file_in_reels_folder(mp4: Path, story_id: str, folder: Path = None) -> Path:
-    """Every Reel made goes into one folder the founder can open anytime. Numbered in the order made; a Reel already
-    in the folder is never replaced or deleted."""
-    folder = Path(folder or REELS_FOLDER); folder.mkdir(parents=True, exist_ok=True)
-    existing = sorted(folder.glob("*.mp4"))
-    for f in existing:
-        if f.stem.split("-", 1)[-1] == story_id:
-            return f
-    nums = [int(f.name.split("-", 1)[0]) for f in existing if f.name.split("-", 1)[0].isdigit()]
-    dst = folder / f"{(max(nums) + 1 if nums else 1):02d}-{story_id}.mp4"
-    shutil.copy2(mp4, dst)
-    return dst
+    """Every Reel made goes into the founder's library, App -> Language -> numbered in the order made (engine/library.py).
+    A Reel already filed is never replaced by filing."""
+    from . import library
+    return library.file_reel(mp4, story_id, Path(folder or REELS_FOLDER), ROOT)
 
 
 _PRESENT_POSES = ("explaining_right", "phone", "phone_sofa", "curious", "front_standing", "pointing_up", "thinking", "relieved", "listening", "front_happy", "front_neutral")
