@@ -1,0 +1,76 @@
+{
+ "app": "waypoint",
+ "lang": "en",
+ "id": "mira-moments-en",
+ "character": "mira",
+ "feature": "moments",
+ "title": "Seen once",
+ "post_on": "2026-12-04",
+ "caption": "Zoe's sunset is too good to keep. She shares it as a Moment, and one stranger sees it once. Mira tells her story.",
+ "linkedin_text": "On Waypoint's Wall, the Moments strip lets a member add a picture that is screened before it can go live, stays for 24 hours, and is seen by the first other person who opens it for ten seconds, who can send one emoji. Then it is gone for everyone.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#Moments"
+ ],
+ "cast": {
+  "zoe": "Zoe, a young woman with a curly auburn bob and a mustard cardigan"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera on a balcony at golden hour with a warm orange sky behind her, a gentle smile.",
+   "vo": "Hi, I'm Mira. This is Zoe's story. From her balcony, the sunset is too good to keep to herself.",
+   "sub": "Hi, I'm Mira. This is Zoe's story. From her balcony, the sunset is too good to keep to herself.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Seen once"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoe} on her balcony photographing a glowing sunset with her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She wants to share it, but not with the whole world, and not for ever.",
+   "sub": "She wants to share it, but not with the whole world, and not for ever.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoe} opening her phone with a curious smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "On Waypoint's Wall there is a Moments strip. She taps Add, and picks the picture.",
+   "sub": "On Waypoint's Wall there is a Moments strip. She taps Add, and picks the picture.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoe} watching her phone with a soft smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A picture that one person sees once, then it is gone for everyone. It is checked before it can go live, and it stays for twenty-four hours.",
+   "sub": "A picture that one person sees once, then it is gone for everyone. It is checked before it can go live, and it stays for twenty-four hours.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoe} leaning on the balcony rail looking at the sky, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "The first person to open it sees it for ten seconds, and can send one emoji.",
+   "sub": "The first person to open it sees it for ten seconds, and can send one emoji.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoe} smiling quietly at the sunset, hands on the rail.",
+   "vo": "Then it is gone, for everyone. A small moment, shared once.",
+   "sub": "Then it is gone, for everyone. A small moment, shared once.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-network-en",
+ "character": "lumi",
+ "feature": "business-network",
+ "title": "One line",
+ "post_on": "2026-12-06",
+ "caption": "Rajan needs fifty bags of cement this week. One line reaches nearby sellers. Lumi tells his story.",
+ "linkedin_text": "In India, the ScoreMyBiz Business network lets an owner post one line, such as a need for 50 bags of cement in Jaipur this week. It is shown anonymously to matching businesses nearby, and leads from others in his trade appear in his own list. Phone numbers are never shared and matches depend on who has joined.",
+ "hashtags": [
+  "#BusinessNetwork",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "rajan": "Rajan, a middle-aged Indian building contractor with a thick moustache, in a cream shirt and a yellow safety helmet"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera at a busy construction site with scaffolding behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Rajan's story. He needs fifty bags of cement in Jaipur this week.",
+   "sub": "Hi, I'm Lumi. This is Rajan's story. He needs fifty bags of cement in Jaipur this week.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "One line"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rajan} on a phone call at a construction site, shaking his head, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He knows two suppliers. Both are out of stock.",
+   "sub": "He knows two suppliers. Both are out of stock.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rajan} typing on his phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz in India, he opens Business network and types one line: what he needs.",
+   "sub": "In ScoreMyBiz in India, he opens Business network and types one line: what he needs.",
+   "min": 8,
+   "screen": "network.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rajan} watching his phone with a hopeful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It is shown to matching businesses nearby, without his phone number.",
+   "sub": "It is shown to matching businesses nearby, without his phone number.",
+   "min": 8,
+   "screen": "network.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rajan} reading a message on his phone with an interested nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Leads from others in his trade appear in his own list.",
+   "sub": "Leads from others in his trade appear in his own list.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rajan} standing at the site, arms folded, smiling at the camera.",
+   "vo": "ScoreMyBiz only introduces. Price, payment and delivery are between the two businesses, and matches depend on who has joined.",
+   "sub": "ScoreMyBiz only introduces. Price, payment and delivery are between the two businesses, and matches depend on who has joined.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

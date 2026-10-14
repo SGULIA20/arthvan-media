@@ -1,0 +1,76 @@
+{
+ "app": "waypoint",
+ "lang": "en",
+ "id": "founder-walltools-en",
+ "character": "founder_casual",
+ "feature": "wall-sort-search-surprise",
+ "title": "Find the words",
+ "post_on": "2026-12-05",
+ "caption": "The night before her test, Hana searches the Wall for exam. The founder tells her story.",
+ "linkedin_text": "Pills on Waypoint's Wall switch between New and Top today, this week and this month. A magnifier searches post text from two letters, and a dice button shows one random post.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#Wall"
+ ],
+ "cast": {
+  "hana": "Hana, a young woman with a high ponytail in a navy hoodie, studying at a desk with a lamp"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a quiet campus path in the evening, a relaxed smile.",
+   "vo": "Hi. This is Hana's story. It is the night before her test, and her head is loud.",
+   "sub": "Hi. This is Hana's story. It is the night before her test, and her head is loud.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "Find the words"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hana} at a desk with open notebooks late at night, rubbing her eyes, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She wonders if anyone else feels like this.",
+   "sub": "She wonders if anyone else feels like this.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{hana} opening her phone with a hopeful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "On Waypoint's Wall, pills switch between New, and Top today, this week and this month.",
+   "sub": "On Waypoint's Wall, pills switch between New, and Top today, this week and this month.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hana} typing on her phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A magnifier searches the Wall from two letters. She types exam.",
+   "sub": "A magnifier searches the Wall from two letters. She types exam.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hana} tapping her phone with a small smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A dice button shows one random post, when she wants to be surprised.",
+   "sub": "A dice button shows one random post, when she wants to be surprised.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{hana} closing her notebook with a relieved smile, lamp glowing behind her.",
+   "vo": "She finds she is not the only one, and she sleeps.",
+   "sub": "She finds she is not the only one, and she sleeps.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
