@@ -11,6 +11,7 @@ python -m engine.calendar_plan 30            show the next 30 days
 python -m engine.calendar_plan 30 --write    also write content/schedule.json (days already past are kept)
 """
 import json
+import subprocess
 import sys
 from datetime import date, timedelta
 from pathlib import Path
@@ -27,6 +28,18 @@ def load_schedule(root: Path = ROOT):
     return json.loads(p.read_text()) if p.exists() else None
 
 
+STORY_MAX_SECONDS = 60.0
+
+
+def video_seconds(path: Path):
+    """Length of a finished Reel in seconds, or None when it cannot be read (the guard then stays quiet)."""
+    try:
+        out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)], capture_output=True, text=True, timeout=30)
+        return float(out.stdout.strip())
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return None
+
+
 def load_stories(root: Path = ROOT) -> list:
     out = []
     feats_smap = claims.load(root)
@@ -36,8 +49,12 @@ def load_stories(root: Path = ROOT) -> list:
         except ValueError:
             continue
         if st.get("id") and st.get("app"):
-            st["rendered"] = (Path(root) / "stories" / "out" / f"{st['id']}.mp4").exists()
+            video = Path(root) / "stories" / "out" / f"{st['id']}.mp4"
+            st["rendered"] = video.exists()
             st["problems"] = claims.story_problems(st, *feats_smap)
+            secs = video_seconds(video) if st["rendered"] else None
+            if secs is not None and secs > STORY_MAX_SECONDS:
+                st["problems"].append(f"video is {secs:.0f} s, over the {STORY_MAX_SECONDS:.0f} s Instagram Story limit")
             out.append(st)
     return out
 

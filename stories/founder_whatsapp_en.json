@@ -38,24 +38,16 @@
   {
    "layout": "clip",
    "clip": "{ravi} sitting on a stool outside his shop typing on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
-   "vo": "So he opens WhatsApp, and sends ScoreMyBiz three numbers in one message: sales, expenses and cash.",
-   "sub": "So he opens WhatsApp, and sends ScoreMyBiz three numbers in one message: sales, expenses and cash.",
-   "min": 8,
-   "screen": "whatsapp-numbers.png"
-  },
-  {
-   "layout": "clip",
-   "clip": "{ravi} reading his phone with a relieved smile, shop lights behind him, the subject on the left of the frame, the right third of the frame kept clear.",
-   "vo": "The reply says Recorded. His day is in his book.",
-   "sub": "The reply says Recorded. His day is in his book.",
+   "vo": "So he opens WhatsApp and sends ScoreMyBiz three numbers in one message: sales, expenses and cash. The reply says Recorded.",
+   "sub": "So he opens WhatsApp and sends ScoreMyBiz three numbers in one message: sales, expenses and cash. The reply says Recorded.",
    "min": 8,
    "screen": "whatsapp-numbers.png"
   },
   {
    "layout": "clip",
    "clip": "{ravi} speaking into his phone at the shop counter, an open notebook beside him, the subject on the left of the frame, the right third of the frame kept clear.",
-   "vo": "In his free month he can also send a photo of his notebook, or a voice note. It reads it back, and nothing goes into his book until he says YES.",
-   "sub": "In his free month he can also send a photo of his notebook, or a voice note. It reads it back, and nothing goes into his book until he says YES.",
+   "vo": "In his free month, a photo of his notebook or a voice note works too. It reads it back, and nothing is saved until he says YES.",
+   "sub": "In his free month, a photo of his notebook or a voice note works too. It reads it back, and nothing is saved until he says YES.",
    "min": 8
   },
   {

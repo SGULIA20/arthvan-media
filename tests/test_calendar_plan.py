@@ -93,3 +93,14 @@ def test_todays_planned_reel_beats_a_missed_earlier_one(tmp_path):
     assert scheduled_story(tmp_path, date(2026, 10, 14), log)["id"] == "festival"     # the festival Reel goes out on its day
     log.write_text(json.dumps({"date": "2026-10-14", "app": "scoremybiz", "item": "festival", "status": "published"}) + "\n")
     assert scheduled_story(tmp_path, date(2026, 10, 15), log)["id"] == "early"          # then the missed one, within three days
+
+
+def test_a_reel_over_the_60_second_story_limit_is_held_back_and_an_unreadable_one_is_not(tmp_path, monkeypatch):
+    for sid in ("long", "ok", "junk"):
+        (tmp_path / "stories" / "out").mkdir(parents=True, exist_ok=True)
+        (tmp_path / "stories" / f"{sid}.json").write_text(json.dumps({"id": sid, "app": "scoremybiz", "scenes": []}))
+        (tmp_path / "stories" / "out" / f"{sid}.mp4").write_bytes(b"x")
+    monkeypatch.setattr(cp, "video_seconds", lambda p: {"long": 63.2, "ok": 59.4, "junk": None}[p.stem])
+    by_id = {s["id"]: s for s in cp.load_stories(tmp_path)}
+    assert by_id["long"]["problems"] == ["video is 63 s, over the 60 s Instagram Story limit"]
+    assert by_id["ok"]["problems"] == [] and by_id["junk"]["problems"] == []
