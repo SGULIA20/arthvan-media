@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-health-en",
+ "character": "lumi",
+ "feature": "personal-health-score",
+ "title": "My own side",
+ "post_on": "2026-11-25",
+ "caption": "Sameer's home money and shop money are tangled. Lumi shows him his own side. Lumi tells his story.",
+ "linkedin_text": "ScoreMyBiz has a separate Personal Health Score for an owner's own money: income, spending, savings, debts, insurance and family, with a view of whether he is ready to go full-time on his business. It is not investment or insurance advice.",
+ "hashtags": [
+  "#PersonalFinance",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "sameer": "Sameer, a young Indian cafe owner in Pune with a short beard, in a mustard t-shirt and a black apron"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small cosy cafe with coffee machines and wooden tables behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Sameer's story. He runs a cafe in Pune, and his home money and shop money are tangled.",
+   "sub": "Hi, I'm Lumi. This is Sameer's story. He runs a cafe in Pune, and his home money and shop money are tangled.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "My own side"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} behind his cafe counter paying a home bill from the till, a worried look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Some days the till pays the shop. Some days it pays the house.",
+   "sub": "Some days the till pays the shop. Some days it pays the house.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} looking at his phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz there is a separate Personal Health Score, for his own money.",
+   "sub": "In ScoreMyBiz there is a separate Personal Health Score, for his own money.",
+   "min": 8,
+   "screen": "personal-calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} entering numbers on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He enters his income and spending, and can add savings, debts and family.",
+   "sub": "He enters his income and spending, and can add savings, debts and family.",
+   "min": 8,
+   "screen": "personal-calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} nodding thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It shows his own score, and whether he could go full-time on his business.",
+   "sub": "It shows his own score, and whether he could go full-time on his business.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} smiling at the camera in his cafe.",
+   "vo": "A score, not advice. His own side, clearly.",
+   "sub": "A score, not advice. His own side, clearly.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

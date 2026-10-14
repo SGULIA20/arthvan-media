@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "founder-inbox-en",
+ "character": "founder_suit",
+ "feature": "notifications-inbox",
+ "title": "One place",
+ "post_on": "2026-11-24",
+ "caption": "Manoj wants one place for everything the app wanted him to notice. The founder tells his story.",
+ "linkedin_text": "A bell on the ScoreMyBiz Home screen opens an in-app list of reminders, supplier-due notes, weekly check-ins, challenge updates and, in India, network leads, with an unread badge.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Reminders"
+ ],
+ "cast": {
+  "manoj": "Manoj, a middle-aged Indian pharmacy owner with round glasses and a short grey beard, in a white coat"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a bright neighbourhood pharmacy with shelves of medicine boxes behind him, a warm smile.",
+   "vo": "Hi. This is Manoj's story. His pharmacy is busy, and things slip his mind.",
+   "sub": "Hi. This is Manoj's story. His pharmacy is busy, and things slip his mind.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "One place"
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} behind his pharmacy counter serving a queue, glancing at a ringing phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A bill due, a customer to remind, a weekly check-in. Where did the app tell him that?",
+   "sub": "A bill due, a customer to remind, a weekly check-in. Where did the app tell him that?",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} tapping the bell on his phone with a relieved smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz, the bell on Home opens one list of what he should notice.",
+   "sub": "In ScoreMyBiz, the bell on Home opens one list of what he should notice.",
+   "min": 8,
+   "screen": "notifications.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} reading his phone with interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Reminders, supplier notes, weekly check-ins, challenge updates, and in India, leads from the network.",
+   "sub": "Reminders, supplier notes, weekly check-ins, challenge updates, and in India, leads from the network.",
+   "min": 8,
+   "screen": "notifications.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} tapping a notification with a nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A badge shows what is still unread.",
+   "sub": "A badge shows what is still unread.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} standing at his pharmacy counter, relaxed, arms folded.",
+   "vo": "One place, not five messages.",
+   "sub": "One place, not five messages.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

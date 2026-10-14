@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-breakeven-en",
+ "character": "lumi",
+ "feature": "break-even",
+ "title": "The least to sell",
+ "post_on": "2026-11-27",
+ "caption": "Before a bigger shop, Asha wants to know the least she must sell. Lumi tells her story.",
+ "linkedin_text": "In ScoreMyBiz, in the free month or on a paid plan, the Break-even calculator takes monthly fixed costs, sales and the cost of what is sold, and shows how much must be sold each month to cover costs and the safety margin above that line. It is maths on the owner's own numbers, not a forecast.",
+ "hashtags": [
+  "#BreakEven",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "asha": "Asha, a young Indian woman planning a bigger bakery, in a yellow cotton kurta with a thin gold necklace"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small neat bakery with warm light and fresh bread behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Asha's story. She wants a bigger bakery, and a bigger rent.",
+   "sub": "Hi, I'm Lumi. This is Asha's story. She wants a bigger bakery, and a bigger rent.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "The least to sell"
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} standing alone in an empty shop space, looking around thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "The new shop costs much more every month. How much must she sell just to stay even?",
+   "sub": "The new shop costs much more every month. How much must she sell just to stay even?",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} typing numbers on her phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz, in her free month, Break-even asks three things: fixed costs, monthly sales and the cost of what she sells.",
+   "sub": "In ScoreMyBiz, in her free month, Break-even asks three things: fixed costs, monthly sales and the cost of what she sells.",
+   "min": 8,
+   "screen": "break-even.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} reading her phone with a serious nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It shows how much she must sell each month to cover her costs.",
+   "sub": "It shows how much she must sell each month to cover her costs.",
+   "min": 8,
+   "screen": "break-even.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} smiling with relief at her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "And how much safety margin she has above that line.",
+   "sub": "And how much safety margin she has above that line.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} smiling at the camera in the empty shop, hands on hips.",
+   "vo": "It is maths on her own numbers, not a forecast.",
+   "sub": "It is maths on her own numbers, not a forecast.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -51,6 +51,15 @@
   "money-now.png": "money-now",
   "quotations.png": "quotes-for-customers",
   "items.png": "items-and-prices",
-  "invoices.png": "bills-for-customers"
+  "invoices.png": "bills-for-customers",
+  "cash-book.png": "cash-book-by-day",
+  "registers.png": "sold-bought-spent-lists",
+  "notifications.png": "notifications-inbox",
+  "personal-calculator.png": "personal-health-score",
+  "alerts.png": "schemes-and-weather",
+  "network.png": "business-network",
+  "break-even.png": "break-even",
+  "reconcile.png": "bank-vs-my-book",
+  "support.png": "report-a-problem"
  }
 }

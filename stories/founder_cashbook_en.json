@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "founder-cashbook-en",
+ "character": "founder_suit",
+ "feature": "cash-book-by-day",
+ "title": "Which day",
+ "post_on": "2026-11-22",
+ "caption": "Vikram's drawer and his book stopped agreeing. Which day? The founder tells his story.",
+ "linkedin_text": "The Cash book in ScoreMyBiz shows each day what the owner started with, every entry that moved money and what he ended with, and when he counted the drawer, how far the count was from the book.",
+ "hashtags": [
+  "#CashBook",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "vikram": "Vikram, a middle-aged Indian electronics shop owner with a trimmed moustache, in a pale green shirt and a smartwatch"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy electronics market lane, shop signs glowing behind him, a warm smile.",
+   "vo": "Hi. This is Vikram's story. His cash drawer and his book stopped agreeing, and he does not know which day it happened.",
+   "sub": "Hi. This is Vikram's story. His cash drawer and his book stopped agreeing, and he does not know which day it happened.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Which day"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} at his shop counter looking at an open cash drawer and a notebook, puzzled, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A few thousand rupees are missing on paper, and a month is a lot of days to check.",
+   "sub": "A few thousand rupees are missing on paper, and a month is a lot of days to check.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} opening an app on his phone with a hopeful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz, the Cash book shows each day: what he started with, every entry that moved money, and what he ended with.",
+   "sub": "In ScoreMyBiz, the Cash book shows each day: what he started with, every entry that moved money, and what he ended with.",
+   "min": 8,
+   "screen": "cash-book.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} scrolling on his phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "When he counted the drawer, it shows how far the count was from the book.",
+   "sub": "When he counted the drawer, it shows how far the count was from the book.",
+   "min": 8,
+   "screen": "cash-book.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} nodding with quiet relief, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "So he can see exactly which day the drawer stopped matching.",
+   "sub": "So he can see exactly which day the drawer stopped matching.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} standing at his counter, smiling, arms folded.",
+   "vo": "No guessing. Just the day, and the entry to look at.",
+   "sub": "No guessing. Just the day, and the entry to look at.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

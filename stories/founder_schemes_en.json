@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "founder-schemes-en",
+ "character": "founder_suit",
+ "feature": "schemes-and-weather",
+ "title": "Before the rain",
+ "post_on": "2026-11-26",
+ "caption": "A rain forecast tells Anil to move his stock off the floor. The founder tells his story.",
+ "linkedin_text": "In India, ScoreMyBiz shows a four-day weather watch with plain business alerts, and matches small-business schemes to the owner's type, city and size as likely or possible fits, each with the official link. It never promises a scheme or a loan.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#MSME"
+ ],
+ "cast": {
+  "anil": "Anil, a middle-aged Indian grain trader with a grey moustache, in a beige kurta"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera outside a grain warehouse in the afternoon, sacks stacked behind him, a warm smile.",
+   "vo": "Hi. This is Anil's story. He trades grain in India, and rain is his biggest worry.",
+   "sub": "Hi. This is Anil's story. He trades grain in India, and rain is his biggest worry.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Before the rain"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} in his grain warehouse looking at sacks on the floor, concerned, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Sacks on the floor, and a week of unknown weather.",
+   "sub": "Sacks on the floor, and a week of unknown weather.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} checking his phone with a serious nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz in India, Schemes and weather shows a four-day weather watch for his city.",
+   "sub": "In ScoreMyBiz in India, Schemes and weather shows a four-day weather watch for his city.",
+   "min": 8,
+   "screen": "alerts.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} reading the alert on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A plain alert says heavy rain is coming, and to move stock off the floor.",
+   "sub": "A plain alert says heavy rain is coming, and to move stock off the floor.",
+   "min": 8,
+   "screen": "alerts.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} lifting a sack onto a pallet with effort, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It also lists government schemes that may suit his business, with the official link. It never promises he will get one.",
+   "sub": "It also lists government schemes that may suit his business, with the official link. It never promises he will get one.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} standing relaxed in his dry warehouse, arms folded, smiling.",
+   "vo": "In his free month, the stock is off the floor before the rain.",
+   "sub": "In his free month, the stock is off the floor before the rain.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
