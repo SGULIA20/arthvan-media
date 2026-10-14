@@ -8,3 +8,6 @@ samples/
 stories/cache/
 stories/broll/*.mp4
 logs/broll_library.log
+
+# Supabase CLI scratch created when the weekly report runs from this folder
+supabase/

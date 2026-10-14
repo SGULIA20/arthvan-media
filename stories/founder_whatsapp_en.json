@@ -1,0 +1,84 @@
+{
+ "id": "founder-whatsapp-en",
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "founder_suit",
+ "feature": "whatsapp-daily-update",
+ "title": "The WhatsApp way",
+ "post_on": "2026-10-27",
+ "caption": "At closing time Ravi is tired. He sends three numbers on WhatsApp, and his day is recorded.",
+ "linkedin_text": "A shopkeeper at closing time does not want another form. He sends three numbers in one WhatsApp message: sales, expenses and cash. ScoreMyBiz records them. In the free month a photo of the notebook or a voice note works too, and nothing is saved until he says YES.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#WhatsApp",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "ravi": "Ravi, a young Indian mobile-phone shop owner with a trimmed beard in a checked shirt and a lanyard"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy market lane at night, shop signs glowing behind him, a warm smile.",
+   "vo": "Hi. This is Ravi's story. He sells mobile phones, and at closing time he is tired.",
+   "sub": "Hi. This is Ravi's story. He sells mobile phones, and at closing time he is tired.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "The WhatsApp way"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} pulling down his shop shutter at night, tired, the lane lit by shop signs behind him.",
+   "vo": "The day's sales, expenses and cash are still in his head. He does not want to fill in another form tonight.",
+   "sub": "The day's sales, expenses and cash are still in his head. He does not want to fill in another form tonight.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} sitting on a stool outside his shop typing on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "So he opens WhatsApp, and sends ScoreMyBiz three numbers in one message: sales, expenses and cash.",
+   "sub": "So he opens WhatsApp, and sends ScoreMyBiz three numbers in one message: sales, expenses and cash.",
+   "min": 8,
+   "screen": "whatsapp-numbers.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} reading his phone with a relieved smile, shop lights behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "The reply says Recorded. His day is in his book.",
+   "sub": "The reply says Recorded. His day is in his book.",
+   "min": 8,
+   "screen": "whatsapp-numbers.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} speaking into his phone at the shop counter, an open notebook beside him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In his free month he can also send a photo of his notebook, or a voice note. It reads it back, and nothing goes into his book until he says YES.",
+   "sub": "In his free month he can also send a photo of his notebook, or a voice note. It reads it back, and nothing goes into his book until he says YES.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} at a wholesaler's busy counter looking at his phone, boxes of phones behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "At the wholesaler he wants to know who still owes him money. He says hi, and picks number three.",
+   "sub": "At the wholesaler he wants to know who still owes him money. He says hi, and picks number three.",
+   "min": 8,
+   "screen": "whatsapp-menu.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} standing in front of his phone shop in the morning sun, arms folded, a bright smile.",
+   "vo": "Just the chat he already has open.",
+   "sub": "Just the chat he already has open.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
