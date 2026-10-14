@@ -1,12 +1,13 @@
 """Capture Waypoint screens from the web build (npx expo start --web --port 8092 in ~/waypoint).
-python3 capture_waypoint.py <outdir>"""
+python3 capture_waypoint.py <outdir> [language code]"""
 import subprocess, sys
 from playwright.sync_api import sync_playwright
-BASE="http://localhost:8092"; OUT=sys.argv[1] if len(sys.argv)>1 else "."
+BASE="http://localhost:8092"; OUT=sys.argv[1] if len(sys.argv)>1 else "."; LANG=sys.argv[2] if len(sys.argv)>2 else "en"
 def shot(pg, path, name):
     pg.goto(BASE+path, wait_until="networkidle", timeout=60000); pg.wait_for_timeout(2500); pg.screenshot(path=f"{OUT}/{name}.png"); print(name,"ok")
 with sync_playwright() as p:
     b=p.chromium.launch(); ctx=b.new_context(viewport={"width":390,"height":844}, device_scale_factor=3, is_mobile=True, has_touch=True)
+    ctx.add_init_script("try{localStorage.setItem('appLanguage','%s');}catch(e){}" % LANG)
     pg=ctx.new_page()
     shot(pg,"/","welcome")
     shot(pg,"/(tabs)","wall")
