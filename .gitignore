@@ -11,3 +11,8 @@ logs/broll_library.log
 
 # Supabase CLI scratch created when the weekly report runs from this folder
 supabase/
+
+# Finished Reels and the Veo credit ledger live on the Mac. GitHub carries only the scheduled window (engine/media_window.py adds those with git add -f).
+stories/out/*.mp4
+stories/broll/ledger.json
+stories/broll/ledger.lock
