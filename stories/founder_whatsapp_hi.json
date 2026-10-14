@@ -1,0 +1,76 @@
+{
+ "id": "founder-whatsapp-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "founder_suit",
+ "feature": "whatsapp-daily-update",
+ "title": "व्हाट्सऐप वाला तरीक़ा",
+ "post_on": "2026-12-01",
+ "caption": "बंद करते समय रवि थका हुआ है। वह व्हाट्सऐप पर तीन अंक भेजता है, और उसका दिन दर्ज हो जाता है।",
+ "linkedin_text": "A shopkeeper at closing time does not want another form. He sends three numbers in one WhatsApp message: sales, expenses and cash. ScoreMyBiz records them. In the free month a photo of the notebook or a voice note works too, and nothing is saved until he says YES.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#WhatsApp",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "ravi": "Ravi, a young Indian mobile-phone shop owner with a trimmed beard in a checked shirt and a lanyard"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy market lane at night, shop signs glowing behind him, a warm smile.",
+   "vo": "नमस्ते। यह रवि की कहानी है। वह मोबाइल फ़ोन बेचता है, और दुकान बंद करते समय वह थका होता है।",
+   "sub": "नमस्ते। यह रवि की कहानी है। वह मोबाइल फ़ोन बेचता है, और दुकान बंद करते समय वह थका होता है।",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "The WhatsApp way"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} gently closing the glass door of his phone shop in the evening, shop lights glowing behind him, a thoughtful expression.",
+   "vo": "दिन की बिक्री, ख़र्च और नक़द अब भी उसके दिमाग़ में हैं। आज रात वह कोई और फ़ॉर्म नहीं भरना चाहता।",
+   "sub": "दिन की बिक्री, ख़र्च और नक़द अब भी उसके दिमाग़ में हैं। आज रात वह कोई और फ़ॉर्म नहीं भरना चाहता।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} sitting on a stool outside his shop typing on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तो वह व्हाट्सऐप खोलता है और स्कोर माय बिज़ को एक ही संदेश में तीन अंक भेजता है: बिक्री, ख़र्च और नक़द। जवाब आता है: दर्ज हो गया।",
+   "sub": "तो वह व्हाट्सऐप खोलता है और स्कोर माय बिज़ को एक ही संदेश में तीन अंक भेजता है: बिक्री, ख़र्च और नक़द। जवाब आता है: दर्ज हो गया।",
+   "min": 8,
+   "screen": "whatsapp-numbers.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} speaking into his phone at the shop counter, an open notebook beside him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "मुफ़्त महीने में कॉपी की फ़ोटो या बोला हुआ संदेश भी चलता है। वह उसे पढ़कर सुनाता है, और जब तक वह हाँ नहीं कहता, कुछ सेव नहीं होता।",
+   "sub": "मुफ़्त महीने में कॉपी की फ़ोटो या बोला हुआ संदेश भी चलता है। वह उसे पढ़कर सुनाता है, और जब तक वह हाँ नहीं कहता, कुछ सेव नहीं होता।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} at a wholesaler's busy counter looking at his phone, boxes of phones behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "थोक बाज़ार में वह जानना चाहता है कि किस पर अब भी उसका पैसा बाक़ी है। वह हाय लिखता है, और तीन नंबर चुनता है।",
+   "sub": "थोक बाज़ार में वह जानना चाहता है कि किस पर अब भी उसका पैसा बाक़ी है। वह हाय लिखता है, और तीन नंबर चुनता है।",
+   "min": 8,
+   "screen": "whatsapp-menu.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} standing in front of his phone shop in the morning sun, arms folded, a bright smile.",
+   "vo": "बस वही चैट, जो उसके पास पहले से खुली है।",
+   "sub": "बस वही चैट, जो उसके पास पहले से खुली है।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

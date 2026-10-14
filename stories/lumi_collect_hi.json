@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-collect-hi",
+ "character": "lumi",
+ "feature": "money-to-collect",
+ "title": "किस पर बाक़ी है",
+ "post_on": "2026-12-04",
+ "caption": "महीने का अंत है और सलमा को याद नहीं कि किस पर उसका पैसा बाक़ी है। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "Cash Flow Watch in ScoreMyBiz lists every customer who owes you, with the amount and the days overdue, and a one-tap WhatsApp reminder. Marking a payment as paid, in full or in part, lands in the book.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#GetPaid"
+ ],
+ "cast": {
+  "salma": "Salma, a middle-aged Indian woman who runs a tile shop, in a plum cotton kurta with reading glasses on a chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a bright tile shop with colourful tile samples on the walls behind her, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह सलमा की कहानी है। महीने का अंत है, और उसे याद नहीं कि किस पर उसका पैसा बाक़ी है।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह सलमा की कहानी है। महीने का अंत है, और उसे याद नहीं कि किस पर उसका पैसा बाक़ी है।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Who owes me"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} at her shop counter with a worn handwritten notebook, rubbing her forehead, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ग्राहकों ने देने का वादा किया था। कुछ ने दिया, कुछ ने नहीं। कॉपी यह नहीं बताती कि कब से।",
+   "sub": "ग्राहकों ने देने का वादा किया था। कुछ ने दिया, कुछ ने नहीं। कॉपी यह नहीं बताती कि कब से।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} looking at her phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में कैश फ़्लो वॉच हर उस ग्राहक को सूची में दिखाता है जिस पर उसका पैसा है, रक़म और देर के दिनों के साथ।",
+   "sub": "स्कोर माय बिज़ में कैश फ़्लो वॉच हर उस ग्राहक को सूची में दिखाता है जिस पर उसका पैसा है, रक़म और देर के दिनों के साथ।",
+   "min": 8,
+   "screen": "cash-flow.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} tapping her phone with a decisive nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "यह बताता है कि आज किसे फ़ोन करना है, और व्हाट्सऐप पर याद दिलाएँ बटन एक टैप में याद दिलाने का संदेश तैयार कर देता है।",
+   "sub": "यह बताता है कि आज किसे फ़ोन करना है, और व्हाट्सऐप पर याद दिलाएँ बटन एक टैप में याद दिलाने का संदेश तैयार कर देता है।",
+   "min": 8,
+   "screen": "cash-flow.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} receiving a payment with a grateful smile at her counter, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "जब कोई ग्राहक पैसे देता है, तो वह उसे चुकता दर्ज करती है, पूरा या कुछ हिस्सा, और वह उसकी बही में चढ़ जाता है।",
+   "sub": "जब कोई ग्राहक पैसे देता है, तो वह उसे चुकता दर्ज करती है, पूरा या कुछ हिस्सा, और वह उसकी बही में चढ़ जाता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} standing relaxed in her tile shop, arms folded, smiling at the camera.",
+   "vo": "अब महीने का अंत एक छोटी सूची है, अंदाज़ा नहीं।",
+   "sub": "अब महीने का अंत एक छोटी सूची है, अंदाज़ा नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

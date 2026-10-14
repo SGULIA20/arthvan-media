@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "founder-pay-hi",
+ "character": "founder_suit",
+ "feature": "money-to-pay",
+ "title": "पहले किसे दें",
+ "post_on": "2026-11-30",
+ "caption": "तीन सप्लायर के बिल, तीन तारीख़ें, एक पहले से देर में। संस्थापक दिनेश की कहानी सुनाते हैं।",
+ "linkedin_text": "Money I have to pay in ScoreMyBiz groups supplier bills by supplier, shows what is overdue and what falls due this week, and reminds the owner on the due day and three days before. It does not pay anyone; it only reminds.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Suppliers"
+ ],
+ "cast": {
+  "dinesh": "Dinesh, a middle-aged Indian grocery wholesaler with a thick moustache, in a white half-sleeve shirt and a gold chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy grocery wholesale market in the morning, sacks of grain behind him, a warm smile.",
+   "vo": "नमस्ते। यह दिनेश की कहानी है। एक सप्लायर का बिल इसी हफ़्ते देय है, और वह पैसा अलग रखना चाहता है।",
+   "sub": "नमस्ते। यह दिनेश की कहानी है। एक सप्लायर का बिल इसी हफ़्ते देय है, और वह पैसा अलग रखना चाहता है।",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Pay first"
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} at a small desk with a spike of paper bills, counting dates on his fingers, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तीन सप्लायर के बिल, तीन अलग तारीख़ें, और उनमें से एक पहले से देर में है।",
+   "sub": "तीन सप्लायर के बिल, तीन अलग तारीख़ें, और उनमें से एक पहले से देर में है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} reading his phone with a calm nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में मुझे जो चुकाना है, वह बिलों को सप्लायर के हिसाब से जोड़कर दिखाता है।",
+   "sub": "स्कोर माय बिज़ में मुझे जो चुकाना है, वह बिलों को सप्लायर के हिसाब से जोड़कर दिखाता है।",
+   "min": 8,
+   "screen": "payables.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} pointing at his phone thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "यह दिखाता है कि क्या देर में है और इस हफ़्ते क्या देय होगा, ताकि उसे पता हो कि पहले किसे देना है।",
+   "sub": "यह दिखाता है कि क्या देर में है और इस हफ़्ते क्या देय होगा, ताकि उसे पता हो कि पहले किसे देना है।",
+   "min": 8,
+   "screen": "payables.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} glancing at a notification on his phone with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "देय दिन पर, और उससे तीन दिन पहले, उसे ऐप में एक नोट भी मिलता है।",
+   "sub": "देय दिन पर, और उससे तीन दिन पहले, उसे ऐप में एक नोट भी मिलता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} standing among sacks of grain, relaxed, arms folded.",
+   "vo": "स्कोर माय बिज़ किसी को पैसे नहीं देता। यह सिर्फ़ उसे याद दिलाता है।",
+   "sub": "स्कोर माय बिज़ किसी को पैसे नहीं देता। यह सिर्फ़ उसे याद दिलाता है।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

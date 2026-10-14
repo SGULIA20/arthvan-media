@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "founder-cashbook-hi",
+ "character": "founder_suit",
+ "feature": "cash-book-by-day",
+ "title": "कौन सा दिन",
+ "post_on": "2026-11-25",
+ "caption": "विक्रम की दराज़ और उसकी बही का मेल बिगड़ गया। किस दिन? संस्थापक उसकी कहानी सुनाते हैं।",
+ "linkedin_text": "The Cash book in ScoreMyBiz shows each day what the owner started with, every entry that moved money and what he ended with, and when he counted the drawer, how far the count was from the book.",
+ "hashtags": [
+  "#CashBook",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "vikram": "Vikram, a middle-aged Indian electronics shop owner with a trimmed moustache, in a pale green shirt and a smartwatch"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy electronics market lane, shop signs glowing behind him, a warm smile.",
+   "vo": "नमस्ते। यह विक्रम की कहानी है। उसकी नक़द दराज़ और उसकी बही का मेल बिगड़ गया है, और उसे नहीं पता कि यह किस दिन हुआ।",
+   "sub": "नमस्ते। यह विक्रम की कहानी है। उसकी नक़द दराज़ और उसकी बही का मेल बिगड़ गया है, और उसे नहीं पता कि यह किस दिन हुआ।",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Which day"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} at his shop counter looking at an open cash drawer and a notebook, puzzled, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "काग़ज़ पर कुछ हज़ार रुपये कम हैं, और जाँचने के लिए एक महीने के बहुत सारे दिन हैं।",
+   "sub": "काग़ज़ पर कुछ हज़ार रुपये कम हैं, और जाँचने के लिए एक महीने के बहुत सारे दिन हैं।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} opening an app on his phone with a hopeful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में कैश बुक हर दिन दिखाती है: उसने कितने से शुरू किया, किन एंट्री से पैसा हिला, और कितने पर ख़त्म किया।",
+   "sub": "स्कोर माय बिज़ में कैश बुक हर दिन दिखाती है: उसने कितने से शुरू किया, किन एंट्री से पैसा हिला, और कितने पर ख़त्म किया।",
+   "min": 8,
+   "screen": "cash-book.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} scrolling on his phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "जब उसने दराज़ गिनी, तो यह दिखाता है कि गिनती बही से कितनी दूर थी।",
+   "sub": "जब उसने दराज़ गिनी, तो यह दिखाता है कि गिनती बही से कितनी दूर थी।",
+   "min": 8,
+   "screen": "cash-book.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} nodding with quiet relief, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तो वह ठीक-ठीक देख सकता है कि किस दिन से दराज़ का मेल बिगड़ा।",
+   "sub": "तो वह ठीक-ठीक देख सकता है कि किस दिन से दराज़ का मेल बिगड़ा।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} standing at his counter, smiling, arms folded.",
+   "vo": "कोई अंदाज़ा नहीं। बस वह दिन, और देखने के लिए वह एंट्री।",
+   "sub": "कोई अंदाज़ा नहीं। बस वह दिन, और देखने के लिए वह एंट्री।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

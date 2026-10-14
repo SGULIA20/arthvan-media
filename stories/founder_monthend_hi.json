@@ -1,0 +1,74 @@
+{
+ "id": "founder-monthend-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "founder_suit",
+ "title": "महीने का अंत",
+ "post_on": "2026-11-29",
+ "caption": "सुरेश की दराज़ उसकी अलमारी से मेल नहीं खा रही थी। संस्थापक बताते हैं कि हफ़्ते के एक अंक ने उसका महीना कैसे बदला।",
+ "linkedin_text": "Sales good, shelf full, drawer empty. Most small shops only find out at month end.\n\nScoreMyBiz reads the shop's own book and gives one number out of 100 for its health, with three moves for the week. The founder character tells Suresh's story; every screen is the real app.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#MonthEnd"
+ ],
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, stands in a hardware shop aisle among coils of rope and tins of paint, turns to the camera and speaks calmly, warm evening light.",
+   "vo": "नमस्ते। यह सुरेश की कहानी है। वह हार्डवेयर की दुकान चलाता है। हर महीने के अंत में वही सवाल: पैसा गया कहाँ?",
+   "sub": "नमस्ते। यह सुरेश की कहानी है। वह हार्डवेयर की दुकान चलाता है। हर महीने के अंत में वही सवाल: पैसा गया कहाँ?",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Month end"
+  },
+  {
+   "layout": "clip",
+   "clip": "A small Indian hardware shop at closing time: the owner, a middle-aged man in a checked shirt, opens the cash drawer, looks at a few notes, then at the full shelves behind him, and exhales. Slow push-in.",
+   "card": "गया कहाँ?",
+   "vo": "बिक्री अच्छी थी। अलमारी भरी थी। दराज़ नहीं।",
+   "sub": "बिक्री अच्छी थी। अलमारी भरी थी। दराज़ नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "Close on a hardware shop counter: {suresh} turning the page of a handwritten notebook beside a calculator and a phone, warm lamp light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ उसकी अपनी बही पढ़कर उसे सीधे-सादे ढंग से दिखाता है। बिका। ख़रीदा। ख़र्च हुआ। और क्या बचा।",
+   "sub": "स्कोर माय बिज़ उसकी अपनी बही पढ़कर उसे सीधे-सादे ढंग से दिखाता है। बिका। ख़रीदा। ख़र्च हुआ। और क्या बचा।",
+   "min": 8,
+   "screen": "profit-loss.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, points at a shelf of unsold festival stock in a hardware shop while {suresh} scratches his head, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "लूमी असली दिक़्क़त पर उँगली रखती है: त्योहार का माल, जो अब भी अलमारी में पड़ा है। पैसा, फँसा हुआ।",
+   "sub": "लूमी असली दिक़्क़त पर उँगली रखती है: त्योहार का माल, जो अब भी अलमारी में पड़ा है। पैसा, फँसा हुआ।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "screen": "dashboard.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{suresh} at the counter of his hardware shop at closing time a month later, opening the cash drawer and finding it full, a quiet satisfied smile, shelves of rope and paint behind, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "दुकान की सेहत के लिए सौ में से एक अंक, और हफ़्ते के तीन काम। वह करता है। अगले महीने के अंत में दराज़ और अलमारी का मेल बैठ जाता है।",
+   "sub": "दुकान की सेहत के लिए सौ में से एक अंक, और हफ़्ते के तीन काम। वह करता है। अगले महीने के अंत में दराज़ और अलमारी का मेल बैठ जाता है।",
+   "min": 9,
+   "screen": "score-history.png"
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "feature": "profit-report",
+ "cast": {
+  "suresh": "Suresh, a middle-aged Indian man with thinning hair, round glasses and a blue checked shirt"
+ }
+}

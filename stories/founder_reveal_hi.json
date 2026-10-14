@@ -1,0 +1,77 @@
+{
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "id": "founder-reveal-hi",
+ "character": "founder_casual",
+ "feature": "reveal",
+ "title": "आज का नाम",
+ "post_on": "2026-12-12",
+ "caption": "नूर वेपॉइंट खोलती है और आज का अपना नाम देखती है। वह कल बदल जाता है। संस्थापक उसकी कहानी सुनाते हैं।",
+ "linkedin_text": "After one onboarding question, Waypoint shows the member a generated name and avatar for the day, with a link to customize it. A one-time opt-in schedules a single quiet reminder for when the next name arrives.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#Anonymous"
+ ],
+ "cast": {
+  "noor": "Noor, a young woman with a short wavy bob, round glasses and a teal scarf"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a sunny cafe terrace, a relaxed smile.",
+   "vo": "नमस्ते। यह नूर की कहानी है। उसने अभी-अभी वेपॉइंट डाउनलोड किया है, और वह पहचानी नहीं जाना चाहती।",
+   "sub": "नमस्ते। यह नूर की कहानी है। उसने अभी-अभी वेपॉइंट डाउनलोड किया है, और वह पहचानी नहीं जाना चाहती।",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "A name for today"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} sitting on a park bench with her phone, a hesitant curious look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "एक सवाल के बाद, वेपॉइंट उसे आज के लिए बना एक नाम देता है।",
+   "sub": "एक सवाल के बाद, वेपॉइंट उसे आज के लिए बना एक नाम देता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} looking at her phone with a surprised smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह कल बदल जाता है, इसलिए कोई उसे पहचान नहीं पाएगा।",
+   "sub": "वह कल बदल जाता है, इसलिए कोई उसे पहचान नहीं पाएगा।",
+   "min": 8,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} tapping her phone thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "चाहे तो वह नाम और अवतार अपने मन का बना सकती है।",
+   "sub": "चाहे तो वह नाम और अवतार अपने मन का बना सकती है।",
+   "min": 8,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} smiling at a small notification on her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "और वह चाहे तो नया नाम आने पर एक शांत याद दिलाने वाला संदेश माँग सकती है।",
+   "sub": "और वह चाहे तो नया नाम आने पर एक शांत याद दिलाने वाला संदेश माँग सकती है।",
+   "min": 8,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} walking through the park in the evening light, relaxed, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "और कुछ नहीं। बस एक नाम, और एक बार कहने की जगह।",
+   "sub": "और कुछ नहीं। बस एक नाम, और एक बार कहने की जगह।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "वेपॉइंट। एक बार कहिए। गूगल प्ले पर मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

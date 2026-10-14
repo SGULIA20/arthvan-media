@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-lists-hi",
+ "character": "lumi",
+ "feature": "sold-bought-spent-lists",
+ "title": "दोबारा टाइप नहीं",
+ "post_on": "2026-12-07",
+ "caption": "गौरी का सीए महीने की ख़रीद स्प्रेडशीट में चाहता है। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "In ScoreMyBiz, Registers opens searchable lists of everything sold, bought, spent, received and paid, with totals by name and by category, and downloads them as a spreadsheet file.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Spreadsheet"
+ ],
+ "cast": {
+  "gauri": "Gauri, a young Indian woman who runs a stationery wholesale shop, in a mint green kurta with a cloth tote bag"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a stationery wholesale shop with stacked notebooks behind her, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह गौरी की कहानी है। उसका सीए महीने की ख़रीद की स्प्रेडशीट माँगता है।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह गौरी की कहानी है। उसका सीए महीने की ख़रीद की स्प्रेडशीट माँगता है।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Not retyped"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gauri} at a laptop surrounded by paper bills, a tired look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "हर बिल एक कॉपी में है, और उन्हें दोबारा टाइप करने में पूरी शाम लग जाएगी।",
+   "sub": "हर बिल एक कॉपी में है, और उन्हें दोबारा टाइप करने में पूरी शाम लग जाएगी।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{gauri} opening an app on her phone with curiosity, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में वह रजिस्टर खोलती है: हर बिक्री, ख़रीद और ख़र्च, खोजने लायक़, जोड़ के साथ।",
+   "sub": "स्कोर माय बिज़ में वह रजिस्टर खोलती है: हर बिक्री, ख़रीद और ख़र्च, खोजने लायक़, जोड़ के साथ।",
+   "min": 8,
+   "screen": "registers.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gauri} tapping through lists on her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह इस महीने चुनती है, और ख़रीद की सूची तैयार है, नाम के हिसाब से जोड़ के साथ।",
+   "sub": "वह इस महीने चुनती है, और ख़रीद की सूची तैयार है, नाम के हिसाब से जोड़ के साथ।",
+   "min": 8,
+   "screen": "registers.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gauri} downloading a file on her phone with a satisfied nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "फिर वह उसे स्प्रेडशीट फ़ाइल के रूप में डाउनलोड करती है।",
+   "sub": "फिर वह उसे स्प्रेडशीट फ़ाइल के रूप में डाउनलोड करती है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{gauri} smiling at the camera in her shop, notebooks stacked behind her.",
+   "vo": "उसके सीए को फ़ाइल मिल जाती है। कुछ भी दोबारा टाइप नहीं करना पड़ा।",
+   "sub": "उसके सीए को फ़ाइल मिल जाती है। कुछ भी दोबारा टाइप नहीं करना पड़ा।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

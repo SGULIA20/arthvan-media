@@ -1,0 +1,77 @@
+{
+ "id": "founder-invite-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "founder_casual",
+ "feature": "invite",
+ "title": "न्योता",
+ "post_on": "2026-12-10",
+ "caption": "प्रिया वेपॉइंट अपने चचेरे भाई के साथ बाँटना चाहती है। एक कोड, और दोनों को दस अंक। संस्थापक उसकी कहानी सुनाते हैं।",
+ "linkedin_text": "A friend invite that is personal instead of loud. On Waypoint, My Waypoints shows your invite code and a button to share the link. A new member can enter it in their first seven days, and both people get ten points.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#InviteAFriend"
+ ],
+ "cast": {
+  "priya": "Priya, a young Indian woman in her early twenties with a long braid, a denim jacket and a small backpack"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a sunny cafe terrace in the afternoon, a relaxed smile.",
+   "vo": "नमस्ते। यह प्रिया की कहानी है। उसे वेपॉइंट पर कुछ ऐसा मिला है जो वह बाँटना चाहती है।",
+   "sub": "नमस्ते। यह प्रिया की कहानी है। उसे वेपॉइंट पर कुछ ऐसा मिला है जो वह बाँटना चाहती है।",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "The invite"
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} sitting on a college lawn with her phone and a paper cup of chai, a soft smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "उसके चचेरे भाई कबीर का यह महीना भारी रहा है। वह उसे सलाह नहीं, एक शांत जगह देना चाहती है।",
+   "sub": "उसके चचेरे भाई कबीर का यह महीना भारी रहा है। वह उसे सलाह नहीं, एक शांत जगह देना चाहती है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} walking along a tree-lined campus path looking at her phone, soft afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "मेरे वेपॉइंट्स में उसे अपना न्योता कोड मिलता है, और न्योता लिंक भेजने का एक बटन।",
+   "sub": "मेरे वेपॉइंट्स में उसे अपना न्योता कोड मिलता है, और न्योता लिंक भेजने का एक बटन।",
+   "min": 8,
+   "screen": "invite.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} typing a message on her phone on a garden bench, a warm smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह उसे ख़ुद कबीर को भेजती है, एक प्यार भरी पंक्ति के साथ।",
+   "sub": "वह उसे ख़ुद कबीर को भेजती है, एक प्यार भरी पंक्ति के साथ।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} looking up from her phone with a pleased surprise, trees behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "कबीर के पास वेपॉइंट पर आने के पहले सात दिन हैं, कोड डालने के लिए।",
+   "sub": "कबीर के पास वेपॉइंट पर आने के पहले सात दिन हैं, कोड डालने के लिए।",
+   "min": 8,
+   "screen": "invite.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} laughing quietly at her phone in a sunlit garden, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "जब वह डालता है, तो दोनों को दस अंक मिलते हैं।",
+   "sub": "जब वह डालता है, तो दोनों को दस अंक मिलते हैं।",
+   "min": 8,
+   "screen": "invite.png"
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "वेपॉइंट। एक बार कहिए। गूगल प्ले पर मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

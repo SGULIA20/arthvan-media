@@ -1,0 +1,77 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "post_on": "2026-11-23",
+ "id": "founder-ca-portal-hi",
+ "character": "founder_suit",
+ "feature": "ca-network",
+ "title": "एक सूची",
+ "caption": "राकेश चार्टर्ड अकाउंटेंट हैं और उनके कई छोटे ग्राहक हैं। एक सूची बताती है कि पहले किसे फ़ोन करना है। संस्थापक उनकी कहानी सुनाते हैं।",
+ "linkedin_text": "For Chartered Accountants in India: a free ScoreMyBiz CA account gives you a code. Clients who register with it appear in one portfolio with their score trend and who needs a call, with a WhatsApp check-in, an email draft and monthly reports from the same place.",
+ "hashtags": [
+  "#CharteredAccountant",
+  "#ScoreMyBiz",
+  "#CAIndia"
+ ],
+ "cast": {
+  "rakesh": "Rakesh, a middle-aged Indian chartered accountant with grey-streaked hair and glasses, in a light blue shirt and a dark waistcoat"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a tidy modern accountant's office with files on shelves behind him, a warm smile.",
+   "vo": "नमस्ते। यह राकेश की कहानी है। वह भारत में चार्टर्ड अकाउंटेंट है, और उसके कई छोटे ग्राहक हैं।",
+   "sub": "नमस्ते। यह राकेश की कहानी है। वह भारत में चार्टर्ड अकाउंटेंट है, और उसके कई छोटे ग्राहक हैं।",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "One list"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} at his office desk among file folders, his phone lighting up with messages, a patient tired smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "हर महीने वह सोचता है कि पहले किस ग्राहक को फ़ोन करना है, और कौन चुपचाप मुश्किल में है।",
+   "sub": "हर महीने वह सोचता है कि पहले किस ग्राहक को फ़ोन करना है, और कौन चुपचाप मुश्किल में है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} typing at his laptop in warm afternoon light, focused, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ पर वह मुफ़्त सीए खाता खोलता है, और उसे अपना कोड मिलता है। ग्राहक रजिस्टर करते समय उसे डालते हैं।",
+   "sub": "स्कोर माय बिज़ पर वह मुफ़्त सीए खाता खोलता है, और उसे अपना कोड मिलता है। ग्राहक रजिस्टर करते समय उसे डालते हैं।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} reading his phone with a pleased nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "हर ग्राहक एक ही सूची में स्कोर के साथ दिखता है। मुफ़्त ट्रायल में पाँच तक दिखते हैं।",
+   "sub": "हर ग्राहक एक ही सूची में स्कोर के साथ दिखता है। मुफ़्त ट्रायल में पाँच तक दिखते हैं।",
+   "min": 8,
+   "screen": "ca-portfolio.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} on a phone call by his office window, calm and helpful, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "यह बताता है कि इस हफ़्ते किसे फ़ोन करना है, और वह एक टैप में व्हाट्सऐप पर हाल पूछ सकता है।",
+   "sub": "यह बताता है कि इस हफ़्ते किसे फ़ोन करना है, और वह एक टैप में व्हाट्सऐप पर हाल पूछ सकता है।",
+   "min": 8,
+   "screen": "ca-portfolio.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} smiling at his phone by his bookshelf, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "और उसका अपना कार्ड, व्हाट्सऐप कोड के साथ, भेजने के लिए तैयार है।",
+   "sub": "और उसका अपना कार्ड, व्हाट्सऐप कोड के साथ, भेजने के लिए तैयार है।",
+   "min": 8,
+   "screen": "ca-card.png"
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

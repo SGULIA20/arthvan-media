@@ -1,0 +1,76 @@
+{
+ "id": "mira-guide-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "mira-guide",
+ "title": "आधी रात का हेलो",
+ "post_on": "2026-12-17",
+ "caption": "आधी रात को कोई ऑनलाइन नहीं। जो मीरा को हेलो कहता है, जो एक एआई गाइड है। मीरा उसकी कहानी सुनाती है।",
+ "linkedin_text": "On Waypoint, Talk to Mira starts a chat with an automated AI guide that says so in its first line. Replies are one or two sentences, the same reactions, report and block tools apply as in any chat, and the chat closes after forty of your messages.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#AIGuide"
+ ],
+ "cast": {
+  "jo": "Jo, a young man in his mid twenties with messy dark hair and a grey hoodie"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera on a quiet balcony at midnight, city lights glowing behind her, a gentle smile.",
+   "vo": "नमस्ते, मैं मीरा हूँ। यह जो की कहानी है। आधी रात है, और जिनसे वह बात कर सकता है, सब सो रहे हैं।",
+   "sub": "नमस्ते, मैं मीरा हूँ। यह जो की कहानी है। आधी रात है, और जिनसे वह बात कर सकता है, सब सो रहे हैं।",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Midnight hello"
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo}, with spiky messy dark brown hair and warm tan skin, in his grey knit hoodie, sitting at a small kitchen table at night with a mug, looking at his phone, the kitchen softly lit, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वेपॉइंट पर वह किसी से जुड़ने का इंतज़ार करता है, पर ऑनलाइन गिनती शून्य है।",
+   "sub": "वेपॉइंट पर वह किसी से जुड़ने का इंतज़ार करता है, पर ऑनलाइन गिनती शून्य है।",
+   "min": 8,
+   "screen": "matching-mira.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} reading his phone with a small relieved smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तो वह मीरा से बात करें दबाता है, चैट्स टैब में या इंतज़ार के दौरान।",
+   "sub": "तो वह मीरा से बात करें दबाता है, चैट्स टैब में या इंतज़ार के दौरान।",
+   "min": 8,
+   "screen": "chats.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} reading a message with an interested look, a lamp glowing beside him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह तुरंत साफ़ कह देती है: मैं एक एआई गाइड हूँ, इंसान नहीं।",
+   "sub": "वह तुरंत साफ़ कह देती है: मैं एक एआई गाइड हूँ, इंसान नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} typing on his phone with a slight smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह एक-दो वाक्य में जवाब देती है। और वह किसी भी चैट की तरह प्रतिक्रिया दे सकता है, रिपोर्ट कर सकता है, या ब्लॉक कर सकता है।",
+   "sub": "वह एक-दो वाक्य में जवाब देती है। और वह किसी भी चैट की तरह प्रतिक्रिया दे सकता है, रिपोर्ट कर सकता है, या ब्लॉक कर सकता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} setting his phone down and looking out at the night from the balcony, calm, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "उसके चालीस संदेशों के बाद चैट बंद हो जाती है। यह शुरुआत करने की जगह है, ठहरने की नहीं।",
+   "sub": "उसके चालीस संदेशों के बाद चैट बंद हो जाती है। यह शुरुआत करने की जगह है, ठहरने की नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए। गूगल प्ले पर मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

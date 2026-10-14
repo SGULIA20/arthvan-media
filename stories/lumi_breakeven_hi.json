@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-breakeven-hi",
+ "character": "lumi",
+ "feature": "break-even",
+ "title": "कम से कम कितना बेचना है",
+ "post_on": "2026-12-03",
+ "caption": "बड़ी दुकान से पहले आशा जानना चाहती है कि कम से कम कितना बेचना होगा। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "In ScoreMyBiz, in the free month or on a paid plan, the Break-even calculator takes monthly fixed costs, sales and the cost of what is sold, and shows how much must be sold each month to cover costs and the safety margin above that line. It is maths on the owner's own numbers, not a forecast.",
+ "hashtags": [
+  "#BreakEven",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "asha": "Asha, a young Indian woman planning a bigger bakery, in a yellow cotton kurta with a thin gold necklace"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small neat bakery with warm light and fresh bread behind her, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह आशा की कहानी है। उसे बड़ी बेकरी चाहिए, और बड़ा किराया भी।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह आशा की कहानी है। उसे बड़ी बेकरी चाहिए, और बड़ा किराया भी।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "The least to sell"
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} standing alone in an empty shop space, looking around thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "नई दुकान का ख़र्च हर महीने बहुत ज़्यादा है। बराबरी पर रहने के लिए उसे कितना बेचना होगा?",
+   "sub": "नई दुकान का ख़र्च हर महीने बहुत ज़्यादा है। बराबरी पर रहने के लिए उसे कितना बेचना होगा?",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} typing numbers on her phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में, उसके मुफ़्त महीने में, ब्रेक-ईवन तीन बातें पूछता है: पक्के ख़र्च, महीने की बिक्री, और जो वह बेचती है उसकी लागत।",
+   "sub": "स्कोर माय बिज़ में, उसके मुफ़्त महीने में, ब्रेक-ईवन तीन बातें पूछता है: पक्के ख़र्च, महीने की बिक्री, और जो वह बेचती है उसकी लागत।",
+   "min": 8,
+   "screen": "break-even.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} reading her phone with a serious nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "यह बताता है कि अपना ख़र्च निकालने के लिए उसे हर महीने कितना बेचना होगा।",
+   "sub": "यह बताता है कि अपना ख़र्च निकालने के लिए उसे हर महीने कितना बेचना होगा।",
+   "min": 8,
+   "screen": "break-even.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} smiling with relief at her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "और उस रेखा के ऊपर उसके पास कितना सुरक्षित अंतर है।",
+   "sub": "और उस रेखा के ऊपर उसके पास कितना सुरक्षित अंतर है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} smiling at the camera in the empty shop, hands on hips.",
+   "vo": "यह उसके अपने आँकड़ों का गणित है, अनुमान नहीं।",
+   "sub": "यह उसके अपने आँकड़ों का गणित है, अनुमान नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "id": "mira-mood-hi",
+ "character": "mira",
+ "feature": "mood-log",
+ "title": "बस एक टैप",
+ "post_on": "2026-12-19",
+ "caption": "यूकी लंच के बाद एक एहसास टैप करती है, और शाम को फिर। मीरा उसकी कहानी सुनाती है।",
+ "linkedin_text": "In My Waypoints, the Mood log lets a member tap how they feel for the morning, afternoon, evening or night, with no typing, see this week next to the week before, and switch on an evening reminder. It is a small habit, not a diagnosis.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#MoodLog"
+ ],
+ "cast": {
+  "yuki": "Yuki, a young woman with a black bob haircut and a cream knit sweater"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera at a sunny window seat in a quiet library, a gentle smile.",
+   "vo": "नमस्ते, मैं मीरा हूँ। यह यूकी की कहानी है। कुछ एहसासों को पूरे अनुच्छेद की ज़रूरत नहीं होती।",
+   "sub": "नमस्ते, मैं मीरा हूँ। यह यूकी की कहानी है। कुछ एहसासों को पूरे अनुच्छेद की ज़रूरत नहीं होती।",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Just a tap"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} at a desk after lunch, looking out of a window with a thoughtful expression, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "लंच के बाद वह रुककर सोचती है कि वह सच में कैसा महसूस कर रही है।",
+   "sub": "लंच के बाद वह रुककर सोचती है कि वह सच में कैसा महसूस कर रही है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} opening her phone with a small curious smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "मेरे वेपॉइंट्स में वह मूड लॉग खोलती है: सुबह, दोपहर, शाम और रात।",
+   "sub": "मेरे वेपॉइंट्स में वह मूड लॉग खोलती है: सुबह, दोपहर, शाम और रात।",
+   "min": 8,
+   "screen": "mood.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} tapping her phone gently, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह टैप करती है कि कैसा लग रहा है। न टाइप करना, न कोई सफ़ाई देना।",
+   "sub": "वह टैप करती है कि कैसा लग रहा है। न टाइप करना, न कोई सफ़ाई देना।",
+   "min": 8,
+   "screen": "mood.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} reading her phone on a sofa on a quiet Sunday, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "रविवार को वह अपना हफ़्ता, पिछले हफ़्ते के बग़ल में देखती है।",
+   "sub": "रविवार को वह अपना हफ़्ता, पिछले हफ़्ते के बग़ल में देखती है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} smiling softly by a window in the evening, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "और चाहे तो शाम का एक रिमाइंडर। एक छोटी सी आदत, कोई जाँच नहीं।",
+   "sub": "और चाहे तो शाम का एक रिमाइंडर। एक छोटी सी आदत, कोई जाँच नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए। गूगल प्ले पर मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

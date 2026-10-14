@@ -1,0 +1,77 @@
+{
+ "id": "founder-voice-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "founder_casual",
+ "feature": "voice-posts",
+ "title": "बोलकर कहिए",
+ "post_on": "2026-12-13",
+ "caption": "उसके हाथ स्टीयरिंग के लिए हैं, टाइप करने के लिए नहीं। तारिक़ बोलकर कहता है। संस्थापक उसकी कहानी सुनाते हैं।",
+ "linkedin_text": "Typing takes hands and quiet that a lot of people do not have at the moment they want to say something.\n\nOn Waypoint you can record up to sixty seconds, pick a Bear, Fox or Sparrow voice, and the Wall plays your words in that character's voice. Voice posts go after seven days. The founder character tells Tariq's story; every screen is the real app.",
+ "hashtags": [
+  "#VoicePosts",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "tariq": "Tariq, an Indian taxi driver in his forties with a trimmed grey-streaked beard, a white kurta and a small prayer cap"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera beside a yellow taxi on a quiet city street at night, a friendly smile.",
+   "vo": "नमस्ते। यह तारिक़ की कहानी है। वह टैक्सी चलाता है। उसके हाथ स्टीयरिंग के लिए हैं, टाइप करने के लिए नहीं।",
+   "sub": "नमस्ते। यह तारिक़ की कहानी है। वह टैक्सी चलाता है। उसके हाथ स्टीयरिंग के लिए हैं, टाइप करने के लिए नहीं।",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "Say it out loud"
+  },
+  {
+   "layout": "clip",
+   "clip": "{tariq} in the driver's seat of a parked taxi at night, rain on the windscreen, a phone propped on the dashboard, a thoughtful look.",
+   "vo": "सवारियों के बीच उसके पास कहने को बहुत कुछ है, और अँगूठे धीमे हैं।",
+   "sub": "सवारियों के बीच उसके पास कहने को बहुत कुछ है, और अँगूठे धीमे हैं।",
+   "min": 8,
+   "card": "सवारियों के बीच"
+  },
+  {
+   "layout": "clip",
+   "clip": "{tariq} speaking into a phone propped on the dashboard of his parked taxi at night, rain on the glass, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वेपॉइंट पर वह वॉयस दबाता है और बोलता है। साठ सेकंड तक।",
+   "sub": "वेपॉइंट पर वह वॉयस दबाता है और बोलता है। साठ सेकंड तक।",
+   "min": 8,
+   "screen": "voice.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{tariq} looking at his phone and smiling as he chooses between three little animal characters, soft dashboard glow, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "फिर वह एक किरदार चुनता है: भालू, लोमड़ी या गौरैया।",
+   "sub": "फिर वह एक किरदार चुनता है: भालू, लोमड़ी या गौरैया।",
+   "min": 8,
+   "screen": "voice.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "A phone on a wooden table in a bright kitchen playing a soft voice, a young woman listening with a small smile, morning light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वॉल पर लोग उसके शब्द उसी किरदार की आवाज़ में सुनते हैं। आवाज़ वाली पोस्ट सात दिन बाद हट जाती है।",
+   "sub": "वॉल पर लोग उसके शब्द उसी किरदार की आवाज़ में सुनते हैं। आवाज़ वाली पोस्ट सात दिन बाद हट जाती है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{tariq} driving his taxi through evening traffic with a light relaxed smile, city lights blurring past.",
+   "vo": "गाड़ी रोकी, बात कही, और अगली सवारी की ओर।",
+   "sub": "गाड़ी रोकी, बात कही, और अगली सवारी की ओर।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "वेपॉइंट। एक बार कहिए। गूगल प्ले पर मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-health-hi",
+ "character": "lumi",
+ "feature": "personal-health-score",
+ "title": "मेरा अपना हिस्सा",
+ "post_on": "2026-12-06",
+ "caption": "समीर के घर के पैसे और दुकान के पैसे उलझे हुए हैं। लूमी उसे उसका अपना हिस्सा दिखाती है।",
+ "linkedin_text": "ScoreMyBiz has a separate Personal Health Score for an owner's own money: income, spending, savings, debts, insurance and family, with a view of whether he is ready to go full-time on his business. It is not investment or insurance advice.",
+ "hashtags": [
+  "#PersonalFinance",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "sameer": "Sameer, a young Indian cafe owner in Pune with a short beard, in a mustard t-shirt and a black apron"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small cosy cafe with coffee machines and wooden tables behind her, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह समीर की कहानी है। वह पुणे में कैफ़े चलाता है, और उसके घर के पैसे और दुकान के पैसे उलझे हुए हैं।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह समीर की कहानी है। वह पुणे में कैफ़े चलाता है, और उसके घर के पैसे और दुकान के पैसे उलझे हुए हैं।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "My own side"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} behind his cafe counter paying a home bill from the till, a worried look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "कुछ दिन गल्ले से दुकान का ख़र्च चलता है। कुछ दिन घर का।",
+   "sub": "कुछ दिन गल्ले से दुकान का ख़र्च चलता है। कुछ दिन घर का।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} looking at his phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में एक अलग पर्सनल हेल्थ स्कोर है, उसके अपने पैसों के लिए।",
+   "sub": "स्कोर माय बिज़ में एक अलग पर्सनल हेल्थ स्कोर है, उसके अपने पैसों के लिए।",
+   "min": 8,
+   "screen": "personal-calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} entering numbers on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह अपनी आमदनी और ख़र्च डालता है, और बचत, क़र्ज़ और परिवार भी जोड़ सकता है।",
+   "sub": "वह अपनी आमदनी और ख़र्च डालता है, और बचत, क़र्ज़ और परिवार भी जोड़ सकता है।",
+   "min": 8,
+   "screen": "personal-calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} nodding thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "यह उसका अपना स्कोर दिखाता है, और यह भी कि क्या वह अपने कारोबार पर पूरा समय दे सकता है।",
+   "sub": "यह उसका अपना स्कोर दिखाता है, और यह भी कि क्या वह अपने कारोबार पर पूरा समय दे सकता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} smiling at the camera in his cafe.",
+   "vo": "एक स्कोर, सलाह नहीं। उसका अपना हिस्सा, साफ़-साफ़।",
+   "sub": "एक स्कोर, सलाह नहीं। उसका अपना हिस्सा, साफ़-साफ़।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

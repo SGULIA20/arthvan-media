@@ -104,7 +104,14 @@
    "Bahasa Indonesia",
    "Kiswahili"
   ],
-  "languages_phrase": "Speaks {n} languages"
+  "languages_phrase": "Speaks {n} Indian and international languages",
+  "i18n": {
+   "hi": {
+    "end_line": "गूगल प्ले पर मुफ़्त",
+    "link_in_bio": "लिंक बायो में",
+    "languages_phrase": "{n} भारतीय और अंतरराष्ट्रीय भाषाओं में उपलब्ध"
+   }
+  }
  },
  "scoremybiz": {
   "name": "ScoreMyBiz",
@@ -184,7 +191,15 @@
    "Nederlands",
    "Suomi"
   ],
-  "languages_phrase": "Works in {n} languages"
+  "languages_phrase": "Works in {n} Indian and international languages",
+  "i18n": {
+   "hi": {
+    "end_line": "30 दिन मुफ़्त। क्रेडिट कार्ड की ज़रूरत नहीं।",
+    "link_in_bio": "लिंक बायो में",
+    "languages_phrase": "{n} भारतीय और अंतरराष्ट्रीय भाषाओं में उपलब्ध",
+    "money_disclaimer": "उदाहरण के आँकड़े, सिर्फ़ समझाने के लिए। वित्तीय सलाह नहीं।"
+   }
+  }
  },
  "_global": {
   "banned_phrases": [

@@ -1,0 +1,76 @@
+{
+ "id": "mira-saved-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "saved-posts",
+ "title": "फिर से पढ़िए",
+ "post_on": "2026-12-20",
+ "caption": "एक पोस्ट ने माटेओ को ज़ोर से हँसा दिया। वह उसे फिर पढ़ने के लिए बुकमार्क करता है। मीरा उसकी कहानी सुनाती है।",
+ "linkedin_text": "On Waypoint, a bookmark icon on other people's posts saves them to a list under My Waypoints, Saved. Each one can be removed again with a tap.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#SavedPosts"
+ ],
+ "cast": {
+  "mateo": "Mateo, a young man in his mid twenties with curly dark hair, a green t-shirt and a thin silver chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera at a bright corner table in a sunny bookshop cafe, a stack of books beside her, a gentle smile.",
+   "vo": "नमस्ते, मैं मीरा हूँ। यह माटेओ की कहानी है। कल रात एक पोस्ट ने उसे ज़ोर से हँसा दिया।",
+   "sub": "नमस्ते, मैं मीरा हूँ। यह माटेओ की कहानी है। कल रात एक पोस्ट ने उसे ज़ोर से हँसा दिया।",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Read it again"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} laughing on a sofa at night while looking at his phone, a warm lamp glowing, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह उसे कल फिर पढ़ना चाहता है, और जानता है कि सुबह वह उसे ढूँढ नहीं पाएगा।",
+   "sub": "वह उसे कल फिर पढ़ना चाहता है, और जानता है कि सुबह वह उसे ढूँढ नहीं पाएगा।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} tapping his phone screen with a pleased grin, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तो वह पोस्ट पर बुकमार्क का निशान दबाता है।",
+   "sub": "तो वह पोस्ट पर बुकमार्क का निशान दबाता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} on a morning train looking at his phone, soft window light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "मेरे वेपॉइंट्स के अंदर, सेव्ड हर बुकमार्क को एक ही सूची में रखता है।",
+   "sub": "मेरे वेपॉइंट्स के अंदर, सेव्ड हर बुकमार्क को एक ही सूची में रखता है।",
+   "min": 8,
+   "screen": "saved.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} chuckling quietly at his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह उसे फिर पढ़ता है, और फिर हँसता है।",
+   "sub": "वह उसे फिर पढ़ता है, और फिर हँसता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} tucking his phone into his pocket with a relaxed smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "जब एक से मन भर जाए, तो वह एक टैप से उसे सूची से हटा सकता है।",
+   "sub": "जब एक से मन भर जाए, तो वह एक टैप से उसे सूची से हटा सकता है।",
+   "min": 8,
+   "screen": "saved.png"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए। गूगल प्ले पर मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

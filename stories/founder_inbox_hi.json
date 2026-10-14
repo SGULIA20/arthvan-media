@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "founder-inbox-hi",
+ "character": "founder_suit",
+ "feature": "notifications-inbox",
+ "title": "एक जगह",
+ "post_on": "2026-11-27",
+ "caption": "मनोज चाहता है कि ऐप जो कुछ दिखाना चाहता था, सब एक जगह हो। संस्थापक उसकी कहानी सुनाते हैं।",
+ "linkedin_text": "A bell on the ScoreMyBiz Home screen opens an in-app list of reminders, supplier-due notes, weekly check-ins, challenge updates and, in India, network leads, with an unread badge.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Reminders"
+ ],
+ "cast": {
+  "manoj": "Manoj, a middle-aged Indian pharmacy owner with round glasses and a short grey beard, in a white coat"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a bright neighbourhood pharmacy with shelves of medicine boxes behind him, a warm smile.",
+   "vo": "नमस्ते। यह मनोज की कहानी है। उसकी दवा की दुकान में भीड़ रहती है, और बातें दिमाग़ से निकल जाती हैं।",
+   "sub": "नमस्ते। यह मनोज की कहानी है। उसकी दवा की दुकान में भीड़ रहती है, और बातें दिमाग़ से निकल जाती हैं।",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "One place"
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} behind his pharmacy counter serving a queue, glancing at a ringing phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "एक बिल की तारीख़, किसी ग्राहक को याद दिलाना, हफ़्ते की जाँच। ऐप ने यह उसे कहाँ बताया था?",
+   "sub": "एक बिल की तारीख़, किसी ग्राहक को याद दिलाना, हफ़्ते की जाँच। ऐप ने यह उसे कहाँ बताया था?",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} tapping the bell on his phone with a relieved smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में होम पर घंटी एक ही सूची खोलती है, जिसमें वह सब है जो उसे देखना चाहिए।",
+   "sub": "स्कोर माय बिज़ में होम पर घंटी एक ही सूची खोलती है, जिसमें वह सब है जो उसे देखना चाहिए।",
+   "min": 8,
+   "screen": "notifications.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} reading his phone with interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "याद दिलाने वाले संदेश, सप्लायर के नोट, हफ़्ते की जाँच, चैलेंज के अपडेट, और भारत में नेटवर्क से आए लीड।",
+   "sub": "याद दिलाने वाले संदेश, सप्लायर के नोट, हफ़्ते की जाँच, चैलेंज के अपडेट, और भारत में नेटवर्क से आए लीड।",
+   "min": 8,
+   "screen": "notifications.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} tapping a notification with a nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "एक बैज बताता है कि अभी क्या बिना पढ़ा है।",
+   "sub": "एक बैज बताता है कि अभी क्या बिना पढ़ा है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} standing at his pharmacy counter, relaxed, arms folded.",
+   "vo": "एक जगह, पाँच अलग संदेश नहीं।",
+   "sub": "एक जगह, पाँच अलग संदेश नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

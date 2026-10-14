@@ -179,6 +179,7 @@ def build(story_path: Path, out_dir: Path) -> Path:
     else:
         print(price_line(story), flush=True)
     app = load_apps()[story["app"]]
+    app = {**app, **(app.get("i18n") or {}).get(story.get("lang", "en").split("-")[0], {})}      # a language's own end-card texts (content/apps.json i18n)
     out_dir = Path(out_dir); out_dir.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
@@ -232,7 +233,7 @@ def build(story_path: Path, out_dir: Path) -> Path:
         # 2. frames
         deck = {"scenes": story["scenes"], "title": story["title"], "end_line": app["end_line"], "app_name": app["name"],
                 "palette": app["palette"], "chars": story["character"], "char_base": CHAR_DIR.as_uri(), "vo_env": env, "vo_amp": amp,
-                "disclaimer": app.get("money_disclaimer") or "", "icon": (ROOT / app["icon"]).as_uri(),
+                "disclaimer": app.get("money_disclaimer") or "", "link_in_bio": app.get("link_in_bio", "Link in bio"), "icon": (ROOT / app["icon"]).as_uri(),
                 "badge": BADGE.as_uri(), "shots": shots.as_uri(), "langs": end_languages(app)}
         clips = {}
         prefetch_shots(story)

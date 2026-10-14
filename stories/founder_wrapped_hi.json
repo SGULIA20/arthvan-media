@@ -1,0 +1,76 @@
+{
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "id": "founder-wrapped-hi",
+ "character": "founder_casual",
+ "feature": "wrapped",
+ "title": "आपका महीना",
+ "post_on": "2026-12-14",
+ "caption": "महीने की पहली तारीख़ को लियो अपना सार खोलता है। उसे सिर्फ़ वही देख सकता है। संस्थापक उसकी कहानी सुनाते हैं।",
+ "linkedin_text": "In My Waypoints, This month opens a recap of the current month for your account only: posts shared, reactions given, thumbs up and laughs received, and the feeling you logged most. It is never shared or public.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#MonthlyRecap"
+ ],
+ "cast": {
+  "leo": "Leo, a young man with a light beard, a black cap and a denim shirt"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a rooftop in the morning light, a relaxed smile.",
+   "vo": "नमस्ते। यह लियो की कहानी है। आज महीने की पहली तारीख़ है, और वह जानना चाहता है कि पिछला महीना कैसा रहा।",
+   "sub": "नमस्ते। यह लियो की कहानी है। आज महीने की पहली तारीख़ है, और वह जानना चाहता है कि पिछला महीना कैसा रहा।",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "Your month"
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} on a small balcony with a cup of tea and his phone, morning light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "कोई स्कोर नहीं। कोई रैंकिंग नहीं। बस उसका अपना महीना।",
+   "sub": "कोई स्कोर नहीं। कोई रैंकिंग नहीं। बस उसका अपना महीना।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} opening his phone with interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "मेरे वेपॉइंट्स में, यह महीना खोलने पर महीने का सार दिखता है।",
+   "sub": "मेरे वेपॉइंट्स में, यह महीना खोलने पर महीने का सार दिखता है।",
+   "min": 8,
+   "screen": "wrapped.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} reading his phone with a thoughtful smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "कितनी पोस्ट साझा कीं, कितनी प्रतिक्रियाएँ दीं, कितने थम्स-अप और हँसी मिली।",
+   "sub": "कितनी पोस्ट साझा कीं, कितनी प्रतिक्रियाएँ दीं, कितने थम्स-अप और हँसी मिली।",
+   "min": 8,
+   "screen": "wrapped.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} nodding slowly, looking out over the city, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "और वह एहसास जो उसने सबसे ज़्यादा दर्ज किया।",
+   "sub": "और वह एहसास जो उसने सबसे ज़्यादा दर्ज किया।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} leaning on the balcony rail with a calm smile, morning city behind him.",
+   "vo": "यह सिर्फ़ उसे दिखता है। कभी साझा नहीं होता, और कभी सार्वजनिक नहीं।",
+   "sub": "यह सिर्फ़ उसे दिखता है। कभी साझा नहीं होता, और कभी सार्वजनिक नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "वेपॉइंट। एक बार कहिए। गूगल प्ले पर मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
