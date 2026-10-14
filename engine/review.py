@@ -36,7 +36,7 @@ def export(lang: str, root: Path = ROOT, folder: Path = FOLDER) -> Path:
     old = {}
     if path.exists():                                               # keep corrections a reader already typed
         ws = load_workbook(path).active
-        old = {r[6]: r[5] for r in ws.iter_rows(min_row=2, values_only=True) if len(r) > 6 and r[5]}
+        old = {r[6]: str(r[5]).strip() for r in ws.iter_rows(min_row=2, values_only=True) if len(r) > 6 and r[5] and str(r[5]).strip()}
     wb = Workbook(); ws = wb.active; ws.title = f"{LANGUAGES.get(lang, lang)} review"
     ws.append(HEAD)
     for c in ws[1]:
