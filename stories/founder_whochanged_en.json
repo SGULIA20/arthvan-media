@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "founder-whochanged-en",
+ "character": "founder_suit",
+ "feature": "who-changed-what",
+ "title": "Who changed it",
+ "post_on": "2026-12-10",
+ "caption": "A figure looked wrong, and Sunil wanted to know who changed it and when. The founder tells his story.",
+ "linkedin_text": "In ScoreMyBiz the owner can see a list, newest first, of every add, change, removal and mark-paid in his book, in plain words, with who did it: owner, helper or CA. It shows the latest 200 changes and only the owner can open it.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Trust"
+ ],
+ "cast": {
+  "sunil": "Sunil, a middle-aged Indian owner of a busy general store, with a moustache, in a light blue shirt"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy general store with shelves of packaged goods behind him, a warm smile.",
+   "vo": "Hi. This is Sunil's story. One morning a figure in his book looked wrong.",
+   "sub": "Hi. This is Sunil's story. One morning a figure in his book looked wrong.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Who changed it"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} frowning at a notebook and a phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Somebody had changed a number. But who? And when?",
+   "sub": "Somebody had changed a number. But who? And when?",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} tapping his phone with a focused look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz he opens Who did what.",
+   "sub": "In ScoreMyBiz he opens Who did what.",
+   "min": 8,
+   "screen": "book-changes.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} reading his phone and nodding, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Every add, change and removal, in plain words, newest first.",
+   "sub": "Every add, change and removal, in plain words, newest first.",
+   "min": 8,
+   "screen": "book-changes.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} raising an eyebrow with a small smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "With the name of the person who did it, a helper, a CA or himself.",
+   "sub": "With the name of the person who did it, a helper, a CA or himself.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} standing in his store, arms crossed, calm and relaxed.",
+   "vo": "Only the owner can open it. So he always knows.",
+   "sub": "Only the owner can open it. So he always knows.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

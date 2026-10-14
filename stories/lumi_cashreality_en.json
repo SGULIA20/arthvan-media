@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-cashreality-en",
+ "character": "lumi",
+ "feature": "profit-on-paper-vs-cash",
+ "title": "Profit is not cash",
+ "post_on": "2026-12-09",
+ "caption": "The month looked profitable, but the till was empty. Lumi tells Imran's story.",
+ "linkedin_text": "ScoreMyBiz sets the profit the sales suggest against the cash the owner really has after what customers still owe and what he owes suppliers, and lists plain warnings from his own entries.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#CashFlow"
+ ],
+ "cast": {
+  "imran": "Imran, a middle-aged Indian hardware shop owner with grey-flecked hair and glasses, in a checked shirt with a pen in the pocket"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a hardware shop with shelves of tools and paint tins behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Imran's story. The month looked very profitable.",
+   "sub": "Hi, I'm Lumi. This is Imran's story. The month looked very profitable.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Profit is not cash"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} staring into an almost empty cash drawer, puzzled, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "But when he opened the drawer, the cash was much less.",
+   "sub": "But when he opened the drawer, the cash was much less.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} reading his phone and nodding slowly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz sets his paper profit next to the cash he really has.",
+   "sub": "ScoreMyBiz sets his paper profit next to the cash he really has.",
+   "min": 8,
+   "screen": "cash-reality.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} pointing at his phone with an understanding look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It shows the gap, and the money still sitting with customers.",
+   "sub": "It shows the gap, and the money still sitting with customers.",
+   "min": 8,
+   "screen": "cash-reality.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} making a phone call at his counter, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It lists plain warnings from his own entries, like slow-paying customers.",
+   "sub": "It lists plain warnings from his own entries, like slow-paying customers.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} standing in his shop with his arms folded, smiling.",
+   "vo": "Now he knows why the drawer was light.",
+   "sub": "Now he knows why the drawer was light.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

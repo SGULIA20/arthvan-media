@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "founder-items-en",
+ "character": "founder_suit",
+ "feature": "items-and-prices",
+ "title": "What did I charge",
+ "post_on": "2026-12-12",
+ "caption": "Rakesh could not remember what he charged last month. The founder tells his story.",
+ "linkedin_text": "In ScoreMyBiz a list of what the owner sells and buys, with the last selling rate and last cost, grows by itself from every Sold and Bought entry and bill with items. He can add, change or hide items. It is a price list, not stock counting.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Pricing"
+ ],
+ "cast": {
+  "rakesh": "Rakesh, a stocky middle-aged Indian building materials dealer in a white shirt with rolled sleeves, a yellow site cap on his head"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a building materials yard with stacked bags and sand behind him, a warm smile.",
+   "vo": "Hi. This is Rakesh's story. A customer asked, what did you charge me last month?",
+   "sub": "Hi. This is Rakesh's story. A customer asked, what did you charge me last month?",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "What did I charge"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} scratching his head at a crowded counter, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He did not remember the rate. He did not want to guess.",
+   "sub": "He did not remember the rate. He did not want to guess.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} tapping his phone with a pleased look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz, My items and prices shows what he sells, with the last rate.",
+   "sub": "In ScoreMyBiz, My items and prices shows what he sells, with the last rate.",
+   "min": 8,
+   "screen": "items.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} reading his phone with a nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It builds itself from every Sold and Bought entry. He can add, change or hide items.",
+   "sub": "It builds itself from every Sold and Bought entry. He can add, change or hide items.",
+   "min": 8,
+   "screen": "items.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} confidently talking to someone off-camera, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "So he answers in seconds, with the real number.",
+   "sub": "So he answers in seconds, with the real number.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rakesh} standing in his yard, arms folded, smiling.",
+   "vo": "It is a price list, not stock counting. Just the last rate, ready.",
+   "sub": "It is a price list, not stock counting. Just the last rate, ready.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-scorehistory-en",
+ "character": "lumi",
+ "feature": "score-history",
+ "title": "Is it getting better",
+ "post_on": "2026-12-11",
+ "caption": "Three months on, Meera wanted to see if things had really got better. Lumi tells her story.",
+ "linkedin_text": "ScoreMyBiz keeps every saved score with the change since the last one, a trend, and a look at whether the moves the owner marked Done were followed by a better, same or worse score. It compares scores before and after; it does not prove the move caused the change.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "cast": {
+  "meera": "Meera, a young Indian woman who runs a small bakery, with her hair tied back, in a cream apron over a green kurta"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small bakery with trays of bread and cakes behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Meera's story. She had been working on her business for three months.",
+   "sub": "Hi, I'm Lumi. This is Meera's story. She had been working on her business for three months.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Is it getting better"
+  },
+  {
+   "layout": "clip",
+   "clip": "{meera} wiping a counter and looking thoughtful, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She wondered, is it really getting better, or does it just feel that way?",
+   "sub": "She wondered, is it really getting better, or does it just feel that way?",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{meera} reading her phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz keeps every saved score, with the change since the last one.",
+   "sub": "ScoreMyBiz keeps every saved score, with the change since the last one.",
+   "min": 8,
+   "screen": "score-history.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{meera} nodding at her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She sees a trend, and which moves she marked Done were followed by a better score.",
+   "sub": "She sees a trend, and which moves she marked Done were followed by a better score.",
+   "min": 8,
+   "screen": "score-history.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{meera} laughing softly at her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It compares scores before and after. It does not claim to prove the cause.",
+   "sub": "It compares scores before and after. It does not claim to prove the cause.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{meera} standing proudly by her trays of bread, smiling.",
+   "vo": "Now she can see her progress, not just feel it.",
+   "sub": "Now she can see her progress, not just feel it.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
