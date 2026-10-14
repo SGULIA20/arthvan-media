@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-quotes-en",
+ "character": "lumi",
+ "feature": "quotes-for-customers",
+ "title": "Quote in an hour",
+ "post_on": "2026-11-28",
+ "caption": "A contractor wants prices before he orders. Tarun sends a clean quote the same hour. Lumi tells his story.",
+ "linkedin_text": "In ScoreMyBiz, My items and prices keeps the last selling rate and cost of everything the owner sells. A quotation is built from it, shared as a PDF, and turned into a recorded sale in one tap when the customer says yes.",
+ "hashtags": [
+  "#Quotation",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "tarun": "Tarun, a middle-aged Indian building-materials dealer with a trimmed beard, in a grey shirt with rolled sleeves"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a building materials shop with stacked cement bags and paint tins behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Tarun's story. A contractor asks for prices before he orders, and wants them the same hour.",
+   "sub": "Hi, I'm Lumi. This is Tarun's story. A contractor asks for prices before he orders, and wants them the same hour.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Quote in an hour"
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} at his shop counter with a calculator and a scribbled slip, scratching his head, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He can quote from memory, but he cannot remember what he charged for sand last month.",
+   "sub": "He can quote from memory, but he cannot remember what he charged for sand last month.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} reading his phone with a relieved nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz, My items and prices lists what he sells, with the last selling rate and the last cost.",
+   "sub": "In ScoreMyBiz, My items and prices lists what he sells, with the last selling rate and the last cost.",
+   "min": 8,
+   "screen": "items.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} tapping his phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Then he makes a quotation: the customer, the items, one clean page.",
+   "sub": "Then he makes a quotation: the customer, the items, one clean page.",
+   "min": 8,
+   "screen": "quotations.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} sending something from his phone with a satisfied smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He shares it as a PDF, straight from his phone.",
+   "sub": "He shares it as a PDF, straight from his phone.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} shaking hands warmly in an empty shop doorway, smiling at the camera.",
+   "vo": "When the contractor says yes, one tap turns the quotation into a sale in his book.",
+   "sub": "When the contractor says yes, one tap turns the quotation into a sale in his book.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "founder-offline-en",
+ "character": "founder_suit",
+ "feature": "entries-without-signal",
+ "title": "No signal",
+ "post_on": "2026-12-02",
+ "caption": "A basement market with weak signal. Salim still writes down every sale. The founder tells his story.",
+ "linkedin_text": "If there is no signal at the counter, a Sold, Bought or Spent entry in ScoreMyBiz is kept safely on the phone, shown as waiting, and goes into the book by itself when the signal returns, without being added twice. Only the entry form works without signal; reports need signal.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#NoSignal"
+ ],
+ "cast": {
+  "salim": "Salim, a middle-aged Indian dry fruit seller with a white skull cap, a white kurta and a trimmed grey beard"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy covered market lane with dry fruit stalls behind him, a warm smile.",
+   "vo": "Hi. This is Salim's story. His stall is in a basement market, where the signal comes and goes.",
+   "sub": "Hi. This is Salim's story. His stall is in a basement market, where the signal comes and goes.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "No signal"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} at his dry fruit stall looking at his phone with a frown, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A customer pays. His phone shows no signal. He does not want to write it on his hand.",
+   "sub": "A customer pays. His phone shows no signal. He does not want to write it on his hand.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} tapping his phone calmly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz, an entry with no signal waits safely on his phone.",
+   "sub": "In ScoreMyBiz, an entry with no signal waits safely on his phone.",
+   "min": 8,
+   "screen": "offline-entries.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} watching his phone with a relaxed smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It goes into the book by itself when the signal comes back, and it is never added twice.",
+   "sub": "It goes into the book by itself when the signal comes back, and it is never added twice.",
+   "min": 8,
+   "screen": "offline-entries.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} weighing almonds on a scale with a nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Only the entry form works without signal. Reports need signal.",
+   "sub": "Only the entry form works without signal. Reports need signal.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} smiling at the camera among sacks of dry fruit.",
+   "vo": "Every sale written down, even in the basement.",
+   "sub": "Every sale written down, even in the basement.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

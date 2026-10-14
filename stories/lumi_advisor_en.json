@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-advisor-en",
+ "character": "lumi",
+ "feature": "ask-the-advisor",
+ "title": "A second opinion",
+ "post_on": "2026-12-03",
+ "caption": "Before Diwali, Rahul wants a second opinion based on his own numbers. Lumi tells his story.",
+ "linkedin_text": "In the free month or on a paid plan, the ScoreMyBiz Advisor takes a business question typed in the owner's own language and answers using his own numbers, with a few questions a day. It is not financial, legal or tax advice and can make mistakes.",
+ "hashtags": [
+  "#Advisor",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "rahul": "Rahul, a young Indian sweet and snack shop owner with a short beard, in a saffron kurta"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a sweet shop decorated with festival lights and marigolds, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Rahul's story. Diwali is close, and he is unsure whether to buy more stock.",
+   "sub": "Hi, I'm Lumi. This is Rahul's story. Diwali is close, and he is unsure whether to buy more stock.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "A second opinion"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rahul} behind his sweet counter looking at trays of sweets with a worried look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Buy more and risk leftovers, or buy less and run out. Everyone gives a different answer.",
+   "sub": "Buy more and risk leftovers, or buy less and run out. Everyone gives a different answer.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rahul} typing a question on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz, in his free month, he opens the Advisor and types his question in his own language.",
+   "sub": "In ScoreMyBiz, in his free month, he opens the Advisor and types his question in his own language.",
+   "min": 8,
+   "screen": "advisor.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rahul} reading his phone thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "The answer already uses his own numbers.",
+   "sub": "The answer already uses his own numbers.",
+   "min": 8,
+   "screen": "advisor.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rahul} nodding slowly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He gets a few questions a day. It is not a CA or a lawyer, it can make mistakes, and it is not financial advice.",
+   "sub": "He gets a few questions a day. It is not a CA or a lawyer, it can make mistakes, and it is not financial advice.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rahul} smiling at the camera among festival sweets.",
+   "vo": "A second opinion. The decision is still his.",
+   "sub": "A second opinion. The decision is still his.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

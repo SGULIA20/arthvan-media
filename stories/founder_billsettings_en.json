@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "founder-billsettings-en",
+ "character": "founder_suit",
+ "feature": "bills-tax-settings",
+ "title": "Tax by rate",
+ "post_on": "2026-11-29",
+ "caption": "His accountant asks how much tax his bills charged last quarter. Prakash has the answer. The founder tells his story.",
+ "linkedin_text": "In ScoreMyBiz, Bills and GST sets how an owner's bills are numbered, whether and at what rate GST shows on them, and shows the tax his bills charged by rate for any period. It shows tax collected on his bills only; it does not file returns.",
+ "hashtags": [
+  "#GST",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "prakash": "Prakash, a middle-aged Indian electrical goods dealer with silver-framed glasses, in a white shirt"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in an electrical goods shop with cables and lamps behind him, a warm smile.",
+   "vo": "Hi. This is Prakash's story. His accountant asks how much tax his bills charged last quarter.",
+   "sub": "Hi. This is Prakash's story. His accountant asks how much tax his bills charged last quarter.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Tax by rate"
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} at his shop counter flipping through a stack of paper bills, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "The bills are all there. The total, by rate, is not.",
+   "sub": "The bills are all there. The total, by rate, is not.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} opening an app on his phone with interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz, Bills and GST sets how his bills are numbered: a prefix, and the next number.",
+   "sub": "In ScoreMyBiz, Bills and GST sets how his bills are numbered: a prefix, and the next number.",
+   "min": 8,
+   "screen": "billing-settings.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} choosing options on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He chooses whether GST shows on his bills, and his usual rate.",
+   "sub": "He chooses whether GST shows on his bills, and his usual rate.",
+   "min": 8,
+   "screen": "billing-settings.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} nodding as he reads his screen, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "And he sees the tax his bills charged, by rate, for any period.",
+   "sub": "And he sees the tax his bills charged, by rate, for any period.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} smiling at the camera in his shop, arms folded.",
+   "vo": "It shows what his bills charged. It does not file anything.",
+   "sub": "It shows what his bills charged. It does not file anything.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

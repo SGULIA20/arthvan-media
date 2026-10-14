@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-reminders-en",
+ "character": "lumi",
+ "feature": "reminders-in-my-words",
+ "title": "Type it once",
+ "post_on": "2026-12-01",
+ "caption": "Ten small things float in Farhan's head. He types each once. Lumi tells his story.",
+ "linkedin_text": "In ScoreMyBiz, Reminders in my own words: type something like 'call supplier Raju about cement Friday' and the app turns it into a task with a category and a due date, and the phone reminds the owner the evening before and the morning of, when notifications are allowed.",
+ "hashtags": [
+  "#Reminders",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "farhan": "Farhan, a young Indian grocery store owner with a short goatee, in a green t-shirt and a canvas apron"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a neat grocery store with shelves of packets behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Farhan's story. Ten small things float in his head, and some of them are important.",
+   "sub": "Hi, I'm Lumi. This is Farhan's story. Ten small things float in his head, and some of them are important.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Type it once"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} at his store counter surrounded by yellow sticky notes, a busy look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Call the supplier. Renew the licence. Pay the electricity. Paper notes get lost.",
+   "sub": "Call the supplier. Renew the licence. Pay the electricity. Paper notes get lost.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} typing on his phone with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz he opens Reminders and types it in his own words, like call supplier Raju about cement on Friday.",
+   "sub": "In ScoreMyBiz he opens Reminders and types it in his own words, like call supplier Raju about cement on Friday.",
+   "min": 8,
+   "screen": "reminders.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} reading his phone with a pleased nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "The app turns it into a task, with a category and a due date.",
+   "sub": "The app turns it into a task, with a category and a due date.",
+   "min": 8,
+   "screen": "reminders.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} glancing at a notification with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "His phone reminds him the evening before, and the morning of, when notifications are on.",
+   "sub": "His phone reminds him the evening before, and the morning of, when notifications are on.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} standing relaxed in his store, smiling at the camera.",
+   "vo": "New reminders work in his free month or on a plan. Type it once, and forget the sticky notes.",
+   "sub": "New reminders work in his free month or on a plan. Type it once, and forget the sticky notes.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

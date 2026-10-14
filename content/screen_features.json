@@ -60,6 +60,10 @@
   "network.png": "business-network",
   "break-even.png": "break-even",
   "reconcile.png": "bank-vs-my-book",
-  "support.png": "report-a-problem"
+  "support.png": "report-a-problem",
+  "billing-settings.png": "bills-tax-settings",
+  "staff.png": "helpers-with-own-login",
+  "reminders.png": "reminders-in-my-words",
+  "offline-entries.png": "entries-without-signal"
  }
 }
