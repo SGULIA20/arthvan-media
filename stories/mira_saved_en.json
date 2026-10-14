@@ -62,12 +62,13 @@
    "clip": "{mateo} tucking his phone into his pocket with a relaxed smile, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "When he is done with one, he can remove it from the list with a tap.",
    "sub": "When he is done with one, he can remove it from the list with a tap.",
-   "min": 8
+   "min": 8,
+   "screen": "saved.png"
   },
   {
    "layout": "end",
    "pose": "wave",
-   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
    "sub": "",
    "min": 5
   }

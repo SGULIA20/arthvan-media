@@ -34,14 +34,15 @@
    "vo": "On Waypoint he waits for a match, but the online count says zero.",
    "sub": "On Waypoint he waits for a match, but the online count says zero.",
    "min": 8,
-   "screen": "matching.png"
+   "screen": "matching-mira.png"
   },
   {
    "layout": "clip",
    "clip": "{jo} reading his phone with a small relieved smile, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "So he taps Talk to Mira, on the Chats tab or while he waits.",
    "sub": "So he taps Talk to Mira, on the Chats tab or while he waits.",
-   "min": 8
+   "min": 8,
+   "screen": "chats.png"
   },
   {
    "layout": "clip",
@@ -67,7 +68,7 @@
   {
    "layout": "end",
    "pose": "wave",
-   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
    "sub": "",
    "min": 5
   }

@@ -40,7 +40,8 @@
    "clip": "{priya} walking along a tree-lined campus path looking at her phone, soft afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "In My Waypoints she finds her own invite code, and a button to share the invite link.",
    "sub": "In My Waypoints she finds her own invite code, and a button to share the invite link.",
-   "min": 8
+   "min": 8,
+   "screen": "invite.png"
   },
   {
    "layout": "clip",
@@ -54,19 +55,21 @@
    "clip": "{priya} looking up from her phone with a pleased surprise, trees behind her, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "Kabir has his first seven days on Waypoint to enter the code.",
    "sub": "Kabir has his first seven days on Waypoint to enter the code.",
-   "min": 8
+   "min": 8,
+   "screen": "invite.png"
   },
   {
    "layout": "clip",
    "clip": "{priya} laughing quietly at her phone in a sunlit garden, the subject on the left of the frame, the right third of the frame kept clear.",
    "vo": "When he does, both of them get ten points.",
    "sub": "When he does, both of them get ten points.",
-   "min": 8
+   "min": 8,
+   "screen": "invite.png"
   },
   {
    "layout": "end",
    "pose": "front_standing",
-   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
    "sub": "",
    "min": 5
   }
