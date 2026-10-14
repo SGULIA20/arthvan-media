@@ -1,0 +1,74 @@
+{
+ "id": "founder-invite-en",
+ "app": "waypoint",
+ "lang": "en",
+ "character": "founder_casual",
+ "feature": "invite",
+ "title": "The invite",
+ "post_on": "2026-10-27",
+ "caption": "Priya wants to share Waypoint with her cousin. One code, and both get ten points. The founder tells her story.",
+ "linkedin_text": "A friend invite that is personal instead of loud. On Waypoint, My Waypoints shows your invite code and a button to share the link. A new member can enter it in their first seven days, and both people get ten points.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#InviteAFriend"
+ ],
+ "cast": {
+  "priya": "Priya, a young Indian woman in her early twenties with a long braid, a denim jacket and a small backpack"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a sunny cafe terrace in the afternoon, a relaxed smile.",
+   "vo": "Hi. This is Priya's story. She found something on Waypoint that she wants to share.",
+   "sub": "Hi. This is Priya's story. She found something on Waypoint that she wants to share.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "The invite"
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} sitting on a college lawn with her phone and a paper cup of chai, a soft smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Her cousin Kabir has had a heavy month. She wants to hand him a quiet place, not give advice.",
+   "sub": "Her cousin Kabir has had a heavy month. She wants to hand him a quiet place, not give advice.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} walking along a tree-lined campus path looking at her phone, soft afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In My Waypoints she finds her own invite code, and a button to share the invite link.",
+   "sub": "In My Waypoints she finds her own invite code, and a button to share the invite link.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} typing a message on her phone on a garden bench, a warm smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She sends it to Kabir herself, with one kind line.",
+   "sub": "She sends it to Kabir herself, with one kind line.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} looking up from her phone with a pleased surprise, trees behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Kabir has his first seven days on Waypoint to enter the code.",
+   "sub": "Kabir has his first seven days on Waypoint to enter the code.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} laughing quietly at her phone in a sunlit garden, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "When he does, both of them get ten points.",
+   "sub": "When he does, both of them get ten points.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

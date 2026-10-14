@@ -1,0 +1,75 @@
+{
+ "id": "mira-saved-en",
+ "app": "waypoint",
+ "lang": "en",
+ "character": "mira",
+ "feature": "saved-posts",
+ "title": "Read it again",
+ "post_on": "2026-11-06",
+ "caption": "One post made Mateo laugh out loud. He bookmarks it to read again. Mira tells his story.",
+ "linkedin_text": "On Waypoint, a bookmark icon on other people's posts saves them to a list under My Waypoints, Saved. Each one can be removed again with a tap.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#SavedPosts"
+ ],
+ "cast": {
+  "mateo": "Mateo, a young man in his mid twenties with curly dark hair, a green t-shirt and a thin silver chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera at a bright corner table in a sunny bookshop cafe, a stack of books beside her, a gentle smile.",
+   "vo": "Hi, I'm Mira. This is Mateo's story. Last night, one post made him laugh out loud.",
+   "sub": "Hi, I'm Mira. This is Mateo's story. Last night, one post made him laugh out loud.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Read it again"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} laughing on a sofa at night while looking at his phone, a warm lamp glowing, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He wants to read it again tomorrow, and he knows he will not find it in the morning.",
+   "sub": "He wants to read it again tomorrow, and he knows he will not find it in the morning.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} tapping his phone screen with a pleased grin, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "So he taps the bookmark icon on the post.",
+   "sub": "So he taps the bookmark icon on the post.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} on a morning train looking at his phone, soft window light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Under My Waypoints, Saved keeps every bookmark in one list.",
+   "sub": "Under My Waypoints, Saved keeps every bookmark in one list.",
+   "min": 8,
+   "screen": "saved.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} chuckling quietly at his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He reads it again, and laughs again.",
+   "sub": "He reads it again, and laughs again.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} tucking his phone into his pocket with a relaxed smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "When he is done with one, he can remove it from the list with a tap.",
+   "sub": "When he is done with one, he can remove it from the list with a tap.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

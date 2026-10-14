@@ -1,0 +1,75 @@
+{
+ "id": "mira-guide-en",
+ "app": "waypoint",
+ "lang": "en",
+ "character": "mira",
+ "feature": "mira-guide",
+ "title": "Midnight hello",
+ "post_on": "2026-10-29",
+ "caption": "At midnight nobody is online. Jo says hello to Mira, an AI guide. Mira tells his story.",
+ "linkedin_text": "On Waypoint, Talk to Mira starts a chat with an automated AI guide that says so in its first line. Replies are one or two sentences, the same reactions, report and block tools apply as in any chat, and the chat closes after forty of your messages.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#AIGuide"
+ ],
+ "cast": {
+  "jo": "Jo, a young man in his mid twenties with messy dark hair and a grey hoodie"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera on a quiet balcony at midnight, city lights glowing behind her, a gentle smile.",
+   "vo": "Hi, I'm Mira. This is Jo's story. It is midnight, and everyone he could talk to is asleep.",
+   "sub": "Hi, I'm Mira. This is Jo's story. It is midnight, and everyone he could talk to is asleep.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Midnight hello"
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} sitting at a small kitchen table at night with a mug, looking at his phone, the kitchen softly lit, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "On Waypoint he waits for a match, but the online count says zero.",
+   "sub": "On Waypoint he waits for a match, but the online count says zero.",
+   "min": 8,
+   "screen": "matching.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} reading his phone with a small relieved smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "So he taps Talk to Mira, on the Chats tab or while he waits.",
+   "sub": "So he taps Talk to Mira, on the Chats tab or while he waits.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} reading a message with an interested look, a lamp glowing beside him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She says it straight away: I'm an AI guide, not a person.",
+   "sub": "She says it straight away: I'm an AI guide, not a person.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} typing on his phone with a slight smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She answers in a sentence or two. And he can react, report or block, like in any chat.",
+   "sub": "She answers in a sentence or two. And he can react, report or block, like in any chat.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} setting his phone down and looking out at the night from the balcony, calm, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "After forty of his messages the chat closes. It is a place to start, not to stay.",
+   "sub": "After forty of his messages the chat closes. It is a place to start, not to stay.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
