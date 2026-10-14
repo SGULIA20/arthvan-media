@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "founder-streak-en",
+ "character": "founder_suit",
+ "feature": "streak-and-challenge",
+ "title": "Do not break it",
+ "post_on": "2026-12-08",
+ "caption": "Keeping the book every day becomes a small game Deepak does not want to break. The founder tells his story.",
+ "linkedin_text": "A ScoreMyBiz Home card shows how many days in a row the owner has recorded, this week's small challenge and his anonymous rank among similar businesses. A missed day resets the streak.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#DailyHabit"
+ ],
+ "cast": {
+  "deepak": "Deepak, a young Indian mobile accessories shop owner with a thin moustache, in a black t-shirt with a lanyard"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a bright mobile accessories shop with phone cases on the walls behind him, a warm smile.",
+   "vo": "Hi. This is Deepak's story. He used to keep his book when he remembered.",
+   "sub": "Hi. This is Deepak's story. He used to keep his book when he remembered.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Do not break it"
+  },
+  {
+   "layout": "clip",
+   "clip": "{deepak} behind his shop counter, glancing at an old notebook with a guilty smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Some weeks he wrote every day. Some weeks, nothing.",
+   "sub": "Some weeks he wrote every day. Some weeks, nothing.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{deepak} reading his phone with a competitive grin, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz counts how many days in a row he has recorded.",
+   "sub": "ScoreMyBiz counts how many days in a row he has recorded.",
+   "min": 8,
+   "screen": "notifications.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{deepak} nodding at his phone screen, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It sets a small challenge for the week, and tells him when he is close.",
+   "sub": "It sets a small challenge for the week, and tells him when he is close.",
+   "min": 8,
+   "screen": "notifications.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{deepak} tapping his phone quickly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A missed day resets the streak. So he does not miss it.",
+   "sub": "A missed day resets the streak. So he does not miss it.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{deepak} standing proudly in his shop, arms folded, smiling.",
+   "vo": "Keeping the book every day became a small game.",
+   "sub": "Keeping the book every day became a small game.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

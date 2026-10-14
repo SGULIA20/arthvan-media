@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-recurring-en",
+ "character": "lumi",
+ "feature": "same-every-month",
+ "title": "Type it once",
+ "post_on": "2026-12-07",
+ "caption": "The rent is the same on the 5th every month. Kavita types it once. Lumi tells her story.",
+ "linkedin_text": "In ScoreMyBiz, when an owner records a fixed monthly cost such as rent, salary or an instalment, he can choose 'Yes, every month'. It is added to the book by itself on his chosen day, and he can pause or stop it. A removal can be undone for five seconds.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#MonthlyCosts"
+ ],
+ "cast": {
+  "kavita": "Kavita, a middle-aged Indian tailor who runs a boutique, in a rust-coloured cotton kurta with a measuring tape around her neck"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a tailoring boutique with bolts of colourful cloth and sewing machines behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Kavita's story. Her rent is the same on the fifth of every month.",
+   "sub": "Hi, I'm Lumi. This is Kavita's story. Her rent is the same on the fifth of every month.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Type it once"
+  },
+  {
+   "layout": "clip",
+   "clip": "{kavita} at a sewing machine glancing at a calendar on the wall, a patient sigh, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Same rent. Same date. Same typing, every month.",
+   "sub": "Same rent. Same date. Same typing, every month.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{kavita} tapping her phone with a pleased look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz, when she records a fixed cost like rent, she can choose Yes, every month.",
+   "sub": "In ScoreMyBiz, when she records a fixed cost like rent, she can choose Yes, every month.",
+   "min": 8,
+   "screen": "book.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{kavita} reading her phone with a nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It is added to her book by itself on her chosen day, and she can pause or stop it.",
+   "sub": "It is added to her book by itself on her chosen day, and she can pause or stop it.",
+   "min": 8,
+   "screen": "book.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{kavita} tapping her phone, then smiling with relief, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A slip of the thumb on Remove? A five-second Undo bar brings it back.",
+   "sub": "A slip of the thumb on Remove? A five-second Undo bar brings it back.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{kavita} standing among colourful cloth, smiling at the camera.",
+   "vo": "Only fixed running costs repeat. Stock purchases stay manual.",
+   "sub": "Only fixed running costs repeat. Stock purchases stay manual.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
