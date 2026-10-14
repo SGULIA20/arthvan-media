@@ -172,7 +172,10 @@ def build(story_path: Path, out_dir: Path) -> Path:
     else:
         print(price_line(story), flush=True)
     app = load_apps()[story["app"]]
-    app = {**app, **(app.get("i18n") or {}).get(story.get("lang", "en").split("-")[0], {})}      # a language's own end-card texts (content/apps.json i18n)
+    code = story.get("lang", "en").split("-")[0]
+    card_file = ROOT / "content" / "end_card" / f"{code}.json"                                  # texts written by the translator for languages not in apps.json
+    extra = json.loads(card_file.read_text()).get(story["app"], {}) if card_file.exists() else {}
+    app = {**app, **extra, **(app.get("i18n") or {}).get(code, {})}                             # a language's own end-card texts (apps.json i18n wins)
     out_dir = Path(out_dir); out_dir.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)

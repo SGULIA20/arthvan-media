@@ -117,6 +117,8 @@ def gemini_clip(text: str, voice: str, out_wav: Path, *, key: str = None, cache:
             if status == 200:
                 break
             wait = daily_quota_wait(body) if status == 429 else None
+            if wait is not None and os.environ.get("TTS_NO_WAIT") == "1":
+                raise TTSError("DAILY_VOICE_QUOTA: today's Google voice allowance is used up")
             if wait is not None and wait <= MAX_DAILY_WAIT and daily_waits < 2:     # today's allowance is used up: sleep until it resets
                 daily_waits += 1; _wait_for_reset(wait); continue
             tries += 1
