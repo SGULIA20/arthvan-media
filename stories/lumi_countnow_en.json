@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-countnow-en",
+ "character": "lumi",
+ "feature": "money-now",
+ "title": "Does the drawer agree",
+ "post_on": "2026-11-14",
+ "caption": "At closing Rekha counts the till. Does the book agree? Lumi tells her story.",
+ "linkedin_text": "Money I have right now in ScoreMyBiz: count the cash, the bank and the stock, see what the book expected and the gap. A gap usually means an entry was missed. What you type becomes the new starting point.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#CashInHand"
+ ],
+ "cast": {
+  "rekha": "Rekha, a middle-aged Indian woman who runs a sweet shop, in an orange cotton saree with a small red bindi"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a sweet shop with trays of colourful sweets behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Rekha's story. At closing she counts the till, and wonders if the book agrees.",
+   "sub": "Hi, I'm Lumi. This is Rekha's story. At closing she counts the till, and wonders if the book agrees.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Does the drawer agree"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} counting rupee notes at her sweet shop counter at closing time, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Notes in one pile, coins in another. She counts it twice.",
+   "sub": "Notes in one pile, coins in another. She counts it twice.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} opening an app on her phone with curiosity, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz she opens Money I have right now, and types what is in the till, the bank and the stock.",
+   "sub": "In ScoreMyBiz she opens Money I have right now, and types what is in the till, the bank and the stock.",
+   "min": 8,
+   "screen": "money-now.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} looking at her phone screen, thinking, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "The app shows what her book expected, and the gap between the two.",
+   "sub": "The app shows what her book expected, and the gap between the two.",
+   "min": 8,
+   "screen": "money-now.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} nodding with a reassured smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "A gap usually means an entry was missed, not that something is wrong.",
+   "sub": "A gap usually means an entry was missed, not that something is wrong.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} closing the shutter of her sweet shop with a calm smile, evening lights behind her.",
+   "vo": "What she typed becomes the new starting point.",
+   "sub": "What she typed becomes the new starting point.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

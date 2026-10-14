@@ -1,0 +1,76 @@
+{
+ "app": "waypoint",
+ "lang": "en",
+ "id": "founder-wrapped-en",
+ "character": "founder_casual",
+ "feature": "wrapped",
+ "title": "Your month",
+ "post_on": "2026-11-08",
+ "caption": "On the first of the month Leo opens his recap. Only he can see it. The founder tells his story.",
+ "linkedin_text": "In My Waypoints, This month opens a recap of the current month for your account only: posts shared, reactions given, thumbs up and laughs received, and the feeling you logged most. It is never shared or public.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#MonthlyRecap"
+ ],
+ "cast": {
+  "leo": "Leo, a young man with a light beard, a black cap and a denim shirt"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a rooftop in the morning light, a relaxed smile.",
+   "vo": "Hi. This is Leo's story. It is the first of the month, and he is curious how his last month went.",
+   "sub": "Hi. This is Leo's story. It is the first of the month, and he is curious how his last month went.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "Your month"
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} on a small balcony with a cup of tea and his phone, morning light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "No score. No ranking. Just his own month.",
+   "sub": "No score. No ranking. Just his own month.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} opening his phone with interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In My Waypoints, This month opens a recap of the month.",
+   "sub": "In My Waypoints, This month opens a recap of the month.",
+   "min": 8,
+   "screen": "wrapped.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} reading his phone with a thoughtful smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Posts shared, reactions given, thumbs up and laughs received.",
+   "sub": "Posts shared, reactions given, thumbs up and laughs received.",
+   "min": 8,
+   "screen": "wrapped.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} nodding slowly, looking out over the city, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "And the feeling he logged most.",
+   "sub": "And the feeling he logged most.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} leaning on the balcony rail with a calm smile, morning city behind him.",
+   "vo": "It is visible only to him. Never shared, and never public.",
+   "sub": "It is visible only to him. Never shared, and never public.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

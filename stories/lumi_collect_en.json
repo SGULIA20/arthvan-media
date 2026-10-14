@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-collect-en",
+ "character": "lumi",
+ "feature": "money-to-collect",
+ "title": "Who owes me",
+ "post_on": "2026-11-11",
+ "caption": "It is month-end and Salma cannot remember who still owes her. Lumi tells her story.",
+ "linkedin_text": "Cash Flow Watch in ScoreMyBiz lists every customer who owes you, with the amount and the days overdue, and a one-tap WhatsApp reminder. Marking a payment as paid, in full or in part, lands in the book.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#GetPaid"
+ ],
+ "cast": {
+  "salma": "Salma, a middle-aged Indian woman who runs a tile shop, in a plum cotton kurta with reading glasses on a chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a bright tile shop with colourful tile samples on the walls behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Salma's story. It is month-end, and she cannot remember who still owes her money.",
+   "sub": "Hi, I'm Lumi. This is Salma's story. It is month-end, and she cannot remember who still owes her money.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Who owes me"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} at her shop counter with a worn handwritten notebook, rubbing her forehead, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Customers promised to pay. Some did, some did not. The notebook does not say since when.",
+   "sub": "Customers promised to pay. Some did, some did not. The notebook does not say since when.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} looking at her phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz, Cash Flow Watch lists every customer who owes her, with the amount and the days overdue.",
+   "sub": "In ScoreMyBiz, Cash Flow Watch lists every customer who owes her, with the amount and the days overdue.",
+   "min": 8,
+   "screen": "cash-flow.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} tapping her phone with a decisive nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It shows who to call today, and a Remind on WhatsApp button gets a reminder moving in one tap.",
+   "sub": "It shows who to call today, and a Remind on WhatsApp button gets a reminder moving in one tap.",
+   "min": 8,
+   "screen": "cash-flow.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} receiving a payment with a grateful smile at her counter, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "When a customer pays, she marks it paid, in full or in part, and it lands in her book.",
+   "sub": "When a customer pays, she marks it paid, in full or in part, and it lands in her book.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} standing relaxed in her tile shop, arms folded, smiling at the camera.",
+   "vo": "Month-end is now a short list, not a guess.",
+   "sub": "Month-end is now a short list, not a guess.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

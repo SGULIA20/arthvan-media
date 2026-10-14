@@ -16,7 +16,11 @@
   "language.png": "languages",
   "saved.png": "saved-posts",
   "customize.png": "customize-name",
-  "whats-new.png": "whats-new"
+  "whats-new.png": "whats-new",
+  "invite.png": "invite",
+  "chats.png": "mira-guide",
+  "matching-mira.png": "mira-guide",
+  "mood.png": "mood-log"
  },
  "scoremybiz": {
   "advisor.png": "ask-the-advisor",
@@ -41,6 +45,12 @@
   "ca-card.png": "ca-network",
   "export-book.png": "file-for-accountant",
   "my-documents.png": "documents-from-my-ca",
-  "year-end.png": "year-end-close"
+  "year-end.png": "year-end-close",
+  "cash-flow.png": "money-to-collect",
+  "payables.png": "money-to-pay",
+  "money-now.png": "money-now",
+  "quotations.png": "quotes-for-customers",
+  "items.png": "items-and-prices",
+  "invoices.png": "bills-for-customers"
  }
 }

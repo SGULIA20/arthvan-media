@@ -1,0 +1,77 @@
+{
+ "app": "waypoint",
+ "lang": "en",
+ "id": "founder-reveal-en",
+ "character": "founder_casual",
+ "feature": "reveal",
+ "title": "A name for today",
+ "post_on": "2026-11-04",
+ "caption": "Noor opens Waypoint and meets her name for today. It changes tomorrow. The founder tells her story.",
+ "linkedin_text": "After one onboarding question, Waypoint shows the member a generated name and avatar for the day, with a link to customize it. A one-time opt-in schedules a single quiet reminder for when the next name arrives.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#Anonymous"
+ ],
+ "cast": {
+  "noor": "Noor, a young woman with a short wavy bob, round glasses and a teal scarf"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a sunny cafe terrace, a relaxed smile.",
+   "vo": "Hi. This is Noor's story. She just downloaded Waypoint, and she does not want to be known.",
+   "sub": "Hi. This is Noor's story. She just downloaded Waypoint, and she does not want to be known.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "A name for today"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} sitting on a park bench with her phone, a hesitant curious look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "After one question, Waypoint gives her a name made for today.",
+   "sub": "After one question, Waypoint gives her a name made for today.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} looking at her phone with a surprised smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It changes tomorrow, so nobody will recognise her.",
+   "sub": "It changes tomorrow, so nobody will recognise her.",
+   "min": 8,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} tapping her phone thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She can customise the name and the avatar, if she likes.",
+   "sub": "She can customise the name and the avatar, if she likes.",
+   "min": 8,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} smiling at a small notification on her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "And she can ask for one quiet reminder when her new name arrives.",
+   "sub": "And she can ask for one quiet reminder when her new name arrives.",
+   "min": 8,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} walking through the park in the evening light, relaxed, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Nothing else. Just a name, and a place to say it once.",
+   "sub": "Nothing else. Just a name, and a place to say it once.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

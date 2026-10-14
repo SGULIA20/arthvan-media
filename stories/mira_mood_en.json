@@ -1,0 +1,76 @@
+{
+ "app": "waypoint",
+ "lang": "en",
+ "id": "mira-mood-en",
+ "character": "mira",
+ "feature": "mood-log",
+ "title": "Just a tap",
+ "post_on": "2026-11-02",
+ "caption": "Yuki taps a feeling after lunch and again in the evening. Mira tells her story.",
+ "linkedin_text": "In My Waypoints, the Mood log lets a member tap how they feel for the morning, afternoon, evening or night, with no typing, see this week next to the week before, and switch on an evening reminder. It is a small habit, not a diagnosis.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#MoodLog"
+ ],
+ "cast": {
+  "yuki": "Yuki, a young woman with a black bob haircut and a cream knit sweater"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera at a sunny window seat in a quiet library, a gentle smile.",
+   "vo": "Hi, I'm Mira. This is Yuki's story. Some feelings do not need a paragraph.",
+   "sub": "Hi, I'm Mira. This is Yuki's story. Some feelings do not need a paragraph.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Just a tap"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} at a desk after lunch, looking out of a window with a thoughtful expression, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "After lunch she pauses and wonders how she really feels.",
+   "sub": "After lunch she pauses and wonders how she really feels.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} opening her phone with a small curious smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In My Waypoints she opens Mood log: morning, afternoon, evening and night.",
+   "sub": "In My Waypoints she opens Mood log: morning, afternoon, evening and night.",
+   "min": 8,
+   "screen": "mood.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} tapping her phone gently, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She taps how she feels. No typing, and no explanation.",
+   "sub": "She taps how she feels. No typing, and no explanation.",
+   "min": 8,
+   "screen": "mood.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} reading her phone on a sofa on a quiet Sunday, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "On Sunday she sees her week next to the week before.",
+   "sub": "On Sunday she sees her week next to the week before.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} smiling softly by a window in the evening, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "And an evening reminder, if she wants one. A small habit, not a diagnosis.",
+   "sub": "And an evening reminder, if she wants one. A small habit, not a diagnosis.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

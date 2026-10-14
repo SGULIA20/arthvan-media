@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "founder-pay-en",
+ "character": "founder_suit",
+ "feature": "money-to-pay",
+ "title": "Pay first",
+ "post_on": "2026-11-12",
+ "caption": "Three supplier bills, three dates, one already late. The founder tells Dinesh's story.",
+ "linkedin_text": "Money I have to pay in ScoreMyBiz groups supplier bills by supplier, shows what is overdue and what falls due this week, and reminds the owner on the due day and three days before. It does not pay anyone; it only reminds.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Suppliers"
+ ],
+ "cast": {
+  "dinesh": "Dinesh, a middle-aged Indian grocery wholesaler with a thick moustache, in a white half-sleeve shirt and a gold chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy grocery wholesale market in the morning, sacks of grain behind him, a warm smile.",
+   "vo": "Hi. This is Dinesh's story. A supplier's bill is due this week, and he wants to set the money aside.",
+   "sub": "Hi. This is Dinesh's story. A supplier's bill is due this week, and he wants to set the money aside.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Pay first"
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} at a small desk with a spike of paper bills, counting dates on his fingers, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Bills from three suppliers, three different dates, and one of them is already late.",
+   "sub": "Bills from three suppliers, three different dates, and one of them is already late.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} reading his phone with a calm nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz, Money I have to pay groups the bills by supplier.",
+   "sub": "In ScoreMyBiz, Money I have to pay groups the bills by supplier.",
+   "min": 8,
+   "screen": "payables.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} pointing at his phone thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It shows what is overdue and what falls due this week, so he knows who to pay first.",
+   "sub": "It shows what is overdue and what falls due this week, so he knows who to pay first.",
+   "min": 8,
+   "screen": "payables.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} glancing at a notification on his phone with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He also gets a note in the app on the due day, and three days before.",
+   "sub": "He also gets a note in the app on the due day, and three days before.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} standing among sacks of grain, relaxed, arms folded.",
+   "vo": "ScoreMyBiz does not pay anyone. It only reminds him.",
+   "sub": "ScoreMyBiz does not pay anyone. It only reminds him.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
