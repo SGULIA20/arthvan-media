@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "founder-whatif-en",
+ "character": "founder_suit",
+ "feature": "what-if-simulator",
+ "title": "What if",
+ "post_on": "2026-12-16",
+ "caption": "Hari wondered what chasing slow customers would do to his score before he started. The founder tells his story.",
+ "linkedin_text": "In ScoreMyBiz, once an owner has a score, he can nudge revenue, expenses and how fast customers pay by a few percent and see how the score would move. It is a what-if on his own numbers, not a forecast.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#WhatIf"
+ ],
+ "cast": {
+  "hari": "Hari, a young Indian grocery shop owner with a trimmed beard, in a green polo shirt with a small notebook in his hand"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a neat grocery shop with shelves of packaged goods behind him, a warm smile.",
+   "vo": "Hi. This is Hari's story. Some customers pay him late, and he wondered what chasing them would change.",
+   "sub": "Hi. This is Hari's story. Some customers pay him late, and he wondered what chasing them would change.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "What if"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} behind his counter, thinking, tapping a pen against his notebook, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Is it worth the awkward phone calls? He wanted to see before he started.",
+   "sub": "Is it worth the awkward phone calls? He wanted to see before he started.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} tapping his phone with a curious look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz he opens the simulator on his own score.",
+   "sub": "In ScoreMyBiz he opens the simulator on his own score.",
+   "min": 8,
+   "screen": "business-simulator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} reading his phone and nodding slowly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He nudges revenue, expenses, or how fast customers pay, and watches the score move.",
+   "sub": "He nudges revenue, expenses, or how fast customers pay, and watches the score move.",
+   "min": 8,
+   "screen": "business-simulator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} smiling thoughtfully at his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It is a what-if on his own numbers. Not a forecast.",
+   "sub": "It is a what-if on his own numbers. Not a forecast.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} standing in his shop, arms folded, smiling.",
+   "vo": "Now he knows which call is worth making first.",
+   "sub": "Now he knows which call is worth making first.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

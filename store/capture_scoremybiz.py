@@ -63,10 +63,11 @@ with sync_playwright() as p:
     ctx.route("https://scoremybiz.com/.netlify/functions/**", lambda route, req: (seen.setdefault(req.url.split('/functions/')[1],0), handle(route, req)))
     pg=ctx.new_page()
     for r in ROUTES:
+        name, route = r.split("@", 1) if "@" in r else (r, r)          # "name@route?query" saves route as name.png
         try:
-            pg.goto(f"{BASE}/{r}", wait_until="networkidle", timeout=60000); pg.wait_for_timeout(4000)
+            pg.goto(f"{BASE}/{route}", wait_until="networkidle", timeout=60000); pg.wait_for_timeout(4000)
             pg.evaluate(CLEAN_JS); pg.wait_for_timeout(400)
-            pg.screenshot(path=f"{OUT}/{r}.png"); print(r,"ok")
-        except Exception as e: print(r,"ERR",str(e)[:70])
+            pg.screenshot(path=f"{OUT}/{name}.png"); print(name,"ok")
+        except Exception as e: print(name,"ERR",str(e)[:70])
     b.close()
 print("functions called:", sorted(seen))

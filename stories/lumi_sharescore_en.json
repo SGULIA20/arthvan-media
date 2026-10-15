@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-sharescore-en",
+ "character": "lumi",
+ "feature": "share-score-picture",
+ "title": "Share the good news",
+ "post_on": "2026-12-17",
+ "caption": "After a good month, Zoya wanted her customers to see her shop was in good shape. Lumi tells her story.",
+ "linkedin_text": "When a ScoreMyBiz score reaches Healthy or Thriving, the owner can share a square picture of the score ring, the band and his business name on his WhatsApp status. It never shows money amounts, and it is his own score, not a certificate.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#GoodNews"
+ ],
+ "cast": {
+  "zoya": "Zoya, a young Indian woman who runs a small bakery, with a braid over one shoulder, in a pink kurta and a white apron"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small bright bakery with cakes under glass domes behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Zoya's story. She had a really good month.",
+   "sub": "Hi, I'm Lumi. This is Zoya's story. She had a really good month.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Share the good news"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} wiping a glass counter with a proud smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She wanted her customers and suppliers to see her shop was in good shape.",
+   "sub": "She wanted her customers and suppliers to see her shop was in good shape.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} holding up her phone with a delighted look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Her ScoreMyBiz score reached Healthy.",
+   "sub": "Her ScoreMyBiz score reached Healthy.",
+   "min": 8,
+   "screen": "result.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} tapping her phone with a happy nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She can share it as a picture on her WhatsApp status.",
+   "sub": "She can share it as a picture on her WhatsApp status.",
+   "min": 8,
+   "screen": "result.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} smiling at her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "It shows the score and her shop name. Never any money amounts.",
+   "sub": "It shows the score and her shop name. Never any money amounts.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} standing proudly among her cakes, smiling at the camera.",
+   "vo": "Her own score, shared in a tap. Not a certificate from anyone.",
+   "sub": "Her own score, shared in a tap. Not a certificate from anyone.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
