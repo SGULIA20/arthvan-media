@@ -110,3 +110,21 @@ def test_once_the_credit_is_gone_conversions_come_first_then_filmed_english_then
     r = dp.run(tmp_path, dry=True, budget=100, now=NOW, log=tmp_path / "log")
     assert [m[0] for m in r["made"]] == ["c-hi", "d-hi", "a-en", "b-en"]                       # conversions, then the already filmed original, then the cut-out one
     assert dict(r["made"])["b-en"] == "English, free cut-out style"
+
+
+def test_an_approved_backup_voice_model_takes_over_a_whole_reel_when_the_first_is_used_up(monkeypatch, tmp_path):
+    setup(monkeypatch, tmp_path, [story("a-en"), story("b-en")], [])
+    monkeypatch.setattr(dp, "voice_models", lambda path=None: [None, "backup-tts"])
+    seen = []
+    def build(path, root, env=None):
+        m = (env or {}).get("TTS_MODEL"); seen.append((path.name, m))
+        return ("quota", "used up") if m is None else ("made", "")
+    r = dp.run(tmp_path, build=build, wait_net=lambda: True, now=NOW, log=tmp_path / "log")
+    assert seen == [("a_en.json", None), ("a_en.json", "backup-tts"), ("b_en.json", "backup-tts")]      # the first Reel is made again on the backup, later Reels go straight to it
+    assert [m[0] for m in r["made"]] == ["a-en", "b-en"] and r["stopped"] == ""
+
+
+def test_voice_models_is_just_the_normal_model_until_a_file_approves_backups(tmp_path):
+    assert dp.voice_models(tmp_path / "none.json") == [None]
+    f = tmp_path / "v.json"; f.write_text('{"backups": ["m1", "m2"]}')
+    assert dp.voice_models(f) == [None, "m1", "m2"]

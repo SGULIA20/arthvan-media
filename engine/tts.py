@@ -103,9 +103,10 @@ def _generate(model: str, text: str, voice: str, key: str):
             return e.code, {"error": {"message": raw[:200]}}
 
 
-def gemini_clip(text: str, voice: str, out_wav: Path, *, key: str = None, cache: Path = CACHE, model: str = MODEL) -> float:
+def gemini_clip(text: str, voice: str, out_wav: Path, *, key: str = None, cache: Path = CACHE, model: str = None) -> float:
     """Speak `text` with `voice` into out_wav (44.1 kHz stereo, like the macOS path). Returns seconds."""
     key = api_key() if key is None else key
+    model = model or os.environ.get("TTS_MODEL") or MODEL                 # the production run may switch to an approved backup voice model
     if not key:
         raise TTSError("GEMINI_API_KEY is not set (environment or ~/arthvan-social/.env)")
     cache = Path(cache); cache.mkdir(parents=True, exist_ok=True)

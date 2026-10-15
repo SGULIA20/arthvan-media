@@ -70,6 +70,16 @@ def wait_for_network(max_seconds: int = 3 * 3600, step: int = 60, up=network_up,
 
 
 DONE = Path.home() / "arthvan-social" / "logs" / "production-done.json"
+VOICE_MODELS = Path.home() / "arthvan-social" / "logs" / "voice-models.json"       # {"backups": ["gemini-3.8-flash-tts", ...]}: only exists once the founder has approved them
+
+
+def voice_models(path: Path = VOICE_MODELS) -> list:
+    """[None, backup1, ...]: None is the normal voice model. A backup is used only when the one before it has no allowance left today,
+    and a whole Reel is always voiced by ONE model so its voice never changes halfway."""
+    try:
+        return [None] + [m for m in json.loads(Path(path).read_text()).get("backups", []) if isinstance(m, str)]
+    except (OSError, ValueError, AttributeError):
+        return [None]
 
 
 def quota_day(now=None) -> str:
@@ -172,14 +182,28 @@ def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_netwo
     result = {"made": [], "failed": [], "stopped": "", "english": 0}
     used = 0
 
+    models = voice_models()
+    model_at = {"i": 0}
+    budget = budget * len(models)                             # each approved voice model has its own daily allowance
+
+    def build_voiced(path, root_, env=None):
+        while True:
+            e = dict(env or {})
+            if models[model_at["i"]]:
+                e["TTS_MODEL"] = models[model_at["i"]]
+            status, msg = build(path, root_, e)
+            if status == "quota" and model_at["i"] + 1 < len(models):
+                model_at["i"] += 1; continue                  # this model is used up for today: make the whole Reel again with the next one
+            return status, msg
+
     def build_net(*a):
-        status, msg = build(*a)
+        status, msg = build_voiced(*a)
         if status == "network" and wait_net():
-            status, msg = build(*a)
+            status, msg = build_voiced(*a)
         for _ in range(2):                                    # a sleep woke the page timeouts: voice and shots are cached, so a retry is cheap
             if status != "interrupted":
                 break
-            status, msg = build(*a)
+            status, msg = build_voiced(*a)
         return status, msg
 
     def finish():
