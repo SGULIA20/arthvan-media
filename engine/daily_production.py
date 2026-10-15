@@ -69,6 +69,27 @@ def wait_for_network(max_seconds: int = 3 * 3600, step: int = 60, up=network_up,
     return True
 
 
+DONE = Path.home() / "arthvan-social" / "logs" / "production-done.json"
+
+
+def quota_day(now=None) -> str:
+    """Google's free voice allowance runs on the US Pacific calendar day."""
+    from zoneinfo import ZoneInfo
+    return (now or datetime.now(timezone.utc)).astimezone(ZoneInfo("America/Los_Angeles")).date().isoformat()
+
+
+def day_is_done(marker: Path = DONE, now=None) -> bool:
+    try:
+        return json.loads(Path(marker).read_text()).get("day") == quota_day(now)
+    except (OSError, ValueError):
+        return False
+
+
+def mark_day_done(reason: str, marker: Path = DONE, now=None) -> None:
+    Path(marker).parent.mkdir(parents=True, exist_ok=True)
+    Path(marker).write_text(json.dumps({"day": quota_day(now), "reason": reason}))
+
+
 def _log(entry: dict, log: Path = LOG) -> None:
     log.parent.mkdir(parents=True, exist_ok=True)
     with log.open("a") as f:
@@ -243,6 +264,9 @@ def summary(result: dict, credit_line: str = "") -> str:
 def main(argv=None) -> int:
     argv = sys.argv[1:] if argv is None else argv
     dry = "--dry" in argv
+    resume = "--resume" in argv                 # started every few minutes by a second launch agent: picks the work up again whenever the Mac wakes
+    if resume and day_is_done():
+        return 0
     busy = subprocess.run(["pgrep", "-f", "scratchpad/pipeline"], capture_output=True, text=True).stdout.strip()
     if busy and not dry:
         print("another production queue is running; nothing to do now"); return 0
@@ -251,15 +275,21 @@ def main(argv=None) -> int:
     try:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     except OSError:
-        print("a production run is already going"); return 0
+        if not resume:
+            print("a production run is already going")
+        return 0
     if not dry and not wait_for_network():
         print("no network for 3 hours; nothing made today"); return 0
     result = run(dry=dry)
+    if not dry and result["stopped"] in ("voice allowance", "voice budget"):
+        mark_day_done(result["stopped"])        # the day's voice is used: resume launches stay quiet until the next Pacific day
     text = summary(result, notify.credit_line())
     print(text)
     if dry:
         for sid, what in result["made"][:40]:
             print("  would make", sid, "|", what)
+        return 0
+    if resume and not result["made"]:           # a resume launch that made nothing says nothing
         return 0
     notify.send(text)
     return 0

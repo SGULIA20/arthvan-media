@@ -89,3 +89,14 @@ def test_a_render_interrupted_by_a_sleeping_mac_is_retried_and_not_counted_as_a_
     r = dp.run(tmp_path, build=lambda *a, **k: next(answers), wait_net=lambda: True, now=NOW, log=tmp_path / "log")
     assert [m[0] for m in r["made"]] == ["a-en"]                                   # the first came right on the third try
     assert [f[0] for f in r["failed"]] == ["b-en"] and dp._failures(tmp_path / "log") == {}      # the second gave up for today without spending a try
+
+
+def test_the_day_is_marked_done_on_googles_pacific_calendar(tmp_path):
+    from datetime import datetime, timezone
+    m = tmp_path / "done.json"
+    t = datetime(2026, 10, 15, 8, 0, tzinfo=timezone.utc)                 # 01:00 Pacific on the 15th
+    assert not dp.day_is_done(m, t)
+    dp.mark_day_done("voice allowance", m, t)
+    assert dp.day_is_done(m, datetime(2026, 10, 15, 20, 0, tzinfo=timezone.utc))        # same Pacific day, later
+    assert not dp.day_is_done(m, datetime(2026, 10, 16, 8, 0, tzinfo=timezone.utc))      # next Pacific day: work again
+    assert dp.quota_day(datetime(2026, 10, 15, 6, 59, tzinfo=timezone.utc)) == "2026-10-14"    # before 07:00 UTC it is still the 14th there
