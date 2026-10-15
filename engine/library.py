@@ -123,6 +123,7 @@ def coverage(root: Path = ROOT, targets: list = None) -> dict:
             theirs = [s for s in mine if s.get("lang", "en").split("-")[0] == lang]
             made = {_base(s["id"]) for s in theirs if s["id"] in done}
             scripted = {_base(s["id"]) for s in theirs if s["id"] not in done}
+            scripted |= {_base(f.stem) for f in (root / "content" / "translations" / lang).glob("*.json")} & eng       # a written translation is a script too
             rows.append({"lang": lang, "name": LANGUAGES.get(lang, lang), "made": len(made & eng), "scripted": len(scripted & eng - made),
                          "todo": len(eng - made - scripted), "own": len((made | scripted) - eng)})
         out[app] = {"english": len(eng), "english_made": len({_base(s["id"]) for s in mine if s["id"] in done and s.get("lang", "en").split("-")[0] == "en"}), "rows": rows}

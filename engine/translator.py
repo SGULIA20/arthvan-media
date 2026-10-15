@@ -20,6 +20,7 @@ Rules:
 - Names of people: keep them recognisable (use {language}'s own script if it has one). Product names ScoreMyBiz, Waypoint, WhatsApp, QuickBooks, Xero, Wave, CA: if {language} does not use Latin letters, write how they sound in that script; otherwise keep them as they are.
 - Each translated line should be about as long as the English line, at most 20% longer{strict}.
 - A line may carry a short on-screen "card": translate it too.
+- The title and the caption must be translated into {language} as well (written in {language}'s own script where it has one). Never leave them in English.
 Return ONLY valid JSON of exactly this shape, nothing else:
 {{"title": "...", "caption": "...", "scenes": [{{"vo": "...", "card": "... (only if the input has a card)"}}]}}
 Input:
@@ -46,7 +47,14 @@ def _numbers(s: str) -> set:
     return out
 
 
-def problems(base: dict, tr: dict) -> list:
+NON_LATIN = {"hi", "gu", "mr", "ta", "te", "bn", "kn", "ml", "ur", "ar", "pa", "or", "as"}      # languages written in their own script
+
+
+def _has_native_letters(text: str) -> bool:
+    return any(c.isalpha() and ord(c) > 0x24F for c in text or "")
+
+
+def problems(base: dict, tr: dict, lang: str = None) -> list:
     out = []
     scenes = tr.get("scenes") or []
     if len(scenes) != len(base["scenes"]):
@@ -64,6 +72,13 @@ def problems(base: dict, tr: dict) -> list:
             out.append(f"scene {i}: card missing")
     if not (tr.get("caption") or "").strip() or not (tr.get("title") or "").strip():
         out.append("title or caption missing")
+    elif lang in NON_LATIN:                               # a model sometimes leaves a title, a caption or a line in English
+        for key in ("title", "caption"):
+            if not _has_native_letters(tr[key]):
+                out.append(f"{key} left in English")
+        for i, t in enumerate(scenes):
+            if not _has_native_letters(t.get("vo", "")):
+                out.append(f"scene {i}: line left in English")
     return out
 
 
@@ -75,7 +90,7 @@ def translate_story(base: dict, lang: str, ask=gemini.ask, strict: bool = False)
     last = []
     for _ in range(2):
         tr = _json(ask(prompt, max_tokens=4000))
-        last = problems(base, tr)
+        last = problems(base, tr, lang)
         if not last:
             tr["machine_translated"] = True
             return tr

@@ -38,8 +38,8 @@ def test_changed_numbers_a_lost_scene_or_a_missing_card_reject_the_translation()
 
 def test_it_retries_once_with_the_model_and_native_digits_count_as_the_same_number():
     base = dict(BASE, scenes=[{"vo": "She fills 4 things."}])
-    answers = {1: json.dumps({"title": "T", "caption": "C", "scenes": [{"vo": "Rellena 9 cosas."}]}),
-               2: json.dumps({"title": "T", "caption": "C", "scenes": [{"vo": "تملأ ٤ أشياء."}]})}      # Arabic-Indic digit four
+    answers = {1: json.dumps({"title": "عنوان", "caption": "وصف", "scenes": [{"vo": "Rellena 9 cosas."}]}),
+               2: json.dumps({"title": "عنوان", "caption": "وصف", "scenes": [{"vo": "تملأ ٤ أشياء."}]})}      # Arabic-Indic digit four
     ask = fake(lambda n: answers[n])
     assert tr.translate_story(base, "ar", ask)["scenes"][0]["vo"].startswith("تملأ") and len(ask.calls) == 2
 
@@ -61,3 +61,12 @@ def test_ensure_files_writes_the_translation_once_and_reuses_it(tmp_path):
     assert p == tmp_path / "content" / "translations" / "es" / "x-en.json" and json.loads(p.read_text())["machine_translated"] is True
     assert json.loads((tmp_path / "content" / "end_card" / "es.json").read_text())["scoremybiz"]["languages_phrase"] == "z {n}"
     assert tr.ensure_files(BASE, "scoremybiz", cfg, "es", tmp_path, lambda *a, **k: 1 / 0) == p          # nothing is asked again
+
+
+def test_a_title_caption_or_line_left_in_english_is_rejected_for_a_native_script_language():
+    base = {"id": "x-en", "scenes": [{"vo": "Hello there my friend."}, {"vo": "Second line here."}]}
+    good = {"title": "નમસ્તે", "caption": "આ એક વાર્તા છે", "scenes": [{"vo": "નમસ્તે મારા મિત્ર."}, {"vo": "બીજી લાઇન અહીં."}]}
+    assert tr.problems(base, good, "gu") == []
+    assert tr.problems(base, dict(good, title="Hello"), "gu") == ["title left in English"]
+    assert tr.problems(base, dict(good, scenes=[{"vo": "Hello there my friend."}, good["scenes"][1]]), "gu") == ["scene 0: line left in English"]
+    assert tr.problems(base, dict(good, title="Hello"), "es") == []              # Latin-script languages are not held to this
