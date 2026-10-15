@@ -31,6 +31,50 @@ MAX_DAILY_WAIT = 9 * 3600
 WAIT_NOTE = Path.home() / "arthvan-social" / "logs" / "tts-wait.json"      # read by the live status page
 
 
+# ---- spend meter for the EXTRA (non-default) voice models: the founder approved ₹400 on 15 Oct 2026 ----
+SPEND_FILE = Path.home() / "arthvan-social" / "logs" / "voice-spend.json"
+BACKUP_FILE = Path.home() / "arthvan-social" / "logs" / "voice-models.json"          # {"backups": [...], "cap_inr": 400}: exists only while the founder approves them
+INR_PER_USD = 90.0                                                                   # a little above the real rate: the meter should overstate, never understate
+# US dollars per million tokens (input, audio output). The 3.8 rate is an unconfirmed third-party figure, so it carries the higher 3.1 price.
+RATES = {"gemini-3.8-flash-tts": (1.0, 20.0), "gemini-3.1-flash-tts-preview": (1.0, 20.0),
+         "gemini-2.5-flash-preview-tts": (0.5, 10.0), "gemini-2.5-pro-preview-tts": (1.0, 20.0)}
+
+
+def cost_inr(model: str, usage: dict) -> float:
+    rin, rout = RATES.get(model, (1.0, 20.0))
+    return ((usage.get("promptTokenCount") or 0) * rin + (usage.get("candidatesTokenCount") or 0) * rout) / 1e6 * INR_PER_USD
+
+
+def _spend_read(path: Path = None) -> dict:
+    try:
+        return json.loads(Path(path or SPEND_FILE).read_text())
+    except (OSError, ValueError):
+        return {"inr": 0.0, "requests": 0}
+
+
+def extra_spend(path: Path = None) -> float:
+    return float(_spend_read(path).get("inr", 0.0))
+
+
+def extra_cap(path: Path = None) -> float:
+    try:
+        return float(json.loads(Path(path or BACKUP_FILE).read_text()).get("cap_inr", 0.0))
+    except (OSError, ValueError):
+        return 0.0
+
+
+def record_spend(model: str, usage: dict, path: Path = None) -> float:
+    import fcntl
+    path = Path(path or SPEND_FILE); path.parent.mkdir(parents=True, exist_ok=True)
+    with path.with_suffix(".lock").open("w") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        d = _spend_read(path)
+        d["inr"] = round(float(d.get("inr", 0.0)) + cost_inr(model, usage), 4); d["requests"] = int(d.get("requests", 0)) + 1
+        d.setdefault("by_model", {}); d["by_model"][model] = round(d["by_model"].get(model, 0.0) + cost_inr(model, usage), 4)
+        path.write_text(json.dumps(d))
+        return d["inr"]
+
+
 def daily_quota_wait(body) -> "float | None":
     """Seconds until Google's PER-DAY voice allowance resets (plus a minute), or None when the 429 is only a per-minute limit."""
     daily, delay = False, None
@@ -114,8 +158,12 @@ def gemini_clip(text: str, voice: str, out_wav: Path, *, key: str = None, cache:
     if not raw.exists():
         tries = daily_waits = 0
         while True:
+            if model != MODEL and extra_spend() >= extra_cap():          # the approved amount for the extra voice models is used up (or not approved)
+                raise TTSError("DAILY_VOICE_QUOTA: the approved budget for the extra voice models is used up")
             status, body = _generate(model, STYLE + text, voice, key)
             if status == 200:
+                if model != MODEL:
+                    record_spend(model, body.get("usageMetadata") or {})
                 break
             wait = daily_quota_wait(body) if status == 429 else None
             if wait is not None and os.environ.get("TTS_NO_WAIT") == "1":

@@ -104,3 +104,26 @@ def test_a_used_up_daily_allowance_is_slept_through_without_using_the_retry_budg
     monkeypatch.setattr(tts, "_generate", gen)
     assert gemini_clip("z", "Kore", tmp_path / "a.wav", key="K", cache=tmp_path / "c") > 0
     assert slept == [15719, 15719] and len(calls) == 3
+
+
+def test_extra_voice_models_are_metered_and_stop_at_the_approved_amount(tmp_path, monkeypatch):
+    from engine import tts
+    monkeypatch.setattr(tts, "SPEND_FILE", tmp_path / "spend.json")
+    monkeypatch.setattr(tts, "BACKUP_FILE", tmp_path / "models.json")
+    (tmp_path / "models.json").write_text('{"backups": ["gemini-3.8-flash-tts"], "cap_inr": 1.0, "note": "test"}')
+    usage = {"promptTokenCount": 30, "candidatesTokenCount": 1250}
+    one = tts.cost_inr("gemini-3.8-flash-tts", usage)
+    assert 2.0 < one < 2.6                                                    # about ₹2.2 for a 50-second Reel at the cautious rate
+    assert tts.extra_spend() == 0.0 and tts.extra_cap() == 1.0
+    tts.record_spend("gemini-3.8-flash-tts", usage)
+    assert abs(tts.extra_spend() - one) < 1e-3
+    pcm = b"\x00\x00" * 2400
+    calls = []
+    def fake_generate(model, text, voice, key):
+        calls.append(model)
+        import base64
+        return 200, {"candidates": [{"content": {"parts": [{"inlineData": {"mimeType": "audio/L16;rate=24000", "data": base64.b64encode(pcm).decode()}}]}}], "usageMetadata": usage}
+    monkeypatch.setattr(tts, "_generate", fake_generate)
+    with pytest.raises(tts.TTSError, match="DAILY_VOICE_QUOTA"):
+        tts.gemini_clip("hello", "Kore", tmp_path / "o.wav", key="k", cache=tmp_path / "c", model="gemini-3.8-flash-tts")       # already past the cap: no request is made
+    assert calls == []

@@ -130,7 +130,7 @@ def snapshot() -> dict:
         pass
     reels = sorted(FOLDER.rglob("[0-9]*.mp4"))
     newest = max(reels, key=lambda p: p.stat().st_mtime) if reels else None
-    return {"now": datetime.now().strftime("%d %b %H:%M:%S"), "jobs": jobs, "voice_wait": voice_wait, "languages": _languages_html(), "queue": _queue(), "power": _power(), "voice": _voice_today(), "reels": len(reels),
+    return {"now": datetime.now().strftime("%d %b %H:%M:%S"), "jobs": jobs, "voice_wait": voice_wait, "languages": _languages_html(), "queue": _queue(), "power": _power(), "voice": _voice_today(), "extra_voice": {"spent": tts.extra_spend(), "cap": tts.extra_cap()}, "reels": len(reels),
             "newest": (newest.name, datetime.fromtimestamp(newest.stat().st_mtime).strftime("%H:%M")) if newest else None,
             "credit": broll.status_line(), "net": {"Google": _reach("https://www.google.com/generate_204"),
                                                     "GitHub": _reach("https://api.github.com"), "Veo (Vertex AI)": _reach("https://us-central1-aiplatform.googleapis.com")}}
@@ -151,6 +151,9 @@ def render(s: dict) -> str:
     queue_html = (f'<p style="background:#f4f4f6;padding:10px;border-radius:6px"><b>Still to do:</b> {q["conversions"]} language Reels to make from the finished English ones '
                   f'(about {q["days"]} days at 12 a day), and {q["english"]} English Reels still to render. '
                   f'Order now: conversions first, then English Reels already filmed, then cut-out English.</p>') if q.get("conversions") is not None else ""
+    ev = s.get("extra_voice") or {}
+    extra_html = (f'<p style="background:#fff8e1;padding:10px;border-radius:6px"><b>Extra voice budget:</b> about ₹{ev["spent"]:.0f} of ₹{ev["cap"]:.0f} used '
+                  f'(counted cautiously, so the real bill is probably lower). When it reaches the limit the extra voices switch off by themselves.</p>') if ev.get("cap") else ""
     v = s.get("voice") or {}
     voice_html = (f'<p style="background:#eef2ff;padding:10px;border-radius:6px"><b>Voice allowance today:</b> {v["used"]} of about {v["limit"]} lines used. '
                   f'Resets at {v["resets"]} (Lagos time). About 7 lines make one Reel.</p>') if v else ""
@@ -158,7 +161,7 @@ def render(s: dict) -> str:
 <body style="font:16px -apple-system,Helvetica,sans-serif;max-width:900px;margin:24px auto;padding:0 16px;color:#222">
 <h2>Arthvan Reels: live status</h2>
 <p style="font-size:22px"><b>Updated {s['now']}</b><br><span style="font-size:14px;color:#666">This clock moves every 30 seconds. If it stops, the Mac or the job has stopped. Reload the page to see the latest.</span></p>
-{wait}{power_html}{voice_html}{queue_html}<h3>Working on now</h3><table cellpadding=6>{rows}</table>
+{wait}{power_html}{voice_html}{extra_html}{queue_html}<h3>Working on now</h3><table cellpadding=6>{rows}</table>
 <h3>Finished</h3><p>{s['reels']} Reels in this folder. Newest: {newest}.</p>
 <h3>All languages: scripts written and Reels made</h3><p style="color:#666;font-size:14px;margin:2px 0">Scripts written = the translated script exists. Reels made = the finished video in that language. Gold bar = scripts, green bar = finished Reels.</p>{s.get('languages', '')}
 <h3>Google credit</h3><p>{html.escape(s['credit'])}</p>

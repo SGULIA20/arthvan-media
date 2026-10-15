@@ -16,7 +16,7 @@ import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import broll, calendar_plan, library, localize, notify, translator
+from . import broll, calendar_plan, library, localize, notify, translator, tts
 from .config import load_apps
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -77,7 +77,10 @@ def voice_models(path: Path = VOICE_MODELS) -> list:
     """[None, backup1, ...]: None is the normal voice model. A backup is used only when the one before it has no allowance left today,
     and a whole Reel is always voiced by ONE model so its voice never changes halfway."""
     try:
-        return [None] + [m for m in json.loads(Path(path).read_text()).get("backups", []) if isinstance(m, str)]
+        d = json.loads(Path(path).read_text())
+        if float(d.get("cap_inr", 0)) <= tts.extra_spend():          # the approved amount is used up: normal voice only
+            return [None]
+        return [None] + [m for m in d.get("backups", []) if isinstance(m, str)]
     except (OSError, ValueError, AttributeError):
         return [None]
 

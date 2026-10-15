@@ -124,7 +124,10 @@ def test_an_approved_backup_voice_model_takes_over_a_whole_reel_when_the_first_i
     assert [m[0] for m in r["made"]] == ["a-en", "b-en"] and r["stopped"] == ""
 
 
-def test_voice_models_is_just_the_normal_model_until_a_file_approves_backups(tmp_path):
+def test_voice_models_is_just_the_normal_model_until_a_file_approves_backups(tmp_path, monkeypatch):
     assert dp.voice_models(tmp_path / "none.json") == [None]
-    f = tmp_path / "v.json"; f.write_text('{"backups": ["m1", "m2"]}')
+    f = tmp_path / "v.json"; f.write_text('{"backups": ["m1", "m2"], "cap_inr": 400}')
+    monkeypatch.setattr(dp.tts, "extra_spend", lambda path=None: 10.0)
     assert dp.voice_models(f) == [None, "m1", "m2"]
+    monkeypatch.setattr(dp.tts, "extra_spend", lambda path=None: 400.0)                 # the approved amount is used up
+    assert dp.voice_models(f) == [None]
