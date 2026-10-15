@@ -44,7 +44,8 @@ with sync_playwright() as p:
         print("chats ERR", str(e)[:90])
     try:                                                   # 3) matching screen once the Mira button has appeared
         pg.goto(BASE + "/matching", wait_until="networkidle", timeout=90000)
-        pg.get_by_text("Talk to Mira while you wait").wait_for(timeout=90000); pg.wait_for_timeout(800)
+        MIRA = {"hi": "इंतज़ार करते हुए मीरा से बात करें"}.get(LANG, "Talk to Mira while you wait")        # the app's own button text in that language
+        pg.get_by_text(MIRA).wait_for(timeout=90000); pg.wait_for_timeout(800)
         pg.screenshot(path=f"{OUT}/matching-mira.png"); print("matching-mira ok")
     except Exception as e:
         print("matching-mira ERR", str(e)[:90])

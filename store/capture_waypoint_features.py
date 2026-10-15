@@ -25,7 +25,9 @@ with sync_playwright() as p:
             go(pg, path); pg.screenshot(path=f"{OUT}/{name}.png"); print(name, "ok")
         except Exception as e:
             print(name, "ERR", str(e)[:80])
-    for name, label, fill in (("poll", "Ask the Path", True), ("voice", "Voice", False)):
+    LABELS = {"hi": {"poll": "Ask the Path", "voice": "आवाज़"}}                         # the tab names in that language (the app's own strings)
+    SAMPLES = {"hi": ["नया शहर या घर के पास ही रहना?", "नया शहर", "घर के पास ही रहना"]}
+    for name, label, fill in (("poll", LABELS.get(LANGUAGE, {}).get("poll", "Ask the Path"), True), ("voice", LABELS.get(LANGUAGE, {}).get("voice", "Voice"), False)):
         if not ONLY or name not in ONLY:
             continue
         try:
@@ -33,7 +35,7 @@ with sync_playwright() as p:
             pg.get_by_text(label, exact=False).first.click(); pg.wait_for_timeout(1000)
             if fill:
                 boxes = pg.locator("input, textarea")
-                texts = ["New city, or stay close to home?", "New city", "Stay close to home"]
+                texts = SAMPLES.get(LANGUAGE, ["New city, or stay close to home?", "New city", "Stay close to home"])
                 for i, t in enumerate(texts[: boxes.count()]):
                     try: boxes.nth(i).fill(t)
                     except Exception: pass
