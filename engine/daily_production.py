@@ -187,79 +187,91 @@ def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_netwo
         result["left"], result["pending_english"] = left, len(pending_english(root))
         return result
 
-    # ---- 1. English originals while the free video credit lasts (those that would need new paid shots once it is gone wait: see 3.)
-    deferred = []
-    for s in pending_english(root):
-        cost = sum(1 for p in __import__("engine.story", fromlist=["shot_plan"]).shot_plan(s) if not p[3]) * 8 * broll.INR_PER_SECOND
-        film_ok = now <= broll.DEADLINE and broll.spent_inr() + cost <= broll.CREDIT_INR - 300
-        if cost and not film_ok:
-            deferred.append(s); continue
-        if used + _lines(s) > budget:
-            result["stopped"] = "voice budget"; break
-        if dry:
-            result["made"].append((s["id"], "English")); used += _lines(s); continue
-        status, msg = build_net(root / "stories" / (s["id"].replace("-", "_") + ".json"), root, {})
-        _log({"id": s["id"], "status": status if status != "made" else "made", "note": msg, "kind": "english"}, log)
-        if status == "network":
-            result["stopped"] = "network"; return finish()
-        used += _lines(s)
-        if status == "quota":
-            result["stopped"] = "voice allowance"; return finish()
-        (result["made"] if status == "made" else result["failed"]).append((s["id"], msg)); result["english"] += status == "made"
-    # ---- 2. conversions
     apps_cfg = {k: apps[k] for k in SUPPORTED}
-    for lang, base in backlog(root, _failures(log)):
+    deferred = []
+
+    def english_phase():
+        """English originals whose shots are already filmed (or still affordable). Those that would need NEW paid shots wait for the cut-out phase."""
+        nonlocal used
+        for s in pending_english(root):
+            cost = sum(1 for p in __import__("engine.story", fromlist=["shot_plan"]).shot_plan(s) if not p[3]) * 8 * broll.INR_PER_SECOND
+            film_ok = now <= broll.DEADLINE and broll.spent_inr() + cost <= broll.CREDIT_INR - 300
+            if cost and not film_ok:
+                deferred.append(s); continue
+            if used + _lines(s) > budget:
+                result["stopped"] = "voice budget"; return
+            if dry:
+                result["made"].append((s["id"], "English")); used += _lines(s); continue
+            status, msg = build_net(root / "stories" / (s["id"].replace("-", "_") + ".json"), root, {})
+            _log({"id": s["id"], "status": status, "note": msg, "kind": "english"}, log)
+            if status == "network":
+                result["stopped"] = "network"; return
+            used += _lines(s)
+            if status == "quota":
+                result["stopped"] = "voice allowance"; return
+            (result["made"] if status == "made" else result["failed"]).append((s["id"], msg)); result["english"] += status == "made"
+
+    def conversion_phase():
+        nonlocal used
+        for lang, base in backlog(root, _failures(log)):
+            if used + _lines(base) > budget:
+                result["stopped"] = "voice budget"; return
+            lid = localize.localized_id(base["id"], lang)
+            if dry:
+                result["made"].append((lid, library.LANGUAGES.get(lang, lang))); used += _lines(base); continue
+            try:
+                tr_path = translator.ensure_files(base, base["app"], apps_cfg[base["app"]], lang, root, ask or __import__("engine.gemini", fromlist=["ask"]).ask)
+                tr = json.loads(tr_path.read_text())
+                if tr.get("machine_translated") and "post_on" not in tr:        # a conversion comes at least a month after its English twin
+                    tr["post_on"] = (date.fromisoformat(base.get("post_on", now.isoformat())) + timedelta(days=30)).isoformat()
+                    tr_path.write_text(json.dumps(tr, indent=1, ensure_ascii=False) + "\n")
+                story = localize.localize(base, tr, lang)
+                sp = root / "stories" / (lid.replace("-", "_") + ".json"); sp.write_text(json.dumps(story, indent=1, ensure_ascii=False) + "\n")
+            except Exception as e:
+                if is_network_problem(f"{type(e).__name__} {e}"):
+                    _log({"id": lid, "status": "network", "note": f"translation: {str(e)[:150]}", "kind": "translate"}, log); result["stopped"] = "network"; return
+                _log({"id": lid, "status": "failed", "note": f"translation: {str(e)[:150]}", "kind": "translate"}, log); result["failed"].append((lid, f"translation: {str(e)[:90]}")); continue
+            status, msg = build_net(sp, root)
+            if status == "network":
+                _log({"id": lid, "status": "network", "note": msg, "kind": "convert", "lang": lang}, log); result["stopped"] = "network"; return
+            used += _lines(base)
+            if status == "made":
+                secs = _seconds(root / "stories" / "out" / f"{lid}.mp4")
+                if secs > MAX_SECONDS and tr.get("machine_translated"):          # too long for a Story: one stricter, shorter translation
+                    translator.ensure_files(base, base["app"], apps_cfg[base["app"]], lang, root, ask or __import__("engine.gemini", fromlist=["ask"]).ask, strict=True)
+                    tr = json.loads(tr_path.read_text()); sp.write_text(json.dumps(localize.localize(base, tr, lang), indent=1, ensure_ascii=False) + "\n")
+                    status, msg = build(sp, root); secs = _seconds(root / "stories" / "out" / f"{lid}.mp4") if status == "made" else secs
+                if status == "made" and secs > MAX_SECONDS:
+                    msg = f"made but {secs:.0f} s, over the 60 s Story limit: held back from posting"
+            _log({"id": lid, "status": status, "note": msg, "kind": "convert", "lang": lang}, log)
+            if status == "quota":
+                result["stopped"] = "voice allowance"; return
+            (result["made"] if status == "made" else result["failed"]).append((lid, msg))
+
+    def cutout_phase():
+        """English originals that now need new paid shots: the free cut-out style, last."""
+        nonlocal used
+        for s in deferred:
+            if used + _lines(s) > budget:
+                result["stopped"] = "voice budget"; return
+            if dry:
+                result["made"].append((s["id"], "English, free cut-out style")); used += _lines(s); continue
+            status, msg = build_net(root / "stories" / (s["id"].replace("-", "_") + ".json"), root, {"REEL_STYLE": "cutout"})
+            _log({"id": s["id"], "status": status, "note": msg, "kind": "english"}, log)
+            if status == "network":
+                result["stopped"] = "network"; return
+            used += _lines(s)
+            if status == "quota":
+                result["stopped"] = "voice allowance"; return
+            (result["made"] if status == "made" else result["failed"]).append((s["id"], msg)); result["english"] += status == "made"
+
+    # Order (founder, 15 Oct): while a whole new filmed Reel is still affordable, English originals first; once the video credit
+    # is used up, convert the finished Reels into the other languages first, then the remaining English ones (filmed-ready, then cut-out).
+    credit_gone = now > broll.DEADLINE or broll.spent_inr() + 6 * 8 * broll.INR_PER_SECOND > broll.CREDIT_INR - 300
+    for phase in ([conversion_phase, english_phase, cutout_phase] if credit_gone else [english_phase, conversion_phase, cutout_phase]):
+        phase()
         if result["stopped"]:
             break
-        if used + _lines(base) > budget:
-            result["stopped"] = "voice budget"; break
-        lid = localize.localized_id(base["id"], lang)
-        if dry:
-            result["made"].append((lid, library.LANGUAGES.get(lang, lang))); used += _lines(base); continue
-        try:
-            tr_path = translator.ensure_files(base, base["app"], apps_cfg[base["app"]], lang, root, ask or __import__("engine.gemini", fromlist=["ask"]).ask)
-            tr = json.loads(tr_path.read_text())
-            if tr.get("machine_translated") and "post_on" not in tr:        # a conversion comes at least a month after its English twin
-                tr["post_on"] = (date.fromisoformat(base.get("post_on", now.isoformat())) + timedelta(days=30)).isoformat()
-                tr_path.write_text(json.dumps(tr, indent=1, ensure_ascii=False) + "\n")
-            story = localize.localize(base, tr, lang)
-            sp = root / "stories" / (lid.replace("-", "_") + ".json"); sp.write_text(json.dumps(story, indent=1, ensure_ascii=False) + "\n")
-        except Exception as e:
-            if is_network_problem(f"{type(e).__name__} {e}"):
-                _log({"id": lid, "status": "network", "note": f"translation: {str(e)[:150]}", "kind": "translate"}, log); result["stopped"] = "network"; break
-            _log({"id": lid, "status": "failed", "note": f"translation: {str(e)[:150]}", "kind": "translate"}, log); result["failed"].append((lid, f"translation: {str(e)[:90]}")); continue
-        status, msg = build_net(sp, root)
-        if status == "network":
-            _log({"id": lid, "status": "network", "note": msg, "kind": "convert", "lang": lang}, log); result["stopped"] = "network"; break
-        used += _lines(base)
-        if status == "made":
-            secs = _seconds(root / "stories" / "out" / f"{lid}.mp4")
-            if secs > MAX_SECONDS and tr.get("machine_translated"):          # too long for a Story: one stricter, shorter translation
-                translator.ensure_files(base, base["app"], apps_cfg[base["app"]], lang, root, ask or __import__("engine.gemini", fromlist=["ask"]).ask, strict=True)
-                tr = json.loads(tr_path.read_text()); sp.write_text(json.dumps(localize.localize(base, tr, lang), indent=1, ensure_ascii=False) + "\n")
-                status, msg = build(sp, root); secs = _seconds(root / "stories" / "out" / f"{lid}.mp4") if status == "made" else secs
-            if status == "made" and secs > MAX_SECONDS:
-                msg = f"made but {secs:.0f} s, over the 60 s Story limit: held back from posting"
-        _log({"id": lid, "status": status, "note": msg, "kind": "convert", "lang": lang}, log)
-        if status == "quota":
-            result["stopped"] = "voice allowance"; break
-        (result["made"] if status == "made" else result["failed"]).append((lid, msg))
-    # ---- 3. English originals that now need new paid shots: free cut-out style, only after the conversions (founder's order, 15 Oct)
-    for s in deferred:
-        if result["stopped"]:
-            break
-        if used + _lines(s) > budget:
-            result["stopped"] = "voice budget"; break
-        if dry:
-            result["made"].append((s["id"], "English, free cut-out style")); used += _lines(s); continue
-        status, msg = build_net(root / "stories" / (s["id"].replace("-", "_") + ".json"), root, {"REEL_STYLE": "cutout"})
-        _log({"id": s["id"], "status": status, "note": msg, "kind": "english"}, log)
-        if status == "network":
-            result["stopped"] = "network"; break
-        used += _lines(s)
-        if status == "quota":
-            result["stopped"] = "voice allowance"; break
-        (result["made"] if status == "made" else result["failed"]).append((s["id"], msg)); result["english"] += status == "made"
     if not dry:
         library.sync(library.LIBRARY, root)
     return finish()
