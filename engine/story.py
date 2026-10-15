@@ -248,6 +248,7 @@ def build(story_path: Path, out_dir: Path) -> Path:
         with sync_playwright() as p:
             b = p.chromium.launch()
             pg = b.new_page(viewport={"width": 1080, "height": 1920})
+            pg.set_default_timeout(600000)                     # 10 minutes: a Mac that sleeps mid-render must not trip the 30 s default
             pg.add_init_script("window.STORY=" + json.dumps(deck) + ";")
             pg.goto(TEMPLATE.as_uri()); pg.evaluate("document.fonts.ready")
             pg.wait_for_function("[...document.images].every(i => i.complete)"); pg.wait_for_timeout(200)

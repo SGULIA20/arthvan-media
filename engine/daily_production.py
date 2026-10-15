@@ -35,6 +35,14 @@ NETWORK_WORDS = ("nodename nor servname", "Temporary failure in name resolution"
                  "Connection refused", "ConnectionError", "timed out", "Name or service not known")
 
 
+INTERRUPTED_WORDS = ("TimeoutError", "Timeout 30000ms exceeded", "Timeout exceeded", "Target closed", "has been closed", "Browser closed", "Call log:")
+
+
+def is_interrupted(text: str) -> bool:
+    """A Playwright timeout is measured on the wall clock, so a Mac that sleeps mid-render makes it expire: not the Reel's fault."""
+    return any(w in (text or "") for w in INTERRUPTED_WORDS) and not is_network_problem(text)
+
+
 def is_network_problem(text: str) -> bool:
     return any(w in (text or "") for w in NETWORK_WORDS)
 
@@ -129,7 +137,7 @@ def build_story(story_path: Path, root: Path = ROOT, extra_env: dict = None, tim
         return "quota", "voice allowance used up"
     if r.returncode != 0:
         last = (text.strip().splitlines() or ["no output"])[-1][:160]
-        return ("network" if is_network_problem(last) else "failed"), last
+        return ("network" if is_network_problem(text[-1500:]) else "interrupted" if is_interrupted(text[-1500:]) else "failed"), last
     return "made", ""
 
 
@@ -146,6 +154,10 @@ def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_netwo
     def build_net(*a):
         status, msg = build(*a)
         if status == "network" and wait_net():
+            status, msg = build(*a)
+        for _ in range(2):                                    # a sleep woke the page timeouts: voice and shots are cached, so a retry is cheap
+            if status != "interrupted":
+                break
             status, msg = build(*a)
         return status, msg
 

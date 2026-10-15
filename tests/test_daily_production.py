@@ -78,3 +78,14 @@ def test_network_errors_are_recognised_and_the_wait_gives_up_after_its_limit():
     slept = []
     assert dp.wait_for_network(max_seconds=120, step=60, up=lambda: False, sleep=slept.append) is False and slept == [60, 60]
     assert dp.wait_for_network(max_seconds=120, step=60, up=lambda: True, sleep=slept.append) is True
+
+
+def test_a_render_interrupted_by_a_sleeping_mac_is_retried_and_not_counted_as_a_failed_try(monkeypatch, tmp_path):
+    assert dp.is_interrupted("playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded.\nCall log:\n  - fonts loaded")
+    assert not dp.is_interrupted("ValueError: scene 3 has no picture")
+    assert not dp.is_interrupted("urllib.error.URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>")
+    setup(monkeypatch, tmp_path, [story("a-en"), story("b-en")], [])
+    answers = iter([("interrupted", "x"), ("interrupted", "x"), ("made", ""), ("interrupted", "x"), ("interrupted", "x"), ("interrupted", "x")])
+    r = dp.run(tmp_path, build=lambda *a, **k: next(answers), wait_net=lambda: True, now=NOW, log=tmp_path / "log")
+    assert [m[0] for m in r["made"]] == ["a-en"]                                   # the first came right on the third try
+    assert [f[0] for f in r["failed"]] == ["b-en"] and dp._failures(tmp_path / "log") == {}      # the second gave up for today without spending a try
