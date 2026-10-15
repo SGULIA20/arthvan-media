@@ -100,3 +100,13 @@ def test_the_day_is_marked_done_on_googles_pacific_calendar(tmp_path):
     assert dp.day_is_done(m, datetime(2026, 10, 15, 20, 0, tzinfo=timezone.utc))        # same Pacific day, later
     assert not dp.day_is_done(m, datetime(2026, 10, 16, 8, 0, tzinfo=timezone.utc))      # next Pacific day: work again
     assert dp.quota_day(datetime(2026, 10, 15, 6, 59, tzinfo=timezone.utc)) == "2026-10-14"    # before 07:00 UTC it is still the 14th there
+
+
+def test_once_the_credit_is_gone_conversions_come_before_cutout_english_originals(monkeypatch, tmp_path):
+    setup(monkeypatch, tmp_path, [story("a-en"), story("b-en")], [("hi", story("c-en")), ("hi", story("d-en"))])
+    import engine.story as st
+    monkeypatch.setattr(st, "shot_plan", lambda s: [(0, "p", [], s["id"] == "a-en")])          # a-en is fully filmed, b-en still needs a paid shot
+    monkeypatch.setattr(dp.broll, "spent_inr", lambda *a, **k: 27900.0)                        # the credit is used up
+    r = dp.run(tmp_path, dry=True, budget=100, now=NOW, log=tmp_path / "log")
+    assert [m[0] for m in r["made"]] == ["a-en", "c-hi", "d-hi", "b-en"]                       # film Reel first, then the conversions, then the cut-out original
+    assert dict(r["made"])["b-en"] == "English, free cut-out style"

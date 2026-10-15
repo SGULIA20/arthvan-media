@@ -187,15 +187,18 @@ def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_netwo
         result["left"], result["pending_english"] = left, len(pending_english(root))
         return result
 
-    # ---- 1. English originals (free credit first, then the free in-house style)
+    # ---- 1. English originals while the free video credit lasts (those that would need new paid shots once it is gone wait: see 3.)
+    deferred = []
     for s in pending_english(root):
-        if used + _lines(s) > budget:
-            result["stopped"] = "voice budget"; break
         cost = sum(1 for p in __import__("engine.story", fromlist=["shot_plan"]).shot_plan(s) if not p[3]) * 8 * broll.INR_PER_SECOND
         film_ok = now <= broll.DEADLINE and broll.spent_inr() + cost <= broll.CREDIT_INR - 300
+        if cost and not film_ok:
+            deferred.append(s); continue
+        if used + _lines(s) > budget:
+            result["stopped"] = "voice budget"; break
         if dry:
-            result["made"].append((s["id"], "English" + ("" if film_ok or not cost else ", free cut-out style"))); used += _lines(s); continue
-        status, msg = build_net(root / "stories" / (s["id"].replace("-", "_") + ".json"), root, {} if film_ok or not cost else {"REEL_STYLE": "cutout"})
+            result["made"].append((s["id"], "English")); used += _lines(s); continue
+        status, msg = build_net(root / "stories" / (s["id"].replace("-", "_") + ".json"), root, {})
         _log({"id": s["id"], "status": status if status != "made" else "made", "note": msg, "kind": "english"}, log)
         if status == "network":
             result["stopped"] = "network"; return finish()
@@ -241,6 +244,22 @@ def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_netwo
         if status == "quota":
             result["stopped"] = "voice allowance"; break
         (result["made"] if status == "made" else result["failed"]).append((lid, msg))
+    # ---- 3. English originals that now need new paid shots: free cut-out style, only after the conversions (founder's order, 15 Oct)
+    for s in deferred:
+        if result["stopped"]:
+            break
+        if used + _lines(s) > budget:
+            result["stopped"] = "voice budget"; break
+        if dry:
+            result["made"].append((s["id"], "English, free cut-out style")); used += _lines(s); continue
+        status, msg = build_net(root / "stories" / (s["id"].replace("-", "_") + ".json"), root, {"REEL_STYLE": "cutout"})
+        _log({"id": s["id"], "status": status, "note": msg, "kind": "english"}, log)
+        if status == "network":
+            result["stopped"] = "network"; break
+        used += _lines(s)
+        if status == "quota":
+            result["stopped"] = "voice allowance"; break
+        (result["made"] if status == "made" else result["failed"]).append((s["id"], msg)); result["english"] += status == "made"
     if not dry:
         library.sync(library.LIBRARY, root)
     return finish()
