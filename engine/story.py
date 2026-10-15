@@ -148,9 +148,7 @@ def missing_pictures(story: dict, root: Path = None) -> list:
     root = Path(root) if root else ROOT
     char_dir = root / "engine" / "assets" / "characters"
     lang = story.get("lang", "en").split("-")[0]                       # same rule as the renderer: hi-IN looks in the hi folder
-    shots = root / "store" / "shots" / story["app"] / lang
-    if not shots.exists():
-        shots = root / "store" / "shots" / story["app"]
+    shots = screens_dir(story["app"], lang, root)
     out = []
     for i, sc in enumerate(story["scenes"]):
         if sc.get("pose") and not sc.get("who") and not (char_dir / f"{story['character']}_{sc['pose']}.png").exists():
@@ -158,6 +156,15 @@ def missing_pictures(story: dict, root: Path = None) -> list:
         if sc.get("screen") and not any((d / sc["screen"]).exists() for d in (shots, root / "store" / "shots" / story["app"] / "en", root / "store" / "shots" / story["app"])):
             out.append(f"scene {i}: screen {sc['screen']} not found")
     return out
+
+
+def screens_dir(app: str, lang: str, root: Path = None) -> Path:
+    """Where the app screens for a Reel in `lang` live: that language's own folder if there is one, else the English screens."""
+    base = Path(root or ROOT) / "store" / "shots" / app
+    own = base / lang
+    if own.exists():
+        return own
+    return base / "en" if (base / "en").exists() else base
 
 
 LIMIT_S = 59.4                  # an Instagram Story must stay under 60 s
@@ -245,10 +252,8 @@ def build(story_path: Path, out_dir: Path) -> Path:
         amp = [round(float(min(1.0, a * 1.25)), 2) for a in amp]
         # screens in the ad's language when captured, else English
         lang = story.get("lang", "en").split("-")[0]
-        shots = ROOT / "store" / "shots" / story["app"] / lang
-        if not shots.exists():
-            shots = ROOT / "store" / "shots" / story["app"]
-        elif shots.name == lang and lang != "en":                       # a language folder may hold only some screens: the rest come from English
+        shots = screens_dir(story["app"], lang)
+        if shots.name == lang and lang != "en":                       # a language folder may hold only some screens: the rest come from English
             for sc in story["scenes"]:
                 name = sc.get("screen")
                 if name and not (shots / name).exists() and (ROOT / "store" / "shots" / story["app"] / "en" / name).exists():
