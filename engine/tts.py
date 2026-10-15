@@ -75,6 +75,15 @@ def record_spend(model: str, usage: dict, path: Path = None) -> float:
         return d["inr"]
 
 
+def _audio_part(body):
+    """The inline audio of a Gemini reply, or None when the reply carries none."""
+    try:
+        part = body["candidates"][0]["content"]["parts"][0]["inlineData"]
+        return part if part.get("data") else None
+    except (KeyError, IndexError, TypeError):
+        return None
+
+
 def daily_quota_wait(body) -> "float | None":
     """Seconds until Google's PER-DAY voice allowance resets (plus a minute), or None when the 429 is only a per-minute limit."""
     daily, delay = False, None
@@ -156,7 +165,7 @@ def gemini_clip(text: str, voice: str, out_wav: Path, *, key: str = None, cache:
     cache = Path(cache); cache.mkdir(parents=True, exist_ok=True)
     raw = cache / (hashlib.sha1(f"{model}|{voice}|{STYLE}{text}".encode()).hexdigest() + ".wav")
     if not raw.exists():
-        tries = daily_waits = 0
+        tries = daily_waits = empty_tries = 0
         while True:
             if model != MODEL and extra_spend() >= extra_cap():          # the approved amount for the extra voice models is used up (or not approved)
                 raise TTSError("DAILY_VOICE_QUOTA: the approved budget for the extra voice models is used up")
@@ -174,7 +183,16 @@ def gemini_clip(text: str, voice: str, out_wav: Path, *, key: str = None, cache:
             if tries < 6 and status in (429, 500, 503):        # a per-minute quota or a busy server: wait it out, politely
                 time.sleep(8 if status != 429 else 20 + 15 * (tries - 1)); continue
             raise TTSError(f"Gemini TTS failed ({status}): {str((body.get('error') or {}).get('message') or body)[:200].replace(key, '<key>')}")
-        part = body["candidates"][0]["content"]["parts"][0]["inlineData"]
+        part = _audio_part(body)
+        while part is None and empty_tries < 3:            # a 200 with no audio (the model sometimes answers with a finish reason only): ask again
+            empty_tries += 1; time.sleep(3)
+            status, body = _generate(model, STYLE + text, voice, key)
+            if status == 200 and model != MODEL:
+                record_spend(model, body.get("usageMetadata") or {})
+            part = _audio_part(body) if status == 200 else None
+        if part is None:
+            cand = ((body.get("candidates") or [{}])[0]) if isinstance(body, dict) else {}
+            raise TTSError(f"Gemini TTS gave no audio ({model}, finishReason {cand.get('finishReason')}) after {empty_tries} more tries")
         data = base64.b64decode(part["data"])
         if "wav" in part.get("mimeType", ""):
             raw.write_bytes(data)

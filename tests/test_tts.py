@@ -127,3 +127,18 @@ def test_extra_voice_models_are_metered_and_stop_at_the_approved_amount(tmp_path
     with pytest.raises(tts.TTSError, match="DAILY_VOICE_QUOTA"):
         tts.gemini_clip("hello", "Kore", tmp_path / "o.wav", key="k", cache=tmp_path / "c", model="gemini-3.8-flash-tts")       # already past the cap: no request is made
     assert calls == []
+
+
+def test_an_empty_gemini_reply_is_asked_again_and_then_reported_plainly(tmp_path, monkeypatch):
+    import base64
+    from engine import tts
+    monkeypatch.setattr(tts.time, "sleep", lambda s: None)
+    pcm = b"\x00\x00" * 2400
+    good = {"candidates": [{"content": {"parts": [{"inlineData": {"mimeType": "audio/L16;rate=24000", "data": base64.b64encode(pcm).decode()}}]}}]}
+    empty = {"candidates": [{"finishReason": "OTHER"}]}
+    replies = iter([(200, empty), (200, good)])
+    monkeypatch.setattr(tts, "_generate", lambda *a: next(replies))
+    assert tts.gemini_clip("hello", "Kore", tmp_path / "o.wav", key="k", cache=tmp_path / "c") > 0          # second answer has audio
+    monkeypatch.setattr(tts, "_generate", lambda *a: (200, empty))
+    with pytest.raises(tts.TTSError, match="no audio"):
+        tts.gemini_clip("another line", "Kore", tmp_path / "o2.wav", key="k", cache=tmp_path / "c")
