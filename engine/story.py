@@ -160,6 +160,21 @@ def missing_pictures(story: dict, root: Path = None) -> list:
     return out
 
 
+LIMIT_S = 59.4                  # an Instagram Story must stay under 60 s
+
+
+def speed_for(durations: list, mins: list, limit: float = LIMIT_S) -> float:
+    """1.0 when the Reel already fits; otherwise the smallest gentle speed-up (never above 1.25x) that brings it under the limit."""
+    def total(f):
+        return sum(round(max(m, d / f + 1.2), 2) for d, m in zip(durations, mins))
+    if total(1.0) <= limit:
+        return 1.0
+    for f in (1.06, 1.1, 1.15, 1.2, 1.25):
+        if total(f) <= limit:
+            return f
+    return 1.25
+
+
 def build(story_path: Path, out_dir: Path) -> Path:
     story = json.loads(Path(story_path).read_text())
     problems = missing_pictures(story)
@@ -189,6 +204,18 @@ def build(story_path: Path, out_dir: Path) -> Path:
                 d = gemini_clip(s["vo"], pick_voice({"character": story["character"], "voice": s.get("voice")}), wav)
             s["dur"] = round(max(s.get("min", 4), d + 1.2), 2)
             clips.append((wav, d))
+        f = speed_for([d for _w, d in clips], [sc.get("min", 4) for sc in story["scenes"]])
+        if f > 1.0:                                   # a language whose lines run long: speak every line a little faster, same pitch
+            print(f"voice speed-up {f}x to stay under 60 s", flush=True)
+            fitted = []
+            for sc, (wav, _d) in zip(story["scenes"], clips):
+                fast = wav.with_name(wav.stem + "_fast.wav")
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(wav), "-filter:a", f"atempo={f}", str(fast)], check=True)
+                fast.replace(wav)
+                with wave.open(str(wav)) as w:
+                    nd = w.getnframes() / w.getframerate()
+                sc["dur"] = round(max(sc.get("min", 4), nd + 1.2), 2); fitted.append((wav, nd))
+            clips = fitted
         total = sum(s["dur"] for s in story["scenes"])
         # voice loudness per frame (drives the mouth): lay the clips on the timeline first
         sr = 44100
