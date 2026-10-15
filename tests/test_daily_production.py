@@ -132,3 +132,15 @@ def test_voice_models_is_just_the_normal_model_until_a_file_approves_backups(tmp
     assert dp.voice_models(f) == [None, "m1", "m2"]
     monkeypatch.setattr(dp.tts, "extra_spend", lambda path=None: 400.0)                 # the approved amount is used up
     assert dp.voice_models(f) == [None]
+
+
+def test_a_google_account_block_stops_the_run_and_is_not_counted_as_a_failed_try(monkeypatch, tmp_path):
+    assert dp.is_blocked("engine.tts.TTSError: Gemini TTS failed (403): Billing account is in a suspended state")
+    assert not dp.is_blocked("TTSError: DAILY_VOICE_QUOTA: today's Google voice allowance is used up")
+    assert not dp.is_blocked("ValueError: scene 3 has no picture")
+    setup(monkeypatch, tmp_path, [story("a-en"), story("b-en")], [])
+    built = []
+    def build(path, root, env=None):
+        built.append(path.name); return ("blocked", "Gemini TTS failed (403)")
+    r = dp.run(tmp_path, build=build, wait_net=lambda: True, now=NOW, log=tmp_path / "log")
+    assert built == ["a_en.json"] and r["stopped"].startswith("google blocked") and dp._failures(tmp_path / "log") == {}

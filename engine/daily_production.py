@@ -43,6 +43,15 @@ def is_interrupted(text: str) -> bool:
     return any(w in (text or "") for w in INTERRUPTED_WORDS) and not is_network_problem(text)
 
 
+BLOCKED_WORDS = ("billing", "PERMISSION_DENIED", "(403)", "trial", "account has been", "spend cap", "SERVICE_DISABLED")
+
+
+def is_blocked(text: str) -> bool:
+    """Google refusing the voice for an account reason (billing, trial credit, spend cap): not the Reel's fault, and retrying cannot help."""
+    low = (text or "").lower()
+    return any(w.lower() in low for w in BLOCKED_WORDS) and "daily_voice_quota" not in low
+
+
 def is_network_problem(text: str) -> bool:
     return any(w in (text or "") for w in NETWORK_WORDS)
 
@@ -171,7 +180,8 @@ def build_story(story_path: Path, root: Path = ROOT, extra_env: dict = None, tim
         return "quota", "voice allowance used up"
     if r.returncode != 0:
         last = (text.strip().splitlines() or ["no output"])[-1][:160]
-        return ("network" if is_network_problem(text[-1500:]) else "interrupted" if is_interrupted(text[-1500:]) else "failed"), last
+        return ("network" if is_network_problem(text[-1500:]) else "blocked" if is_blocked(text[-1500:]) else
+                "interrupted" if is_interrupted(text[-1500:]) else "failed"), last
     return "made", ""
 
 
@@ -233,6 +243,8 @@ def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_netwo
             _log({"id": s["id"], "status": status, "note": msg, "kind": "english"}, log)
             if status == "network":
                 result["stopped"] = "network"; return
+            if status == "blocked":
+                result["stopped"] = "google blocked the voice (billing or credit?)"; return
             used += _lines(s)
             if status == "quota":
                 result["stopped"] = "voice allowance"; return
@@ -261,6 +273,8 @@ def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_netwo
             status, msg = build_net(sp, root)
             if status == "network":
                 _log({"id": lid, "status": "network", "note": msg, "kind": "convert", "lang": lang}, log); result["stopped"] = "network"; return
+            if status == "blocked":
+                _log({"id": lid, "status": "blocked", "note": msg, "kind": "convert", "lang": lang}, log); result["stopped"] = "google blocked the voice (billing or credit?)"; return
             used += _lines(base)
             if status == "made":
                 secs = _seconds(root / "stories" / "out" / f"{lid}.mp4")
@@ -287,6 +301,8 @@ def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_netwo
             _log({"id": s["id"], "status": status, "note": msg, "kind": "english"}, log)
             if status == "network":
                 result["stopped"] = "network"; return
+            if status == "blocked":
+                result["stopped"] = "google blocked the voice (billing or credit?)"; return
             used += _lines(s)
             if status == "quota":
                 result["stopped"] = "voice allowance"; return
@@ -339,15 +355,16 @@ def main(argv=None) -> int:
     if not dry and not wait_for_network():
         print("no network for 3 hours; nothing made today"); return 0
     result = run(dry=dry)
-    if not dry and result["stopped"] in ("voice allowance", "voice budget"):
-        mark_day_done(result["stopped"])        # the day's voice is used: resume launches stay quiet until the next Pacific day
+    blocked = result["stopped"].startswith("google blocked")
+    if not dry and (result["stopped"] in ("voice allowance", "voice budget") or blocked):
+        mark_day_done(result["stopped"])        # the day's voice is used (or Google blocked it): resume launches stay quiet until the next Pacific day
     text = summary(result, notify.credit_line())
     print(text)
     if dry:
         for sid, what in result["made"][:40]:
             print("  would make", sid, "|", what)
         return 0
-    if resume and not result["made"]:           # a resume launch that made nothing says nothing
+    if resume and not result["made"] and not blocked:           # a resume launch that made nothing says nothing (except a Google block: the founder must hear it once)
         return 0
     notify.send(text)
     return 0
