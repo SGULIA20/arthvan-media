@@ -26,3 +26,10 @@ def test_a_translation_with_the_wrong_number_of_scenes_is_refused():
 
 def test_ids_swap_the_language_suffix():
     assert localized_id("founder-card-en", "es") == "founder-card-es" and localized_id("lumi-navratri-gu", "hi") == "lumi-navratri-gu-hi"
+
+
+def test_private_loader_flags_are_not_copied_into_a_localized_story():
+    from engine import localize
+    base = {"id": "x-en", "app": "scoremybiz", "lang": "en", "_held": False, "_other": 1, "scenes": [{"layout": "clip", "vo": "Hello"}, {"layout": "end", "vo": "End"}]}
+    st = localize.localize(base, {"scenes": [{"vo": "नमस्ते"}, {"vo": "अंत"}]}, "hi")
+    assert not [k for k in st if k.startswith("_")] and st["id"] == "x-hi" and st["scenes"][0]["vo"] == "नमस्ते"

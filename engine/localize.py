@@ -22,6 +22,8 @@ def localize(base: dict, tr: dict, lang: str) -> dict:
     if len(tr["scenes"]) != len(base["scenes"]):
         raise ValueError(f"{base['id']}: translation has {len(tr['scenes'])} scenes, the Reel has {len(base['scenes'])} scenes")
     st = copy.deepcopy(base)
+    for k in [k for k in st if k.startswith("_")]:          # the loader's private flags (like _held) do not belong in a story file
+        del st[k]
     st["id"], st["lang"] = localized_id(base["id"], lang), LOCALE.get(lang, lang)
     for k in ("legacy", "voice", "rate"):
         st.pop(k, None)
