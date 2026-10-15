@@ -16,6 +16,7 @@ def setup(monkeypatch, tmp_path, english, convert):
     monkeypatch.setattr(dp, "library", type("L", (), {"LANGUAGES": {"hi": "Hindi", "ta": "Tamil"}, "sync": staticmethod(lambda *a: None), "LIBRARY": tmp_path})())
     monkeypatch.setattr(dp.broll, "spent_inr", lambda *a, **k: 1000.0)
     monkeypatch.setattr(dp, "load_apps", lambda: {"scoremybiz": {}, "waypoint": {}})
+    monkeypatch.setattr(dp, "voice_models", lambda path=None: [None])                  # never read the founder's real approval file in a test
     import engine.story as st
     monkeypatch.setattr(st, "shot_plan", lambda s: [(0, "p", [], True)])                # every shot already cached
 
