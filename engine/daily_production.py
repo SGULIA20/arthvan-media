@@ -1,4 +1,4 @@
-"""The daily production run, started by a Mac launch agent at 01:30 (after Google's free voice allowance resets at 01:00) with nobody watching:
+"""The daily production run, started by a Mac launch agent at 08:30 and again at 09:30 WAT (Google's free voice allowance resets at US Pacific midnight: 08:00 WAT, 09:00 after the US clocks change on 1 Nov) with nobody watching:
 
   1. English originals that are scripted but not made yet: made with the free Google video credit while it lasts (ledger guard, 10 Dec),
      then in the free in-house cut-out style.
@@ -50,7 +50,7 @@ def network_up(hosts=("generativelanguage.googleapis.com", "aiplatform.googleapi
 
 
 def wait_for_network(max_seconds: int = 3 * 3600, step: int = 60, up=network_up, sleep=None) -> bool:
-    """The 01:30 launch can fire while the Mac's Wi-Fi is still coming back: wait for DNS instead of failing every Reel in one second."""
+    """A morning launch can fire while the Mac's Wi-Fi is still coming back: wait for DNS instead of failing every Reel in one second."""
     import time
     sleep = sleep or time.sleep
     waited = 0
