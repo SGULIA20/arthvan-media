@@ -70,3 +70,15 @@ def test_a_title_caption_or_line_left_in_english_is_rejected_for_a_native_script
     assert tr.problems(base, dict(good, title="Hello"), "gu") == ["title left in English"]
     assert tr.problems(base, dict(good, scenes=[{"vo": "Hello there my friend."}, good["scenes"][1]]), "gu") == ["scene 0: line left in English"]
     assert tr.problems(base, dict(good, title="Hello"), "es") == []              # Latin-script languages are not held to this
+
+
+def test_every_written_end_card_text_is_free_of_stray_english_words_in_native_script_languages():
+    import glob, os, re
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    for f in glob.glob(os.path.join(root, "content", "end_card", "*.json")):
+        lang = os.path.basename(f)[:-5]
+        if lang not in tr.NON_LATIN:
+            continue
+        for app, texts in json.load(open(f)).items():
+            for key, text in texts.items():
+                assert not re.search(r"[A-Za-z]{3,}", text), f"{lang}/{app}/{key} has English letters: {text}"
