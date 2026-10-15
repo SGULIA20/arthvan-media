@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "founder-bills-hi",
+ "character": "founder_suit",
+ "feature": "bills-for-customers",
+ "title": "एक सही बिल",
+ "post_on": "2027-01-12",
+ "caption": "एक पुराने ग्राहक ने दुकान के नाम वाला सही बिल माँगा। संस्थापक अनिल की कहानी सुनाते हैं।",
+ "linkedin_text": "In ScoreMyBiz the owner makes a numbered bill with items and his shop name, and shares it as a PDF or a WhatsApp message. It is a simple bill, not an e-invoice.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Billing"
+ ],
+ "cast": {
+  "anil": "Anil, a middle-aged Indian building supplies dealer with a thick moustache, in a cream shirt with a pen in his pocket"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a building supplies shop with stacked cement bags behind him, a warm smile.",
+   "vo": "नमस्ते। यह अनिल की कहानी है। एक पुराने ग्राहक ने कहा, क्या आप मुझे एक सही बिल भेज सकते हैं?",
+   "sub": "नमस्ते। यह अनिल की कहानी है। एक पुराने ग्राहक ने कहा, क्या आप मुझे एक सही बिल भेज सकते हैं?",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "A proper bill"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} looking at a scrap of paper with scribbled numbers, an embarrassed smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "उसके पास बस काग़ज़ की एक पर्ची थी, जिस पर कुछ आँकड़े लिखे थे।",
+   "sub": "उसके पास बस काग़ज़ की एक पर्ची थी, जिस पर कुछ आँकड़े लिखे थे।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} tapping his phone with a pleased look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में वह नंबर वाला बिल बनाता है, अपनी दुकान के नाम और सामान के साथ।",
+   "sub": "स्कोर माय बिज़ में वह नंबर वाला बिल बनाता है, अपनी दुकान के नाम और सामान के साथ।",
+   "min": 8,
+   "screen": "invoices.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} reading his phone and nodding, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "फिर उसे पीडीएफ़ के रूप में, या व्हाट्सएप पर मैसेज की तरह भेज देता है।",
+   "sub": "फिर उसे पीडीएफ़ के रूप में, या व्हाट्सएप पर मैसेज की तरह भेज देता है।",
+   "min": 8,
+   "screen": "invoices.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} putting his phone down with a satisfied smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ग्राहक के पास एक मिनट में सही बिल पहुँच जाता है।",
+   "sub": "ग्राहक के पास एक मिनट में सही बिल पहुँच जाता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} standing in his shop, arms folded, smiling.",
+   "vo": "एक सीधा-सादा बिल, जिस पर उसकी अपनी दुकान का नाम है।",
+   "sub": "एक सीधा-सादा बिल, जिस पर उसकी अपनी दुकान का नाम है।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

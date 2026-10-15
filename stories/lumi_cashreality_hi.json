@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-cashreality-hi",
+ "character": "lumi",
+ "feature": "profit-on-paper-vs-cash",
+ "title": "मुनाफ़ा नक़द नहीं होता",
+ "post_on": "2027-01-08",
+ "caption": "महीना मुनाफ़े वाला लगा, पर गल्ला ख़ाली था। लूमी इमरान की कहानी सुनाती है।",
+ "linkedin_text": "ScoreMyBiz sets the profit the sales suggest against the cash the owner really has after what customers still owe and what he owes suppliers, and lists plain warnings from his own entries.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#CashFlow"
+ ],
+ "cast": {
+  "imran": "Imran, a middle-aged Indian hardware shop owner with grey-flecked hair and glasses, in a checked shirt with a pen in the pocket"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a hardware shop with shelves of tools and paint tins behind her, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह इमरान की कहानी है। महीना बहुत मुनाफ़े वाला दिख रहा था।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह इमरान की कहानी है। महीना बहुत मुनाफ़े वाला दिख रहा था।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Profit is not cash"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} staring into an almost empty cash drawer, puzzled, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "पर जब उसने दराज़ खोली, तो नक़द काफ़ी कम निकला।",
+   "sub": "पर जब उसने दराज़ खोली, तो नक़द काफ़ी कम निकला।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} reading his phone and nodding slowly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ उसके काग़ज़ी मुनाफ़े को उसके असली नक़द के बगल में रखता है।",
+   "sub": "स्कोर माय बिज़ उसके काग़ज़ी मुनाफ़े को उसके असली नक़द के बगल में रखता है।",
+   "min": 8,
+   "screen": "cash-reality.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} pointing at his phone with an understanding look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "यह अंतर दिखाता है, और वह पैसा भी जो अभी ग्राहकों के पास अटका है।",
+   "sub": "यह अंतर दिखाता है, और वह पैसा भी जो अभी ग्राहकों के पास अटका है।",
+   "min": 8,
+   "screen": "cash-reality.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} making a phone call at his counter, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "यह उसकी अपनी एंट्रियों से सीधी चेतावनियाँ गिनाता है, जैसे देर से पैसे देने वाले ग्राहक।",
+   "sub": "यह उसकी अपनी एंट्रियों से सीधी चेतावनियाँ गिनाता है, जैसे देर से पैसे देने वाले ग्राहक।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} standing in his shop with his arms folded, smiling.",
+   "vo": "अब वह जानता है कि दराज़ हल्की क्यों थी।",
+   "sub": "अब वह जानता है कि दराज़ हल्की क्यों थी।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

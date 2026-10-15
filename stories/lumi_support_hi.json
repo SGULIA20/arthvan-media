@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-support-hi",
+ "character": "lumi",
+ "feature": "report-a-problem",
+ "title": "कोई देखेगा",
+ "post_on": "2027-01-13",
+ "caption": "नेहा के खाते से एक बिक्री ग़ायब थी, और वह चाहती थी कि कोई देखे। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "In ScoreMyBiz the owner can write what went wrong, get a ticket number and see the reply inside the app. The app states a target of replying within 24 hours; it is a target, not a guarantee.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Support"
+ ],
+ "cast": {
+  "neha": "Neha, a young Indian woman who runs a small stationery shop, with a short bob haircut, in a mustard kurta and round glasses"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small stationery shop with shelves of notebooks and pens behind her, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह नेहा की कहानी है। एक सुबह उसकी लिखी एक बिक्री उसके खाते से ग़ायब थी।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह नेहा की कहानी है। एक सुबह उसकी लिखी एक बिक्री उसके खाते से ग़ायब थी।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Someone will look"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} flipping through her phone, worried, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "उसे पक्का याद था कि उसने लिखी थी। किससे पूछे?",
+   "sub": "उसे पक्का याद था कि उसने लिखी थी। किससे पूछे?",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} tapping her phone with a determined look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में वह समस्या की रिपोर्ट करें खोलती है और लिखती है कि क्या हुआ।",
+   "sub": "स्कोर माय बिज़ में वह समस्या की रिपोर्ट करें खोलती है और लिखती है कि क्या हुआ।",
+   "min": 8,
+   "screen": "support.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} reading her phone with a relieved nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "उसे टिकट नंबर मिलता है, और जवाब ऐप के अंदर ही आता है।",
+   "sub": "उसे टिकट नंबर मिलता है, और जवाब ऐप के अंदर ही आता है।",
+   "min": 8,
+   "screen": "support.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} smiling at her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ऐप एक दिन के अंदर जवाब देने का लक्ष्य रखता है।",
+   "sub": "ऐप एक दिन के अंदर जवाब देने का लक्ष्य रखता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} standing among her shelves, smiling at the camera.",
+   "vo": "किसी समस्या को चिंता बनकर नहीं रहना पड़ता।",
+   "sub": "किसी समस्या को चिंता बनकर नहीं रहना पड़ता।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

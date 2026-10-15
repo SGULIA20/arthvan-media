@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "founder-whatif-hi",
+ "character": "founder_suit",
+ "feature": "what-if-simulator",
+ "title": "अगर ऐसा हो तो",
+ "post_on": "2027-01-15",
+ "caption": "हरि जानना चाहता था कि देर से पैसे देने वाले ग्राहकों के पीछे पड़ने से उसका स्कोर कैसे बदलेगा। संस्थापक उसकी कहानी सुनाते हैं।",
+ "linkedin_text": "In ScoreMyBiz, once an owner has a score, he can nudge revenue, expenses and how fast customers pay by a few percent and see how the score would move. It is a what-if on his own numbers, not a forecast.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#WhatIf"
+ ],
+ "cast": {
+  "hari": "Hari, a young Indian grocery shop owner with a trimmed beard, in a green polo shirt with a small notebook in his hand"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a neat grocery shop with shelves of packaged goods behind him, a warm smile.",
+   "vo": "नमस्ते। यह हरि की कहानी है। कुछ ग्राहक उसे देर से पैसे देते हैं, और वह सोचता था कि उनके पीछे पड़ने से क्या बदलेगा।",
+   "sub": "नमस्ते। यह हरि की कहानी है। कुछ ग्राहक उसे देर से पैसे देते हैं, और वह सोचता था कि उनके पीछे पड़ने से क्या बदलेगा।",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "What if"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} behind his counter, thinking, tapping a pen against his notebook, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "क्या उन अटपटे फ़ोन कॉल का फ़ायदा है? वह शुरू करने से पहले देखना चाहता था।",
+   "sub": "क्या उन अटपटे फ़ोन कॉल का फ़ायदा है? वह शुरू करने से पहले देखना चाहता था।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} tapping his phone with a curious look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में वह अपने स्कोर पर सिमुलेटर खोलता है।",
+   "sub": "स्कोर माय बिज़ में वह अपने स्कोर पर सिमुलेटर खोलता है।",
+   "min": 8,
+   "screen": "business-simulator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} reading his phone and nodding slowly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह बिक्री, खर्च, या ग्राहकों के पैसे देने की रफ़्तार को थोड़ा-थोड़ा बदलता है, और स्कोर को हिलते देखता है।",
+   "sub": "वह बिक्री, खर्च, या ग्राहकों के पैसे देने की रफ़्तार को थोड़ा-थोड़ा बदलता है, और स्कोर को हिलते देखता है।",
+   "min": 8,
+   "screen": "business-simulator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} smiling thoughtfully at his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "यह उसके अपने आँकड़ों पर एक अगर-ऐसा-हो है। अनुमान नहीं।",
+   "sub": "यह उसके अपने आँकड़ों पर एक अगर-ऐसा-हो है। अनुमान नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} standing in his shop, arms folded, smiling.",
+   "vo": "अब वह जानता है कि पहला कॉल किसे करना ठीक रहेगा।",
+   "sub": "अब वह जानता है कि पहला कॉल किसे करना ठीक रहेगा।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

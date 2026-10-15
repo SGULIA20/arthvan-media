@@ -1,0 +1,76 @@
+{
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "id": "founder-walltools-hi",
+ "character": "founder_casual",
+ "feature": "wall-sort-search-surprise",
+ "title": "शब्द ढूँढिए",
+ "post_on": "2027-01-04",
+ "caption": "टेस्ट से पहले की रात, हाना वेपॉइंट की दीवार पर परीक्षा खोजती है। संस्थापक उसकी कहानी सुनाते हैं।",
+ "linkedin_text": "Pills on Waypoint's Wall switch between New and Top today, this week and this month. A magnifier searches post text from two letters, and a dice button shows one random post.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#Wall"
+ ],
+ "cast": {
+  "hana": "Hana, a young woman with a high ponytail in a navy hoodie, studying at a desk with a lamp"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a quiet campus path in the evening, a relaxed smile.",
+   "vo": "नमस्ते। यह हाना की कहानी है। कल उसका टेस्ट है, और आज रात उसका दिमाग़ शोर से भरा है।",
+   "sub": "नमस्ते। यह हाना की कहानी है। कल उसका टेस्ट है, और आज रात उसका दिमाग़ शोर से भरा है।",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "Find the words"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hana} at a desk with open notebooks late at night, rubbing her eyes, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह सोचती है कि क्या किसी और को भी ऐसा ही लगता है।",
+   "sub": "वह सोचती है कि क्या किसी और को भी ऐसा ही लगता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{hana} opening her phone with a hopeful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वेपॉइंट की दीवार पर टैब बदलते हैं: नया, और आज, इस हफ़्ते या इस महीने का सबसे ऊपर।",
+   "sub": "वेपॉइंट की दीवार पर टैब बदलते हैं: नया, और आज, इस हफ़्ते या इस महीने का सबसे ऊपर।",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hana} typing on her phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "खोज का आइकन दो अक्षरों से दीवार खोजता है। वह लिखती है, परीक्षा।",
+   "sub": "खोज का आइकन दो अक्षरों से दीवार खोजता है। वह लिखती है, परीक्षा।",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hana} tapping her phone with a small smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "पासे का एक बटन कोई एक बेतरतीब पोस्ट दिखाता है, जब वह चौंकना चाहे।",
+   "sub": "पासे का एक बटन कोई एक बेतरतीब पोस्ट दिखाता है, जब वह चौंकना चाहे।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{hana} closing her notebook with a relieved smile, lamp glowing behind her.",
+   "vo": "उसे पता चलता है कि वह अकेली नहीं है, और वह सो जाती है।",
+   "sub": "उसे पता चलता है कि वह अकेली नहीं है, और वह सो जाती है।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "वेपॉइंट। एक बार कहिए। गूगल प्ले पर मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

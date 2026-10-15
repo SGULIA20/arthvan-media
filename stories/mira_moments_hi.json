@@ -1,0 +1,76 @@
+{
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "id": "mira-moments-hi",
+ "character": "mira",
+ "feature": "moments",
+ "title": "एक बार देखा गया",
+ "post_on": "2027-01-03",
+ "caption": "ज़ोई का सूर्यास्त इतना सुंदर है कि अकेले नहीं रखा जा सकता। वह उसे पल की तरह शेयर करती है, और एक अजनबी उसे एक बार देखता है। मीरा उसकी कहानी सुनाती है।",
+ "linkedin_text": "On Waypoint's Wall, the Moments strip lets a member add a picture that is screened before it can go live, stays for 24 hours, and is seen by the first other person who opens it for ten seconds, who can send one emoji. Then it is gone for everyone.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#Moments"
+ ],
+ "cast": {
+  "zoe": "Zoe, a young woman with a curly auburn bob and a mustard cardigan"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera on a balcony at golden hour with a warm orange sky behind her, a gentle smile.",
+   "vo": "नमस्ते, मैं मीरा हूँ। यह ज़ोई की कहानी है। उसकी बालकनी से सूर्यास्त इतना सुंदर है कि उसे अकेले रखना मुश्किल है।",
+   "sub": "नमस्ते, मैं मीरा हूँ। यह ज़ोई की कहानी है। उसकी बालकनी से सूर्यास्त इतना सुंदर है कि उसे अकेले रखना मुश्किल है।",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Seen once"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoe} on her balcony photographing a glowing sunset with her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह उसे शेयर करना चाहती है, पर पूरी दुनिया से नहीं, और हमेशा के लिए नहीं।",
+   "sub": "वह उसे शेयर करना चाहती है, पर पूरी दुनिया से नहीं, और हमेशा के लिए नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoe} opening her phone with a curious smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वेपॉइंट की दीवार पर पलों की एक पट्टी है। वह जोड़ें पर टैप करती है, और तस्वीर चुनती है।",
+   "sub": "वेपॉइंट की दीवार पर पलों की एक पट्टी है। वह जोड़ें पर टैप करती है, और तस्वीर चुनती है।",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoe} watching her phone with a soft smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "एक तस्वीर जिसे एक ही व्यक्ति एक बार देखता है, फिर वह सबके लिए ग़ायब हो जाती है। लाइव होने से पहले उसकी जाँच होती है, और वह चौबीस घंटे तक रहती है।",
+   "sub": "एक तस्वीर जिसे एक ही व्यक्ति एक बार देखता है, फिर वह सबके लिए ग़ायब हो जाती है। लाइव होने से पहले उसकी जाँच होती है, और वह चौबीस घंटे तक रहती है।",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoe} leaning on the balcony rail looking at the sky, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "जो पहला व्यक्ति उसे खोलता है, वह उसे दस सेकंड देखता है, और एक इमोजी भेज सकता है।",
+   "sub": "जो पहला व्यक्ति उसे खोलता है, वह उसे दस सेकंड देखता है, और एक इमोजी भेज सकता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoe} smiling quietly at the sunset, hands on the rail.",
+   "vo": "फिर वह सबके लिए ग़ायब। एक छोटा पल, एक बार बाँटा।",
+   "sub": "फिर वह सबके लिए ग़ायब। एक छोटा पल, एक बार बाँटा।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए। गूगल प्ले पर मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

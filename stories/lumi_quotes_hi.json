@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-quotes-hi",
+ "character": "lumi",
+ "feature": "quotes-for-customers",
+ "title": "घंटे भर में कोटेशन",
+ "post_on": "2026-12-28",
+ "caption": "ठेकेदार को ऑर्डर से पहले दाम चाहिए। तरुण उसी घंटे साफ़ कोटेशन भेज देता है। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "In ScoreMyBiz, My items and prices keeps the last selling rate and cost of everything the owner sells. A quotation is built from it, shared as a PDF, and turned into a recorded sale in one tap when the customer says yes.",
+ "hashtags": [
+  "#Quotation",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "tarun": "Tarun, a middle-aged Indian building-materials dealer with a trimmed beard, in a grey shirt with rolled sleeves"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a building materials shop with stacked cement bags and paint tins behind her, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह तरुण की कहानी है। एक ठेकेदार ऑर्डर से पहले दाम माँगता है, और उसी घंटे चाहता है।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह तरुण की कहानी है। एक ठेकेदार ऑर्डर से पहले दाम माँगता है, और उसी घंटे चाहता है।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Quote in an hour"
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} at his shop counter with a calculator and a scribbled slip, scratching his head, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह याददाश्त से बता सकता है, पर उसे याद नहीं कि पिछले महीने रेत का क्या दाम लगाया था।",
+   "sub": "वह याददाश्त से बता सकता है, पर उसे याद नहीं कि पिछले महीने रेत का क्या दाम लगाया था।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} reading his phone with a relieved nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में मेरे आइटम और दाम दिखाता है कि वह क्या बेचता है, आख़िरी बिक्री रेट और आख़िरी लागत के साथ।",
+   "sub": "स्कोर माय बिज़ में मेरे आइटम और दाम दिखाता है कि वह क्या बेचता है, आख़िरी बिक्री रेट और आख़िरी लागत के साथ।",
+   "min": 8,
+   "screen": "items.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} tapping his phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "फिर वह कोटेशन बनाता है: ग्राहक, सामान, और एक साफ़ पन्ना।",
+   "sub": "फिर वह कोटेशन बनाता है: ग्राहक, सामान, और एक साफ़ पन्ना।",
+   "min": 8,
+   "screen": "quotations.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} sending something from his phone with a satisfied smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह उसे सीधे फ़ोन से पीडीएफ़ के रूप में भेज देता है।",
+   "sub": "वह उसे सीधे फ़ोन से पीडीएफ़ के रूप में भेज देता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} shaking hands warmly in an empty shop doorway, smiling at the camera.",
+   "vo": "जब ठेकेदार हाँ कहता है, तो एक टैप से कोटेशन उसके खाते में बिक्री बन जाता है।",
+   "sub": "जब ठेकेदार हाँ कहता है, तो एक टैप से कोटेशन उसके खाते में बिक्री बन जाता है।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

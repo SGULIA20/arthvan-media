@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-sharescore-hi",
+ "character": "lumi",
+ "feature": "share-score-picture",
+ "title": "अच्छी ख़बर बाँटिए",
+ "post_on": "2027-01-16",
+ "caption": "एक अच्छे महीने के बाद ज़ोया चाहती थी कि उसके ग्राहक देखें कि उसकी दुकान अच्छी हालत में है। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "When a ScoreMyBiz score reaches Healthy or Thriving, the owner can share a square picture of the score ring, the band and his business name on his WhatsApp status. It never shows money amounts, and it is his own score, not a certificate.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#GoodNews"
+ ],
+ "cast": {
+  "zoya": "Zoya, a young Indian woman who runs a small bakery, with a braid over one shoulder, in a pink kurta and a white apron"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small bright bakery with cakes under glass domes behind her, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह ज़ोया की कहानी है। उसका महीना बहुत अच्छा गया।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह ज़ोया की कहानी है। उसका महीना बहुत अच्छा गया।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Share the good news"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} wiping a glass counter with a proud smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह चाहती थी कि उसके ग्राहक और सप्लायर देखें कि उसकी दुकान अच्छी हालत में है।",
+   "sub": "वह चाहती थी कि उसके ग्राहक और सप्लायर देखें कि उसकी दुकान अच्छी हालत में है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} holding up her phone with a delighted look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "उसका स्कोर माय बिज़ स्कोर हेल्दी तक पहुँच गया।",
+   "sub": "उसका स्कोर माय बिज़ स्कोर हेल्दी तक पहुँच गया।",
+   "min": 8,
+   "screen": "result.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} tapping her phone with a happy nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह उसे अपने व्हाट्सएप स्टेटस पर एक तस्वीर की तरह शेयर कर सकती है।",
+   "sub": "वह उसे अपने व्हाट्सएप स्टेटस पर एक तस्वीर की तरह शेयर कर सकती है।",
+   "min": 8,
+   "screen": "result.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} smiling at her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "उसमें स्कोर और उसकी दुकान का नाम दिखता है। पैसों की कोई रक़म कभी नहीं।",
+   "sub": "उसमें स्कोर और उसकी दुकान का नाम दिखता है। पैसों की कोई रक़म कभी नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} standing proudly among her cakes, smiling at the camera.",
+   "vo": "उसका अपना स्कोर, एक टैप में शेयर। किसी का प्रमाणपत्र नहीं।",
+   "sub": "उसका अपना स्कोर, एक टैप में शेयर। किसी का प्रमाणपत्र नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

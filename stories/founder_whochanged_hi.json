@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "founder-whochanged-hi",
+ "character": "founder_suit",
+ "feature": "who-changed-what",
+ "title": "किसने बदला",
+ "post_on": "2027-01-09",
+ "caption": "एक आँकड़ा ग़लत लगा, और सुनील जानना चाहता था कि किसने बदला और कब। संस्थापक उसकी कहानी सुनाते हैं।",
+ "linkedin_text": "In ScoreMyBiz the owner can see a list, newest first, of every add, change, removal and mark-paid in his book, in plain words, with who did it: owner, helper or CA. It shows the latest 200 changes and only the owner can open it.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Trust"
+ ],
+ "cast": {
+  "sunil": "Sunil, a middle-aged Indian owner of a busy general store, with a moustache, in a light blue shirt"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy general store with shelves of packaged goods behind him, a warm smile.",
+   "vo": "नमस्ते। यह सुनील की कहानी है। एक सुबह उसके खाते का एक आँकड़ा ग़लत लगा।",
+   "sub": "नमस्ते। यह सुनील की कहानी है। एक सुबह उसके खाते का एक आँकड़ा ग़लत लगा।",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Who changed it"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} frowning at a notebook and a phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "किसी ने एक नंबर बदल दिया था। पर किसने? और कब?",
+   "sub": "किसी ने एक नंबर बदल दिया था। पर किसने? और कब?",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} tapping his phone with a focused look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में वह किसने क्या किया खोलता है।",
+   "sub": "स्कोर माय बिज़ में वह किसने क्या किया खोलता है।",
+   "min": 8,
+   "screen": "book-changes.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} reading his phone and nodding, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "हर जोड़ना, बदलना और हटाना, सीधे शब्दों में, सबसे नया ऊपर।",
+   "sub": "हर जोड़ना, बदलना और हटाना, सीधे शब्दों में, सबसे नया ऊपर।",
+   "min": 8,
+   "screen": "book-changes.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} raising an eyebrow with a small smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "करने वाले के नाम के साथ: सहायक, सीए, या वह ख़ुद।",
+   "sub": "करने वाले के नाम के साथ: सहायक, सीए, या वह ख़ुद।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} standing in his store, arms crossed, calm and relaxed.",
+   "vo": "इसे सिर्फ़ मालिक खोल सकता है। इसलिए उसे हमेशा पता रहता है।",
+   "sub": "इसे सिर्फ़ मालिक खोल सकता है। इसलिए उसे हमेशा पता रहता है।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

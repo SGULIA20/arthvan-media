@@ -1,0 +1,118 @@
+{
+ "id": "lumi-languages-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "works-in-your-language",
+ "also": [
+  "nineteen-countries",
+  "daily-totals-update"
+ ],
+ "title": "आपकी भाषा",
+ "post_on": "2026-12-02",
+ "caption": "एक ऐप, उन्नीस देश, पच्चीस भाषाएँ। लूमी दिल्ली, चेन्नई, नैरोबी, दुबई, मैड्रिड और बर्लिन की दुकानों में जाकर हर दुकानदार की भाषा बोलती है।",
+ "linkedin_text": "A shop's book should be in the language the owner thinks in.\n\nScoreMyBiz works in 25 languages and for shops in nineteen countries, with each country's own money. Lumi visits six of them in this film, speaking each local language; every screen is the real app in that language.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#25Languages",
+  "#SmallBusiness"
+ ],
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a bright airport-like arrivals hall with a small suitcase, then smiling warmly, warm light.",
+   "vo": "नमस्ते, मैं लूमी हूँ। स्कोर माय बिज़ उन्नीस देशों की दुकानों के लिए बना है, और यह आपकी भाषा बोलता है। मेरे साथ चलिए।",
+   "sub": "नमस्ते, मैं लूमी हूँ। स्कोर माय बिज़ उन्नीस देशों की दुकानों के लिए बना है, और यह आपकी भाषा बोलता है। मेरे साथ चलिए।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Your language"
+  },
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, standing beside a shopkeeper in a kurta at the counter of a small kirana shop in a Delhi lane, both looking at a phone and smiling, warm evening light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "आज की बिक्री, खरीद और खर्चे, सिर्फ एक मिनट में।",
+   "sub": "आज की बिक्री, खरीद और खर्चे, सिर्फ एक मिनट में।",
+   "min": 7,
+   "native": "आज की बिक्री, खरीद और खर्चे, सिर्फ एक मिनट में।",
+   "chip": "हिन्दी · Hindi",
+   "screen": "../hi/daily-update.png",
+   "refs": [
+    "lumi"
+   ]
+  },
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, beside a tailor in a Chennai shop with sewing machines and bolts of cloth, they look at a phone together and smile, bright afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "உங்களோட அன்றாட வரவு செலவுகளை உங்க சொந்த மொழியான தமிழ்ல எழுதி வச்சுக்கோங்க.",
+   "sub": "உங்களோட அன்றாட வரவு செலவுகளை உங்க சொந்த மொழியான தமிழ்ல எழுதி வச்சுக்கோங்க.",
+   "min": 7,
+   "native": "உங்களோட அன்றாட வரவு செலவுகளை உங்க சொந்த மொழியான தமிழ்ல எழுதி வச்சுக்கோங்க.",
+   "chip": "தமிழ் · Tamil",
+   "screen": "../ta/daily-update.png",
+   "refs": [
+    "lumi"
+   ]
+  },
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, standing at the open front of a colourful small shop in Nairobi, looking down at her phone with a gentle smile, afternoon light, shelves of goods behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Mauzo, manunuzi na matumizi ya leo, kwa shilingi.",
+   "sub": "Mauzo, manunuzi na matumizi ya leo, kwa shilingi.",
+   "min": 7,
+   "native": "Mauzo, manunuzi na matumizi ya leo, kwa shilingi.",
+   "chip": "Kiswahili · Swahili",
+   "screen": "../sw/daily-update.png",
+   "refs": [
+    "lumi"
+   ]
+  },
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, with a friendly shopkeeper in a thobe at a tidy grocery in Dubai, both looking at a phone, warm interior light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "أرقام متجرك، بالعربي، من اليمين لليسار.",
+   "sub": "أرقام متجرك، بالعربي، من اليمين لليسار.",
+   "min": 7,
+   "native": "أرقام متجرك، بالعربي، من اليمين لليسار.",
+   "chip": "العربية · Arabic",
+   "screen": "../ar/daily-update.png",
+   "refs": [
+    "lumi"
+   ]
+  },
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, standing at the counter of a small sunny bakery in Madrid, looking at her phone with a smile, morning light, shelves of bread behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Las ventas y gastos del día, en euros.",
+   "sub": "Las ventas y gastos del día, en euros.",
+   "min": 7,
+   "native": "Las ventas y gastos del día, en euros.",
+   "chip": "Español · Spanish",
+   "screen": "../es/daily-update.png",
+   "refs": [
+    "lumi"
+   ]
+  },
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, with a shop owner at a neat hardware store in Berlin, both looking at a phone and nodding, soft daylight, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Dein Business Health Score, jetzt auch auf Deutsch.",
+   "sub": "Dein Business Health Score, jetzt auch auf Deutsch.",
+   "min": 7,
+   "native": "Dein Business Health Score, jetzt auch auf Deutsch.",
+   "chip": "Deutsch · German",
+   "screen": "../de/daily-update.png",
+   "refs": [
+    "lumi"
+   ]
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

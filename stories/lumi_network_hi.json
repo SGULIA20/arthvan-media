@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-network-hi",
+ "character": "lumi",
+ "feature": "business-network",
+ "title": "एक पंक्ति",
+ "post_on": "2027-01-05",
+ "caption": "राजन को इस हफ़्ते पचास बोरी सीमेंट चाहिए। एक पंक्ति आसपास के विक्रेताओं तक पहुँचती है। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "In India, the ScoreMyBiz Business network lets an owner post one line, such as a need for 50 bags of cement in Jaipur this week. It is shown anonymously to matching businesses nearby, and leads from others in his trade appear in his own list. Phone numbers are never shared and matches depend on who has joined.",
+ "hashtags": [
+  "#BusinessNetwork",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "rajan": "Rajan, a middle-aged Indian building contractor with a thick moustache, in a cream shirt and a yellow safety helmet"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera at a busy construction site with scaffolding behind her, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह राजन की कहानी है। उसे इस हफ़्ते जयपुर में पचास बोरी सीमेंट चाहिए।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह राजन की कहानी है। उसे इस हफ़्ते जयपुर में पचास बोरी सीमेंट चाहिए।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "One line"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rajan} on a phone call at a construction site, shaking his head, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह दो सप्लायरों को जानता है। दोनों के पास माल ख़त्म है।",
+   "sub": "वह दो सप्लायरों को जानता है। दोनों के पास माल ख़त्म है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rajan} typing on his phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "भारत में स्कोर माय बिज़ में वह बिज़नेस नेटवर्क खोलता है और एक पंक्ति लिखता है: उसे क्या चाहिए।",
+   "sub": "भारत में स्कोर माय बिज़ में वह बिज़नेस नेटवर्क खोलता है और एक पंक्ति लिखता है: उसे क्या चाहिए।",
+   "min": 8,
+   "screen": "network.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rajan} watching his phone with a hopeful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "यह आसपास के मेल खाते कारोबारों को दिखती है, उसका फ़ोन नंबर दिखाए बिना।",
+   "sub": "यह आसपास के मेल खाते कारोबारों को दिखती है, उसका फ़ोन नंबर दिखाए बिना।",
+   "min": 8,
+   "screen": "network.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rajan} reading a message on his phone with an interested nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "उसके अपने काम के दूसरे लोगों की पूछताछ उसकी अपनी सूची में दिखती है।",
+   "sub": "उसके अपने काम के दूसरे लोगों की पूछताछ उसकी अपनी सूची में दिखती है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rajan} standing at the site, arms folded, smiling at the camera.",
+   "vo": "स्कोर माय बिज़ सिर्फ़ परिचय कराता है। दाम, भुगतान और डिलीवरी दोनों कारोबारों के बीच की बात है, और मेल इस पर निर्भर है कि कौन जुड़ा है।",
+   "sub": "स्कोर माय बिज़ सिर्फ़ परिचय कराता है। दाम, भुगतान और डिलीवरी दोनों कारोबारों के बीच की बात है, और मेल इस पर निर्भर है कि कौन जुड़ा है।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

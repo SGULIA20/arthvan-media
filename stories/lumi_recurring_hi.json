@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-recurring-hi",
+ "character": "lumi",
+ "feature": "same-every-month",
+ "title": "एक बार लिखिए",
+ "post_on": "2027-01-06",
+ "caption": "किराया हर महीने की पाँच तारीख़ को वही रहता है। कविता उसे एक बार लिखती है। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "In ScoreMyBiz, when an owner records a fixed monthly cost such as rent, salary or an instalment, he can choose 'Yes, every month'. It is added to the book by itself on his chosen day, and he can pause or stop it. A removal can be undone for five seconds.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#MonthlyCosts"
+ ],
+ "cast": {
+  "kavita": "Kavita, a middle-aged Indian tailor who runs a boutique, in a rust-coloured cotton kurta with a measuring tape around her neck"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a tailoring boutique with bolts of colourful cloth and sewing machines behind her, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह कविता की कहानी है। उसका किराया हर महीने की पाँच तारीख़ को वही रहता है।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह कविता की कहानी है। उसका किराया हर महीने की पाँच तारीख़ को वही रहता है।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Type it once"
+  },
+  {
+   "layout": "clip",
+   "clip": "{kavita} at a sewing machine glancing at a calendar on the wall, a patient sigh, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वही किराया। वही तारीख़। वही लिखना, हर महीने।",
+   "sub": "वही किराया। वही तारीख़। वही लिखना, हर महीने।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{kavita} tapping her phone with a pleased look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में, किराये जैसा तय ख़र्च लिखते समय, वह हाँ, हर महीने चुन सकती है।",
+   "sub": "स्कोर माय बिज़ में, किराये जैसा तय ख़र्च लिखते समय, वह हाँ, हर महीने चुन सकती है।",
+   "min": 8,
+   "screen": "book.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{kavita} reading her phone with a nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह उसकी चुनी हुई तारीख़ को अपने-आप उसके खाते में जुड़ जाता है, और वह उसे रोक या बंद कर सकती है।",
+   "sub": "वह उसकी चुनी हुई तारीख़ को अपने-आप उसके खाते में जुड़ जाता है, और वह उसे रोक या बंद कर सकती है।",
+   "min": 8,
+   "screen": "book.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{kavita} tapping her phone, then smiling with relief, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "हटाओ पर अँगूठा फिसल गया? पाँच सेकंड की वापसी पट्टी उसे लौटा लाती है।",
+   "sub": "हटाओ पर अँगूठा फिसल गया? पाँच सेकंड की वापसी पट्टी उसे लौटा लाती है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{kavita} standing among colourful cloth, smiling at the camera.",
+   "vo": "सिर्फ़ तय चलते ख़र्च दोहराए जाते हैं। माल की ख़रीद हाथ से ही रहती है।",
+   "sub": "सिर्फ़ तय चलते ख़र्च दोहराए जाते हैं। माल की ख़रीद हाथ से ही रहती है।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

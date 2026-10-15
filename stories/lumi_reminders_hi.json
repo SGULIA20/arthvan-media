@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-reminders-hi",
+ "character": "lumi",
+ "feature": "reminders-in-my-words",
+ "title": "एक बार लिखिए",
+ "post_on": "2026-12-31",
+ "caption": "फ़रहान के दिमाग़ में दस छोटी बातें घूमती हैं। वह हर एक को एक बार लिखता है। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "In ScoreMyBiz, Reminders in my own words: type something like 'call supplier Raju about cement Friday' and the app turns it into a task with a category and a due date, and the phone reminds the owner the evening before and the morning of, when notifications are allowed.",
+ "hashtags": [
+  "#Reminders",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "farhan": "Farhan, a young Indian grocery store owner with a short goatee, in a green t-shirt and a canvas apron"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a neat grocery store with shelves of packets behind her, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह फ़रहान की कहानी है। उसके दिमाग़ में दस छोटी बातें घूमती हैं, और कुछ ज़रूरी हैं।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह फ़रहान की कहानी है। उसके दिमाग़ में दस छोटी बातें घूमती हैं, और कुछ ज़रूरी हैं।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Type it once"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} at his store counter surrounded by yellow sticky notes, a busy look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "सप्लायर को फ़ोन करना। लाइसेंस नवीनीकरण। बिजली का बिल भरना। काग़ज़ के नोट खो जाते हैं।",
+   "sub": "सप्लायर को फ़ोन करना। लाइसेंस नवीनीकरण। बिजली का बिल भरना। काग़ज़ के नोट खो जाते हैं।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} typing on his phone with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में वह रिमाइंडर खोलता है और अपने शब्दों में लिखता है, जैसे शुक्रवार को सप्लायर राजू को सीमेंट के बारे में फ़ोन करना।",
+   "sub": "स्कोर माय बिज़ में वह रिमाइंडर खोलता है और अपने शब्दों में लिखता है, जैसे शुक्रवार को सप्लायर राजू को सीमेंट के बारे में फ़ोन करना।",
+   "min": 8,
+   "screen": "reminders.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} reading his phone with a pleased nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ऐप उसे एक काम बना देता है, श्रेणी और तय तारीख़ के साथ।",
+   "sub": "ऐप उसे एक काम बना देता है, श्रेणी और तय तारीख़ के साथ।",
+   "min": 8,
+   "screen": "reminders.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} glancing at a notification with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "नोटिफ़िकेशन चालू हों तो उसका फ़ोन उसे एक शाम पहले और उसी सुबह याद दिलाता है।",
+   "sub": "नोटिफ़िकेशन चालू हों तो उसका फ़ोन उसे एक शाम पहले और उसी सुबह याद दिलाता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} standing relaxed in his store, smiling at the camera.",
+   "vo": "नए रिमाइंडर मुफ़्त महीने में या किसी प्लान पर चलते हैं। एक बार लिखिए, और चिपकने वाले नोट भूल जाइए।",
+   "sub": "नए रिमाइंडर मुफ़्त महीने में या किसी प्लान पर चलते हैं। एक बार लिखिए, और चिपकने वाले नोट भूल जाइए।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

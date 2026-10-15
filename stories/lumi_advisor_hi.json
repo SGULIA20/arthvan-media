@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-advisor-hi",
+ "character": "lumi",
+ "feature": "ask-the-advisor",
+ "title": "दूसरी राय",
+ "post_on": "2027-01-02",
+ "caption": "दिवाली से पहले राहुल अपने ही आँकड़ों पर आधारित दूसरी राय चाहता है। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "In the free month or on a paid plan, the ScoreMyBiz Advisor takes a business question typed in the owner's own language and answers using his own numbers, with a few questions a day. It is not financial, legal or tax advice and can make mistakes.",
+ "hashtags": [
+  "#Advisor",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "rahul": "Rahul, a young Indian sweet and snack shop owner with a short beard, in a saffron kurta"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a sweet shop decorated with festival lights and marigolds, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह राहुल की कहानी है। दिवाली पास है, और वह तय नहीं कर पा रहा कि और माल ख़रीदे या नहीं।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह राहुल की कहानी है। दिवाली पास है, और वह तय नहीं कर पा रहा कि और माल ख़रीदे या नहीं।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "A second opinion"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rahul} behind his sweet counter looking at trays of sweets with a worried look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ज़्यादा ख़रीदो तो बचने का डर, कम ख़रीदो तो ख़त्म होने का। हर कोई अलग जवाब देता है।",
+   "sub": "ज़्यादा ख़रीदो तो बचने का डर, कम ख़रीदो तो ख़त्म होने का। हर कोई अलग जवाब देता है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rahul} typing a question on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में, अपने मुफ़्त महीने में, वह सलाहकार खोलता है और अपनी ही भाषा में अपना सवाल लिखता है।",
+   "sub": "स्कोर माय बिज़ में, अपने मुफ़्त महीने में, वह सलाहकार खोलता है और अपनी ही भाषा में अपना सवाल लिखता है।",
+   "min": 8,
+   "screen": "advisor.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rahul} reading his phone thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "जवाब में पहले से उसके अपने आँकड़े इस्तेमाल होते हैं।",
+   "sub": "जवाब में पहले से उसके अपने आँकड़े इस्तेमाल होते हैं।",
+   "min": 8,
+   "screen": "advisor.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rahul} nodding slowly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "उसे दिन में कुछ सवाल मिलते हैं। यह सीए या वकील नहीं है, इसमें ग़लतियाँ हो सकती हैं, और यह वित्तीय सलाह नहीं है।",
+   "sub": "उसे दिन में कुछ सवाल मिलते हैं। यह सीए या वकील नहीं है, इसमें ग़लतियाँ हो सकती हैं, और यह वित्तीय सलाह नहीं है।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rahul} smiling at the camera among festival sweets.",
+   "vo": "एक दूसरी राय। फ़ैसला फिर भी उसी का है।",
+   "sub": "एक दूसरी राय। फ़ैसला फिर भी उसी का है।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

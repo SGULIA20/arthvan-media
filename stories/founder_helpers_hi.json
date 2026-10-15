@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "founder-helpers-hi",
+ "character": "founder_suit",
+ "feature": "helpers-with-own-login",
+ "title": "लिखें, देखें नहीं",
+ "post_on": "2026-12-30",
+ "caption": "सहायक को बिक्री लिखनी चाहिए, मुनाफ़ा देखना नहीं। नवीन अपने सहायकों को उनका अलग लॉगिन देता है। संस्थापक उसकी कहानी सुनाते हैं।",
+ "linkedin_text": "In ScoreMyBiz an owner can give up to three helpers their own WhatsApp-code login. A helper sees one simple screen to add sales, purchases and spending and to count the till, never reports, settings or the Advisor, and every change is attributed to them.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#ShopHelpers"
+ ],
+ "cast": {
+  "naveen": "Naveen, a young Indian clothing shop owner with a fade haircut, in a navy polo shirt"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy clothing shop with racks of shirts behind him, a warm smile.",
+   "vo": "नमस्ते। यह नवीन की कहानी है। उसकी दुकान में भीड़ रहती है, और काउंटर पर एक सहायक खड़ा है।",
+   "sub": "नमस्ते। यह नवीन की कहानी है। उसकी दुकान में भीड़ रहती है, और काउंटर पर एक सहायक खड़ा है।",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Write, not see"
+  },
+  {
+   "layout": "clip",
+   "clip": "{naveen} watching his shop floor with a thoughtful look, folding a shirt, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह चाहता है कि सहायक बिक्री लिखे। वह नहीं चाहता कि सहायक उसका मुनाफ़ा देखे, या कुछ मिटा दे।",
+   "sub": "वह चाहता है कि सहायक बिक्री लिखे। वह नहीं चाहता कि सहायक उसका मुनाफ़ा देखे, या कुछ मिटा दे।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{naveen} using his phone with a clear nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ में वह हर सहायक को उसका अपना लॉगिन देता है, व्हाट्सएप कोड के साथ। तीन सहायकों तक।",
+   "sub": "स्कोर माय बिज़ में वह हर सहायक को उसका अपना लॉगिन देता है, व्हाट्सएप कोड के साथ। तीन सहायकों तक।",
+   "min": 8,
+   "screen": "staff.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{naveen} showing something on his phone with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "सहायक को एक सीधी स्क्रीन दिखती है: बिक्री, खरीद और खर्च जोड़ना, और गल्ला गिनना।",
+   "sub": "सहायक को एक सीधी स्क्रीन दिखती है: बिक्री, खरीद और खर्च जोड़ना, और गल्ला गिनना।",
+   "min": 8,
+   "screen": "staff.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{naveen} shaking his head gently with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "कोई रिपोर्ट नहीं। कोई सेटिंग नहीं। कोई सलाहकार नहीं।",
+   "sub": "कोई रिपोर्ट नहीं। कोई सेटिंग नहीं। कोई सलाहकार नहीं।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{naveen} standing proudly in his shop, arms folded, smiling.",
+   "vo": "और हर बदलाव में दिखता है कि किसने किया।",
+   "sub": "और हर बदलाव में दिखता है कि किसने किया।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

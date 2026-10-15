@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "id": "lumi-scorehistory-hi",
+ "character": "lumi",
+ "feature": "score-history",
+ "title": "क्या सुधर रहा है",
+ "post_on": "2027-01-10",
+ "caption": "तीन महीने बाद मीरा देखना चाहती थी कि क्या सचमुच सुधार हुआ है। लूमी उसकी कहानी सुनाती है।",
+ "linkedin_text": "ScoreMyBiz keeps every saved score with the change since the last one, a trend, and a look at whether the moves the owner marked Done were followed by a better, same or worse score. It compares scores before and after; it does not prove the move caused the change.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "cast": {
+  "meera": "Meera, a young Indian woman who runs a small bakery, with her hair tied back, in a cream apron over a green kurta"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small bakery with trays of bread and cakes behind her, a warm smile.",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह मीरा की कहानी है। वह तीन महीनों से अपने कारोबार पर मेहनत कर रही थी।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह मीरा की कहानी है। वह तीन महीनों से अपने कारोबार पर मेहनत कर रही थी।",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Is it getting better"
+  },
+  {
+   "layout": "clip",
+   "clip": "{meera} wiping a counter and looking thoughtful, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वह सोचती थी, क्या सचमुच सुधार हो रहा है, या बस ऐसा लगता है?",
+   "sub": "वह सोचती थी, क्या सचमुच सुधार हो रहा है, या बस ऐसा लगता है?",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{meera} reading her phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "स्कोर माय बिज़ हर सेव किया हुआ स्कोर रखता है, पिछले से बदलाव के साथ।",
+   "sub": "स्कोर माय बिज़ हर सेव किया हुआ स्कोर रखता है, पिछले से बदलाव के साथ।",
+   "min": 8,
+   "screen": "score-history.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{meera} nodding at her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "उसे रुझान दिखता है, और यह भी कि जो क़दम उसने पूरे किए चिह्नित किए, उनके बाद स्कोर बेहतर हुआ।",
+   "sub": "उसे रुझान दिखता है, और यह भी कि जो क़दम उसने पूरे किए चिह्नित किए, उनके बाद स्कोर बेहतर हुआ।",
+   "min": 8,
+   "screen": "score-history.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{meera} laughing softly at her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "यह पहले और बाद के स्कोर की तुलना करता है। यह कारण साबित करने का दावा नहीं करता।",
+   "sub": "यह पहले और बाद के स्कोर की तुलना करता है। यह कारण साबित करने का दावा नहीं करता।",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{meera} standing proudly by her trays of bread, smiling.",
+   "vo": "अब वह अपनी तरक़्क़ी देख सकती है, सिर्फ़ महसूस नहीं करती।",
+   "sub": "अब वह अपनी तरक़्क़ी देख सकती है, सिर्फ़ महसूस नहीं करती।",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
