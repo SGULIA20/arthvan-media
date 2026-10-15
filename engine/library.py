@@ -94,6 +94,9 @@ def sync(library: Path = LIBRARY, root: Path = ROOT) -> dict:
 
 
 # ---------- language coverage: every English Reel should exist in every target language ----------
+TARGETS_BY_APP = {                                 # every language each app supports whose Google voice was checked, in production priority order
+    "scoremybiz": ["hi", "gu", "mr", "ta", "bn", "te", "kn", "ml", "ur", "es", "pt", "sw", "ar", "de", "fr", "it", "nl", "fi"],
+    "waypoint": ["hi", "gu", "mr", "ta", "bn", "te", "kn", "ml", "es", "pt", "sw", "de", "fr", "id"]}
 TARGETS = ["hi", "gu", "mr", "ta", "te", "bn", "kn", "ml", "ur"]          # Indian languages whose Google voice was verified (Waypoint/ScoreMyBiz both have them)
 
 
@@ -117,7 +120,8 @@ def coverage(root: Path = ROOT, targets: list = None) -> dict:
         eng = {_base(s["id"]) for s in mine if s.get("lang", "en").split("-")[0] == "en"}
         if not eng:
             continue
-        langs = list(targets) + sorted({s.get("lang", "en").split("-")[0] for s in mine} - {"en"} - set(targets))
+        mine_targets = targets.get(app, TARGETS) if isinstance(targets, dict) else targets
+        langs = list(mine_targets) + sorted({s.get("lang", "en").split("-")[0] for s in mine} - {"en"} - set(mine_targets))
         rows = []
         for lang in langs:
             theirs = [s for s in mine if s.get("lang", "en").split("-")[0] == lang]
