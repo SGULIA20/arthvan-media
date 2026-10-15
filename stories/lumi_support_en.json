@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "lumi-support-en",
+ "character": "lumi",
+ "feature": "report-a-problem",
+ "title": "Someone will look",
+ "post_on": "2026-12-14",
+ "caption": "A sale was missing from Neha's book, and she wanted someone to look. Lumi tells her story.",
+ "linkedin_text": "In ScoreMyBiz the owner can write what went wrong, get a ticket number and see the reply inside the app. The app states a target of replying within 24 hours; it is a target, not a guarantee.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Support"
+ ],
+ "cast": {
+  "neha": "Neha, a young Indian woman who runs a small stationery shop, with a short bob haircut, in a mustard kurta and round glasses"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small stationery shop with shelves of notebooks and pens behind her, a warm smile.",
+   "vo": "Hi, I'm Lumi. This is Neha's story. One morning a sale she wrote was missing from her book.",
+   "sub": "Hi, I'm Lumi. This is Neha's story. One morning a sale she wrote was missing from her book.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Someone will look"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} flipping through her phone, worried, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She was sure she had written it. Who could she ask?",
+   "sub": "She was sure she had written it. Who could she ask?",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} tapping her phone with a determined look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz she opens Report a problem and writes what happened.",
+   "sub": "In ScoreMyBiz she opens Report a problem and writes what happened.",
+   "min": 8,
+   "screen": "support.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} reading her phone with a relieved nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "She gets a ticket number, and the reply comes back inside the app.",
+   "sub": "She gets a ticket number, and the reply comes back inside the app.",
+   "min": 8,
+   "screen": "support.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} smiling at her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "The app aims to reply within a day.",
+   "sub": "The app aims to reply within a day.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} standing among her shelves, smiling at the camera.",
+   "vo": "A problem does not have to stay a worry.",
+   "sub": "A problem does not have to stay a worry.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

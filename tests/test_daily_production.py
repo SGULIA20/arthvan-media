@@ -53,3 +53,28 @@ def test_the_summary_says_what_was_made_what_is_left_and_why_it_stopped():
     r = {"made": [("a-hi", ""), ("b-hi", ""), ("c-ta", "")], "failed": [("d-ta", "render ran over 25 minutes")], "stopped": "voice budget", "pending_english": 0, "left": 120, "english": 0}
     t = dp.summary(r, "Veo credit: x")
     assert "3 Reels made (Hindi 2, Tamil 1)" in t and "Conversions still to do: 120 (about 10 days)" in t and "d-ta: render ran over 25 minutes" in t and "carries on tomorrow" in t and t.endswith("Veo credit: x")
+
+
+def test_a_network_outage_stops_the_run_and_is_not_counted_as_a_failed_try(monkeypatch, tmp_path):
+    setup(monkeypatch, tmp_path, [story("a-en"), story("b-en")], [])
+    built = []
+    def build(path, root, env=None):
+        built.append(path.name); return ("network", "URLError: nodename nor servname provided")
+    r = dp.run(tmp_path, build=build, wait_net=lambda: False, now=NOW, log=tmp_path / "log")
+    assert built == ["a_en.json"] and r["stopped"] == "network" and r["failed"] == []                # stops at the first, does not burn the others
+    assert dp._failures(tmp_path / "log") == {}                                                      # and no try is spent
+
+
+def test_the_build_is_tried_again_once_the_network_is_back(monkeypatch, tmp_path):
+    setup(monkeypatch, tmp_path, [story("a-en")], [])
+    answers = iter([("network", "URLError"), ("made", "")])
+    r = dp.run(tmp_path, build=lambda *a, **k: next(answers), wait_net=lambda: True, now=NOW, log=tmp_path / "log")
+    assert [m[0] for m in r["made"]] == ["a-en"] and r["stopped"] == ""
+
+
+def test_network_errors_are_recognised_and_the_wait_gives_up_after_its_limit():
+    assert dp.is_network_problem("urllib.error.URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>")
+    assert not dp.is_network_problem("ValueError: scene 3 has no picture")
+    slept = []
+    assert dp.wait_for_network(max_seconds=120, step=60, up=lambda: False, sleep=slept.append) is False and slept == [60, 60]
+    assert dp.wait_for_network(max_seconds=120, step=60, up=lambda: True, sleep=slept.append) is True

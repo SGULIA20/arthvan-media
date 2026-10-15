@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "founder-bills-en",
+ "character": "founder_suit",
+ "feature": "bills-for-customers",
+ "title": "A proper bill",
+ "post_on": "2026-12-13",
+ "caption": "A regular customer asked for a proper bill with the shop's name on it. The founder tells Anil's story.",
+ "linkedin_text": "In ScoreMyBiz the owner makes a numbered bill with items and his shop name, and shares it as a PDF or a WhatsApp message. It is a simple bill, not an e-invoice.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Billing"
+ ],
+ "cast": {
+  "anil": "Anil, a middle-aged Indian building supplies dealer with a thick moustache, in a cream shirt with a pen in his pocket"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a building supplies shop with stacked cement bags behind him, a warm smile.",
+   "vo": "Hi. This is Anil's story. A regular customer asked, can you send me a proper bill?",
+   "sub": "Hi. This is Anil's story. A regular customer asked, can you send me a proper bill?",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "A proper bill"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} looking at a scrap of paper with scribbled numbers, an embarrassed smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "All he had was a scrap of paper with numbers on it.",
+   "sub": "All he had was a scrap of paper with numbers on it.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} tapping his phone with a pleased look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz he makes a numbered bill, with his shop name and the items.",
+   "sub": "In ScoreMyBiz he makes a numbered bill, with his shop name and the items.",
+   "min": 8,
+   "screen": "invoices.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} reading his phone and nodding, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Then he shares it as a PDF, or as a message on WhatsApp.",
+   "sub": "Then he shares it as a PDF, or as a message on WhatsApp.",
+   "min": 8,
+   "screen": "invoices.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} putting his phone down with a satisfied smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "The customer has a proper bill in a minute.",
+   "sub": "The customer has a proper bill in a minute.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} standing in his shop, arms folded, smiling.",
+   "vo": "A simple bill, with his own shop name on it.",
+   "sub": "A simple bill, with his own shop name on it.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

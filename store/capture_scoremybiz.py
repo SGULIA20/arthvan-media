@@ -10,6 +10,23 @@ from playwright.sync_api import sync_playwright
 BASE="http://localhost:8091"; LOCAL="http://localhost:9999/.netlify/functions/"
 SESSION={"phone":"","sessionToken":"","name":"Ramesh","businessName":"Sharma General Store","businessType":"Retail / Shop","plan":"starter","founder":True,"isAdmin":False,"country":{"code":COUNTRY}}
 PLAN={"plan":"trial","businessName":"Sharma General Store","phone":"9876543210","registeredAt":"2026-10-01T00:00:00Z","planExpiresAt":None,"planLabel":None,"aiIncluded":True,"planEndsAt":None,"actor":"owner","staffName":None,"staffId":None,"shop":None,"shops":1,"country":{"code":COUNTRY,"name":COUNTRIES_TBL[COUNTRY][0],"currency":COUNTRIES_TBL[COUNTRY][1],"symbol":COUNTRIES_TBL[COUNTRY][2]},"hasAccess":True,"trialDays":30,"trialDaysLeft":21}
+SAMPLE_INVOICES = {"invoices": [
+    {"id": "i3", "invoiceNumber": "INV-0003", "customerName": "Mehta Interiors", "customerPhone": None, "totalAmount": 8000, "subtotal": 8000, "gstRate": 0, "gstAmount": 0,
+     "lineItems": [{"description": "Paint 20L", "quantity": 2, "unitPrice": 2400}, {"description": "Cement bags", "quantity": 8, "unitPrice": 400}], "createdAt": "2026-10-12T10:00:00Z", "pdfUrl": None},
+    {"id": "i2", "invoiceNumber": "INV-0002", "customerName": "Ramesh Traders", "customerPhone": None, "totalAmount": 4200, "subtotal": 4200, "gstRate": 0, "gstAmount": 0,
+     "lineItems": [{"description": "Sand (trolley)", "quantity": 1, "unitPrice": 3000}, {"description": "Cement bags", "quantity": 3, "unitPrice": 400}], "createdAt": "2026-10-04T10:00:00Z", "pdfUrl": None},
+    {"id": "i1", "invoiceNumber": "INV-0001", "customerName": "Kavita Boutique", "customerPhone": None, "totalAmount": 1600, "subtotal": 1600, "gstRate": 0, "gstAmount": 0,
+     "lineItems": [{"description": "Cement bags", "quantity": 4, "unitPrice": 400}], "createdAt": "2026-10-01T10:00:00Z", "pdfUrl": None}]}
+SAMPLE_TICKETS = {"tickets": [
+    {"id": "t2", "ticketNo": "SMB-2026-000002", "category": "score", "status": "open", "message": "I added many entries but my score looks the same.", "reply": None, "createdAt": "2026-10-14T09:00:00Z", "updatedAt": "2026-10-14T09:00:00Z"},
+    {"id": "t1", "ticketNo": "SMB-2026-000001", "category": "entries", "status": "answered", "message": "A sale I wrote yesterday is missing from My Book.", "reply": "Thank you for telling us. We found it and put it back. Please check your book and write again if it is still missing.", "createdAt": "2026-10-13T09:00:00Z", "updatedAt": "2026-10-13T15:00:00Z"}]}
+CONTACT_HISTORY = {"transactions": [
+    {"id": "h4", "type": "payment_in", "amount": 5000, "entryDate": "2026-10-11", "paymentStatus": "paid", "note": "Part payment"},
+    {"id": "h3", "type": "sale", "amount": 8000, "entryDate": "2026-10-09", "paymentStatus": "credit", "note": ""},
+    {"id": "h2", "type": "sale", "amount": 4000, "entryDate": "2026-10-05", "paymentStatus": "paid", "note": ""},
+    {"id": "h1", "type": "sale", "amount": 3000, "entryDate": "2026-10-02", "paymentStatus": "credit", "note": ""}],
+    "statement": {"balance": 6000, "direction": "they_owe_you", "label": "Mehta Interiors owes you"}}
+MOCKS = {"get-invoices": SAMPLE_INVOICES, "get-my-tickets": SAMPLE_TICKETS}
 ROUTES=["dashboard","book","result","cash-reality","profit-loss","score-history","advisor","tasks"]
 # the other verified, demo-able features (content/features.json): python3 capture_scoremybiz.py <lang> <outdir> more
 MORE=["business-card","daily-update","cash-flow","payables","invoices","quotations","items","money-now","cash-book","registers","balance-sheet","year-end",
@@ -25,6 +42,10 @@ CLEAN_JS = r"""() => {   // remove the dev-build warning bubble and any "Founder
 }"""
 def handle(route, req):
     fn=req.url.split("/functions/")[1].split("?")[0]
+    if fn == "get-transactions" and b'"contactId"' in (req.post_data_buffer or b""):
+        return route.fulfill(status=200, content_type="application/json", headers={"Access-Control-Allow-Origin":"*"}, body=json.dumps(CONTACT_HISTORY))
+    if fn in MOCKS:
+        return route.fulfill(status=200, content_type="application/json", headers={"Access-Control-Allow-Origin":"*"}, body=json.dumps(MOCKS[fn]))
     if fn=="check-plan":
         return route.fulfill(status=200, content_type="application/json", headers={"Access-Control-Allow-Origin":"*"}, body=json.dumps(PLAN))
     try:
@@ -38,7 +59,7 @@ seen={}
 with sync_playwright() as p:
     b=p.chromium.launch()
     ctx=b.new_context(viewport={"width":390,"height":844}, device_scale_factor=3, is_mobile=True, has_touch=True, locale="en-IN", timezone_id="Asia/Kolkata", geolocation={"latitude":28.61,"longitude":77.2}, permissions=["geolocation"])
-    ctx.add_init_script("try{localStorage.setItem('smb_session', %s); localStorage.setItem('smb_country','%s'); localStorage.setItem('smb_country_ip','%s'); localStorage.setItem('smb_lang','%s');}catch(e){}" % (json.dumps(json.dumps(SESSION)), COUNTRY, COUNTRY, LANG))
+    ctx.add_init_script("try{localStorage.setItem('smb_session', %s); localStorage.setItem('smb_country','%s'); localStorage.setItem('smb_country_ip','%s'); localStorage.setItem('smb_lang','%s'); localStorage.setItem('smb_user_name','Sharma Building Supplies');}catch(e){}" % (json.dumps(json.dumps(SESSION)), COUNTRY, COUNTRY, LANG))
     ctx.route("https://scoremybiz.com/.netlify/functions/**", lambda route, req: (seen.setdefault(req.url.split('/functions/')[1],0), handle(route, req)))
     pg=ctx.new_page()
     for r in ROUTES:

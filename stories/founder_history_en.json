@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "id": "founder-history-en",
+ "character": "founder_suit",
+ "feature": "customer-history",
+ "title": "Every entry in order",
+ "post_on": "2026-12-15",
+ "caption": "A customer said he owed less. Prakash showed every entry in order. The founder tells his story.",
+ "linkedin_text": "In ScoreMyBiz the owner picks a customer or supplier and sees every sale, purchase and payment in order with a running total, and can share it as a message. It is a list of his own entries, not an audited or legal statement.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Customers"
+ ],
+ "cast": {
+  "prakash": "Prakash, a middle-aged Indian electrical goods shop owner with a salt-and-pepper moustache, in a grey half-sleeve shirt with a pen in the pocket"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in an electrical goods shop with rolls of wire and switches behind him, a warm smile.",
+   "vo": "Hi. This is Prakash's story. A customer said, I do not owe that much.",
+   "sub": "Hi. This is Prakash's story. A customer said, I do not owe that much.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Every entry in order"
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} behind his counter, calmly listening with a slight frown, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Memory against memory. Neither of them could be sure.",
+   "sub": "Memory against memory. Neither of them could be sure.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} tapping his phone with a focused look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "In ScoreMyBiz he opens that customer and sees every sale and payment, in order.",
+   "sub": "In ScoreMyBiz he opens that customer and sees every sale and payment, in order.",
+   "min": 8,
+   "screen": "customer-history.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} nodding as he reads his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "With a running total after each one.",
+   "sub": "With a running total after each one.",
+   "min": 8,
+   "screen": "customer-history.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} sending a message on his phone with a small smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "He shares the list as a message. The customer can see it all.",
+   "sub": "He shares the list as a message. The customer can see it all.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} standing in his shop, arms folded, relaxed and smiling.",
+   "vo": "No argument. Just the entries, in order.",
+   "sub": "No argument. Just the entries, in order.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

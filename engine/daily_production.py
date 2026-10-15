@@ -31,6 +31,36 @@ MAX_SECONDS = 59.8
 VOICE_BUDGET = 92
 
 
+NETWORK_WORDS = ("nodename nor servname", "Temporary failure in name resolution", "Network is unreachable", "URLError", "Connection reset",
+                 "Connection refused", "ConnectionError", "timed out", "Name or service not known")
+
+
+def is_network_problem(text: str) -> bool:
+    return any(w in (text or "") for w in NETWORK_WORDS)
+
+
+def network_up(hosts=("generativelanguage.googleapis.com", "aiplatform.googleapis.com", "api.telegram.org")) -> bool:
+    import socket
+    try:
+        for h in hosts:
+            socket.getaddrinfo(h, 443)
+        return True
+    except OSError:
+        return False
+
+
+def wait_for_network(max_seconds: int = 3 * 3600, step: int = 60, up=network_up, sleep=None) -> bool:
+    """The 01:30 launch can fire while the Mac's Wi-Fi is still coming back: wait for DNS instead of failing every Reel in one second."""
+    import time
+    sleep = sleep or time.sleep
+    waited = 0
+    while not up():
+        if waited >= max_seconds:
+            return False
+        sleep(step); waited += step
+    return True
+
+
 def _log(entry: dict, log: Path = LOG) -> None:
     log.parent.mkdir(parents=True, exist_ok=True)
     with log.open("a") as f:
@@ -98,7 +128,8 @@ def build_story(story_path: Path, root: Path = ROOT, extra_env: dict = None, tim
     if "DAILY_VOICE_QUOTA" in text:
         return "quota", "voice allowance used up"
     if r.returncode != 0:
-        return "failed", (text.strip().splitlines() or ["no output"])[-1][:160]
+        last = (text.strip().splitlines() or ["no output"])[-1][:160]
+        return ("network" if is_network_problem(last) else "failed"), last
     return "made", ""
 
 
@@ -106,11 +137,17 @@ def _lines(story: dict) -> int:
     return len(story["scenes"])
 
 
-def run(root: Path = ROOT, *, dry: bool = False, budget: int = VOICE_BUDGET, build=build_story, ask=None, now: date = None, send=notify.send, log: Path = LOG) -> dict:
+def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_network(900), budget: int = VOICE_BUDGET, build=build_story, ask=None, now: date = None, send=notify.send, log: Path = LOG) -> dict:
     now = now or (datetime.now(timezone.utc) + timedelta(hours=1)).date()
     apps = load_apps()
     result = {"made": [], "failed": [], "stopped": "", "english": 0}
     used = 0
+
+    def build_net(*a):
+        status, msg = build(*a)
+        if status == "network" and wait_net():
+            status, msg = build(*a)
+        return status, msg
 
     def finish():
         left = len(backlog(root, _failures(log)))
@@ -125,8 +162,10 @@ def run(root: Path = ROOT, *, dry: bool = False, budget: int = VOICE_BUDGET, bui
         film_ok = now <= broll.DEADLINE and broll.spent_inr() + cost <= broll.CREDIT_INR - 300
         if dry:
             result["made"].append((s["id"], "English" + ("" if film_ok or not cost else ", free cut-out style"))); used += _lines(s); continue
-        status, msg = build(root / "stories" / (s["id"].replace("-", "_") + ".json"), root, {} if film_ok or not cost else {"REEL_STYLE": "cutout"})
+        status, msg = build_net(root / "stories" / (s["id"].replace("-", "_") + ".json"), root, {} if film_ok or not cost else {"REEL_STYLE": "cutout"})
         _log({"id": s["id"], "status": status if status != "made" else "made", "note": msg, "kind": "english"}, log)
+        if status == "network":
+            result["stopped"] = "network"; return finish()
         used += _lines(s)
         if status == "quota":
             result["stopped"] = "voice allowance"; return finish()
@@ -150,8 +189,12 @@ def run(root: Path = ROOT, *, dry: bool = False, budget: int = VOICE_BUDGET, bui
             story = localize.localize(base, tr, lang)
             sp = root / "stories" / (lid.replace("-", "_") + ".json"); sp.write_text(json.dumps(story, indent=1, ensure_ascii=False) + "\n")
         except Exception as e:
+            if is_network_problem(f"{type(e).__name__} {e}"):
+                _log({"id": lid, "status": "network", "note": f"translation: {str(e)[:150]}", "kind": "translate"}, log); result["stopped"] = "network"; break
             _log({"id": lid, "status": "failed", "note": f"translation: {str(e)[:150]}", "kind": "translate"}, log); result["failed"].append((lid, f"translation: {str(e)[:90]}")); continue
-        status, msg = build(sp, root)
+        status, msg = build_net(sp, root)
+        if status == "network":
+            _log({"id": lid, "status": "network", "note": msg, "kind": "convert", "lang": lang}, log); result["stopped"] = "network"; break
         used += _lines(base)
         if status == "made":
             secs = _seconds(root / "stories" / "out" / f"{lid}.mp4")
@@ -179,7 +222,7 @@ def summary(result: dict, credit_line: str = "") -> str:
     if result["failed"]:
         lines.append(f"Problems: {len(result['failed'])}, for example {result['failed'][0][0]}: {result['failed'][0][1]}")
     if result["stopped"]:
-        lines.append(f"Stopped for today: {result['stopped']}. It carries on tomorrow by itself.")
+        lines.append(f"Stopped for today: {result['stopped']}. It carries on " + ("at the next run, once the connection is back." if result["stopped"] == "network" else "tomorrow by itself."))
     if credit_line:
         lines.append(credit_line)
     return "\n".join(lines)
@@ -197,6 +240,8 @@ def main(argv=None) -> int:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     except OSError:
         print("a production run is already going"); return 0
+    if not dry and not wait_for_network():
+        print("no network for 3 hours; nothing made today"); return 0
     result = run(dry=dry)
     text = summary(result, notify.credit_line())
     print(text)
