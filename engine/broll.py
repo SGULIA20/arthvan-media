@@ -112,8 +112,8 @@ def _generate(prompt: str, seconds: int, token: str, model: str = MODEL, referen
                       "parameters": {"aspectRatio": "9:16", "durationSeconds": seconds, "sampleCount": 1, "generateAudio": False, "resolution": "720p"}})
     if st != 200:
         raise BRollError(f"Veo refused ({st}): {str(body)[:200]}")
-    op = body["name"]; t0 = time.time()
-    while time.time() - t0 < 900:
+    op = body["name"]; t0 = time.monotonic()          # monotonic: time the Mac spends asleep must not count toward the 15 minutes
+    while time.monotonic() - t0 < 900:
         time.sleep(15)
         try:
             st, b = _call("POST", f"{base}:fetchPredictOperation", token, {"operationName": op})
