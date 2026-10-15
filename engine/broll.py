@@ -228,10 +228,23 @@ def status_line(ledger_path: Path = LEDGER, today: date = None) -> str:
     return f"Veo video credit: ₹{p['spent_inr']} used of ₹{int(p['credit_inr'])}; on-plan figure for today ₹{p['target_inr']}; {p['days_left']} days to 10 Dec."
 
 
-def clip(prompt: str, *, seconds: int = 8, references: list = None, cache: Path = BROLL_DIR, ledger_path: Path = LEDGER,
-         credit: float = CREDIT_INR, generate=_generate, token: str = None, today: date = None, library: Path = None) -> Path:
+def clip(prompt: str, *, seconds: int = 8, references: list = None, cache: Path = BROLL_DIR, **kw) -> Path:
     """The cached MP4 for this prompt (and reference pictures), generating it, charging the rupee ledger and filing a
-    readable copy in the library only when it does not exist yet."""
+    readable copy in the library only when it does not exist yet. Two processes asking for the same shot at once (the nightly
+    production and a pre-filming run) take turns on a lock file, so the second one finds the shot made and never pays twice."""
+    import fcntl
+    cache = Path(cache); cache.mkdir(parents=True, exist_ok=True)
+    out = cache / f"{key_for(prompt, seconds, references=references)}.mp4"
+    if out.exists():
+        return out
+    locks = cache / ".locks"; locks.mkdir(exist_ok=True)
+    with (locks / f"{out.stem}.lock").open("w") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        return _clip_once(prompt, seconds=seconds, references=references, cache=cache, **kw)
+
+
+def _clip_once(prompt: str, *, seconds: int = 8, references: list = None, cache: Path = BROLL_DIR, ledger_path: Path = LEDGER,
+               credit: float = CREDIT_INR, generate=_generate, token: str = None, today: date = None, library: Path = None) -> Path:
     cache = Path(cache); cache.mkdir(parents=True, exist_ok=True)
     out = cache / f"{key_for(prompt, seconds, references=references)}.mp4"
     if out.exists():

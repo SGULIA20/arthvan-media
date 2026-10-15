@@ -139,3 +139,17 @@ def test_reconcile_adds_clip_files_the_ledger_never_saw_and_calibrate_pins_googl
 def test_cache_keys_never_change_silently():
     """A changed key format orphans every paid-for clip and makes the engine buy them again (it happened on 13 Oct)."""
     assert key_for("a lane of shops at night", 8) == "cc05b7c09fe1ae44e843da1e92d2a627840e8861"
+
+
+def test_two_callers_for_the_same_shot_pay_once(tmp_path):
+    import threading, time
+    made = []
+    def slow_generate(prompt, seconds, tok, references=None):
+        made.append(prompt); time.sleep(0.4); return b"mp4"
+    led = tmp_path / "ledger.json"
+    outs = []
+    def go():
+        outs.append(broll.clip("same shot", cache=tmp_path / "c", ledger_path=led, generate=slow_generate, token="t", library=tmp_path / "lib"))
+    ts = [threading.Thread(target=go) for _ in range(2)]
+    [t.start() for t in ts]; [t.join() for t in ts]
+    assert len(made) == 1 and len(outs) == 2 and outs[0] == outs[1]                   # one Veo call, one charge, both got the file
