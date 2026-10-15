@@ -1,0 +1,29 @@
+{
+ "title": "Un fichier, pas de ressaisie",
+ "caption": "Le comptable de Nadia veut les entrées et sorties du mois sous forme de fichier. Lumi raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Lumi. Voici l'histoire de Nadia. Elle a une boulangerie et son comptable veut ses chiffres du mois."
+  },
+  {
+   "vo": "Son comptable utilise un autre logiciel et veut les entrées et sorties du mois en fichier."
+  },
+  {
+   "vo": "Dans ScoreMyBiz, elle ouvre Export pour mon comptable et choisit la période."
+  },
+  {
+   "vo": "Puis un format : un fichier tableur, ou les imports pour QuickBooks, Wave et Xero."
+  },
+  {
+   "vo": "Elle l'envoie à son comptable directement depuis son téléphone."
+  },
+  {
+   "vo": "Rien à ressaisir. Son comptable importe le fichier."
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours, en de nombreuses langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-10"
+}

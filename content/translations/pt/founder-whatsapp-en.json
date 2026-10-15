@@ -1,0 +1,30 @@
+{
+ "title": "O jeito do WhatsApp",
+ "caption": "Na hora de fechar, o Ravi está cansado. Ele envia três números no WhatsApp, e o seu dia fica registado.",
+ "scenes": [
+  {
+   "vo": "Olá. Esta é a história do Ravi. Ele vende telemóveis, e na hora de fechar está cansado."
+  },
+  {
+   "vo": "As vendas, despesas e o dinheiro do dia ainda estão na cabeça dele. Ele não quer preencher outro formulário hoje."
+  },
+  {
+   "vo": "Então abre o WhatsApp e envia ao ScoreMyBiz três números numa mensagem: vendas, despesas e dinheiro. A resposta diz Registado."
+  },
+  {
+   "vo": "No mês grátis, uma foto do caderno ou um áudio também servem. Ele lê de volta, e nada é guardado até ele dizer SIM."
+  },
+  {
+   "vo": "No fornecedor, ele quer saber quem ainda lhe deve dinheiro. Diz olá, e escolhe o número três."
+  },
+  {
+   "vo": "Apenas a conversa que ele já tem aberta.",
+   "card": "Apenas a conversa"
+  },
+  {
+   "vo": "ScoreMyBiz. Conheça a saúde do seu negócio. Grátis por trinta dias, em muitos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-26"
+}

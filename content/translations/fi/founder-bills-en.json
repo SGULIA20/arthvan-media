@@ -1,0 +1,29 @@
+{
+ "title": "Oikea lasku",
+ "caption": "Vakioasiakas pyysi virallista laskua yrityksen nimellä. Perustaja kertoo Anilin tarinan.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Anilin tarina. Vakioasiakas kysyi, saanko kunnon laskun?"
+  },
+  {
+   "vo": "Hänellä oli vain paperinpalanen, jossa oli numeroita."
+  },
+  {
+   "vo": "ScoreMyBizillä hän tekee numeroidun laskun, kaupan nimellä ja tuotteilla."
+  },
+  {
+   "vo": "Sitten hän jakaa sen PDF:nä tai viestinä WhatsAppissa."
+  },
+  {
+   "vo": "Asiakkaalla on kunnon lasku minuutissa."
+  },
+  {
+   "vo": "Yksinkertainen lasku, omalla kaupan nimellä."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-12"
+}

@@ -1,0 +1,30 @@
+{
+ "title": "Mikä päivä",
+ "caption": "Vikramin lippaana ja kirjanpidon välit katkesivat. Mikä päivä? Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Hei. Tämä on Vikramin tarina. Hänen kassalippaansa ja kirjanpitonsa eivät täsmää, eikä hän tiedä, mikä päivä se tapahtui.",
+   "card": "Mikä päivä?"
+  },
+  {
+   "vo": "Paperilla puuttuu muutama tuhat rupiaa, ja kuukaudessa on monta päivää tarkistettavana."
+  },
+  {
+   "vo": "ScoreMyBizissä kassakirja näyttää jokaisen päivän: aloitussaldon, kaikki rahaliikkeet ja loppusaldon."
+  },
+  {
+   "vo": "Kun hän laski lippaan, se näyttää, kuinka paljon laskelma erosi kirjasta."
+  },
+  {
+   "vo": "Joten hän näkee tarkkaan,ä päivänä lipas lakkasi täsmäämästä."
+  },
+  {
+   "vo": "Ei arvailua. Vain päivä ja merkintä, jota katsoa."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-22"
+}

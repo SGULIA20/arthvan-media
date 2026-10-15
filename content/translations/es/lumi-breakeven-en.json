@@ -1,0 +1,29 @@
+{
+ "title": "Lo mínimo para vender",
+ "caption": "Antes de una tienda más grande, Asha quiere saber lo mínimo que debe vender. Lumi cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esta es la historia de Asha. Quiere una panadería más grande y un alquiler más alto."
+  },
+  {
+   "vo": "La nueva tienda cuesta mucho más cada mes. ¿Cuánto debe vender solo para salir a flote?"
+  },
+  {
+   "vo": "En ScoreMyBiz, en su mes gratis, Punto de equilibrio pide tres cosas: costos fijos, ventas mensuales y el costo de lo que vende."
+  },
+  {
+   "vo": "Muestra cuánto debe vender cada mes para cubrir sus costos."
+  },
+  {
+   "vo": "Y cuánto margen de seguridad tiene por encima de esa línea."
+  },
+  {
+   "vo": "Es matemática con sus propios números, no un pronóstico."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas indios e internacionales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-27"
+}

@@ -1,0 +1,29 @@
+{
+ "title": "Täsmääkö kassa",
+ "caption": "Liikkeen sulkiessaan Rekha laskee kassan. Täsmääkö kirjanpito? Lumi kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Hei, minä olen Lumi. Tämä on Rekhan tarina. Sulkiessaan hän laskee kassan ja miettii, täsmääkö kirjanpito."
+  },
+  {
+   "vo": "Setelit yhteen pinoon, kolikot toiseen. Hän laskee ne kahdesti."
+  },
+  {
+   "vo": "ScoreMyBizissä hän avaa Rahat nyt -kohdan ja näppäilee kassassa, pankissa ja varastossa olevat summat."
+  },
+  {
+   "vo": "Sovellus näyttää, mitä kirjanpidon piti näyttää, ja erotuksen näiden välillä."
+  },
+  {
+   "vo": "Erotus tarkoittaa yleensä unohtunutta kirjausta, ei sitä että jokin olisi pielessä."
+  },
+  {
+   "vo": "Hänen syöttämänsä summa on uusi lähtökohta."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-14"
+}

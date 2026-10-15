@@ -1,0 +1,35 @@
+{
+ "title": "Wie is er nog",
+ "caption": "Het is maandeinde en Salma weet niet meer wie haar nog betaalt moet. Lumi vertelt haar verhaal.",
+ "scenes": [
+  {
+   "vo": "Hoi, ik ben Lumi. Dit is Salma's verhaal. Het is maandeinde en ze weet niet wie haar nog geld schuldt."
+  },
+  {
+   "card": "Wie betaalt nog?",
+   "vo": "Klanten beloofden te betalen. Sommige wel, andere niet. Het notitieboek zegt niet sinds wanneer."
+  },
+  {
+   "card": "Wie is te laat?",
+   "vo": "In ScoreMyBiz toont Kasstroomoverzicht elke klant met het bedrag en de te late dagen."
+  },
+  {
+   "card": "Eén tik voor app",
+   "vo": "Het toont wie te bellen en een WhatsApp-knop stuurt zo een herinnering."
+  },
+  {
+   "card": "Betaald?",
+   "vo": "Als een klant betaalt, zet ze het erbij, heel of deel, en het komt in haar boek."
+  },
+  {
+   "card": "Geen gok",
+   "vo": "Maandeinde is nu een korte lijst in plaats van een gok."
+  },
+  {
+   "card": "ScoreMyBiz",
+   "vo": "ScoreMyBiz. Ken je bedrijfsgezondheid. Dertig dagen gratis, in vele talen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-11"
+}

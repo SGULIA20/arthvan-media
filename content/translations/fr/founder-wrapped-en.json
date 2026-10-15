@@ -1,0 +1,29 @@
+{
+ "title": "Votre mois",
+ "caption": "Le premier du mois, Léo ouvre son bilan. Lui seul peut le voir. Le fondateur raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut. C'est l'histoire de Léo. C'est le premier du mois et il veut voir comment s'est passé son mois."
+  },
+  {
+   "vo": "Pas de score. Pas de classement. Juste son propre mois."
+  },
+  {
+   "vo": "Dans My Waypoints, ce mois-ci ouvre un récapitulatif du mois."
+  },
+  {
+   "vo": "Publications partagées, réactions données, pouces levés et rires reçus."
+  },
+  {
+   "vo": "Et le sentiment qu'il a le plus enregistré."
+  },
+  {
+   "vo": "Il est visible uniquement par lui. Jamais partagé et jamais public."
+  },
+  {
+   "vo": "Waypoint. Dites-le une fois. Gratuit sur Google Play, dans de nombreuses langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-08"
+}

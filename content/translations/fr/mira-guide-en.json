@@ -1,0 +1,29 @@
+{
+ "title": "Bonjour de minuit",
+ "caption": "À minuit, personne n'est en ligne. Jo dit bonjour à Mira, un guide IA. Mira raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Mira. C'est l'histoire de Jo. Il est minuit et tout le monde dort."
+  },
+  {
+   "vo": "Sur Waypoint il attend un match, mais le compteur en ligne indique zéro."
+  },
+  {
+   "vo": "Il tape donc sur Parler à Mira, dans l'onglet Discussions ou pendant qu'il attend."
+  },
+  {
+   "vo": "Elle le dit tout de suite : je suis un guide IA, pas une personne."
+  },
+  {
+   "vo": "Elle répond en une ou deux phrases. Et il peut réagir, signaler ou bloquer, comme partout."
+  },
+  {
+   "vo": "Après quarante de ses messages, la conversation se ferme. C'est un début, pas une fin."
+  },
+  {
+   "vo": "Waypoint. Dites-le une fois. Gratuit sur Google Play, en plusieurs langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-28"
+}

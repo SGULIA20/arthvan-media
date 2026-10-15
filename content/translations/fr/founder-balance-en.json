@@ -1,0 +1,30 @@
+{
+ "title": "Avoir et devoir",
+ "caption": "Chaque mois de mars, son comptable pose la même question. Imtiaz a enfin la réponse. Le fondateur raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Bonjour. Voici l'histoire d'Imtiaz. Chaque mois de mars, son comptable lui pose la même question : qu'est-ce que tu as, et qu'est-ce que tu dois ?"
+  },
+  {
+   "vo": "Il répond de tête, et chaque année la réponse est un peu différente.",
+   "card": "De tête"
+  },
+  {
+   "vo": "Dans ScoreMyBiz, c'est un seul écran : l'argent en caisse, l'argent en banque, ce que les clients lui doivent, et son stock."
+  },
+  {
+   "vo": "Tout vient de ses propres saisies. Il n'a pas besoin de deviner."
+  },
+  {
+   "vo": "Il appuie sur Partager avec mon CA, et ça part chez son comptable."
+  },
+  {
+   "vo": "Ce mois de mars, il a eu la réponse avant que son comptable ne demande."
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-27"
+}

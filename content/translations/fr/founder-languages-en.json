@@ -1,0 +1,30 @@
+{
+ "title": "Votre langue",
+ "caption": "Il pense en swahili et navigue en anglais. Joseph active les langues de Waypoint. Le fondateur raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Bonjour. Voici l'histoire de Joseph. Il pense en swahili et navigue en anglais."
+  },
+  {
+   "vo": "La plupart des applis lui demandent de lire dans une autre langue.",
+   "card": "Pas sa langue"
+  },
+  {
+   "vo": "Waypoint a seize langues. Chacun choisit la sienne."
+  },
+  {
+   "vo": "Un message arrive dans une autre langue. Un clic et il est traduit."
+  },
+  {
+   "vo": "Ou il active la traduction auto et le mur s'affiche dans sa langue."
+  },
+  {
+   "vo": "Même mur. Ses propres mots."
+  },
+  {
+   "vo": "Waypoint. Dites-le une fois. Gratuit sur Google Play, en plein de langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-22"
+}

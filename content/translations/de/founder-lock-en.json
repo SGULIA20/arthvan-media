@@ -1,0 +1,30 @@
+{
+ "title": "Monat sperren",
+ "caption": "Der Umsatz vom Vormonat wurde geändert und keiner weiß, wer es war. Gopal löst das. Der Gründer erzählt seine Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hallo. Das ist Gopals Geschichte. Er führt einen Laden mit zwei Helfern und einer Regel: Das Buch vom Vormonat wird nicht angerührt."
+  },
+  {
+   "vo": "Dann ist plötzlich der Umsatz vom Vormonat anders, und keiner weiß, wer ihn geändert hat.",
+   "card": "Wer hat das geändert?"
+  },
+  {
+   "vo": "ScoreMyBiz führt eine Liste: wer was wann hinzugefügt, geändert oder gelöscht hat."
+  },
+  {
+   "vo": "Und er kann einen fertigen Monat sperren, damit darin nichts mehr geändert werden kann."
+  },
+  {
+   "vo": "Sogar sein Steuerberater kann einen Monat sperren, sobald er eingereicht ist."
+  },
+  {
+   "vo": "Jetzt haben die Fragen Antworten."
+  },
+  {
+   "vo": "ScoreMyBiz. Kenne die Gesundheit deines Betriebs. Dreißig Tage gratis, in vielen indischen und internationalen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-01"
+}

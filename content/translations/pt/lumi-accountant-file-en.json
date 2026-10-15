@@ -1,0 +1,29 @@
+{
+ "title": "Um arquivo, sem redigitar",
+ "caption": "O contador da Nadia quer o dinheiro do mês em um arquivo. A Lumi conta a história dela.",
+ "scenes": [
+  {
+   "vo": "Oi, sou a Lumi. Esta é a história da Nadia. Ela tem uma padaria, e o contador quer os números do mês."
+  },
+  {
+   "vo": "Ele usa outro programa, e quer as entradas e saídas do mês em um arquivo."
+  },
+  {
+   "vo": "No ScoreMyBiz ela abre Exportar para o meu contador, e escolhe o período."
+  },
+  {
+   "vo": "Depois escolhe o formato: uma planilha, ou arquivos para QuickBooks, Wave e Xero."
+  },
+  {
+   "vo": "Ela manda direto para o contador pelo celular."
+  },
+  {
+   "vo": "Nada de redigitar. O contador importa o arquivo."
+  },
+  {
+   "vo": "ScoreMyBiz. Conheça a saúde do seu negócio. Grátis por trinta dias, em vários idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-10"
+}

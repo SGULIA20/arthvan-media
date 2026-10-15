@@ -1,0 +1,29 @@
+{
+ "title": "Ei kenttää",
+ "caption": "Kellarikauppa, jossa on huono kenttä. Salim kirjaa silti ylös jokaisen myynnin. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Salimin tarina. Hänen kojunsa on kellarissa, missä netti pätkii."
+  },
+  {
+   "vo": "Asiakas maksaa. Puhelin näyttää nollaa. Hän ei halua kirjoittaa sitä käteensä."
+  },
+  {
+   "vo": "ScoreMyBizissä ilman verkkoa tehty merkintä odottaa turvassa puhelimessa."
+  },
+  {
+   "vo": "Se siirtyy kirjaan itsestään, kun verkko palaa, eikä sitä lisätä kahdesti."
+  },
+  {
+   "vo": "Vain kirjauslomake toimii ilman nettiä. Raportit vaativat verkon."
+  },
+  {
+   "vo": "Jokainen myynti muistiin, vaikka kellarissa."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen 30 päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-01"
+}

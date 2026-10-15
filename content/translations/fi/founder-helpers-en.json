@@ -1,0 +1,29 @@
+{
+ "title": "Kirjaa, älä katso",
+ "caption": "Apulaisen pitää kirjata myynnit, ei nähdä voittoa. Naveen antaa apulaisille omat tunnukset. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Naveenin tarina. Hänen puotinsa vilisee asiakkaita, ja apulainen seisoo tiskillä."
+  },
+  {
+   "vo": "Hän haluaa apulaisen kirjaavan myynnit. Hän ei halua apulaisen näkevän voittoaan tai poistavan mitään."
+  },
+  {
+   "vo": "ScoreMyBizissä hän antaa apulaiselle oman tunnuksen WhatsApp-koodilla. Jopa kolme apulaista."
+  },
+  {
+   "vo": "Apulainen näkee yhden simppelin ruudun: lisää myynnit, ostot ja kulut sekä laske kassa."
+  },
+  {
+   "vo": "Ei raportteja. Ei asetuksia. Ei neuvonantajaa."
+  },
+  {
+   "vo": "Ja jokainen muutos näyttää, kuka sen teki."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-30"
+}

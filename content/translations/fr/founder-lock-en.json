@@ -1,0 +1,30 @@
+{
+ "title": "Verrouiller le mois",
+ "caption": "La vente du mois dernier a changé et personne ne se rappelle qui l'a fait. Gopal règle ça. Le fondateur raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut. Voici l'histoire de Gopal. Il gère une boutique avec deux aides et une règle : le livre du mois dernier ne se touche pas."
+  },
+  {
+   "vo": "Puis un jour, la vente du mois dernier est différente, et personne ne se rappelle qui a changé ça.",
+   "card": "Qui a changé ça ?"
+  },
+  {
+   "vo": "ScoreMyBiz garde une liste : qui a ajouté, changé ou retiré quoi, et quand."
+  },
+  {
+   "vo": "Et il peut verrouiller un mois fini, donc rien dedans ne peut changer."
+  },
+  {
+   "vo": "Même son comptable peut verrouiller un mois une fois qu'il est déposé."
+  },
+  {
+   "vo": "Maintenant les questions ont des réponses."
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours, en plusieurs langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-01"
+}

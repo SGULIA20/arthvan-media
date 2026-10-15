@@ -1,0 +1,30 @@
+{
+ "title": "Schluss mit Tippen",
+ "caption": "Ihr ganzer Monat steht in einem Heft. Sunita fotografiert eine Seite, statt zu tippen. Lumi erzählt ihre Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hallo, ich bin Lumi. Das ist Sunitas Geschichte. Ihr ganzer Monat steht in einem Heft, handgeschrieben."
+  },
+  {
+   "vo": "Das alles einzutippen würde einen ganzen Abend dauern, den sie nicht hat.",
+   "card": "Das Notizbuch"
+  },
+  {
+   "vo": "In ScoreMyBiz tippt sie auf Foto scannen und fotografiert eine Seite des Heftes."
+  },
+  {
+   "vo": "Die Zahlen tragen sich ein und sie prüft sie. Sie korrigiert eine und speichert erst dann."
+  },
+  {
+   "vo": "Oder sie kann ihre Zahlen einfach einsprechen."
+  },
+  {
+   "vo": "Prüfen und speichern. Das Heft bleibt ihres."
+  },
+  {
+   "vo": "ScoreMyBiz. Kenne die Gesundheit deines Betriebs. Dreißig Tage gratis, in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-25"
+}

@@ -1,0 +1,29 @@
+{
+ "title": "Solo un toque",
+ "caption": "Yuki registra un sentimiento tras el almuerzo y otra vez por la tarde. Mira cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Mira. Esta es la historia de Yuki. Ciertos sentimientos no necesitan un párrafo."
+  },
+  {
+   "vo": "Tras almorzar hace una pausa y se pregunta cómo se siente en realidad."
+  },
+  {
+   "vo": "En My Waypoints abre Registro de ánimo: mañana, tarde, atardecer y noche."
+  },
+  {
+   "vo": "Toca cómo se siente. Sin escribir y sin dar explicaciones."
+  },
+  {
+   "vo": "El domingo ve su semana al lado de la semana anterior."
+  },
+  {
+   "vo": "Y un aviso por la tarde, si lo desea. Un pequeño hábito, no un diagnóstico."
+  },
+  {
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play, en muchos idiomas de la India y del mundo."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-02"
+}

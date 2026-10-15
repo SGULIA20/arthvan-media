@@ -1,0 +1,36 @@
+{
+ "title": "¿Cuadra la caja?",
+ "caption": "Al cerrar, Rekha cuenta el dinero. ¿Cuadra el registro? Lumi cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esta es la historia de Rekha. Al cerrar cuenta la caja y duda si el registro cuadra.",
+   "card": "¿Cuadra la caja?"
+  },
+  {
+   "vo": "Billetes en un montón, monedas en otro. Lo cuenta dos veces.",
+   "card": "Contar dos veces"
+  },
+  {
+   "vo": "En ScoreMyBiz abre Dinero que tengo ahora y anota lo que hay en caja, banco y stock.",
+   "card": "Dinero que tengo ahora"
+  },
+  {
+   "vo": "La app muestra lo que esperaba su registro y la diferencia entre ambos.",
+   "card": "Ver la diferencia"
+  },
+  {
+   "vo": "Una diferencia suele ser un apunte olvidado, no que algo vaya mal.",
+   "card": "Apunte olvidado"
+  },
+  {
+   "vo": "Lo que escribió pasa a ser el nuevo punto de partida.",
+   "card": "Nuevo punto de partida"
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas.",
+   "card": "Prueba gratis treinta días"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-14"
+}

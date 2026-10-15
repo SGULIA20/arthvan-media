@@ -1,0 +1,30 @@
+{
+ "title": "Prova",
+ "caption": "Lui è bravo nel suo negozio ed è in ansia per la prossima grande decisione. Bilal fa pratica prima. Il fondatore racconta la sua storia.",
+ "scenes": [
+  {
+   "vo": "Ciao. Questa è la storia di Bilal. È bravo nel negozio ed è in ansia per la prossima grande decisione."
+  },
+  {
+   "vo": "Si chiede cosa sarebbe successo se avesse comprato più merce lo scorso Diwali.",
+   "card": "E se?"
+  },
+  {
+   "vo": "ScoreMyBiz ha un Gioco per Decisioni d'Affari. Sceglie il tipo di attività più vicina alla sua."
+  },
+  {
+   "vo": "Ogni round gli mette davanti una scelta vera: comprare merce, assumere, rimborsare, spendere."
+  },
+  {
+   "vo": "Quattordici giorni di scelte, e vede come va a finire ognuna di esse."
+  },
+  {
+   "vo": "È pratica, non un consiglio. Ed è gratis da provare."
+  },
+  {
+   "vo": "ScoreMyBiz. Conosci la salute della tua azienda. Gratis per trenta giorni, in molte lingue."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-05"
+}

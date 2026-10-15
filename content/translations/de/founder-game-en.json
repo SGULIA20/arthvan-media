@@ -1,0 +1,30 @@
+{
+ "title": "Üben",
+ "caption": "Er ist gut in seinem Laden und nervös vor der nächsten großen Entscheidung. Bilal übt zuerst. Der Gründer erzählt seine Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hallo. Das ist Bilais Geschichte. Er ist gut in seinem Laden und nervös wegen seiner nächsten großen Entscheidung."
+  },
+  {
+   "vo": "Er fragt sich, was passiert wäre, wenn er letzten Diwali mehr Ware gekauft hätte.",
+   "card": "Was wäre wenn?"
+  },
+  {
+   "vo": "ScoreMyBiz hat ein Geschäftsentscheidungsspiel. Er wählt die Art von Geschäft, die seinem am nächsten kommt."
+  },
+  {
+   "vo": "Jede Runde stellt ihn vor eine echte Wahl: Ware kaufen, einstellen, zurückzahlen, ausgeben."
+  },
+  {
+   "vo": "Vierzehn Tage voller Entscheidungen, und er sieht, wie jede einzelne ausgeht."
+  },
+  {
+   "vo": "Das ist Übung, kein Rat. Und es ist kostenlos zu testen."
+  },
+  {
+   "vo": "ScoreMyBiz. Kenne deine Geschäftszahl. Dreißig Tage kostenlos, in vielen indischen und internationalen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-05"
+}

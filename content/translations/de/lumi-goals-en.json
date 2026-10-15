@@ -1,0 +1,30 @@
+{
+ "title": "Ein Datum, kein Wunsch",
+ "caption": "Der Laden braucht eine zweite Vitrine. Farida macht aus dem Wunsch ein Datum. Lumi erzählt ihre Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Lumi. Das ist Faridas Geschichte. Ihr Eisladen braucht eine zweite Vitrine."
+  },
+  {
+   "vo": "Sie hat eine Summe im Kopf, aber keinen Plan dafür.",
+   "card": "Eine Vitrine"
+  },
+  {
+   "vo": "In ScoreMyBiz setzt sie ein Ziel: den Betrag und wie viele Monate."
+  },
+  {
+   "vo": "Die App zeigt, wie lange es bei ihrem aktuellen Tempo dauert."
+  },
+  {
+   "vo": "Und was passiert, wenn ihre Kunden etwas schneller zahlen."
+  },
+  {
+   "vo": "Jetzt ist die Vitrine ein Datum, kein Wunsch."
+  },
+  {
+   "vo": "ScoreMyBiz. Klicke dich schlau. Dreißig Tage kostenlos, in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-29"
+}

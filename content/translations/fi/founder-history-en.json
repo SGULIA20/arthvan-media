@@ -1,0 +1,31 @@
+{
+ "title": "Jokainen kirjaus järjestyksessä",
+ "caption": "Asiakas sanoi velkansa pienemmäksi. Prakash näytti jokaisen kirjauksen järjestyksessä. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Prakashin tarina. Asiakas sanoi, että en ole velkaa noin paljoa."
+  },
+  {
+   "vo": "Muistia muistia vastaan. Kumpikaan ei voinut olla varma."
+  },
+  {
+   "vo": "ScoreMyBizissä hän avaa asiakkaan ja näkee jokaisen myynnin ja maksun järjestyksessä.",
+   "card": "ScoreMyBiz"
+  },
+  {
+   "vo": "Mukana on juokseva saldo jokaisen jälkeen."
+  },
+  {
+   "vo": "Hän jakaa listan viestinä. Asiakas näkee kaiken."
+  },
+  {
+   "vo": "Ei riitaa. Vain kirjaukset järjestyksessä."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen kolmekymmentä päivää monella kielellä.",
+   "card": "ScoreMyBiz"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-14"
+}

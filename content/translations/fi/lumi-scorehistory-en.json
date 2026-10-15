@@ -1,0 +1,29 @@
+{
+ "title": "Paraneeko tilanne",
+ "caption": "Kolmen kuukauden päästä Meera halusi tietää, oliko tilanne aidosti parantunut. Lum kertoo hänen tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi, oon Lumi. Tässä on Meeran tarina. Hän oli tehnyt töitä yrityksensä eteen kolme kuukautta."
+  },
+  {
+   "vo": "Hän mietti, paraneeko tilanne oikeasti vai tuntuuko se vain siltä?"
+  },
+  {
+   "vo": "ScoreMyBiz tallentaa jokaisen pisteen ja muutoksen edelliseen verrattuna."
+  },
+  {
+   "vo": "Hän näkee suunnan ja mitkä tehdyt liikkeet johtivat parempiin pisteisiin."
+  },
+  {
+   "vo": "Se vertaa pisteitä ennen ja jälkeen. Se ei väitä todistavansa syytä."
+  },
+  {
+   "vo": "Nyt hän näkee edistymisensä eikä vain tunne sitä."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen kolmekymmentä päivää monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-10"
+}

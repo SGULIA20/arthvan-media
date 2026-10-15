@@ -1,0 +1,31 @@
+{
+ "title": "Non bisogna riscrivere tutto",
+ "caption": "Il commercialista di Gauri vuole gli acquisti del mese in un foglio di calcolo. Lumi racconta la sua storia.",
+ "scenes": [
+  {
+   "vo": "Ciao, sono Lumi. Questa è la storia di Gauri. Il suo commercialista chiede gli acquisti del mese in un foglio di calcolo.",
+   "card": "Acquisti del mese"
+  },
+  {
+   "vo": "Ogni fattura è in un quaderno, e riscriverle tutte richiederebbe un'intera serata."
+  },
+  {
+   "vo": "In ScoreMyBiz apre Registri: ogni vendita, acquisto e spesa, con ricerca e totali."
+  },
+  {
+   "vo": "Sceglie Questo mese, e la lista degli acquisti è pronta, con il totale per nome.",
+   "card": "Questo mese"
+  },
+  {
+   "vo": "Poi la scarica come file di foglio di calcolo."
+  },
+  {
+   "vo": "Il suo commercialista riceve il file. Non bisogna riscrivere niente."
+  },
+  {
+   "vo": "ScoreMyBiz. Conosci la salute della tua azienda. Gratis per trenta giorni, in molte lingue indiane e internazionali."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-23"
+}

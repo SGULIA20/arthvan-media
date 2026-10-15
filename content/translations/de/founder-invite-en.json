@@ -1,0 +1,29 @@
+{
+ "title": "Die Einladung",
+ "caption": "Priya möchte Waypoint mit ihrem Cousin teilen. Ein Code, und beide bekommen zehn Punkte. Die Gründerin erzählt ihre Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hallo. Das ist Priyas Geschichte. Sie hat auf Waypoint etwas entdeckt, das sie teilen möchte."
+  },
+  {
+   "vo": "Ihr Cousin Kabir hatte einen anstrengenden Monat. Sie will ihm einen ruhigen Ort schenken, keine Ratschläge."
+  },
+  {
+   "vo": "In „Meine Waypoints“ findet sie ihren Einladungscode und einen Button zum Teilen des Links."
+  },
+  {
+   "vo": "Sie schickt ihn Kabir persönlich, mit einer lieben Zeile."
+  },
+  {
+   "vo": "Kabir hat in seinen ersten sieben Tagen auf Waypoint Zeit, den Code einzugeben."
+  },
+  {
+   "vo": "Wenn er das tut, bekommen beide zehn Punkte."
+  },
+  {
+   "vo": "Waypoint. Sag es weiter. Kostenlos bei Google Play, auf vielen indischen und internationalen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-26"
+}

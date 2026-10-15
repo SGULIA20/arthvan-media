@@ -1,0 +1,29 @@
+{
+ "title": "Kopiointi loppui, tiedosto riittää",
+ "caption": "Nadian kirjanpitäjä haluaa kuukauden rahatiedot tiedostona. Lumi kertoo tarinan.",
+ "scenes": [
+  {
+   "vo": "Moi, mä oon Lumi. Tässä on Nadian tarina. Hän pyörittää leipomoa, ja kirjanpitäjä tarvitsee kuukauden luvut."
+  },
+  {
+   "vo": "Kirjanpitäjä käyttää eri ohjelmaa ja haluaa kuukauden rahatiedot tiedostona."
+  },
+  {
+   "vo": "ScoreMyBizissä hän avaa vientitoiminnon kirjanpitäjälle ja valitsee ajanjakson."
+  },
+  {
+   "vo": "Sitten muoto: tiedosto taulukkolaskentaan tai pankkisiirrot QuickBooksille, Wavelle ja Xerolle."
+  },
+  {
+   "vo": "Hän jakaa sen kirjanpitäjälle suoraan puhelimestaan."
+  },
+  {
+   "vo": "Ei mitään naputeltavaa. Kirjanpitäjä tuo tiedoston sisään."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen thirty days, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-10"
+}

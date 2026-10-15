@@ -1,0 +1,30 @@
+{
+ "title": "Mapya kila asubuhi",
+ "caption": "Kila asubuhi Zoya huamka na jina jipya kwenye Waypoint. Mira anasimulia hadithi yake.",
+ "scenes": [
+  {
+   "vo": "Habari, mimi ni Mira. Hii ni hadithi ya Zoya. Kila asubuhi kwenye Waypoint anaamka na jina jipya."
+  },
+  {
+   "vo": "Jana ilikuwa jana. Asubuhi hii programu inampa mwanzo mpya.",
+   "card": "Habari ya asubuhi"
+  },
+  {
+   "vo": "Inamchagulia jina na picha, na inaanza upya kesho."
+  },
+  {
+   "vo": "Kama akitaka, anaweza kuchagua jina lake na picha ya siku."
+  },
+  {
+   "vo": "Zoya yuleyule. Jina lingine. Na mwanzo mwepesi zaidi."
+  },
+  {
+   "vo": "Sema sentensi ya leo. Wacha jina libadilike kesho."
+  },
+  {
+   "vo": "Waypoint. Iseme mara moja. Bure kwenye Google Play, kwa lugha nyingi."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-20"
+}

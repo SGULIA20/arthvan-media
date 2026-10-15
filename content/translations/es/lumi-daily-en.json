@@ -1,0 +1,30 @@
+{
+ "title": "Un minuto al cierre",
+ "caption": "Ella cierra a las nueve y está cansada a las ocho. Anita usa cuatro cajas. Lumi cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esta es la historia de Anita. Su tienda cierra a las nueve, y está cansada a las ocho."
+  },
+  {
+   "vo": "Detallar cada venta es un trabajo para alguien con más energía.",
+   "card": "Nueve en punto"
+  },
+  {
+   "vo": "En ScoreMyBiz llena solo cuatro cosas: ventas, gastos, efectivo y el banco."
+  },
+  {
+   "vo": "Un minuto en el mostrador y el día termina."
+  },
+  {
+   "vo": "Si el día ya está detallado, los totales no se cuentan dos veces."
+  },
+  {
+   "vo": "El libro está al día, y ella también."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas indios e internacionales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-03"
+}

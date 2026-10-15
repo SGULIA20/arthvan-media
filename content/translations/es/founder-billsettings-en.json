@@ -1,0 +1,29 @@
+{
+ "title": "Impuesto por tasa",
+ "caption": "Su contador le pregunta cuánto impuesto cobraron sus facturas el último trimestre. Prakash tiene la respuesta. El fundador cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Prakash. Su contador le pregunta cuánto impuesto cobraron sus facturas el último trimestre."
+  },
+  {
+   "vo": "Las facturas están todas ahí. El total, por tasa, no."
+  },
+  {
+   "vo": "En ScoreMyBiz, Facturas y GST define cómo se numeran sus facturas: un prefijo y el número siguiente."
+  },
+  {
+   "vo": "Elige si el GST aparece en sus facturas y su tasa habitual."
+  },
+  {
+   "vo": "Y ve el impuesto que cobraron sus facturas, por tasa, para cualquier período."
+  },
+  {
+   "vo": "Muestra lo que cobraron sus facturas. No presenta ninguna declaración."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas indios e internacionales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-29"
+}

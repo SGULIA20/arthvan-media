@@ -1,0 +1,29 @@
+{
+ "title": "Zuerst bezahlen",
+ "caption": "Drei Lieferantenrechnungen, drei Termine, eine davon ist schon überfällig. Der Gründer erzählt Dinesh's Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hallo. Das ist Dineshs Geschichte. Eine Rechnung wird diese Woche fällig."
+  },
+  {
+   "vo": "Drei Rechnungen, drei Termine, und eine davon ist schon überfällig."
+  },
+  {
+   "vo": "In ScoreMyBiz gruppiert Geld, das ich zahlen muss, die Rechnungen."
+  },
+  {
+   "vo": "Es zeigt, was überfällig ist, damit er weiß, wen er zuerst zahlt."
+  },
+  {
+   "vo": "Er bekommt auch eine Nachricht am Fälligkeitstag und drei Tage vorher."
+  },
+  {
+   "vo": "ScoreMyBiz bezahlt niemanden. Es erinnert ihn nur daran."
+  },
+  {
+   "vo": "ScoreMyBiz. Kennst deine Geschäftslage. Dreißig Tage kostenlos."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-12"
+}

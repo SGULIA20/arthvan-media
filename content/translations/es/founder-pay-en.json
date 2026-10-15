@@ -1,0 +1,29 @@
+{
+ "title": "Paga primero",
+ "caption": "Tres facturas de proveedores, tres fechas, una ya vencida. El fundador cuenta la historia de Dinesh.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Dinesh. Una factura vence esta semana y él quiere separar el dinero."
+  },
+  {
+   "vo": "Facturas de tres proveedores, tres fechas distintas y una de ellas ya está vencida."
+  },
+  {
+   "vo": "En ScoreMyBiz, El dinero que debo agrupa las facturas por proveedor."
+  },
+  {
+   "vo": "Muestra lo vencido y lo que vence esta semana, para saber a quién pagar primero."
+  },
+  {
+   "vo": "También recibe una nota en la app el día del pago y tres días antes."
+  },
+  {
+   "vo": "ScoreMyBiz no le paga a nadie. Solo le recuerda."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-12"
+}

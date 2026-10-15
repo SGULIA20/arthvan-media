@@ -1,0 +1,30 @@
+{
+ "title": "Entraînement",
+ "caption": "Il gère bien sa boutique et stresse pour sa prochaine grande décision. Bilal s'entraîne d'abord. Le fondateur raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut. C'est l'histoire de Bilal. Il gère bien sa boutique et stresse pour sa prochaine décision."
+  },
+  {
+   "vo": "Il se demande ce qui se serait passé s'il avait pris plus de stock à Diwali dernier.",
+   "card": "Et si ?"
+  },
+  {
+   "vo": "ScoreMyBiz a un jeu de décision. Il choisit le type de commerce le plus proche du sien."
+  },
+  {
+   "vo": "Chaque tour lui met un vrai choix face à lui : acheter du stock, embaucher, rembourser."
+  },
+  {
+   "vo": "Quatorze jours de choix, et il voit comment chaque choix se termine."
+  },
+  {
+   "vo": "C'est de l'entraînement, pas un conseil. Et c'est gratuit à essayer."
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours, en plusieurs langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-05"
+}

@@ -1,0 +1,32 @@
+{
+ "title": "Stimmt das Kassenbuch",
+ "caption": "Beim Ladenschluss zählt Rekha die Kasse. Stimmt das Kassenbuch? Lumi erzählt ihre Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Lumi. Das ist Rekhas Geschichte. Bei Feierabend zählt sie die Kasse und fragt sich, ob das Buch stimmt.",
+   "card": "Stimmt die Kasse?"
+  },
+  {
+   "vo": "Scheine in einen Stapel, Münzen in den anderen. Sie zählt es zweimal nach."
+  },
+  {
+   "vo": "In ScoreMyBiz öffnet sie Mein aktuelles Geld und tippt ein, was in Kasse, Bank und Lager ist.",
+   "card": "Geld, das ich jetzt habe"
+  },
+  {
+   "vo": "Die App zeigt, was ihr Buch erwartet hat, und die Lücke zwischen beiden."
+  },
+  {
+   "vo": "Eine Lücke heißt meist, ein Eintrag fehlt, nicht dass etwas nicht stimmt."
+  },
+  {
+   "vo": "Was sie eingetippt hat, wird der neue Startpunkt."
+  },
+  {
+   "vo": "ScoreMyBiz. Kenn deine Geschäftslage. Dreißig Tage gratis, in vielen indischen und internationalen Sprachen.",
+   "card": "30 Tage gratis testen"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-14"
+}

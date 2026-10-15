@@ -1,0 +1,34 @@
+{
+ "title": "Das Mindeste zum Verkaufen",
+ "caption": "Vor einem größeren Laden will Asha wissen, wie viel sie mindestens verkaufen muss. Lumi erzählt ihre Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Lumi. Das ist Ashas Geschichte. Sie will eine größere Bäckerei und mehr Miete."
+  },
+  {
+   "vo": "Der neue Laden kostet monatlich viel mehr. Wie viel muss sie verkaufen, um gerade so rauszukommen?",
+   "card": "Wie viel zum Überleben?"
+  },
+  {
+   "vo": "In ScoreMyBiz fragt Break-even im Gratis-Monat drei Dinge: Fixkosten, Monatsumsatz und Wareneinsatz.",
+   "card": "Drei Fragen"
+  },
+  {
+   "vo": "Es zeigt, wie viel sie jeden Monat verkaufen muss, um ihre Kosten zu decken.",
+   "card": "Kosten decken"
+  },
+  {
+   "vo": "Und wie viel Sicherheitsmarge sie über dieser Linie hat.",
+   "card": "Sicherheitsmarge"
+  },
+  {
+   "vo": "Das ist Mathe mit ihren eigenen Zahlen, keine Prognose.",
+   "card": "Ihre eigenen Zahlen"
+  },
+  {
+   "vo": "ScoreMyBiz. Kennen Sie Ihre Geschäftszunahme. Dreißig Tage gratis in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-27"
+}

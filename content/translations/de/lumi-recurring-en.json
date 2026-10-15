@@ -1,0 +1,29 @@
+{
+ "title": "Einmal tippen",
+ "caption": "Die Miete ist jeden Monat am 5. gleich. Kavita tippt es einmal. Lumi erzählt ihre Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Lumi. Das ist Kavitas Geschichte. Ihre Miete ist jeden Monat am fünften gleich."
+  },
+  {
+   "vo": "Gleiche Miete. Gleiches Datum. Gleiches Tippen, jeden Monat."
+  },
+  {
+   "vo": "In ScoreMyBiz kann sie bei Fixkosten wie Miete „Ja, jeden Monat“ wählen."
+  },
+  {
+   "vo": "Es wird am Wunschtag von selbst eingetragen und sie kann es pausieren oder stoppen."
+  },
+  {
+   "vo": "Ein Wischer beim Löschen? Eine fünfsekündige Rückgängig-Leiste bringt es zurück."
+  },
+  {
+   "vo": "Nur feste laufende Kosten wiederholen sich. Warenkäufe bleiben manuell."
+  },
+  {
+   "vo": "ScoreMyBiz. Kennen Sie Ihre Geschäftslage. Dreißig Tage kostenlos, in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-06"
+}

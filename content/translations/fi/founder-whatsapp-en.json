@@ -1,0 +1,29 @@
+{
+ "title": "WhatsApp-tapa",
+ "caption": "Sulkemisaikaan Ravi on väsynyt. Hän lähettää kolme lukua WhatsAppissa, ja hänen päivänsä kirjanpito on tehty.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Ravin tarina. Hän myy puhelimia, ja sulkemisaikaan hän on väsynyt."
+  },
+  {
+   "vo": "Päivän myynti, kulut ja käteinen ovat vielä hänen päässään. Hän ei halua täyttää uutta lomaketta tänään."
+  },
+  {
+   "vo": "Joten hän avaa WhatsAppin ja lähettää ScoreMyBizille kolme lukua viestissä: myynti, kulut ja käteinen."
+  },
+  {
+   "vo": "Ilmaisessa kuukaudessa muistikirjan kuva tai ääniviesti käy myös. Se lukee sen, eikä mitään tallenneta ennen kuin hän sanoo KYLLÄ."
+  },
+  {
+   "vo": "Tukussa hän haluaa tietää, kuka on hänelle velkaa. Hän sanoo moi ja valitsee numeron kolme."
+  },
+  {
+   "vo": "Juuri se chat, joka hänellä on jo auki."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla intialaisilla ja kansainvälisillä kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-26"
+}

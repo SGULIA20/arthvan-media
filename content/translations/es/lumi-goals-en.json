@@ -1,0 +1,30 @@
+{
+ "title": "Una fecha, no un deseo",
+ "caption": "La tienda necesita otra nevera. Farida convierte el deseo en una fecha. Lumi cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esta es la historia de Farida. Su heladería necesita otra nevera."
+  },
+  {
+   "vo": "Tiene una cifra en la cabeza, y ningún plan.",
+   "card": "Una nevera"
+  },
+  {
+   "vo": "En ScoreMyBiz fija una meta: el monto y los meses."
+  },
+  {
+   "vo": "La app muestra cuánto tarda a su ritmo actual."
+  },
+  {
+   "vo": "Y qué pasa si sus clientes pagan un poco más rápido."
+  },
+  {
+   "vo": "Ahora la nevera es una fecha, no un deseo."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en varios idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-29"
+}

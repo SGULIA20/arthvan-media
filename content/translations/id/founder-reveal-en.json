@@ -1,0 +1,29 @@
+{
+ "title": "Nama baru untuk hari ini",
+ "caption": "Noor membuka Waypoint dan mendapat nama untuk hari ini. Besok akan ganti. Pendirinya menceritakan kisahnya.",
+ "scenes": [
+  {
+   "vo": "Halo. Ini kisah Noor. Dia baru unduh Waypoint, dan dia tidak mau dikenal."
+  },
+  {
+   "vo": "Cukup satu pertanyaan, Waypoint beri dia nama khusus hari ini."
+  },
+  {
+   "vo": "Besok ganti lagi, jadi tidak ada yang kenal dia."
+  },
+  {
+   "vo": "Dia bisa ubah nama dan foto profilnya kalau mau."
+  },
+  {
+   "vo": "Dan dia bisa minta satu pengingat saat nama barunya tiba."
+  },
+  {
+   "vo": "Tidak ada yang lain. Cuma nama, dan tempat bilang sekali."
+  },
+  {
+   "vo": "Waypoint. Bilang sekali. Gratis di Google Play, dalam banyak bahasa."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-04"
+}

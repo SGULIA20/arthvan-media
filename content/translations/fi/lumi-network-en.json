@@ -1,0 +1,29 @@
+{
+ "title": "Yksi rivi",
+ "caption": "Rajan tarvitsee viisikymmentä säkkiä sementtiä tällä viikolla. Yksi rivi tavoittaa lähellä olevat myyjät. Lumi kertoo tarinan.",
+ "scenes": [
+  {
+   "vo": "Moi, olen Lumi. Tämä on Rajanin tarina. Hän tarvitsee viisikymmentä säkkiä sementtiä Jaipurissa tällä viikolla."
+  },
+  {
+   "vo": "Hän tietää kaksi toimittajaa. Molemmilta on varasto loppu."
+  },
+  {
+   "vo": "ScoreMyBiz-sovelluksessa Intiassa hän avaa yritysverkon ja kirjoittaa yhdellä rivillä tarpeensa."
+  },
+  {
+   "vo": "Se näkyy sopiville lähellä oleville yrityksille ilman hänen puhelinnumeroaan."
+  },
+  {
+   "vo": "Muiden saman alan yrittäjien liidit ilmestyvät hänen omalle listalleen."
+  },
+  {
+   "vo": "ScoreMyBiz vain esittelee osapuolet. Hinta, maksu ja toimitus sovitaan yritysten kesken, ja osumat riippuvat mukana olevista."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla Intian ja maailman kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-05"
+}

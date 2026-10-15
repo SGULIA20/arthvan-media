@@ -1,0 +1,29 @@
+{
+ "title": "Verot verokannan mukaan",
+ "caption": "Hänen kirjanpitäjänsä kysyy, kuinka paljon veroa hänen laskuillaan veloitettiin viime neljänneksellä. Prakashilla on vastaus. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Prakashin tarina. Hänen kirjanpitäjänsä kysyy, paljonko veroa laskuilla oli edellisellä neljänneksellä."
+  },
+  {
+   "vo": "Laskut löytyvät kyllä. Mutta ei summaa eriteltynä verokannan mukaan."
+  },
+  {
+   "vo": "ScoreMyBiz-ohjelmassa laskujen ja GST-veron asetuksilla määritetään etuliite ja seuraava numero."
+  },
+  {
+   "vo": "Hän valitsee, näkyykö GST laskuilla, ja mikä on hänen yleinen verokantansa."
+  },
+  {
+   "vo": "Ja hän näkee laskujen keräämän veron verokannoittain mille tahansa ajanjaksolle."
+  },
+  {
+   "vo": "Se näyttää, mitä laskuilla veloitettiin. Se ei tee ilmoituksia."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen 30 päivää, monilla intialaisilla ja kansainvälisillä kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-29"
+}

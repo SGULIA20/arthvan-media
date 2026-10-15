@@ -1,0 +1,30 @@
+{
+ "title": "Diz em voz alta",
+ "caption": "As mãos dele são para o volante, não para escrever. O Tariq fala em vez disso. O fundador conta a sua história.",
+ "scenes": [
+  {
+   "vo": "Olá. Esta é a história do Tariq. Ele conduz um táxi. As mãos dele são para o volante, não para escrever."
+  },
+  {
+   "vo": "Entre clientes ele tem coisas a dizer, e os polegares são lentos.",
+   "card": "Entre clientes"
+  },
+  {
+   "vo": "No Waypoint ele toca em Voz e fala. Até sessenta segundos."
+  },
+  {
+   "vo": "Depois escolhe uma personagem: um Urso, uma Raposa ou um Pardal."
+  },
+  {
+   "vo": "No Mural, as pessoas ouvem as palavras dele com a voz dessa personagem. Um post de voz sai após sete dias."
+  },
+  {
+   "vo": "Estacionado, dito, de volta ao próximo cliente."
+  },
+  {
+   "vo": "Waypoint. Diz isso uma vez. Grátis no Google Play, em muitas línguas indianas e internacionais."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-18"
+}

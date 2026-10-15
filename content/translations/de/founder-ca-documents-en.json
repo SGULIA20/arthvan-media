@@ -1,0 +1,30 @@
+{
+ "title": "An einem Ort",
+ "caption": "Sunils Steuerberater ist mit der Steuererklärung fertig, und Sunil möchte dafür nicht WhatsApp durchsuchen. Der Gründer erzählt seine Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hallo. Das ist Sunils Geschichte. Sein Steuerberater ist fertig, und er will nicht auf WhatsApp suchen."
+  },
+  {
+   "card": "Kein Suchen in Chats",
+   "vo": "Papiere von seinem Steuerberater sind über monatelange Chats verteilt."
+  },
+  {
+   "vo": "Wenn dein Steuerberater ScoreMyBiz nutzt, landet alles, was er hochlädt, in einer Liste in deiner App."
+  },
+  {
+   "vo": "Es gibt eine Meine Dokumente-Liste. Sobald sein Steuerberater etwas hochlädt, ist es dort."
+  },
+  {
+   "vo": "ScoreMyBiz reicht nichts ein. Es speichert nur, was sein Steuerberater schickt."
+  },
+  {
+   "vo": "Schluss mit dem Suchen in Chats."
+  },
+  {
+   "vo": "ScoreMyBiz. Kennst du die Gesundheit deines Betriebs? Dreißig Tage kostenlos, in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-10"
+}

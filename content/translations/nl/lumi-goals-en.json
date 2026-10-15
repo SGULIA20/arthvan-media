@@ -1,0 +1,30 @@
+{
+ "title": "Een datum, geen wens",
+ "caption": "De winkel heeft een tweede vitrine nodig. Farida maakt van de wens een datum. Lumi vertelt haar verhaal.",
+ "scenes": [
+  {
+   "vo": "Hoi, ik ben Lumi. Dit is Farida's verhaal. Haar ijssalon heeft een tweede vitrine nodig."
+  },
+  {
+   "vo": "Ze heeft een getal in haar hoofd, en nog geen plan.",
+   "card": "Eén vitrine"
+  },
+  {
+   "vo": "In ScoreMyBiz stelt ze een doel: het bedrag, en het aantal maanden."
+  },
+  {
+   "vo": "De app toont hoe lang het duurt in haar huidige tempo."
+  },
+  {
+   "vo": "En wat er gebeurt als klanten iets sneller betalen."
+  },
+  {
+   "vo": "Nu is de vitrine een datum, geen wens."
+  },
+  {
+   "vo": "ScoreMyBiz. Ken de gezondheid van je zaak. Gratis dertig dagen, in vele talen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-29"
+}

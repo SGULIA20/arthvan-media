@@ -1,0 +1,29 @@
+{
+ "title": "Ein Name für heute",
+ "caption": "Noor öffnet Waypoint und bekommt ihren Namen für heute. Er wechselt morgen. Die Gründerin erzählt ihre Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hi. Das ist Noors Geschichte. Sie hat Waypoint geladen und möchte anonym bleiben."
+  },
+  {
+   "vo": "Nach einer Frage gibt Waypoint ihr einen Namen für heute."
+  },
+  {
+   "vo": "Er wechselt morgen, damit niemand sie erkennt."
+  },
+  {
+   "vo": "Sie kann den Namen und das Bild anpassen, wenn sie mag."
+  },
+  {
+   "vo": "Und sie kann um eine leise Erinnerung bitten, wenn der neue Name da ist."
+  },
+  {
+   "vo": "Sonst nichts. Nur ein Name und ein Ort, um ihn einmal zu sagen."
+  },
+  {
+   "vo": "Waypoint. Sag ihn einmal. Gratis bei Google Play, in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-04"
+}

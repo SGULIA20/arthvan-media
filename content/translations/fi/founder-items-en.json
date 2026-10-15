@@ -1,0 +1,29 @@
+{
+ "title": "Mitä minä veloitin",
+ "caption": "Rakesh ei muistanut, mitä hän veloitti viime kuussa. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Rakeshin tarina. Asiakas kysyi: mitä veloitus oli viime kuussa?"
+  },
+  {
+   "vo": "Hän ei muistanut hintaa. Hän ei halunnut arvailla."
+  },
+  {
+   "vo": "ScoreMyBiz-sovelluksessa Tuotteet ja hinnat näyttää myynnit ja viimeisen hinnan."
+  },
+  {
+   "vo": "Se rakentuu myynti- ja ostomerkinnöistä. Hän voi lisätä, muuttaa tai piilottaa tuotteita."
+  },
+  {
+   "vo": "Hän vastaa sekunneissa oikealla summalla."
+  },
+  {
+   "vo": "Se on hinnasto, ei varastonlaskenta. Vain viimeinen hinta, valmiina."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-11"
+}

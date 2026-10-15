@@ -1,0 +1,36 @@
+{
+ "title": "Kuka sen muutti",
+ "caption": "Yksi luku näytti väärältä, ja Sunil halusi tietää, kuka sen muutti ja milloin. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Sunilin tarina. Eräänä aamuna kirjanpito näytti väärältä.",
+   "card": "Moi."
+  },
+  {
+   "vo": "Joku oli muuttanut luvun. Mutta kuka? Ja milloin?",
+   "card": "Kuka muutti?"
+  },
+  {
+   "vo": "ScoreMyBizissä hän avaa Kuka teki mitä -toiminnon.",
+   "card": "ScoreMyBiz"
+  },
+  {
+   "vo": "Jokainen lisäys, muutos ja poisto, selvästi, uusimmat ensin.",
+   "card": "Kaikki näkyy"
+  },
+  {
+   "vo": "Sen henkilön nimellä, joka sen teki, apuri, tilintarkastaja tai hän itse.",
+   "card": "Kuka teki"
+  },
+  {
+   "vo": "Vain omistaja voi avata sen. Niin hän tietää aina.",
+   "card": "Vain omistaja"
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi kunto. Ilmaiseksi 30 päivää.",
+   "card": "Ilmainen kokeilu"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-09"
+}

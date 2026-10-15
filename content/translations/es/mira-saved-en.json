@@ -1,0 +1,29 @@
+{
+ "title": "Léelo otra vez",
+ "caption": "Una publicación hizo reír a Mateo a carcajadas. La guarda para leerla otra vez. Mira cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Mira. Esta es la historia de Mateo. Anoche, una publicación lo hizo reír mucho."
+  },
+  {
+   "vo": "Quiere leerla otra vez mañana, y sabe que no la va a encontrar por la mañana."
+  },
+  {
+   "vo": "Así que toca el ícono de marcador en la publicación."
+  },
+  {
+   "vo": "En Mis Puntos, Guardados mantiene cada marcador en una sola lista."
+  },
+  {
+   "vo": "La lee otra vez, y se ríe otra vez."
+  },
+  {
+   "vo": "Cuando termina con uno, puede quitarlo de la lista con un toque."
+  },
+  {
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play, en muchos idiomas indios e internacionales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-06"
+}

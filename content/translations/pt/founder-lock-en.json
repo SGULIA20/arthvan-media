@@ -1,0 +1,30 @@
+{
+ "title": "Fechar o mês",
+ "caption": "As vendas do mês passado mudaram e ninguém lembra quem fez isso. O Gopal resolve isso. O fundador conta sua história.",
+ "scenes": [
+  {
+   "vo": "Oi. Esta é a história do Gopal. Ele tem uma loja com dois ajudantes e uma regra: o livro do mês passado não se mexe."
+  },
+  {
+   "vo": "Aí um dia a venda do mês passado está diferente, e ninguém lembra quem mudou.",
+   "card": "Quem mudou?"
+  },
+  {
+   "vo": "O ScoreMyBiz guarda uma lista: quem incluiu, mudou ou tirou o quê, e quando."
+  },
+  {
+   "vo": "E ele pode fechar um mês pronto, então nada nele pode mudar."
+  },
+  {
+   "vo": "Até o contador dele pode fechar um mês assim que for entregue."
+  },
+  {
+   "vo": "Agora as perguntas têm respostas."
+  },
+  {
+   "vo": "ScoreMyBiz. Conheça a saúde do seu negócio. Grátis por trinta dias, em vários idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-01"
+}

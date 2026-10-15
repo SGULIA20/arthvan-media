@@ -1,0 +1,35 @@
+{
+ "title": "Nani anadaiwa",
+ "caption": "Ni mwisho wa mwezi na Salma hapati kumbukumbu ya nani bado anamdai. Lumi anasimulia hadithi yake.",
+ "scenes": [
+  {
+   "vo": "Hujambo, mimi ni Lumi. Hii ni hadithi ya Salma. Ni mwisho wa mwezi, hakumbuki nani bado anamdai pesa."
+  },
+  {
+   "card": "Nani bado anadaiwa?",
+   "vo": "Wateja waliahidi kulipa. Wengine walilipa, wengine hawakulipa. Daftari halisemi tangu lini."
+  },
+  {
+   "card": "Orodha ya wateja wanaodaiwa",
+   "vo": "Katika ScoreMyBiz, Cash Flow Watch inaorodhesha kila mteja anayemdai, na kiasi na siku zilizopita."
+  },
+  {
+   "card": "Kitufe cha kukumbusha kwenye WhatsApp",
+   "vo": "Inaonyesha wa kupiga leo, na kitufe cha kukumbusha kwenye WhatsApp kinatuma ujumbe kwa kugusa mara moja."
+  },
+  {
+   "card": "Weka alama ya kulipwa",
+   "vo": "Mteja akilipa, anaweka alama ya kulipwa, yote au sehemu, na inaingia kwenye kitabu chake."
+  },
+  {
+   "card": "Mwisho wa mwezi ni rahisi",
+   "vo": "Mwisho wa mwezi sasa ni orodha fupi, sio kubahatisha."
+  },
+  {
+   "card": "ScoreMyBiz. Bure kwa siku thelathini",
+   "vo": "ScoreMyBiz. Jua hali ya biashara yako. Bure kwa siku thelathini, kwa lugha nyingi."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-11"
+}

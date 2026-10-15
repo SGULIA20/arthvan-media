@@ -1,0 +1,29 @@
+{
+ "title": "Joku katsoo asiaa",
+ "caption": "Nehan kirjanpidosta puuttui myynti, ja hän halusi jonkun tarkistavan asian. Lumi kertoo hänen tarinansa.",
+ "scenes": [
+  {
+   "vo": "Hei, minä olen Lumi. Tämä on Nehan tarina. Eräänä aamuna hänen kirjanpidostaan puuttui myynti."
+  },
+  {
+   "vo": "Hän oli varma, että oli kirjannut sen. Keneltä hän voisi kysyä?"
+  },
+  {
+   "vo": "ScoreMyBiz-sovelluksessa hän avaa Ilmoita ongelmasta ja kirjoittaa, mitä tapahtui."
+  },
+  {
+   "vo": "Hän saa tukipyynnön numeron, ja vastaus tulee suoraan sovellukseen."
+  },
+  {
+   "vo": "Sovellus pyrkii vastaamaan vuorokauden kuluessa."
+  },
+  {
+   "vo": "Ongelman ei tarvitse jäädä huoleksi."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-13"
+}

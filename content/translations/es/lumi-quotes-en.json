@@ -1,0 +1,29 @@
+{
+ "title": "Presupuesto en una hora",
+ "caption": "Un contratista quiere precios antes de pedir. Tarun manda un presupuesto limpio la misma hora. Lumi cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esta es la historia de Tarun. Un contratista pide precios y los quiere en una hora."
+  },
+  {
+   "vo": "Él puede cotizar de memoria, pero no recuerda lo que cobró por la arena el mes pasado."
+  },
+  {
+   "vo": "En ScoreMyBiz, Artículos y precios lista lo que vende, con la última tarifa y el último costo."
+  },
+  {
+   "vo": "Luego hace una cotización: el cliente, los artículos, una página limpia."
+  },
+  {
+   "vo": "La comparte como PDF, directo desde su celular."
+  },
+  {
+   "vo": "Cuando el contratista dice que sí, un toque vuelve la cotización una venta en su libro."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-28"
+}

@@ -1,0 +1,32 @@
+{
+ "title": "O caixa bate?",
+ "caption": "No fim do expediente, Rekha confere o caixa. Os livros batem? Lumi conta a sua historia.",
+ "scenes": [
+  {
+   "vo": "Oi, eu sou a Lumi. Esta e a historia da Rekha. No fim do dia, ela conta o caixa e pensa se o livro bate.",
+   "card": "O caixa bate?"
+  },
+  {
+   "vo": "Notas numa pilha, moedas noutra. Ela conta duas vezes."
+  },
+  {
+   "vo": "No ScoreMyBiz, ela abre Dinheiro que tenho agora e digita o que esta no caixa, no banco e no estoque.",
+   "card": "Dinheiro que tenho agora"
+  },
+  {
+   "vo": "O app mostra o que o livro esperava, e a diferenca entre os dois.",
+   "card": "A diferenca"
+  },
+  {
+   "vo": "Uma diferenca costuma ser um registro esquecido, nao algo errado."
+  },
+  {
+   "vo": "O que ela digitou vira o novo ponto de partida."
+  },
+  {
+   "vo": "ScoreMyBiz. Conheca a saude do seu negocio. Gratis por trinta dias, em varios idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-14"
+}

@@ -1,0 +1,29 @@
+{
+ "title": "Tarjous tunnissa",
+ "caption": "Rakennusurakoitsija haluaa hinnat ennen tilausta. Tarun lähettää siistin tarjouksen samana tuntina. Lumi kertoo hänen tarinansa.",
+ "scenes": [
+  {
+   "vo": "Hei, minä olen Lumi. Tämä on Tarunin tarina. Urakoitsija pyytää hintoja ennen tilausta ja haluaa ne saman tunnin aikana."
+  },
+  {
+   "vo": "Hän voi hinnoitella muististaan, mutta hän ei muista, mitä hän veloitti hiekasta viime kuussa."
+  },
+  {
+   "vo": "ScoreMyBizissä Omat tuotteet ja hinnat -luettelo näyttää myynnit, viimeisen hinnan ja viimeiset kustannukset."
+  },
+  {
+   "vo": "Sitten hän tekee tarjouksen: asiakas, tuotteet, yksi siisti sivu."
+  },
+  {
+   "vo": "Hän jakaa sen PDF-tiedostona suoraan puhelimestaan."
+  },
+  {
+   "vo": "Kun urakoitsija sanoo kyllä, yhdellä napautuksella tarjous muuttuu myynniksi hänen kirjassaan."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla intialaisilla ja kansainvälisillä kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-28"
+}

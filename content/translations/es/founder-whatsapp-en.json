@@ -1,0 +1,36 @@
+{
+ "title": "La forma de WhatsApp",
+ "caption": "Al cerrar, Ravi está cansado. Manda tres números por WhatsApp y su día queda registrado.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Ravi. Vende móviles y al cerrar está cansado.",
+   "card": "La historia de Ravi"
+  },
+  {
+   "vo": "Ventas, gastos y caja siguen en su mente. No quiere llenar otro formulario hoy.",
+   "card": "Demasiado cansado"
+  },
+  {
+   "vo": "Abre WhatsApp y manda tres números a ScoreMyBiz: ventas, gastos y caja. Responde: Registrado.",
+   "card": "Tres números"
+  },
+  {
+   "vo": "En su mes gratis, vale una foto de su cuaderno o nota de voz. Lee y nada se guarda hasta que dice SÍ.",
+   "card": "Mes gratis"
+  },
+  {
+   "vo": "Con el mayorista quiere saber quién le debe. Saluda y elige el número tres.",
+   "card": "Saldos pendientes"
+  },
+  {
+   "vo": "Solo el chat que ya tiene abierto.",
+   "card": "Fácil y rápido"
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce tu negocio. Gratis por treinta días, en varios idiomas.",
+   "card": "ScoreMyBiz"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-26"
+}

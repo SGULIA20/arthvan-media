@@ -1,0 +1,27 @@
+{
+ "title": "Kuukauden vaihde",
+ "caption": "Sureshin laatikko ei täsmännyt hyllyn kanssa. Perustaja kertoo, kuinka yksi numero viikossa muutti kuukauden vaihteen.",
+ "scenes": [
+  {
+   "vo": "Hei. Tämä on Sureshin tarina. Hän pitää rautakauppaa. Joka kuun lopussa sama kysymys: minne rahat menivät?"
+  },
+  {
+   "vo": "Myynti veti. Hylly oli täynnä. Kassalipas ei.",
+   "card": "Minne ne menivät?"
+  },
+  {
+   "vo": "ScoreMyBiz lukee hänen kirjanpitonsa ja näyttää sen selvästi. Myyty. Ostettu. Kulutettu. Mitä jää jäljelle."
+  },
+  {
+   "vo": "Lumi osoittaa todellista ongelmaa: festivaalivarastoa, joka seisoo hyllyssä. Rahaa kiinni tavarassa."
+  },
+  {
+   "vo": "Yksi luku sadasta kaupan terveydestä ja kolme siirtoa viikolle. Hän tekee ne. Seuraavana kuun loppuna laatikko täsmää hyllyn kanssa."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-15"
+}

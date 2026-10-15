@@ -1,0 +1,31 @@
+{
+ "title": "¿Y si...",
+ "caption": "Hari se preguntó qué le haría a su puntaje cobrarle a los clientes lentos antes de empezar. El fundador cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Hari. Algunos clientes le pagan tarde, y él se preguntó qué cambiaría si les cobra."
+  },
+  {
+   "vo": "¿Valen la pena las llamadas incómodas? Quiso verlo antes de empezar."
+  },
+  {
+   "card": "ScoreMyBiz",
+   "vo": "En ScoreMyBiz abre el simulador de su propio puntaje."
+  },
+  {
+   "vo": "Mueve los ingresos, gastos o la rapidez de pago, y ve cómo cambia el puntaje."
+  },
+  {
+   "vo": "Es un \"qué pasaría si\" con sus números. No es un pronóstico."
+  },
+  {
+   "vo": "Ahora sabe qué llamada vale la pena hacer primero."
+  },
+  {
+   "card": "ScoreMyBiz",
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-15"
+}

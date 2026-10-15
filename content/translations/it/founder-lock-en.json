@@ -1,0 +1,30 @@
+{
+ "title": "Chiudi il mese",
+ "caption": "Le vendite del mese scorso sono cambiate e nessuno ricorda chi lo ha fatto. Gopal risolve il problema. Il fondatore racconta la sua storia.",
+ "scenes": [
+  {
+   "vo": "Ciao. Questa è la storia di Gopal. Ha un negozio con due aiutanti e una regola: i libri del mese scorso non si toccano."
+  },
+  {
+   "vo": "Poi un giorno le vendite del mese scorso sono diverse, e nessuno ricorda chi le ha cambiate.",
+   "card": "Chi lo ha cambiato?"
+  },
+  {
+   "vo": "ScoreMyBiz tiene una lista: chi ha aggiunto, cambiato o rimosso cosa e quando."
+  },
+  {
+   "vo": "E può bloccare un mese finito, così niente al suo interno può cambiare."
+  },
+  {
+   "vo": "Anche il suo commercialista può bloccare un mese una volta presentato."
+  },
+  {
+   "vo": "Ora le domande hanno risposte."
+  },
+  {
+   "vo": "ScoreMyBiz. Conosci la salute della tua azienda. Gratis per trenta giorni, in molte lingue indiane e internazionali."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-01"
+}

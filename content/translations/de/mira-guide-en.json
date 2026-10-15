@@ -1,0 +1,29 @@
+{
+ "title": "Mitternächtlicher Gruß",
+ "caption": "Um Mitternacht ist niemand online. Jo grüßt Mira, einen KI-Guide. Mira erzählt seine Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Mira. Das ist Jos Geschichte. Es ist Mitternacht und alle, mit denen er reden könnte, schlafen."
+  },
+  {
+   "vo": "Auf Waypoint wartet er auf einen Match, aber die Anzahl der Online-Nutzer steht bei null."
+  },
+  {
+   "vo": "Also tippt er auf „Mit Mira sprechen“, im Chat-Tab oder während er wartet."
+  },
+  {
+   "vo": "Sie sagt es sofort: Ich bin ein KI-Guide, keine echte Person."
+  },
+  {
+   "vo": "Sie antwortet in ein oder zwei Sätzen. Und er kann reagieren, melden oder blockieren, wie in jedem Chat."
+  },
+  {
+   "vo": "Nach vierzig seiner Nachrichten schließt sich der Chat. Es ist ein Ort zum Starten, nicht zum Bleiben."
+  },
+  {
+   "vo": "Waypoint. Sag es einmal. Kostenlos bei Google Play, in vielen indischen und internationalen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-28"
+}

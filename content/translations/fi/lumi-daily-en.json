@@ -1,0 +1,30 @@
+{
+ "title": "Minuutti ennen sulkemista",
+ "caption": "Hän sulkee yhdeksältä ja on väsynyt kahdeksalta. Anita käyttää nelittä laatikkoa. Lumi kertoo hänen tarinansa.",
+ "scenes": [
+  {
+   "vo": "Hei, minä olen Lumi. Tämä on Anitan tarina. Hänen putiikkinsa menee kiinni yhdeksältä, ja hän on väsynyt jo kahdeksalta."
+  },
+  {
+   "vo": "Jokaisen myynnin kirjaaminen erikseen vaatii enemmän voimia.",
+   "card": "Klo 21"
+  },
+  {
+   "vo": "ScoreMyBizissä hän täyttää vain neljä asiaa: myynti, kulut, käteinen ja pankki."
+  },
+  {
+   "vo": "Minuutti tiskillä, ja päivä on pulkassa."
+  },
+  {
+   "vo": "Jos päivät on jo kirjattu, summia ei lasketa kahteen kertaan."
+  },
+  {
+   "vo": "Kirjanpito on ajan tasalla, ja niin on hänkin."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen kolmekymmentä päivää, monella kielellä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-03"
+}

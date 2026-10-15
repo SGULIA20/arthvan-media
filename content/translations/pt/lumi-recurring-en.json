@@ -1,0 +1,29 @@
+{
+ "title": "Digite apenas uma vez",
+ "caption": "O aluguel é o mesmo todo dia 5. A Kavita digita uma vez. A Lumi conta a história.",
+ "scenes": [
+  {
+   "vo": "Oi, sou a Lumi. Esta é a história da Kavita. O aluguel dela é sempre no dia cinco."
+  },
+  {
+   "vo": "Mesmo aluguel. Mesma data. Mesma digitação, todo mês."
+  },
+  {
+   "vo": "No ScoreMyBiz, ao lançar um custo fixo como o aluguel, ela escolhe Sim, todo mês."
+  },
+  {
+   "vo": "Ele entra no caixa sozinho no dia escolhido, e ela pode pausar ou parar."
+  },
+  {
+   "vo": "Errou o toque em Excluir? Uma barra Desfazer de cinco segundos recupera."
+  },
+  {
+   "vo": "Só os custos fixos se repetem. A compra de estoque continua manual."
+  },
+  {
+   "vo": "ScoreMyBiz. Saiba a saúde do seu negócio. Grátis por trinta dias, em vários idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-06"
+}

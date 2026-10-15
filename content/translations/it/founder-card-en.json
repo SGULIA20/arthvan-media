@@ -1,0 +1,30 @@
+{
+ "title": "Il biglietto",
+ "caption": "Un edile chiede il biglietto a un matrimonio. Hari non ne ha. Il fondatore racconta la sua storia.",
+ "scenes": [
+  {
+   "vo": "Ciao. Questa è la storia di Hari. Vende vernici. Al matrimonio di suo cugino, un edile gli chiede il biglietto."
+  },
+  {
+   "vo": "Non ha il biglietto. Scrive il numero su un tovagliolo, e la mattina è sparito.",
+   "card": "Nessun biglietto"
+  },
+  {
+   "vo": "Su ScoreMyBiz apre Il mio biglietto da visita. Nome del negozio, indirizzo e orari sono già lì, dai suoi dati."
+  },
+  {
+   "vo": "Tocca Invia su WhatsApp, e il biglietto è sul telefono dell'edile prima del dolce."
+  },
+  {
+   "vo": "O lo condivide come PDF o come messaggio. Un biglietto, tanti modi."
+  },
+  {
+   "vo": "Un biglietto che ha sempre in tasca."
+  },
+  {
+   "vo": "ScoreMyBiz. Conosci la salute della tua azienda. Gratis per trenta giorni, in molte lingue indiane e internazionali."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-23"
+}

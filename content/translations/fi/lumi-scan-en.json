@@ -1,0 +1,30 @@
+{
+ "title": "Ohita naputtelu",
+ "caption": "Hänen koko kuukautensa on muistikirjassa. Sunita kuvaa sivun kirjoittamisen sijaan. Lumi kertoo hänen tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi, minä olen Lumi. Tämä on Sunitan tarina. Hänen koko kuukautensa on muistikirjassa, omalla käsialalla."
+  },
+  {
+   "vo": "Kaiken naputtelu veisi illan, jota hänellä ei ole.",
+   "card": "Muistikirja"
+  },
+  {
+   "vo": "ScoreMyBizissä hän napauttaa Skannaa kuva ja kuvaa muistikirjan sivun."
+  },
+  {
+   "vo": "Luvut täyttyvät tarkistettavaksi. Hän korjaa yhden ja tallentaa vasta sitten."
+  },
+  {
+   "vo": "Tai hän voi sanoa luvut ääneen."
+  },
+  {
+   "vo": "Tarkista ja tallenna. Kirja pysyy hänen omanaan."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen thirty days, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-25"
+}

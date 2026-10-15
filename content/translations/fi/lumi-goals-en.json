@@ -1,0 +1,30 @@
+{
+ "title": "Päivämäärä, ei toive",
+ "caption": "Kioski tarvitsee toisen vitriinikaapin. Farida muuttaa toiveen päivämääräksi. Lumi kertoo hänen tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi, oon Lumi. Tässä on Faridan tarina. Hänen jätskikioskinsa kaipaa toisen kaapin."
+  },
+  {
+   "vo": "Hänellä on luku mielessä, mutta ei mitään suunnitelmaa.",
+   "card": "Yksi kaappi"
+  },
+  {
+   "vo": "ScoreMyBizissä hän asettaa tavoitteen: summan ja kuukausien määrän."
+  },
+  {
+   "vo": "Sovellus näyttää, kauanko nykyvauhdilla kestää."
+  },
+  {
+   "vo": "Ja mitä tapahtuu, jos asiakkaat maksavat vähän nopeammin."
+  },
+  {
+   "vo": "Nyt kaapilla on päivä, ei pelkkä toive."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen 30 päivää, monilla eri kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-29"
+}

@@ -1,0 +1,29 @@
+{
+ "title": "Pagar primeiro",
+ "caption": "Três faturas de fornecedores, três datas, uma já em atraso. O fundador conta a história de Dinesh.",
+ "scenes": [
+  {
+   "vo": "Olá. Esta é a história de Dinesh. A fatura de um fornecedor vence esta semana e ele quer separar o dinheiro."
+  },
+  {
+   "vo": "Faturas de três fornecedores, três datas diferentes e uma delas já está em atraso."
+  },
+  {
+   "vo": "No ScoreMyBiz, 'Dinheiro a pagar' agrupa as faturas por fornecedor."
+  },
+  {
+   "vo": "Mostra o que está vencido e o que vence esta semana, para ele saber a quem pagar primeiro."
+  },
+  {
+   "vo": "Ele também recebe um aviso na aplicação no dia do vencimento e três dias antes."
+  },
+  {
+   "vo": "O ScoreMyBiz não paga a ninguém. Apenas lhe dá um lembrete."
+  },
+  {
+   "vo": "ScoreMyBiz. Conheça a saúde do seu negócio. Grátis por trinta dias, em vários idiomas indianos e internacionais."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-12"
+}

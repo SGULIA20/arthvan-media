@@ -1,0 +1,30 @@
+{
+ "title": "Harjoitus",
+ "caption": "Hän on taitava kauppissaan ja jännittää seuraavaa suurta päätöstä. Bilal harjoittelee ensin. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Bilalin tarina. Hän on taitava kauppias, ja jännittää seuraavaa isoa päätöstään."
+  },
+  {
+   "vo": "Hän miettii, mitä olisi käynyt, jos olisi ostanut enemmän tavaraa viime Diwalina.",
+   "card": "Mitä jos?"
+  },
+  {
+   "vo": "ScoreMyBizissä on yrityksen päätöspeli. Hän valitsee omaansa eniten muistuttavan yrityksen."
+  },
+  {
+   "vo": "Jokainen kierros tuo eteen aidon valinnan: osta tavaraa, palkkaa, maksa, kuluta."
+  },
+  {
+   "vo": "Neljätoista päivää valintoja, ja hän näkee, miten kukin niistä päättyy."
+  },
+  {
+   "vo": "Tämä on harjoitusta, ei neuvoja. Ja sitä voi kokeilla ilmaiseksi."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi kunto. Ilmainen kolmekymmentä päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-05"
+}

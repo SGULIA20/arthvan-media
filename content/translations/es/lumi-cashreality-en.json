@@ -1,0 +1,36 @@
+{
+ "title": "La ganancia no es efectivo",
+ "caption": "El mes pintaba rentable, pero la caja estaba vacía. Lumi cuenta la historia de Imran.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esta es la historia de Imran. El mes se veía muy rentable.",
+   "card": "La ganancia no es efectivo"
+  },
+  {
+   "vo": "Pero al abrir el cajón, el efectivo era mucho menor.",
+   "card": "Caja vacía"
+  },
+  {
+   "vo": "ScoreMyBiz pone su ganancia en papel junto al efectivo real.",
+   "card": "ScoreMyBiz"
+  },
+  {
+   "vo": "Muestra la brecha y el dinero aún en manos de clientes.",
+   "card": "Dinero pendiente"
+  },
+  {
+   "vo": "Lista alertas claras de sus propios registros, como cobros lentos.",
+   "card": "Alertas claras"
+  },
+  {
+   "vo": "Ahora sabe por qué el cajón tenía tan poco.",
+   "card": "Todo aclarado"
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días.",
+   "card": "¡Pruébalo gratis!"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-08"
+}

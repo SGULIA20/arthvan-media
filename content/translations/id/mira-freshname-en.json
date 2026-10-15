@@ -1,0 +1,30 @@
+{
+ "title": "Baru setiap pagi",
+ "caption": "Setiap pagi Zoya bangun dengan nama baru di Waypoint. Mira menceritakan kisahnya.",
+ "scenes": [
+  {
+   "vo": "Hai, aku Mira. Ini kisah Zoya. Setiap pagi di Waypoint dia bangun dengan nama baru."
+  },
+  {
+   "vo": "Kemarin ya kemarin. Pagi ini aplikasinya memberinya awal yang baru.",
+   "card": "Selamat pagi"
+  },
+  {
+   "vo": "Aplikasi itu memilih nama dan avatar untuknya, lalu mereset besok."
+  },
+  {
+   "vo": "Kalau mau, dia bisa pilih nama dan avatar sendiri untuk hari ini."
+  },
+  {
+   "vo": "Zoya yang sama. Nama berbeda. Dan awal yang lebih ringan."
+  },
+  {
+   "vo": "Ucapkan kalimat hari ini. Biarkan namanya berubah besok."
+  },
+  {
+   "vo": "Waypoint. Ucapkan sekali. Gratis di Google Play, dalam banyak bahasa India dan internasional."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-20"
+}

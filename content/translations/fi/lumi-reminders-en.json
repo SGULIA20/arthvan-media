@@ -1,0 +1,32 @@
+{
+ "title": "Kirjoita se kerran",
+ "caption": "Farhanin päässä pyörii kymmenen pientä asiaa. Hän kirjoittaa ne kerran. Lumi kertoo hänen tarinansa.",
+ "scenes": [
+  {
+   "vo": "Hei, minä olen Lumi. Tämä on Farhanin tarina. Hänen päässään pyörii kymmenen pientä asiaa, ja osa niistä on tärkeitä.",
+   "card": "Tärkeitä asioita"
+  },
+  {
+   "vo": "Soita toimittajalle. Uusi lisenssi. Maksa sähkö. Paperilaput hukkuvat."
+  },
+  {
+   "vo": "ScoreMyBizissä hän avaa Muistutukset ja kirjoittaa omilla sanoillaan, kuten soita toimittaja Rajulle sementistä perjantaina.",
+   "card": "Kirjoita omilla sanoilla"
+  },
+  {
+   "vo": "Sovellus muuttaa sen tehtäväksi, jolla on luokka ja eräpäivä."
+  },
+  {
+   "vo": "Puhelin muistuttaa häntä edellisenä iltana ja aamulla, kun ilmoitukset ovat päällä."
+  },
+  {
+   "vo": "Uudet muistutukset toimivat ilmaisessa kuukaudessa tai tilauksessa. Kirjoita kerran ja unohda laput.",
+   "card": "Ei enää lappuja"
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen 30 päivää, monilla eri kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-31"
+}

@@ -1,0 +1,29 @@
+{
+ "title": "L'invitation",
+ "caption": "Priya veut partager Waypoint avec son cousin. Un code, et tous les deux gagnent dix points. La fondatrice raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut. C'est l'histoire de Priya. Elle a trouvé un truc sur Waypoint à partager."
+  },
+  {
+   "vo": "Son cousin Kabir a eu un mois dur. Elle veut lui offrir un havre, pas des leçons."
+  },
+  {
+   "vo": "Dans Mes Waypoints, elle a son code et un bouton pour partager le lien."
+  },
+  {
+   "vo": "Elle l'envoie elle-même à Kabir, avec un mot gentil."
+  },
+  {
+   "vo": "Kabir a ses sept premiers jours sur Waypoint pour entrer le code."
+  },
+  {
+   "vo": "Quand il le fait, ils gagnent tous les deux dix points."
+  },
+  {
+   "vo": "Waypoint. Dites-le une fois. Gratuit sur Google Play, en plein de langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-26"
+}

@@ -1,0 +1,30 @@
+{
+ "title": "Une date, pas un vœu",
+ "caption": "La boutique a besoin d'un deuxième frigo vitré. Farida transforme le vœu en date. Lumi raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Lumi. Voici l'histoire de Farida. Sa glacerie a besoin d'un deuxième frigo."
+  },
+  {
+   "vo": "Elle a un chiffre en tête, mais aucun plan.",
+   "card": "Un frigo"
+  },
+  {
+   "vo": "Dans ScoreMyBiz, elle fixe un objectif : le montant, et le nombre de mois."
+  },
+  {
+   "vo": "L'appli montre le temps nécessaire à son rythme actuel."
+  },
+  {
+   "vo": "Et ce qui se passe si ses clients paient un peu plus vite."
+  },
+  {
+   "vo": "Maintenant le frigo est une date, pas un vœu."
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours, en plusieurs langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-29"
+}

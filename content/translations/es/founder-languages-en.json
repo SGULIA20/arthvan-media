@@ -1,0 +1,30 @@
+{
+ "title": "Tu idioma",
+ "caption": "Él piensa en suajili y navega en inglés. Joseph activa los idiomas de Waypoint. El fundador cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Joseph. Piensa en suajili y navega en inglés."
+  },
+  {
+   "vo": "La mayoría de las apps le piden leer en un idioma que no es el suyo.",
+   "card": "No es su idioma"
+  },
+  {
+   "vo": "Waypoint tiene dieciséis idiomas. Cada quien elige el suyo."
+  },
+  {
+   "vo": "Llega una publicación en otro idioma. Un toque y se traduce."
+  },
+  {
+   "vo": "O puede activar la autotraducción y el muro lee en su idioma."
+  },
+  {
+   "vo": "Mismo muro. Sus propias palabras."
+  },
+  {
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play, en muchos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-22"
+}

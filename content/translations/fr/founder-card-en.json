@@ -1,0 +1,30 @@
+{
+ "title": "La carte",
+ "caption": "Un entrepreneur demande sa carte lors d'un mariage. Hari n'en a pas. Le fondateur raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut. C'est l'histoire d'Hari. Il vend de la peinture. Au mariage de son cousin, un entrepreneur lui demande sa carte."
+  },
+  {
+   "vo": "Il n'a pas de carte. Il écrit son numéro sur une serviette, et le matin venu, elle a disparu.",
+   "card": "Pas de carte"
+  },
+  {
+   "vo": "Dans ScoreMyBiz, il ouvre Ma carte de visite. Le nom de sa boutique, son adresse et ses horaires y sont déjà, grâce à ses infos."
+  },
+  {
+   "vo": "Il appuie sur Envoyer sur WhatsApp, et la carte est sur le téléphone de l'entrepreneur avant le dessert."
+  },
+  {
+   "vo": "Ou il la partage en PDF, ou en message. Une carte, plusieurs façons."
+  },
+  {
+   "vo": "Une carte qui est toujours dans sa poche."
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours, en plusieurs langues indiennes et internationales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-23"
+}

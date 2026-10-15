@@ -1,0 +1,30 @@
+{
+ "title": "Deine Sprache",
+ "caption": "Er denkt auf Suaheli und scrollt auf Englisch. Joseph schaltet Waypoint-Sprachen ein. Der Gründer erzählt seine Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hallo. Das ist Josephs Geschichte. Er denkt auf Suaheli und scrollt auf Englisch."
+  },
+  {
+   "vo": "Die meisten Apps verlangen, dass er in einer Fremdsprache liest.",
+   "card": "Nicht seine Muttersprache"
+  },
+  {
+   "vo": "Waypoint hat sechzehn Sprachen. Jeder wählt seine eigene aus."
+  },
+  {
+   "vo": "Ein Post kommt in einer anderen Sprache an. Ein Tippen und er wird übersetzt."
+  },
+  {
+   "vo": "Oder er schaltet Auto-Übersetzung ein, und die Wand liest in seiner Sprache."
+  },
+  {
+   "vo": "Dieselbe Wand. Seine eigenen Worte."
+  },
+  {
+   "vo": "Waypoint. Sag es einmal. Kostenlos bei Google Play, in vielen indischen und internationalen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-22"
+}

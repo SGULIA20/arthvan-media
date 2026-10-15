@@ -1,0 +1,35 @@
+{
+ "title": "Una segunda opinión",
+ "caption": "Antes de Diwali, Rahul quiere una segunda opinión según sus números. Lumi cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esta es la historia de Rahul. Se acerca Diwali y duda si comprar más mercancía."
+  },
+  {
+   "card": "Rahul duda",
+   "vo": "Comprar más y arriesgar sobrantes, o comprar menos y quedarse sin stock. Todos opinan distinto."
+  },
+  {
+   "card": "Opiniones",
+   "vo": "En ScoreMyBiz, en su mes gratis, abre el Asesor y escribe su duda en su propio idioma."
+  },
+  {
+   "card": "Pregunta a ScoreMyBiz",
+   "vo": "La respuesta ya usa sus propios números."
+  },
+  {
+   "card": "Sus propios números",
+   "vo": "Recibe pocas dudas al día. No es un contable ni un abogado, puede fallar y no es consejo financiero."
+  },
+  {
+   "card": "Aviso",
+   "vo": "Una segunda opinión. La decisión sigue siendo suya."
+  },
+  {
+   "card": "Toma el control",
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-02"
+}

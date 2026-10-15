@@ -1,0 +1,29 @@
+{
+ "title": "Imposto por taxa",
+ "caption": "O contador dele pergunta quanto imposto as faturas cobraram no último trimestre. Prakash tem a resposta. O fundador conta sua história.",
+ "scenes": [
+  {
+   "vo": "Oi. Esta é a história de Prakash. O contador pergunta quanto imposto as faturas cobraram no último trimestre."
+  },
+  {
+   "vo": "As faturas estão todas lá. O total, por taxa, não está."
+  },
+  {
+   "vo": "No ScoreMyBiz, Faturas e IVA define a numeração: um prefixo e o próximo número."
+  },
+  {
+   "vo": "Ele escolhe se o IVA aparece nas faturas e a taxa habitual."
+  },
+  {
+   "vo": "E vê o imposto cobrado pelas faturas, por taxa, para qualquer período."
+  },
+  {
+   "vo": "Mostra o que as faturas cobraram. Não faz nenhuma declaração."
+  },
+  {
+   "vo": "ScoreMyBiz. Conheça a saúde do seu negócio. Grátis por trinta dias, em vários idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-29"
+}

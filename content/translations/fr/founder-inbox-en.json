@@ -1,0 +1,30 @@
+{
+ "title": "Un seul endroit",
+ "caption": "Manoj veut un seul endroit pour tout ce que l'appli lui demande de voir. Le fondateur raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Bonjour. Voici l'histoire de Manoj. Sa pharmacie est occupée, et il oublie des choses."
+  },
+  {
+   "vo": "Une facture, un client à relancer, un point hebdomadaire. Où l'appli lui a-t-elle dit ça ?"
+  },
+  {
+   "vo": "Dans ScoreMyBiz, la cloche de l'accueil ouvre une liste unique de ce qu'il doit voir.",
+   "card": "Accueil ScoreMyBiz"
+  },
+  {
+   "vo": "Rappels, notes fournisseurs, points hebdo, défis, et en Inde, des contacts du réseau."
+  },
+  {
+   "vo": "Un badge montre ce qui n'est pas encore lu."
+  },
+  {
+   "vo": "Un seul endroit, pas cinq messages."
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours, en plusieurs langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-24"
+}

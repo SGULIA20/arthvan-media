@@ -1,0 +1,29 @@
+{
+ "title": "Lumin tarina",
+ "caption": "Gaurin tilintarkastaja haluaa kuun ostot taulukkoon. Lumi kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi, mä olen Lumi. Tässä on Gaurin tarina. Hänen tilintarkastaja pyytää kuun ostot taulukossa."
+  },
+  {
+   "vo": "Joka lasku on vihkossa, ja niiden naputtelu veisi illan."
+  },
+  {
+   "vo": "ScoreMyBizissä hän avaa Rekisterit: myynnit, ostot ja kulut, haettavissa ja summilla."
+  },
+  {
+   "vo": "Hän valitsee Tämän kuun, ja ostolista on valmis, summat nimittäin."
+  },
+  {
+   "vo": "Sitten hän lataa sen taulukkotiedostona."
+  },
+  {
+   "vo": "Hänen tilintarkastaja saa tiedoston. Mitään ei naputella uudestaan."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi kunto. Ilmainen kolmekymmentä päivää, monella kielellä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-23"
+}

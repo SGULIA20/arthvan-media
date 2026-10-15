@@ -1,0 +1,29 @@
+{
+ "title": "No hay que tipear nada",
+ "caption": "El contador de Gauri quiere las compras del mes en una planilla. Lumi cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esta es la historia de Gauri. Su contador pide las compras del mes en una planilla."
+  },
+  {
+   "vo": "Cada factura está en un cuaderno, y volver a tipear todo le tomaría toda la noche."
+  },
+  {
+   "vo": "En ScoreMyBiz abre Registros: cada venta, compra y gasto, con buscador y totales."
+  },
+  {
+   "vo": "Elige Este mes, y la lista de compras está lista, con el total por nombre."
+  },
+  {
+   "vo": "Luego la descarga como un archivo de planilla."
+  },
+  {
+   "vo": "Su contador recibe el archivo. Sin volver a tipear nada."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en varios idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-23"
+}

@@ -1,0 +1,29 @@
+{
+ "title": "Uma lista",
+ "caption": "O Rakesh é um Contabilista com muitos pequenos clientes. Uma lista mostra quem precisa de uma chamada primeiro. O fundador conta a sua história.",
+ "scenes": [
+  {
+   "vo": "Olá. Esta é a história do Rakesh. Ele é Contabilista e tem muitos pequenos clientes."
+  },
+  {
+   "vo": "Todos os meses ele pergunta-se qual o cliente que precisa de chamar primeiro e qual está em apuros."
+  },
+  {
+   "vo": "No ScoreMyBiz ele abre uma conta CA gratuita e obtém o seu código. Os clientes inserem-no ao registar."
+  },
+  {
+   "vo": "Cada cliente surge numa lista com uma pontuação. A avaliação gratuita mostra até cinco."
+  },
+  {
+   "vo": "Mostra quem precisa de chamada esta semana, e ele pode contactar no WhatsApp com um toque."
+  },
+  {
+   "vo": "E o seu próprio cartão, com um código WhatsApp, está pronto para enviar."
+  },
+  {
+   "vo": "ScoreMyBiz. Conheça a saúde do seu negócio. Gratuito por trinta dias, em vários idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-10"
+}

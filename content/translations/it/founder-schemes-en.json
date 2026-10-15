@@ -1,0 +1,35 @@
+{
+ "title": "Prima della pioggia",
+ "caption": "Le previsioni di pioggia dicono ad Anil di spostare la merce dal pavimento. Il fondatore racconta la sua storia.",
+ "scenes": [
+  {
+   "vo": "Ciao. Questa è la storia di Anil. Vende cereali in India e la pioggia è il suo problema più grande."
+  },
+  {
+   "vo": "Sacchi sul pavimento e una settimana di tempo incerto.",
+   "card": "Tempo incerto"
+  },
+  {
+   "vo": "Su ScoreMyBiz in India, Incentivi e meteo mostra quattro giorni di controllo meteo per la sua città.",
+   "card": "Controllo meteo"
+  },
+  {
+   "vo": "Un avviso semplice dice che arriva forte pioggia e di spostare la merce dal pavimento.",
+   "card": "Avviso meteo"
+  },
+  {
+   "vo": "Elenca anche i bonus statali adatti alla sua attività, col link ufficiale. Non promette che li otterrà.",
+   "card": "Bonus statali"
+  },
+  {
+   "vo": "Nel suo mese gratis, la merce è al sicuro dal pavimento prima della pioggia.",
+   "card": "Mese gratis"
+  },
+  {
+   "vo": "ScoreMyBiz. Conosci la salute della tua azienda. Gratis per trenta giorni, in tante lingue.",
+   "card": "ScoreMyBiz Gratis"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-26"
+}

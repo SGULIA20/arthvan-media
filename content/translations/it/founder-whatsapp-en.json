@@ -1,0 +1,29 @@
+{
+ "title": "Il metodo WhatsApp",
+ "caption": "Alla chiusura Ravi è stanco. Manda tre numeri su WhatsApp, e la sua giornata è registrata.",
+ "scenes": [
+  {
+   "vo": "Ciao. Questa è la storia di Ravi. Vende cellulari, e a fine giornata è stanco."
+  },
+  {
+   "vo": "Vendite, spese e cassa sono ancora in testa. Stasera non vuole compilare moduli."
+  },
+  {
+   "vo": "Apre WhatsApp e manda a ScoreMyBiz tre numeri: vendite, spese e cassa. La risposta dice Registrato."
+  },
+  {
+   "vo": "Nel mese gratis, va bene anche una foto del quaderno o un vocale. Legge tutto e nulla viene salvato finché non dici SÌ."
+  },
+  {
+   "vo": "Dal grossista vuole sapere chi gli deve soldi. Dice ciao e sceglie il numero tre."
+  },
+  {
+   "vo": "Solo la chat che ha già aperta."
+  },
+  {
+   "vo": "ScoreMyBiz. Conosci la salute della tua azienda. Gratis per trenta giorni, in tante lingue."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-26"
+}

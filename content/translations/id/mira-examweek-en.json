@@ -1,0 +1,30 @@
+{
+ "title": "Minggu ujian",
+ "caption": "Minggu ujian, dan semua orang tanya keadaannya. Mira ceritakan kisah Sana.",
+ "scenes": [
+  {
+   "vo": "Hai, aku Mira. Ini kisah Sana. Minggu ujian. Semua orang tanya hal sama: gimana kabarnya?"
+  },
+  {
+   "vo": "Dia bilang baik. Tiap kali. Baik, baik, baik.",
+   "card": "Minggu ujian"
+  },
+  {
+   "vo": "Di Waypoint dia temukan Daily Path. Satu pertanyaan sehari, sama untuk semua."
+  },
+  {
+   "vo": "Pertanyaan hari ini mudah dibaca dan sulit dijawab. Dia luangkan waktu."
+  },
+  {
+   "vo": "Lalu dia lihat jawaban orang lain. Beda jawaban. Jeda sama sebelum mengetik."
+  },
+  {
+   "vo": "Kembali ke catatan. Ujian sama. Dan dia tidur lebih cepat malam itu."
+  },
+  {
+   "vo": "Waypoint. Katakan sekali. Gratis di Google Play, dalam banyak bahasa India dan internasional."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-20"
+}

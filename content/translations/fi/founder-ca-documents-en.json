@@ -1,0 +1,29 @@
+{
+ "title": "Kaikki yhdessä paikassa",
+ "caption": "Sunilin tilintarkastaja on saanut veroilmoituksen valmiiksi, eikä Sunil halua kaivella sitä WhatsAppista. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tässä on Sunilin tarina. Hänen tilintarkastajansa sai ilmoituksen valmiiksi, eikä hän halua kaivella sitä WhatsAppista."
+  },
+  {
+   "vo": "Paperit ovat pitkin kuukausien viestejä."
+  },
+  {
+   "vo": "Intiassa, jos tilintarkastajasi käyttää ScoreMyBiz-palvelua, sen lähettämät tiedot näkyvät listana sovelluksessasi."
+  },
+  {
+   "vo": "Sovelluksessa on Omat asiakirjat -lista. Kun tilintarkastaja lataa jotain, se näkyy siellä."
+  },
+  {
+   "vo": "ScoreMyBiz ei tee ilmoituksia. Se vain säilyttää sen, mitä tilintarkastaja lähettää."
+  },
+  {
+   "vo": "Ei enää viestien selailua."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen 30 päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-10"
+}

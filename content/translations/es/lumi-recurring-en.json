@@ -1,0 +1,29 @@
+{
+ "title": "Escríbelo una vez",
+ "caption": "El alquiler es el mismo el 5 de cada mes. Kavita lo escribe una vez. Lumi cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esta es la historia de Kavita. Su alquiler es igual el cinco de cada mes."
+  },
+  {
+   "vo": "Mismo alquiler. Misma fecha. Y escribir lo mismo, cada mes."
+  },
+  {
+   "vo": "En ScoreMyBiz, al registrar un gasto fijo como el alquiler, elige Sí, cada mes."
+  },
+  {
+   "vo": "Se anota solo en sus cuentas el día elegido, y puede pausarlo o pararlo."
+  },
+  {
+   "vo": "¿Un mal toque en Eliminar? Una barra de Deshacer de cinco segundos lo recupera."
+  },
+  {
+   "vo": "Solo los gastos fijos recurrentes se repiten. Las compras de stock siguen manuales."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-06"
+}

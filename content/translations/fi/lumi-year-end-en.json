@@ -1,0 +1,33 @@
+{
+ "title": "Vuosi pakettiin",
+ "caption": "Heman tilintarkastaja haluaa luvut, jotka eivät muutu. Lumi kertoo tarinan.",
+ "scenes": [
+  {
+   "vo": "Moi, mä oon Lumi. Tässä on Heman tarina. Vuosi loppuu, ja tilintarkastaja haluaa muuttumattomat luvut.",
+   "card": "Vuosi loppuu"
+  },
+  {
+   "vo": "Kukaan ei voi antaa lukuja, jotka koko ajan liikkuu."
+  },
+  {
+   "vo": "ScoreMyBizissä hän katsoo vuotta etukäteen: myynnit, kulut, voitto ja tilinpäätös.",
+   "card": "Tarkista luvut"
+  },
+  {
+   "vo": "Sitten hän sulkee vuoden, ja kaikki kaksitoista kuukautta lukitaan.",
+   "card": "Vuosi kiinni"
+  },
+  {
+   "vo": "Seuraava vuosi alkaa niistä loppuluvuista."
+  },
+  {
+   "vo": "Tämä ei ole veroilmoitus. Sen tekee silti hänen tilintarkastajansa. Tarvittaessa vuoden voi avata uudelleen."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen kolmekymmentä päivää, monella kielellä.",
+   "card": "ScoreMyBiz - Ilmainen 30 päivää"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-10"
+}

@@ -1,0 +1,29 @@
+{
+ "title": "Ennen sadetta",
+ "caption": "Sadesääennuste kehottaa Anilía siirtämään varastonsa pois lattialta. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Anilin tarina. Hän myy viljaa Intiassa, ja sade on hänen suurin murheensa."
+  },
+  {
+   "vo": "Säkkejä lattialla ja viikko epävarmaa säätä."
+  },
+  {
+   "vo": "ScoreMyBiz-sovelluksessa Intiassa Tukiohjelmat ja sää näyttävät neljän päivän säävaroituksen hänen kaupunkiinsa."
+  },
+  {
+   "vo": "Selkeä hälytys kertoo rankkasateen tulosta ja kehottaa siirtämään tavarat pois lattialta."
+  },
+  {
+   "vo": "Se listaa myös yritykselle sopivia valtion tukia virallisen linkin kera. Se ei koskaan lupaa, että hän saa sellaisen."
+  },
+  {
+   "vo": "Hänen ilmaisessa kuukaudessaan tavarat ovat poissa lattialta ennen sadetta."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen 30 päivää, monilla Intian ja maailman kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-26"
+}

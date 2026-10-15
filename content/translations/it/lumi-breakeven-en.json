@@ -1,0 +1,29 @@
+{
+ "title": "Il minimo da vendere",
+ "caption": "Prima di un negozio piu grande, Asha vuole sapere il minimo che deve vendere. Lumi racconta la sua storia.",
+ "scenes": [
+  {
+   "vo": "Ciao, sono Lumi. Questa e la storia di Asha. Vuole una pasticceria piu grande, e un affitto piu alto."
+  },
+  {
+   "vo": "Il nuovo negozio costa molto di piu ogni mese. Quanto deve vendere solo per andare in pari?"
+  },
+  {
+   "vo": "Su ScoreMyBiz, nel suo mese gratis, il punto di pareggio chiede tre cose: costi fissi, vendite mensili e costo del venduto."
+  },
+  {
+   "vo": "Mostra quanto deve vendere ogni mese per coprire i costi."
+  },
+  {
+   "vo": "E quanta scorta di sicurezza ha sopra quella soglia."
+  },
+  {
+   "vo": "Sono calcoli sui suoi numeri, non previsioni."
+  },
+  {
+   "vo": "ScoreMyBiz. Conosci la salute del tuo business. Gratis per trenta giorni, in molte lingue indiane e internazionali."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-27"
+}

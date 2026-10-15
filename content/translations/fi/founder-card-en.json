@@ -1,0 +1,30 @@
+{
+ "title": "Kortti",
+ "caption": "Rakentaja pyytää käyntikorttia häissä. Harilla ei ole sellaista. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Harin tarina. Hän myy maalia. Serkun häissä rakentaja pyytää korttia."
+  },
+  {
+   "vo": "Hänellä ei ole korttia. Hän kirjoittaa numeron lautasliinaan, ja aamuun mennessä se on kadonnut.",
+   "card": "Ei korttia"
+  },
+  {
+   "vo": "ScoreMyBizissä hän avaa Oma käyntikortti. Kaupan nimi, osoite ja ajat ovat siellä valmiina omista tiedoista."
+  },
+  {
+   "vo": "Hän napauttaa Lähetä WhatsAppissa, ja kortti on rakentajapuhelimessa ennen jälkiruokaa."
+  },
+  {
+   "vo": "Tai hän jakaa sen PDF:nä tai viestinä. Yksi kortti, monta tapaa."
+  },
+  {
+   "vo": "Kortti, joka on aina hänen taskussaan."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-23"
+}

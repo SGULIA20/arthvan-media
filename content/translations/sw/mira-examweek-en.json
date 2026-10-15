@@ -1,0 +1,30 @@
+{
+ "title": "Wiki ya mitihani",
+ "caption": "Wiki ya mitihani, na kila mtu anauliza inakwendaje. Mira anasimulia hadithi ya Sana.",
+ "scenes": [
+  {
+   "vo": "Hujambo, mimi ni Mira. Hii ni hadithi ya Sana. Wiki ya mitihani. Kila mtu anamuuliza swali lilelile: inakwendaje?"
+  },
+  {
+   "vo": "Anasema sawa tu. Kila wakati. Sawa, sawa, sawa.",
+   "card": "Wiki ya mitihani"
+  },
+  {
+   "vo": "Kwenye Waypoint anapata Njia ya Kila Siku. Swali moja kwa siku, sawa kwa wote."
+  },
+  {
+   "vo": "Swali la leo lilikuwa rahisi kusoma na gumu kujibu. Alichukua muda wake."
+  },
+  {
+   "vo": "Kisha akaona jinsi wengine walivyojibu. Majibu tofauti. Kusita kulekule kabla ya kuandika."
+  },
+  {
+   "vo": "Rudi kwenye daftari. Mitihani ileile. Na alilala mapema usiku ule."
+  },
+  {
+   "vo": "Waypoint. Sema mara moja. Bure kwenye Google Play, katika lugha nyingi za India na za kimataifa."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-20"
+}

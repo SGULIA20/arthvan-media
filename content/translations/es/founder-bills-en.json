@@ -1,0 +1,29 @@
+{
+ "title": "Una factura formal",
+ "caption": "Un cliente habitual pidió una factura formal con el nombre de la tienda. El fundador cuenta la historia de Anil.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Anil. Un cliente habitual preguntó, ¿puedes enviarme una factura formal?"
+  },
+  {
+   "vo": "Todo lo que tenía era un papelito con números."
+  },
+  {
+   "vo": "En ScoreMyBiz hace una factura numerada, con el nombre de su tienda y los artículos."
+  },
+  {
+   "vo": "Luego la comparte como PDF, o como mensaje en WhatsApp."
+  },
+  {
+   "vo": "El cliente tiene una factura formal en un minuto."
+  },
+  {
+   "vo": "Una factura simple, con el nombre de su propia tienda."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-12"
+}

@@ -1,0 +1,30 @@
+{
+ "title": "Práctica",
+ "caption": "Él es bueno en su tienda y está nervioso por la siguiente gran decisión. Bilal practica primero. El fundador cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Bilal. Es bueno en su tienda y está nervioso por su próxima gran decisión."
+  },
+  {
+   "vo": "Él se pregunta qué habría pasado si hubiera comprado más mercancía el Diwali pasado.",
+   "card": "¿Y si?"
+  },
+  {
+   "vo": "ScoreMyBiz tiene un Juego de Decisiones de Negocios. Elige el tipo de negocio más parecido al suyo."
+  },
+  {
+   "vo": "Cada ronda le pone enfrente una opción real: comprar mercancía, contratar, pagar, gastar."
+  },
+  {
+   "vo": "Catorce días de decisiones, y ve cómo sale cada una."
+  },
+  {
+   "vo": "Es práctica, no consejo. Y probar es gratis."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas de la India e internacionales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-05"
+}

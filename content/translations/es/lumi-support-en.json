@@ -1,0 +1,29 @@
+{
+ "title": "Alguien va a revisar",
+ "caption": "Faltaba una venta en el libro de Neha, y quería que alguien la revisara. Lumi cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esta es la historia de Neha. Una mañana, una venta que anotó faltaba en su libro."
+  },
+  {
+   "vo": "Estaba segura de que la había anotado. ¿A quién le podía preguntar?"
+  },
+  {
+   "vo": "En ScoreMyBiz abre Informar de un problema y escribe lo que pasó."
+  },
+  {
+   "vo": "Recibe un número de ticket y la respuesta llega dentro de la aplicación."
+  },
+  {
+   "vo": "La aplicación intenta responder en un día."
+  },
+  {
+   "vo": "Un problema no tiene por qué seguir siendo una preocupación."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas de la India e internacionales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-13"
+}

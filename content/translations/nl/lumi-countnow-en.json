@@ -1,0 +1,32 @@
+{
+ "title": "Klopt de la?",
+ "caption": "Bij sluiting telt Rekha de kassa. Klopt de boekhouding? Lumi vertelt haar verhaal.",
+ "scenes": [
+  {
+   "vo": "Hoi, ik ben Lumi. Dit is het verhaal van Rekha. Bij sluiting telt ze de kassa en vraagt zich af of de boeken kloppen.",
+   "card": "Klopt de la?"
+  },
+  {
+   "vo": "Briefjes op één stapel, muntjes op een andere. Ze telt het dubbel."
+  },
+  {
+   "vo": "In ScoreMyBiz opent ze 'Geld dat ik nu heb' en vult in wat er in de kassa, de bank en de voorraad zit.",
+   "card": "Geld dat ik nu heb"
+  },
+  {
+   "vo": "De app toont wat haar boekhouding verwachtte, en het verschil tussen de twee.",
+   "card": "Het verschil"
+  },
+  {
+   "vo": "Een verschil betekent meestal dat er een boeking is gemist, niet dat er iets mis is."
+  },
+  {
+   "vo": "Wat ze intypt wordt het nieuwe startpunt."
+  },
+  {
+   "vo": "ScoreMyBiz. Ken de gezondheid van je zaak. Dertig dagen gratis, in vele talen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-14"
+}

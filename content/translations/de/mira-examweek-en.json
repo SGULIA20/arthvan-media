@@ -1,0 +1,30 @@
+{
+ "title": "Prüfungswoche",
+ "caption": "Prüfungswoche und alle fragen, wie es läuft. Mira erzählt Sanas Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Mira. Das ist Sanas Geschichte. Prüfungswoche. Alle fragen sie dasselbe: Wie läuft's?"
+  },
+  {
+   "vo": "Sie sagt gut. Jedes Mal. Gut, gut, gut.",
+   "card": "Prüfungswoche"
+  },
+  {
+   "vo": "Auf Waypoint findet sie den Daily Path. Eine Frage pro Tag, für alle dieselbe."
+  },
+  {
+   "vo": "Die Frage heute war leicht zu lesen, schwer zu beantworten. Sie nahm sich Zeit."
+  },
+  {
+   "vo": "Dann sah sie andere Antworten. Verschiedene Antworten. Dieselbe Pause vor dem Tippen."
+  },
+  {
+   "vo": "Zurück zu den Notizen. Gleiche Prüfungen. Und sie schlief früher in der Nacht."
+  },
+  {
+   "vo": "Waypoint. Sag es einmal. Kostenlos bei Google Play, auf vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-20"
+}

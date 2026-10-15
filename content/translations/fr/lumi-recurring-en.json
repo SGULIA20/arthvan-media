@@ -1,0 +1,29 @@
+{
+ "title": "Tapez-le une seule fois",
+ "caption": "Le loyer est le même le 5 de chaque mois. Kavita le tape une fois. Lumi raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Lumi. Voici l'histoire de Kavita. Son loyer est le même le cinq de chaque mois."
+  },
+  {
+   "vo": "Même loyer. Même date. Même saisie, chaque mois."
+  },
+  {
+   "vo": "Dans ScoreMyBiz, pour un coût fixe comme le loyer, elle choisit Oui, chaque mois."
+  },
+  {
+   "vo": "Il s'ajoute tout seul à son livre au jour choisi, et elle peut le suspendre ou l'arrêter."
+  },
+  {
+   "vo": "Un faux mouvement sur Supprimer ? Une barre Annuler de cinq secondes le ramène."
+  },
+  {
+   "vo": "Seuls les frais fixes récurrents se répètent. Les achats de stock restent manuels."
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours, en multilingue."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-06"
+}

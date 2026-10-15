@@ -1,0 +1,31 @@
+{
+ "title": "Maksathan ensin",
+ "caption": "Kolme toimittajan laskua, kolme eräpäivää, yksi jo myöhässä. Perustaja kertoo Dineshin tarinan.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Dineshin tarina. Toimittajan lasku eräpää tällä viikolla, ja hän haluaa laittaa rahat sivuun.",
+   "card": "Dineshin tarina"
+  },
+  {
+   "vo": "Laskuja kolmelta toimittajalta, kolme eri eräpäivää, ja yksi niistä on jo myöhässä."
+  },
+  {
+   "vo": "ScoreMyBiz-palvelussa \"Maksettavat rahat\" ryhmittelee laskut toimittajittain."
+  },
+  {
+   "vo": "Se näyttää, mikä on myöhässä ja mikä erääntyy tällä viikolla, joten hän tietää ketä maksaa ensin."
+  },
+  {
+   "vo": "Hän saa myös muistutuksen sovellukseen eräpäivänä ja kolme päivää ennen."
+  },
+  {
+   "vo": "ScoreMyBiz ei maksa kenellekään. Se vain muistuttaa."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla Intian ja kansainvälisillä kielillä.",
+   "card": "ScoreMyBiz"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-12"
+}

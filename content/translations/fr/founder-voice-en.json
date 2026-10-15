@@ -1,0 +1,30 @@
+{
+ "title": "Dis-le à voix haute",
+ "caption": "Ses mains sont faites pour le volant, pas pour taper. Tariq parle à la place. Le fondateur raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut. C'est l'histoire de Tariq. Il est chauffeur de taxi. Ses mains sont pour le volant, pas pour taper."
+  },
+  {
+   "vo": "Entre deux courses, il a des choses à dire, et les pouces sont lents.",
+   "card": "Entre deux courses"
+  },
+  {
+   "vo": "Sur Waypoint, il touche Vocal et parle. Jusqu'à soixante secondes."
+  },
+  {
+   "vo": "Puis il choisit un personnage : un Ours, un Renard ou un Moineau."
+  },
+  {
+   "vo": "Sur le Mur, les gens entendent ses mots avec la voix de ce personnage. Un message vocal part après sept jours."
+  },
+  {
+   "vo": "Garé, dit, retour à la course suivante."
+  },
+  {
+   "vo": "Waypoint. Dis-le une fois. Gratuit sur Google Play, en de nombreuses langues indiennes et internationales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-18"
+}

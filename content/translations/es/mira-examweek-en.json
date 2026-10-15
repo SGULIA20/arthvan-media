@@ -1,0 +1,30 @@
+{
+ "title": "Semana de exámenes",
+ "caption": "Semana de exámenes, y todos preguntan cómo va. Mira cuenta la historia de Sana.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Mira. Esta es la historia de Sana. Semana de exámenes. Todos le hacen la misma pregunta: ¿cómo va?"
+  },
+  {
+   "vo": "Ella dice que bien. Siempre. Bien, bien, bien.",
+   "card": "Semana de exámenes"
+  },
+  {
+   "vo": "En Waypoint halla el Camino Diario. Una pregunta al día, la misma para todos."
+  },
+  {
+   "vo": "La pregunta de hoy fue fácil de leer y difícil de responder. Se tomó su tiempo."
+  },
+  {
+   "vo": "Luego vio cómo respondieron otros. Respuestas distintas. La misma pausa antes de escribir."
+  },
+  {
+   "vo": "Vuelve a los apuntes. Mismos exámenes. Y durmió más temprano esa noche."
+  },
+  {
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play, en muchos idiomas de la India y del mundo."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-20"
+}

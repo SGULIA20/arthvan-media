@@ -1,0 +1,29 @@
+{
+ "title": "O convite",
+ "caption": "A Priya quer partilhar o Waypoint com o primo. Um código, e ambos ganham dez pontos. A fundadora conta a sua história.",
+ "scenes": [
+  {
+   "vo": "Olá. Esta é a história da Priya. Ela achou algo no Waypoint que quer partilhar."
+  },
+  {
+   "vo": "O primo Kabir teve um mês difícil. Ela quer dar-lhe um lugar calmo, sem dar conselhos."
+  },
+  {
+   "vo": "Nos meus Waypoints, ela acha o seu código de convite e o botão para o partilhar."
+  },
+  {
+   "vo": "Ela envia-o ao Kabir com uma frase simpática."
+  },
+  {
+   "vo": "O Kabir tem os primeiros sete dias no Waypoint para pôr o código."
+  },
+  {
+   "vo": "Quando o faz, os dois ganham dez pontos."
+  },
+  {
+   "vo": "Waypoint. Diga uma vez. Grátis no Google Play, em muitas línguas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-26"
+}

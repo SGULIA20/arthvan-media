@@ -1,0 +1,27 @@
+{
+ "title": "Monatsende",
+ "caption": "Sureshs Kasse stimmte nicht mit seinem Regal überein. Der Gründer erzählt, wie eine Zahl pro Woche sein Monatsende verändert hat.",
+ "scenes": [
+  {
+   "vo": "Hallo. Das ist Sureshs Geschichte. Er führt einen Eisenwarenladen. Jeden Monat dasselbe: Wo ist das Geld hin?"
+  },
+  {
+   "vo": "Die Verkäufe liefen gut. Das Regal war voll. Die Kasse nicht.",
+   "card": "Wo ist es hin?"
+  },
+  {
+   "vo": "ScoreMyBiz liest sein Buch und zeigt es klar. Verkaufte. Gekaufte. Ausgegebene. Was bleibt."
+  },
+  {
+   "vo": "Lumi zeigt auf das echte Problem: Festtagsware, noch im Regal. Geld, geparkt."
+  },
+  {
+   "vo": "Eine Zahl von hundert für die Gesundheit des Ladens, und drei Schritte für die Woche. Er macht sie. Nächsten Monat stimmt die Kasse wieder."
+  },
+  {
+   "vo": "ScoreMyBiz. Kenne deine Geschäftslage. Dreißig Tage kostenlos, in vielen indischen und internationalen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-15"
+}

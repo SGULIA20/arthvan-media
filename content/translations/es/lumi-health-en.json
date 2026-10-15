@@ -1,0 +1,29 @@
+{
+ "title": "Mi propio lado",
+ "caption": "El dinero de la casa y de la tienda de Sameer están mezclados. Lumi le muestra su propio lado. Lumi cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esta es la historia de Sameer. Tiene un café en Pune y mezcla sus gastos."
+  },
+  {
+   "vo": "Unos días la caja paga el negocio. Otros días paga la casa."
+  },
+  {
+   "vo": "En ScoreMyBiz hay una nota de salud personal para su propio dinero."
+  },
+  {
+   "vo": "Registra sus ingresos y gastos, y puede sumar ahorros, deudas y familia."
+  },
+  {
+   "vo": "Muestra su propia nota y si ya puede vivir solo de su negocio."
+  },
+  {
+   "vo": "Una nota, no un consejo. Su propio lado, con claridad."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-25"
+}

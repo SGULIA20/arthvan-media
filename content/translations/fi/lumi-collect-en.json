@@ -1,0 +1,35 @@
+{
+ "title": "Kuka on velkaa",
+ "caption": "On kuun vaihde, eikä Salma muista, kuka on hänelle velkaa. Lumi kertoo hänen tarinansa.",
+ "scenes": [
+  {
+   "vo": "Hei, minä olen Lumi. Tämä on Salman tarina. Kuun vaihde käsillä, eikä hän muista velkojia."
+  },
+  {
+   "card": "Kuka on velkaa?",
+   "vo": "Asiakkaat lupasivat maksaa. Osa maksoi, osa ei. Vihko ei kerro, kuinka kauan on kulunut."
+  },
+  {
+   "card": "Maksut myöhässä",
+   "vo": "ScoreMyBiz-sovelluksen Kassavirran seuranta listaa velalliset, summat ja eräpäivät."
+  },
+  {
+   "card": "Soita tai laita viesti",
+   "vo": "Se näyttää kehen ottaa yhteyttä, ja WhatsApp-painikkeella muistutus lähtee heti."
+  },
+  {
+   "card": "Maksettu!",
+   "vo": "Kun asiakas maksaa, hän merkitsee sen maksetuutetuksi, ja kirjanpito päivittyy."
+  },
+  {
+   "card": "Ei enää arvailua",
+   "vo": "Kuun vaihde on nyt lyhyt lista eikä mitään arvailua."
+  },
+  {
+   "card": "ScoreMyBiz",
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen kolmekymmentä päivää."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-11"
+}

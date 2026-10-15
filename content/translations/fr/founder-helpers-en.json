@@ -1,0 +1,29 @@
+{
+ "title": "Écrire, pas voir",
+ "caption": "Un assistant doit noter les ventes, pas voir les profits. Naveen donne à ses assistants leur propre identifiant. Le fondateur raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Bonjour. Voici l'histoire de Naveen. Sa boutique est active et un assistant tient le comptoir."
+  },
+  {
+   "vo": "Il veut que l'assistant note les ventes. Il ne veut pas qu'il voie ses profits ou supprime quoi que ce soit."
+  },
+  {
+   "vo": "Dans ScoreMyBiz, il donne à un assistant son propre identifiant, avec un code WhatsApp. Jusqu'à trois assistants."
+  },
+  {
+   "vo": "L'assistant voit un écran simple : ajouter ventes, achats, dépenses et compter la caisse."
+  },
+  {
+   "vo": "Pas de rapports. Pas de paramètres. Pas de conseiller."
+  },
+  {
+   "vo": "Et chaque modification montre qui l'a faite."
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours, en de nombreuses langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-30"
+}

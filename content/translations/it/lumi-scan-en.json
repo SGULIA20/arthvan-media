@@ -1,0 +1,30 @@
+{
+ "title": "Salta la tastiera",
+ "caption": "Tutto il suo mese è in un quaderno. Sunita fotografa una pagina invece di scriverla. Lumi racconta la sua storia.",
+ "scenes": [
+  {
+   "vo": "Ciao, sono Lumi. Questa è la storia di Sunita. Ha tutto il mese in un quaderno, scritto a mano."
+  },
+  {
+   "vo": "Scriverlo tutto via tastiera le porterebbe via una serata che non ha.",
+   "card": "Il quaderno"
+  },
+  {
+   "vo": "Su ScoreMyBiz tocca Scansiona foto e fotografa una pagina del quaderno."
+  },
+  {
+   "vo": "I numeri compaiono per essere controllati. Ne corregge uno, e solo allora salva."
+  },
+  {
+   "vo": "Oppure può dettare i suoi numeri a voce."
+  },
+  {
+   "vo": "Controlla e poi salva. Il quaderno resta suo."
+  },
+  {
+   "vo": "ScoreMyBiz. Conosci la salute del tuo business. Gratis per trenta giorni, in molte lingue."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-25"
+}

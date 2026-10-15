@@ -1,0 +1,29 @@
+{
+ "title": "Visto una vez",
+ "caption": "La puesta de sol de Zoe es demasiado hermosa para guardarla. La comparte como un Momento y un extraño la ve una vez. Mira cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Mira. Esta es la historia de Zoe. Desde su balcón, la puesta de sol es muy bella para guardarla."
+  },
+  {
+   "vo": "Quiere compartirla, pero no con todo el mundo, y tampoco para siempre."
+  },
+  {
+   "vo": "En el Muro de Waypoint hay una franja de Momentos. Toca Agregar y elige la foto."
+  },
+  {
+   "vo": "Una foto que una persona ve una vez y luego desaparece para todos. Se revisa antes de publicarse y dura veinticuatro horas."
+  },
+  {
+   "vo": "La primera persona en abrirla la ve por diez segundos y puede enviar un emoji."
+  },
+  {
+   "vo": "Luego desaparece para todos. Un pequeño momento compartido una vez."
+  },
+  {
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play, en muchos idiomas de la India y del mundo."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-03"
+}

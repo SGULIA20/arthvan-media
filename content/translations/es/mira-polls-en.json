@@ -1,0 +1,30 @@
+{
+ "title": "Pregunta el Camino",
+ "caption": "Todos los que le consultan tienen una opinión sobre ella. Neha hace una encuesta en su lugar. Mira cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Mira. Esta es la historia de Neha. Tiene una gran decisión y cada amigo da una respuesta distinta."
+  },
+  {
+   "vo": "Una nueva ciudad por un nuevo empleo, o quedarse cerca de casa. Todos opinan de ella, no de la opción.",
+   "card": "¿Nueva ciudad?"
+  },
+  {
+   "vo": "En Waypoint abre Pregunta el Camino. Una pregunta y de dos a cuatro opciones."
+  },
+  {
+   "vo": "La gente en el Muro vota una sola vez. Sin ensayos. Sin consejos. Solo un toque."
+  },
+  {
+   "vo": "Ella ve cómo se dividen los votos al entrar."
+  },
+  {
+   "vo": "Sigue siendo su decisión. Pero ahora sabe hacia dónde se inclina el grupo."
+  },
+  {
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play, en muchos idiomas de India e internacionales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-16"
+}

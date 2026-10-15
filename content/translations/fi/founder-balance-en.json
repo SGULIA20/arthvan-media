@@ -1,0 +1,30 @@
+{
+ "title": "Mitä on ja mitä on velkaa",
+ "caption": "Joka maaliskuu kirjanpitäjä kysyy saman kysymyksen. Imtiazilla on vihdoin vastaus. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moikka. Tämä on Imtiazvu tarina. Joka maaliskuu hänen kirjanpitäjä kysyy saman kysymyksen: mitä on, ja mitä on velkaa?"
+  },
+  {
+   "vo": "Hän vastaa muistista, ja joka vuosi vastaus on vähän erilainen.",
+   "card": "Muistista"
+  },
+  {
+   "vo": "ScoreMyBizissä se on yksi näyttö: käteinen, rahat pankissa, mitä asiakkaat ovat velkaa, ja varasto."
+  },
+  {
+   "vo": "Kaikki omista kirjauksista. Hänen ei tarvitse arvailla."
+  },
+  {
+   "vo": "Hän napauttaa Jaa CA:lle, ja se menee hänen kirjanpitäjälleen."
+  },
+  {
+   "vo": "Tänä maaliskuuna hänellä oli vastaus ennen kuin kirjanpitäjä kysyi."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi kunto. Ilmainen kolmekymmentä päivää."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-27"
+}

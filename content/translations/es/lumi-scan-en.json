@@ -1,0 +1,30 @@
+{
+ "title": "Olvídate de escribir",
+ "caption": "Todo su mes está en un cuaderno. Sunita fotografía una página en vez de escribirla. Lumi cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esta es la historia de Sunita. Todo su mes está en un cuaderno, escrito a mano."
+  },
+  {
+   "vo": "Escribir todo le tomaría una noche que no tiene.",
+   "card": "El cuaderno"
+  },
+  {
+   "vo": "En ScoreMyBiz toca Escanear foto y fotografía una página del cuaderno."
+  },
+  {
+   "vo": "Los números se llenan solos para que los revise. Corrige uno y solo entonces guarda."
+  },
+  {
+   "vo": "O puede decir sus números en voz alta."
+  },
+  {
+   "vo": "Revísalo y guárdalo. El cuaderno sigue siendo suyo."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-25"
+}

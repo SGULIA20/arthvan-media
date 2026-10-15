@@ -1,0 +1,36 @@
+{
+ "title": "Een tweede mening",
+ "caption": "Voor Diwali wil Rahul een tweede mening op basis van zijn eigen cijfers. Lumi vertelt zijn verhaal.",
+ "scenes": [
+  {
+   "vo": "Hoi, ik ben Lumi. Dit is het verhaal van Rahul. Diwali komt eraan en hij twijfelt of hij extra voorraad moet inkopen.",
+   "card": "Diwali komt eraan"
+  },
+  {
+   "vo": "Meer kopen met risico op restanten, of minder kopen en mis grijpen. Iedereen geeft een ander advies.",
+   "card": "Wat te doen?"
+  },
+  {
+   "vo": "In ScoreMyBiz, tijdens zijn gratis maand, opent hij de Adviseur en tikt zijn vraag in zijn eigen taal.",
+   "card": "Gratis maand"
+  },
+  {
+   "vo": "Het antwoord gebruikt meteen zijn eigen cijfers.",
+   "card": "Zijn eigen cijfers"
+  },
+  {
+   "vo": "Hij krijgt een paar vragen per dag. Het is geen CA of advocaat, het kan fouten maken en het is geen financieel advies.",
+   "card": "Geen financieel advies"
+  },
+  {
+   "vo": "Een tweede mening. De beslissing blijft van hem.",
+   "card": "Tweede mening"
+  },
+  {
+   "vo": "ScoreMyBiz. Ken de gezondheid van je zaak. Dertig dagen gratis, in vele Indiase en internationale talen.",
+   "card": "ScoreMyBiz"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-02"
+}

@@ -1,0 +1,35 @@
+{
+ "title": "Olá à meia-noite",
+ "caption": "À meia-noite ninguém está online. O Jo diz olá à Mira, uma guia de IA. A Mira conta a história dele.",
+ "scenes": [
+  {
+   "vo": "Olá, sou a Mira. Esta é a história do Jo. É meia-noite e todos os contactos dele dormem."
+  },
+  {
+   "card": "A meia-noite",
+   "vo": "No Waypoint ele espera por um par, mas a contagem de online diz zero."
+  },
+  {
+   "card": "Sem pares",
+   "vo": "Por isso ele toca em Falar com a Mira, no separador Conversas ou enquanto espera."
+  },
+  {
+   "card": "Toca em Falar",
+   "vo": "Ela diz logo: Sou uma guia de IA, não uma pessoa."
+  },
+  {
+   "card": "IA, não pessoa",
+   "vo": "Ela responde numa frase ou duas. E ele pode reatar, denunciar ou bloquear, como em qualquer chat."
+  },
+  {
+   "card": "Respostas curtas",
+   "vo": "Após quarenta mensagens dele o chat fecha. É um sítio para começar, não para ficar."
+  },
+  {
+   "card": "Sítio para começar",
+   "vo": "Waypoint. Diz isto uma vez. Grátis no Google Play, em muitas línguas indianas e internacionais."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-28"
+}

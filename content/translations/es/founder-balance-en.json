@@ -1,0 +1,30 @@
+{
+ "title": "Bienes y deudas",
+ "caption": "Cada marzo su contador le hace la misma pregunta. Imtiaz por fin tiene la respuesta. El fundador cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Imtiaz. Cada marzo su contador le hace la misma pregunta: ¿qué tienes y qué debes?"
+  },
+  {
+   "vo": "Él responde de memoria, y cada año la respuesta es un poco diferente.",
+   "card": "De memoria"
+  },
+  {
+   "vo": "En ScoreMyBiz es una sola pantalla: efectivo, dinero en el banco, lo que le deben y su inventario."
+  },
+  {
+   "vo": "Todo con sus propios registros. No tiene que adivinar."
+  },
+  {
+   "vo": "Toca en Compartir con mi CA, y se lo envía a su contador."
+  },
+  {
+   "vo": "Este marzo, tuvo la respuesta antes de que su contador se la pidiera."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-27"
+}

@@ -1,0 +1,30 @@
+{
+ "title": "Un deuxième avis",
+ "caption": "Avant Diwali, Rahul veut un deuxième avis basé sur ses propres chiffres. Lumi raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Lumi. Voici l'histoire de Rahul. Diwali approche et il hésite à racheter du stock.",
+   "card": "Rahul hésite"
+  },
+  {
+   "vo": "Acheter plus et risquer des invendus, ou acheter moins et manquer de stock. Chacun a son avis."
+  },
+  {
+   "vo": "Dans ScoreMyBiz, pendant son mois gratuit, il ouvre le Conseiller et tape sa question dans sa langue."
+  },
+  {
+   "vo": "La réponse utilise déjà ses propres chiffres."
+  },
+  {
+   "vo": "Il a quelques questions par jour. Ce n'est ni un expert-comptable ni un avocat, il peut se tromper."
+  },
+  {
+   "vo": "Un deuxième avis. La décision lui revient toujours."
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours, en de nombreuses langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-02"
+}

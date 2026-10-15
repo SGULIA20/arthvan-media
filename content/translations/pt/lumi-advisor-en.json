@@ -1,0 +1,36 @@
+{
+ "title": "Uma segunda opinião",
+ "caption": "Antes do Diwali, o Rahul quer uma segunda opinião com base nos seus próprios números. A Lumi conta a história dele.",
+ "scenes": [
+  {
+   "vo": "Olá, sou a Lumi. Esta é a história do Rahul. O Diwali está perto e ele não sabe se deve comprar mais stock.",
+   "card": "Olá, sou a Lumi"
+  },
+  {
+   "vo": "Comprar mais e arriscar sobrar, ou comprar menos e esgotar. Cada um dá uma resposta diferente.",
+   "card": "Comprar mais ou menos?"
+  },
+  {
+   "vo": "No ScoreMyBiz, no mês grátis, ele abre o Advisor e escreve a pergunta na sua própria língua.",
+   "card": "ScoreMyBiz Advisor"
+  },
+  {
+   "vo": "A resposta já usa os números dele.",
+   "card": "Usa os seus números"
+  },
+  {
+   "vo": "Ele recebe algumas perguntas por dia. Não é um contabilista ou advogado, pode errar e não é conselho financeiro.",
+   "card": "Aviso importante"
+  },
+  {
+   "vo": "Uma segunda opinião. A decisão continua a ser dele.",
+   "card": "Uma segunda opinião"
+  },
+  {
+   "vo": "ScoreMyBiz. Conheça a saúde do seu negócio. Grátis por trinta dias, em muitas línguas.",
+   "card": "Experimente grátis"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-02"
+}

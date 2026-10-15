@@ -1,0 +1,35 @@
+{
+ "title": "Maoni ya pili",
+ "caption": "Kabla ya Diwali, Rahul anataka maoni ya pili kwa kutumia namba zake. Lumi anasimulia hadithi yake.",
+ "scenes": [
+  {
+   "vo": "Habari, mimi ni Lumi. Hii ni hadithi ya Rahul. Diwali iko karibu, na hajui anunue bidhaa zaidi."
+  },
+  {
+   "card": "Ununue zaidi au kidogo?",
+   "vo": "Anunue zaidi na ahatarishe kubakiwa, au anunue kidogo ziishe. Kila mtu anatoa jibu tofauti."
+  },
+  {
+   "card": "Uliza katika ScoreMyBiz",
+   "vo": "Ndani ya ScoreMyBiz, mwezi wake wa bure, anafungua Mshauri na kuandika swali lake."
+  },
+  {
+   "card": "Jibu linatumia namba zako",
+   "vo": "Jibu tayari linatumia namba zake mwenyewe."
+  },
+  {
+   "card": "Sio ushauri wa fedha",
+   "vo": "Anapata maswali machache kwa siku. Sio Mhasibu, inaweza kukosea, sio ushauri wa pesa."
+  },
+  {
+   "card": "Maoni ya pili",
+   "vo": "Maoni ya pili. Uamuzi bado ni wake."
+  },
+  {
+   "card": "ScoreMyBiz - Siku 30 bure",
+   "vo": "ScoreMyBiz. Jua hali ya biashara yako. Bure kwa siku 30, kwa lugha nyingi."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-02"
+}

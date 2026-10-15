@@ -1,0 +1,30 @@
+{
+ "title": "Eine Minute vor Feierabend",
+ "caption": "Sie schließt um neun und ist um acht müde. Anita nutzt vier Felder. Lumi erzählt ihre Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Lumi. Das ist Anitas Geschichte. Ihr Laden schließt um neun, und um acht ist sie müde."
+  },
+  {
+   "vo": "Jeden Verkauf einzeln aufzuschreiben, ist nichts für einen müden Tag.",
+   "card": "Neun Uhr"
+  },
+  {
+   "vo": "In ScoreMyBiz trägt sie nur vier Dinge ein: Verkauf, Ausgaben, Bargeld und die Bank."
+  },
+  {
+   "vo": "Eine Minute an der Kasse, und der Tag ist geschafft."
+  },
+  {
+   "vo": "Wenn der Tag schon erfasst ist, werden die Summen nicht doppelt gezählt."
+  },
+  {
+   "vo": "Die Bücher sind aktuell, und sie ist es auch."
+  },
+  {
+   "vo": "ScoreMyBiz. Kenne die Gesundheit deines Betriebs. Dreißig Tage kostenlos, in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-03"
+}

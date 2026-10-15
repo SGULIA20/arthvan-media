@@ -1,0 +1,29 @@
+{
+ "title": "Una fattura regolare",
+ "caption": "Un cliente abituale ha chiesto una fattura regolare con il nome del negozio. Il fondatore racconta la storia di Anil.",
+ "scenes": [
+  {
+   "vo": "Ciao. Questa è la storia di Anil. Un cliente abituale ha chiesto, mi mandi una fattura regolare?"
+  },
+  {
+   "vo": "Aveva solo un pezzetto di carta con dei numeri scritti sopra."
+  },
+  {
+   "vo": "Con ScoreMyBiz fa una fattura numerata, con il nome del negozio e gli articoli."
+  },
+  {
+   "vo": "Poi la condivide come PDF o come messaggio su WhatsApp."
+  },
+  {
+   "vo": "Il cliente ha una fattura regolare in un minuto."
+  },
+  {
+   "vo": "Una fattura semplice, con il nome del suo negozio."
+  },
+  {
+   "vo": "ScoreMyBiz. Conosci la salute della tua azienda. Gratis per trenta giorni, in molte lingue."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-12"
+}

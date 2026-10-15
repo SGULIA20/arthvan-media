@@ -1,0 +1,30 @@
+{
+ "title": "Demandez le Chemin",
+ "caption": "Tout le monde a un avis sur elle. Neha fait plutôt un sondage. Mira raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Mira. Voici l'histoire de Neha. Elle a un grand choix, et chaque ami donne une autre réponse."
+  },
+  {
+   "vo": "Une nouvelle ville pour un job, ou rester près de chez elle. Tout le monde a un avis sur elle, pas sur son choix.",
+   "card": "Nouvelle ville ?"
+  },
+  {
+   "vo": "Sur Waypoint elle ouvre Ask the Path. Une question, et deux à quatre options."
+  },
+  {
+   "vo": "Les gens du Mur votent une fois chacun. Pas de longs textes. Pas de conseils. Juste un clic."
+  },
+  {
+   "vo": "Elle voit comment les votes se partagent en direct."
+  },
+  {
+   "vo": "C'est toujours son choix. Mais maintenant elle sait ce que les gens pensent."
+  },
+  {
+   "vo": "Waypoint. Dites-le une fois. Gratuit sur Google Play, en plein de langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-16"
+}

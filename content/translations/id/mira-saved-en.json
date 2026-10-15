@@ -1,0 +1,30 @@
+{
+ "title": "Baca lagi",
+ "caption": "Satu unggahan membuat Mateo tertawa terbahak-bahak. Dia menandainya untuk dibaca lagi. Mira menceritakan kisahnya.",
+ "scenes": [
+  {
+   "vo": "Hai, saya Mira. Ini kisah Mateo. Tadi malam, satu unggahan membuatnya tertawa terbahak-bahak."
+  },
+  {
+   "vo": "Dia ingin membacanya lagi besok, dan dia tahu dia tidak akan menemukannya pagi nanti."
+  },
+  {
+   "vo": "Jadi dia ketuk ikon tanda di unggahan itu."
+  },
+  {
+   "vo": "Di bawah My Waypoints, Saved menyimpan setiap tanda dalam satu daftar.",
+   "card": "Saved"
+  },
+  {
+   "vo": "Dia membacanya lagi, dan tertawa lagi."
+  },
+  {
+   "vo": "Setelah selesai dengan satu, dia bisa menghapusnya dari daftar dengan satu ketukan."
+  },
+  {
+   "vo": "Waypoint. Katakan sekali. Gratis di Google Play, dalam banyak bahasa."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-06"
+}

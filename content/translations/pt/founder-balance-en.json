@@ -1,0 +1,30 @@
+{
+ "title": "Bens e dívidas",
+ "caption": "Todo mês de março o contador dele faz a mesma pergunta. O Imtiaz finalmente tem a resposta. O fundador conta a sua história.",
+ "scenes": [
+  {
+   "vo": "Olá. Esta é a história do Imtiaz. Todo mês de março o contador pergunta: o que você tem e o que deve?"
+  },
+  {
+   "vo": "Ele responde de memória, e todo ano a resposta é um pouco diferente.",
+   "card": "De memória"
+  },
+  {
+   "vo": "No ScoreMyBiz é uma tela só: dinheiro em caixa, no banco, o que clientes devem e o estoque."
+  },
+  {
+   "vo": "Tudo pelos seus próprios lançamentos. Ele não precisa adivinhar."
+  },
+  {
+   "vo": "Ele toca em Partilhar com o meu CA, e vai direto para o contador."
+  },
+  {
+   "vo": "Este março, ele tinha a resposta antes de o contador perguntar."
+  },
+  {
+   "vo": "ScoreMyBiz. Saiba a saúde do seu negócio. Grátis por trinta dias."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-27"
+}

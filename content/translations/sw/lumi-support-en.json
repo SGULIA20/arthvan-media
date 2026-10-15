@@ -1,0 +1,36 @@
+{
+ "title": "Mtu ataangalia",
+ "caption": "Mauzo yalipotea kwenye kitabu cha Neha, naye alitaka mtu aangalie. Lumi anasimulia hadithi yake.",
+ "scenes": [
+  {
+   "vo": "Hujambo, mimi ni Lumi. Hii ni hadithi ya Neha. Asubuhi moja mauzo aliyoandika yalipotea kwenye kitabu chake.",
+   "card": "Mauzo yaliyopotea"
+  },
+  {
+   "vo": "Alikuwa na hakika ameandika. Angeweza kumuuliza nani?",
+   "card": "Nani wa kuuliza?"
+  },
+  {
+   "vo": "Ndani ya ScoreMyBiz anafungua Ripoti tatizo na kuandika yaliyotokea.",
+   "card": "Ripoti tatizo"
+  },
+  {
+   "vo": "Anapata namba ya tikiti, na jibu linakuja ndani ya programu.",
+   "card": "Jibu ndani ya programu"
+  },
+  {
+   "vo": "Programu inalenga kujibu ndani ya siku moja.",
+   "card": "Jibu ndani ya siku moja"
+  },
+  {
+   "vo": "Tatizo halihitaji kubaki kuwa wasiwasi.",
+   "card": "Ondoa wasiwasi"
+  },
+  {
+   "vo": "ScoreMyBiz. Jua hali ya biashara yako. Bure kwa siku thelathini, kwa lugha nyingi.",
+   "card": "ScoreMyBiz Bure kwa siku 30"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-13"
+}

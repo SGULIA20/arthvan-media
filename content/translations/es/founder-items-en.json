@@ -1,0 +1,29 @@
+{
+ "title": "Cuánto le cobré",
+ "caption": "Rakesh no recordaba cuánto cobró el mes pasado. El fundador cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Rakesh. Un cliente preguntó: ¿cuánto me cobraste el mes pasado?"
+  },
+  {
+   "vo": "No recordaba la tarifa. No quería adivinar."
+  },
+  {
+   "vo": "En ScoreMyBiz, Mis artículos y precios muestra lo que vende, con la última tarifa."
+  },
+  {
+   "vo": "Se crea solo con cada entrada de vendido y comprado. Puede añadir, cambiar u ocultar artículos."
+  },
+  {
+   "vo": "Así que responde en segundos, con el número real."
+  },
+  {
+   "vo": "Es una lista de precios, no conteo de stock. Solo la última tarifa, lista."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas indios e internacionales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-11"
+}

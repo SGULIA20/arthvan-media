@@ -1,0 +1,30 @@
+{
+ "title": "Chega de digitar",
+ "caption": "O mês inteiro dela está num caderno. A Sunita fotografa uma página em vez de digitar. A Lumi conta a história dela.",
+ "scenes": [
+  {
+   "vo": "Oi, sou a Lumi. Esta é a história da Sunita. O mês inteiro dela está num caderno, na letra dela."
+  },
+  {
+   "vo": "Digitar tudo levaria uma noite que ela não tem.",
+   "card": "O caderno"
+  },
+  {
+   "vo": "No ScoreMyBiz ela toca em Escanear foto, e fotografa uma página do caderno."
+  },
+  {
+   "vo": "Os números entram sozinhos para ela conferir. Ela arruma um, e só então salva."
+  },
+  {
+   "vo": "Ou ela pode falar os números em vez disso."
+  },
+  {
+   "vo": "Confere e salva. O caderno continua sendo dela."
+  },
+  {
+   "vo": "ScoreMyBiz. Saiba a saúde do seu negócio. Grátis por trinta dias, em vários idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-25"
+}

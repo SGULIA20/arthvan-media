@@ -1,0 +1,30 @@
+{
+ "title": "Nach dem Weg fragen",
+ "caption": "Jeder, den sie fragt, hat eine Meinung über sie. Neha startet stattdessen eine Umfrage. Mira erzählt ihre Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Mira. Das ist Nehas Geschichte. Sie steht vor einer großen Entscheidung, und jede Freundin hat eine andere Antwort."
+  },
+  {
+   "vo": "Eine neue Stadt für einen neuen Job oder nah bei der Familie bleiben? Jeder, den sie fragt, hat eine Meinung zu ihr, nicht zur Wahl.",
+   "card": "Neue Stadt?"
+  },
+  {
+   "vo": "Auf Waypoint öffnet sie „Nach dem Weg fragen“. Eine Frage und zwei bis vier Optionen."
+  },
+  {
+   "vo": "Die Leute an der Wand stimmen jeweils einmal ab. Keine Romane. Keine Ratschläge. Einfach ein Tippen."
+  },
+  {
+   "vo": "Sie sieht, wie sich die Stimmen verteilen, während sie eingehen."
+  },
+  {
+   "vo": "Es bleibt ihre Entscheidung. Aber jetzt weiß sie, wohin der Trend geht."
+  },
+  {
+   "vo": "Waypoint. Sag es einmal. Kostenlos bei Google Play, in vielen indischen und internationalen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-16"
+}

@@ -1,0 +1,29 @@
+{
+ "title": "Escrever, não ver",
+ "caption": "Um ajudante deve registar vendas, não ver o lucro. O Naveen dá aos ajudantes o seu próprio login. O fundador conta a sua história.",
+ "scenes": [
+  {
+   "vo": "Olá. Esta é a história do Naveen. A loja está ocupada e um ajudante está ao balcão."
+  },
+  {
+   "vo": "Ele quer que o ajudante registe as vendas. Não quer que veja o lucro, nem apague nada."
+  },
+  {
+   "vo": "No ScoreMyBiz ele dá um login ao ajudante, com código WhatsApp. Até três ajudantes."
+  },
+  {
+   "vo": "O ajudante vê um ecrã simples: vendas, compras, despesas e contagem da caixa."
+  },
+  {
+   "vo": "Sem relatórios. Sem definições. Sem consultor."
+  },
+  {
+   "vo": "E cada alteração mostra quem a fez."
+  },
+  {
+   "vo": "ScoreMyBiz. Conheça a saúde do seu negócio. Grátis por trinta dias, em vários idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-30"
+}

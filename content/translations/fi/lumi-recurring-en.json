@@ -1,0 +1,29 @@
+{
+ "title": "Kirjoita kerran",
+ "caption": "Vuokra on sama 5. päivä joka kuukausi. Kavita kirjoittaa sen kerran. Lumi kertoo hänen tarinansa.",
+ "scenes": [
+  {
+   "vo": "Hei, minä olen Lumi. Tässä on Kavian tarina. Hänen vuokransa on sama joka kuukausi viides päivä."
+  },
+  {
+   "vo": "Sama vuokra. Sama päivä. Sama kirjoitus, joka kuukausi."
+  },
+  {
+   "vo": "ScoreMyBizissä, kun hän tallentaa kiinteän kulun kuten vuokran, hän voi valita Kyllä, joka kuukausi."
+  },
+  {
+   "vo": "Se lisätään kirjaan itsestään valittuna päivänä, ja hän voi keskeyttää tai pysäyttää sen."
+  },
+  {
+   "vo": "Huti painallus Poista-kohdassa? Viiden sekunnin Kumoa-palkki palauttaa sen."
+  },
+  {
+   "vo": "Vain kiinteät juoksevat kulut toistuvat. Varastoostokset pysyvät manuaalisina."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-06"
+}

@@ -1,0 +1,30 @@
+{
+ "title": "Um minuto no fecho",
+ "caption": "Ela fecha às nove e às oito já está cansada. A Anita usa quatro caixas. A Lumi conta a sua história.",
+ "scenes": [
+  {
+   "vo": "Olá, sou a Lumi. Esta é a história da Anita. A loja fecha às nove, e ela está cansada às oito."
+  },
+  {
+   "vo": "Registar cada venda dá muito trabalho para quem já não tem energia.",
+   "card": "Nove horas"
+  },
+  {
+   "vo": "No ScoreMyBiz preenche só quatro coisas: vendas, gastos, dinheiro em caixa e o banco."
+  },
+  {
+   "vo": "Um minuto ao balcão, e o dia está pronto."
+  },
+  {
+   "vo": "Se o dia já está registado, as contas não se contam duas vezes."
+  },
+  {
+   "vo": "A contabilidade está em dia, e ela também."
+  },
+  {
+   "vo": "ScoreMyBiz. Conheça a saúde do seu negócio. Grátis por trinta dias, em vários idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-03"
+}

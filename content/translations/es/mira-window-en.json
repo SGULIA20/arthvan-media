@@ -1,0 +1,30 @@
+{
+ "title": "Dilo una vez.",
+ "caption": "Todo el día está bien. De noche no. Mira cuenta la historia de Arjun.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Mira. Esta es la historia de Arjun. Todo el día está bien. De noche, en Bombay, no."
+  },
+  {
+   "vo": "Hay algo que no ha dicho en voz alta, a nadie.",
+   "card": "11:48 PM"
+  },
+  {
+   "vo": "En Waypoint hoy tiene un nombre nuevo. Escribe la frase. Su dedo tiembla. La publica."
+  },
+  {
+   "vo": "Luego el Daily Path. Una pregunta, igual para todos. Responde, y ve lo que otros respondieron ayer."
+  },
+  {
+   "vo": "En el Muro, lee lo que otros publicaron esta noche. Resulta que no está solo. Cierra el teléfono, y respira."
+  },
+  {
+   "vo": "Cuando quiere hablar, Waypoint lo cruza con una persona. Una breve charla. Luego ambos siguen."
+  },
+  {
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-12"
+}

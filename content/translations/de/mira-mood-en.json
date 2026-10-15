@@ -1,0 +1,36 @@
+{
+ "title": "Nur ein Tippen",
+ "caption": "Yuki tippt nach dem Essen und abends auf ein Gefühl. Mira erzählt ihre Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Mira. Das ist Yukis Geschichte. Manche Gefühle brauchen keinen Absatz.",
+   "card": "Hi, ich bin Mira."
+  },
+  {
+   "vo": "Nach dem Essen hält sie inne und überlegt, wie sie sich wirklich fühlt.",
+   "card": "Wie fühlst du dich?"
+  },
+  {
+   "vo": "In My Waypoints öffnet sie das Stimmungsprotokoll: morgens, nachmittags, abends und nachts.",
+   "card": "Stimmungsprotokoll"
+  },
+  {
+   "vo": "Sie tippt an, wie sie sich fühlt. Kein Tippen und keine Erklärung nötig.",
+   "card": "Einfach tippen"
+  },
+  {
+   "vo": "Am Sonntag sieht sie ihre Woche im Vergleich zur Vorwoche.",
+   "card": "Die Woche im Blick"
+  },
+  {
+   "vo": "Und eine Abend-Erinnerung, wenn sie eine will. Eine kleine Gewohnheit, keine Diagnose.",
+   "card": "Abend-Erinnerung"
+  },
+  {
+   "vo": "Waypoint. Sag es einmal. Kostenlos bei Google Play, auf vielen indischen und internationalen Sprachen.",
+   "card": "Waypoint"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-02"
+}

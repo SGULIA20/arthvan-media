@@ -1,0 +1,30 @@
+{
+ "title": "Dilo en voz alta",
+ "caption": "Sus manos son para el volante, no para teclear. Tariq habla en vez de eso. El fundador cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Tariq. Conduce un taxi. Sus manos son para el volante, no para teclear."
+  },
+  {
+   "vo": "Entre carreras tiene cosas que decir, y los pulgares van lentos.",
+   "card": "Entre carreras"
+  },
+  {
+   "vo": "En Waypoint toca Voz y habla. Hasta sesenta segundos."
+  },
+  {
+   "vo": "Luego elige un personaje: un Oso, un Zorro o un Gorrión."
+  },
+  {
+   "vo": "En el Muro, la gente oye sus palabras con la voz de ese personaje. Una nota de voz se va en siete días."
+  },
+  {
+   "vo": "Aparcó, lo dijo, y a la siguiente carrera."
+  },
+  {
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play, en muchos idiomas indios e internacionales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-18"
+}

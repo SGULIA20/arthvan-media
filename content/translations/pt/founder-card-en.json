@@ -1,0 +1,30 @@
+{
+ "title": "O cartão",
+ "caption": "Um construtor pede o cartão dele num casamento. O Hari não tem nenhum. O fundador conta a história dele.",
+ "scenes": [
+  {
+   "vo": "Olá. Esta é a história do Hari. Ele vende tinta. No casamento da prima, um construtor pede o cartão dele."
+  },
+  {
+   "vo": "Ele não tem cartão. Escreve o número num guardanapo, e de manhã já desapareceu.",
+   "card": "Sem cartão"
+  },
+  {
+   "vo": "No ScoreMyBiz ele abre O meu cartão de visita. O nome da loja, morada e horários já lá estão, dos dados dele."
+  },
+  {
+   "vo": "Ele toca em Enviar no WhatsApp, e o cartão está no telemóvel do construtor antes da sobremesa."
+  },
+  {
+   "vo": "Ou partilha como PDF, ou como mensagem. Um cartão, de muitas maneiras."
+  },
+  {
+   "vo": "Um cartão que está sempre no bolso dele."
+  },
+  {
+   "vo": "ScoreMyBiz. Conheça a saúde do seu negócio. Grátis por trinta dias, em vários idiomas indianos e internacionais."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-23"
+}

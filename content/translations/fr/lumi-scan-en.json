@@ -1,0 +1,30 @@
+{
+ "title": "Ne saisissez plus tout",
+ "caption": "Son mois entier est dans un carnet. Sunita prend une page en photo au lieu de taper. Lumi raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Lumi. Voici l'histoire de Sunita. Tout son mois est dans un carnet, écrit de sa main."
+  },
+  {
+   "vo": "Tout retaper prendrait une soirée qu'elle n'a pas.",
+   "card": "Le carnet"
+  },
+  {
+   "vo": "Dans ScoreMyBiz elle touche Scanner une photo, et photographie une page du carnet."
+  },
+  {
+   "vo": "Les chiffres se remplissent pour qu'elle vérifie. Elle en corrige un, et seulement alors elle enregistre."
+  },
+  {
+   "vo": "Ou elle peut dicter ses chiffres à la place."
+  },
+  {
+   "vo": "Vérifiez, puis enregistrez. Le carnet reste le sien."
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours, en de nombreuses langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-25"
+}

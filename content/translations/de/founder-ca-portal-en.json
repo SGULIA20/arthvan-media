@@ -1,0 +1,29 @@
+{
+ "title": "Eine Liste",
+ "caption": "Rakesh ist Wirtschaftsprüfer mit vielen kleinen Kunden. Eine Liste zeigt, wer zuerst angerufen werden muss. Der Gründer erzählt seine Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hallo. Das ist Rakeshs Geschichte. Er ist Wirtschaftsprüfer in Indien mit vielen kleinen Kunden."
+  },
+  {
+   "vo": "Jeden Monat fragt er sich, wer zuerst an der Reihe ist und bei wem es leise kriselt."
+  },
+  {
+   "vo": "Bei ScoreMyBiz eröffnet er ein gratis CA-Konto und erhält einen Code. Kunden geben ihn bei der Registrierung ein."
+  },
+  {
+   "vo": "Jeder Kunde erscheint in einer Liste mit Punktzahl. Die Testversion zeigt bis zu fünf."
+  },
+  {
+   "vo": "Sie zeigt, wer diese Woche anruft, und er meldet sich mit einem Tippen auf WhatsApp."
+  },
+  {
+   "vo": "Und seine eigene Karte mit WhatsApp-Code ist bereit zum Versenden."
+  },
+  {
+   "vo": "ScoreMyBiz. Kennen Sie Ihre Geschäftslage. Dreißig Tage kostenlos, in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-10"
+}

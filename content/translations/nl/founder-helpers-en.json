@@ -1,0 +1,36 @@
+{
+ "title": "Schrijven, niet zien",
+ "caption": "Een hulpje moet verkopen noteren, geen winst zien. Naveen geeft hulpjes een eigen login. De oprichter vertelt zijn verhaal.",
+ "scenes": [
+  {
+   "vo": "Hoi. Dit is het verhaal van Naveen. Zijn winkel is druk en een hulpje staat achter de toonbank.",
+   "card": "Het verhaal van Naveen"
+  },
+  {
+   "vo": "Hij wil dat het hulpje verkopen noteert. Hij wil niet dat het hulpje zijn winst ziet of iets wist.",
+   "card": "Verkopen noteren"
+  },
+  {
+   "vo": "In ScoreMyBiz geeft hij een hulpje een eigen login, met een WhatsApp-code. Tot drie hulpjes.",
+   "card": "Een eigen login"
+  },
+  {
+   "vo": "Het hulpje ziet één simpel scherm: verkopen, inkopen en uitgaven toevoegen, en de kas tellen.",
+   "card": "Simpel scherm"
+  },
+  {
+   "vo": "Geen overzichten. Geen instellingen. Geen Adviseur.",
+   "card": "Geen overzichten"
+  },
+  {
+   "vo": "En bij elke wijziging zie je wie hem heeft gedaan.",
+   "card": "Wie deed het?"
+  },
+  {
+   "vo": "ScoreMyBiz. Ken de gezondheid van je zaak. Dertig dagen gratis, in vele talen.",
+   "card": "ScoreMyBiz - Dertig dagen gratis"
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-30"
+}

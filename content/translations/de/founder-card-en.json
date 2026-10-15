@@ -1,0 +1,30 @@
+{
+ "title": "Die Visitenkarte",
+ "caption": "Ein Bauunternehmer fragt auf einer Hochzeit nach einer Karte. Hari hat keine. Der Gründer erzählt seine Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hallo. Das ist Haris Geschichte. Er verkauft Farbe. Auf der Hochzeit seines Cousins fragt ein Bauunternehmer nach seiner Karte."
+  },
+  {
+   "vo": "Er hat keine Karte. Er schreibt seine Nummer auf eine Serviette, und bis zum Morgen ist sie weg.",
+   "card": "Keine Karte"
+  },
+  {
+   "vo": "In ScoreMyBiz öffnet er Meine Visitenkarte. Sein Ladenname, Adresse und Öffnungszeiten sind schon da, von seinen eigenen Daten."
+  },
+  {
+   "vo": "Er tippt auf WhatsApp senden, und die Karte ist vor dem Nachtisch auf dem Handy des Bauunternehmers."
+  },
+  {
+   "vo": "Oder er teilt sie als PDF oder als Nachricht. Eine Karte, viele Wege."
+  },
+  {
+   "vo": "Eine Karte, die immer in seiner Tasche ist."
+  },
+  {
+   "vo": "ScoreMyBiz. Kenne die Gesundheit deines Betriebs. Dreißig Tage kostenlos, in vielen indischen und internationalen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-23"
+}

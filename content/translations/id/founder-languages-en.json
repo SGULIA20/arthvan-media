@@ -1,0 +1,30 @@
+{
+ "title": "Bahasa Anda",
+ "caption": "Dia berpikir dalam bahasa Swahili dan membaca dalam bahasa Inggris. Joseph mengaktifkan bahasa Waypoint. Sang pendiri menceritakan kisahnya.",
+ "scenes": [
+  {
+   "vo": "Halo. Ini kisah Joseph. Dia berpikir dalam bahasa Swahili dan membaca dalam bahasa Inggris."
+  },
+  {
+   "vo": "Kebanyakan aplikasi memintanya membaca dalam bahasa yang bukan bahasa utamanya.",
+   "card": "Bukan bahasa utamanya"
+  },
+  {
+   "vo": "Waypoint punya enam belas bahasa. Setiap orang pilih bahasanya sendiri."
+  },
+  {
+   "vo": "Ada kiriman masuk dari bahasa lain. Sekali ketuk, langsung diterjemahkan."
+  },
+  {
+   "vo": "Atau dia bisa nyalakan terjemahan otomatis, dan Beranda membaca dalam bahasanya."
+  },
+  {
+   "vo": "Beranda yang sama. Katanya sendiri."
+  },
+  {
+   "vo": "Waypoint. Ucapkan sekali. Gratis di Google Play, dalam banyak bahasa."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-22"
+}

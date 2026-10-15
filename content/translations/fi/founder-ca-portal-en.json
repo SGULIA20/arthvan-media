@@ -1,0 +1,29 @@
+{
+ "title": "Yksi lista",
+ "caption": "Rakesh on kartered aktönti, jolla on paljon pieniä asiakkaita. Yksi lista näyttää, kenelle pitää soittaa ensin. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Rakeshin tarina. Hän on kartered aktönti Intiassa, ja hänellä on paljon pieniä asiakkaita."
+  },
+  {
+   "vo": "Joka kuukausi hän miettii, kenelle pitää soittaa ensin ja kuka on hiljaisissa vaikeuksissa."
+  },
+  {
+   "vo": "ScoreMyBizissä hän avkaa ilmaisen CA-tilin ja saa oman koodin. Asiakkaat syöttävät sen rekisteröityessään."
+  },
+  {
+   "vo": "Jokainen asiakas näkyy yhdellä listalla pisteiden kanssa. Ilmainen kokeilu näyttää enintään viisi."
+  },
+  {
+   "vo": "Se näyttää, kenelle pitää soittaa tällä viikolla, ja hän voi laittaa viestiä WhatsAppissa yhdellä napautuksella."
+  },
+  {
+   "vo": "Ja hänen oma korttinsa, jossa on WhatsApp-koodi, on valmiina lähetettäväksi."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi kunto. Ilmainen kolmekymmentä päivää, monilla Intian ja maailman kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-10"
+}

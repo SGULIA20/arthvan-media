@@ -1,0 +1,29 @@
+{
+ "title": "Vähimmäismyynti",
+ "caption": "Ennen suurempaa liikettä Asha haluaa tietää vähimmäismyyntinsä. Lumi kertoo tarinan.",
+ "scenes": [
+  {
+   "vo": "Hei, minä olen Lumi. Tämä on Ashan tarina. Hän haluaa isomman leipomon ja suuremman vuokran."
+  },
+  {
+   "vo": "Uusi liike maksaa paljon enemmän kuussa. Paljonko hänen on myytävä pysyäkseen nollatuloksessa?"
+  },
+  {
+   "vo": "ScoreMyBizissä, ilmaisena kuukautenaan, Break-even kysyy kolme asiaa: kiinteät kulut, kuukausimyynnin ja myytyjen tavaroiden hinnan."
+  },
+  {
+   "vo": "Se näyttää, paljonko hänen on myytävä kuussa kattaakseen kulunsa."
+  },
+  {
+   "vo": "Ja kuinka paljon turvamarginaalia hänellä on tuon rajan yläpuolella."
+  },
+  {
+   "vo": "Tämä on laskutoimitus hänen omista luvuistaan, ei mikään ennuste."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla intialaisilla ja kansainvälisillä kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-27"
+}

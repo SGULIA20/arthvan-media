@@ -1,0 +1,30 @@
+{
+ "title": "Nuevo cada mañana",
+ "caption": "Cada mañana Zoya se despierta con un nombre nuevo en Waypoint. Mira cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Mira. Esta es la historia de Zoya. Cada mañana en Waypoint se despierta con un nombre nuevo."
+  },
+  {
+   "vo": "Lo de ayer pasó. Esta mañana la app le da un nuevo comienzo.",
+   "card": "Buenos días"
+  },
+  {
+   "vo": "Le asigna un nombre y un avatar, y se reinicia mañana."
+  },
+  {
+   "vo": "Si quiere, puede elegir su propio nombre y avatar para el día."
+  },
+  {
+   "vo": "La misma Zoya. Un nombre distinto. Y un inicio más ligero."
+  },
+  {
+   "vo": "Di la frase de hoy. Deja que el nombre cambie mañana."
+  },
+  {
+   "vo": "Waypoint. Diló una vez. Gratis en Google Play, en muchos idiomas indios e internacionales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-20"
+}

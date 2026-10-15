@@ -1,0 +1,31 @@
+{
+ "title": "Scrivilo una volta",
+ "caption": "Dieci piccole cose passano per la testa di Farhan. Le scrive una volta. Lumi racconta la sua storia.",
+ "scenes": [
+  {
+   "vo": "Ciao, sono Lumi. Questa è la storia di Farhan. Dieci piccole cose gli passano per la testa, e alcune sono importanti.",
+   "card": "La storia di Farhan"
+  },
+  {
+   "vo": "Chiamare il fornitore. Rinnovare la licenza. Pagare la luce. I foglietti di carta si perdono."
+  },
+  {
+   "vo": "Su ScoreMyBiz apre Promemoria e scrive a parole sue, come chiama fornitore Raju per il cemento venerdì."
+  },
+  {
+   "vo": "L'app lo trasforma in un compito, con categoria e data di scadenza.",
+   "card": "Compito pronto"
+  },
+  {
+   "vo": "Il telefono avvisa la sera prima e la mattina stessa, se le notifiche sono attive."
+  },
+  {
+   "vo": "I nuovi promemoria vanno nel mese gratis o con un piano. Scrivilo una volta e via i foglietti."
+  },
+  {
+   "vo": "ScoreMyBiz. Conosci la salute della tua impresa. Gratis trenta giorni, in tante lingue."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-31"
+}

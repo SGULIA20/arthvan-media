@@ -1,0 +1,29 @@
+{
+ "title": "Una lista",
+ "caption": "Rakesh es un contador con muchos clientes pequeños. Una lista muestra a quién llamar primero. El fundador cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Rakesh. Es contador en la India y tiene muchos clientes pequeños."
+  },
+  {
+   "vo": "Cada mes se pregunta qué cliente necesita una llamada primero y cuál tiene problemas en silencio."
+  },
+  {
+   "vo": "En ScoreMyBiz abre una cuenta gratis de contador y recibe su código. Los clientes lo ponen al registrarse."
+  },
+  {
+   "vo": "Cada cliente sale en una lista con un puntaje. La prueba gratis muestra hasta cinco."
+  },
+  {
+   "vo": "Muestra quién necesita una llamada esta semana, y puede saludar por WhatsApp con un toque."
+  },
+  {
+   "vo": "Y su propia tarjeta, con un código de WhatsApp, está lista para enviar."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-10"
+}

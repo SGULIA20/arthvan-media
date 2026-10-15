@@ -1,0 +1,29 @@
+{
+ "title": "Saludo de medianoche",
+ "caption": "A medianoche nadie está en línea. Jo saluda a Mira, una guía de IA. Mira cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Mira. Esta es la historia de Jo. Es medianoche y todos sus conocidos duermen."
+  },
+  {
+   "vo": "En Waypoint busca un contacto, pero el contador en línea marca cero."
+  },
+  {
+   "vo": "Así que toca Hablar con Mira, en la pestaña de chats o mientras espera."
+  },
+  {
+   "vo": "Ella lo dice de entrada: soy una guía de IA, no una persona."
+  },
+  {
+   "vo": "Responde en una o dos frases. Y él puede reaccionar, reportar o bloquear, como en cualquier chat."
+  },
+  {
+   "vo": "Tras cuarenta de sus mensajes el chat se cierra. Es un punto de partida, no para quedarse."
+  },
+  {
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play, en muchos idiomas de India y del mundo."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-28"
+}

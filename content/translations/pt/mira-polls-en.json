@@ -1,0 +1,30 @@
+{
+ "title": "Pergunte ao Caminho",
+ "caption": "Todo mundo que ela consulta tem uma opinião sobre ela. A Neha faz uma enquete. A Mira conta a história.",
+ "scenes": [
+  {
+   "vo": "Oi, sou a Mira. Esta é a história da Neha. Ela tem uma grande decisão, e cada amigo dá uma resposta."
+  },
+  {
+   "vo": "Cidade nova para um emprego novo, ou ficar perto de casa? Todos têm opinião sobre ela, não sobre a escolha.",
+   "card": "Cidade nova?"
+  },
+  {
+   "vo": "No Waypoint ela abre o Pergunte ao Caminho. Uma pergunta e de duas a quatro opções."
+  },
+  {
+   "vo": "As pessoas no Mural votam uma vez. Sem textos longos. Sem conselhos. Só um toque."
+  },
+  {
+   "vo": "Ela vê como os votos se dividem conforme chegam."
+  },
+  {
+   "vo": "A decisão ainda é dela. Mas agora ela sabe para onde a maioria vai."
+  },
+  {
+   "vo": "Waypoint. Diga de uma vez. Grátis no Google Play, em vários idiomas indianos e internacionais."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-16"
+}

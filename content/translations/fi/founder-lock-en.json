@@ -1,0 +1,30 @@
+{
+ "title": "Lukitse kuukausi",
+ "caption": "Viime kuun myynti muuttui eikä kukaan muista kuka teki sen. Gopal korjaa sen. Perustaja kertoo tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tämä on Gopalin tarina. Hänellä on liike ja kaksi apuria, ja yksi sääntö: viime kuun kirjoja ei kosketa."
+  },
+  {
+   "vo": "Sitten eräänä päivänä viime kuun myynti onkin toinen, eikä kukaan muista kuka sitä muutti.",
+   "card": "Kuka muutti?"
+  },
+  {
+   "vo": "ScoreMyBiz pitää listaa: kuka lisäsi, muutti tai poisti mitäkin ja milloin."
+  },
+  {
+   "vo": "Ja hän voi lukita valmiin kuun, jotta mikään siellä ei voi muuttua."
+  },
+  {
+   "vo": "Jopa hänen kirjanpitäjänsä voi lukita kuun, kun se on ilmoitettu."
+  },
+  {
+   "vo": "Nyt kysymyksiin löytyy vastaukset."
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-01"
+}

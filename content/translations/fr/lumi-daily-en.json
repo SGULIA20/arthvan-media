@@ -1,0 +1,30 @@
+{
+ "title": "Une minute à la fermeture",
+ "caption": "Elle ferme à neuf heures et est fatiguée à huit. Anita utilise quatre cases. Lumi raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Lumi. Voici l'histoire d'Anita. Sa boutique ferme à neuf heures, et elle est fatiguée à huit."
+  },
+  {
+   "vo": "Détailler chaque vente, c'est un travail pour quelqu'un qui a plus d'énergie.",
+   "card": "Neuf heures"
+  },
+  {
+   "vo": "Dans ScoreMyBiz, elle remplit juste quatre choses : ventes, dépenses, espèces et la banque."
+  },
+  {
+   "vo": "Une minute au comptoir, et la journée est finie."
+  },
+  {
+   "vo": "Si la journée est déjà détaillée, les totaux ne sont pas comptés deux fois."
+  },
+  {
+   "vo": "Le livre est à jour, et elle aussi."
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit pendant trente jours, en de nombreuses langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-03"
+}

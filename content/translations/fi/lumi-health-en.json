@@ -1,0 +1,29 @@
+{
+ "title": "Oma puoli",
+ "caption": "Sameerin koti- ja kassarahat ovat sekaisin. Lumi näyttää hänelle oman puolensa. Lumi kertoo tarinan.",
+ "scenes": [
+  {
+   "vo": "Moi, minä olen Lumi. Tässä on Sameerin tarina. Hänellä on kahvila, ja rahat menevät sekaisin."
+  },
+  {
+   "vo": "Joinain päivinä kassa maksaa kahvilan. Joinain päivinä se maksaa kodin."
+  },
+  {
+   "vo": "ScoreMyBiz-sovelluksessa on oma henkilökohtainen terveyspiste-luku rahoille."
+  },
+  {
+   "vo": "Hän syöttää tulonsa ja menonsa sekä säästöt, velat ja perheen."
+  },
+  {
+   "vo": "Se näyttää hänen pisteensä ja voiko hän siirtyä kokonaan yritykseensä."
+  },
+  {
+   "vo": "Vain pisteet, ei neuvoja. Oma puoli selkeästi näkyviin."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen 30 päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-25"
+}

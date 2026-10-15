@@ -1,0 +1,30 @@
+{
+ "title": "La tarjeta",
+ "caption": "Un constructor pide su tarjeta en una boda. Hari no tiene ninguna. El fundador cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Hari. Vende pintura. En la boda de su primo, un constructor le pide su tarjeta."
+  },
+  {
+   "vo": "No tiene tarjeta. Anota su número en una servilleta, y por la mañana ya no está.",
+   "card": "Sin tarjeta"
+  },
+  {
+   "vo": "En ScoreMyBiz abre Mi tarjeta de negocio. El nombre de su tienda, su dirección y horarios ya están ahí, de sus propios datos."
+  },
+  {
+   "vo": "Toca Enviar en WhatsApp, y la tarjeta está en el teléfono del constructor antes del postre."
+  },
+  {
+   "vo": "O la comparte como PDF, o como mensaje. Una tarjeta, muchas maneras."
+  },
+  {
+   "vo": "Una tarjeta que siempre está en su bolsillo."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas indios e internacionales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-23"
+}

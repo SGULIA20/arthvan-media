@@ -1,0 +1,29 @@
+{
+ "title": "Escribe, no veas",
+ "caption": "Un ayudante debe anotar ventas, no ver ganancias. Naveen les da su propio acceso. El fundador cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Naveen. Su tienda está ocupada y un ayudante atiende."
+  },
+  {
+   "vo": "Quiere que anote ventas. No que vea sus ganancias ni borre nada."
+  },
+  {
+   "vo": "En ScoreMyBiz le da a un ayudante su propio acceso con un código de WhatsApp. Hasta tres."
+  },
+  {
+   "vo": "El ayudante ve una pantalla simple: ventas, compras, gastos y contar la caja."
+  },
+  {
+   "vo": "Sin reportes. Sin ajustes. Sin asesor."
+  },
+  {
+   "vo": "Y cada cambio muestra quién lo hizo."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce tu negocio. Gratis por treinta días en muchos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-30"
+}

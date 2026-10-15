@@ -1,0 +1,35 @@
+{
+ "title": "Hakuna mtandao",
+ "caption": "Soko la chini ya ardhi lenye mtandao hafifu. Salim bado anaandika kila mauzo. Mwanzilishi anasimulia hadithi yake.",
+ "scenes": [
+  {
+   "vo": "Hujambo. Hii ni hadithi ya Salim. Duka lake liko chini, ambapo mtandao unakata na kukuja."
+  },
+  {
+   "card": "Dukani chini",
+   "vo": "Mteja analipa. Simu yake haina mtandao. Hataki kuandika kwenye mkono wake."
+  },
+  {
+   "card": "Hakuna mtandao",
+   "vo": "Kwenye ScoreMyBiz, ingizo lisilo na mtandao linakaa salama kwenye simu yake."
+  },
+  {
+   "card": "Inasubiri mtandao",
+   "vo": "Inaingia kwenye kitabu yenyewe mtandao ukirudi, wala haiongezwi mara mbili."
+  },
+  {
+   "card": "Mara mbili la",
+   "vo": "Fomu ya kuingiza tu ndiyo inafanya kazi bila mtandao. Ripoti zinahitaji mtandao."
+  },
+  {
+   "card": "Ripoti zahitaji mtandao",
+   "vo": "Kila mauzo yameandikwa, hata yale ya chini ya ardhi."
+  },
+  {
+   "card": "Hata chini ya ardhi",
+   "vo": "ScoreMyBiz. Jua hali ya biashara yako. Bure kwa siku thelathini, kwa lugha nyingi."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-01"
+}

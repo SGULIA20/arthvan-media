@@ -1,0 +1,29 @@
+{
+ "title": "Yksi paikka",
+ "caption": "Manoj haluaa kaiken tarvittavan yhteen paikkaan, josta sovellus käski häntä huolehtia. Perustaja kertoo hänen tarinansa.",
+ "scenes": [
+  {
+   "vo": "Moi. Tässä on Manojin tarina. Hänen apteekkinsa on kiireinen, ja asioita unohtuu."
+  },
+  {
+   "vo": "Erääntyvä lasku, muistutettava asiakas, viikkotarkistus. Missä sovellus käski huomioida sen?"
+  },
+  {
+   "vo": "ScoreMyBizissä kotisivun kello avaa yhden listan siitä, mihin hänen pitää kiinnittää huomiota."
+  },
+  {
+   "vo": "Muistutukset, toimittajan muistiinpanot, viikkotarkistukset, haastepäivitykset ja Intiassa verkoston liidit."
+  },
+  {
+   "vo": "Merkki näyttää, mikä on vielä lukematta."
+  },
+  {
+   "vo": "Yksi paikka, ei viittä viestiä."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen kolmekymmentä päivää, monilla Intian ja kansainvälisillä kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-24"
+}

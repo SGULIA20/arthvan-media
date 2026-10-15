@@ -1,0 +1,31 @@
+{
+ "title": "Ein Ort",
+ "caption": "Manoj will alles Wichtige aus der App an einem Ort haben. Der Gründer erzählt seine Geschichte.",
+ "scenes": [
+  {
+   "vo": "Hi. Das ist Manojs Geschichte. Seine Apotheke ist voll und er vergisst oft Dinge.",
+   "card": "Manojs Geschichte"
+  },
+  {
+   "vo": "Eine offene Rechnung, ein Kunde, ein Check-in. Wo hat die App ihm das gezeigt?"
+  },
+  {
+   "vo": "In ScoreMyBiz zeigt die Glocke auf Start alles Wichtige in einer Liste.",
+   "card": "ScoreMyBiz"
+  },
+  {
+   "vo": "Erinnerungen, Notizen, Check-ins, Updates und in Indien Leads aus dem Netzwerk."
+  },
+  {
+   "vo": "Ein Punkt zeigt, was noch ungelesen ist."
+  },
+  {
+   "vo": "Ein Ort, keine fünf Nachrichten."
+  },
+  {
+   "vo": "ScoreMyBiz. Kenne die Lage. Dreißig Tage gratis, in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-24"
+}

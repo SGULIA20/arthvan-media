@@ -1,0 +1,35 @@
+{
+ "title": "Un simple geste",
+ "caption": "Yuki exprime un ressenti après le déjeuner et encore le soir. Mira raconte son histoire.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Mira. Voici l'histoire de Yuki. Certains ressentis n'ont pas besoin de roman."
+  },
+  {
+   "card": "Un simple geste",
+   "vo": "Après le déjeuner, elle s'arrête et se demande ce qu'elle ressent vraiment."
+  },
+  {
+   "card": "Comment ça va ?",
+   "vo": "Dans My Waypoints, elle ouvre le journal d'humeur : matin, après-midi, soir et nuit."
+  },
+  {
+   "card": "Journal d'humeur",
+   "vo": "Elle clique sur son humeur. Pas de texte, pas d'explication."
+  },
+  {
+   "card": "Sans écrire",
+   "vo": "Le dimanche, elle voit sa semaine à côté de la semaine précédente."
+  },
+  {
+   "card": "Votre semaine",
+   "vo": "Et un rappel le soir, si elle le veut. Une petite habitude, pas un diagnostic."
+  },
+  {
+   "card": "Un petit rappel",
+   "vo": "Waypoint. Dites-le une fois. Gratuit sur Google Play, en de nombreuses langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-02"
+}

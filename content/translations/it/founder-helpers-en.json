@@ -1,0 +1,29 @@
+{
+ "title": "Scrivere, non vedere",
+ "caption": "Un assistente deve registrare le vendite, non vedere i profitti. Naveen dà agli assistenti il loro login. Il fondatore racconta la sua storia.",
+ "scenes": [
+  {
+   "vo": "Ciao. Questa è la storia di Naveen. Il suo negozio è pieno e un assistente sta alla cassa."
+  },
+  {
+   "vo": "Vuole che l'assistente registri le vendite. Non vuole che veda i profitti o elimini nulla."
+  },
+  {
+   "vo": "Con ScoreMyBiz dà a ogni assistente il suo login, con un codice WhatsApp. Fino a tre assistenti."
+  },
+  {
+   "vo": "L'assistente vede una schermata semplice: aggiunge vendite, acquisti e spese, e conta la cassa."
+  },
+  {
+   "vo": "Nessun report. Nessuna impostazione. Nessun consulente."
+  },
+  {
+   "vo": "E ogni modifica mostra chi l'ha fatta."
+  },
+  {
+   "vo": "ScoreMyBiz. Conosci la salute della tua azienda. Gratis per trenta giorni, in molte lingue."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-30"
+}

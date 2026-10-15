@@ -1,0 +1,30 @@
+{
+ "title": "Cierra el mes",
+ "caption": "La venta del mes pasado cambió y nadie recuerda quién lo hizo. Gopal lo arregla. El fundador cuenta su historia.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Gopal. Tiene una tienda con dos ayudantes y una regla: el libro del mes pasado no se toca."
+  },
+  {
+   "vo": "Luego, un día, la venta del mes pasado es diferente y nadie recuerda quién la cambió.",
+   "card": "¿Quién lo cambió?"
+  },
+  {
+   "vo": "ScoreMyBiz guarda una lista: quién agregó, cambió o quitó qué y cuándo."
+  },
+  {
+   "vo": "Y puede bloquear un mes terminado, para que nada en él pueda cambiar."
+  },
+  {
+   "vo": "Incluso su contador puede bloquear un mes una vez presentado."
+  },
+  {
+   "vo": "Ahora las preguntas tienen respuestas."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas indios e internacionales."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-01"
+}
