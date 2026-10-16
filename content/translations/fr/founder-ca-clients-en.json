@@ -1,0 +1,39 @@
+{
+ "title": "Les clients d'un expert-comptable en un clin d'œil",
+ "caption": "Pour les experts-comptables en Inde : comment ScoreMyBiz vous aide à suivre vos clients. Partie 1 : votre portefeuille, vos scores, vos messages et vos brouillons.",
+ "scenes": [
+  {
+   "vo": "Bonjour. Si vous êtes expert-comptable en Inde, voici comment ScoreMyBiz vous aide à suivre vos clients."
+  },
+  {
+   "vo": "Ouvrez un compte gratuit et partagez votre code. Les clients qui s'inscrivent s'ajoutent à votre portefeuille."
+  },
+  {
+   "vo": "Voyez qui a besoin d'un appel cette semaine, et pourquoi."
+  },
+  {
+   "vo": "Chaque client affiche un score, sa tendance et ce qui ressort."
+  },
+  {
+   "vo": "Contactez-les sur WhatsApp en un clic."
+  },
+  {
+   "vo": "Ou obtenez un brouillon d'e-mail dans votre style, à partir des chiffres du mois."
+  },
+  {
+   "vo": "Téléchargez le bilan d'un client en PDF résumé, ou en CSV."
+  },
+  {
+   "vo": "Et partagez votre propre carte de visite avec vos clients sur WhatsApp."
+  },
+  {
+   "vo": "Les clients n'apparaissent qu'après s'être liés à vous et avoir accepté.",
+   "card": "Uniquement avec consentement"
+  },
+  {
+   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours, en plusieurs langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-01"
+}

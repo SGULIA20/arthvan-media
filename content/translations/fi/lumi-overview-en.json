@@ -1,0 +1,44 @@
+{
+ "title": "Kaikki minuutissa",
+ "caption": "Kaikki mitä ScoreMyBiz tekee kaupellesi, minuutissa. Lumi näyttää tärkeimmät asiat oikeilla ruuduilla.",
+ "scenes": [
+  {
+   "vo": "Hei, minä olen Lumi. Tässä on mitä ScoreMyBiz tekee kaupellesi minuutissa."
+  },
+  {
+   "vo": "Kirjaa myynnit, ostot ja kulut sekunneissa."
+  },
+  {
+   "vo": "Katso kuka on velkaa, ja muistuta WhatsAppissa."
+  },
+  {
+   "vo": "Näe mitä olet velkaa, ja mikä erääntyy tällä viikolla."
+  },
+  {
+   "vo": "Tee laskut ja tarjoukset, ja jaa ne PDF:nä."
+  },
+  {
+   "vo": "Tulos, kassa ja varat selkeällä kielellä."
+  },
+  {
+   "vo": "Yrityksen terveytyspisteet, vahvuudet ja heikkoudet."
+  },
+  {
+   "vo": "Kokeile \"mitä jos\" omilla luvuillasi."
+  },
+  {
+   "vo": "Kysy neuvoa omalla kielelläsi ilmaisena kuukautena."
+  },
+  {
+   "vo": "Anna apureille oma kirjautuminen."
+  },
+  {
+   "vo": "Ja jaa kirjanpito CA:n kanssa."
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi terveys. Ilmainen 30 päivää."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-30"
+}

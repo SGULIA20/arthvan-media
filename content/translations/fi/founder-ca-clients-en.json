@@ -1,0 +1,39 @@
+{
+ "title": "Karin asiakkaat yhdellä silmäyksellä",
+ "caption": "Intian kareille: miten ScoreMyBiz auttaa sinua pitämään huolta asiakkaistasi. Osa 1: portfoliosi, pisteet, yhteydenotot ja luonnokset.",
+ "scenes": [
+  {
+   "vo": "Moi. Jos olet kari Intiassa, näin ScoreMyBiz auttaa sinua pitämään huolta asiakkaistasi."
+  },
+  {
+   "vo": "Avaa ilmainen karitili ja jaa koodisi. Sillä liittyvät asiakkaat näkyvät portfoliossasi."
+  },
+  {
+   "vo": "Katso kuka kaipaa puhelua tällä viikolla ja miksi."
+  },
+  {
+   "vo": "Jokaisella asiakkaalla näkyy pisteet, suunta ja se mikä erottuu."
+  },
+  {
+   "vo": "Ota yhteys WhatsAppissa yhdellä napautuksella."
+  },
+  {
+   "vo": "Tai hanki sähköpostiluonnos omalla äänelläsi tämän kuun luvuista."
+  },
+  {
+   "vo": "Lataa asiakkaan kirjanpito yhteenveto-pdf:nä tai csv:nä."
+  },
+  {
+   "vo": "Ja jaa oma korttisi asiakkaille WhatsAppissa."
+  },
+  {
+   "vo": "Asiakkaat näkyvät vasta, kun he linkittyvät sinuun ja suostuvat.",
+   "card": "Vain suostumuksella"
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi terveys. Ilmainen 30 päivää, monella intialaisella ja kansainvälisellä kielellä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-01"
+}

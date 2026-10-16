@@ -1,0 +1,39 @@
+{
+ "title": "Los clientes de un CA, de un vistazo",
+ "caption": "Para los CA en India: cómo ScoreMyBiz te ayuda a cuidar a tus clientes. Parte 1: tu cartera, puntajes, llamadas y borradores.",
+ "scenes": [
+  {
+   "vo": "Hola. Si eres un CA en India, así te ayuda ScoreMyBiz a cuidar a tus clientes."
+  },
+  {
+   "vo": "Abre una cuenta de CA gratis y comparte tu código. Quienes se unan aparecerán en tu cartera."
+  },
+  {
+   "vo": "Mira quién necesita una llamada esta semana, y por qué."
+  },
+  {
+   "vo": "Cada cliente muestra un puntaje, su tendencia y lo que destaca."
+  },
+  {
+   "vo": "Comunícate por WhatsApp en un toque."
+  },
+  {
+   "vo": "O saca un borrador de correo con tu voz, usando los números del mes."
+  },
+  {
+   "vo": "Descarga el libro del cliente en PDF resumen o en CSV."
+  },
+  {
+   "vo": "Y comparte tu propia tarjeta con los clientes en WhatsApp."
+  },
+  {
+   "vo": "Los clientes aparecen solo tras enlazarse y aceptar.",
+   "card": "Solo con consentimiento"
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en varios idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-01"
+}

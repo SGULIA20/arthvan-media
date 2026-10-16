@@ -1,0 +1,36 @@
+{
+ "title": "Asiakirjat ja tiedot oikein jaettuna",
+ "caption": "Tilintarkastajille. Osa 2: asiakirjat, jotka asiakkaat avaavat omassa sovelluksessaan, viennit, lukitut kuukaudet ja selkeä loki muutoksista.",
+ "scenes": [
+  {
+   "vo": "Toinen osa tilintarkastajille: asiakirjat, raportit ja yhteinen kirjanpito."
+  },
+  {
+   "vo": "Lataa asiakkaan tiliote kerran, ja hän avaa sen omassa sovelluksessaan."
+  },
+  {
+   "vo": "Ei enää uudelleenlähetystä WhatsAppissa. Se odottaa Omat asiakirjat -kansiossa."
+  },
+  {
+   "vo": "Asiakkaat voivat viedä kirjansa miltä ajalta tahansa ohjelmistosi tukemassa muodossa."
+  },
+  {
+   "vo": "Lukitse valmis kuukausi, kun asiakas hyväksyy sen, etteivät luvut muutu vahingossa."
+  },
+  {
+   "vo": "Jokaisesta muutoksesta näkyy tekijä: omistaja, apulainen tai tilintarkastaja."
+  },
+  {
+   "vo": "Terveyspisteet antavat sinulle ja asiakkaallenne yhteisen numeron kuukausipuheisiin."
+  },
+  {
+   "vo": "ScoreMyBiz ei laadi ilmoituksia. Se pitää kirjanpidon ja keskustelut yhdessä paikassa.",
+   "card": "Yksi jaettu kirjanpito"
+  },
+  {
+   "vo": "ScoreMyBiz. Tiedä yrityksesi tila. Ilmainen kolmekymmentä päivää, monella kielellä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-02"
+}

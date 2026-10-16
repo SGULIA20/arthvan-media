@@ -1,0 +1,44 @@
+{
+ "title": "Todo en un minuto",
+ "caption": "Todo lo que ScoreMyBiz hace por tu tienda, en un minuto. Lumi muestra lo principal en las pantallas reales.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Esto es lo que ScoreMyBiz hace por tu tienda, en un minuto."
+  },
+  {
+   "vo": "Anota ventas, compras y gastos en segundos."
+  },
+  {
+   "vo": "Mira quién te debe y recuérdaselo por WhatsApp."
+  },
+  {
+   "vo": "Mira lo que debes y lo que vence esta semana."
+  },
+  {
+   "vo": "Haz facturas y cotizaciones, y compártelas en PDF."
+  },
+  {
+   "vo": "Ganancia, caja y lo que tienes y debes, claro."
+  },
+  {
+   "vo": "Una nota de salud del negocio, con tus puntos."
+  },
+  {
+   "vo": "Prueba un qué pasaría con tus propios números."
+  },
+  {
+   "vo": "Pregunta al Asesor en tu idioma, en tu mes gratis."
+  },
+  {
+   "vo": "Dale a tus ayudantes su propia clave."
+  },
+  {
+   "vo": "Y comparte tu libro con tu CA."
+  },
+  {
+   "vo": "ScoreMyBiz. Conoce la salud de tu negocio. Gratis por treinta días, en muchos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-30"
+}

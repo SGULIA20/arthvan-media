@@ -1,0 +1,41 @@
+{
+ "title": "Waypoint en une minute",
+ "caption": "Waypoint en une minute : un endroit pour dire une vraie chose, sans votre nom. Mira montre les principales choses sur les vrais écrans.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Mira. Voici Waypoint en une minute : un endroit pour dire une vraie chose, sans votre nom."
+  },
+  {
+   "vo": "Chaque jour, vous avez un nouveau nom, créé juste pour aujourd'hui."
+  },
+  {
+   "vo": "Écrivez une vraie phrase. C'est tout ce qu'on demande."
+  },
+  {
+   "vo": "Lisez ce que les autres ont écrit ce soir, sur le Mur."
+  },
+  {
+   "vo": "Posez une question au Chemin : une question, deux à quatre options."
+  },
+  {
+   "vo": "Ou touchez Voix et parlez. Les autres entendent la voix d'un personnage."
+  },
+  {
+   "vo": "Attendez une correspondance, ou parlez à Mira, un guide IA."
+  },
+  {
+   "vo": "Notez votre humeur en un geste. Pas besoin d'écrire."
+  },
+  {
+   "vo": "Quatre-vingt-dix secondes dans la Salle de pause, une fois par jour."
+  },
+  {
+   "vo": "En seize langues."
+  },
+  {
+   "vo": "Waypoint. Dites-le une fois. Gratuit sur Google Play, en de nombreuses langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-12-31"
+}
