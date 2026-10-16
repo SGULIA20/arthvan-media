@@ -1,0 +1,97 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "founder_suit",
+ "feature": "ca-network",
+ "style": "cutout",
+ "hashtags": [
+  "#CharteredAccountant",
+  "#ScoreMyBiz",
+  "#CAIndia"
+ ],
+ "id": "founder-ca-clients-hi",
+ "title": "सीए के क्लाइंट, एक नज़र में",
+ "post_on": "2027-01-01",
+ "caption": "भारत के सीए के लिए: स्कोर माय बिज़ आपके क्लाइंट्स की देखभाल में कैसे मदद करता है। भाग 1: पोर्टफ़ोलियो, स्कोर, हाल-चाल और ड्राफ़्ट।",
+ "linkedin_text": "For CAs in India. A free ScoreMyBiz CA account gives a code; clients who join with it appear in your portfolio with their score, its trend and what stands out. See who needs a call this week, check in on WhatsApp in one tap, get an email draft in your own voice from this month's numbers, download a client's book as a PDF or CSV, and share your own card on WhatsApp. A client appears only after linking and agreeing.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "नमस्ते। अगर आप भारत में सीए हैं, तो यह है कि स्कोर माय बिज़ आपके क्लाइंट्स की देखभाल में कैसे मदद करता है।",
+   "sub": "नमस्ते। अगर आप भारत में सीए हैं, तो यह है कि स्कोर माय बिज़ आपके क्लाइंट्स की देखभाल में कैसे मदद करता है।",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "मुफ़्त सीए अकाउंट खोलिए और अपना कोड शेयर कीजिए। उससे जुड़ने वाले क्लाइंट आपके पोर्टफ़ोलियो में दिखते हैं।",
+   "sub": "मुफ़्त सीए अकाउंट खोलिए और अपना कोड शेयर कीजिए। उससे जुड़ने वाले क्लाइंट आपके पोर्टफ़ोलियो में दिखते हैं।",
+   "min": 3.5,
+   "screen": "ca-portfolio.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "देखिए इस हफ़्ते किसे फ़ोन करना है, और क्यों।",
+   "sub": "देखिए इस हफ़्ते किसे फ़ोन करना है, और क्यों।",
+   "min": 3.5,
+   "screen": "ca-portfolio.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "हर क्लाइंट का स्कोर, उसका रुझान, और क्या ख़ास है, सब दिखता है।",
+   "sub": "हर क्लाइंट का स्कोर, उसका रुझान, और क्या ख़ास है, सब दिखता है।",
+   "min": 3.5,
+   "screen": "ca-client-score.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "एक टैप में व्हाट्सएप पर हाल-चाल पूछिए।",
+   "sub": "एक टैप में व्हाट्सएप पर हाल-चाल पूछिए।",
+   "min": 3.5,
+   "screen": "ca-client-actions.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "या इस महीने के आँकड़ों से आपकी अपनी आवाज़ में ईमेल का ड्राफ़्ट पाइए।",
+   "sub": "या इस महीने के आँकड़ों से आपकी अपनी आवाज़ में ईमेल का ड्राफ़्ट पाइए।",
+   "min": 3.5,
+   "screen": "ca-client-actions.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "क्लाइंट की बही को सारांश पीडीएफ़ या सीएसवी में डाउनलोड कीजिए।",
+   "sub": "क्लाइंट की बही को सारांश पीडीएफ़ या सीएसवी में डाउनलोड कीजिए।",
+   "min": 3.5,
+   "screen": "ca-client-reports.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "और अपना कार्ड व्हाट्सएप पर क्लाइंट्स के साथ शेयर कीजिए।",
+   "sub": "और अपना कार्ड व्हाट्सएप पर क्लाइंट्स के साथ शेयर कीजिए।",
+   "min": 3.5,
+   "screen": "ca-card.png",
+   "pose": "front_standing"
+  },
+  {
+   "layout": "scene",
+   "vo": "क्लाइंट तभी दिखते हैं जब वे आपसे जुड़ें और सहमति दें।",
+   "sub": "क्लाइंट तभी दिखते हैं जब वे आपसे जुड़ें और सहमति दें।",
+   "min": 4,
+   "pose": "front_standing",
+   "card": "सहमति के साथ"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

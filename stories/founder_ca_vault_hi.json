@@ -1,0 +1,89 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "founder_suit",
+ "feature": "ca-network",
+ "style": "cutout",
+ "hashtags": [
+  "#CharteredAccountant",
+  "#ScoreMyBiz",
+  "#CAIndia"
+ ],
+ "id": "founder-ca-vault-hi",
+ "title": "दस्तावेज़ और डेटा, सही तरीके से साझा",
+ "post_on": "2027-01-02",
+ "caption": "भारत के सीए के लिए। भाग 2: दस्तावेज़ जो क्लाइंट अपने ऐप में खोलते हैं, एक्सपोर्ट, लॉक किए महीने और बदलावों का साफ़ रिकॉर्ड।",
+ "linkedin_text": "For CAs in India. Upload a client's filing or statement once and they open it in their own ScoreMyBiz app. Clients can export their book for any period as a file accounting software can import. Lock a finished month once the client agrees, and every change shows who made it: the owner, a helper or the CA. ScoreMyBiz does not prepare or file returns.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "भाग दो, सीए के लिए: दस्तावेज़, रिपोर्ट, और एक ही बही पर साथ काम करना।",
+   "sub": "भाग दो, सीए के लिए: दस्तावेज़, रिपोर्ट, और एक ही बही पर साथ काम करना।",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "क्लाइंट की फ़ाइलिंग या स्टेटमेंट एक बार अपलोड कीजिए, और वे उसे अपने ऐप में खोलते हैं।",
+   "sub": "क्लाइंट की फ़ाइलिंग या स्टेटमेंट एक बार अपलोड कीजिए, और वे उसे अपने ऐप में खोलते हैं।",
+   "min": 3.5,
+   "screen": "ca-client-reports.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "व्हाट्सएप पर दोबारा भेजने की ज़रूरत नहीं। वह मेरे दस्तावेज़ में रखा रहता है।",
+   "sub": "व्हाट्सएप पर दोबारा भेजने की ज़रूरत नहीं। वह मेरे दस्तावेज़ में रखा रहता है।",
+   "min": 3.5,
+   "screen": "my-documents.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "क्लाइंट किसी भी अवधि की अपनी बही ऐसी फ़ाइल में निकाल सकते हैं जिसे आपका अकाउंटिंग सॉफ़्टवेयर इम्पोर्ट कर सके।",
+   "sub": "क्लाइंट किसी भी अवधि की अपनी बही ऐसी फ़ाइल में निकाल सकते हैं जिसे आपका अकाउंटिंग सॉफ़्टवेयर इम्पोर्ट कर सके।",
+   "min": 3.5,
+   "screen": "export-book.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "क्लाइंट की सहमति के बाद पूरे हुए महीने को लॉक कीजिए, ताकि आँकड़े ग़लती से न बदलें।",
+   "sub": "क्लाइंट की सहमति के बाद पूरे हुए महीने को लॉक कीजिए, ताकि आँकड़े ग़लती से न बदलें।",
+   "min": 3.5,
+   "screen": "book-locks.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "हर बदलाव में दिखता है कि किसने किया: मालिक, सहायक या सीए।",
+   "sub": "हर बदलाव में दिखता है कि किसने किया: मालिक, सहायक या सीए।",
+   "min": 3.5,
+   "screen": "book-changes.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "हेल्थ स्कोर आपको और आपके क्लाइंट को हर महीने बात करने के लिए एक संख्या देता है।",
+   "sub": "हेल्थ स्कोर आपको और आपके क्लाइंट को हर महीने बात करने के लिए एक संख्या देता है।",
+   "min": 3.5,
+   "screen": "result.png",
+   "pose": "front_standing"
+  },
+  {
+   "layout": "scene",
+   "vo": "स्कोर माय बिज़ रिटर्न तैयार या फ़ाइल नहीं करता। यह बही और बातचीत को एक जगह रखता है।",
+   "sub": "स्कोर माय बिज़ रिटर्न तैयार या फ़ाइल नहीं करता। यह बही और बातचीत को एक जगह रखता है।",
+   "min": 5,
+   "pose": "front_standing",
+   "card": "एक साझा बही"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "founder_suit",
+ "feature": "ca-network",
+ "style": "cutout",
+ "hashtags": [
+  "#CharteredAccountant",
+  "#ScoreMyBiz",
+  "#CAIndia"
+ ],
+ "id": "founder-ca-clients-en",
+ "title": "A CA's clients, at a glance",
+ "post_on": "2026-12-02",
+ "caption": "For CAs in India: how ScoreMyBiz helps you look after your clients. Part 1: your portfolio, scores, check-ins and drafts.",
+ "linkedin_text": "For CAs in India. A free ScoreMyBiz CA account gives a code; clients who join with it appear in your portfolio with their score, its trend and what stands out. See who needs a call this week, check in on WhatsApp in one tap, get an email draft in your own voice from this month's numbers, download a client's book as a PDF or CSV, and share your own card on WhatsApp. A client appears only after linking and agreeing.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Hi. If you are a CA in India, here is how ScoreMyBiz helps you look after your clients.",
+   "sub": "Hi. If you are a CA in India, here is how ScoreMyBiz helps you look after your clients.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "Open a free CA account and share your code. Clients who join with it appear in your portfolio.",
+   "sub": "Open a free CA account and share your code. Clients who join with it appear in your portfolio.",
+   "min": 3.5,
+   "screen": "ca-portfolio.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "See who needs a call this week, and why.",
+   "sub": "See who needs a call this week, and why.",
+   "min": 3.5,
+   "screen": "ca-portfolio.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "Each client shows a score, its trend, and what stands out.",
+   "sub": "Each client shows a score, its trend, and what stands out.",
+   "min": 3.5,
+   "screen": "ca-client-score.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "Check in on WhatsApp in one tap.",
+   "sub": "Check in on WhatsApp in one tap.",
+   "min": 3.5,
+   "screen": "ca-client-actions.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "Or get an email draft in your own voice, from this month's numbers.",
+   "sub": "Or get an email draft in your own voice, from this month's numbers.",
+   "min": 3.5,
+   "screen": "ca-client-actions.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "Download a client's book as a summary PDF, or a CSV.",
+   "sub": "Download a client's book as a summary PDF, or a CSV.",
+   "min": 3.5,
+   "screen": "ca-client-reports.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "And share your own card with clients on WhatsApp.",
+   "sub": "And share your own card with clients on WhatsApp.",
+   "min": 3.5,
+   "screen": "ca-card.png",
+   "pose": "front_standing"
+  },
+  {
+   "layout": "scene",
+   "vo": "Clients appear only after they link to you and agree.",
+   "sub": "Clients appear only after they link to you and agree.",
+   "min": 4,
+   "pose": "front_standing",
+   "card": "Only with consent"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "founder_suit",
+ "feature": "ca-network",
+ "style": "cutout",
+ "hashtags": [
+  "#CharteredAccountant",
+  "#ScoreMyBiz",
+  "#CAIndia"
+ ],
+ "id": "founder-ca-vault-en",
+ "title": "Documents and data, shared properly",
+ "post_on": "2026-12-03",
+ "caption": "For CAs in India. Part 2: documents your clients open in their own app, exports, locked months and a clear record of changes.",
+ "linkedin_text": "For CAs in India. Upload a client's filing or statement once and they open it in their own ScoreMyBiz app. Clients can export their book for any period as a file accounting software can import. Lock a finished month once the client agrees, and every change shows who made it: the owner, a helper or the CA. ScoreMyBiz does not prepare or file returns.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Part two, for CAs: documents, reports and working on the same book.",
+   "sub": "Part two, for CAs: documents, reports and working on the same book.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "Upload a client's filing or statement once, and they open it in their own app.",
+   "sub": "Upload a client's filing or statement once, and they open it in their own app.",
+   "min": 3.5,
+   "screen": "ca-client-reports.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "No more resending on WhatsApp. It waits in My Documents.",
+   "sub": "No more resending on WhatsApp. It waits in My Documents.",
+   "min": 3.5,
+   "screen": "my-documents.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "Clients can export their book for any period, as a file your accounting software can import.",
+   "sub": "Clients can export their book for any period, as a file your accounting software can import.",
+   "min": 3.5,
+   "screen": "export-book.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "Lock a finished month once the client agrees, so figures do not change by accident.",
+   "sub": "Lock a finished month once the client agrees, so figures do not change by accident.",
+   "min": 3.5,
+   "screen": "book-locks.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "Every change shows who made it: the owner, a helper or the CA.",
+   "sub": "Every change shows who made it: the owner, a helper or the CA.",
+   "min": 3.5,
+   "screen": "book-changes.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "A health score gives you and your client one number to talk about each month.",
+   "sub": "A health score gives you and your client one number to talk about each month.",
+   "min": 3.5,
+   "screen": "result.png",
+   "pose": "front_standing"
+  },
+  {
+   "layout": "scene",
+   "vo": "ScoreMyBiz does not prepare or file returns. It keeps the book and the conversation in one place.",
+   "sub": "ScoreMyBiz does not prepare or file returns. It keeps the book and the conversation in one place.",
+   "min": 5,
+   "pose": "front_standing",
+   "card": "One shared book"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

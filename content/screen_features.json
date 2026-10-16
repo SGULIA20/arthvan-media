@@ -66,6 +66,9 @@
   "reminders.png": "reminders-in-my-words",
   "offline-entries.png": "entries-without-signal",
   "customer-history.png": "customer-history",
-  "business-simulator.png": "what-if-simulator"
+  "business-simulator.png": "what-if-simulator",
+  "ca-client-score.png": "ca-network",
+  "ca-client-actions.png": "ca-network",
+  "ca-client-reports.png": "ca-network"
  }
 }
