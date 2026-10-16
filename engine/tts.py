@@ -2,6 +2,7 @@
 re-render of unchanged lines costs nothing. Key: GEMINI_API_KEY in the environment or ~/arthvan-social/.env."""
 import base64
 import hashlib
+import http.client
 import json
 import os
 import ssl
@@ -154,6 +155,8 @@ def _generate(model: str, text: str, voice: str, key: str):
             return e.code, json.loads(raw)
         except ValueError:
             return e.code, {"error": {"message": raw[:200]}}
+    except (http.client.HTTPException, ConnectionError, TimeoutError, urllib.error.URLError, OSError) as e:      # a download cut short (a sleeping Mac, a dropped link)
+        return 599, {"error": {"message": f"connection interrupted: {type(e).__name__}"}}
 
 
 def gemini_clip(text: str, voice: str, out_wav: Path, *, key: str = None, cache: Path = CACHE, model: str = None) -> float:
@@ -180,7 +183,7 @@ def gemini_clip(text: str, voice: str, out_wav: Path, *, key: str = None, cache:
             if wait is not None and wait <= MAX_DAILY_WAIT and daily_waits < 2:     # today's allowance is used up: sleep until it resets
                 daily_waits += 1; _wait_for_reset(wait); continue
             tries += 1
-            if tries < 6 and status in (429, 500, 503):        # a per-minute quota or a busy server: wait it out, politely
+            if tries < 6 and status in (429, 500, 503, 599):    # a per-minute quota, a busy server or a cut connection: wait it out, politely
                 time.sleep(8 if status != 429 else 20 + 15 * (tries - 1)); continue
             raise TTSError(f"Gemini TTS failed ({status}): {str((body.get('error') or {}).get('message') or body)[:200].replace(key, '<key>')}")
         part = _audio_part(body)

@@ -32,7 +32,7 @@ VOICE_BUDGET = 92
 
 
 NETWORK_WORDS = ("nodename nor servname", "Temporary failure in name resolution", "Network is unreachable", "URLError", "Connection reset",
-                 "Connection refused", "ConnectionError", "timed out", "Name or service not known")
+                 "Connection refused", "ConnectionError", "timed out", "Name or service not known", "IncompleteRead", "RemoteDisconnected", "connection interrupted")
 
 
 INTERRUPTED_WORDS = ("TimeoutError", "Timeout 30000ms exceeded", "Timeout exceeded", "Target closed", "has been closed", "Browser closed", "Call log:")
