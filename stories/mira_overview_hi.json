@@ -1,0 +1,105 @@
+{
+ "id": "mira-overview-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "वेपॉइंट, एक मिनट में",
+ "post_on": "2026-12-31",
+ "caption": "वेपॉइंट एक मिनट में: एक जगह जहाँ आप बिना नाम के एक सच्ची बात कह सकते हैं। मीरा असली स्क्रीन पर मुख्य बातें दिखाती है।",
+ "linkedin_text": "A one-minute tour of Waypoint on its real screens: a new name every day, one true sentence, the Wall, polls, voice posts, matching and Mira the AI guide, a mood log, the Break Room and sixteen languages.",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "नमस्ते, मैं मीरा हूँ। यह है एक मिनट में वेपॉइंट: एक जगह जहाँ आप बिना नाम के एक सच्ची बात कह सकते हैं।",
+   "sub": "नमस्ते, मैं मीरा हूँ। यह है एक मिनट में वेपॉइंट: एक जगह जहाँ आप बिना नाम के एक सच्ची बात कह सकते हैं।",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "हर दिन आपको आज के लिए एक नया नाम मिलता है।",
+   "sub": "हर दिन आपको आज के लिए एक नया नाम मिलता है।",
+   "min": 3.5,
+   "screen": "reveal.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "एक सच्चा वाक्य लिखिए। बस इतना ही माँगा जाता है।",
+   "sub": "एक सच्चा वाक्य लिखिए। बस इतना ही माँगा जाता है।",
+   "min": 3.5,
+   "screen": "create_typed.png",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "present",
+   "vo": "दीवार पर पढ़िए कि आज रात दूसरों ने क्या लिखा।",
+   "sub": "दीवार पर पढ़िए कि आज रात दूसरों ने क्या लिखा।",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "आस्क द पाथ: एक सवाल, दो से चार विकल्प।",
+   "sub": "आस्क द पाथ: एक सवाल, दो से चार विकल्प।",
+   "min": 3.5,
+   "screen": "poll.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "या आवाज़ दबाइए और बोलिए। दूसरे किसी किरदार की आवाज़ में सुनते हैं।",
+   "sub": "या आवाज़ दबाइए और बोलिए। दूसरे किसी किरदार की आवाज़ में सुनते हैं।",
+   "min": 3.5,
+   "screen": "voice.png",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "present",
+   "vo": "मैच का इंतज़ार कीजिए, या मीरा से बात कीजिए, जो एक एआई गाइड है।",
+   "sub": "मैच का इंतज़ार कीजिए, या मीरा से बात कीजिए, जो एक एआई गाइड है।",
+   "min": 3.5,
+   "screen": "matching-mira.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "बस एक टैप में अपना मूड दर्ज कीजिए, कोई टाइपिंग नहीं।",
+   "sub": "बस एक टैप में अपना मूड दर्ज कीजिए, कोई टाइपिंग नहीं।",
+   "min": 3.5,
+   "screen": "mood.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "ब्रेक रूम में नब्बे सेकंड, दिन में एक बार।",
+   "sub": "ब्रेक रूम में नब्बे सेकंड, दिन में एक बार।",
+   "min": 3.5,
+   "screen": "break-room.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "सोलह भाषाओं में।",
+   "sub": "सोलह भाषाओं में।",
+   "min": 3.5,
+   "screen": "language.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए। गूगल प्ले पर मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

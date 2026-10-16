@@ -1,0 +1,113 @@
+{
+ "id": "lumi-overview-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "एक मिनट में सब कुछ",
+ "post_on": "2026-12-30",
+ "caption": "स्कोर माय बिज़ आपकी दुकान के लिए जो कुछ करता है, एक मिनट में। लूमी असली स्क्रीन पर मुख्य बातें दिखाती है।",
+ "linkedin_text": "A one-minute tour of ScoreMyBiz on its real screens: writing sales, purchases and spending, who owes you and what you owe, bills and quotations, profit and cash in plain words, a business health score, a what-if simulator, the Advisor, helpers with their own login, and sharing the book with a CA.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "नमस्ते, मैं लूमी हूँ। यह है कि स्कोर माय बिज़ आपकी दुकान के लिए एक मिनट में क्या-क्या करता है।",
+   "sub": "नमस्ते, मैं लूमी हूँ। यह है कि स्कोर माय बिज़ आपकी दुकान के लिए एक मिनट में क्या-क्या करता है।",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "बिक्री, खरीद और खर्च, सेकंडों में लिखिए।",
+   "sub": "बिक्री, खरीद और खर्च, सेकंडों में लिखिए।",
+   "min": 3.5,
+   "screen": "book.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "देखिए किसका पैसा बाकी है, और व्हाट्सएप पर याद दिलाइए।",
+   "sub": "देखिए किसका पैसा बाकी है, और व्हाट्सएप पर याद दिलाइए।",
+   "min": 3.5,
+   "screen": "cash-flow.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "देखिए आपको क्या देना है, और इस हफ़्ते क्या देय है।",
+   "sub": "देखिए आपको क्या देना है, और इस हफ़्ते क्या देय है।",
+   "min": 3.5,
+   "screen": "payables.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "बिल और कोटेशन बनाइए, और पीडीएफ़ में शेयर कीजिए।",
+   "sub": "बिल और कोटेशन बनाइए, और पीडीएफ़ में शेयर कीजिए।",
+   "min": 3.5,
+   "screen": "invoices.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "मुनाफ़ा, नक़द, और जो आपके पास है और जो देना है, सीधे शब्दों में।",
+   "sub": "मुनाफ़ा, नक़द, और जो आपके पास है और जो देना है, सीधे शब्दों में।",
+   "min": 3.5,
+   "screen": "profit-loss.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "बिज़नेस हेल्थ स्कोर, मज़बूत और कमज़ोर पहलुओं के साथ।",
+   "sub": "बिज़नेस हेल्थ स्कोर, मज़बूत और कमज़ोर पहलुओं के साथ।",
+   "min": 3.5,
+   "screen": "result.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "अपने आँकड़ों पर अगर-ऐसा-हो आज़माइए।",
+   "sub": "अपने आँकड़ों पर अगर-ऐसा-हो आज़माइए।",
+   "min": 3.5,
+   "screen": "business-simulator.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "सलाहकार से अपनी भाषा में पूछिए, अपने मुफ़्त महीने में।",
+   "sub": "सलाहकार से अपनी भाषा में पूछिए, अपने मुफ़्त महीने में।",
+   "min": 3.5,
+   "screen": "advisor.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "सहायकों को उनका अपना लॉगिन दीजिए।",
+   "sub": "सहायकों को उनका अपना लॉगिन दीजिए।",
+   "min": 3.5,
+   "screen": "staff.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "और अपनी बही अपने सीए के साथ शेयर कीजिए।",
+   "sub": "और अपनी बही अपने सीए के साथ शेयर कीजिए।",
+   "min": 3.5,
+   "screen": "export-book.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

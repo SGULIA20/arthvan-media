@@ -1,0 +1,105 @@
+{
+ "id": "mira-overview-en",
+ "app": "waypoint",
+ "lang": "en",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "Waypoint in one minute",
+ "post_on": "2026-12-01",
+ "caption": "Waypoint in one minute: a place to say one true thing, without your name. Mira shows the main things on the real screens.",
+ "linkedin_text": "A one-minute tour of Waypoint on its real screens: a new name every day, one true sentence, the Wall, polls, voice posts, matching and Mira the AI guide, a mood log, the Break Room and sixteen languages.",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Hi, I'm Mira. This is Waypoint in one minute: a place to say one true thing, without your name.",
+   "sub": "Hi, I'm Mira. This is Waypoint in one minute: a place to say one true thing, without your name.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "Every day you get a new name, made just for today.",
+   "sub": "Every day you get a new name, made just for today.",
+   "min": 3.5,
+   "screen": "reveal.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "Type one true sentence. That is all it asks.",
+   "sub": "Type one true sentence. That is all it asks.",
+   "min": 3.5,
+   "screen": "create_typed.png",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "present",
+   "vo": "Read what others wrote tonight, on the Wall.",
+   "sub": "Read what others wrote tonight, on the Wall.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "Ask the Path: one question, two to four options.",
+   "sub": "Ask the Path: one question, two to four options.",
+   "min": 3.5,
+   "screen": "poll.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "Or tap Voice and talk. Others hear a character's voice.",
+   "sub": "Or tap Voice and talk. Others hear a character's voice.",
+   "min": 3.5,
+   "screen": "voice.png",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "present",
+   "vo": "Wait for a match, or talk to Mira, an AI guide.",
+   "sub": "Wait for a match, or talk to Mira, an AI guide.",
+   "min": 3.5,
+   "screen": "matching-mira.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "Log your mood in a tap. No typing.",
+   "sub": "Log your mood in a tap. No typing.",
+   "min": 3.5,
+   "screen": "mood.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "Ninety seconds in the Break Room, once a day.",
+   "sub": "Ninety seconds in the Break Room, once a day.",
+   "min": 3.5,
+   "screen": "break-room.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "In sixteen languages.",
+   "sub": "In sixteen languages.",
+   "min": 3.5,
+   "screen": "language.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

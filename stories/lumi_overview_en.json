@@ -1,0 +1,113 @@
+{
+ "id": "lumi-overview-en",
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "Everything, in one minute",
+ "post_on": "2026-11-30",
+ "caption": "Everything ScoreMyBiz does for your shop, in one minute. Lumi shows the main things on the real screens.",
+ "linkedin_text": "A one-minute tour of ScoreMyBiz on its real screens: writing sales, purchases and spending, who owes you and what you owe, bills and quotations, profit and cash in plain words, a business health score, a what-if simulator, the Advisor, helpers with their own login, and sharing the book with a CA.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Hi, I'm Lumi. Here is what ScoreMyBiz does for your shop, in one minute.",
+   "sub": "Hi, I'm Lumi. Here is what ScoreMyBiz does for your shop, in one minute.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "Write sales, purchases and spending in seconds.",
+   "sub": "Write sales, purchases and spending in seconds.",
+   "min": 3.5,
+   "screen": "book.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "See who owes you, and remind them on WhatsApp.",
+   "sub": "See who owes you, and remind them on WhatsApp.",
+   "min": 3.5,
+   "screen": "cash-flow.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "See what you owe, and what is due this week.",
+   "sub": "See what you owe, and what is due this week.",
+   "min": 3.5,
+   "screen": "payables.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "Make bills and quotations, and share them as a PDF.",
+   "sub": "Make bills and quotations, and share them as a PDF.",
+   "min": 3.5,
+   "screen": "invoices.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "Profit, cash, and what you have and owe, in plain words.",
+   "sub": "Profit, cash, and what you have and owe, in plain words.",
+   "min": 3.5,
+   "screen": "profit-loss.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "A business health score, with your strong and weak points.",
+   "sub": "A business health score, with your strong and weak points.",
+   "min": 3.5,
+   "screen": "result.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "Try a what-if on your own numbers.",
+   "sub": "Try a what-if on your own numbers.",
+   "min": 3.5,
+   "screen": "business-simulator.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "Ask the Advisor in your own language, in your free month.",
+   "sub": "Ask the Advisor in your own language, in your free month.",
+   "min": 3.5,
+   "screen": "advisor.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "Give helpers their own login.",
+   "sub": "Give helpers their own login.",
+   "min": 3.5,
+   "screen": "staff.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "And share your book with your CA.",
+   "sub": "And share your book with your CA.",
+   "min": 3.5,
+   "screen": "export-book.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
