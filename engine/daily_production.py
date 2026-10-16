@@ -158,6 +158,8 @@ def backlog(root: Path = ROOT, failures: dict = None) -> list:
     for lang in PRIORITY:
         for s in english:
             lid = localize.localized_id(s["id"], lang)
+            if s.get("feature") in library.INDIA_ONLY_FEATURES and lang not in library.INDIAN_LANGS:
+                continue                                                  # the CA portal, schemes and the business network exist only in India
             if lang in SUPPORTED.get(s["app"], ()) and lid not in done and failures.get(lid, 0) < MAX_TRIES:
                 items.append((lang, s))
     return items

@@ -144,3 +144,18 @@ def test_a_google_account_block_stops_the_run_and_is_not_counted_as_a_failed_try
         built.append(path.name); return ("blocked", "Gemini TTS failed (403)")
     r = dp.run(tmp_path, build=build, wait_net=lambda: True, now=NOW, log=tmp_path / "log")
     assert built == ["a_en.json"] and r["stopped"].startswith("google blocked") and dp._failures(tmp_path / "log") == {}
+
+
+def test_india_only_reels_are_converted_into_indian_languages_only(monkeypatch, tmp_path):
+    import engine.story as st
+    monkeypatch.setattr(dp, "_stories", lambda root: [
+        {**story("ca-en"), "feature": "ca-network", "_held": False, "title": "t", "caption": "c"},
+        {**story("plain-en"), "feature": "break-room", "_held": False, "title": "t", "caption": "c"}])
+    (tmp_path / "stories" / "out").mkdir(parents=True)
+    for n in ("ca-en", "plain-en"):
+        (tmp_path / "stories" / "out" / f"{n}.mp4").write_bytes(b"x")
+    monkeypatch.setattr(st, "shot_plan", lambda s: [])
+    monkeypatch.setattr(dp, "SUPPORTED", {"scoremybiz": {"hi", "es"}, "waypoint": {"hi", "es"}})
+    monkeypatch.setattr(dp, "PRIORITY", ["hi", "es"])
+    pairs = [(lang, s["id"]) for lang, s in dp.backlog(tmp_path, {})]
+    assert ("hi", "ca-en") in pairs and ("es", "plain-en") in pairs and ("es", "ca-en") not in pairs

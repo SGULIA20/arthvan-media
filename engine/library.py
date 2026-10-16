@@ -97,7 +97,10 @@ def sync(library: Path = LIBRARY, root: Path = ROOT) -> dict:
 TARGETS_BY_APP = {                                 # every language each app supports whose Google voice was checked, in production priority order
     "scoremybiz": ["hi", "gu", "mr", "ta", "bn", "te", "kn", "ml", "ur", "es", "pt", "sw", "ar", "de", "fr", "it", "nl", "fi"],
     "waypoint": ["hi", "gu", "mr", "ta", "bn", "te", "kn", "ml", "es", "pt", "sw", "de", "fr", "id"]}
-TARGETS = ["hi", "gu", "mr", "ta", "te", "bn", "kn", "ml", "ur"]          # Indian languages whose Google voice was verified (Waypoint/ScoreMyBiz both have them)
+TARGETS = ["hi", "gu", "mr", "ta", "te", "bn", "kn", "ml", "ur"]
+# Features that exist only in India (the CA portal, CA documents, schemes and weather, the business network): their Reels are made in the Indian languages only.
+INDIA_ONLY_FEATURES = {"ca-network", "documents-from-my-ca", "schemes-and-weather", "business-network"}
+INDIAN_LANGS = {"hi", "gu", "mr", "ta", "te", "bn", "kn", "ml", "ur", "pa", "or", "as"}          # Indian languages whose Google voice was verified (Waypoint/ScoreMyBiz both have them)
 
 
 def _base(story_id: str) -> str:
@@ -123,13 +126,17 @@ def coverage(root: Path = ROOT, targets: list = None) -> dict:
         mine_targets = targets.get(app, TARGETS) if isinstance(targets, dict) else targets
         langs = list(mine_targets) + sorted({s.get("lang", "en").split("-")[0] for s in mine} - {"en"} - set(mine_targets))
         rows = []
+        india_only = {_base(s["id"]) for s in mine if s.get("lang", "en").split("-")[0] == "en" and s.get("feature") in INDIA_ONLY_FEATURES}
+        eng_all = eng
         for lang in langs:
+            eng = eng_all - india_only if lang not in INDIAN_LANGS else eng_all            # an India-only Reel is not expected in a non-Indian language
             theirs = [s for s in mine if s.get("lang", "en").split("-")[0] == lang]
             made = {_base(s["id"]) for s in theirs if s["id"] in done}
             scripted = {_base(s["id"]) for s in theirs if s["id"] not in done}
             scripted |= {_base(f.stem) for f in (root / "content" / "translations" / lang).glob("*.json")} & eng       # a written translation is a script too
             rows.append({"lang": lang, "name": LANGUAGES.get(lang, lang), "made": len(made & eng), "scripted": len(scripted & eng - made),
                          "todo": len(eng - made - scripted), "own": len((made | scripted) - eng)})
+        eng = eng_all
         out[app] = {"english": len(eng), "english_made": len({_base(s["id"]) for s in mine if s["id"] in done and s.get("lang", "en").split("-")[0] == "en"}), "rows": rows}
     return out
 
