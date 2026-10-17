@@ -65,3 +65,12 @@ def test_coverage_compares_every_language_with_english_per_app(tmp_path):
     assert smb["english"] == 3 and hi["made"] == 1 and hi["scripted"] == 1 and hi["todo"] == 1 and hi["own"] == 1
     assert gu["made"] == 0 and gu["todo"] == 3 and gu["own"] == 1
     assert c["waypoint"]["english"] == 1 and "multi" not in str(c)
+
+
+def test_default_coverage_leaves_out_a_language_the_app_does_not_support(tmp_path):
+    root = tmp_path / "repo"; (root / "stories" / "out").mkdir(parents=True); (root / "content").mkdir()
+    for sid, app in (("a-en", "scoremybiz"), ("w-en", "waypoint")):
+        (root / "stories" / f"{sid.replace('-', '_')}.json").write_text(json.dumps({"id": sid, "app": app, "lang": "en", "scenes": [{"layout": "clip"}], "feature": "k"}))
+    c = lib.coverage(root)
+    assert "ur" in [r["lang"] for r in c["scoremybiz"]["rows"]]
+    assert "ur" not in [r["lang"] for r in c["waypoint"]["rows"]] and "ml" in [r["lang"] for r in c["waypoint"]["rows"]]

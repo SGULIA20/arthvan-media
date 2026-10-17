@@ -113,7 +113,7 @@ def coverage(root: Path = ROOT, targets: list = None) -> dict:
     made = finished in that language, scripted = script written but video not made yet, todo = not started, own = Reels in that
     language with no English twin (the festival Reels)."""
     from . import calendar_plan
-    root = Path(root); targets = targets or TARGETS
+    root = Path(root); default_targets = not targets; targets = targets or TARGETS
     done = {p.stem for p in (root / "stories" / "out").glob("*.mp4")}
     held = {s["id"] for s in calendar_plan.load_stories(root) if s["problems"]}
     stories = [json.loads(p.read_text()) for p in sorted((root / "stories").glob("*.json"))]
@@ -124,6 +124,8 @@ def coverage(root: Path = ROOT, targets: list = None) -> dict:
         if not eng:
             continue
         mine_targets = targets.get(app, TARGETS) if isinstance(targets, dict) else targets
+        if default_targets:                                  # the default list is the Indian languages; an app that does not support one (Waypoint has no Urdu) does not show it
+            mine_targets = [l for l in mine_targets if l in TARGETS_BY_APP.get(app, mine_targets)]
         langs = list(mine_targets) + sorted({s.get("lang", "en").split("-")[0] for s in mine} - {"en"} - set(mine_targets))
         rows = []
         india_only = {_base(s["id"]) for s in mine if s.get("lang", "en").split("-")[0] == "en" and s.get("feature") in INDIA_ONLY_FEATURES}
