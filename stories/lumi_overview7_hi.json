@@ -1,0 +1,65 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "business-network",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview7-hi",
+ "title": "भारत के लिए: और भी बहुत कुछ",
+ "post_on": "2027-01-12",
+ "caption": "भाग 7, भारत के लिए: मौसम और सरकारी योजनाएँ, बिज़नेस नेटवर्क और आपके सीए के दस्तावेज़।",
+ "linkedin_text": "Part 7 of the ScoreMyBiz tour, for India: a four-day weather alert with government schemes that may suit you, the business network where one line reaches nearby businesses, and documents your CA uploads for you.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "नमस्ते, मैं लूमी हूँ। भाग सात, भारत के लिए: और भी बहुत कुछ।",
+   "sub": "नमस्ते, मैं लूमी हूँ। भाग सात, भारत के लिए: और भी बहुत कुछ।",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "चार दिन का मौसम अलर्ट, और वे सरकारी योजनाएँ जो आपके काम आ सकती हैं।",
+   "sub": "चार दिन का मौसम अलर्ट, और वे सरकारी योजनाएँ जो आपके काम आ सकती हैं।",
+   "min": 3.5,
+   "screen": "alerts.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "बिज़नेस नेटवर्क: एक पंक्ति आसपास के कारोबारों तक पहुँचती है।",
+   "sub": "बिज़नेस नेटवर्क: एक पंक्ति आसपास के कारोबारों तक पहुँचती है।",
+   "min": 3.5,
+   "screen": "network.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "और आपके सीए आपके लिए जो दस्तावेज़ अपलोड करते हैं, वे मेरे दस्तावेज़ में मिलते हैं।",
+   "sub": "और आपके सीए आपके लिए जो दस्तावेज़ अपलोड करते हैं, वे मेरे दस्तावेज़ में मिलते हैं।",
+   "min": 3.5,
+   "screen": "my-documents.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "आपकी सहमति के बाद, आपके सीए पूरे हुए महीने को लॉक भी कर सकते हैं।",
+   "sub": "आपकी सहमति के बाद, आपके सीए पूरे हुए महीने को लॉक भी कर सकते हैं।",
+   "min": 3.5,
+   "card": "आपके सीए के साथ",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

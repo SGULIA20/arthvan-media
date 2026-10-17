@@ -1,0 +1,65 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "lumi",
+ "feature": "business-network",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview7-en",
+ "title": "For India: more to use",
+ "post_on": "2026-12-13",
+ "caption": "Part 7, for India: schemes and weather, the business network and documents from your CA in ScoreMyBiz.",
+ "linkedin_text": "Part 7 of the ScoreMyBiz tour, for India: a four-day weather alert with government schemes that may suit you, the business network where one line reaches nearby businesses, and documents your CA uploads for you.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Hi, I'm Lumi. Part seven, for India: more to use.",
+   "sub": "Hi, I'm Lumi. Part seven, for India: more to use.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "A four-day weather alert, with government schemes that may suit you.",
+   "sub": "A four-day weather alert, with government schemes that may suit you.",
+   "min": 3.5,
+   "screen": "alerts.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "The business network: one line reaches nearby businesses.",
+   "sub": "The business network: one line reaches nearby businesses.",
+   "min": 3.5,
+   "screen": "network.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "And documents your CA uploads for you, in My Documents.",
+   "sub": "And documents your CA uploads for you, in My Documents.",
+   "min": 3.5,
+   "screen": "my-documents.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "Your CA can also lock a finished month, once you have agreed.",
+   "sub": "Your CA can also lock a finished month, once you have agreed.",
+   "min": 3.5,
+   "card": "With your CA",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

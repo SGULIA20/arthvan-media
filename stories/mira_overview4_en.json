@@ -1,0 +1,113 @@
+{
+ "app": "waypoint",
+ "lang": "en",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "id": "mira-overview4-en",
+ "title": "Chats, safety and settings",
+ "post_on": "2026-12-07",
+ "caption": "Part 4: chats, safety and settings in Waypoint. Mira shows how it keeps people safe.",
+ "linkedin_text": "Part 4 of the Waypoint tour: the 18-plus check, thirty-minute text chats, ending and blocking, reporting, screening before posts go live, the helpline pause, the not-official label, settings, help and deleting your account.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Hi, I'm Mira. Part four: chats, safety and settings.",
+   "sub": "Hi, I'm Mira. Part four: chats, safety and settings.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "You must be eighteen, and agree to the Terms and Guidelines.",
+   "sub": "You must be eighteen, and agree to the Terms and Guidelines.",
+   "min": 3.5,
+   "card": "18 and over",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "A match chat is text only, and lasts thirty minutes.",
+   "sub": "A match chat is text only, and lasts thirty minutes.",
+   "min": 3.5,
+   "card": "30-minute chats",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "scene",
+   "vo": "End it after five minutes, or block at any time, and rate it at the end.",
+   "sub": "End it after five minutes, or block at any time, and rate it at the end.",
+   "min": 3.5,
+   "card": "You decide",
+   "pose": "relieved"
+  },
+  {
+   "layout": "scene",
+   "vo": "Report or block any post, message or Moment.",
+   "sub": "Report or block any post, message or Moment.",
+   "min": 3.5,
+   "card": "Report and block",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "Posts are screened before they go live. Harassment and hate are refused.",
+   "sub": "Posts are screened before they go live. Harassment and hate are refused.",
+   "min": 3.5,
+   "card": "Screened first",
+   "pose": "listening"
+  },
+  {
+   "layout": "scene",
+   "vo": "If a post sounds like a crisis, you see helplines and a pause first.",
+   "sub": "If a post sounds like a crisis, you see helplines and a pause first.",
+   "min": 3.5,
+   "card": "Before you post",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "Anything claiming to be Waypoint staff is marked as not official.",
+   "sub": "Anything claiming to be Waypoint staff is marked as not official.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "Settings, help, terms and feedback are all in My Waypoints.",
+   "sub": "Settings, help, terms and feedback are all in My Waypoints.",
+   "min": 3.5,
+   "screen": "my-waypoints.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "You can delete your account and data from the same place.",
+   "sub": "You can delete your account and data from the same place.",
+   "min": 3.5,
+   "screen": "invite.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "Waypoint tells you when a new version is ready, and when you are offline.",
+   "sub": "Waypoint tells you when a new version is ready, and when you are offline.",
+   "min": 3.5,
+   "card": "Stay up to date",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

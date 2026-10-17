@@ -1,0 +1,113 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview4-en",
+ "title": "Stay in control",
+ "post_on": "2026-12-10",
+ "caption": "Part 4: stay in control. Home, reminders, locked months, who changed what, your card and more in ScoreMyBiz.",
+ "linkedin_text": "Part 4 of the ScoreMyBiz tour: Home at a glance, the bell, streak and weekly challenge, reminders in your own words, next moves, locking a finished month, who changed what, the business card, a personal health score and several shops.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Hi, I'm Lumi. Part four: stay in control.",
+   "sub": "Hi, I'm Lumi. Part four: stay in control.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "Home shows your day at a glance.",
+   "sub": "Home shows your day at a glance.",
+   "min": 3.5,
+   "screen": "dashboard.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "The bell keeps reminders, due notes and check-ins in one list.",
+   "sub": "The bell keeps reminders, due notes and check-ins in one list.",
+   "min": 3.5,
+   "screen": "notifications.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "A Home card counts your days in a row, with a small weekly challenge.",
+   "sub": "A Home card counts your days in a row, with a small weekly challenge.",
+   "min": 3.5,
+   "card": "Your streak",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "Type a reminder in your own words, and it becomes a task with a date.",
+   "sub": "Type a reminder in your own words, and it becomes a task with a date.",
+   "min": 3.5,
+   "screen": "reminders.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "scene",
+   "vo": "After a score, get three to five next moves, and mark each done.",
+   "sub": "After a score, get three to five next moves, and mark each done.",
+   "min": 3.5,
+   "card": "Next moves",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "Lock a finished month, so nothing changes by accident.",
+   "sub": "Lock a finished month, so nothing changes by accident.",
+   "min": 3.5,
+   "screen": "book-locks.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "See who changed what, and when.",
+   "sub": "See who changed what, and when.",
+   "min": 3.5,
+   "screen": "book-changes.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "Share your business card, with a WhatsApp QR code.",
+   "sub": "Share your business card, with a WhatsApp QR code.",
+   "min": 3.5,
+   "screen": "business-card.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "Check your own money too, with a personal health score.",
+   "sub": "Check your own money too, with a personal health score.",
+   "min": 3.5,
+   "screen": "personal-calculator.png",
+   "pose": "thinking"
+  },
+  {
+   "layout": "scene",
+   "vo": "Add up to five shops, and keep each shop's book separate.",
+   "sub": "Add up to five shops, and keep each shop's book separate.",
+   "min": 3.5,
+   "card": "Several shops",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

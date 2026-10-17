@@ -1,0 +1,121 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview6-en",
+ "title": "Smart extras and free tools",
+ "post_on": "2026-12-12",
+ "caption": "Part 6: smart extras and free tools. Photo and voice entry, risk flags, decision practice, nudges, printable sheets and calculators for ScoreMyBiz.",
+ "linkedin_text": "Part 6 of the ScoreMyBiz tour: photo entry and voice entry that you check before saving, one-tap customer reminders, risk flags, decision practice, comparing with similar businesses when enough exist, a quiet WhatsApp nudge, a printable daily sheet, free calculators, offer posters and inviting a friend.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Hi, I'm Lumi. Part six: smart extras, and free tools.",
+   "sub": "Hi, I'm Lumi. Part six: smart extras, and free tools.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "Photograph a bill or a notebook page, then check it, and save.",
+   "sub": "Photograph a bill or a notebook page, then check it, and save.",
+   "min": 3.5,
+   "card": "Photo entry",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "Say one sentence, like sold two thousand to Raju on credit, then check it and save.",
+   "sub": "Say one sentence, like sold two thousand to Raju on credit, then check it and save.",
+   "min": 3.5,
+   "card": "Voice entry",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "Remind a customer in one tap, from your own WhatsApp.",
+   "sub": "Remind a customer in one tap, from your own WhatsApp.",
+   "min": 3.5,
+   "screen": "cash-flow.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "scene",
+   "vo": "Open the risk flags behind your score, built from your own numbers.",
+   "sub": "Open the risk flags behind your score, built from your own numbers.",
+   "min": 3.5,
+   "card": "Risk flags",
+   "pose": "thinking"
+  },
+  {
+   "layout": "scene",
+   "vo": "Practise three business decisions, and see your score change after each.",
+   "sub": "Practise three business decisions, and see your score change after each.",
+   "min": 3.5,
+   "card": "Decision practice",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "See how your score compares with similar businesses, when enough of them exist.",
+   "sub": "See how your score compares with similar businesses, when enough of them exist.",
+   "min": 3.5,
+   "card": "Compare",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "scene",
+   "vo": "Recorded nothing for two days? A short WhatsApp reminds you, a few times a week at most.",
+   "sub": "Recorded nothing for two days? A short WhatsApp reminds you, a few times a week at most.",
+   "min": 3.5,
+   "card": "A quiet nudge",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "Print a free daily sheet, write through the day, and send a photo at closing.",
+   "sub": "Print a free daily sheet, write through the day, and send a photo at closing.",
+   "min": 3.5,
+   "card": "Daily sheet",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "scene",
+   "vo": "Two free calculators on the website: cash flow, and profit margin.",
+   "sub": "Two free calculators on the website: cash flow, and profit margin.",
+   "min": 3.5,
+   "card": "Free calculators",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "scene",
+   "vo": "Make offer posters on the website, for WhatsApp, Status and print.",
+   "sub": "Make offer posters on the website, for WhatsApp, Status and print.",
+   "min": 3.5,
+   "card": "Offer posters",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "Share your own link, to invite a friend.",
+   "sub": "Share your own link, to invite a friend.",
+   "min": 3.5,
+   "card": "Invite a friend",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

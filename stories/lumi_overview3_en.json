@@ -1,0 +1,113 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview3-en",
+ "title": "Your money, clearly",
+ "post_on": "2026-12-09",
+ "caption": "Part 3: your money, clearly. The ScoreMyBiz money screens, shown on the real app.",
+ "linkedin_text": "Part 3 of the ScoreMyBiz tour: counting cash and bank against the book, the cash book by day, searchable lists, what you have and owe, paper profit against real cash, quotations, bill settings, WhatsApp numbers, monthly repeats and undo.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Hi, I'm Lumi. Part three: your money, clearly.",
+   "sub": "Hi, I'm Lumi. Part three: your money, clearly.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "Count your cash and bank, and see what the book expected.",
+   "sub": "Count your cash and bank, and see what the book expected.",
+   "min": 3.5,
+   "screen": "money-now.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "A cash book, day by day, with what you started and ended with.",
+   "sub": "A cash book, day by day, with what you started and ended with.",
+   "min": 3.5,
+   "screen": "cash-book.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "Search lists of everything sold, bought and spent, and download them.",
+   "sub": "Search lists of everything sold, bought and spent, and download them.",
+   "min": 3.5,
+   "screen": "registers.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "What you have and what you owe, on one page.",
+   "sub": "What you have and what you owe, on one page.",
+   "min": 3.5,
+   "screen": "balance-sheet.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "Paper profit, set next to the cash you really have.",
+   "sub": "Paper profit, set next to the cash you really have.",
+   "min": 3.5,
+   "screen": "cash-reality.png",
+   "pose": "thinking"
+  },
+  {
+   "layout": "present",
+   "vo": "Make quotations, share them as a PDF, and turn one into a sale in a tap.",
+   "sub": "Make quotations, share them as a PDF, and turn one into a sale in a tap.",
+   "min": 3.5,
+   "screen": "quotations.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "Set how your bills are numbered, and what they show.",
+   "sub": "Set how your bills are numbered, and what they show.",
+   "min": 3.5,
+   "screen": "billing-settings.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "Message today's numbers on WhatsApp, and they are recorded at once.",
+   "sub": "Message today's numbers on WhatsApp, and they are recorded at once.",
+   "min": 3.5,
+   "screen": "whatsapp-numbers.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "Rent and salary can repeat by themselves, every month.",
+   "sub": "Rent and salary can repeat by themselves, every month.",
+   "min": 3.5,
+   "screen": "book.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "Removed something by mistake? An Undo bar waits for five seconds.",
+   "sub": "Removed something by mistake? An Undo bar waits for five seconds.",
+   "min": 3.5,
+   "card": "Undo",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

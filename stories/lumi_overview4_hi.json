@@ -1,0 +1,113 @@
+{
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview4-hi",
+ "title": "सब कुछ अपने हाथ में",
+ "post_on": "2027-01-09",
+ "caption": "भाग 4: सब कुछ अपने हाथ में। होम, रिमाइंडर, लॉक किए महीने, किसने क्या बदला, आपका कार्ड और बहुत कुछ।",
+ "linkedin_text": "Part 4 of the ScoreMyBiz tour: Home at a glance, the bell, streak and weekly challenge, reminders in your own words, next moves, locking a finished month, who changed what, the business card, a personal health score and several shops.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "नमस्ते, मैं लूमी हूँ। भाग चार: सब कुछ अपने हाथ में।",
+   "sub": "नमस्ते, मैं लूमी हूँ। भाग चार: सब कुछ अपने हाथ में।",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "होम आपका दिन एक नज़र में दिखाता है।",
+   "sub": "होम आपका दिन एक नज़र में दिखाता है।",
+   "min": 3.5,
+   "screen": "dashboard.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "घंटी में रिमाइंडर, देय के नोट और चेक-इन एक सूची में रहते हैं।",
+   "sub": "घंटी में रिमाइंडर, देय के नोट और चेक-इन एक सूची में रहते हैं।",
+   "min": 3.5,
+   "screen": "notifications.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "होम का एक कार्ड गिनता है कि आप लगातार कितने दिन लिख रहे हैं, और हफ़्ते की एक छोटी चुनौती देता है।",
+   "sub": "होम का एक कार्ड गिनता है कि आप लगातार कितने दिन लिख रहे हैं, और हफ़्ते की एक छोटी चुनौती देता है।",
+   "min": 3.5,
+   "card": "आपका सिलसिला",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "रिमाइंडर अपने शब्दों में लिखिए, और वह तारीख़ वाला काम बन जाता है।",
+   "sub": "रिमाइंडर अपने शब्दों में लिखिए, और वह तारीख़ वाला काम बन जाता है।",
+   "min": 3.5,
+   "screen": "reminders.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "scene",
+   "vo": "स्कोर के बाद तीन से पाँच अगले क़दम मिलते हैं, और हर एक को पूरा चिह्नित कीजिए।",
+   "sub": "स्कोर के बाद तीन से पाँच अगले क़दम मिलते हैं, और हर एक को पूरा चिह्नित कीजिए।",
+   "min": 3.5,
+   "card": "अगले क़दम",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "पूरे हुए महीने को लॉक कीजिए, ताकि कुछ ग़लती से न बदले।",
+   "sub": "पूरे हुए महीने को लॉक कीजिए, ताकि कुछ ग़लती से न बदले।",
+   "min": 3.5,
+   "screen": "book-locks.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "देखिए किसने क्या बदला, और कब।",
+   "sub": "देखिए किसने क्या बदला, और कब।",
+   "min": 3.5,
+   "screen": "book-changes.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "अपना बिज़नेस कार्ड शेयर कीजिए, व्हाट्सएप क्यूआर कोड के साथ।",
+   "sub": "अपना बिज़नेस कार्ड शेयर कीजिए, व्हाट्सएप क्यूआर कोड के साथ।",
+   "min": 3.5,
+   "screen": "business-card.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "अपने निजी पैसों की भी जाँच कीजिए, निजी हेल्थ स्कोर से।",
+   "sub": "अपने निजी पैसों की भी जाँच कीजिए, निजी हेल्थ स्कोर से।",
+   "min": 3.5,
+   "screen": "personal-calculator.png",
+   "pose": "thinking"
+  },
+  {
+   "layout": "scene",
+   "vo": "पाँच दुकानों तक जोड़िए, और हर दुकान की बही अलग रखिए।",
+   "sub": "पाँच दुकानों तक जोड़िए, और हर दुकान की बही अलग रखिए।",
+   "min": 3.5,
+   "card": "कई दुकानें",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

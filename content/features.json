@@ -54,7 +54,9 @@
    "story_hook": "Sara tags her post 'grateful' after a good call with her sister.",
    "safe_wording": "Tag each post with one of eight feelings, and narrow the Wall to a single feeling with one tap.",
    "needs_wording_decision": false,
-   "note": "Do not list the full set in captions: 'lonely' and 'calm' are on the forbidden list. Older builds only have two tags (frustrated, happy)."
+   "note": "Do not list the full set in captions: 'lonely' and 'calm' are on the forbidden list. Older builds only have two tags (frustrated, happy).",
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
   },
   "voice-posts": {
    "name": "Voice posts",
@@ -98,7 +100,9 @@
    "story_hook": "Lena reads a post about a hard week and sends the writer one kind sentence.",
    "safe_wording": "Send the author of a post one short reply of up to 500 characters; the author can read it, report it or block the sender, but cannot answer.",
    "needs_wording_decision": true,
-   "note": "True mechanic: one-way, one message per post, no thread, no way to start a chat, replier sees no read or report status, author cannot see who sent it. The in-app label is 'Reply privately' and the defining promise is 'only they will read this', so a plain caption needs 'private' unless reworded. Server screening of replies is client-side and fails open (known gap). Marketing item wp-reply ('you choose whether to answer') is wrong: the author cannot answer."
+   "note": "True mechanic: one-way, one message per post, no thread, no way to start a chat, replier sees no read or report status, author cannot see who sent it. The in-app label is 'Reply privately' and the defining promise is 'only they will read this', so a plain caption needs 'private' unless reworded. Server screening of replies is client-side and fails open (known gap). Marketing item wp-reply ('you choose whether to answer') is wrong: the author cannot answer.",
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
   },
   "say-thanks": {
    "name": "Say thanks",
@@ -109,7 +113,9 @@
    "story_hook": "After six people react to his post, Dev taps Say thanks before going to sleep.",
    "safe_wording": "Once people have reacted to your post, one tap on Say thanks sends each of them a short thank-you note with no names.",
    "needs_wording_decision": false,
-   "note": "Remembered per post on the phone so it reads 'Thanked' afterwards. Server push text is localised only for English and Hindi."
+   "note": "Remembered per post on the phone so it reads 'Thanked' afterwards. Server push text is localised only for English and Hindi.",
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
   },
   "seen-and-welcome": {
    "name": "Seen count and welcome",
@@ -120,7 +126,9 @@
    "story_hook": "Ola posts for the first time and later sees that dozens of people had it on screen.",
    "safe_wording": "Your own posts show how many other people had them on screen, counted once per person; a first post with no reaction after five minutes gets a welcome note from Waypoint.",
    "needs_wording_decision": false,
-   "note": "Welcome is sent by Waypoint, not by a fake person (welcome_first_posts cron every 5 minutes). Seen counts are batched after 2 seconds of quiet."
+   "note": "Welcome is sent by Waypoint, not by a fake person (welcome_first_posts cron every 5 minutes). Seen counts are batched after 2 seconds of quiet.",
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
   },
   "delete-own-post": {
    "name": "Delete your own post",
@@ -263,7 +271,9 @@
    "story_hook": "Ben has two minutes before a presentation and opens Breathe.",
    "safe_wording": "The Calm kit has three short timed tools: two minutes of box breathing, a five-senses step-through, and a three-minute screen-dimming wind-down.",
    "needs_wording_decision": false,
-   "note": "No account or upload; the only server call is the one-row Lighter/Same log (log_checkin) and the only stored value is the soft-vibration mute. Marketing item wp-calm-kit says it is 'in Waypoint now': true in code, not in any published build yet. 'Calm kit' is the one allowed use of the word calm."
+   "note": "No account or upload; the only server call is the one-row Lighter/Same log (log_checkin) and the only stored value is the soft-vibration mute. Marketing item wp-calm-kit says it is 'in Waypoint now': true in code, not in any published build yet. 'Calm kit' is the one allowed use of the word calm.",
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
   },
   "quick-exit": {
    "name": "Quick exit button",
@@ -274,7 +284,9 @@
    "story_hook": "Tara taps Exit when a colleague walks up behind her desk.",
    "safe_wording": "An optional Exit button closes the app in one tap; on iPhone it shows a plain Notes page, and three quick taps on its title bring Waypoint back.",
    "needs_wording_decision": true,
-   "note": "The mechanics are describable without forbidden words, but the reason it exists (a shared phone or a person nearby) needs words such as 'someone else' or 'private'; the founder should decide how far to explain the purpose. The Notes page is a disguise, nothing is stored or sent."
+   "note": "The mechanics are describable without forbidden words, but the reason it exists (a shared phone or a person nearby) needs words such as 'someone else' or 'private'; the founder should decide how far to explain the purpose. The Notes page is a disguise, nothing is stored or sent.",
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
   },
   "checkins": {
    "name": "Lighter, same, heavier check-in",
@@ -285,7 +297,9 @@
    "story_hook": "After finishing a chat, Omar taps Lighter and goes back to his evening.",
    "safe_wording": "After a post, a chat or a Break Room round, one card asks how you feel now and you tap Lighter, Same or Heavier.",
    "needs_wording_decision": false,
-   "note": "The founder wants to publish an outcome number ('x% felt lighter') from outcome_stats, which only the service role can read. A published percentage is an outcome claim; take care with wording. Screenshot route /mood?checkback=1 shows the card on its own."
+   "note": "The founder wants to publish an outcome number ('x% felt lighter') from outcome_stats, which only the service role can read. A published percentage is an outcome claim; take care with wording. Screenshot route /mood?checkback=1 shows the card on its own.",
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
   },
   "mood-log": {
    "name": "Daily feelings log",
@@ -340,7 +354,9 @@
    "story_hook": "On Saturday at 9 Aisha saves a seat and gets a reminder half an hour before it starts.",
    "safe_wording": "A weekly scheduled hour when more people are in the app: save a seat, get a reminder 30 minutes before, and join with one tap when it starts.",
    "needs_wording_decision": true,
-   "note": "In-app name is 'Listening Night' and the word 'listening' is forbidden in captions. It does not match anyone by itself; it only gathers people so normal matching is likely to find a partner. Tables listening_nights and listening_seats and the cron listening-night-remind are live per the 11 Oct snapshot; no night was scheduled as of the last notes."
+   "note": "In-app name is 'Listening Night' and the word 'listening' is forbidden in captions. It does not match anyone by itself; it only gathers people so normal matching is likely to find a partner. Tables listening_nights and listening_seats and the cron listening-night-remind are live per the 11 Oct snapshot; no night was scheduled as of the last notes.",
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
   },
   "official-carousel": {
    "name": "Official team card",
@@ -351,7 +367,9 @@
    "story_hook": "Ben opens the app and the green card says a new version is out.",
    "safe_wording": "A card at the top of the Wall shows short news from the Waypoint team, up to five messages that rotate on their own.",
    "needs_wording_decision": false,
-   "note": "Pauses while touched, in the background, on another tab, and with Reduce Motion. Five rows were seeded on 11 Oct (update, feedback, safety, Moments, Mira)."
+   "note": "Pauses while touched, in the background, on another tab, and with Reduce Motion. Five rows were seeded on 11 Oct (update, feedback, safety, Moments, Mira).",
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
   },
   "whats-new": {
    "name": "What's New list",
@@ -373,7 +391,9 @@
    "story_hook": "A new user taps a reaction on one of three posts within the first minute.",
    "safe_wording": "New users first see three recent posts and can react with one tap before writing anything.",
    "needs_wording_decision": false,
-   "note": "Screen is skipped when the feed is empty or still loading after 4 seconds. Shows real posts by other people."
+   "note": "Screen is skipped when the feed is empty or still loading after 4 seconds. Shows real posts by other people.",
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
   },
   "reveal": {
    "name": "Name reveal and reminder",
@@ -472,7 +492,9 @@
    "story_hook": "A removed user sees why and sends one appeal.",
    "safe_wording": "If an account is removed, a full-screen notice explains why in one line and lets the person send one appeal.",
    "needs_wording_decision": false,
-   "note": "Device linking (register_device) means a fresh account on the same device is ejected too. Appeals are stored in ban_appeals for the founder to read."
+   "note": "Device linking (register_device) means a fresh account on the same device is ejected too. Appeals are stored in ban_appeals for the founder to read.",
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
   },
   "delete-account": {
    "name": "Delete account and data",
@@ -642,7 +664,9 @@
     "Do not say it is available in his language; the Meta template is English only.",
     "Do not promise it on the Lifetime plan."
    ],
-   "app_route": null
+   "app_route": null,
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: shown only with its limits (plan-gated; appears only when enough similar businesses exist)"
   },
   "money-to-collect": {
    "name": "Money to collect",
@@ -1037,7 +1061,9 @@
     "Averages only; no other business is ever named.",
     "Do not quote a peer average the app does not have; it can be missing."
    ],
-   "app_route": "/result"
+   "app_route": "/result",
+   "show_ok": true,
+   "founder_ok": "17 Oct 2026: shown only with its limits (plan-gated; appears only when enough similar businesses exist)"
   },
   "personal-health-score": {
    "name": "Personal Health Score",

@@ -1,0 +1,113 @@
+{
+ "id": "lumi-overview-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "બધું જ, એક જ મિનિટમાં",
+ "post_on": "2026-11-30",
+ "caption": "ScoreMyBiz તમારી દુકાન માટે જે કરે છે તે બધું એક મિનિટમાં. લુમી અસલી સ્ક્રીન પર મુખ્ય કામો બતાવે છે.",
+ "linkedin_text": "A one-minute tour of ScoreMyBiz on its real screens: writing sales, purchases and spending, who owes you and what you owe, bills and quotations, profit and cash in plain words, a business health score, a what-if simulator, the Advisor, helpers with their own login, and sharing the book with a CA.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય, હું લુમી છું. ScoreMyBiz તમારી દુકાન માટે એક મિનિટમાં આ કરે છે.",
+   "sub": "હાય, હું લુમી છું. ScoreMyBiz તમારી દુકાન માટે એક મિનિટમાં આ કરે છે.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "વેચાણ, ખરીદી અને ખર્ચ સેકન્ડોમાં નોંધો.",
+   "sub": "વેચાણ, ખરીદી અને ખર્ચ સેકન્ડોમાં નોંધો.",
+   "min": 3.5,
+   "screen": "book.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "કોણે પૈસા આપવાના છે તે જુઓ અને WhatsApp પર યાદ કરાવો.",
+   "sub": "કોણે પૈસા આપવાના છે તે જુઓ અને WhatsApp પર યાદ કરાવો.",
+   "min": 3.5,
+   "screen": "cash-flow.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "તમારે કોને આપવાના છે અને આ અઠવાડિયે શું બાકી છે તે જુઓ.",
+   "sub": "તમારે કોને આપવાના છે અને આ અઠવાડિયે શું બાકી છે તે જુઓ.",
+   "min": 3.5,
+   "screen": "payables.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "બિલ અને એસ્ટીમેટ બનાવો અને PDF તરીકે મોકલો.",
+   "sub": "બિલ અને એસ્ટીમેટ બનાવો અને PDF તરીકે મોકલો.",
+   "min": 3.5,
+   "screen": "invoices.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "નફો, રોકડ, અને તમારી પાસે શું છે અને શું દેવું છે, સાદી ભાષામાં.",
+   "sub": "નફો, રોકડ, અને તમારી પાસે શું છે અને શું દેવું છે, સાદી ભાષામાં.",
+   "min": 3.5,
+   "screen": "profit-loss.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "તમારા મજબૂત અને નબળા મુદ્દાઓ સાથે બિઝનેસ હેલ્થ સ્કોર.",
+   "sub": "તમારા મજબૂત અને નબળા મુદ્દાઓ સાથે બિઝનેસ હેલ્થ સ્કોર.",
+   "min": 3.5,
+   "screen": "result.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "તમારા પોતાના આંકડા પર વોટ-ઇફ અજમાવી જુઓ.",
+   "sub": "તમારા પોતાના આંકડા પર વોટ-ઇફ અજમાવી જુઓ.",
+   "min": 3.5,
+   "screen": "business-simulator.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "તમારા મફત મહિનામાં તમારી પોતાની ભાષામાં સલાહકારને પૂછો.",
+   "sub": "તમારા મફત મહિનામાં તમારી પોતાની ભાષામાં સલાહકારને પૂછો.",
+   "min": 3.5,
+   "screen": "advisor.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "મદદનીશોને તેમનું પોતાનું લોગિન આપો.",
+   "sub": "મદદનીશોને તેમનું પોતાનું લોગિન આપો.",
+   "min": 3.5,
+   "screen": "staff.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "અને તમારું ચોપડું તમારા CA સાથે શેર કરો.",
+   "sub": "અને તમારું ચોપડું તમારા CA સાથે શેર કરો.",
+   "min": 3.5,
+   "screen": "export-book.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

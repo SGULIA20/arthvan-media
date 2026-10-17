@@ -1,0 +1,113 @@
+{
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview5-en",
+ "title": "Know more, share more",
+ "post_on": "2026-12-11",
+ "caption": "Part 5: know more and share more. Your score from the book, share pictures, planning tools, languages and your account in ScoreMyBiz.",
+ "linkedin_text": "Part 5 of the ScoreMyBiz tour: a score built from the book itself, sharing your score and your week as pictures, plans for a new shop or more sales, 25 languages, nineteen countries, sign-in with a WhatsApp code, your details and recovery, reporting a problem and downloading or deleting your data.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Hi, I'm Lumi. Part five: know more, and share more.",
+   "sub": "Hi, I'm Lumi. Part five: know more, and share more.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "Once your book has enough entries, your score comes from the book itself.",
+   "sub": "Once your book has enough entries, your score comes from the book itself.",
+   "min": 3.5,
+   "card": "Score from your book",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "Share your score as a picture, when it reaches Healthy.",
+   "sub": "Share your score as a picture, when it reaches Healthy.",
+   "min": 3.5,
+   "screen": "result.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "Share your week as a picture: moves done, and how your score moved.",
+   "sub": "Share your week as a picture: moves done, and how your score moved.",
+   "min": 3.5,
+   "card": "Your week, shared",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "Planning a new shop, or more sales? See profit, payback and cash needed, from your own guesses.",
+   "sub": "Planning a new shop, or more sales? See profit, payback and cash needed, from your own guesses.",
+   "min": 3.5,
+   "card": "Plan a shop",
+   "pose": "thinking"
+  },
+  {
+   "layout": "scene",
+   "vo": "The app speaks 25 languages, and WhatsApp replies follow your choice.",
+   "sub": "The app speaks 25 languages, and WhatsApp replies follow your choice.",
+   "min": 3.5,
+   "card": "25 languages",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "It uses each country's own money, tax words and rates, in nineteen countries.",
+   "sub": "It uses each country's own money, tax words and rates, in nineteen countries.",
+   "min": 3.5,
+   "card": "19 countries",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "scene",
+   "vo": "Sign in with a WhatsApp code. There is no password to remember.",
+   "sub": "Sign in with a WhatsApp code. There is no password to remember.",
+   "min": 3.5,
+   "card": "WhatsApp sign-in",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "Keep your details in one place, change your number, or recover your account.",
+   "sub": "Keep your details in one place, change your number, or recover your account.",
+   "min": 3.5,
+   "card": "Your account",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "Something wrong? Report a problem, and see the reply in the app.",
+   "sub": "Something wrong? Report a problem, and see the reply in the app.",
+   "min": 3.5,
+   "screen": "support.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "Download everything the app holds, or delete your account, from Account.",
+   "sub": "Download everything the app holds, or delete your account, from Account.",
+   "min": 3.5,
+   "card": "Your data",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

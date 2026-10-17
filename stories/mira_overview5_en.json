@@ -1,0 +1,121 @@
+{
+ "app": "waypoint",
+ "lang": "en",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "id": "mira-overview5-en",
+ "title": "What is new in Waypoint",
+ "post_on": "2026-12-08",
+ "caption": "Part 5: the newest updates in Waypoint. Mira shows what is new.",
+ "linkedin_text": "Part 5 of the Waypoint tour, the recent updates: eight feelings on every post, three posts to react to when you join, private replies, saying thanks, seen counts and a welcome for first posts, quiet check-ins, the Calm kit, Quick exit, official messages on the Wall, Listening Night and appeals for removed accounts.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Hi, I'm Mira. Part five: what is new in Waypoint.",
+   "sub": "Hi, I'm Mira. Part five: what is new in Waypoint.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "Every post now carries one of eight feelings, from frustrated to grateful.",
+   "sub": "Every post now carries one of eight feelings, from frustrated to grateful.",
+   "min": 3.5,
+   "screen": "create_typed.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "New here? See three recent posts, and react with one tap.",
+   "sub": "New here? See three recent posts, and react with one tap.",
+   "min": 3.5,
+   "card": "First three",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "Reply privately: one message that only the post's author sees.",
+   "sub": "Reply privately: one message that only the post's author sees.",
+   "min": 3.5,
+   "card": "Reply privately",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "scene",
+   "vo": "Say thanks to everyone who reacted, quietly, with no names.",
+   "sub": "Say thanks to everyone who reacted, quietly, with no names.",
+   "min": 3.5,
+   "card": "Say thanks",
+   "pose": "relieved"
+  },
+  {
+   "layout": "scene",
+   "vo": "A first post nobody has reacted to yet gets a welcome from Waypoint.",
+   "sub": "A first post nobody has reacted to yet gets a welcome from Waypoint.",
+   "min": 3.5,
+   "card": "A warm welcome",
+   "pose": "listening"
+  },
+  {
+   "layout": "scene",
+   "vo": "After you post, a quiet check-in asks: lighter, same or heavier?",
+   "sub": "After you post, a quiet check-in asks: lighter, same or heavier?",
+   "min": 3.5,
+   "card": "Check-in",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "The Calm kit: breathe, ground yourself, or wind down.",
+   "sub": "The Calm kit: breathe, ground yourself, or wind down.",
+   "min": 3.5,
+   "screen": "calm.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "Turn on Quick exit, for a one-tap way out of the app.",
+   "sub": "Turn on Quick exit, for a one-tap way out of the app.",
+   "min": 3.5,
+   "screen": "my-waypoints.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "Official messages from Waypoint rotate at the top of the Wall.",
+   "sub": "Official messages from Waypoint rotate at the top of the Wall.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "Save a seat for a weekly Listening Night, when one is scheduled.",
+   "sub": "Save a seat for a weekly Listening Night, when one is scheduled.",
+   "min": 3.5,
+   "card": "Listening Night",
+   "pose": "relieved"
+  },
+  {
+   "layout": "scene",
+   "vo": "A removed account sees why, and can send an appeal.",
+   "sub": "A removed account sees why, and can send an appeal.",
+   "min": 3.5,
+   "card": "Appeals",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
