@@ -96,10 +96,10 @@
   },
   {
    "layout": "scene",
-   "vo": "Waypoint tells you when a new version is ready, and when you are offline.",
-   "sub": "Waypoint tells you when a new version is ready, and when you are offline.",
+   "vo": "Notifications, update prompts and an offline bar keep you in the loop.",
+   "sub": "Notifications, update prompts and an offline bar keep you in the loop.",
    "min": 3.5,
-   "card": "Stay up to date",
+   "card": "Stay in the loop",
    "pose": "front_neutral"
   },
   {
