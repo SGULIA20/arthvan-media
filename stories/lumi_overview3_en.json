@@ -19,85 +19,85 @@
    "layout": "talk",
    "vo": "Hi, I'm Lumi. Part three: your money, clearly.",
    "sub": "Hi, I'm Lumi. Part three: your money, clearly.",
-   "min": 6,
+   "min": 5,
    "pose": "head_neutral"
   },
   {
    "layout": "present",
-   "vo": "Count your cash and bank, and see what the book expected.",
-   "sub": "Count your cash and bank, and see what the book expected.",
+   "vo": "Count cash and bank against the book.",
+   "sub": "Count cash and bank against the book.",
    "min": 3.5,
    "screen": "money-now.png",
    "pose": "phone"
   },
   {
    "layout": "present",
-   "vo": "A cash book, day by day, with what you started and ended with.",
-   "sub": "A cash book, day by day, with what you started and ended with.",
+   "vo": "A day-by-day cash book, opening to closing.",
+   "sub": "A day-by-day cash book, opening to closing.",
    "min": 3.5,
    "screen": "cash-book.png",
    "pose": "explaining_right"
   },
   {
    "layout": "present",
-   "vo": "Search lists of everything sold, bought and spent, and download them.",
-   "sub": "Search lists of everything sold, bought and spent, and download them.",
+   "vo": "Search and download everything sold, bought and spent.",
+   "sub": "Search and download everything sold, bought and spent.",
    "min": 3.5,
    "screen": "registers.png",
    "pose": "pointing_up"
   },
   {
    "layout": "present",
-   "vo": "What you have and what you owe, on one page.",
-   "sub": "What you have and what you owe, on one page.",
+   "vo": "What you have and owe, on one page.",
+   "sub": "What you have and owe, on one page.",
    "min": 3.5,
    "screen": "balance-sheet.png",
    "pose": "explaining_left"
   },
   {
    "layout": "present",
-   "vo": "Paper profit, set next to the cash you really have.",
-   "sub": "Paper profit, set next to the cash you really have.",
+   "vo": "Paper profit next to your real cash.",
+   "sub": "Paper profit next to your real cash.",
    "min": 3.5,
    "screen": "cash-reality.png",
    "pose": "thinking"
   },
   {
    "layout": "present",
-   "vo": "Make quotations, share them as a PDF, and turn one into a sale in a tap.",
-   "sub": "Make quotations, share them as a PDF, and turn one into a sale in a tap.",
+   "vo": "Send a PDF quotation, then make it a sale.",
+   "sub": "Send a PDF quotation, then make it a sale.",
    "min": 3.5,
    "screen": "quotations.png",
    "pose": "explaining_right"
   },
   {
    "layout": "present",
-   "vo": "Set how your bills are numbered, and what they show.",
-   "sub": "Set how your bills are numbered, and what they show.",
+   "vo": "Choose how your bills are numbered.",
+   "sub": "Choose how your bills are numbered.",
    "min": 3.5,
    "screen": "billing-settings.png",
    "pose": "pointing_up"
   },
   {
    "layout": "present",
-   "vo": "Message today's numbers on WhatsApp, and they are recorded at once.",
-   "sub": "Message today's numbers on WhatsApp, and they are recorded at once.",
+   "vo": "Message today's numbers on WhatsApp; they are recorded.",
+   "sub": "Message today's numbers on WhatsApp; they are recorded.",
    "min": 3.5,
    "screen": "whatsapp-numbers.png",
    "pose": "phone"
   },
   {
    "layout": "present",
-   "vo": "Rent and salary can repeat by themselves, every month.",
-   "sub": "Rent and salary can repeat by themselves, every month.",
+   "vo": "Rent and salary can repeat monthly.",
+   "sub": "Rent and salary can repeat monthly.",
    "min": 3.5,
    "screen": "book.png",
    "pose": "front_happy"
   },
   {
    "layout": "scene",
-   "vo": "Removed something by mistake? An Undo bar waits for five seconds.",
-   "sub": "Removed something by mistake? An Undo bar waits for five seconds.",
+   "vo": "Removed by mistake? Undo waits five seconds.",
+   "sub": "Removed by mistake? Undo waits five seconds.",
    "min": 3.5,
    "card": "Undo",
    "pose": "front_happy"
@@ -105,7 +105,7 @@
   {
    "layout": "end",
    "pose": "front_happy",
-   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "vo": "ScoreMyBiz. Free for thirty days, in many languages.",
    "sub": "",
    "min": 5
   }

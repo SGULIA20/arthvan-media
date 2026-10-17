@@ -19,29 +19,29 @@
    "layout": "talk",
    "vo": "Hi, I'm Mira. Part four: chats, safety and settings.",
    "sub": "Hi, I'm Mira. Part four: chats, safety and settings.",
-   "min": 6,
+   "min": 5,
    "pose": "head_neutral"
   },
   {
    "layout": "scene",
-   "vo": "You must be eighteen, and agree to the Terms and Guidelines.",
-   "sub": "You must be eighteen, and agree to the Terms and Guidelines.",
+   "vo": "Eighteen and over, agreeing to Terms and Guidelines.",
+   "sub": "Eighteen and over, agreeing to Terms and Guidelines.",
    "min": 3.5,
    "card": "18 and over",
    "pose": "front_neutral"
   },
   {
    "layout": "scene",
-   "vo": "A match chat is text only, and lasts thirty minutes.",
-   "sub": "A match chat is text only, and lasts thirty minutes.",
+   "vo": "Match chats are text only, for thirty minutes.",
+   "sub": "Match chats are text only, for thirty minutes.",
    "min": 3.5,
    "card": "30-minute chats",
    "pose": "phone_night"
   },
   {
    "layout": "scene",
-   "vo": "End it after five minutes, or block at any time, and rate it at the end.",
-   "sub": "End it after five minutes, or block at any time, and rate it at the end.",
+   "vo": "End after five minutes, block anytime, rate it.",
+   "sub": "End after five minutes, block anytime, rate it.",
    "min": 3.5,
    "card": "You decide",
    "pose": "relieved"
@@ -56,48 +56,48 @@
   },
   {
    "layout": "scene",
-   "vo": "Posts are screened before they go live. Harassment and hate are refused.",
-   "sub": "Posts are screened before they go live. Harassment and hate are refused.",
+   "vo": "Posts are screened first; harassment and hate are refused.",
+   "sub": "Posts are screened first; harassment and hate are refused.",
    "min": 3.5,
    "card": "Screened first",
    "pose": "listening"
   },
   {
    "layout": "scene",
-   "vo": "If a post sounds like a crisis, you see helplines and a pause first.",
-   "sub": "If a post sounds like a crisis, you see helplines and a pause first.",
+   "vo": "A crisis-sounding post shows helplines and a pause.",
+   "sub": "A crisis-sounding post shows helplines and a pause.",
    "min": 3.5,
    "card": "Before you post",
    "pose": "curious"
   },
   {
    "layout": "present",
-   "vo": "Anything claiming to be Waypoint staff is marked as not official.",
-   "sub": "Anything claiming to be Waypoint staff is marked as not official.",
+   "vo": "Anything posing as Waypoint staff is marked unofficial.",
+   "sub": "Anything posing as Waypoint staff is marked unofficial.",
    "min": 3.5,
    "screen": "wall.png",
    "pose": "listening"
   },
   {
    "layout": "present",
-   "vo": "Settings, help, terms and feedback are all in My Waypoints.",
-   "sub": "Settings, help, terms and feedback are all in My Waypoints.",
+   "vo": "Settings, help, terms and feedback: My Waypoints.",
+   "sub": "Settings, help, terms and feedback: My Waypoints.",
    "min": 3.5,
    "screen": "my-waypoints.png",
    "pose": "relieved"
   },
   {
    "layout": "present",
-   "vo": "You can delete your account and data from the same place.",
-   "sub": "You can delete your account and data from the same place.",
+   "vo": "Delete your account and data from there too.",
+   "sub": "Delete your account and data from there too.",
    "min": 3.5,
    "screen": "invite.png",
    "pose": "curious"
   },
   {
    "layout": "scene",
-   "vo": "Notifications, update prompts and an offline bar keep you in the loop.",
-   "sub": "Notifications, update prompts and an offline bar keep you in the loop.",
+   "vo": "Notifications, update prompts and an offline bar.",
+   "sub": "Notifications, update prompts and an offline bar.",
    "min": 3.5,
    "card": "Stay in the loop",
    "pose": "front_neutral"
@@ -105,7 +105,7 @@
   {
    "layout": "end",
    "pose": "wave",
-   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
    "sub": "",
    "min": 5
   }

@@ -19,7 +19,7 @@
    "layout": "talk",
    "vo": "Hi, I'm Lumi. Part four: stay in control.",
    "sub": "Hi, I'm Lumi. Part four: stay in control.",
-   "min": 6,
+   "min": 5,
    "pose": "head_neutral"
   },
   {
@@ -32,40 +32,40 @@
   },
   {
    "layout": "present",
-   "vo": "The bell keeps reminders, due notes and check-ins in one list.",
-   "sub": "The bell keeps reminders, due notes and check-ins in one list.",
+   "vo": "The bell gathers reminders, due notes and check-ins.",
+   "sub": "The bell gathers reminders, due notes and check-ins.",
    "min": 3.5,
    "screen": "notifications.png",
    "pose": "phone"
   },
   {
    "layout": "scene",
-   "vo": "A Home card counts your days in a row, with a small weekly challenge.",
-   "sub": "A Home card counts your days in a row, with a small weekly challenge.",
+   "vo": "Your streak and a weekly challenge, on Home.",
+   "sub": "Your streak and a weekly challenge, on Home.",
    "min": 3.5,
    "card": "Your streak",
    "pose": "front_happy"
   },
   {
    "layout": "present",
-   "vo": "Type a reminder in your own words, and it becomes a task with a date.",
-   "sub": "Type a reminder in your own words, and it becomes a task with a date.",
+   "vo": "Type a reminder, and it becomes a dated task.",
+   "sub": "Type a reminder, and it becomes a dated task.",
    "min": 3.5,
    "screen": "reminders.png",
    "pose": "pointing_up"
   },
   {
    "layout": "scene",
-   "vo": "After a score, get three to five next moves, and mark each done.",
-   "sub": "After a score, get three to five next moves, and mark each done.",
+   "vo": "Get three to five next moves to tick off.",
+   "sub": "Get three to five next moves to tick off.",
    "min": 3.5,
    "card": "Next moves",
    "pose": "explaining_right"
   },
   {
    "layout": "present",
-   "vo": "Lock a finished month, so nothing changes by accident.",
-   "sub": "Lock a finished month, so nothing changes by accident.",
+   "vo": "Lock a finished month, so nothing shifts.",
+   "sub": "Lock a finished month, so nothing shifts.",
    "min": 3.5,
    "screen": "book-locks.png",
    "pose": "explaining_left"
@@ -88,16 +88,16 @@
   },
   {
    "layout": "present",
-   "vo": "Check your own money too, with a personal health score.",
-   "sub": "Check your own money too, with a personal health score.",
+   "vo": "A personal health score for your own money.",
+   "sub": "A personal health score for your own money.",
    "min": 3.5,
    "screen": "personal-calculator.png",
    "pose": "thinking"
   },
   {
    "layout": "scene",
-   "vo": "Add up to five shops, and keep each shop's book separate.",
-   "sub": "Add up to five shops, and keep each shop's book separate.",
+   "vo": "Up to five shops, each with its own book.",
+   "sub": "Up to five shops, each with its own book.",
    "min": 3.5,
    "card": "Several shops",
    "pose": "explaining_right"
@@ -105,7 +105,7 @@
   {
    "layout": "end",
    "pose": "front_happy",
-   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "vo": "ScoreMyBiz. Free for thirty days, in many languages.",
    "sub": "",
    "min": 5
   }

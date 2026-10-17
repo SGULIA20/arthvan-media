@@ -19,77 +19,77 @@
    "layout": "talk",
    "vo": "Hi, I'm Mira. Part three: everything on the Wall.",
    "sub": "Hi, I'm Mira. Part three: everything on the Wall.",
-   "min": 6,
+   "min": 5,
    "pose": "head_neutral"
   },
   {
    "layout": "present",
-   "vo": "Switch between New, and Top today, this week or this month.",
-   "sub": "Switch between New, and Top today, this week or this month.",
+   "vo": "Pick New, or Top by day, week or month.",
+   "sub": "Pick New, or Top by day, week or month.",
    "min": 3.5,
    "screen": "wall.png",
    "pose": "curious"
   },
   {
    "layout": "present",
-   "vo": "Tap the dice for a surprise post, or search from two letters.",
-   "sub": "Tap the dice for a surprise post, or search from two letters.",
+   "vo": "Roll the dice for a surprise post, or search.",
+   "sub": "Roll the dice for a surprise post, or search.",
    "min": 3.5,
    "screen": "wall.png",
    "pose": "listening"
   },
   {
    "layout": "present",
-   "vo": "Filter the Wall by feeling: frustrated, anxious, lonely and more.",
-   "sub": "Filter the Wall by feeling: frustrated, anxious, lonely and more.",
+   "vo": "Filter the Wall by feeling: anxious, lonely, more.",
+   "sub": "Filter the Wall by feeling: anxious, lonely, more.",
    "min": 3.5,
    "screen": "wall.png",
    "pose": "curious"
   },
   {
    "layout": "scene",
-   "vo": "Tap a reaction under a post, and its author gets a notification.",
-   "sub": "Tap a reaction under a post, and its author gets a notification.",
+   "vo": "React to a post, and its author is notified.",
+   "sub": "React to a post, and its author is notified.",
    "min": 3.5,
    "card": "React",
    "pose": "relieved"
   },
   {
    "layout": "present",
-   "vo": "Not your language? Tap Translate, or turn on Auto-translate.",
-   "sub": "Not your language? Tap Translate, or turn on Auto-translate.",
+   "vo": "Not your language? Tap Translate, or Auto-translate.",
+   "sub": "Not your language? Tap Translate, or Auto-translate.",
    "min": 3.5,
    "screen": "my-waypoints.png",
    "pose": "listening"
   },
   {
    "layout": "present",
-   "vo": "Moments: a picture that one person sees once, then it is gone.",
-   "sub": "Moments: a picture that one person sees once, then it is gone.",
+   "vo": "Moments: a picture one person sees once.",
+   "sub": "Moments: a picture one person sees once.",
    "min": 3.5,
    "screen": "wall.png",
    "pose": "curious"
   },
   {
    "layout": "scene",
-   "vo": "You can delete your own post, and it leaves the Wall at once.",
-   "sub": "You can delete your own post, and it leaves the Wall at once.",
+   "vo": "Delete your own post, and it leaves instantly.",
+   "sub": "Delete your own post, and it leaves instantly.",
    "min": 3.5,
    "card": "Delete anytime",
    "pose": "front_neutral"
   },
   {
    "layout": "scene",
-   "vo": "Share a post, your Break Room score or your Daily Path as a picture.",
-   "sub": "Share a post, your Break Room score or your Daily Path as a picture.",
+   "vo": "Share posts, scores and Daily Paths as pictures.",
+   "sub": "Share posts, scores and Daily Paths as pictures.",
    "min": 3.5,
    "card": "Share",
    "pose": "relieved"
   },
   {
    "layout": "scene",
-   "vo": "Points rank everyone daily on the Leaderboard, with Gold and Silver tiers.",
-   "sub": "Points rank everyone daily on the Leaderboard, with Gold and Silver tiers.",
+   "vo": "Points rank everyone daily, with Gold and Silver tiers.",
+   "sub": "Points rank everyone daily, with Gold and Silver tiers.",
    "min": 3.5,
    "card": "Leaderboard",
    "pose": "front_neutral"
@@ -105,7 +105,7 @@
   {
    "layout": "end",
    "pose": "wave",
-   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
    "sub": "",
    "min": 5
   }
