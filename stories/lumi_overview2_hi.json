@@ -1,0 +1,113 @@
+{
+ "id": "lumi-overview2-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "और भी बहुत कुछ",
+ "post_on": "2027-01-03",
+ "caption": "भाग 2: स्कोर माय बिज़ आपकी दुकान के लिए और क्या-क्या करता है, असली स्क्रीन पर। लूमी बाकी दिखाती है।",
+ "linkedin_text": "Part 2 of the ScoreMyBiz tour on its real screens: today's totals in a hurry, every sale and payment with one customer, items and last prices, asking your numbers on WhatsApp, entries that wait safely when there is no signal, break-even, goals, the score over time, the decision game and the year-end close.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "नमस्ते, मैं लूमी हूँ। भाग दो: स्कोर माय बिज़ आपकी दुकान के लिए और क्या-क्या करता है।",
+   "sub": "नमस्ते, मैं लूमी हूँ। भाग दो: स्कोर माय बिज़ आपकी दुकान के लिए और क्या-क्या करता है।",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "जल्दी में हैं? बस आज के कुल आँकड़े लिखिए।",
+   "sub": "जल्दी में हैं? बस आज के कुल आँकड़े लिखिए।",
+   "min": 3.5,
+   "screen": "daily-update.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "एक ग्राहक के साथ हर बिक्री और भुगतान, क्रम से देखिए।",
+   "sub": "एक ग्राहक के साथ हर बिक्री और भुगतान, क्रम से देखिए।",
+   "min": 3.5,
+   "screen": "customer-history.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "अपने आइटम और आख़िरी दाम तैयार रखिए।",
+   "sub": "अपने आइटम और आख़िरी दाम तैयार रखिए।",
+   "min": 3.5,
+   "screen": "items.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "व्हाट्सएप पर अपने आँकड़े पूछिए।",
+   "sub": "व्हाट्सएप पर अपने आँकड़े पूछिए।",
+   "min": 3.5,
+   "screen": "whatsapp-menu.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "सिग्नल नहीं? एंट्री सुरक्षित रखी रहती है और बाद में चढ़ जाती है।",
+   "sub": "सिग्नल नहीं? एंट्री सुरक्षित रखी रहती है और बाद में चढ़ जाती है।",
+   "min": 3.5,
+   "screen": "offline-entries.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "अपना ब्रेक-ईवन बिंदु ढूँढिए।",
+   "sub": "अपना ब्रेक-ईवन बिंदु ढूँढिए।",
+   "min": 3.5,
+   "screen": "break-even.png",
+   "pose": "thinking"
+  },
+  {
+   "layout": "present",
+   "vo": "तारीख़ों के साथ लक्ष्य तय कीजिए।",
+   "sub": "तारीख़ों के साथ लक्ष्य तय कीजिए।",
+   "min": 3.5,
+   "screen": "goals.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "समय के साथ अपना स्कोर देखिए।",
+   "sub": "समय के साथ अपना स्कोर देखिए।",
+   "min": 3.5,
+   "screen": "score-history.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "बड़े फ़ैसलों का अभ्यास कीजिए, डिसीज़न गेम में।",
+   "sub": "बड़े फ़ैसलों का अभ्यास कीजिए, डिसीज़न गेम में।",
+   "min": 3.5,
+   "screen": "game.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "और साल के अंत में अपनी बही साफ़ बंद कीजिए।",
+   "sub": "और साल के अंत में अपनी बही साफ़ बंद कीजिए।",
+   "min": 3.5,
+   "screen": "year-end.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। अपने कारोबार की सेहत जानिए। तीस दिन मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "id": "mira-overview2-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "वेपॉइंट और भी",
+ "post_on": "2027-01-04",
+ "caption": "भाग 2: वेपॉइंट की और बातें, असली स्क्रीन पर। मीरा बाकी दिखाती है।",
+ "linkedin_text": "Part 2 of the Waypoint tour on its real screens: the Daily Path, matching with one person, chats and Mira, Saved posts, a custom name and avatar, Wrapped, My Waypoints and invites.",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "नमस्ते, मैं मीरा हूँ। भाग दो: वेपॉइंट और क्या-क्या कर सकता है।",
+   "sub": "नमस्ते, मैं मीरा हूँ। भाग दो: वेपॉइंट और क्या-क्या कर सकता है।",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "डेली पाथ: सबके लिए एक सवाल।",
+   "sub": "डेली पाथ: सबके लिए एक सवाल।",
+   "min": 3.5,
+   "screen": "daily-path.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "किसी एक से रास्ता मिलाइए। दो वाक्य, और एक जवाब।",
+   "sub": "किसी एक से रास्ता मिलाइए। दो वाक्य, और एक जवाब।",
+   "min": 3.5,
+   "screen": "matching.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "किसी मैच से, या मीरा से, चैट कीजिए।",
+   "sub": "किसी मैच से, या मीरा से, चैट कीजिए।",
+   "min": 3.5,
+   "screen": "chats.png",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "present",
+   "vo": "किसी पोस्ट पर बुकमार्क लगाइए, और सेव्ड में दोबारा ढूँढ लीजिए।",
+   "sub": "किसी पोस्ट पर बुकमार्क लगाइए, और सेव्ड में दोबारा ढूँढ लीजिए।",
+   "min": 3.5,
+   "screen": "saved.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "आज के लिए अपना नाम और अवतार अपने मन का बनाइए।",
+   "sub": "आज के लिए अपना नाम और अवतार अपने मन का बनाइए।",
+   "min": 3.5,
+   "screen": "customize.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "अपना रैप्ड देखिए: आप कैसे आए।",
+   "sub": "अपना रैप्ड देखिए: आप कैसे आए।",
+   "min": 3.5,
+   "screen": "wrapped.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "आपकी लिखी हर चीज़, मेरे वेपॉइंट्स में।",
+   "sub": "आपकी लिखी हर चीज़, मेरे वेपॉइंट्स में।",
+   "min": 3.5,
+   "screen": "my-waypoints.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "और अपने कोड से किसी दोस्त को बुलाइए।",
+   "sub": "और अपने कोड से किसी दोस्त को बुलाइए।",
+   "min": 3.5,
+   "screen": "invite.png",
+   "pose": "wave"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए। गूगल प्ले पर मुफ़्त, कई भारतीय और अंतरराष्ट्रीय भाषाओं में।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

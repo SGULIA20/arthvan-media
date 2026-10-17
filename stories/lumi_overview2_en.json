@@ -1,0 +1,113 @@
+{
+ "id": "lumi-overview2-en",
+ "app": "scoremybiz",
+ "lang": "en",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "More of everything",
+ "post_on": "2026-12-04",
+ "caption": "Part 2: more of what ScoreMyBiz does for your shop, on the real screens. Lumi shows the rest.",
+ "linkedin_text": "Part 2 of the ScoreMyBiz tour on its real screens: today's totals in a hurry, every sale and payment with one customer, items and last prices, asking your numbers on WhatsApp, entries that wait safely when there is no signal, break-even, goals, the score over time, the decision game and the year-end close.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Hi, I'm Lumi. Part two: more of what ScoreMyBiz does for your shop.",
+   "sub": "Hi, I'm Lumi. Part two: more of what ScoreMyBiz does for your shop.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "In a hurry? Just type today's totals.",
+   "sub": "In a hurry? Just type today's totals.",
+   "min": 3.5,
+   "screen": "daily-update.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "See every sale and payment with one customer, in order.",
+   "sub": "See every sale and payment with one customer, in order.",
+   "min": 3.5,
+   "screen": "customer-history.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "Keep your items and last prices ready.",
+   "sub": "Keep your items and last prices ready.",
+   "min": 3.5,
+   "screen": "items.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "Ask for your numbers on WhatsApp.",
+   "sub": "Ask for your numbers on WhatsApp.",
+   "min": 3.5,
+   "screen": "whatsapp-menu.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "No signal? Entries wait safely and go in later.",
+   "sub": "No signal? Entries wait safely and go in later.",
+   "min": 3.5,
+   "screen": "offline-entries.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "Find your break-even point.",
+   "sub": "Find your break-even point.",
+   "min": 3.5,
+   "screen": "break-even.png",
+   "pose": "thinking"
+  },
+  {
+   "layout": "present",
+   "vo": "Set goals, with dates.",
+   "sub": "Set goals, with dates.",
+   "min": 3.5,
+   "screen": "goals.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "Watch your score over time.",
+   "sub": "Watch your score over time.",
+   "min": 3.5,
+   "screen": "score-history.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "Practise big decisions in the Decision Game.",
+   "sub": "Practise big decisions in the Decision Game.",
+   "min": 3.5,
+   "screen": "game.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "And close the year with a clean book.",
+   "sub": "And close the year with a clean book.",
+   "min": 3.5,
+   "screen": "year-end.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

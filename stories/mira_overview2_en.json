@@ -1,0 +1,97 @@
+{
+ "id": "mira-overview2-en",
+ "app": "waypoint",
+ "lang": "en",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "More of Waypoint",
+ "post_on": "2026-12-05",
+ "caption": "Part 2: more of Waypoint on its real screens. Mira shows the rest.",
+ "linkedin_text": "Part 2 of the Waypoint tour on its real screens: the Daily Path, matching with one person, chats and Mira, Saved posts, a custom name and avatar, Wrapped, My Waypoints and invites.",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "Hi, I'm Mira. Part two: more of what Waypoint can do.",
+   "sub": "Hi, I'm Mira. Part two: more of what Waypoint can do.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "The Daily Path: one question, for everyone.",
+   "sub": "The Daily Path: one question, for everyone.",
+   "min": 3.5,
+   "screen": "daily-path.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "Cross paths with one person. Two sentences, and a reply.",
+   "sub": "Cross paths with one person. Two sentences, and a reply.",
+   "min": 3.5,
+   "screen": "matching.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "Chat with a match, or with Mira.",
+   "sub": "Chat with a match, or with Mira.",
+   "min": 3.5,
+   "screen": "chats.png",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "present",
+   "vo": "Bookmark a post and find it again under Saved.",
+   "sub": "Bookmark a post and find it again under Saved.",
+   "min": 3.5,
+   "screen": "saved.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "Customise your name and avatar for the day.",
+   "sub": "Customise your name and avatar for the day.",
+   "min": 3.5,
+   "screen": "customize.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "See your Wrapped: how you showed up.",
+   "sub": "See your Wrapped: how you showed up.",
+   "min": 3.5,
+   "screen": "wrapped.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "Everything you posted, in My Waypoints.",
+   "sub": "Everything you posted, in My Waypoints.",
+   "min": 3.5,
+   "screen": "my-waypoints.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "And invite a friend with your code.",
+   "sub": "And invite a friend with your code.",
+   "min": 3.5,
+   "screen": "invite.png",
+   "pose": "wave"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
