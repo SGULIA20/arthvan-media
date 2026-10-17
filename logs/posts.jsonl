@@ -47,3 +47,4 @@
 {"date": "2026-10-17", "app": "waypoint", "item": "mira-polls-en", "status": "publishing", "kind": "story", "feature": "polls", "sha": "f1cd2169a1b0a7865ac8c79ae33e80ab9dc09ca6", "at": "2026-10-17T17:13:55+00:00"}
 {"date": "2026-10-17", "app": "waypoint", "item": "mira-polls-en", "status": "published", "kind": "story", "feature": "polls", "sha": "f1cd2169a1b0a7865ac8c79ae33e80ab9dc09ca6", "at": "2026-10-17T17:13:55+00:00", "ids": {"reel": "17992435071061386", "story": "18022927649870385"}}
 {"date": "2026-10-17", "channel": "whatsapp", "item": "mira-polls-en", "status": "published", "id": "de581ae1-e9c4-42f7-9bff-c6c998ee47a6"}
+{"date": "2026-10-17", "channel": "telegram", "item": "mira-polls-en", "status": "published", "id": "73"}
