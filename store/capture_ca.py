@@ -2,7 +2,7 @@
 (lib/agent-auth.js FOUNDER_SAMPLE_AGENT: 'CA Priya Mehta', six sample clients): no real account, no database.
 Needs: app web on :8091 (EXPO_PUBLIC_FOUNDER_KEY=sg2026 npx expo start --web --port 8091) and
        functions on :9999 (FOUNDER_KEY=sg2026 SUPABASE_URL=https://example.supabase.co SUPABASE_SERVICE_ROLE_KEY=dummy netlify functions:serve --port 9999).
-python store/capture_ca.py <outdir> [route,list]"""
+python store/capture_ca.py <outdir> [route,list] [lang]"""
 import json
 import sys
 import urllib.error
@@ -12,6 +12,7 @@ from playwright.sync_api import sync_playwright
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else "."
 ROUTES = sys.argv[2].split(",") if len(sys.argv) > 2 else ["ca-portfolio", "ca-card", "ca-profile"]
+LANG = sys.argv[3] if len(sys.argv) > 3 else "en"
 BASE, LOCAL, KEY = "http://localhost:8091", "http://localhost:9999/.netlify/functions/", "sg2026"
 CA_SESSION = {"phone": "919999999999", "agentSessionToken": "sample", "name": "CA Priya Mehta",
               "firmName": "Mehta & Associates, Chartered Accountants", "agentType": "ca"}
@@ -44,7 +45,7 @@ def handle(route, req):
 with sync_playwright() as p:
     b = p.chromium.launch()
     ctx = b.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=3, is_mobile=True, has_touch=True, locale="en-IN", timezone_id="Asia/Kolkata")
-    ctx.add_init_script("try{localStorage.setItem('smb_ca_session', %s); localStorage.setItem('smb_lang','en'); localStorage.setItem('smb_country','IN');}catch(e){}" % json.dumps(json.dumps(CA_SESSION)))
+    ctx.add_init_script("try{localStorage.setItem('smb_ca_session', %s); localStorage.setItem('smb_lang','%s'); localStorage.setItem('smb_country','IN');}catch(e){}" % (json.dumps(json.dumps(CA_SESSION)), LANG))
     ctx.route("https://scoremybiz.com/.netlify/functions/**", handle)
     pg = ctx.new_page()
     for r in ROUTES:
