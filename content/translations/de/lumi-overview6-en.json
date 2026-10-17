@@ -1,0 +1,53 @@
+{
+ "title": "Clevere Extras und Gratis-Tools",
+ "caption": "Teil 6: clevere Extras und Gratis-Tools. Foto- und Spracheingabe, Risikowarnungen, Entscheidungspraxis, Anstöße, Druckbögen und Rechner für ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Lumi. Teil sechs: clevere Extras und Gratis-Tools."
+  },
+  {
+   "vo": "Rechnung oder Notiz fotografieren, prüfen, speichern.",
+   "card": "Foto-Eingabe"
+  },
+  {
+   "vo": "Einen Satz sagen, wie zwei Tausend an Raju verkauft.",
+   "card": "Sprach-Eingabe"
+  },
+  {
+   "vo": "Kunden mit einem Tipp auf WhatsApp erinnern."
+  },
+  {
+   "vo": "Die Risikowarnungen hinter Ihrem Score öffnen.",
+   "card": "Risikowarnungen"
+  },
+  {
+   "vo": "Drei Entscheidungen üben und den Score ändern sehen.",
+   "card": "Entscheidungs-Praxis"
+  },
+  {
+   "vo": "Mit ähnlichen Betrieben vergleichen, wenn genug da sind.",
+   "card": "Vergleichen"
+  },
+  {
+   "vo": "Zwei ruhige Tage? Sie bekommen mal einen WhatsApp-Stups.",
+   "card": "Ein ruhiger Stups"
+  },
+  {
+   "vo": "Gratis Tagesblatt drucken, dann ein Foto senden.",
+   "card": "Tagesblatt"
+  },
+  {
+   "vo": "Auf der Website: Gratis-Rechner und Angebotsposter.",
+   "card": "Gratis Website-Tools"
+  },
+  {
+   "vo": "Ihren Link teilen, um einen Freund einzuladen.",
+   "card": "Einen Freund einladen"
+  },
+  {
+   "vo": "ScoreMyBiz. Dreißig Tage gratis, in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-11"
+}

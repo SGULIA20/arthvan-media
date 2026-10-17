@@ -1,0 +1,45 @@
+{
+ "title": "Pesa yako, wazi",
+ "caption": "Sehemu ya 3: pesa yako, wazi. Skrini za pesa za ScoreMyBiz, zikionyeshwa kwenye programu halisi.",
+ "scenes": [
+  {
+   "vo": "Hujambo, mimi ni Lumi. Sehemu ya tatu: pesa yako, wazi."
+  },
+  {
+   "vo": "Hesabu pesa na benki dhidi ya kitabu."
+  },
+  {
+   "vo": "Kitabu cha pesa cha kila siku, kuanzia mwanzo hadi mwisho."
+  },
+  {
+   "vo": "Tafuta na upakue kila kitu kilichouzwa, kilichonunuliwa na kilichotumika."
+  },
+  {
+   "vo": "Ulichonacho na unachodaiwa, kwenye ukurasa mmoja."
+  },
+  {
+   "vo": "Faida ya karatasi kando ya pesa yako halisi."
+  },
+  {
+   "vo": "Tuma nukuu ya PDF, kisha uifanye mauzo."
+  },
+  {
+   "vo": "Chagua jinsi bili zako zinavyopewa namba."
+  },
+  {
+   "vo": "Tuma namba za leo kupitia WhatsApp; zinarekodiwa."
+  },
+  {
+   "vo": "Kodi na mshahara vinaweza kujirudia kila mwezi."
+  },
+  {
+   "vo": "Umeondoa kwa makosa? Tendua inasubiri sekunde tano.",
+   "card": "Tendua"
+  },
+  {
+   "vo": "ScoreMyBiz. Bure kwa siku thelathini, kwa lugha nyingi."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-08"
+}

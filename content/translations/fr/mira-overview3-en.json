@@ -1,0 +1,48 @@
+{
+ "title": "Tout sur le Mur",
+ "caption": "Partie 3 : tout ce qu'on peut faire sur le Mur Waypoint, sur les vrais écrans. Mira vous montre.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Mira. Partie trois : tout sur le Mur."
+  },
+  {
+   "vo": "Choisissez Nouveau, ou Top par jour, semaine ou mois."
+  },
+  {
+   "vo": "Lancez les dés pour un post surprise, ou cherchez."
+  },
+  {
+   "vo": "Filtrez le Mur par humeur : anxieux, seul, et plus."
+  },
+  {
+   "vo": "Réagissez à un post, et son auteur est prévenu.",
+   "card": "Réagir"
+  },
+  {
+   "vo": "Pas votre langue ? Appuyez sur Traduire ou Auto."
+  },
+  {
+   "vo": "Moments : une photo qu'une personne voit une fois."
+  },
+  {
+   "vo": "Supprimez votre post, et il part instantanément.",
+   "card": "Supprimer"
+  },
+  {
+   "vo": "Partagez posts, scores et Chemins en images.",
+   "card": "Partager"
+  },
+  {
+   "vo": "Les points classent tout le monde, avec Or et Argent.",
+   "card": "Classement"
+  },
+  {
+   "vo": "Et Nouveautés vous dit ce qui a changé."
+  },
+  {
+   "vo": "Waypoint. Dites-le une fois. Gratuit sur Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-05"
+}

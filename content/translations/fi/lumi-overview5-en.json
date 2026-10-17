@@ -1,0 +1,52 @@
+{
+ "title": "Tiedä enemmän, jaa enemmän",
+ "caption": "Osa 5: tiedä enemmän ja jaa enemmän. Kirjan pisteesi, jaa kuvia, suunnittelutyökalut, kielet ja tilisi ScoreMyBizissä.",
+ "scenes": [
+  {
+   "vo": "Moi, minä olen Lumi. Osa viisi: tiedä enemmän, jaa enemmän."
+  },
+  {
+   "vo": "Tarpeeksi merkintöjä? Pisteesi tulevat nyt kirjastasi.",
+   "card": "Pisteet kirjastasi"
+  },
+  {
+   "vo": "Healthy-sovelluksessa voit jakaa pisteesi kuvana."
+  },
+  {
+   "vo": "Jaa myös viikkosi kuvana.",
+   "card": "Viikkosi jaettuna"
+  },
+  {
+   "vo": "Suunnittele kauppa: voitto, takaisinmaksu, tarvittava raha.",
+   "card": "Suunnittele kauppa"
+  },
+  {
+   "vo": "25 kieltä, ja WhatsApp-vastaukset seuraavat valintaasi.",
+   "card": "25 kieltä"
+  },
+  {
+   "vo": "Paikalliset raha- ja verosanat yhdeksässätoista maassa.",
+   "card": "19 maata"
+  },
+  {
+   "vo": "Kirjaudu sisään WhatsApp-koodilla. Ei salasanaa.",
+   "card": "WhatsApp-kirjautuminen"
+  },
+  {
+   "vo": "Muokkaa tietoja, vaihda numero tai palauta tilisi.",
+   "card": "Sinun tilisi"
+  },
+  {
+   "vo": "Ilmoita ongelmasta ja katso vastaus tästä."
+  },
+  {
+   "vo": "Lataa tietosi tai poista tilisi.",
+   "card": "Sinun tietosi"
+  },
+  {
+   "vo": "ScoreMyBiz. Ilmainen kolmekymmentä päivää, monella kielellä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-10"
+}

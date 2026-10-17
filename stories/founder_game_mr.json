@@ -1,0 +1,78 @@
+{
+ "id": "founder-game-mr",
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "founder_suit",
+ "feature": "decision-game",
+ "title": "सराव",
+ "post_on": "2026-12-05",
+ "caption": "तो त्याच्या दुकानात हुशार आहे आणि पुढच्या मोठ्या निर्णयाबद्दल साशंक आहे. बिलाल आधी सराव करतो. संस्थापक त्याची गोष्ट सांगतो.",
+ "linkedin_text": "Every shop owner has a big decision coming and one chance to get it right.\n\nScoreMyBiz has a Business Decision Game: pick the type of business closest to yours and make fourteen days of choices, from buying stock to hiring, and see how each one plays out. It is practice, not advice. The founder character tells Bilal's story; every screen is the real app.",
+ "hashtags": [
+  "#DecisionGame",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "bilal": "Bilal, a young Indian electronics shop owner with a trimmed beard, a grey t-shirt and a shop apron"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a bright electronics shop with phones and gadgets on shelves behind him, an easy smile.",
+   "vo": "हाय. ही बिलालची गोष्ट आहे. तो त्याच्या दुकानात हुशार आहे, आणि पुढच्या मोठ्या निर्णयाबद्दल साशंक आहे.",
+   "sub": "हाय. ही बिलालची गोष्ट आहे. तो त्याच्या दुकानात हुशार आहे, आणि पुढच्या मोठ्या निर्णयाबद्दल साशंक आहे.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Practice"
+  },
+  {
+   "layout": "clip",
+   "clip": "{bilal} sitting behind the counter of his electronics shop at closing, a stack of boxes in front of him, wondering, afternoon light.",
+   "vo": "गेल्या दिवाळीत जास्त माल खरेदी केला असता तर काय झाले असते, असा विचार तो करतो.",
+   "sub": "गेल्या दिवाळीत जास्त माल खरेदी केला असता तर काय झाले असते, असा विचार तो करतो.",
+   "min": 8,
+   "card": "काय झाले असते?"
+  },
+  {
+   "layout": "clip",
+   "clip": "{bilal} tapping his phone at the shop counter with curiosity, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz कडे एक बिझनेस डिसीजन गेम आहे. तो त्याच्या स्वतःच्या व्यवसायासारखाच व्यवसाय निवडतो.",
+   "sub": "ScoreMyBiz कडे एक बिझनेस डिसीजन गेम आहे. तो त्याच्या स्वतःच्या व्यवसायासारखाच व्यवसाय निवडतो.",
+   "min": 8,
+   "screen": "game.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{bilal} leaning in over his phone with a serious focused look, gadgets glowing behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "प्रत्येक फेरीत त्याच्यासमोर एक खरा पर्याय येतो: माल खरेदी करणे, कामावर ठेवणे, परत करणे, खर्च करणे.",
+   "sub": "प्रत्येक फेरीत त्याच्यासमोर एक खरा पर्याय येतो: माल खरेदी करणे, कामावर ठेवणे, परत करणे, खर्च करणे.",
+   "min": 8,
+   "screen": "game.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{bilal} laughing at his phone after a round, a customer chatting beside him at the counter, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "चौदा दिवसांचे पर्याय, आणि प्रत्येक निर्णय कसा ठरतो ते त्याला दिसते.",
+   "sub": "चौदा दिवसांचे पर्याय, आणि प्रत्येक निर्णय कसा ठरतो ते त्याला दिसते.",
+   "min": 8,
+   "screen": "game.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{bilal} standing at his shop entrance in the evening with arms crossed and a confident smile, the shutters half up.",
+   "vo": "हा सराव आहे, सल्ला नाही. आणि हा वापरण्यासाठी मोफत आहे.",
+   "sub": "हा सराव आहे, सल्ला नाही. आणि हा वापरण्यासाठी मोफत आहे.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत जाणून घ्या. तीस दिवस मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

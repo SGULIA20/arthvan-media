@@ -1,0 +1,83 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "id": "lumi-countnow-gu",
+ "character": "lumi",
+ "feature": "money-now",
+ "title": "દراز મied છે કે નહીં",
+ "post_on": "2026-12-14",
+ "caption": "દુકાન બંધ કરતી વખતે રેખા હિસાબ કરે છે. હિસાબ ચોખ્ખો છે? લુમી પોતાની વાત કહે છે.",
+ "linkedin_text": "Money I have right now in ScoreMyBiz: count the cash, the bank and the stock, see what the book expected and the gap. A gap usually means an entry was missed. What you type becomes the new starting point.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#CashInHand"
+ ],
+ "cast": {
+  "rekha": "Rekha, a middle-aged Indian woman who runs a sweet shop, in an orange cotton saree with a small red bindi"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a sweet shop with trays of colourful sweets behind her, a warm smile.",
+   "vo": "હાય, હું લુમી છું. આ રેખાની વાત છે. દુકાન બંધ કરતી વખતે તે ગલ્લાના પૈસા ગણે છે અને વિચારે છે કે હિસાબ સરખો છે કે નહીં.",
+   "sub": "હાય, હું લુમી છું. આ રેખાની વાત છે. દુકાન બંધ કરતી વખતે તે ગલ્લાના પૈસા ગણે છે અને વિચારે છે કે હિસાબ સરખો છે કે નહીં.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Does the drawer agree",
+   "card": "ગલ્લાના પૈસા ગણે છે"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} counting rupee notes at her sweet shop counter at closing time, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "નોટો એક થપ્પીમાં, સિક્કા બીજી થપ્પીમાં. તે બે વાર ગણે છે.",
+   "sub": "નોટો એક થપ્પીમાં, સિક્કા બીજી થપ્પીમાં. તે બે વાર ગણે છે.",
+   "min": 8,
+   "card": "બે વાર ગણે છે"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} opening an app on her phone with curiosity, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં તે 'મારી પાસે અત્યારે કેટલા પૈસા છે' ખોલે છે, અને ગલ્લા, બેંક તથા માલના પૈસા લખે છે.",
+   "sub": "ScoreMyBiz માં તે 'મારી પાસે અત્યારે કેટલા પૈસા છે' ખોલે છે, અને ગલ્લા, બેંક તથા માલના પૈસા લખે છે.",
+   "min": 8,
+   "screen": "money-now.png",
+   "card": "ScoreMyBiz"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} looking at her phone screen, thinking, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "એપ બતાવે છે કે હિસાબમાં કેટલા હોવા જોઈએ, અને બંને વચ્ચે કેટલો ફરક છે.",
+   "sub": "એપ બતાવે છે કે હિસાબમાં કેટલા હોવા જોઈએ, અને બંને વચ્ચે કેટલો ફરક છે.",
+   "min": 8,
+   "screen": "money-now.png",
+   "card": "કેટલો ફરક છે?"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} nodding with a reassured smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ફરકનો મતલબ કે કોઈ એન્ટ્રી રહી ગઈ છે, કંઈ ખોટું થયું એવું નથી.",
+   "sub": "ફરકનો મતલબ કે કોઈ એન્ટ્રી રહી ગઈ છે, કંઈ ખોટું થયું એવું નથી.",
+   "min": 8,
+   "card": "કોઈ એન્ટ્રી રહી ગઈ"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} closing the shutter of her sweet shop with a calm smile, evening lights behind her.",
+   "vo": "તેણે જે લખ્યું એ હવે નવી શરૂઆત બનશે.",
+   "sub": "તેણે જે લખ્યું એ હવે નવી શરૂઆત બનશે.",
+   "min": 8,
+   "card": "નવી શરૂઆત"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. ધંધાની તબियत જાણો. ત્રીસ દિવસ મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5,
+   "card": "30 દિવસ મફત"
+  }
+ ]
+}

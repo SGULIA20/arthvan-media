@@ -1,0 +1,53 @@
+{
+ "title": "Extra utili e strumenti gratis",
+ "caption": "Parte 6: extra utili e strumenti gratis. Inserimento foto e voce, segnali di rischio, pratica decisionale, promemoria, fogli stampabili e calcolatori per ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Ciao, sono Lumi. Parte sesta: extra utili e strumenti gratis."
+  },
+  {
+   "vo": "Fotografa una bolletta o un foglio, controlla, salva.",
+   "card": "Inserimento foto"
+  },
+  {
+   "vo": "Di' una frase, tipo venduto duemila a Marco.",
+   "card": "Inserimento voce"
+  },
+  {
+   "vo": "Ricorda a un cliente con un solo tap, su WhatsApp."
+  },
+  {
+   "vo": "Apri i segnali di rischio dietro al tuo punteggio.",
+   "card": "Segnali di rischio"
+  },
+  {
+   "vo": "Prova tre decisioni e guarda il tuo punteggio cambiare.",
+   "card": "Pratica decisionale"
+  },
+  {
+   "vo": "Confrontati con aziende simili, quando ce ne sono abbastanza.",
+   "card": "Confronta"
+  },
+  {
+   "vo": "Due giorni tranquilli? Ricevi un promemoria su WhatsApp.",
+   "card": "Un piccolo promemoria"
+  },
+  {
+   "vo": "Stampa un foglio giornaliero gratis, poi manda una foto.",
+   "card": "Foglio giornaliero"
+  },
+  {
+   "vo": "Sul sito web: calcolatori gratis e poster di offerte.",
+   "card": "Strumenti web gratis"
+  },
+  {
+   "vo": "Condividi il tuo link per invitare un amico.",
+   "card": "Invita un amico"
+  },
+  {
+   "vo": "ScoreMyBiz. Gratis per trenta giorni, in tante lingue."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-11"
+}

@@ -1,0 +1,27 @@
+{
+ "title": "Intialle: enemmän käyttöön",
+ "caption": "Osa 7, Intialle: tuet ja sää, yritysverkosto ja tilintarkastajasi asiakirjat ScoreMyBizissä.",
+ "scenes": [
+  {
+   "vo": "Moi, olen Lumi. Osa seitsemän, Intialle: enemmän käyttöön."
+  },
+  {
+   "vo": "Neljän päivän säävaroitus ja valtion tuet, jotka voivat sopia sinulle."
+  },
+  {
+   "vo": "Yritysverkosto: yksi rivi tavoittaa lähellä olevat yritykset."
+  },
+  {
+   "vo": "Ja asiakirjat, jotka tilintarkastajasi lataa sinulle Omat asiakirjat -osioon."
+  },
+  {
+   "vo": "Tilintarkastajasi voi myös lukita valmiin kuukauden, kun olette sopineet.",
+   "card": "Tilintarkastajasi kanssa"
+  },
+  {
+   "vo": "ScoreMyBiz. Tunne yrityksesi tila. Ilmainen 30 päivää, monilla kielillä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-12"
+}

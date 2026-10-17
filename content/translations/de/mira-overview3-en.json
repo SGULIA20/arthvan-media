@@ -1,0 +1,48 @@
+{
+ "title": "Alles an der Wand",
+ "caption": "Teil 3: Was man alles an der Waypoint-Wand auf echten Bildschirmen machen kann. Mira zeigt es.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Mira. Teil drei: Alles an der Wand."
+  },
+  {
+   "vo": "Wähle Neu oder Top nach Tag, Woche oder Monat."
+  },
+  {
+   "vo": "Würfle für einen Überraschungs-Post oder suche."
+  },
+  {
+   "vo": "Filtere die Wand nach Gefühl: ängstlich, einsam, mehr."
+  },
+  {
+   "vo": "Reagiere auf einen Post, der Autor wird benachrichtigt.",
+   "card": "Reagieren"
+  },
+  {
+   "vo": "Nicht deine Sprache? Tippe auf Übersetzen oder Auto."
+  },
+  {
+   "vo": "Momente: ein Bild, das jemand einmal sieht."
+  },
+  {
+   "vo": "Lösche deinen eigenen Post, er verschwindet sofort.",
+   "card": "Jederzeit löschen"
+  },
+  {
+   "vo": "Teile Posts, Punkte und Daily Paths als Bilder.",
+   "card": "Teilen"
+  },
+  {
+   "vo": "Punkte ordnen alle täglich ein, mit Gold- und Silber-Rängen.",
+   "card": "Bestenliste"
+  },
+  {
+   "vo": "Und Was ist neu sagt dir, was sich geändert hat."
+  },
+  {
+   "vo": "Waypoint. Sag es einmal. Kostenlos bei Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-05"
+}

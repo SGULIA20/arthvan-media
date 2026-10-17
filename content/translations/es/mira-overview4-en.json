@@ -1,0 +1,51 @@
+{
+ "title": "Chats, seguridad y ajustes",
+ "caption": "Parte 4: chats, seguridad y ajustes en Waypoint. Mira muestra cómo protege a las personas.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Mira. Parte cuatro: chats, seguridad y ajustes."
+  },
+  {
+   "vo": "Dieciocho o más, aceptando normas y condiciones.",
+   "card": "Más de 18"
+  },
+  {
+   "vo": "Los chats de coincidencia son solo de texto, por treinta minutos.",
+   "card": "Chats de 30 min"
+  },
+  {
+   "vo": "Terminan en cinco minutos, bloquéalos cuando quieras, califícalo.",
+   "card": "Tú decides"
+  },
+  {
+   "vo": "Denuncia o bloquea cualquier publicación, mensaje o Momento.",
+   "card": "Denunciar y bloquear"
+  },
+  {
+   "vo": "Las publicaciones se filtran antes; el acoso y el odio se rechazan.",
+   "card": "Filtradas primero"
+  },
+  {
+   "vo": "Una publicación de crisis muestra líneas de ayuda y una pausa.",
+   "card": "Antes de publicar"
+  },
+  {
+   "vo": "Todo lo que se haga pasar por personal de Waypoint se marca como no oficial."
+  },
+  {
+   "vo": "Ajustes, ayuda, términos y comentarios: Mis Waypoints."
+  },
+  {
+   "vo": "Borra tu cuenta y tus datos desde ahí también."
+  },
+  {
+   "vo": "Notificaciones, avisos de actualización y una barra sin conexión.",
+   "card": "Mantente al tanto"
+  },
+  {
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-06"
+}

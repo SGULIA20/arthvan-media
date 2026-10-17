@@ -1,0 +1,31 @@
+{
+ "title": "Zwei Minuten.",
+ "caption": "Zwei Minuten. Kein Konto, nichts wird gespeichert. Mira zeigt das Calm-Kit in Waypoint.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Mira. Das ist Priyas Geschichte. Ihr Tag läuft nach Plan. Ihre Abende nicht."
+  },
+  {
+   "vo": "Manchmal will sie einfach zwei Minuten, die nur ihr gehören.",
+   "card": "Später Abend"
+  },
+  {
+   "vo": "Waypoint hat jetzt ein Calm-Kit. Atmen. Ankommen. Runterkommen. Je zwei Minuten, kein Konto, nichts wird gespeichert.",
+   "card": ""
+  },
+  {
+   "vo": "Dann der Daily Path, eine Frage für alle. Sie beantwortet sie heute langsamer.",
+   "card": ""
+  },
+  {
+   "vo": "Und an der Wall hatte noch jemand so einen Abend.",
+   "card": ""
+  },
+  {
+   "vo": "Waypoint. Zwei Minuten, die dir gehören. Kostenlos bei Google Play.",
+   "card": ""
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-16"
+}

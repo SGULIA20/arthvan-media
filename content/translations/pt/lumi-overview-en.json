@@ -1,42 +1,42 @@
 {
  "title": "Tudo em um minuto",
- "caption": "Tudo o que o ScoreMyBiz faz para a sua loja, em um minuto. A Lumi mostra as coisas principais nas telas de verdade.",
+ "caption": "Tudo o que o ScoreMyBiz faz pela sua loja, em um minuto. A Lumi mostra as principais telas.",
  "scenes": [
   {
-   "vo": "Oi, sou a Lumi. Veja o que o ScoreMyBiz faz pela sua loja em um minuto."
+   "vo": "Oi, sou a Lumi. Aqui está o ScoreMyBiz, em um minuto."
   },
   {
    "vo": "Anote vendas, compras e gastos em segundos."
   },
   {
-   "vo": "Veja quem te deve e avise pelo WhatsApp."
+   "vo": "Veja quem te deve, e cobre pelo WhatsApp."
   },
   {
-   "vo": "Veja o que você deve e o que vence nesta semana."
+   "vo": "Veja o que você deve, e o que vence esta semana."
   },
   {
-   "vo": "Faça contas e orçamentos e mande em PDF."
+   "vo": "Faça recibos e orçamentos, e mande em PDF."
   },
   {
-   "vo": "Lucro, caixa e o que você tem e deve, em palavras simples."
+   "vo": "Lucro, caixa e o balanço, em palavras simples."
   },
   {
-   "vo": "Uma nota de saúde do negócio, com seus pontos fortes e fracos."
+   "vo": "Uma nota de saúde do negócio, com seus pontos fortes."
   },
   {
-   "vo": "Faça uma simulação com os seus números."
+   "vo": "Teste cenários com os seus próprios números."
   },
   {
-   "vo": "Pergunte ao Consultor no seu idioma, no seu mês grátis."
+   "vo": "Pergunte ao Assessor no seu idioma, no mês grátis."
   },
   {
-   "vo": "Dê aos ajudantes o acesso deles."
+   "vo": "Dê aos ajudantes o login deles."
   },
   {
-   "vo": "E compartilhe seu livro com o seu CA."
+   "vo": "E compartilhe seus livros com o seu CA."
   },
   {
-   "vo": "ScoreMyBiz. Conheça a saúde do seu negócio. Grátis por trinta dias, em vários idiomas."
+   "vo": "ScoreMyBiz. Grátis por trinta dias, em vários idiomas."
   }
  ],
  "machine_translated": true,

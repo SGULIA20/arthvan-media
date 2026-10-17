@@ -1,0 +1,77 @@
+{
+ "id": "lumi-daily-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "feature": "daily-totals-update",
+ "title": "દુકાન બંધ થવાના એક મિનિટ પહેલાં",
+ "post_on": "2026-12-03",
+ "caption": "તે નવ વાગ્યે દુકાન બંધ કરે છે અને આઠ વાગ્યે જ થાકી જાય છે. અનીતા ચાર ખાનાં વાપરે છે. લુમી તેની વાત કહે છે.",
+ "linkedin_text": "At closing time, itemising a day of sales is a job for someone with more energy.\n\nScoreMyBiz has Today's Business Update: sales, spending, cash in hand and bank, in one minute at the counter. If the day is already itemised, the totals are not counted twice. Lumi tells Anita's story; every screen is the real app.",
+ "hashtags": [
+  "#DailyUpdate",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "anita": "Anita, an Indian woman in her thirties who runs a boutique, in a mustard kurta with silver earrings and a tired friendly smile"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small boutique with clothes on racks behind her, a warm tired smile.",
+   "vo": "હાય, હું લુમી છું. આ અનીતાની વાત છે. એની બુટિક નવ વાગ્યે બંધ થાય, ને એ આઠ વાગ્યે જ થાકી જાય.",
+   "sub": "હાય, હું લુમી છું. આ અનીતાની વાત છે. એની બુટિક નવ વાગ્યે બંધ થાય, ને એ આઠ વાગ્યે જ થાકી જાય.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "One minute at closing"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} behind the counter of her boutique near closing time, rubbing her eyes, a heap of receipts beside the till, warm lamp light.",
+   "vo": "દરેક વેચાણની નોંધ રાખવી એ તો વધારે શક્તિ વાળાનું કામ છે.",
+   "sub": "દરેક વેચાણની નોંધ રાખવી એ તો વધારે શક્તિ વાળાનું કામ છે.",
+   "min": 8,
+   "card": "રાતના નવ વાગ્યા"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} at the boutique counter tapping her phone, a small relieved smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં એ ફક્ત ચાર જ ચીજો ભરે છે: વેચાણ, ખર્ચ, હાથ પર રોકડા અને બેંક.",
+   "sub": "ScoreMyBiz માં એ ફક્ત ચાર જ ચીજો ભરે છે: વેચાણ, ખર્ચ, હાથ પર રોકડા અને બેંક.",
+   "min": 8,
+   "screen": "daily-update.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} finishing on her phone with a quick nod as a mannequin stands behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "કાઉન્ટર પર એક મિનિટ, ને દિવસ પૂરો.",
+   "sub": "કાઉન્ટર પર એક મિનિટ, ને દિવસ પૂરો.",
+   "min": 8,
+   "screen": "daily-update.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} pulling down the boutique shutter at night with a content smile, a bag over her shoulder, warm street light.",
+   "vo": "જો દિવસનો હિસાબ પહેલેથી જ લખાઈ ગયો હોય, તો સરવાળા બે વાર નથી ગણાતા.",
+   "sub": "જો દિવસનો હિસાબ પહેલેથી જ લખાઈ ગયો હોય, તો સરવાળા બે વાર નથી ગણાતા.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} walking home on an evening street, relaxed, humming, the city lights soft behind her.",
+   "vo": "ચોપડો અપ-ટુ-ડેટ છે, ને એ પણ.",
+   "sub": "ચોપડો અપ-ટુ-ડેટ છે, ને એ પણ.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ માટે મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

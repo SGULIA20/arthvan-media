@@ -1,0 +1,47 @@
+{
+ "title": "Pysy kartalla",
+ "caption": "Osa 4: pysy kartalla. Kotinäkymä, muistutukset, lukitut kuukaudet, kuka muutti mitäkin, korttisi ja paljon muuta ScoreMyBizissä.",
+ "scenes": [
+  {
+   "vo": "Hei, mä olen Lumi. Osa neljä: pysy kartalla."
+  },
+  {
+   "vo": "Kotinäkymästä näet päiväsi yhdellä silmäyksellä."
+  },
+  {
+   "vo": "Kello kerää muistutukset, eräpäivät ja tarkistukset."
+  },
+  {
+   "vo": "Putkesi ja viikon haaste ovat kotona.",
+   "card": "Putkesi"
+  },
+  {
+   "vo": "Kirjoita muistutukseksi päivätty tehtävä."
+  },
+  {
+   "vo": "Saat kolmesta viiteen seuraavaa siirtoa ruksattavaksi.",
+   "card": "Seuraavat siirrot"
+  },
+  {
+   "vo": "Lukitse valmis kuukausi, niin mikään ei muutu."
+  },
+  {
+   "vo": "Katso kuka muutti mitäkin ja milloin."
+  },
+  {
+   "vo": "Jaa käyntikorttisi WhatsApp-QR-koodilla."
+  },
+  {
+   "vo": "Henkilökohtainen terveystulos omille rahoillesi."
+  },
+  {
+   "vo": "Enintään viisi puotia, joilla kullakin on oma kirja.",
+   "card": "Useita puoteja"
+  },
+  {
+   "vo": "ScoreMyBiz. Ilmainen kolmekymmentä päivää, monella kielellä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-09"
+}

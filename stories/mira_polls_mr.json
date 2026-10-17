@@ -1,0 +1,77 @@
+{
+ "id": "mira-polls-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "feature": "polls",
+ "title": "वाटा विचारा",
+ "post_on": "2026-11-16",
+ "caption": "ती ज्याला विचारते त्याला तिच्याबद्दल मत असतं. नेहा त्याऐवजी पोल टाकते. मीरा तिची गोष्ट सांगते.",
+ "linkedin_text": "A big decision gets a dozen different opinions from a dozen well-meaning friends.\n\nOn Waypoint, Ask the Path lets you put one question and two to four options on the Wall; people vote once and everyone sees how the votes split. Mira tells Neha's story; every screen is the real app.",
+ "hashtags": [
+  "#Polls",
+  "#Waypoint",
+  "#AskThePath"
+ ],
+ "cast": {
+  "neha": "Neha, a young Indian woman in her mid twenties with shoulder-length dark hair, a mustard cardigan and small silver earrings"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera at a window table in a cosy cafe in the evening, a notebook beside her, a gentle smile.",
+   "vo": "हाय, मी मीरा. ही नेहाची गोष्ट आहे. तिचा एक मोठा निर्णय आहे, आणि प्रत्येक मित्राचं वेगळं उत्तर आहे.",
+   "sub": "हाय, मी मीरा. ही नेहाची गोष्ट आहे. तिचा एक मोठा निर्णय आहे, आणि प्रत्येक मित्राचं वेगळं उत्तर आहे.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Ask the Path"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} at a cafe table with a laptop showing two email offers, chin on her hand, thoughtful, rain on the window behind her.",
+   "vo": "नवीन नोकरीसाठी नवीन शहर, की घरीच राहायचं. ती ज्याला विचारते त्याला तिच्याबद्दल मत असतं, निवडीबद्दल नाही.",
+   "sub": "नवीन नोकरीसाठी नवीन शहर, की घरीच राहायचं. ती ज्याला विचारते त्याला तिच्याबद्दल मत असतं, निवडीबद्दल नाही.",
+   "min": 8,
+   "card": "नवीन शहर?"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} on a late evening bus holding her phone, city lights streaking past the window, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Waypoint वर ती Ask the Path उघडते. एक प्रश्न, आणि दोन ते चार पर्याय.",
+   "sub": "Waypoint वर ती Ask the Path उघडते. एक प्रश्न, आणि दोन ते चार पर्याय.",
+   "min": 8,
+   "screen": "poll.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} reading her phone at the cafe table, a small smile, a cup of tea steaming, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Wall वरचे लोक एकदाच मत देतात. कोणतेही निबंध नाहीत. कोणताही सल्ला नाही. फक्त एक टॅप.",
+   "sub": "Wall वरचे लोक एकदाच मत देतात. कोणतेही निबंध नाहीत. कोणताही सल्ला नाही. फक्त एक टॅप.",
+   "min": 8,
+   "screen": "poll.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} watching her phone with wide-eyed interest, the cafe warm and blurred behind her.",
+   "vo": "मतं जसजशी येतात, तशी ती कशी विभागली गेली आहेत ते ती पाहते.",
+   "sub": "मतं जसजशी येतात, तशी ती कशी विभागली गेली आहेत ते ती पाहते.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} at her apartment window at dusk, the city lights beginning to glow, a calm decided smile.",
+   "vo": "हा तिचाच निर्णय आहे. पण आता तिला लोकांचा कल समजतो.",
+   "sub": "हा तिचाच निर्णय आहे. पण आता तिला लोकांचा कल समजतो.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. एकदाच सांगा. Google Play वर मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "title": "Mehr wissen, mehr teilen",
+ "caption": "Teil 5: mehr wissen und mehr teilen. Dein Score aus dem Buch, teile Bilder, Planungstools, Sprachen und dein Konto in ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Lumi. Teil fünf: mehr wissen, und mehr teilen."
+  },
+  {
+   "vo": "Genug Einträge? Dein Score kommt jetzt aus deinem Buch.",
+   "card": "Score aus deinem Buch"
+  },
+  {
+   "vo": "Bei Healthy teilst du deinen Score als Bild."
+  },
+  {
+   "vo": "Teile deine Woche auch als Bild.",
+   "card": "Deine Woche, geteilt"
+  },
+  {
+   "vo": "Plane einen Laden: Gewinn, Rückzahlung, Bargeld.",
+   "card": "Einen Laden planen"
+  },
+  {
+   "vo": "25 Sprachen, und WhatsApp-Antworten folgen deiner Wahl.",
+   "card": "25 Sprachen"
+  },
+  {
+   "vo": "Lokale Geld- und Steuerwörter, in neunzehn Ländern.",
+   "card": "19 Länder"
+  },
+  {
+   "vo": "Mit WhatsApp-Code anmelden. Kein Passwort.",
+   "card": "WhatsApp-Anmeldung"
+  },
+  {
+   "vo": "Daten bearbeiten, Nummer ändern oder Konto retten.",
+   "card": "Dein Konto"
+  },
+  {
+   "vo": "Ein Problem melden und die Antwort hier sehen."
+  },
+  {
+   "vo": "Deine Daten herunterladen oder dein Konto löschen.",
+   "card": "Deine Daten"
+  },
+  {
+   "vo": "ScoreMyBiz. Dreißig Tage gratis, in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-10"
+}

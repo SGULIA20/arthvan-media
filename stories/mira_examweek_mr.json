@@ -1,0 +1,78 @@
+{
+ "id": "mira-examweek-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "feature": "daily-path",
+ "title": "परीक्षेचा आठवडा",
+ "post_on": "2026-11-20",
+ "caption": "परीक्षेचा आठवडा, आणि सगळे विचारतात कसं चाललंय. मीरा सांगते सानाची गोष्ट.",
+ "linkedin_text": "During exam week every friend asks the same question and gets the same answer: fine.\n\nWaypoint's Daily Path asks one specific question a day, the same for everyone, and shows how others answered. Mira tells Sana's story; every screen is the real app.",
+ "hashtags": [
+  "#Waypoint",
+  "#DailyPath",
+  "#ExamWeek"
+ ],
+ "cast": {
+  "sana": "Sana, a young Indian woman with short curly hair in a mustard cardigan, a college student"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera in a quiet university library after hours, stacks of books behind her, a gentle smile.",
+   "vo": "हाय, मी मीरा. ही सानाची गोष्ट आहे. परीक्षेचा आठवडा. सगळे तिला एकच विचारतात: कसं चाललंय?",
+   "sub": "हाय, मी मीरा. ही सानाची गोष्ट आहे. परीक्षेचा आठवडा. सगळे तिला एकच विचारतात: कसं चाललंय?",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Exam week"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} in a university library at night surrounded by open books, a friend passing by and she answers with a quick polite smile, the smile fading as he leaves.",
+   "vo": "ती म्हणते ठीक आहे. प्रत्येक वेळी. ठीक, ठीक, ठीक.",
+   "sub": "ती म्हणते ठीक आहे. प्रत्येक वेळी. ठीक, ठीक, ठीक.",
+   "min": 8,
+   "card": "परीक्षेचा आठवडा"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} on a late bus with her phone, rain on the window, city lights streaking past, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Waypoint वर तिला Daily Path मिळतो. दिवसाला एक प्रश्न, सगळ्यांसाठी सारखा.",
+   "sub": "Waypoint वर तिला Daily Path मिळतो. दिवसाला एक प्रश्न, सगळ्यांसाठी सारखा.",
+   "min": 8,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} at a canteen table late at night with a cup of chai, her phone in both hands, taking her time to answer, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "आजचा प्रश्न वाचायला सोपा आणि उत्तर द्यायला अवघड होता. तिने वेळ घेतला.",
+   "sub": "आजचा प्रश्न वाचायला सोपा आणि उत्तर द्यायला अवघड होता. तिने वेळ घेतला.",
+   "min": 8,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} reading her phone in a quiet corridor with a soft look of recognition, a window with night sky behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "मग तिने पाहिलं इतरांनी कसं उत्तर दिलंय. वेगवेगळी उत्तरं. टाईप करण्यापूर्वी तोच पॉज.",
+   "sub": "मग तिने पाहिलं इतरांनी कसं उत्तर दिलंय. वेगवेगळी उत्तरं. टाईप करण्यापूर्वी तोच पॉज.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} closing her laptop and walking out of the library into the cool night, a small genuine smile.",
+   "vo": "पुन्हा नोट्सकडे. त्याच परीक्षा. आणि ती त्या रात्री लवकर झोपली.",
+   "sub": "पुन्हा नोट्सकडे. त्याच परीक्षा. आणि ती त्या रात्री लवकर झोपली.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. एकदा बोलून पहा. गुगल प्ले वर फ्री, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

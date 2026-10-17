@@ -1,0 +1,77 @@
+{
+ "id": "founder-card-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "founder_suit",
+ "feature": "business-card",
+ "title": "કાર્ડ",
+ "post_on": "2026-11-23",
+ "caption": "એક બિલ્ડરે લગ્નમાં હરિ પાસે કાર્ડ માંગ્યું. હરિ પાસે નથી. ફાઉન્ડર તેની વાત કહે છે.",
+ "linkedin_text": "Half of small-shop business still starts with someone asking for a card, at a wedding, a market or a bus stop.\n\nScoreMyBiz makes a business card from the shop's own details, ready to send on WhatsApp, share as a PDF or as a message. The founder character tells Hari's story; every screen is the real app.",
+ "hashtags": [
+  "#BusinessCard",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "hari": "Hari, a middle-aged Indian paint shop owner with a thick moustache, a cream kurta and a gold wristwatch"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera at the entrance of a decorated wedding hall in the evening, marigold garlands and lights behind him, a warm smile.",
+   "vo": "નમસ્તે. આ હરિની વાત છે. તે રંગ વેચે છે. તેના પિતરાઈના લગ્નમાં, એક બિલ્ડર તેનું કાર્ડ માંગે છે.",
+   "sub": "નમસ્તે. આ હરિની વાત છે. તે રંગ વેચે છે. તેના પિતરાઈના લગ્નમાં, એક બિલ્ડર તેનું કાર્ડ માંગે છે.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "The card"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} at a wedding reception, patting his pockets with an embarrassed smile while a builder in a white shirt waits, festive lights behind them.",
+   "vo": "તેની પાસે કાર્ડ નથી. તે નેપકિન પર નંબર લખે છે, અને સવાર સુધીમાં તે ગાયબ થઈ જાય છે.",
+   "sub": "તેની પાસે કાર્ડ નથી. તે નેપકિન પર નંબર લખે છે, અને સવાર સુધીમાં તે ગાયબ થઈ જાય છે.",
+   "min": 8,
+   "card": "કાર્ડ નથી"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} at his paint shop counter in the morning, thoughtfully looking at his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં તે મારો ધંધો ખોલે છે. તેની દુકાનનું નામ, સરનામું અને સમય પહેલેથી જ ત્યાં છે.",
+   "sub": "ScoreMyBiz માં તે મારો ધંધો ખોલે છે. તેની દુકાનનું નામ, સરનામું અને સમય પહેલેથી જ ત્યાં છે.",
+   "min": 8,
+   "screen": "business-card.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} smiling as he taps his phone at the paint shop counter, tins of paint stacked behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તે વોટ્સએપ પર મોકલો દબાવે છે, અને મીઠાઈ પહેલાં કાર્ડ બિલ્ડરના ફોનમાં પહોંચી જાય છે.",
+   "sub": "તે વોટ્સએપ પર મોકલો દબાવે છે, અને મીઠાઈ પહેલાં કાર્ડ બિલ્ડરના ફોનમાં પહોંચી જાય છે.",
+   "min": 8,
+   "screen": "business-card.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "A builder in a white shirt reading a message on his phone with an interested nod, a construction site behind him in daylight, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "અથવા તે પીડીએફ તરીકે, કે મેસેજ તરીકે મોકલે છે. એક કાર્ડ, ઘણી બધી રીતો.",
+   "sub": "અથવા તે પીડીએફ તરીકે, કે મેસેજ તરીકે મોકલે છે. એક કાર્ડ, ઘણી બધી રીતો.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{hari} standing proudly in front of his paint shop in the morning sun, arms folded, a bright smile, colourful paint tins on display.",
+   "vo": "એવું કાર્ડ જે હંમેશાં તેના ખિસ્સામાં રહે છે.",
+   "sub": "એવું કાર્ડ જે હંમેશાં તેના ખિસ્સામાં રહે છે.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ માટે મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

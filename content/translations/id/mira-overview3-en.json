@@ -1,0 +1,48 @@
+{
+ "title": "Semua yang Ada di Tembok",
+ "caption": "Bagian 3: semua yang bisa Anda lakukan di Tembok Waypoint, di layar asli. Mira yang tunjukkan.",
+ "scenes": [
+  {
+   "vo": "Halo, saya Mira. Bagian tiga: semua di Tembok."
+  },
+  {
+   "vo": "Pilih Baru, atau Teratas harian, mingguan, bulanan."
+  },
+  {
+   "vo": "Lempar dadu untuk pos kejutan, atau cari."
+  },
+  {
+   "vo": "Saring Tembok menurut perasaan: cemas, sepi, lainnya."
+  },
+  {
+   "vo": "Tanggapi sebuah pos, dan pembuatnya diberi tahu.",
+   "card": "Tanggapi"
+  },
+  {
+   "vo": "Bukan bahasa Anda? Ketuk Terjemah, atau Otomatis."
+  },
+  {
+   "vo": "Momen: gambar yang dilihat satu orang sekali."
+  },
+  {
+   "vo": "Hapus pos Anda sendiri, dan langsung hilang.",
+   "card": "Hapus kapan saja"
+  },
+  {
+   "vo": "Bagikan pos, skor, dan Jalur Harian sebagai gambar.",
+   "card": "Bagikan"
+  },
+  {
+   "vo": "Poin peringkatkan semua tiap hari, tingkat Emas Perak.",
+   "card": "Papan Peringkat"
+  },
+  {
+   "vo": "Dan Ada apa baru beri tahu apa yang berubah."
+  },
+  {
+   "vo": "Waypoint. Katakan sekali. Gratis di Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-05"
+}

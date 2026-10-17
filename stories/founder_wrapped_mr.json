@@ -1,0 +1,76 @@
+{
+ "app": "waypoint",
+ "lang": "mr",
+ "id": "founder-wrapped-mr",
+ "character": "founder_casual",
+ "feature": "wrapped",
+ "title": "तुमचा महिना",
+ "post_on": "2026-12-08",
+ "caption": "महिन्याच्या पहिल्या तारखेला लिओ त्याचा रेकॅप उघडतो. तो फक्त त्यालाच दिसतो. संस्थापक त्याची गोष्ट सांगतो.",
+ "linkedin_text": "In My Waypoints, This month opens a recap of the current month for your account only: posts shared, reactions given, thumbs up and laughs received, and the feeling you logged most. It is never shared or public.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#MonthlyRecap"
+ ],
+ "cast": {
+  "leo": "Leo, a young man with a light beard, a black cap and a denim shirt"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a rooftop in the morning light, a relaxed smile.",
+   "vo": "हाय. ही लिओची गोष्ट आहे. महिन्याची पहिली तारीख आहे, आणि त्याचा मागील महिना कसा गेला याबद्दल त्याला उत्सुकता आहे.",
+   "sub": "हाय. ही लिओची गोष्ट आहे. महिन्याची पहिली तारीख आहे, आणि त्याचा मागील महिना कसा गेला याबद्दल त्याला उत्सुकता आहे.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "Your month"
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} on a small balcony with a cup of tea and his phone, morning light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "कोणताही स्कोअर नाही. कोणतीही रँकिंग नाही. फक्त त्याचा स्वतःचा महिना.",
+   "sub": "कोणताही स्कोअर नाही. कोणतीही रँकिंग नाही. फक्त त्याचा स्वतःचा महिना.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} opening his phone with interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "माय वेपॉइंट्समध्ये, हा महिना महिन्याचा रेकॅप उघडतो.",
+   "sub": "माय वेपॉइंट्समध्ये, हा महिना महिन्याचा रेकॅप उघडतो.",
+   "min": 8,
+   "screen": "wrapped.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} reading his phone with a thoughtful smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "शेअर केलेल्या पोस्ट, दिलेल्या प्रतिक्रिया, मिळालेले थम्स अप आणि हसू.",
+   "sub": "शेअर केलेल्या पोस्ट, दिलेल्या प्रतिक्रिया, मिळालेले थम्स अप आणि हसू.",
+   "min": 8,
+   "screen": "wrapped.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} nodding slowly, looking out over the city, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "आणि त्याने सगळ्यात जास्त नोंदवलेली भावना.",
+   "sub": "आणि त्याने सगळ्यात जास्त नोंदवलेली भावना.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{leo} leaning on the balcony rail with a calm smile, morning city behind him.",
+   "vo": "हे फक्त त्यालाच दिसते. कधीही शेअर केले जात नाही, आणि कधीही सार्वजनिक नसते.",
+   "sub": "हे फक्त त्यालाच दिसते. कधीही शेअर केले जात नाही, आणि कधीही सार्वजनिक नसते.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "वेपॉइंट. एकदा म्हणा. Google Play वर मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

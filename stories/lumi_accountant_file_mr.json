@@ -1,0 +1,81 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "post_on": "2026-12-10",
+ "id": "lumi-accountant-file-mr",
+ "character": "lumi",
+ "feature": "file-for-accountant",
+ "title": "फाईल द्या, पुन्हा टाईप करू नका",
+ "caption": "नदियाच्या सीएला महिन्याचा हिशेब फाईलमध्ये हवाय. लुमी तिची गोष्ट सांगते.",
+ "linkedin_text": "A shop owner's accountant uses different software and wants the month as a file. In ScoreMyBiz, File for my accountant lets the owner pick a period and a format: one combined file, or the bank-style files that QuickBooks and Xero import, then share it.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Accountant"
+ ],
+ "cast": {
+  "nadia": "Nadia, a young woman who runs a small bakery, in a flour-dusted apron with her hair tied back"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small neat bakery with warm morning light and trays of bread behind her, a warm smile.",
+   "vo": "हाय, मी लुमी. ही आहे नदियाची गोष्ट. ती बेकरी चालवते, आणि तिच्या सीएला महिन्याचा हिशेब हवाय.",
+   "sub": "हाय, मी लुमी. ही आहे नदियाची गोष्ट. ती बेकरी चालवते, आणि तिच्या सीएला महिन्याचा हिशेब हवाय.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "A file, not a retype",
+   "card": "नदियाची बेकरी"
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} on a phone call at her bakery counter, a thoughtful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तिचा सीए वेगळं सॉफ्टवेअर वापरतो, आणि महिन्याचं सगळं आऊट-इन फाईलच्या स्वरूपात मागतो.",
+   "sub": "तिचा सीए वेगळं सॉफ्टवेअर वापरतो, आणि महिन्याचं सगळं आऊट-इन फाईलच्या स्वरूपात मागतो.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} tapping her phone behind the counter, flour on her apron, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये ती 'Export for my accountant' उघडते, आणि कालावधी निवडते.",
+   "sub": "ScoreMyBiz मध्ये ती 'Export for my accountant' उघडते, आणि कालावधी निवडते.",
+   "min": 8,
+   "screen": "export-book.png",
+   "card": "Export for my accountant"
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} choosing on her phone with a curious look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "मग फॉरमॅट: स्प्रेडशीटसाठी फाईल, किंवा QuickBooks, Wave आणि Xero साठी बँक-स्टाईल इम्पोर्ट.",
+   "sub": "मग फॉरमॅट: स्प्रेडशीटसाठी फाईल, किंवा QuickBooks, Wave आणि Xero साठी बँक-स्टाईल इम्पोर्ट.",
+   "min": 8,
+   "screen": "export-book.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} pressing send on her phone with a small smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ती थेट तिच्या फोनवरून सीएला फाईल पाठवते.",
+   "sub": "ती थेट तिच्या फोनवरून सीएला फाईल पाठवते.",
+   "min": 8,
+   "card": "फोनवरून शेअर करा"
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} wiping her hands and smiling at the camera, bread on the shelves behind her.",
+   "vo": "काहीही पुन्हा टाईप करायचं नाही. सीए ती फाईल इम्पोर्ट करतो.",
+   "sub": "काहीही पुन्हा टाईप करायचं नाही. सीए ती फाईल इम्पोर्ट करतो.",
+   "min": 8,
+   "card": "काही टाईप करू नका"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तुमचा व्यवसाय समजून घ्या. तीस दिवस मोफत, अनेक भारतीय आणि परदेशी भाषांमध्ये.",
+   "sub": "",
+   "min": 5,
+   "card": "३० दिवस मोफत"
+  }
+ ]
+}

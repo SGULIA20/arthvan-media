@@ -117,5 +117,6 @@
    "sub": "",
    "min": 5
   }
- ]
+ ],
+ "hold": "Waypoint v25 (feelings, private replies, thanks, welcome, Calm kit, Quick exit, check-ins, Listening Night, appeals) is not live yet: remove this line only once the v25 build is live on Android AND iOS (founder rule, 17 Oct 2026)"
 }

@@ -1,0 +1,75 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "post_on": "2026-12-10",
+ "id": "founder-ca-documents-mr",
+ "character": "founder_suit",
+ "feature": "documents-from-my-ca",
+ "title": "एकाच ठिकाणी",
+ "caption": "सुनीलच्या सीएने रिटर्न पूर्ण केले आहे आणि सुनीलला त्यासाठी व्हॉट्सअ‍ॅपवर शोधाशोध करायची नाही. संस्थापक त्यांची गोष्ट सांगत आहेत.",
+ "linkedin_text": "In India, if your CA is on ScoreMyBiz, the filings and returns they upload appear in one list in your app. ScoreMyBiz does not prepare or file any return; it only keeps what your CA sends you.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#CAIndia"
+ ],
+ "cast": {
+  "sunil": "Sunil, a middle-aged Indian garment shop owner with a moustache, in a cream kurta and a gold wristwatch"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera outside a bustling garment shop in the afternoon, colourful fabrics hanging behind him, a warm smile.",
+   "vo": "हाय. ही सुनीलची गोष्ट आहे. त्याच्या सीएने रिटर्न पूर्ण केले आहे आणि त्याला व्हॉट्सअ‍ॅपवर शोधाशोध करायची नाही.",
+   "sub": "हाय. ही सुनीलची गोष्ट आहे. त्याच्या सीएने रिटर्न पूर्ण केले आहे आणि त्याला व्हॉट्सअ‍ॅपवर शोधाशोध करायची नाही.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "In one place"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} scrolling through his phone behind his shop counter, frowning, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "सीएचे पेपर्स महिन्यांच्या चॅट्समध्ये इकडे-तिकडे पसरलेले आहेत.",
+   "sub": "सीएचे पेपर्स महिन्यांच्या चॅट्समध्ये इकडे-तिकडे पसरलेले आहेत.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} tapping his phone with a hopeful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "भारतात, तुमचा सीए ScoreMyBiz वर असेल, तर सीए जे अपलोड करतो ते तुमच्या अ‍ॅपमध्ये एकाच लिस्टमध्ये दिसते.",
+   "sub": "भारतात, तुमचा सीए ScoreMyBiz वर असेल, तर सीए जे अपलोड करतो ते तुमच्या अ‍ॅपमध्ये एकाच लिस्टमध्ये दिसते.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} opening a list on his phone with an easy smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "त्याच्या अ‍ॅपमध्ये 'माय डॉक्युमेंट्स' लिस्ट आहे. सीएने काही अपलोड केले की ते तिथे दिसते.",
+   "sub": "त्याच्या अ‍ॅपमध्ये 'माय डॉक्युमेंट्स' लिस्ट आहे. सीएने काही अपलोड केले की ते तिथे दिसते.",
+   "min": 8,
+   "screen": "my-documents.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} nodding thoughtfully, folded cloth stacked behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz काहीही फाईल करत नाही. ते फक्त सीए पाठवतो तेच जपून ठेवते.",
+   "sub": "ScoreMyBiz काहीही फाईल करत नाही. ते फक्त सीए पाठवतो तेच जपून ठेवते.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} standing at his shop door in the sun, relaxed, arms folded.",
+   "vo": "चॅट्समध्ये आता आणखी शोधण्याची गरज नाही.",
+   "sub": "चॅट्समध्ये आता आणखी शोधण्याची गरज नाही.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत जाणा. तीस दिवस मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

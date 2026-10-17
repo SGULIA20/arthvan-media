@@ -1,0 +1,51 @@
+{
+ "title": "Conversas, segurança e definições",
+ "caption": "Parte 4: conversas, segurança e definições no Waypoint. A Mira mostra como protege as pessoas.",
+ "scenes": [
+  {
+   "vo": "Olá, sou a Mira. Quarta parte: conversas, segurança e definições."
+  },
+  {
+   "vo": "Dezoito anos ou mais, aceitando Termos e Diretrizes.",
+   "card": "18 anos ou mais"
+  },
+  {
+   "vo": "Conversas de combinados são só de texto, por trinta minutos.",
+   "card": "Conversas de 30 min"
+  },
+  {
+   "vo": "Terminam após cinco minutos, bloqueie quando quiser, avalie.",
+   "card": "Tu decides"
+  },
+  {
+   "vo": "Denuncie ou bloqueie qualquer postagem, mensagem ou Momento.",
+   "card": "Denunciar e bloquear"
+  },
+  {
+   "vo": "As postagens são filtradas antes; assédio e ódio são recusados.",
+   "card": "Filtrado primeiro"
+  },
+  {
+   "vo": "Uma postagem com tom de crise mostra linhas de ajuda e uma pausa.",
+   "card": "Antes de publicar"
+  },
+  {
+   "vo": "Qualquer coisa que se passe por staff do Waypoint é marcada como não oficial."
+  },
+  {
+   "vo": "Definições, ajuda, termos e comentários: Os meus Waypoints."
+  },
+  {
+   "vo": "Apague a sua conta e dados daí também."
+  },
+  {
+   "vo": "Notificações, avisos de atualização e uma barra offline.",
+   "card": "Fica a par de tudo"
+  },
+  {
+   "vo": "Waypoint. Diga uma vez. Grátis no Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-06"
+}

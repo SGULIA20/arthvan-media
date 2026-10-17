@@ -1,0 +1,78 @@
+{
+ "id": "founder-languages-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "founder_casual",
+ "feature": "languages",
+ "title": "तुमची भाषा",
+ "post_on": "2026-11-22",
+ "caption": "तो स्वहिलीमध्ये विचार करतो आणि इंग्रजीत स्क्रोल करतो. जोसेफ Waypoint च्या भाषा चालू करतो. संस्थापक आपली गोष्ट सांगतो.",
+ "linkedin_text": "Most apps ask people to read in a language that is not their first.\n\nWaypoint works in 16 languages, and a post written in another language can be translated with one tap, or automatically. The founder character tells Joseph's story; every screen is the real app.",
+ "hashtags": [
+  "#Languages",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "joseph": "Joseph, a young Kenyan man in his twenties with short hair, a green polo shirt and a student backpack"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera in a busy colourful street market in the afternoon, a warm smile.",
+   "vo": "हाय. ही जोसेफची गोष्ट आहे. तो स्वहिलीमध्ये विचार करतो आणि इंग्रजीत स्क्रोल करतो.",
+   "sub": "हाय. ही जोसेफची गोष्ट आहे. तो स्वहिलीमध्ये विचार करतो आणि इंग्रजीत स्क्रोल करतो.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "Your language"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} at a bus stop in Nairobi holding his phone with a slightly tired look, a matatu minibus passing behind him, afternoon light.",
+   "vo": "बहुतेक ॲप्स त्याला त्याच्या पहिल्या नसलेल्या भाषेत वाचायला सांगतात.",
+   "sub": "बहुतेक ॲप्स त्याला त्याच्या पहिल्या नसलेल्या भाषेत वाचायला सांगतात.",
+   "min": 8,
+   "card": "पहिली भाषा नाही"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} sitting on a bench in a sunny park scrolling his phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Waypoint मध्ये सोळा भाषा आहेत. सगळेजण स्वतःची भाषा निवडतात.",
+   "sub": "Waypoint मध्ये सोळा भाषा आहेत. सगळेजण स्वतःची भाषा निवडतात.",
+   "min": 8,
+   "screen": "language.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} smiling at his phone as he reads, a friend looking over his shoulder, afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "दुसऱ्या भाषेतून पोस्ट येते. एक टॅप करा आणि ती भाषांतर होते.",
+   "sub": "दुसऱ्या भाषेतून पोस्ट येते. एक टॅप करा आणि ती भाषांतर होते.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} on a minibus seat reading his phone with a relaxed grin, bright street passing the window, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "किंवा तो ऑटो-ट्रान्सलेट चालू करू शकतो, आणि वॉल त्याच्या भाषेत वाचली जाते.",
+   "sub": "किंवा तो ऑटो-ट्रान्सलेट चालू करू शकतो, आणि वॉल त्याच्या भाषेत वाचली जाते.",
+   "min": 8,
+   "screen": "my-waypoints.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} laughing with friends outside a university building in warm light, phone in hand.",
+   "vo": "तीच वॉल. त्याचे स्वतःचे शब्द.",
+   "sub": "तीच वॉल. त्याचे स्वतःचे शब्द.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "Waypoint. एकदा सांगा. गुगल प्लेवर मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

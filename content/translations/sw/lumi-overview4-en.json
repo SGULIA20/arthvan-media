@@ -1,0 +1,47 @@
+{
+ "title": "Kaa kwenye udhibiti",
+ "caption": "Sehemu ya 4: kaa kwenye udhibiti. Nyumbani, vikumbusho, miezi iliyofungwa, nani alibadilisha nini, kadi yako na zaidi katika ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Habari, mimi ni Lumi. Sehemu ya nne: kaa kwenye udhibiti."
+  },
+  {
+   "vo": "Nyumbani kunaonyesha siku yako kwa haraka."
+  },
+  {
+   "vo": "Kengele inakusanya vikumbusho na madokezo."
+  },
+  {
+   "vo": "Mfululizo wako na changamoto, kwenye Nyumba.",
+   "card": "Mfululizo wako"
+  },
+  {
+   "vo": "Andika kikumbusho, kiwe kazi ya tarehe."
+  },
+  {
+   "vo": "Pata hatua tatu hadi tano za kuchagua.",
+   "card": "Hatua zinazofuata"
+  },
+  {
+   "vo": "Funga mwezi uliokwisha, ili usibadilike."
+  },
+  {
+   "vo": "Ona nani alibadilisha nini, na lini."
+  },
+  {
+   "vo": "Shiriki kadi yako ya biashara, na WhatsApp."
+  },
+  {
+   "vo": "Alama ya afya ya kibinafsi kwa pesa yako."
+  },
+  {
+   "vo": "Hadi maduka matano, kila moja na kitabu.",
+   "card": "Maduka kadhaa"
+  },
+  {
+   "vo": "ScoreMyBiz. Bure kwa siku thelathini."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-09"
+}

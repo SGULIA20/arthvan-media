@@ -3,7 +3,7 @@
  "caption": "Tutto quello che ScoreMyBiz fa per il tuo negozio, in un minuto. Lumi mostra le cose principali sugli schermi veri.",
  "scenes": [
   {
-   "vo": "Ciao, sono Lumi. Ecco cosa fa ScoreMyBiz per il tuo negozio, in un minuto."
+   "vo": "Ciao, sono Lumi. Ecco ScoreMyBiz, in un minuto."
   },
   {
    "vo": "Registra vendite, acquisti e spese in pochi secondi."
@@ -12,31 +12,31 @@
    "vo": "Vedi chi ti deve soldi e avvisalo su WhatsApp."
   },
   {
-   "vo": "Vedi cosa devi pagare e cosa scade questa settimana."
+   "vo": "Vedi cosa devi e cosa scade questa settimana."
   },
   {
-   "vo": "Crea fatture e preventivi e inviali in formato PDF."
+   "vo": "Fai fatture e preventivi e inviali come PDF."
   },
   {
-   "vo": "Utile, cassa e situazione finanziaria in parole semplici."
+   "vo": "Utile, cassa e conti chiari, senza parole difficili."
   },
   {
-   "vo": "Un indice di salute aziendale con i tuoi punti di forza."
+   "vo": "Un punteggio di salute con i tuoi punti forti e deboli."
   },
   {
-   "vo": "Fai simulazioni con i tuoi dati reali."
+   "vo": "Prova a fare ipotesi sui tuoi numeri."
   },
   {
    "vo": "Chiedi al consulente nella tua lingua, nel mese gratis."
   },
   {
-   "vo": "Dai ai tuoi collaboratori un accesso dedicato."
+   "vo": "Da' ai tuoi collaboratori il loro accesso."
   },
   {
-   "vo": "E condividi la contabilità con il tuo commercialista."
+   "vo": "E condividi i tuoi libri contabili con il tuo CA."
   },
   {
-   "vo": "ScoreMyBiz. Conosci la salute della tua impresa. Gratis per trenta giorni, in molte lingue."
+   "vo": "ScoreMyBiz. Gratis per trenta giorni, in tante lingue."
   }
  ],
  "machine_translated": true,

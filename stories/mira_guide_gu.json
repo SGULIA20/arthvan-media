@@ -1,0 +1,76 @@
+{
+ "id": "mira-guide-gu",
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "mira",
+ "feature": "mira-guide",
+ "title": "મિડનાઇટ હેલો",
+ "post_on": "2026-11-28",
+ "caption": "મધ્યરાત્રીએ કોઈ ઓનલાઈન નથી. જો મીરા, એક AI ગાઈડને હેલો કહે છે. મીરા તેની વાર્તા કહે છે.",
+ "linkedin_text": "On Waypoint, Talk to Mira starts a chat with an automated AI guide that says so in its first line. Replies are one or two sentences, the same reactions, report and block tools apply as in any chat, and the chat closes after forty of your messages.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#AIGuide"
+ ],
+ "cast": {
+  "jo": "Jo, a young man in his mid twenties with messy dark hair and a grey hoodie"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera on a quiet balcony at midnight, city lights glowing behind her, a gentle smile.",
+   "vo": "હાય, હું મીરા છું. આ જો ની વાર્તા છે. રાતના બાર વાગ્યા છે, અને બધા સૂઈ ગયા છે.",
+   "sub": "હાય, હું મીરા છું. આ જો ની વાર્તા છે. રાતના બાર વાગ્યા છે, અને બધા સૂઈ ગયા છે.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Midnight hello"
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo}, with spiky messy dark brown hair and warm tan skin, in his grey knit hoodie, sitting at a small kitchen table at night with a mug, looking at his phone, the kitchen softly lit, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "વેપૉઇન્ટ પર તે મેચની રાહ જુએ છે, પણ ઓનલાઈન ગણતરી શૂન્ય બતાવે છે.",
+   "sub": "વેપૉઇન્ટ પર તે મેચની રાહ જુએ છે, પણ ઓનલાઈન ગણતરી શૂન્ય બતાવે છે.",
+   "min": 8,
+   "screen": "matching-mira.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} reading his phone with a small relieved smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તેથી તે ચેટ ટેબમાં કે રાહ જોતી વખતે ટોક ટુ મીરા પર ટેપ કરે છે.",
+   "sub": "તેથી તે ચેટ ટેબમાં કે રાહ જોતી વખતે ટોક ટુ મીરા પર ટેપ કરે છે.",
+   "min": 8,
+   "screen": "chats.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} reading a message with an interested look, a lamp glowing beside him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તે તરત જ કહે છે: હું AI ગાઈડ છું, કોઈ વ્યક્તિ નથી.",
+   "sub": "તે તરત જ કહે છે: હું AI ગાઈડ છું, કોઈ વ્યક્તિ નથી.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} typing on his phone with a slight smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તે એક-બે વાક્યમાં જવાબ આપે છે. અને તમે કોઈ પણ ચેટની જેમ રીએક્ટ, રિપોર્ટ કે બ્લોક કરી શકો છો.",
+   "sub": "તે એક-બે વાક્યમાં જવાબ આપે છે. અને તમે કોઈ પણ ચેટની જેમ રીએક્ટ, રિપોર્ટ કે બ્લોક કરી શકો છો.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} setting his phone down and looking out at the night from the balcony, calm, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તેના ચાલીસ મેસેજ પછી ચેટ બંધ થઈ જાય છે. આ શરૂઆત કરવાની જગ્યા છે, રહેવાની નહીં.",
+   "sub": "તેના ચાલીસ મેસેજ પછી ચેટ બંધ થઈ જાય છે. આ શરૂઆત કરવાની જગ્યા છે, રહેવાની નહીં.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "વેપૉઇન્ટ. એક જ વાર કહો. ગૂગલ પ્લે પર ફ્રી, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

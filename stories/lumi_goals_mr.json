@@ -1,0 +1,78 @@
+{
+ "id": "lumi-goals-mr",
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "lumi",
+ "feature": "goals-and-timelines",
+ "title": "इच्छा नाही, तारीख ठरवा",
+ "post_on": "2026-11-29",
+ "caption": "दुकानाला दुसरं फ्रीज हवंय. फरिदा इच्छेचं रूपांतर तारखेत करते. लुमी तिची गोष्ट सांगते.",
+ "linkedin_text": "Most small shops have a purchase in mind and no plan to reach it.\n\nIn ScoreMyBiz you set a goal with an amount and a number of months, see how long it takes at your current pace, and test what happens if customers pay a little faster. Lumi tells Farida's story; every screen is the real app.",
+ "hashtags": [
+  "#Goals",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "farida": "Farida, a cheerful Indian woman in her forties who runs an ice cream shop, in a pink kurta with a dupatta over one shoulder"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a colourful ice cream shop with a glass display behind her, a bright smile.",
+   "vo": "हाय, मी लुमी. ही फरिदाची गोष्ट आहे. तिच्या आईस्क्रीमच्या दुकानाला दुसरं डिस्प्ले फ्रीज हवंय.",
+   "sub": "हाय, मी लुमी. ही फरिदाची गोष्ट आहे. तिच्या आईस्क्रीमच्या दुकानाला दुसरं डिस्प्ले फ्रीज हवंय.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "A date, not a wish"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} behind the counter of her ice cream shop looking at the single crowded display fridge with a hopeful frown, colourful tubs inside, evening light.",
+   "vo": "तिच्या डोक्यात एक आकडा आहे, पण त्यासाठी काही प्लॅन नाही.",
+   "sub": "तिच्या डोक्यात एक आकडा आहे, पण त्यासाठी काही प्लॅन नाही.",
+   "min": 8,
+   "card": "एक फ्रीज"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} at a small table in her ice cream shop looking at her phone and thinking, a cone beside her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये ती एक टार्गेट ठरवते: रक्कम, आणि किती महिने.",
+   "sub": "ScoreMyBiz मध्ये ती एक टार्गेट ठरवते: रक्कम, आणि किती महिने.",
+   "min": 8,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} tapping her phone with a slow growing smile, the ice cream display glowing behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ॲप दाखवतं की तिच्या सध्याच्या गतीने किती वेळ लागेल.",
+   "sub": "ॲप दाखवतं की तिच्या सध्याच्या गतीने किती वेळ लागेल.",
+   "min": 8,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} chatting with a regular customer who hands over money at the counter, a friendly exchange, afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "आणि जर तिच्या ग्राहकांनी थोडे लवकर पैसे दिले तर काय होईल.",
+   "sub": "आणि जर तिच्या ग्राहकांनी थोडे लवकर पैसे दिले तर काय होईल.",
+   "min": 8,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} proudly standing beside a gleaming new second display fridge full of colourful ice cream tubs, hands clasped, a big joyful smile.",
+   "vo": "आता फ्रीज म्हणजे तारीख झाली, इच्छा नाही.",
+   "sub": "आता फ्रीज म्हणजे तारीख झाली, इच्छा नाही.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत जाणून घ्या. तीस दिवस मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

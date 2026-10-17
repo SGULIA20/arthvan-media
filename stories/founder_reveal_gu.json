@@ -1,0 +1,84 @@
+{
+ "app": "waypoint",
+ "lang": "gu",
+ "id": "founder-reveal-gu",
+ "character": "founder_casual",
+ "feature": "reveal",
+ "title": "આજના દિવસ માટે નામ",
+ "post_on": "2026-12-04",
+ "caption": "નૂર વેપૉઇન્ટ ખોલે છે અને તેને આજ માટે એક નવું નામ મળે છે. તે કાલે બદલાઈ જશે. સ્થાપક તેની વાત કહે છે.",
+ "linkedin_text": "After one onboarding question, Waypoint shows the member a generated name and avatar for the day, with a link to customize it. A one-time opt-in schedules a single quiet reminder for when the next name arrives.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#Anonymous"
+ ],
+ "cast": {
+  "noor": "Noor, a young woman with a short wavy bob, round glasses and a teal scarf"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a sunny cafe terrace, a relaxed smile.",
+   "vo": "હાય. આ નૂરની વાત છે. તેણે હમણાં જ વેપૉઇન્ટ ડાઉનલોડ કર્યું છે, અને તે ઓળખાવા માગતી નથી.",
+   "sub": "હાય. આ નૂરની વાત છે. તેણે હમણાં જ વેપૉઇન્ટ ડાઉનલોડ કર્યું છે, અને તે ઓળખાવા માગતી નથી.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "A name for today",
+   "card": "વેપૉઇન્ટ ડાઉનલોડ કર્યું"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} sitting on a park bench with her phone, a hesitant curious look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "એક સવાલ પછી, વેપૉઇન્ટ તેને આજ માટે એક નામ આપે છે.",
+   "sub": "એક સવાલ પછી, વેપૉઇન્ટ તેને આજ માટે એક નામ આપે છે.",
+   "min": 8,
+   "card": "આજ માટેનું નામ"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} looking at her phone with a surprised smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તે કાલે બદલાઈ જશે, જેથી કોઈ તેને ઓળખી ન શકે.",
+   "sub": "તે કાલે બદલાઈ જશે, જેથી કોઈ તેને ઓળખી ન શકે.",
+   "min": 8,
+   "screen": "reveal.png",
+   "card": "રોજ નવું નામ"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} tapping her phone thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તે જો ઈચ્છે તો નામ અને અવતાર બદલી શકે છે.",
+   "sub": "તે જો ઈચ્છે તો નામ અને અવતાર બદલી શકે છે.",
+   "min": 8,
+   "screen": "reveal.png",
+   "card": "તમારું મનપસંદ રૂપ"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} smiling at a small notification on her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "અને જ્યારે તેનું નવું નામ આવે ત્યારે તે એક શાંત યાદી માંગી શકે છે.",
+   "sub": "અને જ્યારે તેનું નવું નામ આવે ત્યારે તે એક શાંત યાદી માંગી શકે છે.",
+   "min": 8,
+   "screen": "reveal.png",
+   "card": "એક શાંત યાદી"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} walking through the park in the evening light, relaxed, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "બીજું કંઈ નહીં. બસ એક નામ, અને એક વાર કહેવાની જગ્યા.",
+   "sub": "બીજું કંઈ નહીં. બસ એક નામ, અને એક વાર કહેવાની જગ્યા.",
+   "min": 8,
+   "card": "બસ એક નામ"
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "વેપૉઇન્ટ. એક વાર કહો. ગૂગલ પ્લે પર ફ્રી, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5,
+   "card": "હમણાં ડાઉનલોડ કરો"
+  }
+ ]
+}

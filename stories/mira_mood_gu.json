@@ -1,0 +1,76 @@
+{
+ "app": "waypoint",
+ "lang": "gu",
+ "id": "mira-mood-gu",
+ "character": "mira",
+ "feature": "mood-log",
+ "title": "ફક્ત એક ટચ",
+ "post_on": "2026-12-02",
+ "caption": "યુકી જમ્યા પછી અને સાંજે કેવું લાગે છે તે ટચ કરે છે. મીરા તેની વાત કહે છે.",
+ "linkedin_text": "In My Waypoints, the Mood log lets a member tap how they feel for the morning, afternoon, evening or night, with no typing, see this week next to the week before, and switch on an evening reminder. It is a small habit, not a diagnosis.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#MoodLog"
+ ],
+ "cast": {
+  "yuki": "Yuki, a young woman with a black bob haircut and a cream knit sweater"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera at a sunny window seat in a quiet library, a gentle smile.",
+   "vo": "હાય, હું મીરા છું. આ યુકીની વાત છે. અમુક લાગણીઓને લાંબી વાતની જરૂર નથી.",
+   "sub": "હાય, હું મીરા છું. આ યુકીની વાત છે. અમુક લાગણીઓને લાંબી વાતની જરૂર નથી.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Just a tap"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} at a desk after lunch, looking out of a window with a thoughtful expression, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "જમ્યા પછી તે અટકે છે અને વિચારે છે કે તેને ખરેખર કેવું લાગે છે.",
+   "sub": "જમ્યા પછી તે અટકે છે અને વિચારે છે કે તેને ખરેખર કેવું લાગે છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} opening her phone with a small curious smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "માય વેપૉઇન્ટ્સમાં તે મૂડ લોગ ખોલે છે: સવાર, બપોર, સાંજ અને રાત.",
+   "sub": "માય વેપૉઇન્ટ્સમાં તે મૂડ લોગ ખોલે છે: સવાર, બપોર, સાંજ અને રાત.",
+   "min": 8,
+   "screen": "mood.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} tapping her phone gently, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તેને કેવું લાગે છે તે તે ટચ કરે છે. ટાઈપિંગ નહીં, કે સ્પષ્ટતા નહીં.",
+   "sub": "તેને કેવું લાગે છે તે તે ટચ કરે છે. ટાઈપિંગ નહીં, કે સ્પષ્ટતા નહીં.",
+   "min": 8,
+   "screen": "mood.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} reading her phone on a sofa on a quiet Sunday, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "રવિવારે તે તેનું અઠવાડિયું આગળના અઠવાડિયા સાથે જુએ છે.",
+   "sub": "રવિવારે તે તેનું અઠવાડિયું આગળના અઠવાડિયા સાથે જુએ છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} smiling softly by a window in the evening, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "અને સાંજનું યાદ અપાવતું નોટિફિકેશન, જો તેને જોઈતું હોય તો. નાની ટેવ, કોઈ ડાયગ્નોસિસ નહીં.",
+   "sub": "અને સાંજનું યાદ અપાવતું નોટિફિકેશન, જો તેને જોઈતું હોય તો. નાની ટેવ, કોઈ ડાયગ્નોસિસ નહીં.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "વેપૉઇન્ટ. એક જ વાર કહો. ગૂગલ પ્લે પર ફ્રી, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

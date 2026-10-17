@@ -1,0 +1,80 @@
+{
+ "app": "waypoint",
+ "lang": "mr",
+ "id": "founder-reveal-mr",
+ "character": "founder_casual",
+ "feature": "reveal",
+ "title": "आजचं एक नाव",
+ "post_on": "2026-12-04",
+ "caption": "नूर Waypoint उघडते आणि तिला आजचं नाव मिळतं. ते उद्या बदलणार. संस्थापिका तिची गोष्ट सांगते.",
+ "linkedin_text": "After one onboarding question, Waypoint shows the member a generated name and avatar for the day, with a link to customize it. A one-time opt-in schedules a single quiet reminder for when the next name arrives.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#Anonymous"
+ ],
+ "cast": {
+  "noor": "Noor, a young woman with a short wavy bob, round glasses and a teal scarf"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a sunny cafe terrace, a relaxed smile.",
+   "vo": "हाय. ही आहे नूरची गोष्ट. तिने नुकतंच Waypoint डाउनलोड केलंय, आणि तिला स्वतःची ओळख लपवायची आहे.",
+   "sub": "हाय. ही आहे नूरची गोष्ट. तिने नुकतंच Waypoint डाउनलोड केलंय, आणि तिला स्वतःची ओळख लपवायची आहे.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "A name for today",
+   "card": "नूरची गोष्ट"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} sitting on a park bench with her phone, a hesitant curious look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "एका प्रश्नानंतर, Waypoint तिला आजपुरतं एक नाव देतं.",
+   "sub": "एका प्रश्नानंतर, Waypoint तिला आजपुरतं एक नाव देतं.",
+   "min": 8,
+   "card": "आजचं नाव"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} looking at her phone with a surprised smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ते उद्या बदलतं, त्यामुळे तिला कोणी ओळखू शकणार नाही.",
+   "sub": "ते उद्या बदलतं, त्यामुळे तिला कोणी ओळखू शकणार नाही.",
+   "min": 8,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} tapping her phone thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तिला आवडल्यास ती नाव आणि अवतार बदलू शकते.",
+   "sub": "तिला आवडल्यास ती नाव आणि अवतार बदलू शकते.",
+   "min": 8,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} smiling at a small notification on her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "आणि नवीन नाव आल्यावर तिला एक शांत आठवण हवी असेल तर ती मागू शकते.",
+   "sub": "आणि नवीन नाव आल्यावर तिला एक शांत आठवण हवी असेल तर ती मागू शकते.",
+   "min": 8,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{noor} walking through the park in the evening light, relaxed, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "दुसरं काहीच नाही. फक्त एक नाव, आणि ते एकदा सांगण्याची जागा.",
+   "sub": "दुसरं काहीच नाही. फक्त एक नाव, आणि ते एकदा सांगण्याची जागा.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "Waypoint. एकदा सांगा. गुगल प्लेवर मोफत, अनेक भारतीय आणि परदेशी भाषांमध्ये.",
+   "sub": "",
+   "min": 5,
+   "card": "Waypoint"
+  }
+ ]
+}

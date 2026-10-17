@@ -1,0 +1,77 @@
+{
+ "id": "founder-lock-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "founder_suit",
+ "feature": "lock-finished-month",
+ "title": "મહિનો લોક કરો",
+ "post_on": "2026-12-01",
+ "caption": "ગયા મહિનાનું વેચાણ બદલાઈ ગયું અને કોઈને યાદ નથી કે કોણે કર્યું. ગોપાલ તેનો ઉકેલ લાવે છે. સ્થાપક તેની વાત કહે છે.",
+ "linkedin_text": "When two or three people can edit a shop's book, last month's numbers need an owner.\n\nScoreMyBiz keeps a record of who added, changed or removed what and when, and a finished month can be locked so nothing in it changes. The founder character tells Gopal's story; every screen is the real app.",
+ "hashtags": [
+  "#BookKeeping",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "gopal": "Gopal, a middle-aged Indian shop owner with a thin moustache, a maroon half-sleeve shirt and a small tilak"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a neat shop office with filing cabinets behind him, a thoughtful smile.",
+   "vo": "હાય. આ ગોપાલની વાર્તા છે. તે બે મદદનીશો સાથે દુકાન ચલાવે છે અને એક જ નિયમ છે: ગયા મહિનાના ચોપડાને હાથ ન અડાડવો.",
+   "sub": "હાય. આ ગોપાલની વાર્તા છે. તે બે મદદનીશો સાથે દુકાન ચલાવે છે અને એક જ નિયમ છે: ગયા મહિનાના ચોપડાને હાથ ન અડાડવો.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Lock the month"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gopal} at his shop desk looking at a ledger page and frowning, a helper in the background looking away, afternoon light.",
+   "vo": "પછી એક દિવસ ગયા મહિનાનું વેચાણ અલગ નીકળે છે, અને કોઈને યાદ નથી કે કોણે બદલ્યું.",
+   "sub": "પછી એક દિવસ ગયા મહિનાનું વેચાણ અલગ નીકળે છે, અને કોઈને યાદ નથી કે કોણે બદલ્યું.",
+   "min": 8,
+   "card": "કોણે બદલ્યું?"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gopal} at his desk reading his phone carefully, a cup of tea beside him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz યાદી રાખે છે: કોણે શું ઉમેર્યું, બદલ્યું કે કાઢ્યું, અને ક્યારે.",
+   "sub": "ScoreMyBiz યાદી રાખે છે: કોણે શું ઉમેર્યું, બદલ્યું કે કાઢ્યું, અને ક્યારે.",
+   "min": 8,
+   "screen": "book-changes.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gopal} tapping a lock on his phone with a decided nod, shelves of stock behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "અને તે પૂરો થયેલો મહિનો લોક કરી શકે છે, જેથી તેમાં કંઈ બદલી ન શકાય.",
+   "sub": "અને તે પૂરો થયેલો મહિનો લોક કરી શકે છે, જેથી તેમાં કંઈ બદલી ન શકાય.",
+   "min": 8,
+   "screen": "book-locks.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "A professional accountant in glasses at an office desk tapping a laptop, a quiet confident nod, morning light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ફાઇલ થઈ ગયા પછી તેનો CA પણ મહિનો લોક કરી શકે છે.",
+   "sub": "ફાઇલ થઈ ગયા પછી તેનો CA પણ મહિનો લોક કરી શકે છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{gopal} and his two helpers laughing together at the shop counter, relaxed, the notebook closed on the desk.",
+   "vo": "હવે સવાલોના જવાબ મળી જાય છે.",
+   "sub": "હવે સવાલોના જવાબ મળી જાય છે.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ માટે મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

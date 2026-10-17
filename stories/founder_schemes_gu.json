@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "id": "founder-schemes-gu",
+ "character": "founder_suit",
+ "feature": "schemes-and-weather",
+ "title": "વરસાદ પહેલાં",
+ "post_on": "2026-12-26",
+ "caption": "વરસાદની આગાહી અનિલને તેનો માલ નીચેથી ઉપર ખસેડવા કહે છે. સ્થાપક તેની કહાની કહે છે.",
+ "linkedin_text": "In India, ScoreMyBiz shows a four-day weather watch with plain business alerts, and matches small-business schemes to the owner's type, city and size as likely or possible fits, each with the official link. It never promises a scheme or a loan.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#MSME"
+ ],
+ "cast": {
+  "anil": "Anil, a middle-aged Indian grain trader with a grey moustache, in a beige kurta"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera outside a grain warehouse in the afternoon, sacks stacked behind him, a warm smile.",
+   "vo": "નમસ્તે. આ અનિલની કહાની છે. તે ભારતમાં અનાજનો વેપાર કરે છે, અને વરસાદ તેની સૌથી મોટી ચિંતા છે.",
+   "sub": "નમસ્તે. આ અનિલની કહાની છે. તે ભારતમાં અનાજનો વેપાર કરે છે, અને વરસાદ તેની સૌથી મોટી ચિંતા છે.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Before the rain"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} in his grain warehouse looking at sacks on the floor, concerned, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "માલના થેલા જમીન પર, અને એક અઠવાડિયાનું અજાણ્યું હવામાન.",
+   "sub": "માલના થેલા જમીન પર, અને એક અઠવાડિયાનું અજાણ્યું હવામાન.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} checking his phone with a serious nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ભારતમાં ScoreMyBiz પર, યોજનાઓ અને હવામાન તેના શહેર માટે ચાર દિવસની હવામાન નજર બતાવે છે.",
+   "sub": "ભારતમાં ScoreMyBiz પર, યોજનાઓ અને હવામાન તેના શહેર માટે ચાર દિવસની હવામાન નજર બતાવે છે.",
+   "min": 8,
+   "screen": "alerts.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} reading the alert on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "એક સાદી ચેતવણી કહે છે કે ભારે વરસાદ આવી રહ્યો છે, અને માલ જમીન પરથી ખસેડો.",
+   "sub": "એક સાદી ચેતવણી કહે છે કે ભારે વરસાદ આવી રહ્યો છે, અને માલ જમીન પરથી ખસેડો.",
+   "min": 8,
+   "screen": "alerts.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} lifting a sack onto a pallet with effort, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તે સરકારી યોજનાઓની યાદી પણ આપે છે જે તેના ધંધાને અનુકૂળ હોય, સત્તાવાર લિંક સાથે. તે ક્યારેય વચન આપતું નથી કે તેને મળશે.",
+   "sub": "તે સરકારી યોજનાઓની યાદી પણ આપે છે જે તેના ધંધાને અનુકૂળ હોય, સત્તાવાર લિંક સાથે. તે ક્યારેય વચન આપતું નથી કે તેને મળશે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} standing relaxed in his dry warehouse, arms folded, smiling.",
+   "vo": "તેના મફત મહિનામાં, વરસાદ પહેલાં માલ જમીન પરથી ખસી જાય છે.",
+   "sub": "તેના મફત મહિનામાં, વરસાદ પહેલાં માલ જમીન પરથી ખસી જાય છે.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ માટે મફત, ઘણી ભારતીય અને આંતરરાષ્ટ્રીય ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

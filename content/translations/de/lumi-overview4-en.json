@@ -1,0 +1,47 @@
+{
+ "title": "Behalte den Überblick",
+ "caption": "Teil 4: Behalte den Überblick. Startseite, Erinnerungen, gesperrte Monate, wer was geändert hat, deine Visitenkarte und mehr in ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Lumi. Teil vier: Behalte den Überblick."
+  },
+  {
+   "vo": "Die Startseite zeigt deinen Tag auf einen Blick."
+  },
+  {
+   "vo": "Die Glocke sammelt Erinnerungen und Fälliges."
+  },
+  {
+   "vo": "Deine Serie und eine Wochenaufgabe auf der Startseite.",
+   "card": "Deine Serie"
+  },
+  {
+   "vo": "Schreib eine Erinnerung, sie wird zu einer Aufgabe."
+  },
+  {
+   "vo": "Erhalte drei bis fünf nächste Schritte zum Abhaken.",
+   "card": "Nächste Schritte"
+  },
+  {
+   "vo": "Sperre einen Monat, damit nichts mehr verrutscht."
+  },
+  {
+   "vo": "Sieh, wer was geändert hat und wann."
+  },
+  {
+   "vo": "Teile deine Visitenkarte mit einem WhatsApp-QR-Code."
+  },
+  {
+   "vo": "Ein persönlicher Gesundheitswert für dein Geld."
+  },
+  {
+   "vo": "Bis zu fünf Läden, jeder mit eigenem Buch.",
+   "card": "Mehrere Läden"
+  },
+  {
+   "vo": "ScoreMyBiz. Dreißig Tage gratis, in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-09"
+}

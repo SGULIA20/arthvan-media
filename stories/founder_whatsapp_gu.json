@@ -1,0 +1,76 @@
+{
+ "id": "founder-whatsapp-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "founder_suit",
+ "feature": "whatsapp-daily-update",
+ "title": "વોટ્સએપની રીત",
+ "post_on": "2026-10-27",
+ "caption": "દુકાન બંધ કરતી વખતે રવિ થાકી જાય છે. તે વોટ્સએપ પર ત્રણ આંકડા મોકલે છે, અને તેનો હિસાબ લખાઈ જાય છે.",
+ "linkedin_text": "A shopkeeper at closing time does not want another form. He sends three numbers in one WhatsApp message: sales, expenses and cash. ScoreMyBiz records them. In the free month a photo of the notebook or a voice note works too, and nothing is saved until he says YES.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#WhatsApp",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "ravi": "Ravi, a young Indian mobile-phone shop owner with a trimmed beard in a checked shirt and a lanyard"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy market lane at night, shop signs glowing behind him, a warm smile.",
+   "vo": "હાય. આ રવિની વાત છે. તે મોબાઈલ વેચે છે, અને દુકાન બંધ કરતી વખતે તે થાકી ગયો છે.",
+   "sub": "હાય. આ રવિની વાત છે. તે મોબાઈલ વેચે છે, અને દુકાન બંધ કરતી વખતે તે થાકી ગયો છે.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "The WhatsApp way"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} gently closing the glass door of his phone shop in the evening, shop lights glowing behind him, a thoughtful expression.",
+   "vo": "આજનો વેપાર, ખર્ચ અને રોકડ હજી તેના મગજમાં છે. તેને આજે રાત્રે બીજું કોઈ ફોર્મ નથી ભરવું.",
+   "sub": "આજનો વેપાર, ખર્ચ અને રોકડ હજી તેના મગજમાં છે. તેને આજે રાત્રે બીજું કોઈ ફોર્મ નથી ભરવું.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} sitting on a stool outside his shop typing on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "એટલે તે વોટ્સએપ ખોલીને ScoreMyBiz ને એક જ મેસેજમાં ત્રણ આંકડા મોકલે છે: વેપાર, ખર્ચ અને રોકડ. સામેથી જવાબ આવે છે કે નોંધાઈ ગયું.",
+   "sub": "એટલે તે વોટ્સએપ ખોલીને ScoreMyBiz ને એક જ મેસેજમાં ત્રણ આંકડા મોકલે છે: વેપાર, ખર્ચ અને રોકડ. સામેથી જવાબ આવે છે કે નોંધાઈ ગયું.",
+   "min": 8,
+   "screen": "whatsapp-numbers.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} speaking into his phone at the shop counter, an open notebook beside him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "મફતના મહિનામાં, તેની નોટબુકનો ફોટો કે બોલીને મોકલેલો મેસેજ પણ ચાલે. તે વાંચીને સંભળાવે, અને હા પાડે તો જ સેવ થાય.",
+   "sub": "મફતના મહિનામાં, તેની નોટબુકનો ફોટો કે બોલીને મોકલેલો મેસેજ પણ ચાલે. તે વાંચીને સંભળાવે, અને હા પાડે તો જ સેવ થાય.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} at a wholesaler's busy counter looking at his phone, boxes of phones behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "હોલસેલર પાસે તેને જાણવું છે કે કોના પૈસા બાકી છે. તે હાય કહે છે, અને ત્રીજો નંબર પસંદ કરે છે.",
+   "sub": "હોલસેલર પાસે તેને જાણવું છે કે કોના પૈસા બાકી છે. તે હાય કહે છે, અને ત્રીજો નંબર પસંદ કરે છે.",
+   "min": 8,
+   "screen": "whatsapp-menu.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} standing in front of his phone shop in the morning sun, arms folded, a bright smile.",
+   "vo": "બસ આ એ જ ચેટ છે જે તેની પાસે પહેલેથી ખુલ્લી છે.",
+   "sub": "બસ આ એ જ ચેટ છે જે તેની પાસે પહેલેથી ખુલ્લી છે.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

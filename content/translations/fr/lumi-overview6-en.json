@@ -1,0 +1,53 @@
+{
+ "title": "Options malines et outils gratuits",
+ "caption": "Partie 6 : options malines et outils gratuits. Saisie photo et vocale, alertes de risque, entraînement aux choix, rappels, fiches imprimables et calculatrices pour ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Lumi. Partie 6 : options malines et outils gratuits."
+  },
+  {
+   "vo": "Photographiez une facture ou une page, vérifiez, enregistrez.",
+   "card": "Saisie photo"
+  },
+  {
+   "vo": "Dites une phrase, comme vendu deux mille à Raju.",
+   "card": "Saisie vocale"
+  },
+  {
+   "vo": "Relancez un client en un geste, sur WhatsApp."
+  },
+  {
+   "vo": "Ouvrez les alertes de risque derrière votre score.",
+   "card": "Alertes de risque"
+  },
+  {
+   "vo": "Testez trois choix, et voyez votre score changer.",
+   "card": "Entraînement aux choix"
+  },
+  {
+   "vo": "Comparez avec des entreprises proches, si assez existent.",
+   "card": "Comparer"
+  },
+  {
+   "vo": "Deux jours creux ? Vous recevez un petit rappel sur WhatsApp.",
+   "card": "Petit rappel"
+  },
+  {
+   "vo": "Imprimez une fiche du jour gratuite, puis envoyez une photo.",
+   "card": "Fiche du jour"
+  },
+  {
+   "vo": "Sur le site : calculatrices et affiches gratuites.",
+   "card": "Outils gratuits en ligne"
+  },
+  {
+   "vo": "Partagez votre lien pour inviter un ami.",
+   "card": "Inviter un ami"
+  },
+  {
+   "vo": "ScoreMyBiz. Gratuit trente jours, en plein de langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-11"
+}

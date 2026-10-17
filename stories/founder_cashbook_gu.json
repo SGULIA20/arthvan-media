@@ -1,0 +1,82 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "id": "founder-cashbook-gu",
+ "character": "founder_suit",
+ "feature": "cash-book-by-day",
+ "title": "કયો દિવસ",
+ "post_on": "2026-12-22",
+ "caption": "વિક્રમના ગલ્લા અને ચોપડાનો હિસાબ મળતો બંધ થયો. કયો દિવસ? સ્થાપક પોતાની વાત કહે છે.",
+ "linkedin_text": "The Cash book in ScoreMyBiz shows each day what the owner started with, every entry that moved money and what he ended with, and when he counted the drawer, how far the count was from the book.",
+ "hashtags": [
+  "#CashBook",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "vikram": "Vikram, a middle-aged Indian electronics shop owner with a trimmed moustache, in a pale green shirt and a smartwatch"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy electronics market lane, shop signs glowing behind him, a warm smile.",
+   "vo": "હાય. આ વિક્રમની વાત છે. એના રોકડ ગલ્લા અને ચોપડાનો હિસાબ મળતો બંધ થયો, અને ખબર નથી કયા દિવસે આવું થયું.",
+   "sub": "હાય. આ વિક્રમની વાત છે. એના રોકડ ગલ્લા અને ચોપડાનો હિસાબ મળતો બંધ થયો, અને ખબર નથી કયા દિવસે આવું થયું.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Which day"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} at his shop counter looking at an open cash drawer and a notebook, puzzled, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "કાગળ પર થોડા હજાર રૂપિયા ઓછા છે, અને આખો મહિનો તપાસવો બહુ લાંબુ કામ છે.",
+   "sub": "કાગળ પર થોડા હજાર રૂપિયા ઓછા છે, અને આખો મહિનો તપાસવો બહુ લાંબુ કામ છે.",
+   "min": 8,
+   "card": "હિસાબ કેમ મળતો નથી?"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} opening an app on his phone with a hopeful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં, રોકડ ચોપડો દરરોજ બતાવે છે: શરૂઆતની રકમ, પૈસાની લેવડદેવડ, અને આખરની રકમ.",
+   "sub": "ScoreMyBiz માં, રોકડ ચોપડો દરરોજ બતાવે છે: શરૂઆતની રકમ, પૈસાની લેવડદેવડ, અને આખરની રકમ.",
+   "min": 8,
+   "screen": "cash-book.png",
+   "card": "રોકડ ચોપડો"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} scrolling on his phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "જ્યારે એણે ગલ્લો ગણ્યો, ત્યારે બતાવ્યું કે ગલ્લા અને ચોપડામાં કેટલો તફાવત હતો.",
+   "sub": "જ્યારે એણે ગલ્લો ગણ્યો, ત્યારે બતાવ્યું કે ગલ્લા અને ચોપડામાં કેટલો તફાવત હતો.",
+   "min": 8,
+   "screen": "cash-book.png",
+   "card": "ગલ્લાની ગણતરી"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} nodding with quiet relief, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "એટલે એ સ્પષ્ટ જોઈ શકે છે કે ગલ્લો કયા દિવસે ચોપડા સાથે મળતો બંધ થયો.",
+   "sub": "એટલે એ સ્પષ્ટ જોઈ શકે છે કે ગલ્લો કયા દિવસે ચોપડા સાથે મળતો બંધ થયો.",
+   "min": 8,
+   "card": "સાચો દિવસ શોધો"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} standing at his counter, smiling, arms folded.",
+   "vo": "કોઈ અંદાજ નહીં. બસ સાચો દિવસ, અને તપાસવા માટેની એન્ટ્રી.",
+   "sub": "કોઈ અંદાજ નહીં. બસ સાચો દિવસ, અને તપાસવા માટેની એન્ટ્રી.",
+   "min": 8,
+   "card": "કોઈ અંદાજ નહીં"
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. ધંધાની તબિયત જાણો. ત્રીસ દિવસ મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5,
+   "card": "ScoreMyBiz"
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "id": "founder-helpers-gu",
+ "character": "founder_suit",
+ "feature": "helpers-with-own-login",
+ "title": "લખો, જો નહીં",
+ "post_on": "2026-12-30",
+ "caption": "મદદનીશે વેચાણ લખવું જોઈએ, નફો જોવો નહીં. નવીન મદદનીશોને તેમનો પોતાનો લૉગિન આપે છે. સ્થાપક તેની વાત કહે છે.",
+ "linkedin_text": "In ScoreMyBiz an owner can give up to three helpers their own WhatsApp-code login. A helper sees one simple screen to add sales, purchases and spending and to count the till, never reports, settings or the Advisor, and every change is attributed to them.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#ShopHelpers"
+ ],
+ "cast": {
+  "naveen": "Naveen, a young Indian clothing shop owner with a fade haircut, in a navy polo shirt"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy clothing shop with racks of shirts behind him, a warm smile.",
+   "vo": "નમસ્તે. આ નવીનની વાત છે. તેની દુકાન વ્યસ્ત છે, અને ગલ્લા પર મદદનીશ ઊભો છે.",
+   "sub": "નમસ્તે. આ નવીનની વાત છે. તેની દુકાન વ્યસ્ત છે, અને ગલ્લા પર મદદનીશ ઊભો છે.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Write, not see"
+  },
+  {
+   "layout": "clip",
+   "clip": "{naveen} watching his shop floor with a thoughtful look, folding a shirt, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તે ઇચ્છે છે કે મદદનીશ વેચાણ લખે. તે નથી ઇચ્છતો કે મદદનીશ તેનો નફો જુએ, કે કઈ કાઢે.",
+   "sub": "તે ઇચ્છે છે કે મદદનીશ વેચાણ લખે. તે નથી ઇચ્છતો કે મદદનીશ તેનો નફો જુએ, કે કઈ કાઢે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{naveen} using his phone with a clear nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં તે મદદનીશને WhatsApp કોડ સાથે પોતાનો લૉગિન આપે છે. ત્રણ મદદનીશો સુધી.",
+   "sub": "ScoreMyBiz માં તે મદદનીશને WhatsApp કોડ સાથે પોતાનો લૉગિન આપે છે. ત્રણ મદદનીશો સુધી.",
+   "min": 8,
+   "screen": "staff.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{naveen} showing something on his phone with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "મદદનીશ એક સાદી સ્ક્રીન જુએ છે: વેચાણ, ખરીદી અને ખર્ચ ઉમેરો, અને ગલ્લો ગણો.",
+   "sub": "મદદનીશ એક સાદી સ્ક્રીન જુએ છે: વેચાણ, ખરીદી અને ખર્ચ ઉમેરો, અને ગલ્લો ગણો.",
+   "min": 8,
+   "screen": "staff.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{naveen} shaking his head gently with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "કોઈ રિપોર્ટ નહીં. કોઈ સેટિંગ્સ નહીં. કોઈ સલાહકાર નહીં.",
+   "sub": "કોઈ રિપોર્ટ નહીં. કોઈ સેટિંગ્સ નહીં. કોઈ સલાહકાર નહીં.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{naveen} standing proudly in his shop, arms folded, smiling.",
+   "vo": "અને દરેક ફેરફાર બતાવે છે કે તે કોણે કર્યો.",
+   "sub": "અને દરેક ફેરફાર બતાવે છે કે તે કોણે કર્યો.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ માટે મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

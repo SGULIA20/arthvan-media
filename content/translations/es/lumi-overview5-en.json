@@ -1,0 +1,52 @@
+{
+ "title": "Saber más, compartir más",
+ "caption": "Parte 5: saber más y compartir más. Tu puntuación del libro, compartir fotos, herramientas de planificación, idiomas y tu cuenta en ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Parte cinco: saber más y compartir más."
+  },
+  {
+   "vo": "¿Ya basta de apuntes? Tu puntuación ahora sale de tu libro.",
+   "card": "Puntuación de tu libro"
+  },
+  {
+   "vo": "En Healthy, comparte tu puntuación como una foto."
+  },
+  {
+   "vo": "Comparte tu semana como una foto también.",
+   "card": "Tu semana, compartida"
+  },
+  {
+   "vo": "Planifica una tienda: ganancia, retorno, dinero necesario.",
+   "card": "Planifica una tienda"
+  },
+  {
+   "vo": "25 idiomas, y las respuestas de WhatsApp siguen tu elección.",
+   "card": "25 idiomas"
+  },
+  {
+   "vo": "Palabras locales de dinero e impuestos, en diecinueve países.",
+   "card": "19 países"
+  },
+  {
+   "vo": "Entra con un código de WhatsApp. Sin contraseña.",
+   "card": "Inicio con WhatsApp"
+  },
+  {
+   "vo": "Edita datos, cambia el número o recupera tu cuenta.",
+   "card": "Tu cuenta"
+  },
+  {
+   "vo": "Informa de un problema y ve la respuesta aquí."
+  },
+  {
+   "vo": "Descarga tus datos o borra tu cuenta.",
+   "card": "Tus datos"
+  },
+  {
+   "vo": "ScoreMyBiz. Gratis por treinta días, en muchos idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-10"
+}

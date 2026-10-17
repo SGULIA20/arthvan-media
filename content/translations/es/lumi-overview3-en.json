@@ -1,0 +1,45 @@
+{
+ "title": "Tu dinero, claro",
+ "caption": "Parte 3: tu dinero, claro. Las pantallas de dinero de ScoreMyBiz, vistas en la app real.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Parte tres: tu dinero, claro."
+  },
+  {
+   "vo": "Cuenta efectivo y banco frente al libro."
+  },
+  {
+   "vo": "Un libro de caja diario, de apertura a cierre."
+  },
+  {
+   "vo": "Busca y baja todo lo vendido, comprado y gastado."
+  },
+  {
+   "vo": "Lo que tienes y debes, en una página."
+  },
+  {
+   "vo": "Ganancia en papel junto a tu dinero real."
+  },
+  {
+   "vo": "Envía una cotización en PDF y hazla venta."
+  },
+  {
+   "vo": "Elige cómo se numeran tus facturas."
+  },
+  {
+   "vo": "Manda los números de hoy por WhatsApp; quedan registrados."
+  },
+  {
+   "vo": "El alquiler y el sueldo pueden repetirse al mes."
+  },
+  {
+   "vo": "Borrado por error? Deshacer espera cinco segundos.",
+   "card": "Deshacer"
+  },
+  {
+   "vo": "ScoreMyBiz. Gratis por treinta días, en varios idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-08"
+}

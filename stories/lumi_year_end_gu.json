@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "post_on": "2026-12-10",
+ "id": "lumi-year-end-gu",
+ "character": "lumi",
+ "feature": "year-end-close",
+ "title": "વર્ષ પૂરું થયું",
+ "caption": "હેમાના સીએને બદલાય નહીં તેવા આંકડા જોઈએ છે. લુમી તેની વાર્તા કહે છે.",
+ "linkedin_text": "At the end of the financial year, ScoreMyBiz previews the year's sales, costs, profit and closing figures. Closing it locks all twelve months and the next year opens from the closing figures. It can be reopened. It is not a tax filing; the CA still prepares those.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#FinancialYear"
+ ],
+ "cast": {
+  "hema": "Hema, a middle-aged Indian woman who runs a stationery shop, in a green cotton saree and round glasses"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a tidy stationery shop with notebooks stacked behind her, a warm smile.",
+   "vo": "હાય, હું લુમી છું. આ હેમાની વાર્તા છે. વર્ષ પૂરું થઈ રહ્યું છે, અને તેના સીએને બદલાય નહીં તેવા આંકડા જોઈએ છે.",
+   "sub": "હાય, હું લુમી છું. આ હેમાની વાર્તા છે. વર્ષ પૂરું થઈ રહ્યું છે, અને તેના સીએને બદલાય નહીં તેવા આંકડા જોઈએ છે.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "The year, closed"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hema} at her shop counter with a calculator and a notebook, a patient expression, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "કોઈ બદલાતા રહેતા આંકડા ન આપી શકે.",
+   "sub": "કોઈ બદલાતા રહેતા આંકડા ન આપી શકે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{hema} looking at her phone with interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં તે વર્ષનું પૂર્વાવલોકન કરે છે: વેચાણ, ખર્ચ, નફો અને આખરી આંકડા.",
+   "sub": "ScoreMyBiz માં તે વર્ષનું પૂર્વાવલોકન કરે છે: વેચાણ, ખર્ચ, નફો અને આખરી આંકડા.",
+   "min": 8,
+   "screen": "year-end.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hema} tapping her phone with a decisive nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "પછી તે વર્ષ પૂરું કરે છે, અને બધા બાર મહિના લોક થઈ જાય છે.",
+   "sub": "પછી તે વર્ષ પૂરું કરે છે, અને બધા બાર મહિના લોક થઈ જાય છે.",
+   "min": 8,
+   "screen": "year-end.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{hema} turning a fresh page of a new notebook with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "આગળનું વર્ષ તે આખરી આંકડાથી શરૂ થાય છે.",
+   "sub": "આગળનું વર્ષ તે આખરી આંકડાથી શરૂ થાય છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{hema} smiling at the camera in her shop, shelves of stationery behind her.",
+   "vo": "આ ટેક્સ ફાઇલિંગ નથી. તેના સીએ હજુ પણ તે કરે છે. અને જો જરૂર પડે, તો તે વર્ષ ફરી ખોલી શકે છે.",
+   "sub": "આ ટેક્સ ફાઇલિંગ નથી. તેના સીએ હજુ પણ તે કરે છે. અને જો જરૂર પડે, તો તે વર્ષ ફરી ખોલી શકે છે.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ માટે મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

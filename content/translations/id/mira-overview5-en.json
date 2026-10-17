@@ -1,0 +1,54 @@
+{
+ "title": "Yang baru di Waypoint",
+ "caption": "Bagian 5: pembaruan terbaru di Waypoint. Mira menunjukkan apa yang baru.",
+ "scenes": [
+  {
+   "vo": "Hai, saya Mira. Bagian lima: apa yang baru di Waypoint."
+  },
+  {
+   "vo": "Setiap kiriman membawa satu dari delapan perasaan."
+  },
+  {
+   "vo": "Baru di sini? Lihat tiga kiriman, lalu bereaksi.",
+   "card": "Tiga pertama"
+  },
+  {
+   "vo": "Balas pribadi: hanya penulis yang bisa melihatnya.",
+   "card": "Balas pribadi"
+  },
+  {
+   "vo": "Ucapkan terima kasih pada yang bereaksi, tanpa nama.",
+   "card": "Ucapkan terima kasih"
+  },
+  {
+   "vo": "Kiriman pertama yang belum dijawab dapat sambutan.",
+   "card": "Sambutan hangat"
+  },
+  {
+   "vo": "Setelah memposting, cek: lebih ringan, sama, berat?",
+   "card": "Cek kabar"
+  },
+  {
+   "vo": "Kit Ketenangan: bernapas, berpijak, tenangkan diri."
+  },
+  {
+   "vo": "Keluar cepat: satu ketukan, dan Anda keluar."
+  },
+  {
+   "vo": "Pesan resmi berputar di atas Dinding."
+  },
+  {
+   "vo": "Pesan tempat di Malam Mendengar, jika dijadwalkan.",
+   "card": "Malam Mendengar"
+  },
+  {
+   "vo": "Akun yang dihapus tahu alasannya dan bisa banding.",
+   "card": "Banding"
+  },
+  {
+   "vo": "Waypoint. Katakan sekali. Gratis di Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-07"
+}

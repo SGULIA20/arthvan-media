@@ -1,0 +1,47 @@
+{
+ "title": "Mantieni il controllo",
+ "caption": "Parte 4: mantieni il controllo. Home, promemoria, mesi bloccati, chi ha modificato cosa, la tua scheda e molto altro in ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Ciao, sono Lumi. Quarta parte: mantieni il controllo."
+  },
+  {
+   "vo": "La Home mostra la tua giornata in un colpo d'occhio."
+  },
+  {
+   "vo": "La campanella raccoglie promemoria e scadenze."
+  },
+  {
+   "vo": "La tua serie e una sfida settimanale, sulla Home.",
+   "card": "La tua serie"
+  },
+  {
+   "vo": "Scrivi un promemoria e diventa un compito datato."
+  },
+  {
+   "vo": "Ottieni da tre a cinque mosse da spuntare.",
+   "card": "Prossime mosse"
+  },
+  {
+   "vo": "Blocca un mese finito, così nulla si sposta."
+  },
+  {
+   "vo": "Guarda chi ha cambiato cosa e quando."
+  },
+  {
+   "vo": "Condividi il tuo biglietto da visita con QR WhatsApp."
+  },
+  {
+   "vo": "Un punteggio di salute personale per i tuoi soldi."
+  },
+  {
+   "vo": "Fino a cinque negozi, ognuno col suo libro.",
+   "card": "Più negozi"
+  },
+  {
+   "vo": "ScoreMyBiz. Gratis per trenta giorni, in tante lingue."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-09"
+}

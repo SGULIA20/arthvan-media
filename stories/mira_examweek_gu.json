@@ -1,0 +1,78 @@
+{
+ "id": "mira-examweek-gu",
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "mira",
+ "feature": "daily-path",
+ "title": "परीक्षा અઠવાડિયું",
+ "post_on": "2026-11-20",
+ "caption": "परीक्षा અઠવાડિયું, અને બધા પૂછે કેમ ચાલે છે. મીરા સનાની વાત કહે છે.",
+ "linkedin_text": "During exam week every friend asks the same question and gets the same answer: fine.\n\nWaypoint's Daily Path asks one specific question a day, the same for everyone, and shows how others answered. Mira tells Sana's story; every screen is the real app.",
+ "hashtags": [
+  "#Waypoint",
+  "#DailyPath",
+  "#ExamWeek"
+ ],
+ "cast": {
+  "sana": "Sana, a young Indian woman with short curly hair in a mustard cardigan, a college student"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera in a quiet university library after hours, stacks of books behind her, a gentle smile.",
+   "vo": "હાય, હું મીરા છું. આ સનાની વાત છે. પરીક્ષા અઠવાડિયું. બધા એને એક જ વાત પૂછે: કેમ ચાલે છે?",
+   "sub": "હાય, હું મીરા છું. આ સનાની વાત છે. પરીક્ષા અઠવાડિયું. બધા એને એક જ વાત પૂછે: કેમ ચાલે છે?",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Exam week"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} in a university library at night surrounded by open books, a friend passing by and she answers with a quick polite smile, the smile fading as he leaves.",
+   "vo": "એ સરસ કહે છે. દર વખતે. સરસ, સરસ, સરસ.",
+   "sub": "એ સરસ કહે છે. દર વખતે. સરસ, સરસ, સરસ.",
+   "min": 8,
+   "card": "परीक्षा અઠવાડિયું"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} on a late bus with her phone, rain on the window, city lights streaking past, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "વેપૉઇન્ટ પર એને ડેઇલી પાથ મળે છે. દિવસનો એક સવાલ, બધા માટે સરખો.",
+   "sub": "વેપૉઇન્ટ પર એને ડેઇલી પાથ મળે છે. દિવસનો એક સવાલ, બધા માટે સરખો.",
+   "min": 8,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} at a canteen table late at night with a cup of chai, her phone in both hands, taking her time to answer, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "આજનો સવાલ વાંચવામાં સહેલો ને જવાબ દેવામાં અઘરો હતો. એણે સમય લીધો.",
+   "sub": "આજનો સવાલ વાંચવામાં સહેલો ને જવાબ દેવામાં અઘરો હતો. એણે સમય લીધો.",
+   "min": 8,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} reading her phone in a quiet corridor with a soft look of recognition, a window with night sky behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "પછી એણે જોયું બીજાએ શું જવાબ દીધા. જુદા જવાબ. લખતા પહેલા એ જ અટકવું.",
+   "sub": "પછી એણે જોયું બીજાએ શું જવાબ દીધા. જુદા જવાબ. લખતા પહેલા એ જ અટકવું.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} closing her laptop and walking out of the library into the cool night, a small genuine smile.",
+   "vo": "પાછી નોટ્સ પર. એ જ પરીક્ષાઓ. અને એ એ રાત્રે વહેલી સૂઈ ગઈ.",
+   "sub": "પાછી નોટ્સ પર. એ જ પરીક્ષાઓ. અને એ એ રાત્રે વહેલી સૂઈ ગઈ.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "વેપૉઇન્ટ. એક જ વાર કહો. ગૂગલ પ્લે પર ફ્રી, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "founder_suit",
+ "feature": "ca-network",
+ "style": "cutout",
+ "hashtags": [
+  "#CharteredAccountant",
+  "#ScoreMyBiz",
+  "#CAIndia"
+ ],
+ "id": "founder-ca-clients-gu",
+ "title": "એ CA ના ક્લાયન્ટ્સ, એક નજરમાં",
+ "post_on": "2027-01-01",
+ "caption": "ભારતમાં CA માટે: ScoreMyBiz તમારા ક્લાયન્ટ્સ સાચવવામાં કેવી રીતે મદદ કરે છે. ભાગ ૧: તમારું પોર્ટફોલિયો, સ્કોર્સ, ચેક-ઇન્સ અને ડ્રાફ્ટ.",
+ "linkedin_text": "For CAs in India. A free ScoreMyBiz CA account gives a code; clients who join with it appear in your portfolio with their score, its trend and what stands out. See who needs a call this week, check in on WhatsApp in one tap, get an email draft in your own voice from this month's numbers, download a client's book as a PDF or CSV, and share your own card on WhatsApp. A client appears only after linking and agreeing.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય. જો તમે ભારતમાં CA છો, તો ScoreMyBiz તમારા ક્લાયન્ટ્સ સાચવવામાં આ રીતે મદદ કરે છે.",
+   "sub": "હાય. જો તમે ભારતમાં CA છો, તો ScoreMyBiz તમારા ક્લાયન્ટ્સ સાચવવામાં આ રીતે મદદ કરે છે.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "ફ્રી CA એકાઉન્ટ ખોલો અને તમારો કોડ શેર કરો. જે ક્લાયન્ટ્સ એનાથી જોડાય તે તમારા પોર્ટફોલિયોમાં દેખાશે.",
+   "sub": "ફ્રી CA એકાઉન્ટ ખોલો અને તમારો કોડ શેર કરો. જે ક્લાયન્ટ્સ એનાથી જોડાય તે તમારા પોર્ટફોલિયોમાં દેખાશે.",
+   "min": 3.5,
+   "screen": "ca-portfolio.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "જુઓ આ અઠવાડિયે કોને ફોન જોઇએ છે, અને કેમ.",
+   "sub": "જુઓ આ અઠવાડિયે કોને ફોન જોઇએ છે, અને કેમ.",
+   "min": 3.5,
+   "screen": "ca-portfolio.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "દરેક ક્લાયન્ટનો સ્કોર, એનો ટ્રેન્ડ અને શું ખાસ છે એ બતાવે છે.",
+   "sub": "દરેક ક્લાયન્ટનો સ્કોર, એનો ટ્રેન્ડ અને શું ખાસ છે એ બતાવે છે.",
+   "min": 3.5,
+   "screen": "ca-client-score.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "એક જ ટૅપમાં WhatsApp પર ચેક ઇન કરો.",
+   "sub": "એક જ ટૅપમાં WhatsApp પર ચેક ઇન કરો.",
+   "min": 3.5,
+   "screen": "ca-client-actions.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "અથવા આ મહિનાના આંકડા પરથી, તમારા પોતાના અવાજમાં ઇમેઇલ ડ્રાફ્ટ મેળવો.",
+   "sub": "અથવા આ મહિનાના આંકડા પરથી, તમારા પોતાના અવાજમાં ઇમેઇલ ડ્રાફ્ટ મેળવો.",
+   "min": 3.5,
+   "screen": "ca-client-actions.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "ક્લાયન્ટનું બુક સમરી PDF તરીકે, અથવા CSV તરીકે ડાઉનલોડ કરો.",
+   "sub": "ક્લાયન્ટનું બુક સમરી PDF તરીકે, અથવા CSV તરીકે ડાઉનલોડ કરો.",
+   "min": 3.5,
+   "screen": "ca-client-reports.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "અને WhatsApp પર ક્લાયન્ટ્સ સાથે તમારું કાર્ડ શેર કરો.",
+   "sub": "અને WhatsApp પર ક્લાયન્ટ્સ સાથે તમારું કાર્ડ શેર કરો.",
+   "min": 3.5,
+   "screen": "ca-card.png",
+   "pose": "front_standing"
+  },
+  {
+   "layout": "scene",
+   "vo": "ક્લાયન્ટ્સ ત્યારે જ દેખાય જ્યારે તેઓ તમને લિંક કરે અને સંમત થાય.",
+   "sub": "ક્લાયન્ટ્સ ત્યારે જ દેખાય જ્યારે તેઓ તમને લિંક કરે અને સંમત થાય.",
+   "min": 4,
+   "pose": "front_standing",
+   "card": "માત્ર સંમતિથી"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ માટે ફ્રી, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

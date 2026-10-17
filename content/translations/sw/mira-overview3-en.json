@@ -1,0 +1,48 @@
+{
+ "title": "Kila Kitu Kwenye Ukuta",
+ "caption": "Sehemu ya 3: kila unachoweza kufanya kwenye Ukuta wa Waypoint, kwenye skrini halisi. Mira anaonyesha.",
+ "scenes": [
+  {
+   "vo": "Hujambo, mimi ni Mira. Sehemu ya tatu: kila kitu kwenye Ukuta."
+  },
+  {
+   "vo": "Chagua Mpya, au Bora kwa siku, wiki au mwezi."
+  },
+  {
+   "vo": "Tupa kete kwa chapisho la kushangaza, au tafuta."
+  },
+  {
+   "vo": "Chuja Ukuta kwa hisia: na wasiwasi, peke yako, na zaidi."
+  },
+  {
+   "vo": "Tikia chapisho, na mtunzi wake anapata ujumbe.",
+   "card": "Tikia"
+  },
+  {
+   "vo": "Si lugha yako? Gusa Tafsiri, au Tafsiri kiotomatiki."
+  },
+  {
+   "vo": "Nyakati: picha ambayo mtu mmoja huona mara moja."
+  },
+  {
+   "vo": "Futa chapisho lako, na linaondoka mara moja.",
+   "card": "Futa wakati wowote"
+  },
+  {
+   "vo": "Shiriki machapisho, alama na Njia za Kila Siku kama picha.",
+   "card": "Shiriki"
+  },
+  {
+   "vo": "Alama hupanga kila mtu kila siku, na madaraja ya Dhahabu na Fedha.",
+   "card": "Ubao wa viongozi"
+  },
+  {
+   "vo": "Na Habari Mpya zinakuambia kilichobadilika."
+  },
+  {
+   "vo": "Waypoint. Sema mara moja. Bure kwenye Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-05"
+}

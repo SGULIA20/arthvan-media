@@ -1,0 +1,48 @@
+{
+ "title": "Todo en el Muro",
+ "caption": "Parte 3: todo lo que puedes hacer en el Muro de Waypoint, en las pantallas reales. Mira lo muestra.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Mira. Parte tres: todo en el Muro."
+  },
+  {
+   "vo": "Elige Nuevo, o Top por día, semana o mes."
+  },
+  {
+   "vo": "Tira los dados para una sorpresa, o busca."
+  },
+  {
+   "vo": "Filtra el Muro por sentimiento: ansioso, solo, más."
+  },
+  {
+   "vo": "Reacciona a una publicación y avisan al autor.",
+   "card": "Reaccionar"
+  },
+  {
+   "vo": "¿No es tu idioma? Toca Traducir o Autotraducción."
+  },
+  {
+   "vo": "Momentos: una foto que alguien ve una sola vez."
+  },
+  {
+   "vo": "Borra tu publicación y se va al instante.",
+   "card": "Borrar cuando quieras"
+  },
+  {
+   "vo": "Comparte publicaciones, puntos y Rutas como fotos.",
+   "card": "Compartir"
+  },
+  {
+   "vo": "Los puntos rankean a diario, con Oro y Plata.",
+   "card": "Tabla de líderes"
+  },
+  {
+   "vo": "Y Qué hay de nuevo te dice qué cambió."
+  },
+  {
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-05"
+}

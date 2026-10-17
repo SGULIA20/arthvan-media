@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "id": "lumi-health-gu",
+ "character": "lumi",
+ "feature": "personal-health-score",
+ "title": "મારી પોતાની બાજુ",
+ "post_on": "2026-12-25",
+ "caption": "સમીરના ઘરના અને દુકાનના પૈસા ભેગા થઈ ગયા છે. લુમી તેને તેની પોતાની બાજુ બતાવે છે. લુમી તેની વાર્તા કહે છે.",
+ "linkedin_text": "ScoreMyBiz has a separate Personal Health Score for an owner's own money: income, spending, savings, debts, insurance and family, with a view of whether he is ready to go full-time on his business. It is not investment or insurance advice.",
+ "hashtags": [
+  "#PersonalFinance",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "sameer": "Sameer, a young Indian cafe owner in Pune with a short beard, in a mustard t-shirt and a black apron"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small cosy cafe with coffee machines and wooden tables behind her, a warm smile.",
+   "vo": "હાય, હું લુમી છું. આ સમીરની વાર્તા છે. તે પુણેમાં કેફે ચલાવે છે, અને તેના ઘરના ને દુકાનના પૈસા ભેગા થઈ ગયા છે.",
+   "sub": "હાય, હું લુમી છું. આ સમીરની વાર્તા છે. તે પુણેમાં કેફે ચલાવે છે, અને તેના ઘરના ને દુકાનના પૈસા ભેગા થઈ ગયા છે.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "My own side"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} behind his cafe counter paying a home bill from the till, a worried look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "કેટલાક દિવસે ગલ્લામાંથી દુકાન ચાલે છે. કેટલાક દિવસે ઘર ચાલે છે.",
+   "sub": "કેટલાક દિવસે ગલ્લામાંથી દુકાન ચાલે છે. કેટલાક દિવસે ઘર ચાલે છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} looking at his phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં તેના પોતાના પૈસા માટે અલગ પર્સનલ હેલ્થ સ્કોર છે.",
+   "sub": "ScoreMyBiz માં તેના પોતાના પૈસા માટે અલગ પર્સનલ હેલ્થ સ્કોર છે.",
+   "min": 8,
+   "screen": "personal-calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} entering numbers on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તે તેની આવક ને ખર્ચ નાખે છે, અને બચત, દેવું ને પરિવાર ઉમેરી શકે છે.",
+   "sub": "તે તેની આવક ને ખર્ચ નાખે છે, અને બચત, દેવું ને પરિવાર ઉમેરી શકે છે.",
+   "min": 8,
+   "screen": "personal-calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} nodding thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "આ તેનો પોતાનો સ્કોર બતાવે છે, અને તે ધંધામાં પૂરો સમય આપી શકે કે નહીં.",
+   "sub": "આ તેનો પોતાનો સ્કોર બતાવે છે, અને તે ધંધામાં પૂરો સમય આપી શકે કે નહીં.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} smiling at the camera in his cafe.",
+   "vo": "સ્કોર છે, સલાહ નહીં. તેની પોતાની બાજુ, સ્પષ્ટ.",
+   "sub": "સ્કોર છે, સલાહ નહીં. તેની પોતાની બાજુ, સ્પષ્ટ.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ મફત, ઘણી ભારતીય ને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

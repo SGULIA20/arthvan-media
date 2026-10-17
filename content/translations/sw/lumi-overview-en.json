@@ -1,54 +1,42 @@
 {
  "title": "Kila kitu, kwa dakika moja",
- "caption": "Kila kitu ambacho ScoreMyBiz inafanya kwa duka lako, kwa dakika moja. Lumi anaonyesha mambo makuu kwenye skrini halisi.",
+ "caption": "Kila kitu ScoreMyBiz inafanya kwa duka lako, kwa dakika moja. Lumi anaonyesha mambo makuu kwenye skrini halisi.",
  "scenes": [
   {
-   "vo": "Hujambo, mimi ni Lumi. Hivi ndivyo ScoreMyBiz inavyofanya kwenye duka lako, kwa dakika moja.",
-   "card": "Dakika moja"
+   "vo": "Hujambo, mimi ni Lumi. Hii ni ScoreMyBiz, kwa dakika moja."
   },
   {
-   "vo": "Andika mauzo, manunuzi na matumizi kwa sekunde chache.",
-   "card": "Rekodi haraka"
+   "vo": "Andika mauzo, manunuzi na matumizi kwa sekunde."
   },
   {
-   "vo": "Ona anayekudai, na umkumbushe kupitia WhatsApp.",
-   "card": "Kumbusha kwa WhatsApp"
+   "vo": "Ona anayekudai, na umkumbushe kwenye WhatsApp."
   },
   {
-   "vo": "Ona unachodaiwa, na kinachotakiwa kulipwa wiki hii.",
-   "card": "Madeni ya wiki hii"
+   "vo": "Ona unachodaiwa, na kinachotakiwa wiki hii."
   },
   {
-   "vo": "Tengeneza risiti na makisio, kisha utume kama PDF.",
-   "card": "Risiti na PDF"
+   "vo": "Tengeneza risiti na nukuu, na uzitume kama PDF."
   },
   {
-   "vo": "Faida, pesa taslimu, na ulichonacho, kwa maneno rahisi.",
-   "card": "Hali ya pesa"
+   "vo": "Faida, pesa taslimu, na ulicho nacho kwa maneno rahisi."
   },
   {
-   "vo": "Alama ya afya ya biashara, yenye nguvu na udhaifu wako.",
-   "card": "Afya ya biashara"
+   "vo": "Alama ya afya ya biashara, yenye nguvu na udhaifu."
   },
   {
-   "vo": "Jaribu kuwazia hali tofauti kwa namba zako.",
-   "card": "Jaribu mawazo"
+   "vo": "Jaribu 'kama vipi' kwenye namba zako mwenyewe."
   },
   {
-   "vo": "Uliza Mshauri kwa lugha yako, katika mwezi wako wa bure.",
-   "card": "Mshauri wa lugha yako"
+   "vo": "Uliza Mshauri kwa lugha yako, katika mwezi wako wa bure."
   },
   {
-   "vo": "Wape wafanyakazi nenosiri lao wenyewe.",
-   "card": "Nenosiri la wafanyakazi"
+   "vo": "Wape wasaidizi nenosiri lao wenyewe."
   },
   {
-   "vo": "Na utume kitabu chako cha hesabu kwa CA yako.",
-   "card": "Shiriki na CA"
+   "vo": "Na ushiriki kitabu chako na CA yako."
   },
   {
-   "vo": "ScoreMyBiz. Jua afya ya biashara yako. Bure kwa siku thelathini, kwa lugha nyingi.",
-   "card": "Siku 30 bure"
+   "vo": "ScoreMyBiz. Bure kwa siku thelathini, kwa lugha nyingi."
   }
  ],
  "machine_translated": true,

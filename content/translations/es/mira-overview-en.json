@@ -1,39 +1,39 @@
 {
  "title": "Waypoint en un minuto",
- "caption": "Waypoint en un minuto: un lugar para decir una verdad, sin tu nombre. Mira muestra las funciones clave en las pantallas reales.",
+ "caption": "Waypoint en un minuto: un lugar para decir una verdad, sin tu nombre. Mira muestra lo principal en las pantallas reales.",
  "scenes": [
   {
-   "vo": "Hola, soy Mira. Esto es Waypoint en un minuto: un lugar para decir una verdad, sin tu nombre."
+   "vo": "Hola, soy Mira. Aquí tienes Waypoint, en un minuto."
   },
   {
-   "vo": "Cada día tienes un nombre nuevo, creado solo para hoy."
+   "vo": "Cada día tienes un nombre nuevo, solo para hoy."
   },
   {
-   "vo": "Escribe una frase verdadera. Es lo único que pide."
+   "vo": "Escribe una frase sincera. Eso es todo."
   },
   {
-   "vo": "Lee lo que otros escribieron esta noche, en el Muro."
+   "vo": "Lee lo que otros escribieron hoy en el Muro."
   },
   {
-   "vo": "Pregunta al Camino: una pregunta, dos o cuatro opciones."
+   "vo": "Pregunta al Camino: una duda, dos a cuatro opciones."
   },
   {
-   "vo": "O toca Voz y habla. Los demás oyen la voz de un personaje."
+   "vo": "O toca Voz y habla. Se oye una voz de personaje."
   },
   {
-   "vo": "Espera una coincidencia, o habla con Mira, una guía de IA."
+   "vo": "Espera un contacto, o habla con Mira, una guía IA."
   },
   {
-   "vo": "Registra tu ánimo con un toque. Sin escribir."
+   "vo": "Registra tu ánimo al tocar. Sin escribir."
   },
   {
-   "vo": "Noventa segundos en la Sala de descanso, una vez al día."
+   "vo": "Noventa segundos en la Sala, una vez al día."
   },
   {
    "vo": "En dieciséis idiomas."
   },
   {
-   "vo": "Waypoint. dilo una vez. Gratis en Google Play, en muchos idiomas de India y el mundo."
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play."
   }
  ],
  "machine_translated": true,

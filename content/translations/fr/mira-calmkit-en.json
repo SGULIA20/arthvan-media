@@ -1,0 +1,27 @@
+{
+ "title": "Deux minutes.",
+ "caption": "Deux minutes. Pas de compte, rien n'est enregistré. Mira montre le kit Calm dans Waypoint.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Mira. Voici l'histoire de Priya. Ses journées sont réglées. Ses soirées non."
+  },
+  {
+   "vo": "Certains soirs, elle veut juste deux minutes qui lui appartiennent.",
+   "card": "Tard le soir"
+  },
+  {
+   "vo": "Waypoint a un kit Calm maintenant. Respirez. Ancrez-vous. Déconnectez. Deux minutes chacun, pas de compte, rien enregistré."
+  },
+  {
+   "vo": "Puis le Daily Path, une question pour tous. Elle y répond plus lentement ce soir."
+  },
+  {
+   "vo": "Et sur le Wall, une autre personne a vécu la même sorte de soirée."
+  },
+  {
+   "vo": "Waypoint. Deux minutes qui sont à vous. Gratuit sur Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-16"
+}

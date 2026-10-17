@@ -1,0 +1,55 @@
+{
+ "title": "Enemmän kaikkea",
+ "caption": "Osa 2: lisää siitä, mitä ScoreMyBiz tekee liikkeellesi, oikeilla näytöillä. Lumi näyttää loput.",
+ "scenes": [
+  {
+   "vo": "Moi, minä olen Lumi. Osa kaksi: lisää ScoreMyBizistä."
+  },
+  {
+   "card": "Kirjaa myynnit",
+   "vo": "Kiireellä? Kirjoita vain päivän summat."
+  },
+  {
+   "card": "Asiakastiedot",
+   "vo": "Näe kaikki myynnit ja maksut yhdellä asiakkaalla."
+  },
+  {
+   "card": "Tuotteet",
+   "vo": "Pidä tuotteet ja viimeiset hinnat valmiina."
+  },
+  {
+   "card": "WhatsApp",
+   "vo": "Kysy omat lukusi WhatsAppissa."
+  },
+  {
+   "card": "Toimii ilman verkkoa",
+   "vo": "Ei kenttää? Merkinnät odottavat turvassa."
+  },
+  {
+   "card": "Nollapiste",
+   "vo": "Löydä yrityksesi nollapiste."
+  },
+  {
+   "card": "Tavoitteet",
+   "vo": "Aseta tavoitteet ja päivämäärät."
+  },
+  {
+   "card": "Yrityksen pisteet",
+   "vo": "Seuraa pisteitäsi ajan kanssa."
+  },
+  {
+   "card": "Päätöspeli",
+   "vo": "Harjoittele isoja päätöksiä pelissä."
+  },
+  {
+   "card": "Tilinpäätös",
+   "vo": "Sulje vuosi puhtaalla kirjalla."
+  },
+  {
+   "card": "Ilmainen kokeilu",
+   "vo": "ScoreMyBiz. Tiedä yrityksesi kunto. Ilmainen 30 päivää."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-03"
+}

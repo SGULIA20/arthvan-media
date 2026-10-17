@@ -1,0 +1,47 @@
+{
+ "title": "Mantén el control",
+ "caption": "Parte 4: mantén el control. Inicio, recordatorios, meses bloqueados, quién cambió qué, tu tarjeta y más en ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Parte cuatro: mantén el control."
+  },
+  {
+   "vo": "Inicio te muestra el día de un vistazo."
+  },
+  {
+   "vo": "La campana junta recordatorios y avisos."
+  },
+  {
+   "vo": "Tu buena racha y un reto semanal en Inicio.",
+   "card": "Tu racha"
+  },
+  {
+   "vo": "Escribe un recordatorio y pasa a ser una tarea."
+  },
+  {
+   "vo": "Recibe de tres a cinco pasos a seguir.",
+   "card": "Pasos a seguir"
+  },
+  {
+   "vo": "Bloquea un mes listo para que nada cambie."
+  },
+  {
+   "vo": "Mira quién cambió qué y cuándo."
+  },
+  {
+   "vo": "Comparte tu tarjeta con un código QR de WhatsApp."
+  },
+  {
+   "vo": "Una nota de salud para tu propio dinero."
+  },
+  {
+   "vo": "Hasta cinco tiendas, cada una con su libro.",
+   "card": "Varias tiendas"
+  },
+  {
+   "vo": "ScoreMyBiz. Gratis treinta días, en varios idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-09"
+}

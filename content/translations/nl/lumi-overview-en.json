@@ -1,42 +1,42 @@
 {
  "title": "Alles in één minuut",
- "caption": "Alles wat ScoreMyBiz voor je zaak doet, in één minuut. Lumi laat de belangrijkste dingen zien op de echte schermen.",
+ "caption": "Alles wat ScoreMyBiz voor je winkel doet, in één minuut. Lumi laat de belangrijkste dingen zien op de echte schermen.",
  "scenes": [
   {
-   "vo": "Hoi, ik ben Lumi. Dit doet ScoreMyBiz voor je zaak, in één minuut."
+   "vo": "Hoi, ik ben Lumi. Hier is ScoreMyBiz, in één minuut."
   },
   {
    "vo": "Noteer verkoop, inkopen en uitgaven in seconden."
   },
   {
-   "vo": "Zie wie je betaalt, en herinner ze eraan via WhatsApp."
+   "vo": "Zie wie je betaalt, en herinner ze via WhatsApp."
   },
   {
-   "vo": "Zie wat je betaalt en wat deze week openstaat."
+   "vo": "Zie wat je schuldt, en wat er deze week openstaat."
   },
   {
-   "vo": "Maak rekeningen en offertes, en deel ze als pdf."
+   "vo": "Maak rekeningen en offertes, en deel ze als PDF."
   },
   {
-   "vo": "Winst, kas, bezit en schuld, in duidelijke taal."
+   "vo": "Winst, kas, en bezit of schuld, in klare taal."
   },
   {
-   "vo": "Een bedrijfsgezondheidsscore met sterke en zwakke punten."
+   "vo": "Een bedrijfs-gezondheidsscore, met plus- en minpunten."
   },
   {
-   "vo": "Probeer een wat-als op je eigen cijfers."
+   "vo": "Probeer 'wat-als' met je eigen cijfers."
   },
   {
-   "vo": "Vraag de adviseur in je eigen taal, je gratis maand."
+   "vo": "Vraag het de Adviseur in je eigen taal, in je gratis maand."
   },
   {
-   "vo": "Geef hulpen een eigen login."
+   "vo": "Geef helpers een eigen inlog."
   },
   {
-   "vo": "En deel je boek met je CA."
+   "vo": "En deel je boekhouding met je CA."
   },
   {
-   "vo": "ScoreMyBiz. Ken je bedrijfsgezondheid. Dertig dagen gratis."
+   "vo": "ScoreMyBiz. Dertig dagen gratis, in vele talen."
   }
  ],
  "machine_translated": true,

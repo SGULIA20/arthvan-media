@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "post_on": "2026-12-10",
+ "id": "lumi-accountant-file-gu",
+ "character": "lumi",
+ "feature": "file-for-accountant",
+ "title": "ફાઇલ મોકલો, ટાઇપ ન કરો",
+ "caption": "નાદિયાના ચાર્ટર્ડ એકાઉન્ટન્ટને આખા મહિનાનો હિસાબ ફાઇલ તરીકે જોઈતો હતો. લુમીએ તેની વાત કરી છે.",
+ "linkedin_text": "A shop owner's accountant uses different software and wants the month as a file. In ScoreMyBiz, File for my accountant lets the owner pick a period and a format: one combined file, or the bank-style files that QuickBooks and Xero import, then share it.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Accountant"
+ ],
+ "cast": {
+  "nadia": "Nadia, a young woman who runs a small bakery, in a flour-dusted apron with her hair tied back"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small neat bakery with warm morning light and trays of bread behind her, a warm smile.",
+   "vo": "હાય, હું લુમી છું. આ નાદિયાની વાત છે. તે બેકરી ચલાવે છે, અને તેના એકાઉન્ટન્ટને મહિનાના આંકડા જોઈએ છે.",
+   "sub": "હાય, હું લુમી છું. આ નાદિયાની વાત છે. તે બેકરી ચલાવે છે, અને તેના એકાઉન્ટન્ટને મહિનાના આંકડા જોઈએ છે.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "A file, not a retype"
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} on a phone call at her bakery counter, a thoughtful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તેના એકાઉન્ટન્ટ અલગ સોફ્ટવેર વાપરે છે, અને મહિનાની લેવડદેવડ ફાઇલ તરીકે માંગે છે.",
+   "sub": "તેના એકાઉન્ટન્ટ અલગ સોફ્ટવેર વાપરે છે, અને મહિનાની લેવડદેવડ ફાઇલ તરીકે માંગે છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} tapping her phone behind the counter, flour on her apron, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં તે એકાઉન્ટન્ટ માટે એક્સપોર્ટ ખોલે છે, અને સમય નક્કી કરે છે.",
+   "sub": "ScoreMyBiz માં તે એકાઉન્ટન્ટ માટે એક્સપોર્ટ ખોલે છે, અને સમય નક્કી કરે છે.",
+   "min": 8,
+   "screen": "export-book.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} choosing on her phone with a curious look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "પછી ફોર્મેટ: સ્પ્રેડશીટ ફાઇલ, અથવા QuickBooks, Wave અને Xero માટે બેંક ફાઇલ.",
+   "sub": "પછી ફોર્મેટ: સ્પ્રેડશીટ ફાઇલ, અથવા QuickBooks, Wave અને Xero માટે બેંક ફાઇલ.",
+   "min": 8,
+   "screen": "export-book.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} pressing send on her phone with a small smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તે પોતાના ફોનથી જ સીધી એકાઉન્ટન્ટને ફાઇલ મોકલી દે છે.",
+   "sub": "તે પોતાના ફોનથી જ સીધી એકાઉન્ટન્ટને ફાઇલ મોકલી દે છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{nadia} wiping her hands and smiling at the camera, bread on the shelves behind her.",
+   "vo": "કાંઈ ટાઇપ કરવાનું નથી. તેના એકાઉન્ટન્ટ ફાઇલ ડાઉનલોડ કરી લે છે.",
+   "sub": "કાંઈ ટાઇપ કરવાનું નથી. તેના એકાઉન્ટન્ટ ફાઇલ ડાઉનલોડ કરી લે છે.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. બિઝનેસની તબિયત જાણો. ત્રીસ દિવસ ફ્રી, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

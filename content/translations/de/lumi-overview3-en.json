@@ -1,0 +1,45 @@
+{
+ "title": "Dein Geld, ganz klar",
+ "caption": "Teil 3: Dein Geld, ganz klar. Die ScoreMyBiz-Geldübersichten in der echten App.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Lumi. Teil drei: Dein Geld, ganz klar."
+  },
+  {
+   "vo": "Zähl Bargeld und Bank zum Buch."
+  },
+  {
+   "vo": "Ein Kassenbuch von Tag zu Tag, von Anfang bis Ende."
+  },
+  {
+   "vo": "Such und lade alles runter, was verkauft und gekauft wurde."
+  },
+  {
+   "vo": "Was du hast und schuldest, auf einer Seite."
+  },
+  {
+   "vo": "Buchhalterischer Gewinn neben deinem echten Geld."
+  },
+  {
+   "vo": "Schick ein PDF-Angebot, mach einen Verkauf draus."
+  },
+  {
+   "vo": "Wähl, wie deine Rechnungen nummeriert sind."
+  },
+  {
+   "vo": "Schick Heutiges per WhatsApp; es wird gespeichert."
+  },
+  {
+   "vo": "Miete und Gehalt können monatlich kommen."
+  },
+  {
+   "vo": "Falsch gelöscht? Fünf Sekunden zum Rückgängigmachen.",
+   "card": "Rückgängig"
+  },
+  {
+   "vo": "ScoreMyBiz. Dreißig Tage gratis, in vielen Sprachen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-08"
+}

@@ -1,0 +1,78 @@
+{
+ "id": "lumi-scan-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "feature": "photo-entry",
+ "title": "ટાઇપિંગ છોડો",
+ "post_on": "2026-11-25",
+ "caption": "તેનો આખો મહિનો એક નોટબુકમાં છે. સુનિતા ટાઇપ કરવાના બદલે એક પાનાનો ફોટો પાડે છે. લુમિ તેની વાર્તા કહે છે.",
+ "linkedin_text": "Typing a month of handwritten sales into an app is an evening most shop owners do not have.\n\nIn ScoreMyBiz you can scan a photo of a bill or notebook page, or speak your numbers; the numbers fill in for you to check, and nothing is saved until you do. The AI features are part of the free first month. Lumi tells Sunita's story; every screen is the real app.",
+ "hashtags": [
+  "#ScanAPhoto",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "sunita": "Sunita, an Indian woman in her fifties who owns a grocery shop, in a green cotton saree with reading glasses on a chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera inside a small bright grocery shop with shelves of packets behind her, a friendly smile.",
+   "vo": "હાય, હું લુમિ છું. આ સુનિતાની વાર્તા છે. તેનો આખો મહિનો નોટબુકમાં, તેના પોતાના હાથે લખેલો છે.",
+   "sub": "હાય, હું લુમિ છું. આ સુનિતાની વાર્તા છે. તેનો આખો મહિનો નોટબુકમાં, તેના પોતાના હાથે લખેલો છે.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Skip the typing"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} at the counter of her grocery shop turning pages of a thick handwritten notebook, a pen behind her ear, a tired smile, evening light.",
+   "vo": "આ બધું ટાઇપ કરવામાં એવી સાંજ જાય જે તેની પાસે નથી.",
+   "sub": "આ બધું ટાઇપ કરવામાં એવી સાંજ જાય જે તેની પાસે નથી.",
+   "min": 8,
+   "card": "નોટબુક"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} holding her phone above an open notebook page on the counter as if taking a photo, glasses on, concentrating, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં તે સ્કેન અ ફોટો દબાવે છે, અને નોટબુકના પાનાનો ફોટો પાડે છે.",
+   "sub": "ScoreMyBiz માં તે સ્કેન અ ફોટો દબાવે છે, અને નોટબુકના પાનાનો ફોટો પાડે છે.",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} looking closely at her phone with a small nod, a pencil in her hand, the grocery shop behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "આંકડા ચકાસવા માટે જાતે ભરાઈ જાય છે. તે એક સુધારે છે, અને પછી જ સેવ કરે છે.",
+   "sub": "આંકડા ચકાસવા માટે જાતે ભરાઈ જાય છે. તે એક સુધારે છે, અને પછી જ સેવ કરે છે.",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} speaking into her phone while standing between grocery shelves, a relaxed smile, soft shop light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "અથવા તે પોતાના આંકડા બોલી પણ શકે છે.",
+   "sub": "અથવા તે પોતાના આંકડા બોલી પણ શકે છે.",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} closing the shop shutter in the evening with a light relieved smile, the notebook tucked under her arm.",
+   "vo": "તપાસો, પછી સેવ કરો. ચોપડો તેની પાસે જ રહે છે.",
+   "sub": "તપાસો, પછી સેવ કરો. ચોપડો તેની પાસે જ રહે છે.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબियत જાણો. ત્રીસ દિવસ મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

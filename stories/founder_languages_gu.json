@@ -1,0 +1,78 @@
+{
+ "id": "founder-languages-gu",
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "founder_casual",
+ "feature": "languages",
+ "title": "તમારી ભાષા",
+ "post_on": "2026-11-22",
+ "caption": "તે સ્વાહિલીમાં વિચારે છે અને અંગ્રેજીમાં સ્ક્રોલ કરે છે. જોસેફ વેપોઇન્ટની ભાષાઓ ચાલુ કરે છે. ફાઉન્ડર તેની વાર્તા કહે છે.",
+ "linkedin_text": "Most apps ask people to read in a language that is not their first.\n\nWaypoint works in 16 languages, and a post written in another language can be translated with one tap, or automatically. The founder character tells Joseph's story; every screen is the real app.",
+ "hashtags": [
+  "#Languages",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "joseph": "Joseph, a young Kenyan man in his twenties with short hair, a green polo shirt and a student backpack"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera in a busy colourful street market in the afternoon, a warm smile.",
+   "vo": "હાય. આ જોસેફની વાર્તા છે. તે સ્વાહિલીમાં વિચારે છે અને અંગ્રેજીમાં સ્ક્રોલ કરે છે.",
+   "sub": "હાય. આ જોસેફની વાર્તા છે. તે સ્વાહિલીમાં વિચારે છે અને અંગ્રેજીમાં સ્ક્રોલ કરે છે.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "Your language"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} at a bus stop in Nairobi holding his phone with a slightly tired look, a matatu minibus passing behind him, afternoon light.",
+   "vo": "મોટાભાગની એપ્સ તેને તેની પહેલી ન હોય તેવી ભાષામાં વાંચવાનું કહે છે.",
+   "sub": "મોટાભાગની એપ્સ તેને તેની પહેલી ન હોય તેવી ભાષામાં વાંચવાનું કહે છે.",
+   "min": 8,
+   "card": "તેની પહેલી ભાષા નથી"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} sitting on a bench in a sunny park scrolling his phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "વેપોઇન્ટમાં સોળ ભાષાઓ છે. દરેક પોતાની પસંદ કરે છે.",
+   "sub": "વેપોઇન્ટમાં સોળ ભાષાઓ છે. દરેક પોતાની પસંદ કરે છે.",
+   "min": 8,
+   "screen": "language.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} smiling at his phone as he reads, a friend looking over his shoulder, afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "બીજી ભાષામાંથી એક પોસ્ટ આવે છે. એક ટેપ, અને તે અનુવાદ થઈ જાય છે.",
+   "sub": "બીજી ભાષામાંથી એક પોસ્ટ આવે છે. એક ટેપ, અને તે અનુવાદ થઈ જાય છે.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} on a minibus seat reading his phone with a relaxed grin, bright street passing the window, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "અથવા તે ઓટો-ટ્રાન્સલેટ ચાલુ કરી શકે છે, અને વોલ તેની ભાષામાં વાંચે છે.",
+   "sub": "અથવા તે ઓટો-ટ્રાન્સલેટ ચાલુ કરી શકે છે, અને વોલ તેની ભાષામાં વાંચે છે.",
+   "min": 8,
+   "screen": "my-waypoints.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} laughing with friends outside a university building in warm light, phone in hand.",
+   "vo": "એ જ વોલ. તેના પોતાના શબ્દો.",
+   "sub": "એ જ વોલ. તેના પોતાના શબ્દો.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "વેપોઇન્ટ. એકવાર કહો. ગૂગલ પ્લે પર મફત, ઘણી ભારતીય અને આંતરરાષ્ટ્રીય ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

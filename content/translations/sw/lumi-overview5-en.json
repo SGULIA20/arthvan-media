@@ -1,0 +1,52 @@
+{
+ "title": "Jua zaidi, sema zaidi",
+ "caption": "Sehemu ya 5: jua zaidi na useme zaidi. Alama yako kutoka kwa kitabu, tuma picha, zana za kupanga, lugha na akaunti yako katika ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Habari, mimi ni Lumi. Sehemu ya tano: jua zaidi, na useme zaidi."
+  },
+  {
+   "vo": "Kuingiza kutosha? Alama yako sasa inatoka kwa kitabu chako.",
+   "card": "Alama kutoka kitabu chako"
+  },
+  {
+   "vo": "Huko Healthy, tuma alama yako kama picha."
+  },
+  {
+   "vo": "Tuma wiki yako kama picha pia.",
+   "card": "Wiki yako, imetumwa"
+  },
+  {
+   "vo": "Panga duka: faida, malipo, pesa inayohitajika.",
+   "card": "Panga duka"
+  },
+  {
+   "vo": "Lugha 25, na majibu ya WhatsApp yafuata chaguo lako.",
+   "card": "Lugha 25"
+  },
+  {
+   "vo": "Pesa za hapa na maneno ya ushuru, katika nchi kumi na tisa.",
+   "card": "Nchi 19"
+  },
+  {
+   "vo": "Ingia na nambari ya WhatsApp. Hakuna nenosiri.",
+   "card": "Kuingia kwa WhatsApp"
+  },
+  {
+   "vo": "Hariri maelezo, badili nambari, au rudisha akaunti yako.",
+   "card": "Akaunti yako"
+  },
+  {
+   "vo": "Ripoti tatizo, na uone jibu hapa."
+  },
+  {
+   "vo": "Pakua data yako, au futa akaunti yako.",
+   "card": "Data yako"
+  },
+  {
+   "vo": "ScoreMyBiz. Bure kwa siku thelathini, katika lugha nyingi."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-10"
+}

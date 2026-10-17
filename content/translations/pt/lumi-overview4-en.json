@@ -1,0 +1,47 @@
+{
+ "title": "Mantenha o controle",
+ "caption": "Parte 4: mantenha o controle. Início, lembretes, meses fechados, quem alterou o quê, seu cartão e muito mais no ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Oi, eu sou a Lumi. Parte quatro: mantenha o controle."
+  },
+  {
+   "vo": "A tela Início mostra seu dia de relance."
+  },
+  {
+   "vo": "O sino reúne lembretes, notas e avisos."
+  },
+  {
+   "vo": "Sua sequência e um desafio semanal no Início.",
+   "card": "Sua sequência"
+  },
+  {
+   "vo": "Digite um lembrete e vire uma tarefa com data."
+  },
+  {
+   "vo": "Receba de três a cinco passos para marcar.",
+   "card": "Próximos passos"
+  },
+  {
+   "vo": "Tranque um mês concluído para nada mudar."
+  },
+  {
+   "vo": "Veja quem mudou o quê e quando."
+  },
+  {
+   "vo": "Compartilhe seu cartão com QR code do WhatsApp."
+  },
+  {
+   "vo": "Uma nota de saúde pessoal para o seu dinheiro."
+  },
+  {
+   "vo": "Até cinco lojas, cada uma com seu livro.",
+   "card": "Várias lojas"
+  },
+  {
+   "vo": "ScoreMyBiz. Grátis por trinta dias, em vários idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-09"
+}

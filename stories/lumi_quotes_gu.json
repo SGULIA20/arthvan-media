@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "id": "lumi-quotes-gu",
+ "character": "lumi",
+ "feature": "quotes-for-customers",
+ "title": "એક કલાકમાં ક્વોટ",
+ "post_on": "2026-12-28",
+ "caption": "એક કન્સેપ્ટ કોન્ટ્રાક્ટર ઓર્ડર પહેલાં ભાવ માગે છે. તરુણ તે જ કલાકે સરસ ક્વોટ મોકલે છે. લુમી તેની વાર્તા કહે છે.",
+ "linkedin_text": "In ScoreMyBiz, My items and prices keeps the last selling rate and cost of everything the owner sells. A quotation is built from it, shared as a PDF, and turned into a recorded sale in one tap when the customer says yes.",
+ "hashtags": [
+  "#Quotation",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "tarun": "Tarun, a middle-aged Indian building-materials dealer with a trimmed beard, in a grey shirt with rolled sleeves"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a building materials shop with stacked cement bags and paint tins behind her, a warm smile.",
+   "vo": "હાય, હું લુમી છું. આ તરુણની વાત છે. એક કોન્ટ્રાક્ટર ઓર્ડર પહેલાં ભાવ માગે છે અને તે જ કલાકે જોઇએ છે.",
+   "sub": "હાય, હું લુમી છું. આ તરુણની વાત છે. એક કોન્ટ્રાક્ટર ઓર્ડર પહેલાં ભાવ માગે છે અને તે જ કલાકે જોઇએ છે.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Quote in an hour"
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} at his shop counter with a calculator and a scribbled slip, scratching his head, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તે મોઢેથી ભાવ કહી શકે છે, પણ ગયા મહિને રેતીનો શું ભાવ લીધો હતો તે યાદ નથી.",
+   "sub": "તે મોઢેથી ભાવ કહી શકે છે, પણ ગયા મહિને રેતીનો શું ભાવ લીધો હતો તે યાદ નથી.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} reading his phone with a relieved nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં 'મારી ચીજો અને ભાવ' બતાવે છે કે તે શું વેચે છે, સાથે છેલ્લો વેચાણ અને પડતર ભાવ.",
+   "sub": "ScoreMyBiz માં 'મારી ચીજો અને ભાવ' બતાવે છે કે તે શું વેચે છે, સાથે છેલ્લો વેચાણ અને પડતર ભાવ.",
+   "min": 8,
+   "screen": "items.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} tapping his phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "પછી તે ક્વોટેશન બનાવે છે: ગ્રાહક, ચીજો, એક સરસ પાનું.",
+   "sub": "પછી તે ક્વોટેશન બનાવે છે: ગ્રાહક, ચીજો, એક સરસ પાનું.",
+   "min": 8,
+   "screen": "quotations.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} sending something from his phone with a satisfied smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તે સીધા તેના ફોનમાંથી PDF તરીકે મોકલે છે.",
+   "sub": "તે સીધા તેના ફોનમાંથી PDF તરીકે મોકલે છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{tarun} shaking hands warmly in an empty shop doorway, smiling at the camera.",
+   "vo": "જ્યારે કોન્ટ્રાક્ટર હા પાડે છે, ત્યારે એક ટૅપથી ક્વોટેશન ચોપડામાં વેચાણ બની જાય છે.",
+   "sub": "જ્યારે કોન્ટ્રાક્ટર હા પાડે છે, ત્યારે એક ટૅપથી ક્વોટેશન ચોપડામાં વેચાણ બની જાય છે.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

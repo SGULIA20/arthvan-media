@@ -1,0 +1,51 @@
+{
+ "title": "Mazungumzo, usalama na mipangilio",
+ "caption": "Sehemu ya 4: mazungumzo, usalama na mipangilio kwenye Waypoint. Mira anaonyesha jinsi inavyoweka watu salama.",
+ "scenes": [
+  {
+   "vo": "Hodi, mimi ni Mira. Sehemu ya nne: mazungumzo, usalama na mipangilio."
+  },
+  {
+   "vo": "Miaka kumi na nane na kuendelea, kukubali Sheria na Miongozo.",
+   "card": "18 na kuendelea"
+  },
+  {
+   "vo": "Mazungumzo ya mechi ni ya maandishi pekee, kwa dakika thelathini.",
+   "card": "Mazungumzo ya dakika 30"
+  },
+  {
+   "vo": "Maliza baada ya dakika tano, zuia wakati wowote, ikadirie.",
+   "card": "Unaamua wewe"
+  },
+  {
+   "vo": "Ripoti au zuia chapisho lolote, ujumbe au Wakati.",
+   "card": "Ripoti na zuia"
+  },
+  {
+   "vo": "Machapisho yachunguzwa kwanza; unyanyasaji na chuki vinakataliwa.",
+   "card": "Kuchunguzwa kwanza"
+  },
+  {
+   "vo": "Chapisho lenye sauti ya hatari linaonyesha namba za usaidizi na usitishaji.",
+   "card": "Kabla hujachapisha"
+  },
+  {
+   "vo": "Chochote kinachojifanya ni wafanyakazi wa Waypoint kinawekwa alama ya si rasmi."
+  },
+  {
+   "vo": "Mipangilio, msaada, sheria na maoni: Njia Zangu."
+  },
+  {
+   "vo": "Futa akaunti yako na data yako kutoka huko pia."
+  },
+  {
+   "vo": "Arifa, maongozi ya kusasisha na upau wa nje ya mtandao.",
+   "card": "Endelea kujua kila kitu"
+  },
+  {
+   "vo": "Waypoint. Sema mara moja. Bure kwenye Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-06"
+}

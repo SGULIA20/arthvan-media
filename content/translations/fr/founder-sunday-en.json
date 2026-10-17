@@ -1,0 +1,30 @@
+{
+ "title": "Dimanche, 21h",
+ "caption": "Nouvelle ville, nouveau job, et un jour qu'on ne raconte pas. Le fondateur raconte l'histoire de Rohan.",
+ "scenes": [
+  {
+   "vo": "Salut. C'est l'histoire de Rohan. Nouvelle ville, nouveau job, grand appart. La journée finit, sans un mot."
+  },
+  {
+   "vo": "Le week-end fait du bruit. Tout le monde sort. Lui, il est à la fenêtre.",
+   "card": "Dimanche, 21h"
+  },
+  {
+   "vo": "Sur Waypoint, il a son propre nom pour aujourd'hui. Il tape une vraie phrase. C'est tout."
+  },
+  {
+   "vo": "Mira lui montre le Mur : les phrases du soir de gens comme lui. Villes différentes, même heure."
+  },
+  {
+   "vo": "Quand il veut un vrai échange, Waypoint le met en lien avec une personne. Juste deux phrases, et une réponse."
+  },
+  {
+   "vo": "Et les soirs sans envie de parler, le kit Calm. Deux minutes, puis dodo."
+  },
+  {
+   "vo": "Waypoint. Dis-le une fois. Gratuit sur Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-14"
+}

@@ -1,0 +1,53 @@
+{
+ "title": "Recursos extras e ferramentas grátis",
+ "caption": "Parte 6: recursos extras e ferramentas grátis. Entrada por foto e voz, alertas de risco, prática de decisão, avisos, fichas para imprimir e calculadoras para ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Oi, sou a Lumi. Parte seis: extras e ferramentas grátis."
+  },
+  {
+   "vo": "Fotografe uma conta ou caderno, confira e salve.",
+   "card": "Entrada por foto"
+  },
+  {
+   "vo": "Diga uma frase, como vendi dois mil para o João.",
+   "card": "Entrada por voz"
+  },
+  {
+   "vo": "Lembre um cliente com um toque, no WhatsApp."
+  },
+  {
+   "vo": "Abra os alertas de risco por trás da sua nota.",
+   "card": "Alertas de risco"
+  },
+  {
+   "vo": "Pratique três decisões e veja sua nota mudar.",
+   "card": "Prática de decisão"
+  },
+  {
+   "vo": "Compare com negócios parecidos, quando houver dados.",
+   "card": "Comparar"
+  },
+  {
+   "vo": "Dois dias calmos? Você recebe um aviso no WhatsApp.",
+   "card": "Um aviso calmo"
+  },
+  {
+   "vo": "Imprima uma ficha diária e mande uma foto.",
+   "card": "Ficha diária"
+  },
+  {
+   "vo": "No site: calculadoras e cartazes grátis.",
+   "card": "Ferramentas grátis"
+  },
+  {
+   "vo": "Compartilhe seu link para convidar um amigo.",
+   "card": "Convidar um amigo"
+  },
+  {
+   "vo": "ScoreMyBiz. Grátis por trinta dias, em vários idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-11"
+}

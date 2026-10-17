@@ -1,0 +1,48 @@
+{
+ "title": "Tudo na Muralha",
+ "caption": "Parte 3: tudo o que podes fazer na Muralha Waypoint, nos ecrãs reais. A Mira mostra.",
+ "scenes": [
+  {
+   "vo": "Olá, sou a Mira. Parte três: tudo na Muralha."
+  },
+  {
+   "vo": "Escolhe Novo, ou Top por dia, semana ou mês."
+  },
+  {
+   "vo": "Roda o dado para um post surpresa, ou pesquisa."
+  },
+  {
+   "vo": "Filtra a Muralha por sentimento: ansioso, só, mais."
+  },
+  {
+   "vo": "Reage a um post, e o autor é notificado.",
+   "card": "Reagir"
+  },
+  {
+   "vo": "Não é a tua língua? Clica Traduzir, ou Auto."
+  },
+  {
+   "vo": "Momentos: uma foto que alguém vê só uma vez."
+  },
+  {
+   "vo": "Apaga o teu post, e ele some de imediato.",
+   "card": "Apagar já"
+  },
+  {
+   "vo": "Partilha posts, pontos e Dias como imagens.",
+   "card": "Partilhar"
+  },
+  {
+   "vo": "Pontos rankeiam todos os dias, com Ouro e Prata.",
+   "card": "Placar"
+  },
+  {
+   "vo": "E O que há de novo diz-te o que mudou."
+  },
+  {
+   "vo": "Waypoint. Diz isso uma vez. Grátis no Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-05"
+}

@@ -17,9 +17,9 @@
  "scenes": [
   {
    "layout": "talk",
-   "vo": "Hi, I'm Mira. This is Waypoint in one minute: a place to say one true thing, without your name.",
-   "sub": "Hi, I'm Mira. This is Waypoint in one minute: a place to say one true thing, without your name.",
-   "min": 6,
+   "vo": "Hi, I'm Mira. Here is Waypoint, in one minute.",
+   "sub": "Hi, I'm Mira. Here is Waypoint, in one minute.",
+   "min": 5,
    "pose": "head_neutral"
   },
   {
@@ -97,7 +97,7 @@
   {
    "layout": "end",
    "pose": "wave",
-   "vo": "Waypoint. Say it once. Free on Google Play, in many Indian and international languages.",
+   "vo": "Waypoint. Say it once. Free on Google Play.",
    "sub": "",
    "min": 5
   }

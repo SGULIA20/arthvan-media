@@ -1,30 +1,30 @@
 {
  "title": "Waypoint in einer Minute",
- "caption": "Waypoint in einer Minute: ein Ort für eine wahre Sache, ganz ohne deinen Namen. Mira zeigt die Hauptsache auf dem echten Bildschirm.",
+ "caption": "Waypoint in einer Minute: ein Ort für ein wahres Wort, ohne deinen Namen. Mira zeigt die Hauptsache auf den echten Bildschirmen.",
  "scenes": [
   {
-   "vo": "Hi, ich bin Mira. Das ist Waypoint in einer Minute: ein Ort für eine wahre Sache, ganz ohne deinen Namen."
+   "vo": "Hi, ich bin Mira. Hier ist Waypoint, in einer Minute."
   },
   {
-   "vo": "Jeden Tag kriegst du einen neuen Namen, extra für heute."
+   "vo": "Jeden Tag kriegst du einen neuen Namen, nur für heute."
   },
   {
-   "vo": "Schreib einen wahren Satz. Mehr ist das nicht."
+   "vo": "Tippe einen wahren Satz. Mehr wird nicht verlangt."
   },
   {
-   "vo": "Lies heute Abend an der Wand, was andere geschrieben haben."
+   "vo": "Lies heute Nacht an der Wand, was andere geschrieben haben."
   },
   {
    "vo": "Frag den Pfad: eine Frage, zwei bis vier Optionen."
   },
   {
-   "vo": "Oder tipp auf Stimme und red. Andere hören eine Figuren-Stimme."
+   "vo": "Oder tipp auf Sprache und red. Andere hören eine Figurenstimme."
   },
   {
-   "vo": "Warte auf einen Treffer oder sprich mit Mira, einer KI-Begleitung."
+   "vo": "Warte auf ein Match, oder sprich mit Mira, einem KI-Guide."
   },
   {
-   "vo": "Trag deine Laune mit einem Tipp ein. Ohne Tippen."
+   "vo": "Trag deine Laune mit einem Tipp ein. Kein Tippen."
   },
   {
    "vo": "Neunzig Sekunden im Pausenraum, einmal am Tag."
@@ -33,7 +33,7 @@
    "vo": "In sechzehn Sprachen."
   },
   {
-   "vo": "Waypoint. Sag es einmal. Kostenlos bei Google Play, in vielen Sprachen."
+   "vo": "Waypoint. Sag es einmal. Kostenlos bei Google Play."
   }
  ],
  "machine_translated": true,

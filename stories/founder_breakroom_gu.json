@@ -1,0 +1,77 @@
+{
+ "id": "founder-breakroom-gu",
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "founder_casual",
+ "feature": "break-room",
+ "title": "૯૦ સેકન્ડ",
+ "post_on": "2026-11-14",
+ "caption": "કેટલાક દિવસોમાં વસ્તુઓ તોડવા માટે ઓરડાની જરૂર પડે છે. ઇમરાનની ૯૦ સેકન્ડ લે છે. સ્થાપક તેની વાર્તા કહે છે.",
+ "linkedin_text": "Some working days end with a clenched jaw and a long ride home.\n\nWaypoint has a Break Room: a small drawn room, a bat, twenty things that crack and break with sound and vibration, and ninety seconds, once a day. The founder character tells Imran's story; every screen is the real app.",
+ "hashtags": [
+  "#BreakRoom",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "imran": "Imran, a young Indian man in his late twenties with short black hair, a light blue office shirt with rolled sleeves and a lanyard"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a rooftop at dusk, warm city lights beginning to glow behind him, a relaxed smile.",
+   "vo": "હાય. આ ઇમરાનની વાર્તા છે. કેટલાક દિવસો જડબાં કડક કરવા અને ક્યાંય જગ્યા ન હોવા સાથે પૂરા થાય છે.",
+   "sub": "હાય. આ ઇમરાનની વાર્તા છે. કેટલાક દિવસો જડબાં કડક કરવા અને ક્યાંય જગ્યા ન હોવા સાથે પૂરા થાય છે.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "90 seconds"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} at an office desk in the evening, a stack of files, shoulders tight, jaw set, a laptop screen glowing, the office nearly empty.",
+   "vo": "આઠ કલાકના ઇમેઇલ્સ. એક ફોન કૉલ જે ખરાબ ગયો. અને ઘરે જવાની લાંબી સફર.",
+   "sub": "આઠ કલાકના ઇમેઇલ્સ. એક ફોન કૉલ જે ખરાબ ગયો. અને ઘરે જવાની લાંબી સફર.",
+   "min": 8,
+   "card": "લાંબો દિવસ"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} sitting on a parked motorbike outside his building at dusk, holding his phone, a thoughtful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Waypoint પર એક બ્રેક રૂમ છે. બૅટ પર ટેપ કરો, અને તેને નાના દોરેલા રૂમમાં ફેરવો.",
+   "sub": "Waypoint પર એક બ્રેક રૂમ છે. બૅટ પર ટેપ કરો, અને તેને નાના દોરેલા રૂમમાં ફેરવો.",
+   "min": 8,
+   "screen": "break-room.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Close on a thumb swiping fast across a phone screen, a small determined smile on the face behind it, dusk light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "વીસ વસ્તુઓ અવાજ અને બઝ સાથે તૂટે છે. થોડી સામે ટકે છે, જેથી તે બહુ સહેલું ન રહે.",
+   "sub": "વીસ વસ્તુઓ અવાજ અને બઝ સાથે તૂટે છે. થોડી સામે ટકે છે, જેથી તે બહુ સહેલું ન રહે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} laughing softly at his phone on the parked motorbike, shoulders loosened, streetlights coming on, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "નવ્વાણું સેકન્ડ, દિવસમાં એકવાર. તમારો ટોપ સ્કોર રહે છે, અને તમે ફોટા તરીકે શેર કરી શકો છો.",
+   "sub": "નવ્વાણું સેકન્ડ, દિવસમાં એકવાર. તમારો ટોપ સ્કોર રહે છે, અને તમે ફોટા તરીકે શેર કરી શકો છો.",
+   "min": 8,
+   "screen": "break-room.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} riding a motorbike home through warm evening city traffic, relaxed, the sky turning orange behind the buildings.",
+   "vo": "પછી તમે ઘરે જાઓ છો. ઓરડો કાલે ત્યાં જ હશે.",
+   "sub": "પછી તમે ઘરે જાઓ છો. ઓરડો કાલે ત્યાં જ હશે.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "Waypoint. એકવાર કહો. Google Play પર મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "title": "Meer weten, meer delen",
+ "caption": "Deel 5: weet meer en deel meer. Je score uit het boek, deel foto's, planningstools, talen en je account in ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Hoi, ik ben Lumi. Deel vijf: weet meer en deel meer."
+  },
+  {
+   "vo": "Genoeg invoer? Je score komt nu uit je boek.",
+   "card": "Score uit je boek"
+  },
+  {
+   "vo": "Bij Gezond, deel je score als foto."
+  },
+  {
+   "vo": "Deel je week ook als foto.",
+   "card": "Je week, gedeeld"
+  },
+  {
+   "vo": "Plan een zaak: winst, terugverdientijd, kasgeld.",
+   "card": "Plan een zaak"
+  },
+  {
+   "vo": "25 talen, en WhatsApp-antwoorden volgen je keuze.",
+   "card": "25 talen"
+  },
+  {
+   "vo": "Lokale geld- en belastingtermen, in negentien landen.",
+   "card": "19 landen"
+  },
+  {
+   "vo": "Log in met een WhatsApp-code. Geen wachtwoord.",
+   "card": "WhatsApp-login"
+  },
+  {
+   "vo": "Bewerk gegevens, wijzig nummer of herstel je account.",
+   "card": "Je account"
+  },
+  {
+   "vo": "Meld een probleem en zie het antwoord hier."
+  },
+  {
+   "vo": "Download je gegevens of verwijder je account.",
+   "card": "Je gegevens"
+  },
+  {
+   "vo": "ScoreMyBiz. Dertig dagen gratis, in vele talen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-10"
+}

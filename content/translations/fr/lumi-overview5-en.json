@@ -1,0 +1,52 @@
+{
+ "title": "En savoir plus, partager plus",
+ "caption": "Partie 5 : en savoir plus et partager plus. Votre score depuis le livre, partagez des photos, des outils de planification, des langues et votre compte dans ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Lumi. Partie cinq : en savoir plus, et partager plus."
+  },
+  {
+   "vo": "Assez d'entrées ? Votre score vient maintenant de votre livre.",
+   "card": "Score depuis votre livre"
+  },
+  {
+   "vo": "Chez Healthy, partagez votre score en image."
+  },
+  {
+   "vo": "Partagez aussi votre semaine en image.",
+   "card": "Votre semaine, partagée"
+  },
+  {
+   "vo": "Préparez une boutique : profit, rentabilité, cash nécessaire.",
+   "card": "Préparer une boutique"
+  },
+  {
+   "vo": "25 langues, et les réponses WhatsApp suivent votre choix.",
+   "card": "25 langues"
+  },
+  {
+   "vo": "Mots d'argent et d'impôts locaux, dans dix-neuf pays.",
+   "card": "19 pays"
+  },
+  {
+   "vo": "Connectez-vous par code WhatsApp. Pas de mot de passe.",
+   "card": "Connexion WhatsApp"
+  },
+  {
+   "vo": "Modifiez vos infos, changez de numéro, ou récupérez votre compte.",
+   "card": "Votre compte"
+  },
+  {
+   "vo": "Signalez un souci, et lisez la réponse ici."
+  },
+  {
+   "vo": "Téléchargez vos données, ou supprimez votre compte.",
+   "card": "Vos données"
+  },
+  {
+   "vo": "ScoreMyBiz. Gratuit trente jours, en plein de langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-10"
+}

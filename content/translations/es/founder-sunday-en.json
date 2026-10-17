@@ -1,0 +1,30 @@
+{
+ "title": "Domingo, 9 PM",
+ "caption": "Ciudad nueva, trabajo nuevo y un día que nadie cuenta. El fundador cuenta la historia de Rohan.",
+ "scenes": [
+  {
+   "vo": "Hola. Esta es la historia de Rohan. Ciudad nueva, trabajo nuevo, piso grande. El día acaba y nadie lo cuenta."
+  },
+  {
+   "vo": "El fin de semana hay más ruido. Todos están en alguna parte. Él está en la ventana.",
+   "card": "Domingo, 9 PM"
+  },
+  {
+   "vo": "En Waypoint él tiene un nombre propio para hoy. Escribe una frase real. Eso es todo lo que pide."
+  },
+  {
+   "vo": "Mira le enseña el Muro: las frases de hoy de gente como él. Otras ciudades, las mismas nueve."
+  },
+  {
+   "vo": "Cuando quiere hablar de verdad, Waypoint le cruza con otra persona. Solo dos frases y una respuesta."
+  },
+  {
+   "vo": "Y las noches que no quiere hablar, el kit Calm. Dos minutos y a dormir."
+  },
+  {
+   "vo": "Waypoint. Dilo una vez. Gratis en Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2026-11-14"
+}

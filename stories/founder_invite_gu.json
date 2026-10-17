@@ -1,0 +1,84 @@
+{
+ "id": "founder-invite-gu",
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "founder_casual",
+ "feature": "invite",
+ "title": "ધ ઇનવાઇટ",
+ "post_on": "2026-11-26",
+ "caption": "પ્રિયા એની પિતરાઈ બહેન સાથે Waypoint શેર કરવા માંગે છે. એક કોડ, અને બંનેને દસ પોઈન્ટ મળે છે. ફાઉન્ડર એમની વાત કરે છે.",
+ "linkedin_text": "A friend invite that is personal instead of loud. On Waypoint, My Waypoints shows your invite code and a button to share the link. A new member can enter it in their first seven days, and both people get ten points.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#InviteAFriend"
+ ],
+ "cast": {
+  "priya": "Priya, a young Indian woman in her early twenties with a long braid, a denim jacket and a small backpack"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a sunny cafe terrace in the afternoon, a relaxed smile.",
+   "vo": "હાય. આ પ્રિયાની વાત છે. એને Waypoint પર કંઈક મળ્યું જે એ શેર કરવા માંગે છે.",
+   "sub": "હાય. આ પ્રિયાની વાત છે. એને Waypoint પર કંઈક મળ્યું જે એ શેર કરવા માંગે છે.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "The invite",
+   "card": "પ્રિયાની વાર્તા"
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} sitting on a college lawn with her phone and a paper cup of chai, a soft smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "એના પિતરાઈ કબીરનો મહિનો સારો નથી ગયો. એ એને સલાહ નહીં, પણ શાંત જગ્યા આપવા માંગે છે.",
+   "sub": "એના પિતરાઈ કબીરનો મહિનો સારો નથી ગયો. એ એને સલાહ નહીં, પણ શાંત જગ્યા આપવા માંગે છે.",
+   "min": 8,
+   "card": "મુશ્કેલ સમય"
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} walking along a tree-lined campus path looking at her phone, soft afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "માય Waypoints માં એને પોતાનો ઇનવાઇટ કોડ અને લિંક શેર કરવાનું બટન મળે છે.",
+   "sub": "માય Waypoints માં એને પોતાનો ઇનવાઇટ કોડ અને લિંક શેર કરવાનું બટન મળે છે.",
+   "min": 8,
+   "screen": "invite.png",
+   "card": "ઇનવાઇટ કોડ"
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} typing a message on her phone on a garden bench, a warm smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "એ એને જાતે જ કબીરને મોકલે છે, એક સરસ વાક્ય સાથે.",
+   "sub": "એ એને જાતે જ કબીરને મોકલે છે, એક સરસ વાક્ય સાથે.",
+   "min": 8,
+   "card": "એક નાની મદદ"
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} looking up from her phone with a pleased surprise, trees behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "કબીર પાસે Waypoint પર કોડ નાખવા માટે પહેલા સાત દિવસ છે.",
+   "sub": "કબીર પાસે Waypoint પર કોડ નાખવા માટે પહેલા સાત દિવસ છે.",
+   "min": 8,
+   "screen": "invite.png",
+   "card": "સાત દિવસ"
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} laughing quietly at her phone in a sunlit garden, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "જ્યારે એ નાખે છે, ત્યારે બંનેને દસ પોઈન્ટ મળે છે.",
+   "sub": "જ્યારે એ નાખે છે, ત્યારે બંનેને દસ પોઈન્ટ મળે છે.",
+   "min": 8,
+   "screen": "invite.png",
+   "card": "દસ પોઈન્ટ"
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "Waypoint. એકવાર કહી દો. ગૂગલ પ્લે પર ફ્રી, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5,
+   "card": "Waypoint"
+  }
+ ]
+}

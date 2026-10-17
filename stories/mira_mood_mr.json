@@ -1,0 +1,83 @@
+{
+ "app": "waypoint",
+ "lang": "mr",
+ "id": "mira-mood-mr",
+ "character": "mira",
+ "feature": "mood-log",
+ "title": "फक्त एक टॅप",
+ "post_on": "2026-12-02",
+ "caption": "युकी जेवणायानंतर आणि संध्याकाळी एक भावना टॅप करते. मीरा तिची गोष्ट सांगते.",
+ "linkedin_text": "In My Waypoints, the Mood log lets a member tap how they feel for the morning, afternoon, evening or night, with no typing, see this week next to the week before, and switch on an evening reminder. It is a small habit, not a diagnosis.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#MoodLog"
+ ],
+ "cast": {
+  "yuki": "Yuki, a young woman with a black bob haircut and a cream knit sweater"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera at a sunny window seat in a quiet library, a gentle smile.",
+   "vo": "हाय, मी मीरा. ही युकीची गोष्ट आहे. काही भावनांना मोठ्या वाक्यांची गरज नसते.",
+   "sub": "हाय, मी मीरा. ही युकीची गोष्ट आहे. काही भावनांना मोठ्या वाक्यांची गरज नसते.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Just a tap",
+   "card": "ही युकीची गोष्ट आहे"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} at a desk after lunch, looking out of a window with a thoughtful expression, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "दुपारच्या जेवणानंतर ती थांबते आणि तिला खरंच कसं वाटतंय याचा विचार करते.",
+   "sub": "दुपारच्या जेवणानंतर ती थांबते आणि तिला खरंच कसं वाटतंय याचा विचार करते.",
+   "min": 8,
+   "card": "दुपारनंतर विचार"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} opening her phone with a small curious smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "माय वेपॉइंट्समध्ये ती मूड लॉग उघडते: सकाळ, दुपार, संध्याकाळ आणि रात्र.",
+   "sub": "माय वेपॉइंट्समध्ये ती मूड लॉग उघडते: सकाळ, दुपार, संध्याकाळ आणि रात्र.",
+   "min": 8,
+   "screen": "mood.png",
+   "card": "मूड लॉग उघडा"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} tapping her phone gently, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तिला कसं वाटतंय ते ती टॅप करते. टाईप करायचं नाही, आणि स्पष्टीकरण नको.",
+   "sub": "तिला कसं वाटतंय ते ती टॅप करते. टाईप करायचं नाही, आणि स्पष्टीकरण नको.",
+   "min": 8,
+   "screen": "mood.png",
+   "card": "फक्त टॅप करा"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} reading her phone on a sofa on a quiet Sunday, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "रविवारी ती तिचा हा आठवडा मागच्या आठवड्यासोबत पाहते.",
+   "sub": "रविवारी ती तिचा हा आठवडा मागच्या आठवड्यासोबत पाहते.",
+   "min": 8,
+   "card": "आठवडा तपासा"
+  },
+  {
+   "layout": "clip",
+   "clip": "{yuki} smiling softly by a window in the evening, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "आणि संध्याकाळची आठवण, जर तिला हवी असेल तर. एक छोटी सवय, कोणताही आजार नाही.",
+   "sub": "आणि संध्याकाळची आठवण, जर तिला हवी असेल तर. एक छोटी सवय, कोणताही आजार नाही.",
+   "min": 8,
+   "card": "संध्याकाळची आठवण"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट. एकदा म्हणा. गुगल प्लेवर मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5,
+   "card": "गुगल प्लेवर मोफत"
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "title": "Discussions, sécurité et réglages",
+ "caption": "Partie 4 : discussions, sécurité et réglages dans Waypoint. Mira montre comment on assure la sécurité.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Mira. Partie quatre : discussions, sécurité et réglages."
+  },
+  {
+   "vo": "Dix-huit ans et plus, en acceptant les conditions et règles.",
+   "card": "18 ans et plus"
+  },
+  {
+   "vo": "Les chats de match sont uniquement textuels, pour trente minutes.",
+   "card": "Chats de 30 minutes"
+  },
+  {
+   "vo": "Fin après cinq minutes, bloquez à tout moment, notez.",
+   "card": "C'est vous qui décidez"
+  },
+  {
+   "vo": "Signalez ou bloquez toute publication, message ou Moment.",
+   "card": "Signaler et bloquer"
+  },
+  {
+   "vo": "Les posts sont filtrés d'abord ; harcèlement et haine refusés.",
+   "card": "Filtrés d'abord"
+  },
+  {
+   "vo": "Un post d'alerte affiche des lignes d'aide et une pause.",
+   "card": "Avant de publier"
+  },
+  {
+   "vo": "Tout faux staff de Waypoint est marqué comme non officiel."
+  },
+  {
+   "vo": "Réglages, aide, conditions et avis : Mes Waypoints."
+  },
+  {
+   "vo": "Supprimez votre compte et vos données depuis là aussi."
+  },
+  {
+   "vo": "Notifications, rappels de mise à jour et barre hors ligne.",
+   "card": "Restez informés"
+  },
+  {
+   "vo": "Waypoint. Dites-le une fois. Gratuit sur Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-06"
+}

@@ -1,0 +1,89 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "founder_suit",
+ "feature": "ca-network",
+ "style": "cutout",
+ "hashtags": [
+  "#CharteredAccountant",
+  "#ScoreMyBiz",
+  "#CAIndia"
+ ],
+ "id": "founder-ca-vault-gu",
+ "title": "દસ્તાવેજો અને ડેટા, બરાબર શેર કરેલા",
+ "post_on": "2027-01-02",
+ "caption": "ભારતના CA માટે. ભાગ ૨: તમારા ક્લાયન્ટ્સ તેમની પોતાની એપમાં ખોલે તેવા દસ્તાવેજો, એક્સપોર્ટ, લોક કરેલા મહિનાઓ અને ફેરફારોનો સ્પષ્ટ રેકોર્ડ.",
+ "linkedin_text": "For CAs in India. Upload a client's filing or statement once and they open it in their own ScoreMyBiz app. Clients can export their book for any period as a file accounting software can import. Lock a finished month once the client agrees, and every change shows who made it: the owner, a helper or the CA. ScoreMyBiz does not prepare or file returns.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "ભાગ બીજો, CA માટે: દસ્તાવેજો, રિપોર્ટ્સ અને એક જ બુક પર કામ કરવું.",
+   "sub": "ભાગ બીજો, CA માટે: દસ્તાવેજો, રિપોર્ટ્સ અને એક જ બુક પર કામ કરવું.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "ક્લાયન્ટની ફાઇલિંગ અથવા સ્ટેટમેન્ટ એકવાર અપલોડ કરો, અને તેઓ તેને પોતાની એપમાં ખોલે છે.",
+   "sub": "ક્લાયન્ટની ફાઇલિંગ અથવા સ્ટેટમેન્ટ એકવાર અપલોડ કરો, અને તેઓ તેને પોતાની એપમાં ખોલે છે.",
+   "min": 3.5,
+   "screen": "ca-client-reports.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "WhatsApp પર ફરીથી મોકલવાનું બંધ. તે My Documents માં રાહ જુએ છે.",
+   "sub": "WhatsApp પર ફરીથી મોકલવાનું બંધ. તે My Documents માં રાહ જુએ છે.",
+   "min": 3.5,
+   "screen": "my-documents.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "ક્લાયન્ટ્સ તેમની બુક કોઈપણ સમયગાળા માટે એક્સપોર્ટ કરી શકે છે, એવી ફાઇલ તરીકે જેને તમારું એકાઉન્ટિંગ સોફ્ટવેર ઇમ્પોર્ટ કરી શકે.",
+   "sub": "ક્લાયન્ટ્સ તેમની બુક કોઈપણ સમયગાળા માટે એક્સપોર્ટ કરી શકે છે, એવી ફાઇલ તરીકે જેને તમારું એકાઉન્ટિંગ સોફ્ટવેર ઇમ્પોર્ટ કરી શકે.",
+   "min": 3.5,
+   "screen": "export-book.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "ક્લાયન્ટ સંમત થાય એટલે પૂરો થયેલો મહિનો લોક કરો, જેથી આંકડા ભૂલથી બદલાય નહીં.",
+   "sub": "ક્લાયન્ટ સંમત થાય એટલે પૂરો થયેલો મહિનો લોક કરો, જેથી આંકડા ભૂલથી બદલાય નહીં.",
+   "min": 3.5,
+   "screen": "book-locks.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "દરેક ફેરફાર બતાવે છે કે તે કોણે કર્યો: માલિકે, મદદનીશે કે CA એ.",
+   "sub": "દરેક ફેરફાર બતાવે છે કે તે કોણે કર્યો: માલિકે, મદદનીશે કે CA એ.",
+   "min": 3.5,
+   "screen": "book-changes.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "હેલ્થ સ્કોર તમને અને તમારા ક્લાયન્ટને દર મહિને વાત કરવા માટે એક નંબર આપે છે.",
+   "sub": "હેલ્થ સ્કોર તમને અને તમારા ક્લાયન્ટને દર મહિને વાત કરવા માટે એક નંબર આપે છે.",
+   "min": 3.5,
+   "screen": "result.png",
+   "pose": "front_standing"
+  },
+  {
+   "layout": "scene",
+   "vo": "ScoreMyBiz રિટર્ન તૈયાર કે ફાઇલ કરતું નથી. તે બુક અને વાતચીતને એક જગ્યાએ રાખે છે.",
+   "sub": "ScoreMyBiz રિટર્ન તૈયાર કે ફાઇલ કરતું નથી. તે બુક અને વાતચીતને એક જગ્યાએ રાખે છે.",
+   "min": 5,
+   "pose": "front_standing",
+   "card": "એક શેર કરેલી બુક"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "ScoreMyBiz. તમારા ધંધાની હેલ્થ જાણો. ત્રીસ દિવસ માટે મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

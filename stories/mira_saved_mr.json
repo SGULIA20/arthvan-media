@@ -1,0 +1,83 @@
+{
+ "id": "mira-saved-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "feature": "saved-posts",
+ "title": "पुन्हा वाचा",
+ "post_on": "2026-12-06",
+ "caption": "एक पोस्ट वाचून मटेओ मोठ्याने हसला. तो ती पुन्हा वाचण्यासाठी सेव्ह करतो. मीरा त्याची गोष्ट सांगते.",
+ "linkedin_text": "On Waypoint, a bookmark icon on other people's posts saves them to a list under My Waypoints, Saved. Each one can be removed again with a tap.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#SavedPosts"
+ ],
+ "cast": {
+  "mateo": "Mateo, a young man in his mid twenties with curly dark hair, a green t-shirt and a thin silver chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera at a bright corner table in a sunny bookshop cafe, a stack of books beside her, a gentle smile.",
+   "vo": "हाय, मी मीरा. ही आहे मटेओची गोष्ट. काल रात्री, एक पोस्ट पाहून तो मोठ्याने हसला.",
+   "sub": "हाय, मी मीरा. ही आहे मटेओची गोष्ट. काल रात्री, एक पोस्ट पाहून तो मोठ्याने हसला.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Read it again",
+   "card": "ही मटेओची गोष्ट आहे"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} laughing on a sofa at night while looking at his phone, a warm lamp glowing, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "त्याला ही उद्या पुन्हा वाचायची आहे, पण त्याला माहीत आहे की सकाळी ही मिळणार नाही.",
+   "sub": "त्याला ही उद्या पुन्हा वाचायची आहे, पण त्याला माहीत आहे की सकाळी ही मिळणार नाही.",
+   "min": 8,
+   "card": "पुन्हा वाचायचे आहे?"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} tapping his phone screen with a pleased grin, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "म्हणून तो पोस्टवरचे बुकमार्क आयकॉन दाबतो.",
+   "sub": "म्हणून तो पोस्टवरचे बुकमार्क आयकॉन दाबतो.",
+   "min": 8,
+   "card": "बुकमार्कवर टॅप करा"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} on a morning train looking at his phone, soft window light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "माय वेपॉइंट्स अंतर्गत, सेव्ह केलेले सर्व बुकमार्क एकाच यादीत राहतात.",
+   "sub": "माय वेपॉइंट्स अंतर्गत, सेव्ह केलेले सर्व बुकमार्क एकाच यादीत राहतात.",
+   "min": 8,
+   "screen": "saved.png",
+   "card": "सर्व एकाच यादीत"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} chuckling quietly at his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तो ती पुन्हा वाचतो, आणि पुन्हा हसतो.",
+   "sub": "तो ती पुन्हा वाचतो, आणि पुन्हा हसतो.",
+   "min": 8,
+   "card": "पुन्हा वाचा आणि हसा"
+  },
+  {
+   "layout": "clip",
+   "clip": "{mateo} tucking his phone into his pocket with a relaxed smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "एकदा वाचून झाले की, तो एका टॅपने ती यादीतून काढू शकतो.",
+   "sub": "एकदा वाचून झाले की, तो एका टॅपने ती यादीतून काढू शकतो.",
+   "min": 8,
+   "screen": "saved.png",
+   "card": "एका टॅपने काढा"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट. एकदा सांगा. गुगल प्लेवर मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5,
+   "card": "वेपॉइंट - आताच डाउनलोड करा"
+  }
+ ]
+}

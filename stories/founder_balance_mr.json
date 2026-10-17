@@ -1,0 +1,78 @@
+{
+ "id": "founder-balance-mr",
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "founder_suit",
+ "feature": "what-i-have-and-owe",
+ "title": "आहे आणि द्यायचं आहे",
+ "post_on": "2026-11-27",
+ "caption": "दर मार्चला त्याचा सीए एकच प्रश्न विचारतो. इम्रानला शेवटी उत्तर मिळालं. संस्थापक त्याची गोष्ट सांगतो.",
+ "linkedin_text": "Every year-end the accountant asks the same question: what do you have, and what do you owe?\n\nScoreMyBiz draws it from the shop's own entries on one screen: cash in hand, money in the bank, what customers owe, and stock. The founder character tells Imtiaz's story; every screen is the real app.",
+ "hashtags": [
+  "#BalanceSheet",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "imtiaz": "Imtiaz, a middle-aged Indian hardware wholesaler with a trimmed beard, a checked shirt and reading glasses"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a tidy hardware wholesale warehouse with stacked pipes behind him, a calm smile.",
+   "vo": "हाय. ही इमियाजची गोष्ट आहे. दर मार्चला त्याचा सीए त्याला एकच प्रश्न विचारतो: काय आहे आणि काय द्यायचं आहे?",
+   "sub": "हाय. ही इमियाजची गोष्ट आहे. दर मार्चला त्याचा सीए त्याला एकच प्रश्न विचारतो: काय आहे आणि काय द्यायचं आहे?",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Have and owe"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imtiaz} at a warehouse desk piled with receipts and invoices, scratching his head, a calculator beside him, afternoon light.",
+   "vo": "तो तोंडी उत्तर देतो, आणि दरवर्षी उत्तर थोडं वेगळं असतं.",
+   "sub": "तो तोंडी उत्तर देतो, आणि दरवर्षी उत्तर थोडं वेगळं असतं.",
+   "min": 8,
+   "card": "तोंडी"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imtiaz} at his warehouse desk looking at his phone with a relieved look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz वर हा एकच स्क्रीन आहे: हातात रोकड, बँकेत पैसे, ग्राहक किती देणार, आणि माल.",
+   "sub": "ScoreMyBiz वर हा एकच स्क्रीन आहे: हातात रोकड, बँकेत पैसे, ग्राहक किती देणार, आणि माल.",
+   "min": 8,
+   "screen": "balance-sheet.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imtiaz} comparing a printed list with his phone and nodding slowly, stacked cartons behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "त्याच्या स्वतःच्या नोंदींवरून. त्याला अंदाज लावावा लागत नाही.",
+   "sub": "त्याच्या स्वतःच्या नोंदींवरून. त्याला अंदाज लावावा लागत नाही.",
+   "min": 8,
+   "screen": "balance-sheet.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imtiaz} sending a message on his phone with a satisfied nod at the warehouse door, bright daylight outside, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तो Share with my CA वर क्लिक करतो, आणि ते त्याच्या सीएला जातं.",
+   "sub": "तो Share with my CA वर क्लिक करतो, आणि ते त्याच्या सीएला जातं.",
+   "min": 8,
+   "screen": "balance-sheet.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imtiaz} shaking hands with a smiling accountant in a bright office, a laptop open on the table.",
+   "vo": "या मार्चला, सीए विचारण्याच्या आत त्याच्याकडे उत्तर होतं.",
+   "sub": "या मार्चला, सीए विचारण्याच्या आत त्याच्याकडे उत्तर होतं.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत जाणून घ्या. तीस दिवस मोफत.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

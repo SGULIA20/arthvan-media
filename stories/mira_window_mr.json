@@ -1,0 +1,79 @@
+{
+ "id": "mira-window-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "title": "एकदा बोलून बघा.",
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, stands facing the camera at a Mumbai apartment window at night, the city lights behind her, and smiles gently.",
+   "vo": "हाय, मी मीरा. ही अर्जुनची गोष्ट आहे. दिवसभर तो मजेत असतो. रात्री, मुंबईत, तो नसतो.",
+   "sub": "हाय, मी मीरा. ही अर्जुनची गोष्ट आहे. दिवसभर तो मजेत असतो. रात्री, मुंबईत, तो नसतो.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Say it once."
+  },
+  {
+   "layout": "clip",
+   "clip": "{arjun} alone at a large apartment window in Mumbai late at night, the city glowing below, his reflection in the glass, a half-finished mug on the sill, the clock on the wall near midnight.",
+   "vo": "अशी एक गोष्ट आहे जी त्याने कोणालाही मोठ्याने सांगितली नाही.",
+   "sub": "अशी एक गोष्ट आहे जी त्याने कोणालाही मोठ्याने सांगितली नाही.",
+   "min": 8,
+   "card": "रात्री ११:४८"
+  },
+  {
+   "layout": "clip",
+   "clip": "{arjun} sitting on a sofa in a dim Mumbai flat, phone glow on his face, typing one line slowly, his thumb hovering over the screen, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "आज वेपॉइंटवर त्याला नवीन नाव मिळतं. तो वाक्य टाईप करतो. त्याचा अंगठा थरथरतो. तो पोस्ट करतो.",
+   "sub": "आज वेपॉइंटवर त्याला नवीन नाव मिळतं. तो वाक्य टाईप करतो. त्याचा अंगठा थरथरतो. तो पोस्ट करतो.",
+   "min": 8,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{arjun} at the same window in Mumbai at night, looking at a single glowing question on his phone and starting to answer, soft light on his face, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "मग डेली पाथ. एक प्रश्न, सगळ्यांसाठी सारखा. तो उत्तर देतो, आणि काल इतरांनी काय उत्तर दिलं ते पाहतो.",
+   "sub": "मग डेली पाथ. एक प्रश्न, सगळ्यांसाठी सारखा. तो उत्तर देतो, आणि काल इतरांनी काय उत्तर दिलं ते पाहतो.",
+   "min": 8,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{arjun} reading his phone on a Mumbai balcony at night, then closing it and taking one slow breath, a small relieved smile, the city lights behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वॉलवर, तो आज रात्री इतरांनी काय पोस्ट केलं ते वाचतो. कळतं की फक्त तोच नाही. तो फोन बंद करतो, आणि श्वास घेतो.",
+   "sub": "वॉलवर, तो आज रात्री इतरांनी काय पोस्ट केलं ते वाचतो. कळतं की फक्त तोच नाही. तो फोन बंद करतो, आणि श्वास घेतो.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Two apartment windows in two different Mumbai buildings at night, {arjun} at one holding a phone, a young woman at the other holding hers, each lit warmly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "जेव्हा त्याला बोलायचं असतं, तेव्हा वेपॉइंट त्याची भेट एका व्यक्तीशी घडवतो. छोटा चॅट. मग दोघं पुढे जातात.",
+   "sub": "जेव्हा त्याला बोलायचं असतं, तेव्हा वेपॉइंट त्याची भेट एका व्यक्तीशी घडवतो. छोटा चॅट. मग दोघं पुढे जातात.",
+   "min": 8,
+   "screen": "matching.png"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट. एकदा बोलून बघा. गुगल प्लेवर फ्री.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "post_on": "2026-11-12",
+ "caption": "दिवसभर तो मजेत असतो. रात्री नाही. मीरा अर्जुनची गोष्ट सांगते.",
+ "linkedin_text": "A small design note from Waypoint, told by Mira, our new guide.\n\nMost apps ask \"what's on your mind?\" and get silence. Waypoint asks one specific question a day, the same for everyone, and shows how others answered yesterday. Specific beats open-ended. This short story shows the real app.",
+ "hashtags": [
+  "#Mira",
+  "#DailyPath",
+  "#Waypoint"
+ ],
+ "feature": "write-post",
+ "cast": {
+  "arjun": "Arjun, a young Indian man in his late twenties with short dark hair and a plain navy hoodie"
+ }
+}

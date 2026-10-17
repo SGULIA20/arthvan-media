@@ -1,0 +1,54 @@
+{
+ "title": "Mambo mapya ndani ya Waypoint",
+ "caption": "Sehemu ya 5: taarifa mpya kwenye Waypoint. Mira anaonyesha yaliyo mapya.",
+ "scenes": [
+  {
+   "vo": "Hujambo, mimi ni Mira. Sehemu ya tano: kuna nini kipya Waypoint."
+  },
+  {
+   "vo": "Kila chapisho lina hisia moja kati ya nane."
+  },
+  {
+   "vo": "Mpya hapa? Ona machapisho matatu, kisha ujibu.",
+   "card": "Machapisho matatu ya kwanza"
+  },
+  {
+   "vo": "Jibu kwa siri: mwandishi pekee ndiye anayeliona.",
+   "card": "Jibu kwa siri"
+  },
+  {
+   "vo": "Washukuru wote waliojibu, bila kutaja majina.",
+   "card": "Sema asante"
+  },
+  {
+   "vo": "Machapisho ya kwanza yasiyo na jibu yanakaribishwa.",
+   "card": "Karibu sana"
+  },
+  {
+   "vo": "Baada ya kuchapisha, angalia: nyepesi, sawa au nzito?",
+   "card": "Kagua hali"
+  },
+  {
+   "vo": "Kifaa cha Utulivu: pumua, tulia, pumzika vizuri."
+  },
+  {
+   "vo": "Toka haraka: mara moja tu, nawe umetoka nje."
+  },
+  {
+   "vo": "Ujumbe rasmi unazunguka juu ya Ukuta."
+  },
+  {
+   "vo": "Hifadhi nafasi Usiku wa Kusikiliza, likipangwa.",
+   "card": "Usiku wa Kusikiliza"
+  },
+  {
+   "vo": "Akaunti iliyofutwa inaona sababu, na inaweza kukata rufaa.",
+   "card": "Rufaa"
+  },
+  {
+   "vo": "Waypoint. Sema mara moja. Bure kwenye Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-07"
+}

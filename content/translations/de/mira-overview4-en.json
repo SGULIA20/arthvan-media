@@ -1,0 +1,51 @@
+{
+ "title": "Chats, Sicherheit und Einstellungen",
+ "caption": "Teil 4: Chats, Sicherheit und Einstellungen in Waypoint. Mira zeigt, wie es die Leute schützt.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Mira. Teil vier: Chats, Sicherheit und Einstellungen."
+  },
+  {
+   "vo": "Ab 18 Jahren, mit Zustimmung zu den AGB und Regeln.",
+   "card": "Ab 18 Jahren"
+  },
+  {
+   "vo": "Match-Chats sind nur Text, für dreißig Minuten.",
+   "card": "30-Minuten-Chats"
+  },
+  {
+   "vo": "Enden nach fünf Minuten, blockieren, bewerten.",
+   "card": "Du entscheidest"
+  },
+  {
+   "vo": "Jeden Beitrag, jede Nachricht oder Moment melden.",
+   "card": "Melden & blockieren"
+  },
+  {
+   "vo": "Beiträge werden geprüft; Hass hat keinen Platz.",
+   "card": "Erst prüfen"
+  },
+  {
+   "vo": "Bei Krisen-Beiträgen gibt es Hilfe und eine Pause.",
+   "card": "Vor dem Posten"
+  },
+  {
+   "vo": "Alles, was wie Waypoint aussieht, ist markiert."
+  },
+  {
+   "vo": "Einstellungen, Hilfe, AGB: Meine Waypoints."
+  },
+  {
+   "vo": "Account und Daten dort auch einfach löschen."
+  },
+  {
+   "vo": "Benachrichtigungen, Updates und Offline-Leiste.",
+   "card": "Auf dem Laufenden"
+  },
+  {
+   "vo": "Waypoint. Sag es weiter. Kostenlos bei Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-06"
+}

@@ -1,0 +1,77 @@
+{
+ "id": "mira-freshname-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "feature": "fresh-name",
+ "title": "दररोज सकाळी नवीन",
+ "post_on": "2026-11-20",
+ "caption": "दररोज सकाळी झोया वेपॉइंटवर एका नवीन नावाशी जागी होते. मीरा तिची गोष्ट सांगते.",
+ "linkedin_text": "Most apps keep you as the same profile forever.\n\nOn Waypoint the app gives you a new generated name and avatar every day, and you can choose your own for the day if you like. Mira tells Zoya's story; every screen is the real app.",
+ "hashtags": [
+  "#FreshStart",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "zoya": "Zoya, a young Indian woman in her twenties with a long braid, a teal kurta and round glasses"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera on a sunny rooftop at sunrise, soft golden light, a gentle smile.",
+   "vo": "हाय, मी मीरा. ही झोयाची गोष्ट आहे. वेपॉइंटवर ती दररोज सकाळी एका नवीन नावासोबत उठते.",
+   "sub": "हाय, मी मीरा. ही झोयाची गोष्ट आहे. वेपॉइंटवर ती दररोज सकाळी एका नवीन नावासोबत उठते.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "New every morning"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} in a bright kitchen at sunrise holding a phone and a cup of tea, curious, steam rising, warm light.",
+   "vo": "कालचा दिवस गेला. आज सकाळी ॲप तिला एक नवीन सुरुवात देतं.",
+   "sub": "कालचा दिवस गेला. आज सकाळी ॲप तिला एक नवीन सुरुवात देतं.",
+   "min": 8,
+   "card": "सुप्रभात"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} at her kitchen counter looking at her phone with a delighted smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ते तिच्यासाठी एक नाव आणि अवतार निवडतं, आणि उद्यासाठी रिसेट होतं.",
+   "sub": "ते तिच्यासाठी एक नाव आणि अवतार निवडतं, आणि उद्यासाठी रिसेट होतं.",
+   "min": 8,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} thoughtfully picking on her phone at a sunny window, tea beside her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तिला आवडल्यास, ती दिवसासाठी स्वतःचं नाव आणि अवतार निवडू शकते.",
+   "sub": "तिला आवडल्यास, ती दिवसासाठी स्वतःचं नाव आणि अवतार निवडू शकते.",
+   "min": 8,
+   "screen": "customize.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} laughing with a friend over coffee at a sunny cafe table, relaxed, warm morning light.",
+   "vo": "तीच झोया. एक वेगळं नाव. आणि एक हलकी सुरुवात.",
+   "sub": "तीच झोया. एक वेगळं नाव. आणि एक हलकी सुरुवात.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} walking to work through a sunny street, a bag on her shoulder, an easy confident smile.",
+   "vo": "आजचं वाक्य म्हणा. उद्या नाव बदलू द्या.",
+   "sub": "आजचं वाक्य म्हणा. उद्या नाव बदलू द्या.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट. एकदा म्हणा. गुगल प्लेवर मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

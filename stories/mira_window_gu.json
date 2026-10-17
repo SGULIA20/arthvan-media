@@ -1,0 +1,79 @@
+{
+ "id": "mira-window-gu",
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "mira",
+ "title": "એક જ વાર કહી દો.",
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, stands facing the camera at a Mumbai apartment window at night, the city lights behind her, and smiles gently.",
+   "vo": "હાય, હું મીરા છું. આ અર્જુનની વાર્તા છે. આખો દિવસ એ સરખો રહે છે. રાત્રે મુંબઈમાં, એવું નથી હોતું.",
+   "sub": "હાય, હું મીરા છું. આ અર્જુનની વાર્તા છે. આખો દિવસ એ સરખો રહે છે. રાત્રે મુંબઈમાં, એવું નથી હોતું.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Say it once."
+  },
+  {
+   "layout": "clip",
+   "clip": "{arjun} alone at a large apartment window in Mumbai late at night, the city glowing below, his reflection in the glass, a half-finished mug on the sill, the clock on the wall near midnight.",
+   "vo": "એક વાત એવી છે જેણે કોઈને મોટેથી નથી કહી.",
+   "sub": "એક વાત એવી છે જેણે કોઈને મોટેથી નથી કહી.",
+   "min": 8,
+   "card": "૧૧:૪૮ રાત્રે"
+  },
+  {
+   "layout": "clip",
+   "clip": "{arjun} sitting on a sofa in a dim Mumbai flat, phone glow on his face, typing one line slowly, his thumb hovering over the screen, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "આજ રોજ Waypoint પર તેને નવું નામ મળે છે. તે વાક્ય ટાઇપ કરે છે. તેનો અંગૂઠો અટકે છે. તે પોસ્ટ કરે છે.",
+   "sub": "આજ રોજ Waypoint પર તેને નવું નામ મળે છે. તે વાક્ય ટાઇપ કરે છે. તેનો અંગૂઠો અટકે છે. તે પોસ્ટ કરે છે.",
+   "min": 8,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{arjun} at the same window in Mumbai at night, looking at a single glowing question on his phone and starting to answer, soft light on his face, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "પછી ડેઈલી પાથ. એક સવાલ, બધા માટે સરખો. તે જવાબ આપે છે, અને જુએ છે કે ગઈકાલે બીજાએ શું જવાબ આપ્યા.",
+   "sub": "પછી ડેઈલી પાથ. એક સવાલ, બધા માટે સરખો. તે જવાબ આપે છે, અને જુએ છે કે ગઈકાલે બીજાએ શું જવાબ આપ્યા.",
+   "min": 8,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{arjun} reading his phone on a Mumbai balcony at night, then closing it and taking one slow breath, a small relieved smile, the city lights behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "વૉલ પર, તે વાંચે છે કે આજે રાત્રે બીજાએ શું પોસ્ટ કર્યું. ખબર પડી કે તે એકલો નથી. તે ફોન બંધ કરે છે, અને શ્વાસ લે છે.",
+   "sub": "વૉલ પર, તે વાંચે છે કે આજે રાત્રે બીજાએ શું પોસ્ટ કર્યું. ખબર પડી કે તે એકલો નથી. તે ફોન બંધ કરે છે, અને શ્વાસ લે છે.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Two apartment windows in two different Mumbai buildings at night, {arjun} at one holding a phone, a young woman at the other holding hers, each lit warmly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "જ્યારે તેને વાત કરવી હોય, ત્યારે Waypoint તેની મુલાકાત એક જ વ્યક્તિ સાથે કરાવે છે. ટૂંકી ચેટ. પછી બંને આગળ વધે છે.",
+   "sub": "જ્યારે તેને વાત કરવી હોય, ત્યારે Waypoint તેની મુલાકાત એક જ વ્યક્તિ સાથે કરાવે છે. ટૂંકી ચેટ. પછી બંને આગળ વધે છે.",
+   "min": 8,
+   "screen": "matching.png"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. એક જ વાર કહી દો. Google Play પર મફત.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "post_on": "2026-11-12",
+ "caption": "આખો દિવસ તે સારો હોય છે. રાત્રે તે બરાબર નથી હોતો. મીરા અર્જુનની વાર્તા કહે છે.",
+ "linkedin_text": "A small design note from Waypoint, told by Mira, our new guide.\n\nMost apps ask \"what's on your mind?\" and get silence. Waypoint asks one specific question a day, the same for everyone, and shows how others answered yesterday. Specific beats open-ended. This short story shows the real app.",
+ "hashtags": [
+  "#Mira",
+  "#DailyPath",
+  "#Waypoint"
+ ],
+ "feature": "write-post",
+ "cast": {
+  "arjun": "Arjun, a young Indian man in his late twenties with short dark hair and a plain navy hoodie"
+ }
+}

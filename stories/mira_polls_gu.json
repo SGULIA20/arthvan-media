@@ -1,0 +1,78 @@
+{
+ "id": "mira-polls-gu",
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "mira",
+ "feature": "polls",
+ "title": "રસ્તો પૂછો",
+ "post_on": "2026-11-16",
+ "caption": "તે જેણે પણ પૂછે છે તેની પાસે તેના વિશે અભિપ્રાય છે. નેહા તેના બદલે પોલ પૂછે છે. મીરા તેની વાર્તા કહે છે.",
+ "linkedin_text": "A big decision gets a dozen different opinions from a dozen well-meaning friends.\n\nOn Waypoint, Ask the Path lets you put one question and two to four options on the Wall; people vote once and everyone sees how the votes split. Mira tells Neha's story; every screen is the real app.",
+ "hashtags": [
+  "#Polls",
+  "#Waypoint",
+  "#AskThePath"
+ ],
+ "cast": {
+  "neha": "Neha, a young Indian woman in her mid twenties with shoulder-length dark hair, a mustard cardigan and small silver earrings"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera at a window table in a cosy cafe in the evening, a notebook beside her, a gentle smile.",
+   "vo": "હાય, હું મીરા છું. આ નેહાની વાર્તા છે. તેની પાસે મોટો નિર્ણય છે, અને દરેક મિત્ર અલગ જવાબ આપે છે.",
+   "sub": "હાય, હું મીરા છું. આ નેહાની વાર્તા છે. તેની પાસે મોટો નિર્ણય છે, અને દરેક મિત્ર અલગ જવાબ આપે છે.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Ask the Path"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} at a cafe table with a laptop showing two email offers, chin on her hand, thoughtful, rain on the window behind her.",
+   "vo": "નવી નોકરી માટે નવું શહેર, કે ઘરની નજીક રહેવું. જેણે પણ પૂછે છે તેને તેના વિશે અભિપ્રાય છે, પસંદગી વિશે નહીં.",
+   "sub": "નવી નોકરી માટે નવું શહેર, કે ઘરની નજીક રહેવું. જેણે પણ પૂછે છે તેને તેના વિશે અભિપ્રાય છે, પસંદગી વિશે નહીં.",
+   "min": 8,
+   "card": "નવું શહેર?"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} on a late evening bus holding her phone, city lights streaking past the window, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "વેપૉઇન્ટ પર તે આસ્ક ધ પાથ ખોલે છે. એક પ્રશ્ન, અને બે થી ચાર વિકલ્પો.",
+   "sub": "વેપૉઇન્ટ પર તે આસ્ક ધ પાથ ખોલે છે. એક પ્રશ્ન, અને બે થી ચાર વિકલ્પો.",
+   "min": 8,
+   "screen": "poll.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} reading her phone at the cafe table, a small smile, a cup of tea steaming, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "વૉલ પરના લોકો દરેક એક વાર મત આપે છે. કોઈ નિબંધ નથી. કોઈ સલાહ નથી. માત્ર એક ટૅપ.",
+   "sub": "વૉલ પરના લોકો દરેક એક વાર મત આપે છે. કોઈ નિબંધ નથી. કોઈ સલાહ નથી. માત્ર એક ટૅપ.",
+   "min": 8,
+   "screen": "poll.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} watching her phone with wide-eyed interest, the cafe warm and blurred behind her.",
+   "vo": "જેમ જેમ મત આવે છે તેમ તે વિભાજન જુએ છે.",
+   "sub": "જેમ જેમ મત આવે છે તેમ તે વિભાજન જુએ છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} at her apartment window at dusk, the city lights beginning to glow, a calm decided smile.",
+   "vo": "આ હજી પણ તેનો નિર્ણય છે. પણ હવે તેને ખબર છે કે લોકોનો ઝોક કઈ તરફ છે.",
+   "sub": "આ હજી પણ તેનો નિર્ણય છે. પણ હવે તેને ખબર છે કે લોકોનો ઝોક કઈ તરફ છે.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "વેપૉઇન્ટ. એકવાર કહો. ગૂગલ પ્લે પર ફ્રી, ઘણી ભારતીય અને આંતરરાષ્ટ્રીય ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false
+}

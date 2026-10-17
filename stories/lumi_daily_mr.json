@@ -1,0 +1,77 @@
+{
+ "id": "lumi-daily-mr",
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "lumi",
+ "feature": "daily-totals-update",
+ "title": "दुकान बंद करतानाची एक मिनिटं",
+ "post_on": "2026-12-03",
+ "caption": "ती नऊ वाजता दुकान बंद करते आणि आठ वाजताच थकून जाते. अनिता चार रकाने वापरते. लुमी तिची गोष्ट सांगते.",
+ "linkedin_text": "At closing time, itemising a day of sales is a job for someone with more energy.\n\nScoreMyBiz has Today's Business Update: sales, spending, cash in hand and bank, in one minute at the counter. If the day is already itemised, the totals are not counted twice. Lumi tells Anita's story; every screen is the real app.",
+ "hashtags": [
+  "#DailyUpdate",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "anita": "Anita, an Indian woman in her thirties who runs a boutique, in a mustard kurta with silver earrings and a tired friendly smile"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small boutique with clothes on racks behind her, a warm tired smile.",
+   "vo": "हाय, मी लुमी. ही आहे अनिताची गोष्ट. तिचं बुटीक नऊला बंद होतं, आणि ती आठलाच थकते.",
+   "sub": "हाय, मी लुमी. ही आहे अनिताची गोष्ट. तिचं बुटीक नऊला बंद होतं, आणि ती आठलाच थकते.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "One minute at closing"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} behind the counter of her boutique near closing time, rubbing her eyes, a heap of receipts beside the till, warm lamp light.",
+   "vo": "प्रत्येक विक्रीची नोंद ठेवणं म्हणजे खूप ऊर्जेचं काम.",
+   "sub": "प्रत्येक विक्रीची नोंद ठेवणं म्हणजे खूप ऊर्जेचं काम.",
+   "min": 8,
+   "card": "रात्रीचे नऊ वाजले"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} at the boutique counter tapping her phone, a small relieved smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये ती फक्त चार गोष्टी भरते: विक्री, खर्च, हातातला कॅश आणि बँक.",
+   "sub": "ScoreMyBiz मध्ये ती फक्त चार गोष्टी भरते: विक्री, खर्च, हातातला कॅश आणि बँक.",
+   "min": 8,
+   "screen": "daily-update.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} finishing on her phone with a quick nod as a mannequin stands behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "काऊंटरवर फक्त एक मिनिट, आणि दिवस संपला.",
+   "sub": "काऊंटरवर फक्त एक मिनिट, आणि दिवस संपला.",
+   "min": 8,
+   "screen": "daily-update.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} pulling down the boutique shutter at night with a content smile, a bag over her shoulder, warm street light.",
+   "vo": "दिवसाची नोंद आधीच झाली असेल, तर आकडे पुन्हा मोजावे लागत नाहीत.",
+   "sub": "दिवसाची नोंद आधीच झाली असेल, तर आकडे पुन्हा मोजावे लागत नाहीत.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anita} walking home on an evening street, relaxed, humming, the city lights soft behind her.",
+   "vo": "हिशोबाची वही अपडेट असते, आणि ती सुद्धा.",
+   "sub": "हिशोबाची वही अपडेट असते, आणि ती सुद्धा.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची स्थिती जाणून घ्या. तीस दिवस मोफत, अनेक भारतीय आणि जागतिक भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

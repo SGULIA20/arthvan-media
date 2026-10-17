@@ -1,0 +1,75 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "post_on": "2026-12-10",
+ "id": "founder-ca-documents-gu",
+ "character": "founder_suit",
+ "feature": "documents-from-my-ca",
+ "title": "એક જ જગ્યાએ",
+ "caption": "સુનીલના સીએ એ રિટર્ન પૂરું કર્યું છે, અને સુનીલ તેના માટે વોટ્સએપમાં ખોદકામ કરવા માંગતો નથી. સ્થાપક તેની વાત કહે છે.",
+ "linkedin_text": "In India, if your CA is on ScoreMyBiz, the filings and returns they upload appear in one list in your app. ScoreMyBiz does not prepare or file any return; it only keeps what your CA sends you.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#CAIndia"
+ ],
+ "cast": {
+  "sunil": "Sunil, a middle-aged Indian garment shop owner with a moustache, in a cream kurta and a gold wristwatch"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera outside a bustling garment shop in the afternoon, colourful fabrics hanging behind him, a warm smile.",
+   "vo": "હાય. આ સુનીલની વાર્તા છે. તેના સીએ એ રિટર્ન પૂરું કર્યું છે, અને તે વોટ્સએપમાં શોધવા માંગતો નથી.",
+   "sub": "હાય. આ સુનીલની વાર્તા છે. તેના સીએ એ રિટર્ન પૂરું કર્યું છે, અને તે વોટ્સએપમાં શોધવા માંગતો નથી.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "In one place"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} scrolling through his phone behind his shop counter, frowning, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "સીએ ના કાગળો મહિનાઓની ચેટમાં આમતેમ વિખરાયેલા છે.",
+   "sub": "સીએ ના કાગળો મહિનાઓની ચેટમાં આમતેમ વિખરાયેલા છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} tapping his phone with a hopeful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ભારતમાં, જો તમારા સીએ ScoreMyBiz પર હોય, તો તેઓ જે અપલોડ કરે તે તમારી એપમાં એક જ લિસ્ટમાં દેખાય છે.",
+   "sub": "ભારતમાં, જો તમારા સીએ ScoreMyBiz પર હોય, તો તેઓ જે અપલોડ કરે તે તમારી એપમાં એક જ લિસ્ટમાં દેખાય છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} opening a list on his phone with an easy smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તેની એપમાં માય ડોક્યુમેન્ટ્સ લિસ્ટ છે. એકવાર સીએ કંઈક અપલોડ કરે, એટલે તે ત્યાં દેખાય છે.",
+   "sub": "તેની એપમાં માય ડોક્યુમેન્ટ્સ લિસ્ટ છે. એકવાર સીએ કંઈક અપલોડ કરે, એટલે તે ત્યાં દેખાય છે.",
+   "min": 8,
+   "screen": "my-documents.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} nodding thoughtfully, folded cloth stacked behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz કશું ફાઇલ કરતું નથી. તે ફક્ત સીએ મોકલે તે જ સાચવે છે.",
+   "sub": "ScoreMyBiz કશું ફાઇલ કરતું નથી. તે ફક્ત સીએ મોકલે તે જ સાચવે છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunil} standing at his shop door in the sun, relaxed, arms folded.",
+   "vo": "ચેટમાં વધુ શોધવાની જરૂર નથી.",
+   "sub": "ચેટમાં વધુ શોધવાની જરૂર નથી.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ માટે મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "title": "Extras inteligentes y herramientas gratis",
+ "caption": "Parte 6: extras inteligentes y herramientas gratis. Entrada de fotos y voz, alertas de riesgo, práctica de decisiones, avisos, hojas imprimibles y calculadoras para ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Hola, soy Lumi. Parte seis: extras y herramientas gratis."
+  },
+  {
+   "vo": "Toma una foto a una factura o libreta, revisa y guarda.",
+   "card": "Entrada por foto"
+  },
+  {
+   "vo": "Di una frase, como vendí dos mil a Raju.",
+   "card": "Entrada por voz"
+  },
+  {
+   "vo": "Avísale a un cliente en un toque, por WhatsApp."
+  },
+  {
+   "vo": "Abre las alertas de riesgo detrás de tu puntaje.",
+   "card": "Alertas de riesgo"
+  },
+  {
+   "vo": "Practica tres decisiones y mira tu puntaje cambiar.",
+   "card": "Práctica de decisiones"
+  },
+  {
+   "vo": "Compara con negocios similares, si ya hay suficientes.",
+   "card": "Comparar"
+  },
+  {
+   "vo": "¿Dos días tranquilos? Recibes un aviso por WhatsApp.",
+   "card": "Un suave aviso"
+  },
+  {
+   "vo": "Imprime una hoja diaria gratis y manda una foto.",
+   "card": "Hoja diaria"
+  },
+  {
+   "vo": "En la web: calculadoras gratis y afiches de ofertas.",
+   "card": "Herramientas web gratis"
+  },
+  {
+   "vo": "Comparte tu enlace para invitar a un amigo.",
+   "card": "Invita a un amigo"
+  },
+  {
+   "vo": "ScoreMyBiz. Gratis por treinta días, en varios idiomas."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-11"
+}

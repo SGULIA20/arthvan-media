@@ -1,0 +1,45 @@
+{
+ "title": "Rahat selvänä",
+ "caption": "Osa 3: rahat selvänä. ScoreMyBiz-rahanyritysnäytöt oikeassa sovelluksessa.",
+ "scenes": [
+  {
+   "vo": "Hei, minä olen Lumi. Osa kolme: rahat selvänä."
+  },
+  {
+   "vo": "Laske käteinen ja pankki kirjaa vasten."
+  },
+  {
+   "vo": "Päiväkohtainen kassakirja, alusta loppuun."
+  },
+  {
+   "vo": "Hae ja lataa kaikki myydyt, ostetut ja kulutetut."
+  },
+  {
+   "vo": "Mitä sinulla on ja mitä velkaa, yhdellä sivulla."
+  },
+  {
+   "vo": "Paperivoitto todellisen käteisesi rinnalla."
+  },
+  {
+   "vo": "Lähetä PDF-tarjous, tee siitä sitten myynti."
+  },
+  {
+   "vo": "Valitse, miten laskusi numeroidaan."
+  },
+  {
+   "vo": "Viestitä päivän luvut WhatsAppissa; ne tallennetaan."
+  },
+  {
+   "vo": "Vuokra ja palkka voivat toistua kuukausittain."
+  },
+  {
+   "vo": "Poistettu vahingossa? Kumoa odottaa viisi sekuntia.",
+   "card": "Kumoa"
+  },
+  {
+   "vo": "ScoreMyBiz. Ilmainen kolmekymmentä päivää, monella kielellä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-08"
+}

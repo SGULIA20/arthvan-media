@@ -1,0 +1,74 @@
+{
+ "id": "founder-monthend-mr",
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "founder_suit",
+ "title": "महिन्याचा शेवट",
+ "post_on": "2026-11-15",
+ "caption": "सुरेशच्या गल्ल्याचा हिशोब शेल्फशी जुळत नव्हता. एका आठवड्यात एका आकडेवारीने महिन्याचा शेवट कसा बदलला, हे संस्थापक सांगत आहेत.",
+ "linkedin_text": "Sales good, shelf full, drawer empty. Most small shops only find out at month end.\n\nScoreMyBiz reads the shop's own book and gives one number out of 100 for its health, with three moves for the week. The founder character tells Suresh's story; every screen is the real app.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#MonthEnd"
+ ],
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, stands in a hardware shop aisle among coils of rope and tins of paint, turns to the camera and speaks calmly, warm evening light.",
+   "vo": "हॅलो. ही सुरेशची गोष्ट आहे. तो हार्डवेअरचं दुकान चालवतो. प्रत्येक महिन्याच्या शेवटी तोच प्रश्न: पैसे कुठे गेले?",
+   "sub": "हॅलो. ही सुरेशची गोष्ट आहे. तो हार्डवेअरचं दुकान चालवतो. प्रत्येक महिन्याच्या शेवटी तोच प्रश्न: पैसे कुठे गेले?",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Month end"
+  },
+  {
+   "layout": "clip",
+   "clip": "A small Indian hardware shop at closing time: the owner, a middle-aged man in a checked shirt, opens the cash drawer, looks at a few notes, then at the full shelves behind him, and exhales. Slow push-in.",
+   "card": "पैसे गेले कुठे?",
+   "vo": "विक्री चांगली होती. शेल्फ भरलेलं होतं. गल्ला नाही.",
+   "sub": "विक्री चांगली होती. शेल्फ भरलेलं होतं. गल्ला नाही.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "Close on a hardware shop counter: {suresh} turning the page of a handwritten notebook beside a calculator and a phone, warm lamp light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz त्याचा हिशोब वाचून सोप्या भाषेत दाखवतं. विक्री. खरेदी. खर्च. उरले किती.",
+   "sub": "ScoreMyBiz त्याचा हिशोब वाचून सोप्या भाषेत दाखवतं. विक्री. खरेदी. खर्च. उरले किती.",
+   "min": 8,
+   "screen": "profit-loss.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, points at a shelf of unsold festival stock in a hardware shop while {suresh} scratches his head, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Lumi खरी अडचण दाखवते: सणा, अजूनही शेल्फवर पडलेला आहे. पैसे तिथेच अडकलेत.",
+   "sub": "Lumi खरी अडचण दाखवते: सणा, अजूनही शेल्फवर पडलेला आहे. पैसे तिथेच अडकलेत.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "screen": "dashboard.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{suresh} at the counter of his hardware shop at closing time a month later, opening the cash drawer and finding it full, a quiet satisfied smile, shelves of rope and paint behind, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "दुकानाच्या प्रकृतीसाठी शंभरपैकी एक आकडा, आणि आठवड्यासाठी तीन गोष्टी. तो त्या करतो. पुढच्या महिन्याच्या शेवटी, गल्ला शेल्फशी जुळतो.",
+   "sub": "दुकानाच्या प्रकृतीसाठी शंभरपैकी एक आकडा, आणि आठवड्यासाठी तीन गोष्टी. तो त्या करतो. पुढच्या महिन्याच्या शेवटी, गल्ला शेल्फशी जुळतो.",
+   "min": 9,
+   "screen": "score-history.png"
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत ओळखा. तीस दिवस मोफत, अनेक भारतीय आणि परदेशी भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "feature": "profit-report",
+ "cast": {
+  "suresh": "Suresh, a middle-aged Indian man with thinning hair, round glasses and a blue checked shirt"
+ }
+}

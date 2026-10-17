@@ -1,0 +1,47 @@
+{
+ "title": "Blijf de baas",
+ "caption": "Deel 4: blijf de baas. Thuis, herinneringen, vergrendelde maanden, wie wat wijzigde, je kaart en meer in ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Hoi, ik ben Lumi. Deel vier: blijf de baas."
+  },
+  {
+   "vo": "Thuis toont je dag in één oogopslag."
+  },
+  {
+   "vo": "De bel verzamelt herinneringen, notities en checks."
+  },
+  {
+   "vo": "Je reeks en een wekelijkse uitdaging, op Thuis.",
+   "card": "Je reeks"
+  },
+  {
+   "vo": "Typ een herinnering en het wordt een taak met datum."
+  },
+  {
+   "vo": "Krijg drie tot vijf volgende stappen om af te vinken.",
+   "card": "Volgende stappen"
+  },
+  {
+   "vo": "Vergrendel een afgesloten maand, zodat niets verschuift."
+  },
+  {
+   "vo": "Zie wie wat heeft gewijzigd, en wanneer."
+  },
+  {
+   "vo": "Deel je visitekaartje, met een WhatsApp-qr-code."
+  },
+  {
+   "vo": "Een persoonlijke gezondheidsscore voor je eigen geld."
+  },
+  {
+   "vo": "Tot vijf winkels, elk met hun eigen boek.",
+   "card": "Meerdere winkels"
+  },
+  {
+   "vo": "ScoreMyBiz. Dertig dagen gratis, in vele talen."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-09"
+}

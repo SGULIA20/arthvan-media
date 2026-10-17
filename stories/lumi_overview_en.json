@@ -17,9 +17,9 @@
  "scenes": [
   {
    "layout": "talk",
-   "vo": "Hi, I'm Lumi. Here is what ScoreMyBiz does for your shop, in one minute.",
-   "sub": "Hi, I'm Lumi. Here is what ScoreMyBiz does for your shop, in one minute.",
-   "min": 6,
+   "vo": "Hi, I'm Lumi. Here is ScoreMyBiz, in one minute.",
+   "sub": "Hi, I'm Lumi. Here is ScoreMyBiz, in one minute.",
+   "min": 5,
    "pose": "head_neutral"
   },
   {
@@ -105,7 +105,7 @@
   {
    "layout": "end",
    "pose": "front_happy",
-   "vo": "ScoreMyBiz. Know your business health. Free for thirty days, in many Indian and international languages.",
+   "vo": "ScoreMyBiz. Free for thirty days, in many languages.",
    "sub": "",
    "min": 5
   }

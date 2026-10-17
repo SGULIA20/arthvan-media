@@ -1,0 +1,54 @@
+{
+ "title": "O que há de novo no Waypoint",
+ "caption": "Parte 5: as novidades no Waypoint. A Mira mostra o que há de novo.",
+ "scenes": [
+  {
+   "vo": "Oi, sou a Mira. Parte cinco: novidades no Waypoint."
+  },
+  {
+   "vo": "Cada post traz um de oito sentimentos."
+  },
+  {
+   "vo": "Novo aqui? Veja três posts e reaja.",
+   "card": "Primeiros três"
+  },
+  {
+   "vo": "Responda em privado: só o autor vê.",
+   "card": "Resposta privada"
+  },
+  {
+   "vo": "Agradeça a quem reagiu, sem nomes.",
+   "card": "Dizer obrigado"
+  },
+  {
+   "vo": "Posts iniciais sem resposta ganham boas-vindas.",
+   "card": "Boas-vindas"
+  },
+  {
+   "vo": "Após postar, check-in: mais leve, igual ou mais pesado?",
+   "card": "Check-in"
+  },
+  {
+   "vo": "O kit Calma: respire, aterre, relaxe."
+  },
+  {
+   "vo": "Saída rápida: um toque e você sai."
+  },
+  {
+   "vo": "Mensagens oficiais rodam acima do Mural."
+  },
+  {
+   "vo": "Garanta vaga na Noite de Escuta, se houver.",
+   "card": "Noite de Escuta"
+  },
+  {
+   "vo": "Conta removida vê o motivo e pode recorrer.",
+   "card": "Recursos"
+  },
+  {
+   "vo": "Waypoint. Diga uma vez. Grátis no Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-07"
+}

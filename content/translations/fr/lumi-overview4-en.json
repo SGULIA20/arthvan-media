@@ -1,0 +1,47 @@
+{
+ "title": "Gardez le contrôle",
+ "caption": "Partie 4 : gardez le contrôle. Accueil, rappels, mois verrouillés, historique des modifs, votre carte et plus encore dans ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Lumi. Quatrième partie : gardez le contrôle."
+  },
+  {
+   "vo": "L'accueil résume votre journée en un coup d'œil."
+  },
+  {
+   "vo": "La cloche regroupe rappels, notes et points de suivi."
+  },
+  {
+   "vo": "Votre série et un défi hebdo, sur l'accueil.",
+   "card": "Votre série"
+  },
+  {
+   "vo": "Tapez un rappel, il devient une tâche datée."
+  },
+  {
+   "vo": "Obtenez trois à cinq actions à cocher.",
+   "card": "Actions à faire"
+  },
+  {
+   "vo": "Verrouillez un mois clos, rien ne bouge."
+  },
+  {
+   "vo": "Voyez qui a changé quoi et quand."
+  },
+  {
+   "vo": "Partagez votre carte pro, avec un QR code WhatsApp."
+  },
+  {
+   "vo": "Un score de santé pour vos propres finances."
+  },
+  {
+   "vo": "Jusqu'à cinq boutiques, chacune avec son livre.",
+   "card": "Plusieurs boutiques"
+  },
+  {
+   "vo": "ScoreMyBiz. Gratuit trente jours, en plusieurs langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-09"
+}

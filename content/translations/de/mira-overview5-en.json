@@ -1,0 +1,54 @@
+{
+ "title": "Was gibt's Neues in Waypoint",
+ "caption": "Teil 5: die neuesten Updates in Waypoint. Mira zeigt, was neu ist.",
+ "scenes": [
+  {
+   "vo": "Hi, ich bin Mira. Teil fünf: Was ist neu in Waypoint."
+  },
+  {
+   "vo": "Jeder Beitrag hat eins von acht Gefühlen."
+  },
+  {
+   "vo": "Neu hier? Sieh drei Beiträge und reagiere.",
+   "card": "Die ersten drei"
+  },
+  {
+   "vo": "Privat antworten: Nur der Autor sieht es.",
+   "card": "Privat antworten"
+  },
+  {
+   "vo": "Allen, die reagiert haben, ohne Namen danken.",
+   "card": "Danke sagen"
+  },
+  {
+   "vo": "Unbeantwortete erste Beiträge bekommen ein Hallo.",
+   "card": "Ein warmes Willkommen"
+  },
+  {
+   "vo": "Nach dem Posten ein Check-in: leichter, gleich oder schwerer?",
+   "card": "Check-in"
+  },
+  {
+   "vo": "Das Ruhe-Set: atmen, erden, runterfahren."
+  },
+  {
+   "vo": "Schnell raus: Ein Tippen und du bist weg."
+  },
+  {
+   "vo": "Offizielle Nachrichten wechseln über der Wand."
+  },
+  {
+   "vo": "Platz sichern am Lauschabend, wenn er stattfindet.",
+   "card": "Lauschabend"
+  },
+  {
+   "vo": "Ein gelöschtes Konto sieht den Grund und kann Einspruch erheben.",
+   "card": "Einsprüche"
+  },
+  {
+   "vo": "Waypoint. Sag es einmal. Gratis bei Google Play."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-07"
+}

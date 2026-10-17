@@ -1,0 +1,78 @@
+{
+ "id": "lumi-goals-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "feature": "goals-and-timelines",
+ "title": "ઇચ્છા નહીં, તારીખ",
+ "post_on": "2026-11-29",
+ "caption": "દુકાનને બીજું ડિસ્પ્લે ફ્રિજ જોઈએ છે. ફરીદા ઇચ્છાને તારીખમાં બદલે છે. લુમી તેની વાર્તા કહે છે.",
+ "linkedin_text": "Most small shops have a purchase in mind and no plan to reach it.\n\nIn ScoreMyBiz you set a goal with an amount and a number of months, see how long it takes at your current pace, and test what happens if customers pay a little faster. Lumi tells Farida's story; every screen is the real app.",
+ "hashtags": [
+  "#Goals",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "farida": "Farida, a cheerful Indian woman in her forties who runs an ice cream shop, in a pink kurta with a dupatta over one shoulder"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a colourful ice cream shop with a glass display behind her, a bright smile.",
+   "vo": "હાય, હું લુમી છું. આ ફરીદાની વાર્તા છે. તેની આઈસ્ક્રીમ દુકાનને બીજું ડિસ્પ્લે ફ્રિજ જોઈએ છે.",
+   "sub": "હાય, હું લુમી છું. આ ફરીદાની વાર્તા છે. તેની આઈસ્ક્રીમ દુકાનને બીજું ડિસ્પ્લે ફ્રિજ જોઈએ છે.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "A date, not a wish"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} behind the counter of her ice cream shop looking at the single crowded display fridge with a hopeful frown, colourful tubs inside, evening light.",
+   "vo": "તેના મનમાં એક આંકડો છે, પણ કોઈ પ્લાન નથી.",
+   "sub": "તેના મનમાં એક આંકડો છે, પણ કોઈ પ્લાન નથી.",
+   "min": 8,
+   "card": "એક ફ્રિજ"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} at a small table in her ice cream shop looking at her phone and thinking, a cone beside her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં તે ગોલ સેટ કરે છે: રકમ અને કેટલા મહિના.",
+   "sub": "ScoreMyBiz માં તે ગોલ સેટ કરે છે: રકમ અને કેટલા મહિના.",
+   "min": 8,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} tapping her phone with a slow growing smile, the ice cream display glowing behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "એપ બતાવે છે કે આ સ્પીડથી કેટલો સમય લાગશે.",
+   "sub": "એપ બતાવે છે કે આ સ્પીડથી કેટલો સમય લાગશે.",
+   "min": 8,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} chatting with a regular customer who hands over money at the counter, a friendly exchange, afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "અને જો તેના ગ્રાહકો થોડા જલ્દી પૈસા આપે તો શું થાય.",
+   "sub": "અને જો તેના ગ્રાહકો થોડા જલ્દી પૈસા આપે તો શું થાય.",
+   "min": 8,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farida} proudly standing beside a gleaming new second display fridge full of colourful ice cream tubs, hands clasped, a big joyful smile.",
+   "vo": "હવે ફ્રિજ એક તારીખ છે, ઇચ્છા નહીં.",
+   "sub": "હવે ફ્રિજ એક તારીખ છે, ઇચ્છા નહીં.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. ધંધાની તબિયત જાણો. ત્રીસ દિવસ ફ્રી, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

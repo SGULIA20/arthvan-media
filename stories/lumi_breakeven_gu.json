@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "id": "lumi-breakeven-gu",
+ "character": "lumi",
+ "feature": "break-even",
+ "title": "વેચવાનો ઓછામાં ઓછો જથ્થો",
+ "post_on": "2026-12-27",
+ "caption": "મોટી દુકાન કરતા પહેલાં, આશા ઓછામાં ઓછું કેટલું વેચવું પડે તે જાણવા માંગે છે. લુમી તેની વાર્તા કહે છે.",
+ "linkedin_text": "In ScoreMyBiz, in the free month or on a paid plan, the Break-even calculator takes monthly fixed costs, sales and the cost of what is sold, and shows how much must be sold each month to cover costs and the safety margin above that line. It is maths on the owner's own numbers, not a forecast.",
+ "hashtags": [
+  "#BreakEven",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "asha": "Asha, a young Indian woman planning a bigger bakery, in a yellow cotton kurta with a thin gold necklace"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small neat bakery with warm light and fresh bread behind her, a warm smile.",
+   "vo": "હાય, હું લુમી છું. આ આશાની વાર્તા છે. તેને મોટી બેકરી અને મોટું ભાડું જોઈએ છે.",
+   "sub": "હાય, હું લુમી છું. આ આશાની વાર્તા છે. તેને મોટી બેકરી અને મોટું ભાડું જોઈએ છે.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "The least to sell"
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} standing alone in an empty shop space, looking around thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "નવી દુકાનનો દર મહિને ઘણો ખર્ચ થાય છે. નુકસાનમાં ન જવા માટે તેણે કેટલું વેચવું જ પડશે?",
+   "sub": "નવી દુકાનનો દર મહિને ઘણો ખર્ચ થાય છે. નુકસાનમાં ન જવા માટે તેણે કેટલું વેચવું જ પડશે?",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} typing numbers on her phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં, મફત મહિનામાં, બ્રેક-ઇવન ત્રણ બાબતો પૂછે છે: ફિક્સ ખર્ચ, માસિક વેચાણ અને માલની કિંમત.",
+   "sub": "ScoreMyBiz માં, મફત મહિનામાં, બ્રેક-ઇવન ત્રણ બાબતો પૂછે છે: ફિક્સ ખર્ચ, માસિક વેચાણ અને માલની કિંમત.",
+   "min": 8,
+   "screen": "break-even.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} reading her phone with a serious nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "તે બતાવે છે કે ખર્ચ કાઢવા તેણે દર મહિને કેટલું વેચાણ કરવું પડશે.",
+   "sub": "તે બતાવે છે કે ખર્ચ કાઢવા તેણે દર મહિને કેટલું વેચાણ કરવું પડશે.",
+   "min": 8,
+   "screen": "break-even.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} smiling with relief at her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "અને તે રેખાથી ઉપર તેની પાસે સેફ્ટી માર્જિન કેટલું છે.",
+   "sub": "અને તે રેખાથી ઉપર તેની પાસે સેફ્ટી માર્જિન કેટલું છે.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{asha} smiling at the camera in the empty shop, hands on hips.",
+   "vo": "આ તેના પોતાના આંકડા પરનું ગણિત છે, કોઈ અંદાજ નથી.",
+   "sub": "આ તેના પોતાના આંકડા પરનું ગણિત છે, કોઈ અંદાજ નથી.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તંદુરસ્ત સ્થિતિ જાણો. ત્રીસ દિવસ મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

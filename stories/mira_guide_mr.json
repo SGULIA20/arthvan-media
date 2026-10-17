@@ -1,0 +1,76 @@
+{
+ "id": "mira-guide-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "feature": "mira-guide",
+ "title": "मध्यरात्रीचा हॅलो",
+ "post_on": "2026-11-28",
+ "caption": "मध्यरात्री कोणीच ऑनलाइन नसते. जो मीरा नावाच्या एआय गाईडला हॅलो म्हणतो. मीरा त्याची गोष्ट सांगते.",
+ "linkedin_text": "On Waypoint, Talk to Mira starts a chat with an automated AI guide that says so in its first line. Replies are one or two sentences, the same reactions, report and block tools apply as in any chat, and the chat closes after forty of your messages.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#AIGuide"
+ ],
+ "cast": {
+  "jo": "Jo, a young man in his mid twenties with messy dark hair and a grey hoodie"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera on a quiet balcony at midnight, city lights glowing behind her, a gentle smile.",
+   "vo": "हाय, मी मीरा. ही जो ची गोष्ट आहे. मध्यरात्र झालीये आणि बोलण्यासाठी सगळे झोपलेत.",
+   "sub": "हाय, मी मीरा. ही जो ची गोष्ट आहे. मध्यरात्र झालीये आणि बोलण्यासाठी सगळे झोपलेत.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Midnight hello"
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo}, with spiky messy dark brown hair and warm tan skin, in his grey knit hoodie, sitting at a small kitchen table at night with a mug, looking at his phone, the kitchen softly lit, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वेपॉईंट वर तो मॅचची वाट बघतोय, पण ऑनलाइन काउंट शून्य दाखवतोय.",
+   "sub": "वेपॉईंट वर तो मॅचची वाट बघतोय, पण ऑनलाइन काउंट शून्य दाखवतोय.",
+   "min": 8,
+   "screen": "matching-mira.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} reading his phone with a small relieved smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "म्हणून तो चॅट्स टॅबमध्ये किंवा वाट बघताना 'टॉक टू मीरा' वर टॅप करतो.",
+   "sub": "म्हणून तो चॅट्स टॅबमध्ये किंवा वाट बघताना 'टॉक टू मीरा' वर टॅप करतो.",
+   "min": 8,
+   "screen": "chats.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} reading a message with an interested look, a lamp glowing beside him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ती लगेच सांगते: मी एआय गाईड आहे, व्यक्ती नाही.",
+   "sub": "ती लगेच सांगते: मी एआय गाईड आहे, व्यक्ती नाही.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} typing on his phone with a slight smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ती एका-दोन वाक्यांत उत्तर देते. आणि कोणत्याही चॅटसारखा तो रिॲक्ट, रिपोर्ट किंवा ब्लॉक करू शकतो.",
+   "sub": "ती एका-दोन वाक्यांत उत्तर देते. आणि कोणत्याही चॅटसारखा तो रिॲक्ट, रिपोर्ट किंवा ब्लॉक करू शकतो.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{jo} setting his phone down and looking out at the night from the balcony, calm, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "त्याचे चाळीस मेसेज झाल्यानंतर चॅट बंद होते. ही सुरुवात करण्याची जागा आहे, राहण्याची नाही.",
+   "sub": "त्याचे चाळीस मेसेज झाल्यानंतर चॅट बंद होते. ही सुरुवात करण्याची जागा आहे, राहण्याची नाही.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉईंट. एकदा बोलून पहा. गुगल प्ले वर मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

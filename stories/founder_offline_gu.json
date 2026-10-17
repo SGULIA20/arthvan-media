@@ -1,0 +1,77 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "id": "founder-offline-gu",
+ "character": "founder_suit",
+ "feature": "entries-without-signal",
+ "title": "સિગ્નલ નથી",
+ "post_on": "2027-01-01",
+ "caption": "નબળા સિગ્નલવાળું બેઝમેન્ટ માર્કેટ. સલીમ હજુ પણ દરેક વેચાણ લખે છે. ફાઉન્ડર તેમની વાત કહે છે.",
+ "linkedin_text": "If there is no signal at the counter, a Sold, Bought or Spent entry in ScoreMyBiz is kept safely on the phone, shown as waiting, and goes into the book by itself when the signal returns, without being added twice. Only the entry form works without signal; reports need signal.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#NoSignal"
+ ],
+ "cast": {
+  "salim": "Salim, a middle-aged Indian dry fruit seller with a white skull cap, a white kurta and a trimmed grey beard"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy covered market lane with dry fruit stalls behind him, a warm smile.",
+   "vo": "નમસ્તે. આ સલીમની વાત છે. તેની દુકાન બેઝમેન્ટમાં છે, જ્યાં સિગ્નલ આવ્યા કરે ને જાય.",
+   "sub": "નમસ્તે. આ સલીમની વાત છે. તેની દુકાન બેઝમેન્ટમાં છે, જ્યાં સિગ્નલ આવ્યા કરે ને જાય.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "No signal",
+   "card": "સિગ્નલ નથી"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} at his dry fruit stall looking at his phone with a frown, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ગ્રાહક પૈસા આપે છે. તેના ફોનમાં સિગ્નલ નથી. તે હાથ પર લખવા માંગતો નથી.",
+   "sub": "ગ્રાહક પૈસા આપે છે. તેના ફોનમાં સિગ્નલ નથી. તે હાથ પર લખવા માંગતો નથી.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} tapping his phone calmly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz માં, સિગ્નલ વગરની એન્ટ્રી તેના ફોનમાં સુરક્ષિત રહે છે.",
+   "sub": "ScoreMyBiz માં, સિગ્નલ વગરની એન્ટ્રી તેના ફોનમાં સુરક્ષિત રહે છે.",
+   "min": 8,
+   "screen": "offline-entries.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} watching his phone with a relaxed smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "સિગ્નલ પાછું આવે ત્યારે તે જાતે જ ચોપડામાં જતી રહે છે, અને તે ક્યારેય બે વાર ઉમેરાતી નથી.",
+   "sub": "સિગ્નલ પાછું આવે ત્યારે તે જાતે જ ચોપડામાં જતી રહે છે, અને તે ક્યારેય બે વાર ઉમેરાતી નથી.",
+   "min": 8,
+   "screen": "offline-entries.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} weighing almonds on a scale with a nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ફક્ત એન્ટ્રી ફોર્મ જ સિગ્નલ વગર ચાલે છે. રિપોર્ટ માટે સિગ્નલ જોઈએ.",
+   "sub": "ફક્ત એન્ટ્રી ફોર્મ જ સિગ્નલ વગર ચાલે છે. રિપોર્ટ માટે સિગ્નલ જોઈએ.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} smiling at the camera among sacks of dry fruit.",
+   "vo": "દરેક વેચાણ લખાય છે, બેઝમેન્ટમાં પણ.",
+   "sub": "દરેક વેચાણ લખાય છે, બેઝમેન્ટમાં પણ.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. તમારા ધંધાની સ્થિતિ જાણો. ત્રીસ દિવસ માટે મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "title": "Ziada za werevu na zana za bure",
+ "caption": "Sehemu ya 6: ziada za werevu na zana za bure. Kuingiza kwa picha na sauti, alama za hatari, mazoezi ya maamuzi, vidokezo, karatasi za kuchapisha na vikokotoo vya ScoreMyBiz.",
+ "scenes": [
+  {
+   "vo": "Habari, mimi ni Lumi. Sehemu ya sita: ziada za werevu, na zana za bure."
+  },
+  {
+   "vo": "Piga picha ya bili au ukurasa wa daftari, kagua, hifadhi.",
+   "card": "Ingizo la picha"
+  },
+  {
+   "vo": "Sema sentensi moja, kama aliuza elfu mbili kwa Raju.",
+   "card": "Ingizo la sauti"
+  },
+  {
+   "vo": "Mkumbushe mteja kwa mguso mmoja, kwenye WhatsApp."
+  },
+  {
+   "vo": "Fungua alama za hatari nyuma ya alama yako.",
+   "card": "Alama za hatari"
+  },
+  {
+   "vo": "Fanya mazoezi ya maamuzi matatu, na utazame alama yako ikibadilika.",
+   "card": "Mazoezi ya maamuzi"
+  },
+  {
+   "vo": "Linganisha na biashara zinazofanana, zikiwa nyingi za kutosha.",
+   "card": "Linganisha"
+  },
+  {
+   "vo": "Siku mbili za utulivu? Unapata kidokezo cha WhatsApp cha mara kwa mara.",
+   "card": "Kidokezo tulivu"
+  },
+  {
+   "vo": "Chapisha karatasi ya bure ya kila siku, kisha tuma picha.",
+   "card": "Karatasi ya kila siku"
+  },
+  {
+   "vo": "Kwenye tovuti: vikokotoo vya bure na mabango ya ofa.",
+   "card": "Zana za tovuti za bure"
+  },
+  {
+   "vo": "Shiriki kiungo chako ili kumかりa rafiki.",
+   "card": "Alika rafiki"
+  },
+  {
+   "vo": "ScoreMyBiz. Bure kwa siku thelathini, kwa lugha nyingi."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-11"
+}

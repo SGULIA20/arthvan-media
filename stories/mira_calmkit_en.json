@@ -73,5 +73,6 @@
  "cast": {
   "priya": "Priya, an Indian woman in her late twenties with shoulder-length dark hair, in a grey office blazer over a white top"
  },
- "legacy": true
+ "legacy": true,
+ "hold": "Waypoint v25 (feelings, private replies, thanks, welcome, Calm kit, Quick exit, check-ins, Listening Night, appeals) is not live yet: remove this line only once the v25 build is live on Android AND iOS (founder rule, 17 Oct 2026)"
 }

@@ -1,0 +1,45 @@
+{
+ "title": "Votre argent, tout clair",
+ "caption": "Partie 3 : votre argent, tout clair. Les écrans d'argent ScoreMyBiz, montrés sur la vraie appli.",
+ "scenes": [
+  {
+   "vo": "Salut, c'est Lumi. Partie trois : votre argent, tout clair."
+  },
+  {
+   "vo": "Comptez espèces et banque face au grand livre."
+  },
+  {
+   "vo": "Un livre de caisse jour par jour, ouverture et clôture."
+  },
+  {
+   "vo": "Cherchez et téléchargez tout vendu, acheté et dépensé."
+  },
+  {
+   "vo": "Ce que vous avez et devez, sur une seule page."
+  },
+  {
+   "vo": "Le profit sur papier à côté de votre vrai cash."
+  },
+  {
+   "vo": "Envoyez un devis PDF, puis transformez-le en vente."
+  },
+  {
+   "vo": "Choisissez la numérotation de vos factures."
+  },
+  {
+   "vo": "Envoyez les chiffres du jour sur WhatsApp ; ils sont notés."
+  },
+  {
+   "vo": "Loyer et salaire peuvent se répéter chaque mois."
+  },
+  {
+   "vo": "Supprimé par erreur ? Annuler attend cinq secondes.",
+   "card": "Annuler"
+  },
+  {
+   "vo": "ScoreMyBiz. Gratuit trente jours, en plusieurs langues."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-08"
+}

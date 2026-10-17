@@ -1,42 +1,42 @@
 {
- "title": "Tout en une minute",
- "caption": "Tout ce que ScoreMyBiz fait pour votre boutique, en une minute. Lumi montre les fonctions clés sur les vrais écrans.",
+ "title": "Tout, en une minute",
+ "caption": "Tout ce que ScoreMyBiz fait pour votre boutique, en une minute. Lumi montre l'essentiel sur les vrais écrans.",
  "scenes": [
   {
-   "vo": "Salut, c'est Lumi. Voici ce que ScoreMyBiz fait pour vous en une minute."
+   "vo": "Salut, c'est Lumi. Voici ScoreMyBiz, en une minute."
   },
   {
    "vo": "Notez ventes, achats et dépenses en quelques secondes."
   },
   {
-   "vo": "Voyez qui vous doit de l'argent et relancez sur WhatsApp."
+   "vo": "Voyez qui vous doit, et relancez sur WhatsApp."
   },
   {
-   "vo": "Voyez ce que vous devez et ce qui tombe cette semaine."
+   "vo": "Voyez ce que vous devez, et ce qui tombe cette semaine."
   },
   {
-   "vo": "Faites factures et devis, puis partagez-les en PDF."
+   "vo": "Faites factures et devis, et partagez en PDF."
   },
   {
-   "vo": "Bénéfice, trésorerie et situation en mots simples."
+   "vo": "Bénéfice, tréso, avoirs et dettes, en mots simples."
   },
   {
-   "vo": "Un score de santé d'entreprise avec points forts et faibles."
+   "vo": "Un score de santé, avec vos points forts et faibles."
   },
   {
-   "vo": "Testez des scénarios sur vos propres chiffres."
+   "vo": "Testez des si sur vos propres chiffres."
   },
   {
-   "vo": "Consultez le conseiller dans votre langue, ce mois offert."
+   "vo": "Parlez au Conseiller dans votre langue, ce mois offert."
   },
   {
    "vo": "Donnez à vos aides leur propre accès."
   },
   {
-   "vo": "Et partagez votre comptabilité avec votre CA."
+   "vo": "Et partagez vos comptes avec votre CA."
   },
   {
-   "vo": "ScoreMyBiz. Connaissez la santé de votre entreprise. Gratuit trente jours."
+   "vo": "ScoreMyBiz. Gratuit trente jours, en plein de langues."
   }
  ],
  "machine_translated": true,

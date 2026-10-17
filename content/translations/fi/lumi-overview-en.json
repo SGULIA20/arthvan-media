@@ -1,42 +1,42 @@
 {
  "title": "Kaikki minuutissa",
- "caption": "Kaikki mitä ScoreMyBiz tekee kaupellesi, minuutissa. Lumi näyttää tärkeimmät asiat oikeilla ruuduilla.",
+ "caption": "Kaikki mitä ScoreMyBiz tekee puodillesi, minuutissa. Lumi näyttää tärkeimmät toiminnot oikeilla ruuduilla.",
  "scenes": [
   {
-   "vo": "Hei, minä olen Lumi. Tässä on mitä ScoreMyBiz tekee kaupellesi minuutissa."
+   "vo": "Hei, minä olen Lumi. Tässä on ScoreMyBiz minuutissa."
   },
   {
-   "vo": "Kirjaa myynnit, ostot ja kulut sekunneissa."
+   "vo": "Kirjaa myynnit, ostot ja menot sekunneissa."
   },
   {
-   "vo": "Katso kuka on velkaa, ja muistuta WhatsAppissa."
+   "vo": "Katso kuka on velkaa ja muistuta WhatsAppissa."
   },
   {
-   "vo": "Näe mitä olet velkaa, ja mikä erääntyy tällä viikolla."
+   "vo": "Katso mitä olet velkaa ja mikä erääntyy tällä viikolla."
   },
   {
-   "vo": "Tee laskut ja tarjoukset, ja jaa ne PDF:nä."
+   "vo": "Tee laskut ja tarjoukset ja jaa ne PDF-tiedostona."
   },
   {
-   "vo": "Tulos, kassa ja varat selkeällä kielellä."
+   "vo": "Tulos, kassa ja varat selkeillä sanoilla."
   },
   {
-   "vo": "Yrityksen terveytyspisteet, vahvuudet ja heikkoudet."
+   "vo": "Yrityksen terveystulos, hyvät ja huonot puolet."
   },
   {
    "vo": "Kokeile \"mitä jos\" omilla luvuillasi."
   },
   {
-   "vo": "Kysy neuvoa omalla kielelläsi ilmaisena kuukautena."
+   "vo": "Kysy neuvoa omalla kielellä ilmaisena kuukautena."
   },
   {
-   "vo": "Anna apureille oma kirjautuminen."
+   "vo": "Anna apureille omat kirjautumiset."
   },
   {
-   "vo": "Ja jaa kirjanpito CA:n kanssa."
+   "vo": "Ja jaa kirjanpito tilitoimistollesi."
   },
   {
-   "vo": "ScoreMyBiz. Tunne yrityksesi terveys. Ilmainen 30 päivää."
+   "vo": "ScoreMyBiz. Ilmainen kolmekymmentä päivää, monella kielellä."
   }
  ],
  "machine_translated": true,

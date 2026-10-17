@@ -1,0 +1,53 @@
+{
+ "title": "Älykkäät lisät ja ilmaiset työkalut",
+ "caption": "Osa 6: älykkäät lisät ja ilmaiset työkalut. Kuva- ja äänisyöttö, riskiliput, päätösharjoitus, muistutukset, tulostettavat lomakkeet ja laskurit ScoreMyBizille.",
+ "scenes": [
+  {
+   "vo": "Hei, mä olen Lumi. Osa kuusi: älykkäät lisät ja ilmaiset työkalut."
+  },
+  {
+   "vo": "Kuvaa lasku tai vihko, tarkista ja tallenna.",
+   "card": "Kuvasyöttö"
+  },
+  {
+   "vo": "Sano yksi lause, kuten myin kaksituhatta Rajulle.",
+   "card": "Äänisyöttö"
+  },
+  {
+   "vo": "Muistuta asiakasta yhdellä napautuksella WhatsAppissa."
+  },
+  {
+   "vo": "Avaa pisteesi taustalla olevat riskiliput.",
+   "card": "Riskiliput"
+  },
+  {
+   "vo": "Harjoittele kolmea päätöstä ja katso pisteiden muuttuvan.",
+   "card": "Päätösharjoitus"
+  },
+  {
+   "vo": "Vertaile samankaltaisiin yrityksiin, kun niitä on tarpeeksi.",
+   "card": "Vertaa"
+  },
+  {
+   "vo": "Hiljaisia päiviä? Saat satunnaisen WhatsApp-muistutuksen.",
+   "card": "Hiljainen muistutus"
+  },
+  {
+   "vo": "Tulosta ilmainen päivälomake ja lähetä kuva.",
+   "card": "Päivälomake"
+  },
+  {
+   "vo": "Verkkosivulla: ilmaiset laskurit ja mainosjulisteet.",
+   "card": "Ilmaiset verkkotyökalut"
+  },
+  {
+   "vo": "Jaa linkkisi ja kutsu ystävä mukaan.",
+   "card": "Kutsu ystävä"
+  },
+  {
+   "vo": "ScoreMyBiz. Ilmainen kolmekymmentä päivää, monella kielellä."
+  }
+ ],
+ "machine_translated": true,
+ "post_on": "2027-01-11"
+}

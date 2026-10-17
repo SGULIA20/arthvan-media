@@ -1,15 +1,15 @@
 {
  "title": "Waypoint dalam satu menit",
- "caption": "Waypoint dalam satu menit: tempat untuk jujur tanpa pakai nama. Mira tunjukkan fitur utamanya.",
+ "caption": "Waypoint dalam satu menit: tempat untuk mengatakan satu hal yang benar, tanpa nama Anda. Mira menunjukkan hal-hal utama di layar asli.",
  "scenes": [
   {
-   "vo": "Hai, saya Mira. Ini Waypoint dalam satu menit: tempat untuk jujur tanpa pakai nama."
+   "vo": "Hai, saya Mira. Ini Waypoint, dalam satu menit."
   },
   {
-   "vo": "Tiap hari kamu dapat nama baru, khusus untuk hari ini."
+   "vo": "Setiap hari Anda dapat nama baru, khusus untuk hari ini."
   },
   {
-   "vo": "Ketik satu kalimat jujur. Cuma itu permintaannya."
+   "vo": "Ketik satu kalimat yang benar. Hanya itu yang diminta."
   },
   {
    "vo": "Baca tulisan orang lain malam ini, di Dinding."
@@ -18,13 +18,13 @@
    "vo": "Tanya Jalan: satu pertanyaan, dua sampai empat pilihan."
   },
   {
-   "vo": "Atau ketuk Suara dan ngobrol. Orang dengar suara karakter."
+   "vo": "Atau ketuk Suara dan bicara. Orang lain dengar suara karakter."
   },
   {
    "vo": "Tunggu kecocokan, atau ngobrol dengan Mira, pemandu AI."
   },
   {
-   "vo": "Catat suasana hatimu sekali ketuk. Tanpa mengetik."
+   "vo": "Catat suasana hati dalam sekali ketuk. Tanpa mengetik."
   },
   {
    "vo": "Sembilan puluh detik di Ruang Istirahat, sehari sekali."
@@ -33,7 +33,7 @@
    "vo": "Dalam enam belas bahasa."
   },
   {
-   "vo": "Waypoint. Katakan sekali. Gratis di Google Play, dalam banyak bahasa."
+   "vo": "Waypoint. Katakan sekali. Gratis di Google Play."
   }
  ],
  "machine_translated": true,

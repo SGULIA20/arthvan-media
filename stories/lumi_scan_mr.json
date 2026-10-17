@@ -1,0 +1,78 @@
+{
+ "id": "lumi-scan-mr",
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "lumi",
+ "feature": "photo-entry",
+ "title": "टाइप करण्याचं टेन्शन सोडा",
+ "post_on": "2026-11-25",
+ "caption": "सुनिताचा सगळा महिना एका वहीत आहे. टाईप करण्याऐवजी सुनिता एका पानाचा फोटो काढते. लुमी तिची गोष्ट सांगते.",
+ "linkedin_text": "Typing a month of handwritten sales into an app is an evening most shop owners do not have.\n\nIn ScoreMyBiz you can scan a photo of a bill or notebook page, or speak your numbers; the numbers fill in for you to check, and nothing is saved until you do. The AI features are part of the free first month. Lumi tells Sunita's story; every screen is the real app.",
+ "hashtags": [
+  "#ScanAPhoto",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "sunita": "Sunita, an Indian woman in her fifties who owns a grocery shop, in a green cotton saree with reading glasses on a chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera inside a small bright grocery shop with shelves of packets behind her, a friendly smile.",
+   "vo": "हाय, मी लुमी आहे. ही सुनिताची गोष्ट आहे. तिचा सगळा महिना एका वहीत, तिच्या स्वतःच्या हस्ताक्षरात आहे.",
+   "sub": "हाय, मी लुमी आहे. ही सुनिताची गोष्ट आहे. तिचा सगळा महिना एका वहीत, तिच्या स्वतःच्या हस्ताक्षरात आहे.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Skip the typing"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} at the counter of her grocery shop turning pages of a thick handwritten notebook, a pen behind her ear, a tired smile, evening light.",
+   "vo": "हे सगळं टाईप करायला तिला अख्खी संध्याकाळ लागेल, जी तिच्याकडे नाही.",
+   "sub": "हे सगळं टाईप करायला तिला अख्खी संध्याकाळ लागेल, जी तिच्याकडे नाही.",
+   "min": 8,
+   "card": "वही"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} holding her phone above an open notebook page on the counter as if taking a photo, glasses on, concentrating, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये ती स्कॅन अ फोटोवर क्लिक करते, आणि वहीच्या पानाचा फोटो काढते.",
+   "sub": "ScoreMyBiz मध्ये ती स्कॅन अ फोटोवर क्लिक करते, आणि वहीच्या पानाचा फोटो काढते.",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} looking closely at her phone with a small nod, a pencil in her hand, the grocery shop behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "नंबर स्वतःहून भरले जातात, ती फक्त तपासून पाहते. एक नंबर ती सुधारते, आणि मगच सेव्ह करते.",
+   "sub": "नंबर स्वतःहून भरले जातात, ती फक्त तपासून पाहते. एक नंबर ती सुधारते, आणि मगच सेव्ह करते.",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} speaking into her phone while standing between grocery shelves, a relaxed smile, soft shop light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "किंवा ती नंबर तोंडून सांगूही शकते.",
+   "sub": "किंवा ती नंबर तोंडून सांगूही शकते.",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} closing the shop shutter in the evening with a light relieved smile, the notebook tucked under her arm.",
+   "vo": "तपासा, मग सेव्ह करा. वही तिचीच राहाते.",
+   "sub": "तपासा, मग सेव्ह करा. वही तिचीच राहाते.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची प्रकृती চळा. तीस दिवस मोफत, अनेक भारतीय आणि परदेशी भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
