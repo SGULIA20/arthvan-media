@@ -1,5 +1,5 @@
 """Backup for GitHub's scheduler, which has fired hours late or not at all (12 and 13 Oct 2026).
-Run from a Mac launch agent a little after 6 PM Lagos: if today's Instagram post is not in the repo's log, start the daily-post workflow.
+Run from a Mac launch agent (com.arthvan.postbackup) at 15:45 and 16:45 Lagos = about 20:15 India (moved from 18:10 on 18 Oct 2026, because 87% of the audience is in India): if today's Instagram post is not in the repo's log, start the daily-post workflow.
 The engine itself never posts twice on one day, and the workflow has a concurrency group, so a late scheduler run is harmless."""
 import json
 import subprocess
