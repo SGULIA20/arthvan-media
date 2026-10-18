@@ -28,6 +28,17 @@ class IllustrationError(Exception):
     pass
 
 
+def free_key(env_file: Path = None) -> str:
+    """The optional FREE Google AI Studio key (a project with no billing), saved as GEMINI_IMAGE_FREE_KEY in ~/arthvan-social/.env. '' when there is none."""
+    env_file = env_file or Path.home() / "arthvan-social" / ".env"
+    if env_file.exists():
+        for line in env_file.read_text().splitlines():
+            k, _, v = line.partition("=")
+            if k.strip() == "GEMINI_IMAGE_FREE_KEY":
+                return v.strip().strip('"').strip("'")
+    return ""
+
+
 def art_dir(story_id: str, root: Path = ROOT) -> Path:
     return Path(root) / "stories" / "art" / story_id
 
@@ -70,7 +81,19 @@ def record_spend(model: str, path: Path = SPEND_FILE) -> float:
 
 def generate(prompt: str, out: Path, refs: list = (), model: str = MODEL, key: str = None, tries: int = 4, sleep=time.sleep) -> Path:
     """One picture into `out` (PNG). `refs` are image files that fix how a character looks."""
-    key = key or tts.api_key()
+    paid = key or tts.api_key()
+    free = free_key() if (model == "gemini-3.1-flash-lite-image" and not key) else ""
+    for attempt_key, is_free in (([(free, True)] if free else []) + [(paid, False)]):
+        try:
+            return _generate_with(prompt, out, refs, model, attempt_key, tries if not is_free else 2, sleep, count=not is_free)
+        except IllustrationError as e:
+            if not is_free:
+                raise
+            print("free image key did not work (" + str(e)[:80].replace(free, "<key>") + "); using the paid key", file=sys.stderr)
+    raise IllustrationError("no key")
+
+
+def _generate_with(prompt: str, out: Path, refs: list, model: str, key: str, tries: int, sleep, count: bool = True) -> Path:
     parts = [{"text": prompt}]
     for r in refs:
         parts.append({"inline_data": {"mime_type": "image/png", "data": base64.b64encode(Path(r).read_bytes()).decode()}})
@@ -97,7 +120,8 @@ def generate(prompt: str, out: Path, refs: list = (), model: str = MODEL, key: s
                 if blob and blob.get("data"):
                     out.parent.mkdir(parents=True, exist_ok=True)
                     out.write_bytes(base64.b64decode(blob["data"]))
-                    record_spend(model)
+                    if count:                                  # a picture from the free key costs nothing
+                        record_spend(model)
                     trim_paper_border(out)
                     return out
         last = "no picture in the reply: " + json.dumps(res)[:200]

@@ -55,3 +55,30 @@ def test_a_scene_can_reuse_a_picture_from_the_shared_library_for_free(tmp_path):
              "scenes": [{"layout": "illus", "image": "../_library/rooftop.png", "vo": "x"}]}
     assert missing_pictures(story, tmp_path) == []
     assert il.make_story_art(story, root=tmp_path, gen=lambda *a: (_ for _ in ()).throw(AssertionError("must not draw"))) == []      # no art line: nothing drawn, nothing paid
+
+
+def test_the_free_key_is_tried_first_for_the_lite_model_and_costs_nothing(tmp_path, monkeypatch):
+    env = tmp_path / ".env"; env.write_text("OTHER=1\nGEMINI_IMAGE_FREE_KEY=AIzaFREE\n")
+    assert il.free_key(env) == "AIzaFREE" and il.free_key(tmp_path / "none.env") == ""
+    calls = []
+    def fake(prompt, out, refs, model, key, tries, sleep, count=True):
+        calls.append((key, count)); out.write_bytes(b"png"); return out
+    monkeypatch.setattr(il, "_generate_with", fake); monkeypatch.setattr(il, "free_key", lambda *a: "AIzaFREE")
+    monkeypatch.setattr(il.tts, "api_key", lambda: "AIzaPAID")
+    il.generate("p", tmp_path / "a.png", model="gemini-3.1-flash-lite-image")
+    assert calls == [("AIzaFREE", False)]                                                   # free key worked: the paid key is not used, no spend
+    calls.clear()
+    il.generate("p", tmp_path / "b.png", model="gemini-2.5-flash-image")
+    assert calls == [("AIzaPAID", True)]                                                    # only the lite model uses the free key
+
+
+def test_when_the_free_key_is_refused_the_paid_key_takes_over(tmp_path, monkeypatch):
+    calls = []
+    def fake(prompt, out, refs, model, key, tries, sleep, count=True):
+        calls.append(key)
+        if key == "AIzaFREE":
+            raise il.IllustrationError("HTTP 429: quota")
+        out.write_bytes(b"png"); return out
+    monkeypatch.setattr(il, "_generate_with", fake); monkeypatch.setattr(il, "free_key", lambda *a: "AIzaFREE"); monkeypatch.setattr(il.tts, "api_key", lambda: "AIzaPAID")
+    il.generate("p", tmp_path / "a.png", model="gemini-3.1-flash-lite-image")
+    assert calls == ["AIzaFREE", "AIzaPAID"]
