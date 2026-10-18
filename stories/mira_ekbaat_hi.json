@@ -9,7 +9,7 @@
  "title": "Main theek hoon: hum sabka ek 'main theek hoon' hota hai",
  "post_on": "2026-10-21",
  "banner": "Hum sabka ek<br><em>'main theek hoon'</em> hota hai 🤐",
- "caption": "Aapne last time kab 'main theek hoon' bola tha, jab theek nahi the? 👇\nEk sach, bina naam ke. Waypoint, link in bio. 18+",
+ "caption": "Aapki woh ek baat kya hai, jo aapne aaj tak kisi se nahi kahi? 👇\nBina naam ke kehne ki ek jagah: Waypoint, link in bio. 18+",
  "linkedin_text": "A short illustrated story in Hindi about the times we all say 'I'm fine', and a place where you can say one true thing without your name. Waypoint is free on Google Play, for adults 18 and over.",
  "hashtags": [
   "#Waypoint",
@@ -68,14 +68,6 @@
   },
   {
    "layout": "illus",
-   "image": "s06.png",
-   "vo": "पापा पूछते हैं, सब ठीक? हाँ पापा।",
-   "sub": "Papa poochte hain, sab theek? 'Haan Papa.'",
-   "min": 2.2,
-   "art": "Papa on a sofa with the newspaper lowered, looking at Anaya who stands at the living-room door with her bag, forcing a smile; family photos on the wall, warm evening light."
-  },
-  {
-   "layout": "illus",
    "image": "s07.png",
    "vo": "बॉस ने डाँटा, फिर भी, सब ठीक है सर।",
    "sub": "Boss ne daanta, phir bhi, 'sab theek hai sir.'",
@@ -116,14 +108,6 @@
   },
   {
    "layout": "illus",
-   "image": "s12.png",
-   "vo": "या डर, लोग क्या कहेंगे।",
-   "sub": "Ya darr, log kya kahenge.",
-   "min": 2.2,
-   "art": "A group of neighbourhood aunties whisper and point on a balcony with exaggerated wavy speech lines (no words), while Anaya walks past below with her head down."
-  },
-  {
-   "layout": "illus",
    "image": "s13.png",
    "vo": "इसलिए बना है वेपॉइंट।",
    "sub": "Isliye bana hai Waypoint.",
@@ -146,11 +130,20 @@
    "screen": "create_typed.png"
   },
   {
-   "layout": "phone",
-   "vo": "कोई पढ़ता है, रिएक्ट करता है।",
-   "sub": "Koi padhta hai, react karta hai.",
+   "layout": "illus",
+   "image": "s18.png",
+   "vo": "पहली बार, किसी ने बिना जाने सुन लिया।",
+   "sub": "Pehli baar, kisi ne bina jaane sun liya.",
    "min": 2.4,
-   "screen": "wall.png"
+   "art": "Anaya lies on her hostel bed at night looking at her phone, her face lit softly by the screen, a single tear on her cheek but a gentle relieved smile, small warm glowing hearts and speech bubbles floating up from the phone, cosy lamp light."
+  },
+  {
+   "layout": "illus",
+   "image": "s19.png",
+   "vo": "और लगा, मैं अकेली नहीं हूँ।",
+   "sub": "Aur laga... main akeli nahi hoon.",
+   "min": 2.4,
+   "art": "Anaya on the rooftop terrace at dawn with the fox mascot beside her, both looking at a golden sunrise over the city, the string lights fading out, a feeling of hope and calm, water tanks and the skyline in warm light."
   },
   {
    "layout": "illus",
@@ -159,6 +152,14 @@
    "sub": "Ek sach. Bina naam ke.",
    "min": 2.2,
    "art": "Anaya on the park bench smiling softly with relief at sunset, the fox mascot leaning on her shoulder, warm golden light, a few autumn leaves."
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "आपकी वो एक बात क्या है?",
+   "sub": "Aapki woh ek baat kya hai?",
+   "min": 3.0,
+   "focus": "25% 55%"
   },
   {
    "layout": "end",
