@@ -1,0 +1,143 @@
+{
+ "id": "mira-papa-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "private-replies",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Jo baat Papa se kabhi nahi kehte",
+ "post_on": "2026-10-25",
+ "banner": "Jo baat <em>Papa se</em><br>kabhi nahi kehte 💛",
+ "caption": "Aapki woh baat kya hai, jo aapko kehni hai, par keh nahi paaye? 👇\nBina naam ke kehne ki ek jagah: Waypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about the thing many of us never say to our fathers, and a place where you can say one true thing without your name. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#PapaKiYaad",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman her signature outfit is a lilac hoodie and blue jeans.",
+   "Papa": "Papa is Anaya's father, an Indian man in his fifties with a grey moustache, a cream kurta and reading glasses, a gentle tired face.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "पापा ने कभी नहीं कहा, मुझे तुम पर गर्व है।",
+   "sub": "Papa ne kabhi nahi kaha, 'mujhe tum par garv hai.'",
+   "min": 2.2,
+   "art": "Papa stands at a small roadside tea stall at dusk holding two glasses of chai, looking proudly at school-age little Anaya who proudly shows him a report card, warm light, steam rising, bicycle leaning nearby.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "बचपन में कंधे पर बिठाकर, पूरा मेला दिखाया था।",
+   "sub": "Bachpan mein kandhe par bithakar, poora mela dikhaya tha.",
+   "min": 2.2,
+   "art": "At a colourful village fair, Papa carries little Anaya on his shoulders, she laughs holding a balloon and candy floss, Ferris wheel and festival lights behind them, golden evening.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "मेरी टिकट के लिए, रात भर लाइन में खड़े रहे।",
+   "sub": "Meri ticket ke liye, raat bhar line mein khade rahe.",
+   "min": 2.2,
+   "art": "A railway reservation counter at night, Papa in a cream kurta standing patiently in a long queue holding a thermos and a small bag, tired but determined, a wall clock showing past midnight."
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "कमर दर्द था, फिर भी बोले, मैं ठीक हूँ।",
+   "sub": "Kamar dard tha, phir bhi bole, 'main theek hoon.'",
+   "min": 2.2,
+   "art": "Papa at home pressing a hand to his lower back with a hidden wince while smiling gently at young Anaya who looks worried, a simple living room, evening light, a steel tumbler of water.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "और मैं भी कभी नहीं कह पाई, आपकी बहुत याद आती है।",
+   "sub": "Aur main bhi kabhi nahi keh paayi, aapki bahut yaad aati hai.",
+   "min": 2.2,
+   "art": "Grown Anaya in a lilac hoodie sits alone in her small rented flat in a big city at night, holding a framed photo of Papa and looking at it with longing, a bag half packed, city lights outside."
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "फ़ोन पर बस इतना, खाना खाया? हाँ, आपने?",
+   "sub": "Phone par bas itna, khana khaya? 'Haan, aapne?'",
+   "min": 2.2,
+   "art": "A split picture: on the left Papa in his armchair at home holding a phone to his ear, on the right grown Anaya in her city flat holding her phone, a thin glowing line of light connecting the two phones across the middle, both with unspoken feelings in their eyes."
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/rooftop-night-alone.png",
+   "vo": "कुछ बातें, सीधे कही नहीं जातीं।",
+   "sub": "Kuch baatein, seedhe kahi nahi jaatin.",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/fox-bench-dusk.png",
+   "vo": "इसलिए एक दिन, मैंने वेपॉइंट पर लिखा।",
+   "sub": "Isliye ek din, maine Waypoint par likha.",
+   "min": 2.2
+  },
+  {
+   "layout": "phone",
+   "vo": "पापा, आपकी बहुत याद आती है।",
+   "sub": "'Papa, aapki bahut yaad aati hai.'",
+   "min": 2.4,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/anaya-relief-tear-smile.png",
+   "vo": "किसी अनजान ने निजी जवाब भेजा, मैं भी।",
+   "sub": "Kisi anjaan ne private reply bheja: 'Main bhi.'",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "और उस रात, मैंने पापा को फ़ोन किया।",
+   "sub": "Aur us raat, maine Papa ko phone kiya.",
+   "min": 2.2,
+   "art": "Grown Anaya on the balcony of her city flat at night holding the phone to her ear, a nervous hopeful smile, her other hand on her heart, fairy lights and a few stars, the fox mascot peeking from a plant pot beside her."
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "पापा बोले, मैं भी तुम्हें बहुत याद करता हूँ।",
+   "sub": "Papa bole, 'main bhi tumhe bahut yaad karta hoon.'",
+   "min": 2.2,
+   "art": "Papa in his living room answering the phone call with a trembling joyful smile and a tear, his glasses pushed up, framed family photos behind him, warm lamp light, deeply moving."
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "आपकी वो बात क्या है, जो आपको कहनी है?",
+   "sub": "Aapki woh baat kya hai, jo aapko kehni hai?",
+   "min": 3.0,
+   "focus": "30% 55%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

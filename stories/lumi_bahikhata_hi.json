@@ -1,0 +1,140 @@
+{
+ "id": "lumi-bahikhata-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "money-to-collect",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Papa ki dukaan ka hisaab",
+ "post_on": "2026-10-26",
+ "banner": "Papa ki <em>dukaan</em> ka<br>hisaab 📒",
+ "caption": "Aapki dukaan ka hisaab, ek bahi mein hai ya ek jagah? 👇\nScoreMyBiz: sab ek jagah, 30 din free. Link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a daughter who comes home to her father's small shop, finds the old ledger full of credit, and puts the shop's accounts, dues and one health number in her phone with ScoreMyBiz. Free for 30 days.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#BahiKhata",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman she wears a simple blue kurta with jeans.",
+   "Papa": "Papa is Anaya's father, a small-town shopkeeper in his fifties with a grey moustache, a cream kurta and reading glasses, a gentle tired face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "पापा की छोटी सी दुकान, मेरा पूरा बचपन थी।",
+   "sub": "Papa ki chhoti si dukaan, mera poora bachpan thi.",
+   "min": 2.2,
+   "art": "A cheerful small-town kirana shop front in the morning, shelves of biscuits and spices, Papa arranging jars, little Anaya in school uniform doing homework at the counter, sunlight and marigold garland over the door.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "हर शाम, वो एक पुरानी बही में हिसाब लिखते थे।",
+   "sub": "Har shaam, woh ek purani bahi mein hisaab likhte the.",
+   "min": 2.2,
+   "art": "Papa at the shop counter at dusk writing in a thick old red cloth-bound ledger with a pen, a glass of chai beside him, an old brass scale and a hanging bulb, warm light."
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "कौन कितना उधार ले गया, सब उसी में।",
+   "sub": "Kaun kitna udhaar le gaya, sab usi mein.",
+   "min": 2.2,
+   "art": "A close view of an open old ledger page full of handwritten names and amounts in a neat hand, a steel pen, a pair of reading glasses resting on it, scattered scrap slips with notes, warm lamp light."
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "पर दुकान कैसी है, ये न बही बताती, न पापा।",
+   "sub": "Par dukaan kaisi hai, ye na bahi batati, na Papa.",
+   "min": 2.2,
+   "art": "Papa alone in the shop at night, shutter half down, sitting on a stool with a worried face looking at the ledger and a calculator, a single hanging bulb, long shadows."
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "एक दिन मैं शहर से लौटी, और देखा।",
+   "sub": "Ek din main shehar se lauti, aur dekha.",
+   "min": 2.2,
+   "art": "Grown Anaya in a blue kurta standing at the shop doorway with a suitcase, looking inside with concern and love, Papa behind the counter looking up in surprise, evening light, street outside."
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "ढेर सारा उधार बाकी था, और पापा चुप थे।",
+   "sub": "Dher saara udhaar baaki tha, aur Papa chup the.",
+   "min": 2.2,
+   "art": "Papa sitting behind the counter looking down quietly while Anaya reads the ledger beside him with a serious face, a stack of unpaid credit slips under a paperweight, the quiet shop around them."
+  },
+  {
+   "layout": "phone",
+   "vo": "मैंने फ़ोन में स्कोर माय बिज़ खोला।",
+   "sub": "Maine phone mein ScoreMyBiz khola.",
+   "min": 2.4,
+   "screen": "dashboard.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "बिक्री, ख़रीद, ख़र्च, सब एक जगह।",
+   "sub": "Bikri, kharid, kharch, sab ek jagah.",
+   "min": 2.4,
+   "screen": "book.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "कौन कितना देगा, और व्हाट्सएप पर याद दिलाइए।",
+   "sub": "Kaun kitna dega, aur WhatsApp par yaad dilaiye.",
+   "min": 2.4,
+   "screen": "cash-flow.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "पापा बोले, अरे, ये तो सब दिखा देता है।",
+   "sub": "Papa bole, 'arre, ye to sab dikha deta hai.'",
+   "min": 2.2,
+   "art": "Papa leaning over the counter looking with delighted surprise at a smartphone screen that Anaya holds, both smiling, the old ledger closed beside them, warm golden light."
+  },
+  {
+   "layout": "phone",
+   "vo": "और दुकान की सेहत का, एक नंबर।",
+   "sub": "Aur dukaan ki sehat ka, ek number.",
+   "min": 2.4,
+   "screen": "result.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "बही अब भी है, पर हिसाब अब फ़ोन में भी है।",
+   "sub": "Bahi ab bhi hai, par hisaab ab phone mein bhi hai.",
+   "min": 2.2,
+   "art": "Papa and Anaya laughing together behind the shop counter at golden hour, the old ledger and a phone resting side by side on the counter, the shop lights glowing, customers outside, a feeling of warmth and pride."
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "आपकी दुकान का नंबर क्या है?",
+   "sub": "Aapki dukaan ka number kya hai?",
+   "min": 3.0,
+   "focus": "35% 60%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
