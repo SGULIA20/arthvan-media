@@ -32,7 +32,7 @@ def test_every_picture_is_counted_in_the_spend_file(tmp_path):
     f = tmp_path / "spend.json"
     il.record_spend("gemini-2.5-flash-image", f); total = il.record_spend("gemini-2.5-flash-image", f)
     d = json.loads(f.read_text())
-    assert total == 8.0 and d["images"] == 2 and d["by_model"] == {"gemini-2.5-flash-image": 2}
+    assert total == 7.0 and d["images"] == 2 and d["by_model"] == {"gemini-2.5-flash-image": 2}
 
 
 def test_a_story_cannot_be_rendered_before_its_pictures_are_drawn(tmp_path):
@@ -46,3 +46,12 @@ def test_a_story_cannot_be_rendered_before_its_pictures_are_drawn(tmp_path):
 def test_the_pause_after_each_voice_line_can_be_shortened_per_story():
     from engine.story import speed_for
     assert speed_for([3.0] * 15, [2.2] * 15, pad=0.4) == 1.0 and speed_for([3.0] * 15, [2.2] * 15, pad=1.2) > 1.0
+
+
+def test_a_scene_can_reuse_a_picture_from_the_shared_library_for_free(tmp_path):
+    from engine.story import missing_pictures
+    (tmp_path / "stories" / "art" / "_library").mkdir(parents=True); (tmp_path / "stories" / "art" / "_library" / "rooftop.png").write_bytes(b"x")
+    story = {"id": "new-hi", "app": "waypoint", "character": "mira", "lang": "hi-IN", "art": {"style": "S."},
+             "scenes": [{"layout": "illus", "image": "../_library/rooftop.png", "vo": "x"}]}
+    assert missing_pictures(story, tmp_path) == []
+    assert il.make_story_art(story, root=tmp_path, gen=lambda *a: (_ for _ in ()).throw(AssertionError("must not draw"))) == []      # no art line: nothing drawn, nothing paid

@@ -1,9 +1,11 @@
 """Illustrated scenes for story Reels: one picture per scene from Google's Gemini image models (about Rs 3-4 each), kept in stories/art/<story id>/.
+Pictures that suit many stories live in stories/art/_library/ and a scene can use one with   "image": "../_library/rooftop-night.png"   (no art line, no cost).
 A story file carries   "art": {"style": "...", "cast": {"name": "who they are"}, "ref": ["mira_front_neutral.png"]}   and each scene an "image" file name and an "art" line.
 python -m engine.illustrate stories/<story>.json [scene numbers]     makes every missing picture (or just the listed scenes); never redraws a picture that exists
 Every call is counted in ~/arthvan-social/logs/image-spend.json (conservative estimate). Pictures are cached: re-running costs nothing."""
 import base64
 import json
+import os
 import ssl
 import sys
 import time
@@ -16,8 +18,8 @@ from . import tts
 ROOT = Path(__file__).resolve().parent.parent
 CHAR_DIR = ROOT / "engine" / "assets" / "characters"
 SPEND_FILE = Path.home() / "arthvan-social" / "logs" / "image-spend.json"
-MODEL = "gemini-2.5-flash-image"
-INR_PER_IMAGE = {"gemini-2.5-flash-image": 4.0, "gemini-3.1-flash-image": 6.0, "gemini-3.1-flash-lite-image": 3.0, "gemini-3-pro-image": 13.0}
+MODEL = "gemini-3.1-flash-lite-image"        # $0.0336 a picture (about Rs 3); gemini-2.5-flash-image is $0.039 (Rs 3.5); the batch API would halve either price
+INR_PER_IMAGE = {"gemini-2.5-flash-image": 3.5, "gemini-3.1-flash-image": 6.0, "gemini-3.1-flash-lite-image": 3.0, "gemini-3-pro-image": 12.0}
 _CTX = ssl.create_default_context(cafile="/etc/ssl/cert.pem") if Path("/etc/ssl/cert.pem").exists() else ssl.create_default_context()
 API = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
@@ -112,7 +114,7 @@ def make_story_art(story: dict, only: list = None, root: Path = ROOT, model: str
     for i, sc in enumerate(story["scenes"]):
         if not sc.get("art") or not sc.get("image") or (only and i not in only):
             continue
-        out = art_dir(story["id"], root) / sc["image"]
+        out = Path(os.path.normpath(art_dir(story["id"], root) / sc["image"]))
         if out.exists():
             continue
         gen(compose_prompt(art, sc["art"]), out, [] if sc.get("noref") else refs, model)

@@ -155,7 +155,7 @@ def missing_pictures(story: dict, root: Path = None) -> list:
             out.append(f"scene {i}: no picture of {story['character']} in the pose '{sc['pose']}'")
         if sc.get("screen") and not any((d / sc["screen"]).exists() for d in (shots, root / "store" / "shots" / story["app"] / "en", root / "store" / "shots" / story["app"])):
             out.append(f"scene {i}: screen {sc['screen']} not found")
-        if sc.get("layout") == "illus" and not (root / "stories" / "art" / story["id"] / sc.get("image", "?")).exists():
+        if sc.get("layout") == "illus" and not Path(os.path.normpath(root / "stories" / "art" / story["id"] / sc.get("image", "?"))).exists():      # normpath: "../_library/x.png" works even before the story's own folder exists
             out.append(f"scene {i}: illustration {sc.get('image')} not drawn yet (python -m engine.illustrate stories/{story['id'].replace('-', '_')}.json)")
     return out
 
