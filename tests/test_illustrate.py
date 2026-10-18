@@ -82,3 +82,17 @@ def test_when_the_free_key_is_refused_the_paid_key_takes_over(tmp_path, monkeypa
     monkeypatch.setattr(il, "_generate_with", fake); monkeypatch.setattr(il, "free_key", lambda *a: "AIzaFREE"); monkeypatch.setattr(il.tts, "api_key", lambda: "AIzaPAID")
     il.generate("p", tmp_path / "a.png", model="gemini-3.1-flash-lite-image")
     assert calls == ["AIzaFREE", "AIzaPAID"]
+
+
+def test_after_the_free_key_is_refused_it_is_not_tried_again_for_an_hour(tmp_path, monkeypatch):
+    calls = []
+    def fake(prompt, out, refs, model, key, tries, sleep, count=True):
+        calls.append(key)
+        if key == "AIzaFREE":
+            raise il.IllustrationError("HTTP 429: quota")
+        out.write_bytes(b"png"); return out
+    monkeypatch.setattr(il, "_generate_with", fake); monkeypatch.setattr(il, "free_key", lambda *a: "AIzaFREE"); monkeypatch.setattr(il.tts, "api_key", lambda: "AIzaPAID")
+    monkeypatch.setattr(il, "_FREE_PAUSED_UNTIL", 0.0)
+    il.generate("p", tmp_path / "a.png", model="gemini-3.1-flash-lite-image")
+    il.generate("p", tmp_path / "b.png", model="gemini-3.1-flash-lite-image")
+    assert calls == ["AIzaFREE", "AIzaPAID", "AIzaPAID"]                                  # the second picture goes straight to the paid key

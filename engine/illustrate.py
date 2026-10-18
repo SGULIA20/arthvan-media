@@ -28,6 +28,9 @@ class IllustrationError(Exception):
     pass
 
 
+_FREE_PAUSED_UNTIL = 0.0          # after the free key is refused (quota), do not try it again for an hour: no wasted waiting on every picture
+
+
 def free_key(env_file: Path = None) -> str:
     """The optional FREE Google AI Studio key (a project with no billing), saved as GEMINI_IMAGE_FREE_KEY in ~/arthvan-social/.env. '' when there is none."""
     env_file = env_file or Path.home() / "arthvan-social" / ".env"
@@ -82,13 +85,15 @@ def record_spend(model: str, path: Path = SPEND_FILE) -> float:
 def generate(prompt: str, out: Path, refs: list = (), model: str = MODEL, key: str = None, tries: int = 4, sleep=time.sleep) -> Path:
     """One picture into `out` (PNG). `refs` are image files that fix how a character looks."""
     paid = key or tts.api_key()
-    free = free_key() if (model == "gemini-3.1-flash-lite-image" and not key) else ""
+    global _FREE_PAUSED_UNTIL
+    free = free_key() if (model == "gemini-3.1-flash-lite-image" and not key and time.time() >= _FREE_PAUSED_UNTIL) else ""
     for attempt_key, is_free in (([(free, True)] if free else []) + [(paid, False)]):
         try:
-            return _generate_with(prompt, out, refs, model, attempt_key, tries if not is_free else 2, sleep, count=not is_free)
+            return _generate_with(prompt, out, refs, model, attempt_key, tries if not is_free else 1, sleep, count=not is_free)
         except IllustrationError as e:
             if not is_free:
                 raise
+            _FREE_PAUSED_UNTIL = time.time() + 3600
             print("free image key did not work (" + str(e)[:80].replace(free, "<key>") + "); using the paid key", file=sys.stderr)
     raise IllustrationError("no key")
 
