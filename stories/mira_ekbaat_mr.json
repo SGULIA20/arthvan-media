@@ -1,0 +1,174 @@
+{
+ "id": "mira-ekbaat-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "feature": "mood-log",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "मी ठीक आहे: आपल्या सगळ्यांचा एक 'मी ठीक आहे' असतो",
+ "post_on": "2026-11-02",
+ "banner": "आपल्या सबका एक<br><em>'मी ठीक आहे'</em> असतो 🤐",
+ "caption": "तुमची ती एक गोष्ट कोणती आहे, जी तुम्ही आजवर कोणालाच सांगितली नाही? 👇\nनाव न सांगता बोलण्याची एक जागा: Waypoint, बायोमध्ये लिंक आहे. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about the times we all say 'I'm fine', and a place where you can say one true thing without your name. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#MainTheekHoon",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman her signature outfit is a lilac hoodie and blue jeans.",
+   "Maa": "Maa is Anaya's mother, a kind Indian woman in her fifties in a blue cotton saree with a small red bindi, hair in a bun.",
+   "Papa": "Papa is Anaya's father, an Indian man in his fifties with a grey moustache, a cream kurta and reading glasses.",
+   "Riya": "Riya is Anaya's best friend, with short curly hair and a mustard-yellow kurti.",
+   "Boss": "The boss is a stern middle-aged Indian man in a formal light-blue shirt.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "लहानपणी आपण प्रत्येक गोष्ट आईला सांगायचो.",
+   "sub": "लहानपणी आपण प्रत्येक गोष्ट आईला सांगायचो.",
+   "min": 2.2,
+   "art": "Little Anaya, about six years old, in a school uniform sits on a bright kitchen floor excitedly telling Maa something while Maa smiles and kneads dough, steel utensils, marigolds, morning sunlight.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "मग आपण मोठे झालो.",
+   "sub": "मग आपण मोठे झालो.",
+   "min": 2.2,
+   "art": "Teenage Anaya at a study desk piled with textbooks and a school bag, a wall calendar with circled exam dates, serious tired expression, evening light through a window.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "आणि काही गोष्टी मनातच राहू लागल्या.",
+   "sub": "आणि काही गोष्टी मनातच राहू लागल्या.",
+   "min": 2.2,
+   "art": "Young adult Anaya in a lilac hoodie stands at a window at dusk, a soft glowing thought bubble over her chest holding a small locked heart and tangled threads, city lights outside, gentle sadness."
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "आई विचारते, जेवलास का? हो, ठीक आहे.",
+   "sub": "आई विचारते, जेवलास का? हो, ठीक आहे.",
+   "min": 2.2,
+   "art": "Anaya sits on her bed late at night in a small hostel room, looking at her phone with a tired smile, a warm lamp, a half-eaten tiffin and books around her, a video call from Maa glowing on the screen."
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "बॉसने ओरडलं, तरीही, सगळं ठीक आहे सर.",
+   "sub": "बॉसने ओरडलं, तरीही, सगळं ठीक आहे सर.",
+   "min": 2.2,
+   "art": "In a busy Indian office the Boss points sternly at a laptop while Anaya stands holding files and nodding politely with a tight smile, colleagues and coffee mugs in the background."
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "मित्राने विचारलं, कशी आहेस? बस, ठीक आहे.",
+   "sub": "मित्राने विचारलं, कशी आहेस? बस, ठीक आहे.",
+   "min": 2.2,
+   "art": "Anaya and Riya sit at a street chai stall with kulhad cups at dusk, Riya looking concerned while Anaya smiles and waves it off, scooters and strings of lights behind."
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "रात्री बारा चॅट उघडे आहेत, सांगायला कोणी नाही.",
+   "sub": "रात्री बारा चॅट उघडे आहेत, सांगायला कोणी नाही.",
+   "min": 2.2,
+   "art": "Anaya lies on her bed at night in the dark, phone light glowing on her face, many small blank chat bubbles floating around her, a ceiling fan, city lights in the window, lonely mood."
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "लग्नात सगळे हसत आहेत, आपणही.",
+   "sub": "लग्नात सगळे हसत आहेत, आपणही.",
+   "min": 2.2,
+   "art": "A colourful Indian wedding with dancing relatives and marigold decorations; Anaya in a pretty lehenga in the middle of the crowd smiling at the viewer but with sad eyes."
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "खरं सांगण्यासाठी, ऐकणारा कोणी नाही.",
+   "sub": "खरं सांगण्यासाठी, ऐकणारा कोणी नाही.",
+   "min": 2.2,
+   "art": "Anaya alone on a rooftop terrace at night with water tanks and string lights, hugging her knees, a big moon and a small city skyline, quiet."
+  },
+  {
+   "layout": "illus",
+   "image": "s13.png",
+   "vo": "म्हणून Waypoint बनला आहे.",
+   "sub": "म्हणून Waypoint बनला आहे.",
+   "min": 2.2,
+   "art": "The fox mascot sits beside Anaya on a park bench at dusk, both looking at a phone held by the fox, a soft glow on their faces, warm sunset."
+  },
+  {
+   "layout": "illus",
+   "image": "s14.png",
+   "vo": "रोज नवीन नाव. ना चेहरा, ना ओळख.",
+   "sub": "रोज नवीन नाव. ना चेहरा, ना ओळख.",
+   "min": 2.2,
+   "art": "The fox mascot holds up a round glowing teal-bordered badge with a little fox face on it, soft sparkles around it, Anaya smiling in the background, warm dusk."
+  },
+  {
+   "layout": "phone",
+   "vo": "फक्त एक खरी ओळ लिहा.",
+   "sub": "फक्त एक खरी ओळ लिहा.",
+   "min": 2.4,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s18.png",
+   "vo": "पहिल्यांदा, कोणाशीही न ओळखता ऐकलं गेलं.",
+   "sub": "पहिल्यांदा, कोणाशीही न ओळखता ऐकलं गेलं.",
+   "min": 2.4,
+   "art": "Anaya lies on her hostel bed at night looking at her phone, her face lit softly by the screen, a single tear on her cheek but a gentle relieved smile, small warm glowing hearts and speech bubbles floating up from the phone, cosy lamp light."
+  },
+  {
+   "layout": "illus",
+   "image": "s19.png",
+   "vo": "आणि वाटलं, मी एकटी नाहीये.",
+   "sub": "आणि वाटलं, मी एकटी नाहीये.",
+   "min": 2.4,
+   "art": "Anaya on the rooftop terrace at dawn with the fox mascot beside her, both looking at a golden sunrise over the city, the string lights fading out, a feeling of hope and calm, water tanks and the skyline in warm light."
+  },
+  {
+   "layout": "illus",
+   "image": "s17.png",
+   "vo": "एक खरं. नाव न देता.",
+   "sub": "एक खरं. नाव न देता.",
+   "min": 2.2,
+   "art": "Anaya on the park bench smiling softly with relief at sunset, the fox mascot leaning on her shoulder, warm golden light, a few autumn leaves."
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "तुमची ती एक गोष्ट कोणती आहे?",
+   "sub": "तुमची ती एक गोष्ट कोणती आहे?",
+   "min": 3.0,
+   "focus": "25% 55%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. एकदा सांगा.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "art_id": "mira-ekbaat-hi",
+ "machine_translated": true
+}

@@ -155,7 +155,7 @@ def missing_pictures(story: dict, root: Path = None) -> list:
             out.append(f"scene {i}: no picture of {story['character']} in the pose '{sc['pose']}'")
         if sc.get("screen") and not any((d / sc["screen"]).exists() for d in (shots, root / "store" / "shots" / story["app"] / "en", root / "store" / "shots" / story["app"])):
             out.append(f"scene {i}: screen {sc['screen']} not found")
-        if sc.get("layout") == "illus" and not Path(os.path.normpath(root / "stories" / "art" / story["id"] / sc.get("image", "?"))).exists():      # normpath: "../_library/x.png" works even before the story's own folder exists
+        if sc.get("layout") == "illus" and not Path(os.path.normpath(root / "stories" / "art" / story.get("art_id", story["id"]) / sc.get("image", "?"))).exists():      # normpath: "../_library/x.png" works even before the story's own folder exists
             out.append(f"scene {i}: illustration {sc.get('image')} not drawn yet (python -m engine.illustrate stories/{story['id'].replace('-', '_')}.json)")
     return out
 
@@ -264,7 +264,7 @@ def build(story_path: Path, out_dir: Path) -> Path:
         deck = {"scenes": story["scenes"], "title": story["title"], "end_line": app["end_line"], "app_name": app["name"],
                 "palette": app["palette"], "chars": story["character"], "char_base": CHAR_DIR.as_uri(), "vo_env": env, "vo_amp": amp,
                 "disclaimer": app.get("money_disclaimer") or "", "link_in_bio": app.get("link_in_bio", "Link in bio"), "icon": (ROOT / app["icon"]).as_uri(),
-                "badge": BADGE.as_uri(), "shots": shots.as_uri(), "langs": end_languages(app), "banner": story.get("banner", ""), "art": (ROOT / "stories" / "art" / story["id"]).as_uri()}
+                "badge": BADGE.as_uri(), "shots": shots.as_uri(), "langs": end_languages(app), "banner": story.get("banner", ""), "art": (ROOT / "stories" / "art" / story.get("art_id", story["id"])).as_uri()}
         clips = {}
         prefetch_shots(story)
         for i, s in enumerate(story["scenes"]):

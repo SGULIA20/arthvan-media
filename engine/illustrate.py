@@ -143,7 +143,7 @@ def make_story_art(story: dict, only: list = None, root: Path = ROOT, model: str
     for i, sc in enumerate(story["scenes"]):
         if not sc.get("art") or not sc.get("image") or (only and i not in only):
             continue
-        out = Path(os.path.normpath(art_dir(story["id"], root) / sc["image"]))
+        out = Path(os.path.normpath(art_dir(story.get("art_id", story["id"]), root) / sc["image"]))
         if out.exists():
             continue
         gen(compose_prompt(art, sc["art"]), out, [] if sc.get("noref") else refs, model)
