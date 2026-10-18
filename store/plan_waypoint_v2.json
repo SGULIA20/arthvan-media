@@ -1,0 +1,39 @@
+{
+ "screens": [
+  {
+   "file": "create_typed.png",
+   "h1": "Say the <em>one thing</em> you can't say anywhere else.",
+   "sub": "No name. No face. One true line."
+  },
+  {
+   "file": "reveal.png",
+   "h1": "A new <em>name</em> every day.",
+   "sub": "Nobody knows who you are today. Tomorrow, someone new."
+  },
+  {
+   "file": "wall.png",
+   "h1": "Someone <em>reads it</em>. Someone reacts.",
+   "sub": "Post what is on your mind. Read what others posted."
+  },
+  {
+   "file": "calm.png",
+   "h1": "A <em>calm kit</em> for when it gets heavy.",
+   "sub": "Breathe, ground yourself, or wind down."
+  },
+  {
+   "file": "voice.png",
+   "h1": "Write it, <em>speak it</em>, or ask a poll.",
+   "sub": "Voice posts are re-spoken in a synthetic voice."
+  },
+  {
+   "file": "matching.png",
+   "h1": "Cross paths with <em>one person</em>.",
+   "sub": "A short, timed chat. Then you both move on."
+  }
+ ],
+ "feature": {
+  "shot": "create_typed.png",
+  "h1": "Say it <em>once</em>. No name.",
+  "sub": "One true line, a new name every day. Free on Google Play."
+ }
+}
