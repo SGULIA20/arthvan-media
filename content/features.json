@@ -48,15 +48,15 @@
   "feelings-tags": {
    "name": "Eight feelings per post",
    "summary": "Every post carries one of eight feelings (frustrated, anxious, lonely, tired, angry, happy, grateful, calm) picked on Create, shown as a chip on the card, used by the Wall's feeling chips to narrow the feed, and used to decide which reaction set the post offers.",
-   "status": "gated",
-   "gate": "Needs the Android v25 build (not confirmed built or published as of the 11 Oct 2026 notes); iOS needs a new build after the Apple team conversion.",
+   "status": "live",
    "demo_possible": true,
    "story_hook": "Sara tags her post 'grateful' after a good call with her sister.",
    "safe_wording": "Tag each post with one of eight feelings, and narrow the Wall to a single feeling with one tap.",
    "needs_wording_decision": false,
    "note": "Do not list the full set in captions: 'lonely' and 'calm' are on the forbidden list. Older builds only have two tags (frustrated, happy).",
    "show_ok": true,
-   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores.",
+   "live_since": "2026-10-18: founder confirmed Waypoint v25 is live"
   },
   "voice-posts": {
    "name": "Voice posts",
@@ -94,41 +94,41 @@
   "private-replies": {
    "name": "Reply to a post's author",
    "summary": "Under another person's text or poll post, 'Reply privately' opens a sheet to send ONE message of up to 500 characters (10 a day, screened first); only the post's author sees replies under 'Replies (n)' on their own post and can report one or block its sender, but cannot answer, and the sender learns nothing back.",
-   "status": "gated",
-   "gate": "Needs the Android v25 build (not confirmed built or published as of the 11 Oct 2026 notes); iOS needs a new build after the Apple team conversion.",
+   "status": "live",
    "demo_possible": false,
    "story_hook": "Lena reads a post about a hard week and sends the writer one kind sentence.",
    "safe_wording": "Send the author of a post one short reply of up to 500 characters; the author can read it, report it or block the sender, but cannot answer.",
    "needs_wording_decision": true,
    "note": "True mechanic: one-way, one message per post, no thread, no way to start a chat, replier sees no read or report status, author cannot see who sent it. The in-app label is 'Reply privately' and the defining promise is 'only they will read this', so a plain caption needs 'private' unless reworded. Server screening of replies is client-side and fails open (known gap). Marketing item wp-reply ('you choose whether to answer') is wrong: the author cannot answer.",
    "show_ok": true,
-   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores.",
+   "live_since": "2026-10-18: founder confirmed Waypoint v25 is live"
   },
   "say-thanks": {
    "name": "Say thanks",
    "summary": "On your own post, once people have reacted, 'Say thanks' (thank_reactors) sends every reacting person one quiet notification with no names, once per post.",
-   "status": "gated",
-   "gate": "Needs the Android v25 build (not confirmed built or published as of the 11 Oct 2026 notes); iOS needs a new build after the Apple team conversion.",
+   "status": "live",
    "demo_possible": false,
    "story_hook": "After six people react to his post, Dev taps Say thanks before going to sleep.",
    "safe_wording": "Once people have reacted to your post, one tap on Say thanks sends each of them a short thank-you note with no names.",
    "needs_wording_decision": false,
    "note": "Remembered per post on the phone so it reads 'Thanked' afterwards. Server push text is localised only for English and Hindi.",
    "show_ok": true,
-   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores.",
+   "live_since": "2026-10-18: founder confirmed Waypoint v25 is live"
   },
   "seen-and-welcome": {
    "name": "Seen count and welcome",
    "summary": "Your own post cards show a '👁 n seen' count that rises once per other person when at least 60% of the card was on their screen, and a 'Waypoint welcomed this post' mark (with a notification) appears if a first-time poster's text or poll has no reaction after 5 minutes.",
-   "status": "gated",
-   "gate": "Needs the Android v25 build (not confirmed built or published as of the 11 Oct 2026 notes); iOS needs a new build after the Apple team conversion.",
+   "status": "live",
    "demo_possible": false,
    "story_hook": "Ola posts for the first time and later sees that dozens of people had it on screen.",
    "safe_wording": "Your own posts show how many other people had them on screen, counted once per person; a first post with no reaction after five minutes gets a welcome note from Waypoint.",
    "needs_wording_decision": false,
    "note": "Welcome is sent by Waypoint, not by a fake person (welcome_first_posts cron every 5 minutes). Seen counts are batched after 2 seconds of quiet.",
    "show_ok": true,
-   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores.",
+   "live_since": "2026-10-18: founder confirmed Waypoint v25 is live"
   },
   "delete-own-post": {
    "name": "Delete your own post",
@@ -265,41 +265,41 @@
   "calm-kit": {
    "name": "Calm kit",
    "summary": "The Calm kit (a card on Explore, a link on Chats when nobody is online, and a button on the pause screen) offers Breathe (two minutes of 4-4-4-4 box breathing with a growing circle and soft vibration), Ground yourself (a 5-4-3-2-1 senses walk-through, one step per screen, optional note that is never saved) and Wind down (three minutes, screen dims, three prompts, Good night), each ending with a Lighter / Same question.",
-   "status": "gated",
-   "gate": "Needs the Android v25 build (not confirmed built or published as of the 11 Oct 2026 notes); iOS needs a new build after the Apple team conversion.",
+   "status": "live",
    "demo_possible": true,
    "story_hook": "Ben has two minutes before a presentation and opens Breathe.",
    "safe_wording": "The Calm kit has three short timed tools: two minutes of box breathing, a five-senses step-through, and a three-minute screen-dimming wind-down.",
    "needs_wording_decision": false,
    "note": "No account or upload; the only server call is the one-row Lighter/Same log (log_checkin) and the only stored value is the soft-vibration mute. Marketing item wp-calm-kit says it is 'in Waypoint now': true in code, not in any published build yet. 'Calm kit' is the one allowed use of the word calm.",
    "show_ok": true,
-   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores.",
+   "live_since": "2026-10-18: founder confirmed Waypoint v25 is live"
   },
   "quick-exit": {
    "name": "Quick exit button",
    "summary": "A setting in My Waypoints adds a small Exit button to the Wall and Calm kit; one tap closes the app on Android, or on iPhone opens a plain 'Notes' list page (cover) where three taps on the title within 1.5 seconds return to the app.",
-   "status": "gated",
-   "gate": "Needs the Android v25 build (not confirmed built or published as of the 11 Oct 2026 notes); iOS needs a new build after the Apple team conversion. Also off by default: the person turns it on in My Waypoints.",
+   "status": "live",
    "demo_possible": true,
    "story_hook": "Tara taps Exit when a colleague walks up behind her desk.",
    "safe_wording": "An optional Exit button closes the app in one tap; on iPhone it shows a plain Notes page, and three quick taps on its title bring Waypoint back.",
    "needs_wording_decision": true,
    "note": "The mechanics are describable without forbidden words, but the reason it exists (a shared phone or a person nearby) needs words such as 'someone else' or 'private'; the founder should decide how far to explain the purpose. The Notes page is a disguise, nothing is stored or sent.",
    "show_ok": true,
-   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores.",
+   "live_since": "2026-10-18: founder confirmed Waypoint v25 is live"
   },
   "checkins": {
    "name": "Lighter, same, heavier check-in",
    "summary": "After you post, finish a chat or a Break Room round (and from a next-evening reminder) a quiet card asks 'How do you feel now?' with Lighter / Same / Heavier (at most 3 a day, skippable), logs one row (context and answer, no text) through log_checkin, and may schedule one 8 pm reminder if notifications are already allowed.",
-   "status": "gated",
-   "gate": "Needs the Android v25 build (not confirmed built or published as of the 11 Oct 2026 notes); iOS needs a new build after the Apple team conversion.",
+   "status": "live",
    "demo_possible": true,
    "story_hook": "After finishing a chat, Omar taps Lighter and goes back to his evening.",
    "safe_wording": "After a post, a chat or a Break Room round, one card asks how you feel now and you tap Lighter, Same or Heavier.",
    "needs_wording_decision": false,
    "note": "The founder wants to publish an outcome number ('x% felt lighter') from outcome_stats, which only the service role can read. A published percentage is an outcome claim; take care with wording. Screenshot route /mood?checkback=1 shows the card on its own.",
    "show_ok": true,
-   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores.",
+   "live_since": "2026-10-18: founder confirmed Waypoint v25 is live"
   },
   "mood-log": {
    "name": "Daily feelings log",
@@ -348,28 +348,28 @@
   "listening-night": {
    "name": "Weekly scheduled night",
    "summary": "A weekly hour scheduled by the founder (npm run night -- add): the card on Explore and Chats shows the time and seats saved (15 needed by default), you tap Save my seat, get one reminder 30 minutes before that says whether it runs, and while it is live a Join now button starts normal matching.",
-   "status": "gated",
-   "gate": "Needs the Android v25 build (not confirmed built or published as of the 11 Oct 2026 notes); iOS needs a new build after the Apple team conversion. AND the founder must schedule a night with npm run night; with none scheduled Explore says 'No Listening Night scheduled yet.' and Chats hides the card.",
+   "status": "live",
    "demo_possible": false,
    "story_hook": "On Saturday at 9 Aisha saves a seat and gets a reminder half an hour before it starts.",
    "safe_wording": "A weekly scheduled hour when more people are in the app: save a seat, get a reminder 30 minutes before, and join with one tap when it starts.",
    "needs_wording_decision": true,
    "note": "In-app name is 'Listening Night' and the word 'listening' is forbidden in captions. It does not match anyone by itself; it only gathers people so normal matching is likely to find a partner. Tables listening_nights and listening_seats and the cron listening-night-remind are live per the 11 Oct snapshot; no night was scheduled as of the last notes.",
    "show_ok": true,
-   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores.",
+   "live_since": "2026-10-18: founder confirmed Waypoint v25 is live"
   },
   "official-carousel": {
    "name": "Official team card",
    "summary": "A green 'OFFICIAL · WAYPOINT' card at the top of the Wall rotates up to five founder messages every 7 seconds with swipe, dots and an optional button (Send feedback, See how it works, Update), with a footer saying Waypoint never posts on the Wall or messages in chat; update notes retire themselves once you have the new build.",
-   "status": "gated",
-   "gate": "The rotating five-message carousel needs the Android v25 build; the single newest-message card is already live in older builds. Messages come from the announcements table via npm run announce.",
+   "status": "live",
    "demo_possible": true,
    "story_hook": "Ben opens the app and the green card says a new version is out.",
    "safe_wording": "A card at the top of the Wall shows short news from the Waypoint team, up to five messages that rotate on their own.",
    "needs_wording_decision": false,
    "note": "Pauses while touched, in the background, on another tab, and with Reduce Motion. Five rows were seeded on 11 Oct (update, feedback, safety, Moments, Mira).",
    "show_ok": true,
-   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores.",
+   "live_since": "2026-10-18: founder confirmed Waypoint v25 is live"
   },
   "whats-new": {
    "name": "What's New list",
@@ -385,15 +385,15 @@
   "first-three": {
    "name": "React to three posts first",
    "summary": "After choosing why you came, you see three recent posts from other people with the Wall's reaction buttons; one tap earns a thank-you line and the notification ask, then Continue (or Skip) takes you to Create with that feeling, or to the Wall.",
-   "status": "gated",
-   "gate": "Needs the Android v25 build (not confirmed built or published as of the 11 Oct 2026 notes); iOS needs a new build after the Apple team conversion.",
+   "status": "live",
    "demo_possible": false,
    "story_hook": "A new user taps a reaction on one of three posts within the first minute.",
    "safe_wording": "New users first see three recent posts and can react with one tap before writing anything.",
    "needs_wording_decision": false,
    "note": "Screen is skipped when the feed is empty or still loading after 4 seconds. Shows real posts by other people.",
    "show_ok": true,
-   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores.",
+   "live_since": "2026-10-18: founder confirmed Waypoint v25 is live"
   },
   "reveal": {
    "name": "Name reveal and reminder",
@@ -486,15 +486,15 @@
   "removed-account-appeal": {
    "name": "Removed account notice",
    "summary": "An account ejected for breaking the rules (or a new account on a device an ejected account used) sees a full-screen notice over the whole app with a Contact link; v25 adds a one-line reason category and a 500-character appeal box.",
-   "status": "partial",
-   "gate": "Reason and appeal form (my_ban, appeal_ban) need the Android v25 build; the plain removed-account notice is live in all builds.",
+   "status": "live",
    "demo_possible": false,
    "story_hook": "A removed user sees why and sends one appeal.",
    "safe_wording": "If an account is removed, a full-screen notice explains why in one line and lets the person send one appeal.",
    "needs_wording_decision": false,
    "note": "Device linking (register_device) means a fresh account on the same device is ejected too. Appeals are stored in ban_appeals for the founder to read.",
    "show_ok": true,
-   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores."
+   "founder_ok": "17 Oct 2026: a recent update the founder wants shown in Reels. The Reels must not post before the v25 build is live on the stores.",
+   "live_since": "2026-10-18: founder confirmed Waypoint v25 is live"
   },
   "delete-account": {
    "name": "Delete account and data",
