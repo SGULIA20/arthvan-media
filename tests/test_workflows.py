@@ -12,9 +12,9 @@ def load(name):
     return doc
 
 
-def test_daily_post_runs_at_18_00_lagos_which_is_17_00_utc():
+def test_daily_post_runs_at_15_37_lagos_which_is_20_07_india():
     wf = load("daily-post.yml")
-    assert wf["on"]["schedule"] == [{"cron": "37 16 * * *"}, {"cron": "37 17 * * *"}]
+    assert wf["on"]["schedule"] == [{"cron": "37 14 * * *"}, {"cron": "37 15 * * *"}]      # moved on 18 Oct 2026: 87% of the audience is in India
     assert wf["permissions"] == {"contents": "write"}
     assert wf["concurrency"]["cancel-in-progress"] is False
 
