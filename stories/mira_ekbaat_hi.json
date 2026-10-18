@@ -5,96 +5,160 @@
  "character": "mira",
  "feature": "reactions",
  "style": "cutout",
- "title": "Main theek hoon: ek baat jo hum kisi se nahi kehte",
+ "pad": 0.4,
+ "title": "Main theek hoon: hum sabka ek 'main theek hoon' hota hai",
  "post_on": "2026-10-21",
- "banner": "<em>Ek baat</em> jo hum<br>kisi se nahi kehte 🤫",
+ "banner": "Hum sabka ek<br><em>'main theek hoon'</em> hota hai 🤐",
  "caption": "Aapne last time kab 'main theek hoon' bola tha, jab theek nahi the? 👇\nEk sach, bina naam ke. Waypoint, link in bio. 18+",
- "linkedin_text": "Everyone has one thing they never say out loud. A short story in Hindi about saying 'I'm fine', and a place where you can say one true thing without your name. Waypoint is free on Google Play, for adults 18 and over.",
+ "linkedin_text": "A short illustrated story in Hindi about the times we all say 'I'm fine', and a place where you can say one true thing without your name. Waypoint is free on Google Play, for adults 18 and over.",
  "hashtags": [
   "#Waypoint",
   "#SayItOnce",
   "#MainTheekHoon",
   "#HindiReels"
  ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman her signature outfit is a lilac hoodie and blue jeans.",
+   "Maa": "Maa is Anaya's mother, a kind Indian woman in her fifties in a blue cotton saree with a small red bindi, hair in a bun.",
+   "Papa": "Papa is Anaya's father, an Indian man in his fifties with a grey moustache, a cream kurta and reading glasses.",
+   "Riya": "Riya is Anaya's best friend, with short curly hair and a mustard-yellow kurti.",
+   "Boss": "The boss is a stern middle-aged Indian man in a formal light-blue shirt.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
  "scenes": [
   {
-   "layout": "talk",
-   "vo": "हर इंसान के पास एक बात होती है, जो वो किसी से नहीं कहता।",
-   "sub": "Har insaan ke paas ek baat hoti hai, jo woh kisi se nahi kehta.",
-   "min": 5,
-   "pose": "head_neutral"
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "बचपन में हम हर बात माँ को बताते थे।",
+   "sub": "Bachpan mein hum har baat Maa ko batate the.",
+   "min": 2.2,
+   "art": "Little Anaya, about six years old, in a school uniform sits on a bright kitchen floor excitedly telling Maa something while Maa smiles and kneads dough, steel utensils, marigolds, morning sunlight.",
+   "noref": true
   },
   {
-   "layout": "scene",
-   "vo": "पापा को लगता है, हम ठीक हैं।",
-   "sub": "Papa ko lagta hai, hum theek hain.",
-   "min": 3.5,
-   "pose": "phone_night",
-   "card": "Papa: “Theek ho na?”"
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "फिर हम बड़े हो गए।",
+   "sub": "Phir hum bade ho gaye.",
+   "min": 2.2,
+   "art": "Teenage Anaya at a study desk piled with textbooks and a school bag, a wall calendar with circled exam dates, serious tired expression, evening light through a window.",
+   "noref": true
   },
   {
-   "layout": "scene",
-   "vo": "दोस्त को लगता है, हम बिज़ी हैं।",
-   "sub": "Dost ko lagta hai, hum busy hain.",
-   "min": 3.5,
-   "pose": "listening",
-   "card": "Dost: “Aajkal gayab ho”"
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "और कुछ बातें अंदर रहने लगीं।",
+   "sub": "Aur kuch baatein andar rehne lagi.",
+   "min": 2.2,
+   "art": "Young adult Anaya in a lilac hoodie stands at a window at dusk, a soft glowing thought bubble over her chest holding a small locked heart and tangled threads, city lights outside, gentle sadness."
   },
   {
-   "layout": "scene",
-   "vo": "बॉस को लगता है, हम काम में हैं।",
-   "sub": "Boss ko lagta hai, hum kaam mein hain.",
-   "min": 3.5,
-   "pose": "curious",
-   "card": "Boss: “Deadline?”"
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "माँ पूछती हैं, खाना खाया? हाँ, ठीक हूँ।",
+   "sub": "Maa poochti hain, khana khaya? 'Haan, theek hoon.'",
+   "min": 2.2,
+   "art": "Anaya sits on her bed late at night in a small hostel room, looking at her phone with a tired smile, a warm lamp, a half-eaten tiffin and books around her, a video call from Maa glowing on the screen."
   },
   {
-   "layout": "scene",
-   "vo": "और हम सबसे कहते हैं... मैं ठीक हूँ।",
-   "sub": "Aur hum sabse kehte hain... 'main theek hoon.'",
-   "min": 3.5,
-   "pose": "front_neutral",
-   "card": "“Main theek hoon.”"
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "पापा पूछते हैं, सब ठीक? हाँ पापा।",
+   "sub": "Papa poochte hain, sab theek? 'Haan Papa.'",
+   "min": 2.2,
+   "art": "Papa on a sofa with the newspaper lowered, looking at Anaya who stands at the living-room door with her bag, forcing a smile; family photos on the wall, warm evening light."
   },
   {
-   "layout": "scene",
-   "vo": "क्योंकि सच कहने के लिए, एक जगह चाहिए।",
-   "sub": "Kyunki sach kehne ke liye, ek jagah chahiye.",
-   "min": 3.5,
-   "pose": "relieved",
-   "card": "Ek jagah"
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "बॉस ने डाँटा, फिर भी, सब ठीक है सर।",
+   "sub": "Boss ne daanta, phir bhi, 'sab theek hai sir.'",
+   "min": 2.2,
+   "art": "In a busy Indian office the Boss points sternly at a laptop while Anaya stands holding files and nodding politely with a tight smile, colleagues and coffee mugs in the background."
   },
   {
-   "layout": "scene",
-   "vo": "जहाँ न नाम हो, न चेहरा।",
-   "sub": "Jahan na naam ho, na chehra.",
-   "min": 3.5,
-   "pose": "curious",
-   "card": "Na naam. Na chehra."
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "दोस्त ने पूछा, कैसी हो? बस, ठीक हूँ।",
+   "sub": "Dost ne poocha, kaisi ho? 'Bas, theek hoon.'",
+   "min": 2.2,
+   "art": "Anaya and Riya sit at a street chai stall with kulhad cups at dusk, Riya looking concerned while Anaya smiles and waves it off, scooters and strings of lights behind."
   },
   {
-   "layout": "present",
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "रात को बारह चैट खुले हैं, कहने को कोई नहीं।",
+   "sub": "Raat ko baarah chats khule hain, kehne ko koi nahi.",
+   "min": 2.2,
+   "art": "Anaya lies on her bed at night in the dark, phone light glowing on her face, many small blank chat bubbles floating around her, a ceiling fan, city lights in the window, lonely mood."
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "शादी में सब हँस रहे हैं, हम भी।",
+   "sub": "Shaadi mein sab has rahe hain, hum bhi.",
+   "min": 2.2,
+   "art": "A colourful Indian wedding with dancing relatives and marigold decorations; Anaya in a pretty lehenga in the middle of the crowd smiling at the viewer but with sad eyes."
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "सच कहने के लिए, कोई सुनने वाला नहीं।",
+   "sub": "Sach kehne ke liye, koi sunne wala nahi.",
+   "min": 2.2,
+   "art": "Anaya alone on a rooftop terrace at night with water tanks and string lights, hugging her knees, a big moon and a small city skyline, quiet."
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "या डर, लोग क्या कहेंगे।",
+   "sub": "Ya darr, log kya kahenge.",
+   "min": 2.2,
+   "art": "A group of neighbourhood aunties whisper and point on a balcony with exaggerated wavy speech lines (no words), while Anaya walks past below with her head down."
+  },
+  {
+   "layout": "illus",
+   "image": "s13.png",
+   "vo": "इसलिए बना है वेपॉइंट।",
+   "sub": "Isliye bana hai Waypoint.",
+   "min": 2.2,
+   "art": "The fox mascot sits beside Anaya on a park bench at dusk, both looking at a phone held by the fox, a soft glow on their faces, warm sunset."
+  },
+  {
+   "layout": "illus",
+   "image": "s14.png",
+   "vo": "रोज़ नया नाम। न चेहरा, न पहचान।",
+   "sub": "Roz naya naam. Na chehra, na pehchaan.",
+   "min": 2.2,
+   "art": "The fox mascot holds up a round glowing teal-bordered badge with a little fox face on it, soft sparkles around it, Anaya smiling in the background, warm dusk."
+  },
+  {
+   "layout": "phone",
    "vo": "बस एक सच्ची लाइन लिखिए।",
    "sub": "Bas ek sachchi line likhiye.",
-   "min": 3.5,
-   "pose": "listening",
+   "min": 2.4,
    "screen": "create_typed.png"
   },
   {
-   "layout": "present",
-   "vo": "कोई पढ़ता है, कोई रिएक्ट करता है।",
-   "sub": "Koi padhta hai, koi react karta hai.",
-   "min": 3.5,
-   "pose": "relieved",
+   "layout": "phone",
+   "vo": "कोई पढ़ता है, रिएक्ट करता है।",
+   "sub": "Koi padhta hai, react karta hai.",
+   "min": 2.4,
    "screen": "wall.png"
   },
   {
-   "layout": "scene",
+   "layout": "illus",
+   "image": "s17.png",
    "vo": "एक सच। बिना नाम के।",
    "sub": "Ek sach. Bina naam ke.",
-   "min": 3.5,
-   "pose": "wave",
-   "card": "Ek sach. Bina naam ke."
+   "min": 2.2,
+   "art": "Anaya on the park bench smiling softly with relief at sunset, the fox mascot leaning on her shoulder, warm golden light, a few autumn leaves."
   },
   {
    "layout": "end",

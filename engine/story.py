@@ -155,6 +155,8 @@ def missing_pictures(story: dict, root: Path = None) -> list:
             out.append(f"scene {i}: no picture of {story['character']} in the pose '{sc['pose']}'")
         if sc.get("screen") and not any((d / sc["screen"]).exists() for d in (shots, root / "store" / "shots" / story["app"] / "en", root / "store" / "shots" / story["app"])):
             out.append(f"scene {i}: screen {sc['screen']} not found")
+        if sc.get("layout") == "illus" and not (root / "stories" / "art" / story["id"] / sc.get("image", "?")).exists():
+            out.append(f"scene {i}: illustration {sc.get('image')} not drawn yet (python -m engine.illustrate stories/{story['id'].replace('-', '_')}.json)")
     return out
 
 
@@ -170,10 +172,10 @@ def screens_dir(app: str, lang: str, root: Path = None) -> Path:
 LIMIT_S = 59.4                  # an Instagram Story must stay under 60 s
 
 
-def speed_for(durations: list, mins: list, limit: float = LIMIT_S) -> float:
+def speed_for(durations: list, mins: list, limit: float = LIMIT_S, pad: float = 1.2) -> float:
     """1.0 when the Reel already fits; otherwise the smallest gentle speed-up (never above 1.25x) that brings it under the limit."""
     def total(f):
-        return sum(round(max(m, d / f + 1.2), 2) for d, m in zip(durations, mins))
+        return sum(round(max(m, d / f + pad), 2) for d, m in zip(durations, mins))
     if total(1.0) <= limit:
         return 1.0
     for f in (1.06, 1.1, 1.15, 1.2, 1.25):
@@ -209,9 +211,9 @@ def build(story_path: Path, out_dir: Path) -> Path:
                 d = voice_clip(s["vo"], s.get("voice", story["voice"]), s.get("rate", story.get("rate", 175)), wav)
             else:
                 d = gemini_clip(s["vo"], pick_voice({"character": story["character"], "voice": s.get("voice")}), wav)
-            s["dur"] = round(max(s.get("min", 4), d + 1.2), 2)
+            s["dur"] = round(max(s.get("min", 4), d + story.get("pad", 1.2)), 2)
             clips.append((wav, d))
-        f = speed_for([d for _w, d in clips], [sc.get("min", 4) for sc in story["scenes"]])
+        f = speed_for([d for _w, d in clips], [sc.get("min", 4) for sc in story["scenes"]], pad=story.get("pad", 1.2))
         if f > 1.0:                                   # a language whose lines run long: speak every line a little faster, same pitch
             print(f"voice speed-up {f}x to stay under 60 s", flush=True)
             fitted = []
@@ -221,7 +223,7 @@ def build(story_path: Path, out_dir: Path) -> Path:
                 fast.replace(wav)
                 with wave.open(str(wav)) as w:
                     nd = w.getnframes() / w.getframerate()
-                sc["dur"] = round(max(sc.get("min", 4), nd + 1.2), 2); fitted.append((wav, nd))
+                sc["dur"] = round(max(sc.get("min", 4), nd + story.get("pad", 1.2)), 2); fitted.append((wav, nd))
             clips = fitted
         total = sum(s["dur"] for s in story["scenes"])
         # voice loudness per frame (drives the mouth): lay the clips on the timeline first
@@ -262,7 +264,7 @@ def build(story_path: Path, out_dir: Path) -> Path:
         deck = {"scenes": story["scenes"], "title": story["title"], "end_line": app["end_line"], "app_name": app["name"],
                 "palette": app["palette"], "chars": story["character"], "char_base": CHAR_DIR.as_uri(), "vo_env": env, "vo_amp": amp,
                 "disclaimer": app.get("money_disclaimer") or "", "link_in_bio": app.get("link_in_bio", "Link in bio"), "icon": (ROOT / app["icon"]).as_uri(),
-                "badge": BADGE.as_uri(), "shots": shots.as_uri(), "langs": end_languages(app), "banner": story.get("banner", "")}
+                "badge": BADGE.as_uri(), "shots": shots.as_uri(), "langs": end_languages(app), "banner": story.get("banner", ""), "art": (ROOT / "stories" / "art" / story["id"]).as_uri()}
         clips = {}
         prefetch_shots(story)
         for i, s in enumerate(story["scenes"]):

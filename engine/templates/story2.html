@@ -15,7 +15,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg)}
 .title{position:absolute;left:70px;right:70px;top:150px;font-weight:800;font-size:96px;line-height:1.05;letter-spacing:-.02em;text-align:center}
 .screen{position:absolute;width:560px;height:1100px;border-radius:66px;background:#0b0b0f;padding:12px;box-shadow:0 0 0 4px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.18),0 40px 90px rgba(0,0,0,.6)}
 .screen img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:56px;display:block}
-.banner{position:absolute;left:60px;right:60px;top:165px;text-align:center;font-weight:800;font-size:60px;line-height:1.12;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.7)}
+.banner{position:absolute;left:60px;right:60px;top:165px;text-align:center;font-weight:800;font-size:54px;line-height:1.15;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.7)}
 .banner em{font-style:normal;color:var(--accent)}
 .brand{position:absolute;left:70px;top:70px;display:flex;align-items:center;gap:18px;font-weight:800;font-size:40px}
 .brand img{width:76px;height:76px;border-radius:20px}
@@ -51,6 +51,11 @@ window.render=function(t){
     h+=screen(s,local,480,D.banner?340:250)+fullBody(s.pose||'explaining_right',-330,1050,local,5,s.who);
   } else if(s.layout==='scene'){    // full body centre, prop text above
     h+=`<div class="abs" style="left:70px;right:70px;top:${D.banner?390:300}px;text-align:center;font-weight:800;font-size:72px;line-height:1.1;opacity:${eo((local-.3)/.5)}">${s.card||''}</div>`+fullBody(s.pose||'front_neutral',-110,1300,local,6,s.who);
+  } else if(s.layout==='illus'){    // an illustrated scene: a square picture between the hook banner and the subtitle, slow zoom, another picture every few seconds
+    const z=1.08+0.06*clamp(local/Math.max(s.dur,1));     // starts a little zoomed in: hides any pale edge a picture may have
+    h+=`<div class="abs" style="left:0;top:400px;width:1080px;height:1080px;overflow:hidden;background:#000"><img src="${D.art}/${s.image}" style="width:100%;height:100%;object-fit:cover;transform:scale(${z.toFixed(4)});transform-origin:${s.focus||'50% 50%'}"></div>`;
+  } else if(s.layout==='phone'){    // a real app screen, centred, between the banner and the subtitle
+    h+=screen(s,local,260,D.banner?350:250);
   } else if(s.layout==='clip'){     // a generated shot fills the frame; optional small character and card
     const c=(D.clips||{})[String(S.indexOf(s))]; if(c){ const k=Math.min(c.n, Math.max(1, Math.floor(local*30)+1));
       h+=`<div class="abs" style="inset:0;overflow:hidden"><img src="${c.dir}/f${String(k).padStart(4,'0')}.jpg" style="width:100%;height:100%;object-fit:cover;transform:scale(${(1+local*0.01).toFixed(4)})"></div>`; }
@@ -68,7 +73,7 @@ window.render=function(t){
   if(s.layout!=='end'&&s.layout!=='duo_end') h+=`<div class="brand"><img src="${D.icon}"><span>${D.app_name}</span></div>`;
   if(D.banner && s.layout!=='end' && s.layout!=='duo_end') h+=`<div class="banner">${D.banner}</div>`;     // one hook line that stays on screen for the whole story (story-level "banner")
   if(s.title && local<2.4) h+=`<div class="title" style="opacity:${eo(local/.5)*eo((2.4-local)/.4)}">${s.title}</div>`;
-  if(s.sub && s.layout!=='end' && s.layout!=='duo_end') h+=`<div class="sub" style="opacity:${fade}"><span>${s.native?`<b class="nat">${s.native}</b><br><span class="en">${s.sub}</span>`:s.sub}</span></div>`;
+  if(s.sub && s.layout!=='end' && s.layout!=='duo_end') h+=`<div class="sub" style="opacity:${fade}${(s.layout==='illus'||s.layout==='phone')?';bottom:300px;font-size:54px':''}"><span>${s.native?`<b class="nat">${s.native}</b><br><span class="en">${s.sub}</span>`:s.sub}</span></div>`;
   if(s.chip) h+=`<div class="langchip" style="opacity:${fade*eo((local-.2)/.4)}">${s.chip}</div>`;       // the language being spoken in this scene
   root.innerHTML=h;
 };
