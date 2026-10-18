@@ -1,0 +1,107 @@
+{
+ "id": "mira-ekbaat-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "reactions",
+ "style": "cutout",
+ "title": "Main theek hoon: ek baat jo hum kisi se nahi kehte",
+ "post_on": "2026-10-21",
+ "banner": "<em>Ek baat</em> jo hum<br>kisi se nahi kehte 🤫",
+ "caption": "Aapne last time kab 'main theek hoon' bola tha, jab theek nahi the? 👇\nEk sach, bina naam ke. Waypoint, link in bio. 18+",
+ "linkedin_text": "Everyone has one thing they never say out loud. A short story in Hindi about saying 'I'm fine', and a place where you can say one true thing without your name. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#MainTheekHoon",
+  "#HindiReels"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हर इंसान के पास एक बात होती है, जो वो किसी से नहीं कहता।",
+   "sub": "Har insaan ke paas ek baat hoti hai, jo woh kisi se nahi kehta.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "पापा को लगता है, हम ठीक हैं।",
+   "sub": "Papa ko lagta hai, hum theek hain.",
+   "min": 3.5,
+   "pose": "phone_night",
+   "card": "Papa: “Theek ho na?”"
+  },
+  {
+   "layout": "scene",
+   "vo": "दोस्त को लगता है, हम बिज़ी हैं।",
+   "sub": "Dost ko lagta hai, hum busy hain.",
+   "min": 3.5,
+   "pose": "listening",
+   "card": "Dost: “Aajkal gayab ho”"
+  },
+  {
+   "layout": "scene",
+   "vo": "बॉस को लगता है, हम काम में हैं।",
+   "sub": "Boss ko lagta hai, hum kaam mein hain.",
+   "min": 3.5,
+   "pose": "curious",
+   "card": "Boss: “Deadline?”"
+  },
+  {
+   "layout": "scene",
+   "vo": "और हम सबसे कहते हैं... मैं ठीक हूँ।",
+   "sub": "Aur hum sabse kehte hain... 'main theek hoon.'",
+   "min": 3.5,
+   "pose": "front_neutral",
+   "card": "“Main theek hoon.”"
+  },
+  {
+   "layout": "scene",
+   "vo": "क्योंकि सच कहने के लिए, एक जगह चाहिए।",
+   "sub": "Kyunki sach kehne ke liye, ek jagah chahiye.",
+   "min": 3.5,
+   "pose": "relieved",
+   "card": "Ek jagah"
+  },
+  {
+   "layout": "scene",
+   "vo": "जहाँ न नाम हो, न चेहरा।",
+   "sub": "Jahan na naam ho, na chehra.",
+   "min": 3.5,
+   "pose": "curious",
+   "card": "Na naam. Na chehra."
+  },
+  {
+   "layout": "present",
+   "vo": "बस एक सच्ची लाइन लिखिए।",
+   "sub": "Bas ek sachchi line likhiye.",
+   "min": 3.5,
+   "pose": "listening",
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "present",
+   "vo": "कोई पढ़ता है, कोई रिएक्ट करता है।",
+   "sub": "Koi padhta hai, koi react karta hai.",
+   "min": 3.5,
+   "pose": "relieved",
+   "screen": "wall.png"
+  },
+  {
+   "layout": "scene",
+   "vo": "एक सच। बिना नाम के।",
+   "sub": "Ek sach. Bina naam ke.",
+   "min": 3.5,
+   "pose": "wave",
+   "card": "Ek sach. Bina naam ke."
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

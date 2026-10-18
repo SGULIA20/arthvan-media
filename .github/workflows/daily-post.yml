@@ -2,8 +2,8 @@ name: daily-post
 
 on:
   schedule:
-    - cron: '37 16 * * *'  # about 18:00 Lagos (UTC+1); off-peak minute, GitHub delays :00 jobs
-    - cron: '37 17 * * *'  # safety net one hour later; the engine never posts twice on one day
+    - cron: '37 14 * * *'  # about 15:37 Lagos = 20:07 India (the audience is 87% India; was 18:00 Lagos = 22:30 India); off-peak minute, GitHub delays :00 jobs
+    - cron: '37 15 * * *'  # safety net one hour later; the engine never posts twice on one day
   workflow_dispatch:
     inputs:
       mode:

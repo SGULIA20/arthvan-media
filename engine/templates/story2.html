@@ -15,6 +15,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg)}
 .title{position:absolute;left:70px;right:70px;top:150px;font-weight:800;font-size:96px;line-height:1.05;letter-spacing:-.02em;text-align:center}
 .screen{position:absolute;width:560px;height:1100px;border-radius:66px;background:#0b0b0f;padding:12px;box-shadow:0 0 0 4px rgba(255,255,255,.55),0 0 60px rgba(255,255,255,.18),0 40px 90px rgba(0,0,0,.6)}
 .screen img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:56px;display:block}
+.banner{position:absolute;left:60px;right:60px;top:165px;text-align:center;font-weight:800;font-size:60px;line-height:1.12;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.7)}
+.banner em{font-style:normal;color:var(--accent)}
 .brand{position:absolute;left:70px;top:70px;display:flex;align-items:center;gap:18px;font-weight:800;font-size:40px}
 .brand img{width:76px;height:76px;border-radius:20px}
 .char{position:absolute;bottom:230px;transform-origin:50% 100%}
@@ -46,9 +48,9 @@ window.render=function(t){
   if(s.layout==='talk'){            // big head, speaking to camera
     h+=headShot(s.pose||'head_neutral',240,380,600,local);   // medium shot: a 600 px head reads as a person, not a mouth
   } else if(s.layout==='present'){  // full body left, phone screen right
-    h+=screen(s,local,480,250)+fullBody(s.pose||'explaining_right',-330,1050,local,5,s.who);
+    h+=screen(s,local,480,D.banner?340:250)+fullBody(s.pose||'explaining_right',-330,1050,local,5,s.who);
   } else if(s.layout==='scene'){    // full body centre, prop text above
-    h+=`<div class="abs" style="left:70px;right:70px;top:300px;text-align:center;font-weight:800;font-size:72px;line-height:1.1;opacity:${eo((local-.3)/.5)}">${s.card||''}</div>`+fullBody(s.pose||'front_neutral',-110,1300,local,6,s.who);
+    h+=`<div class="abs" style="left:70px;right:70px;top:${D.banner?390:300}px;text-align:center;font-weight:800;font-size:72px;line-height:1.1;opacity:${eo((local-.3)/.5)}">${s.card||''}</div>`+fullBody(s.pose||'front_neutral',-110,1300,local,6,s.who);
   } else if(s.layout==='clip'){     // a generated shot fills the frame; optional small character and card
     const c=(D.clips||{})[String(S.indexOf(s))]; if(c){ const k=Math.min(c.n, Math.max(1, Math.floor(local*30)+1));
       h+=`<div class="abs" style="inset:0;overflow:hidden"><img src="${c.dir}/f${String(k).padStart(4,'0')}.jpg" style="width:100%;height:100%;object-fit:cover;transform:scale(${(1+local*0.01).toFixed(4)})"></div>`; }
@@ -64,6 +66,7 @@ window.render=function(t){
   }
   h+='</div>';
   if(s.layout!=='end'&&s.layout!=='duo_end') h+=`<div class="brand"><img src="${D.icon}"><span>${D.app_name}</span></div>`;
+  if(D.banner && s.layout!=='end' && s.layout!=='duo_end') h+=`<div class="banner">${D.banner}</div>`;     // one hook line that stays on screen for the whole story (story-level "banner")
   if(s.title && local<2.4) h+=`<div class="title" style="opacity:${eo(local/.5)*eo((2.4-local)/.4)}">${s.title}</div>`;
   if(s.sub && s.layout!=='end' && s.layout!=='duo_end') h+=`<div class="sub" style="opacity:${fade}"><span>${s.native?`<b class="nat">${s.native}</b><br><span class="en">${s.sub}</span>`:s.sub}</span></div>`;
   if(s.chip) h+=`<div class="langchip" style="opacity:${fade*eo((local-.2)/.4)}">${s.chip}</div>`;       // the language being spoken in this scene
