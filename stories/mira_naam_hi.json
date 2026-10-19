@@ -1,0 +1,131 @@
+{
+ "id": "mira-naam-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "reveal",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Poora sheher jaanta hai",
+ "post_on": "2026-10-31",
+ "banner": "Jab poora sheher<br><em>aapko jaanta ho</em> 🏫",
+ "caption": "Sunita madam ko sab jaante hain. Isliye woh kuch keh nahi paatin. Phir roz ek naya naam mila. 👇\nRoz naya naam, koi pehchaan nahi: Waypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about a small-town teacher everyone knows, who cannot say anything as herself, until she finds a place where she gets a fresh name every day. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#RozNayaNaam",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Sunita": "Sunita is a 34-year-old school teacher in a small Indian town, with hair in a neat plait, a teal cotton saree, a thin gold chain and a gentle composed face.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "सुनीता मैडम को, पूरा शहर जानता है।",
+   "sub": "Sunita madam ko, poora sheher jaanta hai.",
+   "min": 2.2,
+   "art": "Sunita in a teal saree walks down a small-town market street in the morning, shopkeepers and parents greeting her with folded hands and smiles from every side, a school bag on her shoulder.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "सब्ज़ी वाला, पड़ोसी, बच्चों के माता-पिता।",
+   "sub": "Sabzi wala, padosi, bachchon ke maata-pita.",
+   "min": 2.2,
+   "art": "Three small warm pictures side by side like a storybook strip: a vegetable seller waving, a neighbour peering over a balcony, parents at a school gate, all looking towards the viewer.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "इसलिए वो कभी कुछ नहीं कहती। मैडम जो हैं।",
+   "sub": "Isliye woh kabhi kuch nahi kehtin. Madam jo hain.",
+   "min": 2.2,
+   "art": "Sunita stands at the blackboard in a classroom smiling calmly at her students, but a faint grey shadow version of her behind her holds a hand over its own mouth.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "घर आकर भी, दीवारों के कान होते हैं।",
+   "sub": "Ghar aakar bhi, deewaron ke kaan hote hain.",
+   "min": 2.2,
+   "art": "Sunita sits alone at her dining table at night with a cup of tea, through the open window the lit windows of neighbours' houses are very close, a curtain half drawn.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "एक सच, जो वो किसी से नहीं कह सकती।",
+   "sub": "Ek sach, jo woh kisi se nahi keh saktin.",
+   "min": 2.2,
+   "art": "Close view of Sunita's face in lamplight, eyes lowered, holding a closed diary against her chest, quiet and heavy.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/fox-name-badge.png",
+   "vo": "फिर उसे एक जगह मिली। जहाँ रोज़ नया नाम मिलता है।",
+   "sub": "Phir use ek jagah mili. Jahan roz naya naam milta hai.",
+   "min": 2.4
+  },
+  {
+   "layout": "phone",
+   "vo": "आज वो, नीली चिड़िया है।",
+   "sub": "Aaj woh, 'Neeli Chidiya' hai.",
+   "min": 2.4,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "न मैडम, न पड़ोसन, न किसी की बेटी।",
+   "sub": "Na madam, na padosan, na kisi ki beti.",
+   "min": 2.2,
+   "art": "Sunita in a teal saree with a neat plait sits on her bed at night holding her phone, her face relaxed and free for the first time, a small blue bird drawn glowing softly above the phone, a friendly small orange fox with a teal scarf sitting beside her on the bed.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "और उसने लिखा, जो सालों से अंदर था।",
+   "sub": "Aur usne likha, jo saalon se andar tha.",
+   "min": 2.4,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "कल, एक नया नाम होगा। और वो फिर भी वही रहेगी।",
+   "sub": "Kal, ek naya naam hoga. Aur woh phir bhi wahi rahegi.",
+   "min": 2.4,
+   "art": "Sunita walking to school the next morning in her teal saree with a light step and a private smile, sunlight on the street, the fox mascot peeking from behind a tree.",
+   "noref": false
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "अगर आज आपका कोई नाम न होता, तो आप क्या कहते?",
+   "sub": "Agar aaj aapka koi naam na hota, to aap kya kehte?",
+   "min": 3.0,
+   "focus": "50% 40%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

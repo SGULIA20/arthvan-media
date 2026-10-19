@@ -1,0 +1,140 @@
+{
+ "id": "lumi-score-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "score-history",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Papa ki dukaan ka number",
+ "post_on": "2026-10-26",
+ "banner": "Dukaan ka number<br><em>42 se 68</em> 📈",
+ "caption": "Papa ko lagta tha dukaan theek chal rahi hai. Phir ek number aaya: 42. Teen mahine baad, 68. 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper who thought his shop was fine until he saw its health score, and what changed in three months. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#DukaanKaNumber",
+  "#BusinessHealthScore",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman she wears a simple blue kurta with jeans.",
+   "Papa": "Papa is Anaya's father, a small-town shopkeeper in his fifties with a grey moustache, a cream kurta and reading glasses, a gentle tired face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "पापा कहते थे, दुकान ठीक चल रही है।",
+   "sub": "Papa kehte the, 'dukaan theek chal rahi hai.'",
+   "min": 2.2,
+   "art": "Papa in a cream kurta stands contentedly at the counter of his small hardware-and-general store in the afternoon, arms folded, a wall of shelves with tins and tools behind him, a customer leaving with a bag.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "ठीक, यानी कितना? कोई नहीं जानता था।",
+   "sub": "Theek, yaani kitna? Koi nahi jaanta tha.",
+   "min": 2.2,
+   "art": "Papa and Anaya at the dinner table in the evening, Anaya asking with open hands, Papa shrugging with a small smile, an old account register and a steel tumbler between them.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "मैंने कहा, एक बार नंबर देख लेते हैं।",
+   "sub": "Maine kaha, 'ek baar number dekh lete hain.'",
+   "min": 2.2,
+   "art": "Anaya in a blue kurta holds her phone out to Papa at the shop counter, Papa leans in with his reading glasses, curious and a little doubtful, warm evening light.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "बयालीस। सौ में से।",
+   "sub": "Bayalees. Sau mein se.",
+   "min": 2.6,
+   "screen": "result.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "पापा चुप हो गए। फिर बोले, इतना कम?",
+   "sub": "Papa chup ho gaye. Phir bole, 'itna kam?'",
+   "min": 2.2,
+   "art": "Close view of Papa's face looking at the phone, glasses pushed up, surprised and a little hurt, Anaya's hand on his shoulder, the shop behind them in soft focus.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "उधार ज़्यादा, नक़द कम, और माल रैक पर पड़ा।",
+   "sub": "Udhaar zyada, naqad kam, aur maal rack par pada.",
+   "min": 2.4,
+   "art": "Three small pictures side by side like a storybook strip: a register page full of names, a nearly empty cash drawer, and a shelf of dusty unsold boxes, drawn in the same warm style.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "ऐप ने इस हफ़्ते के तीन काम बताए।",
+   "sub": "App ne is hafte ke teen kaam bataye.",
+   "min": 2.4,
+   "screen": "tasks.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "पापा ने पुराने उधार के फ़ोन किए।",
+   "sub": "Papa ne purane udhaar ke phone kiye.",
+   "min": 2.2,
+   "art": "Papa sitting on a stool outside the shop in the morning with a cup of chai, phone to his ear, the register open on his knee, a polite firm expression, a scooter passing by.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "जो नहीं बिकता था, उसे मँगाना बंद किया।",
+   "sub": "Jo nahi bikta tha, use mangaana band kiya.",
+   "min": 2.2,
+   "art": "Papa at the shop with a supplier holding a delivery list, Papa gently shaking his head and crossing out two items with a pen, cartons on a hand-cart outside.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "तीन महीने बाद, अड़सठ।",
+   "sub": "Teen mahine baad, adsath.",
+   "min": 2.6,
+   "screen": "score-history.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "पापा ने पहली बार कहा, अब दुकान सच में ठीक है।",
+   "sub": "Papa ne pehli baar kaha, 'ab dukaan sach mein theek hai.'",
+   "min": 2.4,
+   "art": "Papa and Anaya standing together in the doorway of the shop at golden hour, Papa smiling proudly with his phone in hand, Anaya laughing, the shop tidy and bright behind them.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "आपकी दुकान का नंबर क्या है?",
+   "sub": "Aapki dukaan ka number kya hai?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

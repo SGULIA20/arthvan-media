@@ -1,0 +1,135 @@
+{
+ "id": "lumi-card-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "lead": "male",
+ "feature": "business-card",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Vinod darzi ka card",
+ "post_on": "2026-10-28",
+ "banner": "Kaam achha, par<br><em>dukaan kisi ko milti nahi</em> 🧵",
+ "caption": "Vinod ki silai poore mohalle mein mashhoor. Par naya graahak poochta hai, 'number kya hai, dukaan kahan hai?' 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a tailor whose work everyone praises but whose shop nobody can find, until he has a business card he can share on WhatsApp. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#DarziKiDukaan",
+  "#BusinessCard",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Vinod": "Vinod is a tailor in his forties, slim, with neatly combed black hair, a measuring tape around his neck, a white half-sleeve shirt and spectacles; a kind, modest face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "विनोद की सिलाई, पूरे मोहल्ले में मशहूर।",
+   "sub": "Vinod ki silai, poore mohalle mein mashhoor.",
+   "min": 2.2,
+   "art": "Vinod the tailor sits at an old sewing machine in a small bright shop, a measuring tape around his neck, colourful fabric rolls stacked behind him, a finished kurta on a hanger, morning light through the shutter.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "शादी का सूट हो या स्कूल की यूनिफ़ॉर्म, सब उसी के पास।",
+   "sub": "Shaadi ka suit ho ya school ki uniform, sab usi ke paas.",
+   "min": 2.4,
+   "art": "A proud groom in a sherwani and a small boy in a school uniform stand side by side in front of Vinod's shop as Vinod adjusts the boy's collar, parents smiling behind them.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "पर नया ग्राहक पूछता, दुकान कहाँ है? नंबर क्या है?",
+   "sub": "Par naya graahak poochta, 'dukaan kahan hai? Number kya hai?'",
+   "min": 2.4,
+   "art": "A young woman on a busy market street holds her phone and looks around confused, asking a vegetable seller for directions, narrow lanes with many small shop signs, Vinod's shop hidden in a corner.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "विनोद काग़ज़ के टुकड़े पर नंबर लिखता। काग़ज़ खो जाता।",
+   "sub": "Vinod kaagaz ke tukde par number likhta. Kaagaz kho jaata.",
+   "min": 2.4,
+   "art": "Vinod writes his phone number on a torn scrap of paper for a customer, in the foreground a similar scrap lies crumpled in a gutter beside a bicycle wheel, soft afternoon light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "छपा हुआ कार्ड? पाँच सौ का ख़र्च, और हर बार ख़त्म।",
+   "sub": "Chhapa hua card? Paanch sau ka kharch, aur har baar khatam.",
+   "min": 2.4,
+   "art": "Vinod at a small printing shop counter looking at a price list with a frown, a stack of printed cards with only two left in the box on his own counter in a small inset picture.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "फिर ऐप में उसने अपना कार्ड बनाया।",
+   "sub": "Phir app mein usne apna card banaya.",
+   "min": 2.6,
+   "screen": "business-card.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "नाम, नंबर, दुकान का पता, और व्हाट्सएप पर शेयर।",
+   "sub": "Naam, number, dukaan ka pata, aur WhatsApp par share.",
+   "min": 2.4,
+   "art": "Vinod holds up his phone showing a neat digital business card to a smiling customer who looks at it with her own phone in hand, both standing at the shop counter, fabric rolls behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "अब हर ग्राहक को, एक टैप में भेज देता है।",
+   "sub": "Ab har graahak ko, ek tap mein bhej deta hai.",
+   "min": 2.2,
+   "art": "Vinod sitting at his sewing machine tapping his phone with one thumb, small glowing card icons flying out of the phone towards a row of happy customers' phones drawn faintly in the air.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "और ग्राहक आगे भेजते हैं। मोहल्ले से बाहर भी।",
+   "sub": "Aur graahak aage bhejte hain. Mohalle se bahar bhi.",
+   "min": 2.4,
+   "art": "A view over the rooftops of a town at dusk, dotted lines of light connecting phones in many homes back to Vinod's small lit shop in the middle, warm and hopeful.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "इस महीने, तीन शादियों के ऑर्डर। सब नए।",
+   "sub": "Is mahine, teen shaadiyon ke order. Sab naye.",
+   "min": 2.4,
+   "art": "Vinod's shop busy and bright with three sets of wedding clothes on hangers, Vinod measuring a young man while two families wait on a bench with sweets, marigolds at the door.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "आपका ग्राहक, आपको कैसे ढूँढता है?",
+   "sub": "Aapka graahak, aapko kaise dhoondhta hai?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
