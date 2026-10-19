@@ -236,7 +236,8 @@ def test_media_urls_pin_the_pushed_commit_not_a_branch(tmp_path):
         assert "/deadbeef/out/2026-10-11/" in u and "/main/" not in u
 
 
-TUE = date(2026, 10, 13)  # LinkedIn day: Tuesday, and a Waypoint day
+TUE = date(2026, 10, 13)  # a Tuesday that is a Waypoint day: Waypoint never goes to LinkedIn (founder, 19 Oct 2026)
+SMB_TUE = date(2026, 10, 20)  # LinkedIn day: a Tuesday that is a ScoreMyBiz day
 
 
 LI_ENV = dict(ENV, LINKEDIN_ACCESS_TOKEN="litok", LINKEDIN_PERSON_URN="urn:li:person:me")
@@ -249,13 +250,28 @@ def last_entry(tmp_path, channel):
 
 def test_linkedin_posts_after_instagram_with_the_same_slides_and_a_clickable_link(tmp_path):
     w = World(tmp_path)
-    assert go(w, env=LI_ENV, day=TUE) == 0
+    assert go(w, env=LI_ENV, day=SMB_TUE) == 0
     assert w.count("publish") == 1 and len(w.li_calls) == 1
     call = w.li_calls[0]
     assert call["token"] == "litok" and call["urn"] == "urn:li:person:me" and len(call["slides"]) == 3
-    assert "https://play.google.com/store/apps/details?id=com.arthvananalytics.waypoint" in call["text"]
+    assert "https://play.google.com/store/apps/details?id=" in call["text"] and "waypoint" not in call["text"].lower()
     assert "Link in bio" not in call["text"] and len(call["alts"]) == 4
     assert last_entry(tmp_path, "linkedin")["status"] == "published"
+
+
+def test_waypoint_never_goes_to_linkedin_even_on_a_tuesday(tmp_path):
+    w = World(tmp_path)
+    assert go(w, env=LI_ENV, day=TUE) == 0                       # a Waypoint Tuesday: Instagram yes, LinkedIn no
+    assert w.count("publish") == 1 and w.li_calls == []
+    (tmp_path / "stories" / "out").mkdir(parents=True)
+    (tmp_path / "stories" / "out" / "mira-x-hi.mp4").write_bytes(b"v" * 30)
+    (tmp_path / "stories" / "mira_x_hi.json").write_text(json.dumps({
+        "id": "mira-x-hi", "app": "waypoint", "lang": "hi-IN", "post_on": "2026-10-12", "character": "mira",
+        "caption": "A story.", "hashtags": ["#Waypoint"], "linkedin_text": "A story.", "title": "x"}))
+    w.li_videos = []
+    w.deps.post_linkedin_video = lambda *a: w.li_videos.append(a) or "urn:li:ugcPost:5"
+    assert go(w, env=LI_ENV, day=date(2026, 10, 17)) == 0       # a Waypoint, female-lead day: the story is scheduled
+    assert last_entry(tmp_path, "instagram")["item"] == "mira-x-hi" and w.li_videos == []
 
 
 def test_linkedin_is_skipped_quietly_without_credentials_and_in_prepare_mode(tmp_path):
@@ -268,12 +284,12 @@ def test_linkedin_is_skipped_quietly_without_credentials_and_in_prepare_mode(tmp
 def test_linkedin_failure_exits_1_keeps_instagram_published_and_a_rerun_retries_only_linkedin(tmp_path):
     w = World(tmp_path)
     w.li_fail = 1
-    assert go(w, env=LI_ENV, day=TUE) == 1
+    assert go(w, env=LI_ENV, day=SMB_TUE) == 1
     assert w.count("publish") == 1 and last_entry(tmp_path, "linkedin")["status"] == "failed"
     assert last_entry(tmp_path, "instagram")["status"] == "published"
-    assert go(w, env=LI_ENV, day=TUE) == 0
-    assert w.count("publish") == 1 and w.rendered_ids == ["w1"] and len(w.li_calls) == 2
-    assert go(w, env=LI_ENV, day=TUE) == 0 and len(w.li_calls) == 2  # already on LinkedIn: nothing more
+    assert go(w, env=LI_ENV, day=SMB_TUE) == 0
+    assert w.count("publish") == 1 and len(w.rendered_ids) == 1 and len(w.li_calls) == 2
+    assert go(w, env=LI_ENV, day=SMB_TUE) == 0 and len(w.li_calls) == 2  # already on LinkedIn: nothing more
 
 
 def test_linkedin_posts_only_once_a_week_on_tuesday(tmp_path):
@@ -281,8 +297,9 @@ def test_linkedin_posts_only_once_a_week_on_tuesday(tmp_path):
     for d in (date(2026, 10, 11), date(2026, 10, 12), date(2026, 10, 14), date(2026, 10, 15), date(2026, 10, 16), date(2026, 10, 17)):
         assert go(w, env=LI_ENV, day=d) == 0
     assert w.li_calls == [] and w.count("publish") == 6
-    assert go(w, env=LI_ENV, day=TUE) == 0 and len(w.li_calls) == 1
-    assert go(w, env=LI_ENV, day=date(2026, 10, 20)) == 0 and len(w.li_calls) == 2  # next Tuesday
+    assert go(w, env=LI_ENV, day=TUE) == 0 and w.li_calls == []                    # a Tuesday, but Waypoint's day
+    assert go(w, env=LI_ENV, day=SMB_TUE) == 0 and len(w.li_calls) == 1            # the ScoreMyBiz Tuesday
+    assert go(w, env=LI_ENV, day=date(2026, 10, 27)) == 0 and len(w.li_calls) == 1  # next Tuesday is Waypoint's again
 
 
 def test_a_rerun_on_a_non_linkedin_day_never_posts_to_linkedin(tmp_path):
@@ -318,8 +335,8 @@ def test_threads_and_linkedin_both_retry_when_both_failed_on_a_tuesday(tmp_path)
     w = World(tmp_path)
     w.th_fail, w.li_fail = 1, 1
     env = dict(TH_ENV, **{k: v for k, v in LI_ENV.items() if k.startswith("LINKEDIN")})
-    assert go(w, env=env, day=TUE) == 1
-    assert go(w, env=env, day=TUE) == 0
+    assert go(w, env=env, day=SMB_TUE) == 1
+    assert go(w, env=env, day=SMB_TUE) == 0
     assert len(w.th_calls) == 2 and len(w.li_calls) == 2 and w.count("publish") == 1
 
 

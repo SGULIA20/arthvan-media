@@ -228,7 +228,7 @@ def _extras(day, app_cfg, item, slides, slide_urls, deps, log, chans) -> int:
             ok &= _do_youtube(day, app_cfg, item, video, deps, log, yt, title, item["caption"])
     if chans.get("threads") and day_status(log, day, "threads") != "published":
         ok &= _do_threads(day, app_cfg, item, slide_urls, deps, log, *chans["threads"])
-    if chans.get("linkedin") and day_status(log, day, "linkedin") != "published":
+    if chans.get("linkedin") and app_cfg.get("linkedin", True) and day_status(log, day, "linkedin") != "published":   # founder, 19 Oct: Waypoint never goes to LinkedIn
         ok &= _do_linkedin(day, app_cfg, item, slides, deps, log, *chans["linkedin"])
     return 0 if ok else 1
 
@@ -326,7 +326,7 @@ def _story_extras(st, day, app_cfg, dst, url, deps, log, chans, li_text, tags) -
     yt = chans.get("youtube", {})
     if yt:
         ok &= _do_youtube(day, app_cfg, st, dst, deps, log, yt, st.get("title", app_cfg["name"]), st["caption"])
-    if chans.get("linkedin_any") and day_status(log, day, "linkedin") != "published":
+    if chans.get("linkedin_any") and app_cfg.get("linkedin", True) and day_status(log, day, "linkedin") != "published":
         tok, urn = chans["linkedin_any"]
         ok &= _channel(day, "linkedin", st["id"], deps, log,
                        lambda: deps.post_linkedin_video(tok, urn, li_text, tags, dst, st.get("title", app_cfg["name"])))
