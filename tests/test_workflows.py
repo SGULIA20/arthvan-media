@@ -82,3 +82,20 @@ def test_whatsapp_status_settings_reach_the_daily_job():
     text = (WF / "daily-post.yml").read_text()
     for k in ("secrets.GUPSHUP_APP_ID", "secrets.GUPSHUP_API_KEY", "secrets.WA_STATUS_TO", "vars.WA_STATUS_TEMPLATE", "vars.GUPSHUP_APP_NAME"):
         assert k in text
+
+
+def test_linkedin_personal_runs_at_09_07_india_defaults_to_render_and_gets_its_secrets():
+    wf = load("linkedin-personal.yml")
+    assert wf["on"]["schedule"] == [{"cron": "37 3 * * *"}, {"cron": "37 4 * * *"}]
+    assert wf["on"]["workflow_dispatch"]["inputs"]["mode"]["default"] == "render"
+    assert wf["permissions"] == {"contents": "write"} and wf["concurrency"]["cancel-in-progress"] is False
+    text = (WF / "linkedin-personal.yml").read_text()
+    for s in ("secrets.LINKEDIN_ACCESS_TOKEN", "secrets.LINKEDIN_PERSON_URN", "secrets.TELEGRAM_BOT_TOKEN", "vars.PAUSE", "github.event.inputs.mode || 'post'"):
+        assert s in text, s
+    for line in text.splitlines():
+        if line.strip().startswith("run:") or line.strip().startswith("- run:"):
+            assert "${{" not in line, line
+
+
+def test_telegram_commands_job_gets_the_gemini_key_for_comment_drafts():
+    assert "secrets.GEMINI_API_KEY" in (WF / "telegram-commands.yml").read_text()

@@ -61,3 +61,10 @@ def test_status_says_whether_posting_is_on_and_what_went_out(tmp_path):
 def test_command_with_bot_name_suffix_is_understood(tmp_path):
     _, sent, _, _ = run(tmp_path, [upd(1, "/pause@Arthvan_bot")])
     assert sent[0].startswith("⏸ Paused")
+
+
+def test_status_still_says_nothing_posted_after_only_the_personal_post(tmp_path):
+    (tmp_path / "logs").mkdir(exist_ok=True)
+    (tmp_path / "logs" / "posts.jsonl").write_text('{"date": "2026-10-13", "channel": "linkedin_personal", "item": "toc", "status": "published", "id": "u"}\n')
+    t = tc.status(tmp_path, DAY)
+    assert "Nothing posted yet today" in t and "LinkedIn personal post: out (toc)." in t

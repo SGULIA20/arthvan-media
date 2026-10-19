@@ -130,3 +130,27 @@ def test_video_post_body(monkeypatch):
     assert create_video_post(TOKEN, PERSON, "text", "urn:li:video:V1", "Friday") == "urn:li:ugcPost:77"
     assert seen["body"]["content"]["media"] == {"id": "urn:li:video:V1", "title": "Friday"}
     assert seen["body"]["author"] == PERSON and seen["body"]["lifecycleState"] == "PUBLISHED"
+
+
+def test_single_image_post_uses_media_content_and_post_images_picks_single_or_multi(tmp_path, monkeypatch):
+    fake = Fake()
+    monkeypatch.setattr(linkedin, "call", fake)
+    (tmp_path / "a.jpg").write_bytes(b"x"); (tmp_path / "b.jpg").write_bytes(b"y")
+    urn = linkedin.post_images(TOKEN, PERSON, "Hook (one)", ["#SGLearning"], [tmp_path / "a.jpg"], ["Card one"])
+    assert urn == "urn:li:share:123"
+    post = [c for c in fake.calls if c[1].endswith("/rest/posts")][-1][2]
+    assert post["content"] == {"media": {"id": "urn:li:image:IMG1", "altText": "Card one"}}
+    assert post["commentary"] == "Hook \\(one\\)\n\n{hashtag|\\#|SGLearning}"
+    linkedin.post_images(TOKEN, PERSON, "Two", [], [tmp_path / "a.jpg", tmp_path / "b.jpg"], ["one", "two"])
+    post = [c for c in fake.calls if c[1].endswith("/rest/posts")][-1][2]
+    assert [i["altText"] for i in post["content"]["multiImage"]["images"]] == ["one", "two"]
+    with pytest.raises(LinkedInError):
+        linkedin.post_images(TOKEN, PERSON, "None", [], [], [])
+
+
+def test_multi_image_post_keeps_every_picture_when_alts_run_short(monkeypatch):
+    fake = Fake()
+    monkeypatch.setattr(linkedin, "call", fake)
+    create_multi_image_post(TOKEN, PERSON, "t", ["urn:li:image:1", "urn:li:image:2", "urn:li:image:3"], ["one"])
+    post = [c for c in fake.calls if c[1].endswith("/rest/posts")][-1][2]
+    assert [i["altText"] for i in post["content"]["multiImage"]["images"]] == ["one", "", ""]

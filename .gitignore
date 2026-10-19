@@ -17,3 +17,4 @@ stories/out/*.mp4
 stories/broll/ledger.json
 stories/broll/ledger.lock
 stories/art/
+out/

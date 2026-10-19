@@ -13,7 +13,9 @@ from . import telegram
 ROOT = Path(__file__).resolve().parent.parent
 BUFFER_TARGET = 7
 NAMES = {"instagram": "Instagram", "youtube:sglearning": "YouTube (Learning with SG)", "youtube:arthvan": "YouTube (SG-MYTH-WORLD)",
-         "threads": "Threads", "linkedin": "LinkedIn", "whatsapp": "WhatsApp", "telegram": "Telegram", "telegram_channel": "Telegram channel"}
+         "threads": "Threads", "linkedin": "LinkedIn", "whatsapp": "WhatsApp", "telegram": "Telegram", "telegram_channel": "Telegram channel",
+         "linkedin_personal": "LinkedIn (personal)"}
+PERSONAL = "linkedin_personal"   # the founder's own daily post: a separate lane, reported on its own line
 APP_NAMES = {"scoremybiz": "ScoreMyBiz", "waypoint": "Waypoint"}
 
 
@@ -61,9 +63,27 @@ def day_state(log: Path, day: date) -> dict:
     """channel -> (status, item, note) for the day: the last entry per channel wins."""
     state = {}
     for e in entries(log):
-        if e.get("date") == day.isoformat():
+        if e.get("date") == day.isoformat() and e.get("channel") != PERSONAL:
             state[e.get("channel", "instagram")] = (e.get("status"), e.get("item"), e.get("error") or e.get("note") or "", e.get("app"))
     return state
+
+
+def personal_state(log: Path, day: date):
+    """(status, item, note) of the day's personal LinkedIn post, or None when nothing was tried yet."""
+    state = None
+    for e in entries(log):
+        if e.get("date") == day.isoformat() and e.get("channel") == PERSONAL:
+            state = (e.get("status"), e.get("item"), e.get("error") or "")
+    return state
+
+
+def personal_line(root: Path, day: date) -> str:
+    st = personal_state(Path(root) / "logs" / "posts.jsonl", day)
+    if st is None:
+        return "LinkedIn personal post: not yet (goes out about 09:07 India)."
+    if st[0] == "published":
+        return f"LinkedIn personal post: out ({st[1]})."
+    return f"LinkedIn personal post: {st[0]} ({st[1]}): {st[2][:140]}"
 
 
 def _pretty(day: date) -> str:
@@ -138,7 +158,7 @@ def daily_summary(root: Path, day: date) -> str:
     for c in bad:
         st, _item, note, _app = state[c]
         lines.append(f"Not posted on {NAMES.get(c, c)} ({st}): {note[:140]}")
-    lines += ["", buffer_line(root, day), "Next: " + " | ".join(upcoming(root, day))]
+    lines += ["", buffer_line(root, day), "Next: " + " | ".join(upcoming(root, day)), personal_line(root, day)]
     due = reminders_due(root, day)
     if due:
         lines += ["", "For you today:"] + [f"• {t}" for t in due]

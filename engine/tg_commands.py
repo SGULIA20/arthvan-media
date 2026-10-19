@@ -1,4 +1,4 @@
-"""Commands the founder sends to the Telegram bot: /status, /pause, /resume, /help.
+"""Commands the founder sends to the Telegram bot: /status, /pause, /resume, /comment, /help.
 A GitHub workflow runs this every few minutes (there is no always-on server), so an answer can take 5-10 minutes.
 Only the founder's own chat is obeyed; anyone else who finds the bot is ignored. /pause writes the PAUSE file that run_daily
 already honours and pushes it; /resume removes it."""
@@ -8,13 +8,13 @@ import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import notify, telegram
+from . import comment_drafts, notify, telegram
 
 ROOT = Path(__file__).resolve().parent.parent
 MAX_AGE_SECONDS = 12 * 3600
 
 HELP = ("I can do these:\n/status – what went out today, what is paused, what is next\n/pause – stop all posting until you say /resume\n"
-        "/resume – start posting again\n/help – this list\n\nAnswers can take 5–10 minutes: I check for commands every few minutes.")
+        "/resume – start posting again\n/comment <post text> – two LinkedIn comment drafts in your voice\n/help – this list\n\nAnswers can take 5–10 minutes: I check for commands every few minutes.")
 
 
 def git_change(root: Path, add: list, remove: list, message: str) -> None:
@@ -38,7 +38,7 @@ def status(root: Path, day: date) -> str:
         lines += ["", notify.daily_summary(root, day)]
     else:
         lines += ["", f"Nothing posted yet today ({day.day} {day.strftime('%b')}); the post goes out around 6 PM Lagos.", notify.buffer_line(root, day),
-                  "Next: " + " | ".join(notify.upcoming(root, day - timedelta(days=1)))]
+                  "Next: " + " | ".join(notify.upcoming(root, day - timedelta(days=1))), notify.personal_line(root, day)]
     return "\n".join(lines)
 
 
@@ -59,6 +59,8 @@ def answer(text: str, root: Path, day: date, change=git_change) -> str:
         flag.unlink()
         change(root, [], ["PAUSE"], "resume posting (from Telegram)")
         return "▶️ Posting is back on. The next run goes out at its usual time."
+    if cmd == "/comment":
+        return comment_drafts.drafts(text.strip()[len(text.split()[0]):])
     return HELP
 
 

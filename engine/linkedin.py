@@ -71,28 +71,49 @@ def upload_image(token: str, owner_urn: str, path) -> str:
     return value["image"]
 
 
+def _post_body(author_urn: str, text: str, content: dict) -> dict:
+    return {
+        "author": author_urn, "commentary": text, "visibility": "PUBLIC",
+        "distribution": {"feedDistribution": "MAIN_FEED", "targetEntities": [], "thirdPartyDistributionChannels": []},
+        "lifecycleState": "PUBLISHED", "isReshareDisabledByAuthor": False,
+        "content": content,
+    }
+
+
+def _create_post(token: str, body: dict, what: str) -> str:
+    status, headers, _ = call("POST", f"{API}/rest/posts", token, json_body=body)
+    if status != 201 or "x-restli-id" not in headers:
+        raise LinkedInError(f"{what} creation returned {status} without an id")
+    return headers["x-restli-id"]
+
+
 def create_multi_image_post(token: str, author_urn: str, text: str, image_urns: list, alts: list) -> str:
     if not 2 <= len(image_urns) <= 20:
         raise LinkedInError("a multi-image post needs 2 to 20 images")
-    body = {
-        "author": author_urn,
-        "commentary": text,
-        "visibility": "PUBLIC",
-        "distribution": {"feedDistribution": "MAIN_FEED", "targetEntities": [], "thirdPartyDistributionChannels": []},
-        "lifecycleState": "PUBLISHED",
-        "isReshareDisabledByAuthor": False,
-        "content": {"multiImage": {"images": [{"id": i, "altText": a} for i, a in zip(image_urns, alts)]}},
-    }
-    status, headers, _ = call("POST", f"{API}/rest/posts", token, json_body=body)
-    if status != 201 or "x-restli-id" not in headers:
-        raise LinkedInError(f"post creation returned {status} without an id")
-    return headers["x-restli-id"]
+    alts = list(alts) + [""] * (len(image_urns) - len(alts))          # every uploaded picture stays in the post
+    content = {"multiImage": {"images": [{"id": i, "altText": a} for i, a in zip(image_urns, alts)]}}
+    return _create_post(token, _post_body(author_urn, text, content), "post")
 
 
 def post_set(token: str, person_urn: str, text: str, tags: list, slide_paths: list, alts: list) -> str:
     """Upload the slides, then publish them as one swipeable post. Returns the post URN."""
     body = commentary(text, tags)
     urns = [upload_image(token, person_urn, p) for p in slide_paths]
+    return create_multi_image_post(token, person_urn, body, urns, alts)
+
+
+def create_single_image_post(token: str, author_urn: str, text: str, image_urn: str, alt: str) -> str:
+    return _create_post(token, _post_body(author_urn, text, {"media": {"id": image_urn, "altText": alt}}), "image post")
+
+
+def post_images(token: str, person_urn: str, text: str, tags: list, paths: list, alts: list) -> str:
+    """One picture = a single-image post; two or more = a swipeable multi-image post. Returns the post URN."""
+    if not paths:
+        raise LinkedInError("a picture post needs at least one picture")
+    body = commentary(text, tags)
+    urns = [upload_image(token, person_urn, p) for p in paths]
+    if len(urns) == 1:
+        return create_single_image_post(token, person_urn, body, urns[0], alts[0] if alts else "")
     return create_multi_image_post(token, person_urn, body, urns, alts)
 
 
@@ -126,16 +147,7 @@ def upload_video(token: str, owner_urn: str, path, sleep=time.sleep, max_polls: 
 
 
 def create_video_post(token: str, author_urn: str, text: str, video_urn: str, title: str) -> str:
-    body = {
-        "author": author_urn, "commentary": text, "visibility": "PUBLIC",
-        "distribution": {"feedDistribution": "MAIN_FEED", "targetEntities": [], "thirdPartyDistributionChannels": []},
-        "lifecycleState": "PUBLISHED", "isReshareDisabledByAuthor": False,
-        "content": {"media": {"id": video_urn, "title": title}},
-    }
-    status, headers, _ = call("POST", f"{API}/rest/posts", token, json_body=body)
-    if status != 201 or "x-restli-id" not in headers:
-        raise LinkedInError(f"video post creation returned {status} without an id")
-    return headers["x-restli-id"]
+    return _create_post(token, _post_body(author_urn, text, {"media": {"id": video_urn, "title": title}}), "video post")
 
 
 def post_video(token: str, person_urn: str, text: str, tags: list, video_path, title: str) -> str:

@@ -115,3 +115,15 @@ def test_credit_line_says_how_much_is_left_and_the_daily_pace_to_finish(tmp_path
     assert "₹12,000 of ₹28,000 used (43%)" in t and "₹16,000 is left for 58 days" in t and "about ₹276 a day" in t
     led.write_text(json.dumps({"spent_inr": 28000.0}))
     assert notify.credit_line(date(2026, 10, 13), led).startswith("Veo credit is finished")
+
+
+def test_personal_lane_is_reported_on_its_own_line_and_never_as_the_days_reel(tmp_path):
+    from datetime import date
+    root = tmp_path; (root / "logs").mkdir()
+    day = date(2026, 10, 20)
+    (root / "logs" / "posts.jsonl").write_text('{"date": "2026-10-20", "channel": "linkedin_personal", "item": "toc", "status": "published", "id": "urn:li:share:1"}\n')
+    assert notify.day_state(root / "logs" / "posts.jsonl", day) == {}
+    assert notify.personal_line(root, day) == "LinkedIn personal post: out (toc)."
+    assert notify.personal_line(root, date(2026, 10, 21)).startswith("LinkedIn personal post: not yet")
+    (root / "logs" / "posts.jsonl").write_text('{"date": "2026-10-20", "channel": "linkedin_personal", "item": "toc", "status": "failed", "error": "HTTP 500"}\n')
+    assert notify.personal_line(root, day) == "LinkedIn personal post: failed (toc): HTTP 500"

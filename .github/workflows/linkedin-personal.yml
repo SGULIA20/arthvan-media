@@ -1,0 +1,68 @@
+name: linkedin-personal
+
+# One short hand-written post with a picture to the founder's personal LinkedIn profile, every day.
+on:
+  schedule:
+    - cron: '37 3 * * *'   # 09:07 India = 04:37 Lagos (87% of the audience is in India); off-peak minute, GitHub delays :00 jobs
+    - cron: '37 4 * * *'   # safety net one hour later; the engine never posts twice on one day
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'render = draw only, prepare = everything except publishing, post = publish'
+        type: choice
+        options: [render, prepare, post]
+        default: render
+      date:
+        description: 'Lagos date YYYY-MM-DD (optional)'
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: linkedin-personal
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Install Python packages
+        run: pip install -r requirements.txt
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+      - name: Unit tests
+        run: python -m pytest -q -m "not slow" tests/test_linkedin_personal.py tests/test_linkedin.py
+      - name: Git identity
+        run: |
+          git config user.name "arthvan-autoposter"
+          git config user.email "autoposter@users.noreply.github.com"
+      - name: Post today's personal LinkedIn post
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PAUSE: ${{ vars.PAUSE }}
+          MODE: ${{ github.event.inputs.mode || 'post' }}
+          DAY: ${{ github.event.inputs.date }}
+        run: |
+          if [ -n "$DAY" ]; then python -m engine.linkedin_personal "$MODE" --date "$DAY"; else python -m engine.linkedin_personal "$MODE"; fi
+      - name: Keep the pictures for a week
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linkedin-personal-${{ github.run_id }}
+          path: out/linkedin/
+          if-no-files-found: ignore
+          retention-days: 7

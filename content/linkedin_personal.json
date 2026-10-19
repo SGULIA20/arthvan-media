@@ -1,0 +1,936 @@
+{
+ "settings": {
+  "base_hashtags": [
+   "#SGLearning"
+  ],
+  "min_hashtags": 3,
+  "max_hashtags": 5,
+  "note": "Hand-written posts for the founder's personal LinkedIn profile. English. Pillars rotate model, finance, ai, world, founder. Keep each post short; see docs/superpowers/specs/2026-10-19-linkedin-personal-lane-design.md"
+ },
+ "items": [
+  {
+   "id": "toc-bottleneck",
+   "pillar": "model",
+   "hook": "You are not as fast as your slowest process.",
+   "body": "Most companies try to improve everything. The Theory of Constraints says improve one thing: the bottleneck.\n\nDouble the capacity of every other step and the output still does not move. The press machine, the dispatch bay, the approval desk, your own calendar. Find it, protect it, then move to the next one.\n\nRemember: a chain is only as strong as its weakest link.",
+   "question": "Where is the bottleneck in your business right now?",
+   "hashtags": [
+    "#TheoryOfConstraints",
+    "#OperationalExcellence",
+    "#Leadership"
+   ],
+   "card": {
+    "title": "Theory of Constraints",
+    "points": [
+     "Identify the bottleneck",
+     "Exploit it fully",
+     "Subordinate everything else",
+     "Elevate it if needed",
+     "Find the next one"
+    ]
+   }
+  },
+  {
+   "id": "cash-vs-profit",
+   "pillar": "finance",
+   "hook": "Profit is an opinion. Cash is a fact.",
+   "body": "A company can show a healthy profit and still fail to pay salaries on Friday.\n\nProfit sits in the ledger. Cash sits in the bank. Between them stand your debtors, your stock and your creditors.\n\nI have watched profitable plants gasp for working capital while a modest trader with tight collections slept well.\n\nWatch the bank balance as closely as the P&L. The P&L tells you if the business works. The cash tells you if it survives.",
+   "question": "Which number do you check first every morning: profit or cash?",
+   "hashtags": [
+    "#CashFlow",
+    "#WorkingCapital",
+    "#FinanceLeadership"
+   ],
+   "card": {
+    "title": "Profit vs cash",
+    "points": [
+     "Profit lives in the ledger",
+     "Cash lives in the bank",
+     "Debtors and stock sit in between",
+     "Survival is a cash question"
+    ]
+   }
+  },
+  {
+   "id": "ai-asks-why",
+   "pillar": "ai",
+   "hook": "AI will not replace the accountant. It will replace the accountant who never asks why.",
+   "body": "The machine can total, match, classify and draft faster than any of us.\n\nWhat it cannot do is walk to the shop floor, notice the stock is wet, and understand why the margin moved.\n\nThe finance role is shifting from producing the number to explaining it and acting on it.\n\nSpend less time building the report. Spend more time in the room where the report gets argued about.",
+   "question": "What part of your month-end would you hand to a machine tomorrow?",
+   "hashtags": [
+    "#AIinFinance",
+    "#FutureCFO",
+    "#FinanceTransformation"
+   ],
+   "card": {
+    "title": "AI changes the finance job",
+    "points": [
+     "Machines produce the number",
+     "People explain the number",
+     "Decisions still need judgment",
+     "Go where the argument happens"
+    ]
+   }
+  },
+  {
+   "id": "two-continents",
+   "pillar": "world",
+   "hook": "Some countries sit on two continents. That is not trivia. It is strategy.",
+   "body": "Turkey, Russia, Egypt, Kazakhstan and Azerbaijan each straddle two continents.\n\nThat geography decides pipelines, shipping lanes, trade deals and who gets a seat at which table.\n\nFor a business it is the same. The companies that sit between two markets, two currencies or two supply chains hold leverage nobody else has.\n\nGeography is not a school subject. It is a balance sheet item.",
+   "question": "Which bridge market matters most to your industry?",
+   "hashtags": [
+    "#Geography",
+    "#GlobalBusiness",
+    "#SupplyChain"
+   ],
+   "card": {
+    "title": "Countries on two continents",
+    "points": [
+     "Turkey",
+     "Russia",
+     "Egypt",
+     "Kazakhstan",
+     "Azerbaijan"
+    ]
+   }
+  },
+  {
+   "id": "shopkeeper-cash-lesson",
+   "pillar": "founder",
+   "hook": "A shopkeeper in Lagos taught me more about cash than any textbook.",
+   "body": "He did not know the word working capital. He knew which customer paid late and which supplier would wait.\n\nEvery evening he counted three things: what he sold, what he bought, what he spent. Nothing else.\n\nThat is the whole of finance, before we dressed it in vocabulary.\n\nBuilding ScoreMyBiz, I keep returning to his three questions. If a tool cannot answer them in plain words, it is not for shopkeepers.",
+   "question": "What is the simplest money habit you have seen work?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#FounderJourney",
+    "#CashFlow"
+   ],
+   "card": {
+    "title": "Three questions every shop asks",
+    "points": [
+     "What did I sell?",
+     "What did I buy?",
+     "What did I spend?"
+    ]
+   }
+  },
+  {
+   "id": "broken-window",
+   "pillar": "model",
+   "hook": "A small oil leak is never just an oil leak.",
+   "body": "The Broken Window Theory: when small problems are tolerated, they signal that bigger problems are acceptable.\n\nPoor housekeeping becomes a safety incident. One ignored defect becomes a customer complaint. One unanswered email becomes a lost account.\n\nCulture is not built in the annual strategy meeting. It is built by the small standards you uphold on an ordinary Tuesday.",
+   "question": "What small problem did you watch grow into an expensive one?",
+   "hashtags": [
+    "#BrokenWindowTheory",
+    "#WorkplaceCulture",
+    "#OperationalExcellence"
+   ],
+   "card": {
+    "title": "Broken Window Theory",
+    "points": [
+     "Small problems signal what is acceptable",
+     "Tolerated becomes normal",
+     "Normal becomes expensive",
+     "Fix it while it is small"
+    ]
+   }
+  },
+  {
+   "id": "working-capital-cycle",
+   "pillar": "finance",
+   "hook": "Your money takes a round trip every month. How long is the journey?",
+   "body": "Cash becomes stock. Stock becomes a sale. The sale becomes a debtor. The debtor becomes cash again.\n\nThe days that journey takes is your working capital cycle. Stretch it and you need more funding. Shorten it and you free money without selling anything extra.\n\nCollect a little faster. Hold a little less stock. Pay on the agreed day, not earlier. Three small moves, one big release of cash.",
+   "question": "How many days does your cash take to come home?",
+   "hashtags": [
+    "#WorkingCapital",
+    "#CashConversion",
+    "#FinanceLeadership"
+   ],
+   "card": {
+    "title": "The working capital cycle",
+    "points": [
+     "Cash buys stock",
+     "Stock becomes a sale",
+     "Sale becomes a debtor",
+     "Debtor becomes cash"
+    ]
+   }
+  },
+  {
+   "id": "ai-new-hire",
+   "pillar": "ai",
+   "hook": "Treat AI like a bright new hire, not like a calculator.",
+   "body": "A new hire needs a brief: the context, the goal, the format, the constraints.\n\nGive AI a one-line instruction and you get a one-line quality answer. Give it the brief you would give a sharp analyst and the output changes completely.\n\nThen do what you do with any new hire: check the work before it leaves the building.",
+   "question": "What is the one thing you always check before trusting an AI draft?",
+   "hashtags": [
+    "#AIinFinance",
+    "#Productivity",
+    "#FinanceTeams"
+   ],
+   "card": {
+    "title": "Brief AI like a new hire",
+    "points": [
+     "Give the context",
+     "State the goal",
+     "Fix the format",
+     "Name the constraints",
+     "Review before it leaves"
+    ]
+   }
+  },
+  {
+   "id": "landlocked-cost",
+   "pillar": "world",
+   "hook": "Being landlocked is a permanent tax on every product you make.",
+   "body": "A landlocked country depends on a neighbour's port, roads and customs. Every container pays twice: once to move, once to wait.\n\nNiger, Mali, Nepal, Bolivia, Mongolia. Different continents, same problem.\n\nBusinesses have this too. If your only route to the customer runs through someone else's platform, you are landlocked.",
+   "question": "Where is your business dependent on someone else's port?",
+   "hashtags": [
+    "#Geography",
+    "#SupplyChain",
+    "#Strategy"
+   ],
+   "card": {
+    "title": "The landlocked tax",
+    "points": [
+     "Depends on a neighbour's port",
+     "Pays to move and pays to wait",
+     "Same in business: one route, one platform"
+    ]
+   }
+  },
+  {
+   "id": "beginner-again",
+   "pillar": "founder",
+   "hook": "After years of signing off numbers, I became a beginner again.",
+   "body": "Running finance for factories, I knew what every line in the P&L meant.\n\nBuilding an app, I had to learn what a shopkeeper means when she says the month was good. It is rarely about profit. It is about whether she could pay everyone and still have something left.\n\nExpertise is comfortable. Growth usually begins where the comfort ends.",
+   "question": "When did you last choose to be a beginner?",
+   "hashtags": [
+    "#FounderJourney",
+    "#CareerGrowth",
+    "#Leadership"
+   ],
+   "card": {
+    "title": "Becoming a beginner again",
+    "points": [
+     "Expertise is comfortable",
+     "Growth starts outside it",
+     "Learn the customer's language"
+    ]
+   }
+  },
+  {
+   "id": "swot-tows",
+   "pillar": "model",
+   "hook": "Most people stop at SWOT. Strategists move on to TOWS.",
+   "body": "SWOT tells you where you are. TOWS tells you what to do next.\n\nUse strengths to seize opportunities. Use opportunities to fix weaknesses. Use strengths to block threats. Shrink weaknesses that threats could exploit.\n\nAnalysis that does not end in an action list is a nicely formatted delay.",
+   "question": "Does your strategy document end with a list or a plan?",
+   "hashtags": [
+    "#SWOT",
+    "#TOWS",
+    "#BusinessStrategy"
+   ],
+   "card": {
+    "title": "From SWOT to TOWS",
+    "points": [
+     "SO: strengths seize opportunities",
+     "WO: opportunities fix weaknesses",
+     "ST: strengths block threats",
+     "WT: shrink what threats exploit"
+    ]
+   }
+  },
+  {
+   "id": "contribution-margin",
+   "pillar": "finance",
+   "hook": "Revenue is vanity. Contribution is sanity.",
+   "body": "Every product carries a price and a variable cost. The gap between them is contribution. That gap pays your fixed costs before a rupee of profit appears.\n\nA big-revenue product with a thin gap can be worse than a small product with a wide one.\n\nRank your products by contribution per unit of your bottleneck resource, not by sales volume. The list will surprise you.",
+   "question": "Which of your products looks big but contributes little?",
+   "hashtags": [
+    "#ContributionMargin",
+    "#ManagementAccounting",
+    "#CIMA"
+   ],
+   "card": {
+    "title": "Contribution margin",
+    "points": [
+     "Price minus variable cost",
+     "Pays fixed costs first",
+     "Rank by contribution per bottleneck unit"
+    ]
+   }
+  },
+  {
+   "id": "ai-verify-numbers",
+   "pillar": "ai",
+   "hook": "Trust AI for structure. Verify AI for numbers.",
+   "body": "The machine is excellent at the shape of the work: the outline, the headings, the first draft of the commentary.\n\nIt is unreliable at the one thing finance cannot forgive: a figure that looks right and is not.\n\nSo split the job. Let it build the skeleton. You own every number inside it.",
+   "question": "Have you caught an AI number that looked perfectly plausible and was wrong?",
+   "hashtags": [
+    "#AIinFinance",
+    "#DataQuality",
+    "#FinanceLeadership"
+   ],
+   "card": {
+    "title": "Structure vs numbers",
+    "points": [
+     "AI builds the skeleton",
+     "You own every figure",
+     "Plausible is not the same as right"
+    ]
+   }
+  },
+  {
+   "id": "chokepoints",
+   "pillar": "world",
+   "hook": "World trade squeezes through a handful of narrow waters.",
+   "body": "The Strait of Hormuz, the Suez Canal, the Strait of Malacca, the Panama Canal, the Bab el-Mandeb.\n\nBlock one and freight rates move before your morning tea. Factories on the other side of the world change their production plans.\n\nEvery business has chokepoints too: one supplier, one approver, one person who knows the password.",
+   "question": "What is the chokepoint your business cannot afford to lose?",
+   "hashtags": [
+    "#SupplyChain",
+    "#Geography",
+    "#RiskManagement"
+   ],
+   "card": {
+    "title": "Five chokepoints of world trade",
+    "points": [
+     "Strait of Hormuz",
+     "Suez Canal",
+     "Strait of Malacca",
+     "Panama Canal",
+     "Bab el-Mandeb"
+    ]
+   }
+  },
+  {
+   "id": "three-questions-spend",
+   "pillar": "founder",
+   "hook": "Before any spend, I ask three questions. The third one kills most ideas.",
+   "body": "One: what decision changes if this works?\n\nTwo: what is the cheapest way to find out?\n\nThree: if it fails, what did we learn that we could not have learned for free?\n\nThe first question stops vanity projects. The second stops over-building. The third keeps the failures useful.",
+   "question": "What question saves you the most money?",
+   "hashtags": [
+    "#FounderJourney",
+    "#CapitalAllocation",
+    "#DecisionMaking"
+   ],
+   "card": {
+    "title": "Three questions before spending",
+    "points": [
+     "What decision changes?",
+     "Cheapest way to find out?",
+     "What does failure teach us?"
+    ]
+   }
+  },
+  {
+   "id": "eisenhower",
+   "pillar": "model",
+   "hook": "Urgent is loud. Important is quiet.",
+   "body": "The Eisenhower matrix sorts work into four boxes: urgent and important, important but not urgent, urgent but not important, neither.\n\nMost careers are spent in the urgent boxes. Most value is created in the quiet one: important, not urgent. Planning, training, relationships, maintenance.\n\nThe fire you prevent never makes the news. It still saves the factory.",
+   "question": "Which quiet, important task have you been postponing?",
+   "hashtags": [
+    "#Productivity",
+    "#Leadership",
+    "#TimeManagement"
+   ],
+   "card": {
+    "title": "The Eisenhower matrix",
+    "points": [
+     "Urgent and important: do it",
+     "Important, not urgent: schedule it",
+     "Urgent, not important: delegate it",
+     "Neither: drop it"
+    ]
+   }
+  },
+  {
+   "id": "zero-based-budget",
+   "pillar": "finance",
+   "hook": "Last year's budget is not a reason. It is a habit.",
+   "body": "Zero-based budgeting starts every line at nothing and asks it to earn its place.\n\nPainful the first time. Then you discover the subscription nobody uses, the report nobody reads, the spare capacity everyone assumed was needed.\n\nYou do not need to do it for everything every year. Pick a few departments and start from zero. The savings fund the next idea.",
+   "question": "Which cost in your budget exists only because it existed last year?",
+   "hashtags": [
+    "#Budgeting",
+    "#CostManagement",
+    "#CFO"
+   ],
+   "card": {
+    "title": "Zero-based budgeting",
+    "points": [
+     "Every line starts at zero",
+     "Every line earns its place",
+     "Rotate departments each year"
+    ]
+   }
+  },
+  {
+   "id": "ai-month-end-test",
+   "pillar": "ai",
+   "hook": "A simple test for any AI tool in finance: does it shorten the month-end?",
+   "body": "Not demos. Not dashboards. Days.\n\nIf the close moves from ten days to six, the tool works. If the close stays the same and the team has one more screen to check, the tool is a cost.\n\nMeasure AI like you measure any investment: by the decision it speeds up or the hours it returns.",
+   "question": "How many days is your close today, and what would it take to lose two?",
+   "hashtags": [
+    "#AIinFinance",
+    "#MonthEnd",
+    "#FinanceTransformation"
+   ],
+   "facts": "generic illustrative days, no claim about any product",
+   "card": {
+    "title": "The month-end test",
+    "points": [
+     "Count days, not demos",
+     "Fewer days means it works",
+     "Same days means it is a cost"
+    ]
+   }
+  },
+  {
+   "id": "festival-demand",
+   "pillar": "world",
+   "hook": "In India the calendar is a demand forecast.",
+   "body": "Navratri, Dussehra, Diwali, Pongal, Eid, Onam, Durga Puja. Each moves money, stock and credit in a predictable wave.\n\nShops stock up weeks before. Customers buy on credit and settle after. Transporters double their rates.\n\nA finance team that plans around the festival calendar beats one that plans around the fiscal quarter.",
+   "question": "Which festival moves your numbers the most?",
+   "hashtags": [
+    "#India",
+    "#DemandPlanning",
+    "#SupplyChain"
+   ],
+   "card": {
+    "title": "The festival calendar",
+    "points": [
+     "Stock arrives weeks early",
+     "Credit stretches, then settles",
+     "Transport prices peak",
+     "Plan the quarter around it"
+    ]
+   }
+  },
+  {
+   "id": "built-from-lagos",
+   "pillar": "founder",
+   "hook": "I build for shopkeepers in India from a desk in Lagos.",
+   "body": "Both cities run on small business. Both have traders who know their cash to the last note and distrust anything that calls itself finance.\n\nDistance forces discipline. I cannot walk into a shop to explain a feature. The screen has to explain itself in plain words.\n\nConstraints are not the enemy of good products. They are the editor.",
+   "question": "What constraint made your work better?",
+   "hashtags": [
+    "#FounderJourney",
+    "#RemoteWork",
+    "#SmallBusiness"
+   ],
+   "card": {
+    "title": "Distance as an editor",
+    "points": [
+     "Plain words or nothing",
+     "Cannot explain in person",
+     "Constraints sharpen the product"
+    ]
+   }
+  },
+  {
+   "id": "pareto",
+   "pillar": "model",
+   "hook": "A small share of causes creates most of the result. Act like it.",
+   "body": "The Pareto principle: a few customers bring most of the revenue, a few defects cause most of the complaints, a few products eat most of the working capital.\n\nThe point is not the exact ratio. The point is to find your vital few and stop treating everything as equal.\n\nEqual attention is not fairness. It is waste.",
+   "question": "Which few items on your list deserve most of your time this week?",
+   "hashtags": [
+    "#ParetoPrinciple",
+    "#Prioritisation",
+    "#Leadership"
+   ],
+   "card": {
+    "title": "The Pareto principle",
+    "points": [
+     "A few causes, most of the result",
+     "Find your vital few",
+     "Stop treating everything as equal"
+    ]
+   }
+  },
+  {
+   "id": "six-capitals",
+   "pillar": "finance",
+   "hook": "Profit is one capital. A business runs on six.",
+   "body": "Integrated Reporting counts six: financial, intellectual, social and relationship, human, manufactured, natural.\n\nA plant can post record profit while burning out its people, its machines and its licence to operate. The ledger will not warn you. The six capitals will.\n\nI remember them as FISHMaN.",
+   "question": "Which capital does your organisation quietly spend without measuring?",
+   "hashtags": [
+    "#IntegratedReporting",
+    "#ValueCreation",
+    "#CIMA"
+   ],
+   "card": {
+    "title": "FISHMaN: the six capitals",
+    "points": [
+     "Financial",
+     "Intellectual",
+     "Social and relationship",
+     "Human",
+     "Manufactured and Natural"
+    ]
+   }
+  },
+  {
+   "id": "ai-junior-pipeline",
+   "pillar": "ai",
+   "hook": "If AI does the junior work, where do the seniors come from?",
+   "body": "Reconciliations, schedules, first drafts. Tedious, yes. Also the way every finance leader learned how the numbers connect.\n\nAutomate the task and you must redesign the training. Juniors now need to review, question and explain from day one.\n\nThe firms that solve this keep their future partners. The ones that do not will have tools and nobody who understands them.",
+   "question": "How are you training the people who no longer do the grunt work?",
+   "hashtags": [
+    "#AIinFinance",
+    "#TalentDevelopment",
+    "#FutureOfWork"
+   ],
+   "card": {
+    "title": "The junior pipeline problem",
+    "points": [
+     "Junior work taught the fundamentals",
+     "Automation removes the lesson",
+     "Redesign training around review"
+    ]
+   }
+  },
+  {
+   "id": "time-zones",
+   "pillar": "world",
+   "hook": "A business across three time zones never really closes.",
+   "body": "Lagos, Mumbai, London. By the time one office sends the question, another has gone home.\n\nTeams that win across zones do two things. They write decisions down so the next zone can act without a call. And they protect a small overlap window for the conversations that must be live.\n\nAsynchronous is not slower. Unclear is slower.",
+   "question": "How does your team hand work across time zones without losing a day?",
+   "hashtags": [
+    "#RemoteWork",
+    "#GlobalBusiness",
+    "#Leadership"
+   ],
+   "card": {
+    "title": "Working across time zones",
+    "points": [
+     "Write decisions down",
+     "Protect one live overlap window",
+     "Unclear is slower than async"
+    ]
+   }
+  },
+  {
+   "id": "score-not-statement",
+   "pillar": "founder",
+   "hook": "Shopkeepers do not read financial statements. They read signals.",
+   "body": "Is the money coming in faster than it goes out? Who owes me? Can I pay the supplier on Friday?\n\nThat is why ScoreMyBiz turns the books into a single score and a few plain warnings instead of a balance sheet.\n\nThe accountant in me resisted. The shopkeeper in the market won.",
+   "question": "What would a one-line health signal for your business say today?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#FounderJourney",
+    "#FinTech"
+   ],
+   "card": {
+    "title": "Signals over statements",
+    "points": [
+     "Money in faster than out?",
+     "Who owes me?",
+     "Can I pay on Friday?"
+    ]
+   }
+  },
+  {
+   "id": "five-forces",
+   "pillar": "model",
+   "hook": "Your competitor is not your only competitor.",
+   "body": "Porter's Five Forces: rivals, new entrants, substitutes, supplier power, buyer power.\n\nThe plant that watches only its rivals gets squeezed by a supplier who raises prices or a buyer who consolidates.\n\nProfit leaks through whichever force you are not watching.",
+   "question": "Which of the five forces is squeezing your margin right now?",
+   "hashtags": [
+    "#PortersFiveForces",
+    "#BusinessStrategy",
+    "#CompetitiveStrategy"
+   ],
+   "card": {
+    "title": "Porter's Five Forces",
+    "points": [
+     "Rivalry",
+     "New entrants",
+     "Substitutes",
+     "Supplier power",
+     "Buyer power"
+    ]
+   }
+  },
+  {
+   "id": "price-volume-mix",
+   "pillar": "finance",
+   "hook": "Sales went up. Profit went down. Welcome to mix.",
+   "body": "When the P&L surprises you, split the change into three: price, volume, mix.\n\nPrice: did we charge more or less per unit? Volume: did we sell more or fewer units? Mix: did customers shift to products with thinner margins?\n\nMix is the silent one. Nobody plans for it, and it explains more bad quarters than any other line.",
+   "question": "When did mix last surprise your numbers?",
+   "hashtags": [
+    "#VarianceAnalysis",
+    "#ManagementAccounting",
+    "#CIMA"
+   ],
+   "card": {
+    "title": "Price, volume, mix",
+    "points": [
+     "Price: more or less per unit",
+     "Volume: more or fewer units",
+     "Mix: shift to thinner margins"
+    ]
+   }
+  },
+  {
+   "id": "ai-data-first",
+   "pillar": "ai",
+   "hook": "AI on messy data is a faster way to be wrong.",
+   "body": "Before any model, ask three boring questions. Is the chart of accounts consistent? Are the customer names deduplicated? Does everyone book the same cost to the same line?\n\nFix those and even simple tools look brilliant. Skip them and the smartest model confidently reports nonsense.\n\nData hygiene is the least glamorous and highest return project in finance.",
+   "question": "What is the one data mess your team keeps working around?",
+   "hashtags": [
+    "#DataQuality",
+    "#AIinFinance",
+    "#FinanceTransformation"
+   ],
+   "card": {
+    "title": "Data before models",
+    "points": [
+     "Consistent chart of accounts",
+     "Deduplicated customers",
+     "Same cost, same line, every time"
+    ]
+   }
+  },
+  {
+   "id": "most-neighbours",
+   "pillar": "world",
+   "hook": "Two countries share a border with fourteen neighbours each.",
+   "body": "China and Russia. Fourteen land borders each.\n\nEvery neighbour is a trade route, a customs regime, a currency and a potential dispute. Strategy for such a country is mostly the management of edges.\n\nLarge businesses are the same. The more partners, regulators and markets you touch, the more your success depends on how you manage the edges, not the centre.",
+   "question": "How many edges does your business manage, and who owns them?",
+   "hashtags": [
+    "#Geography",
+    "#GlobalBusiness",
+    "#Strategy"
+   ],
+   "facts": "China and Russia each have 14 land neighbours (standard geographic count; Russia's includes Kaliningrad borders)",
+   "card": {
+    "title": "Fourteen neighbours",
+    "points": [
+     "China",
+     "Russia",
+     "Strategy is managing edges"
+    ]
+   }
+  },
+  {
+   "id": "cima-case-lesson",
+   "pillar": "founder",
+   "hook": "The CIMA case study taught me one habit I still use every day.",
+   "body": "Never give a recommendation without the implication.\n\nNot: cut the product line. Instead: cut the product line, expect a dip in revenue, free the working capital, watch the key account that buys it.\n\nBoards do not pay for answers. They pay for the consequences you saw before they did.",
+   "question": "What exam lesson turned out to be a career lesson for you?",
+   "hashtags": [
+    "#CIMA",
+    "#StrategicCaseStudy",
+    "#CareerGrowth"
+   ],
+   "card": {
+    "title": "Recommendation plus implication",
+    "points": [
+     "State the action",
+     "Name the consequence",
+     "Flag what to watch"
+    ]
+   }
+  },
+  {
+   "id": "sunk-cost",
+   "pillar": "model",
+   "hook": "The money is gone. Stop letting it vote.",
+   "body": "The sunk cost fallacy: continuing a project because of what you already spent, not because of what it will return.\n\nThe machine that never ran right. The software that needs one more module. The hire you are still waiting to see.\n\nThe only question that matters is forward: from today, is this the use of the next rupee?",
+   "question": "What are you still funding because you already funded it?",
+   "hashtags": [
+    "#SunkCost",
+    "#DecisionMaking",
+    "#CapitalAllocation"
+   ],
+   "card": {
+    "title": "The sunk cost fallacy",
+    "points": [
+     "Past spend is gone",
+     "Only forward return counts",
+     "Ask: next rupee, same choice?"
+    ]
+   }
+  },
+  {
+   "id": "dupont",
+   "pillar": "finance",
+   "hook": "Return on equity has three engines. Most companies only service one.",
+   "body": "The DuPont model breaks it down: margin, asset turnover, leverage.\n\nMargin is how much you keep from each sale. Turnover is how hard your assets work. Leverage is how much of the business is funded by others.\n\nTwo companies with the same return can be built completely differently. One earns it. One borrows it.",
+   "question": "Which engine drives the return in your business?",
+   "hashtags": [
+    "#DuPontAnalysis",
+    "#FinancialAnalysis",
+    "#CFO"
+   ],
+   "card": {
+    "title": "The DuPont model",
+    "points": [
+     "Margin: what you keep per sale",
+     "Turnover: how hard assets work",
+     "Leverage: how much others fund"
+    ]
+   }
+  },
+  {
+   "id": "ai-decision-question",
+   "pillar": "ai",
+   "hook": "Before buying an AI tool, finish this sentence: the decision that changes is...",
+   "body": "If nobody can finish it, the tool is a toy.\n\nPricing decided weekly instead of yearly. Credit limits set on live payment behaviour instead of last year's audit. Stock reordered on actual sell-through.\n\nTechnology earns its place by changing a decision, its speed or its quality. Everything else is a demo.",
+   "question": "Which decision in your company would you most like to make faster?",
+   "hashtags": [
+    "#AIinFinance",
+    "#DecisionMaking",
+    "#CFO"
+   ],
+   "card": {
+    "title": "The decision test for AI",
+    "points": [
+     "Name the decision",
+     "Faster, or better?",
+     "No decision, no purchase"
+    ]
+   }
+  },
+  {
+   "id": "monsoon-economy",
+   "pillar": "world",
+   "hook": "In India the most important finance minister is the monsoon.",
+   "body": "Rain decides the harvest. The harvest decides rural income. Rural income decides what sells in countless small towns.\n\nTractors, two-wheelers, cement, fertiliser, gold: all wait for the rain.\n\nA forecast that ignores weather in an agricultural economy is not a forecast. It is a wish.",
+   "question": "Which outside factor does your plan depend on but never mention?",
+   "hashtags": [
+    "#IndiaEconomy",
+    "#Forecasting",
+    "#RiskManagement"
+   ],
+   "card": {
+    "title": "The monsoon economy",
+    "points": [
+     "Rain decides the harvest",
+     "Harvest decides rural income",
+     "Rural income decides demand"
+    ]
+   }
+  },
+  {
+   "id": "daily-posting",
+   "pillar": "founder",
+   "hook": "Posting every day did not make me famous. It made me clear.",
+   "body": "Writing a short idea daily forces a choice: what is the one thing worth saying?\n\nThat discipline leaked into everything. Shorter board notes. Clearer product screens. Fewer meetings that could have been a paragraph.\n\nConsistency is not a growth hack. It is a thinking practice that happens to be public.",
+   "question": "What daily practice changed how you think?",
+   "hashtags": [
+    "#PersonalBranding",
+    "#Writing",
+    "#Leadership"
+   ],
+   "card": {
+    "title": "Why I post every day",
+    "points": [
+     "One idea, one choice",
+     "Clarity leaks into everything",
+     "Thinking in public"
+    ]
+   }
+  },
+  {
+   "id": "parkinson",
+   "pillar": "model",
+   "hook": "Work expands to fill the time available. So do budgets.",
+   "body": "Parkinson's law applies to more than deadlines. Give a department a bigger budget and the spending finds reasons. Give a project a year and it takes a year.\n\nThe fix is uncomfortable: shorter deadlines, smaller first budgets, and a review before the second tranche.\n\nConstraint is not cruelty. It is where focus comes from.",
+   "question": "Where would a tighter limit actually speed you up?",
+   "hashtags": [
+    "#ParkinsonsLaw",
+    "#Productivity",
+    "#Budgeting"
+   ],
+   "card": {
+    "title": "Parkinson's law",
+    "points": [
+     "Work fills the time given",
+     "Spend fills the budget given",
+     "Shorter and smaller, then review"
+    ]
+   }
+  },
+  {
+   "id": "opportunity-cost",
+   "pillar": "finance",
+   "hook": "The real cost of a decision is the option you gave up.",
+   "body": "The new machine costs more than its invoice. It costs the marketing campaign you did not run, the debt you did not repay, the hire you postponed.\n\nAccountants book the invoice. Leaders weigh the alternative.\n\nEvery yes is a quiet no to something else. Make the no visible before you sign.",
+   "question": "What did your last big yes quietly say no to?",
+   "hashtags": [
+    "#OpportunityCost",
+    "#CapitalAllocation",
+    "#DecisionMaking"
+   ],
+   "card": {
+    "title": "Opportunity cost",
+    "points": [
+     "Cost is the option forgone",
+     "The invoice is the smaller number",
+     "Make the no visible"
+    ]
+   }
+  },
+  {
+   "id": "ai-summarise-classify-draft",
+   "pillar": "ai",
+   "hook": "AI does three jobs well in finance today. The rest is marketing.",
+   "body": "Summarise: a hundred pages of contract into the clauses that affect cash.\n\nClassify: a month of transactions into the right lines, with exceptions flagged for a human.\n\nDraft: the first version of commentary, the board note, the email to the auditor.\n\nStart with those three. Measure the hours returned. Expand only when the first three are boring.",
+   "question": "Which of the three would save your team the most hours?",
+   "hashtags": [
+    "#AIinFinance",
+    "#FinanceTeams",
+    "#Productivity"
+   ],
+   "card": {
+    "title": "Three jobs AI does well",
+    "points": [
+     "Summarise",
+     "Classify",
+     "Draft",
+     "Measure hours returned"
+    ]
+   }
+  },
+  {
+   "id": "lagos-traffic-buffer",
+   "pillar": "world",
+   "hook": "Lagos traffic taught me more about planning than any course.",
+   "body": "Nobody here plans a journey by distance. They plan it by the hour of the day and the buffer they can afford.\n\nThat is how good operations people think. Not the ideal time, the likely time. Not the plan, the plan plus the buffer.\n\nProjects fail not because people were slow but because the schedule assumed an empty road.",
+   "question": "How much buffer does your plan carry, honestly?",
+   "hashtags": [
+    "#Operations",
+    "#ProjectManagement",
+    "#Lagos"
+   ],
+   "card": {
+    "title": "Plan for the likely, not the ideal",
+    "points": [
+     "Distance is not time",
+     "Buffer is part of the plan",
+     "Empty-road schedules fail"
+    ]
+   }
+  },
+  {
+   "id": "cannibalise-yourself",
+   "pillar": "founder",
+   "hook": "If you do not replace your own product, someone else will do it for you.",
+   "body": "Kodak built the digital camera and hid it to protect film. BlackBerry built the smartphone category and dismissed touchscreens.\n\nBoth had the advantage. Neither had the nerve.\n\nI remind myself of this when a feature in my own app starts to feel safe. Safe is usually the moment before someone else moves.",
+   "question": "What part of your business are you protecting that you should be replacing?",
+   "hashtags": [
+    "#Innovation",
+    "#BusinessStrategy",
+    "#FounderJourney"
+   ],
+   "card": {
+    "title": "First mover wisdom",
+    "points": [
+     "Advantage is not permanent",
+     "Protecting is not winning",
+     "Replace yourself first"
+    ]
+   }
+  },
+  {
+   "id": "goodhart",
+   "pillar": "model",
+   "hook": "When a measure becomes a target, it stops being a good measure.",
+   "body": "Goodhart's law. Target call-handling time and calls get cut short. Target output per shift and quality quietly drops. Target cash collection and the sales team stops selling to anyone slow.\n\nMeasures are instruments. Targets are incentives. The moment you confuse them, people optimise the number and lose the purpose.",
+   "question": "Which target in your company is being hit while the purpose is being missed?",
+   "hashtags": [
+    "#GoodhartsLaw",
+    "#PerformanceManagement",
+    "#Leadership"
+   ],
+   "card": {
+    "title": "Goodhart's law",
+    "points": [
+     "Measure becomes target",
+     "Target becomes a game",
+     "People win the number, lose the purpose"
+    ]
+   }
+  },
+  {
+   "id": "balanced-scorecard",
+   "pillar": "finance",
+   "hook": "If your dashboard is all finance, it is a rear-view mirror.",
+   "body": "The Balanced Scorecard adds three forward-looking views to the financial one: customers, internal processes, learning and growth.\n\nFinancial results are the outcome of last quarter's customer experience, which was the outcome of last year's processes and training.\n\nWatch the leading indicators and the lagging ones take care of themselves.",
+   "question": "What leading indicator tells you about next quarter's profit today?",
+   "hashtags": [
+    "#BalancedScorecard",
+    "#PerformanceManagement",
+    "#CIMA"
+   ],
+   "card": {
+    "title": "The Balanced Scorecard",
+    "points": [
+     "Financial",
+     "Customer",
+     "Internal process",
+     "Learning and growth"
+    ]
+   }
+  },
+  {
+   "id": "ai-judgment-stays",
+   "pillar": "ai",
+   "hook": "The reconciliation AI cannot do is the one between the numbers and reality.",
+   "body": "The system says stock is worth a certain amount. The warehouse floor says half of it has been sitting since last year.\n\nThe ledger says the customer owes you. The sales manager knows he is about to go bankrupt.\n\nMatching numbers to numbers is now cheap. Matching numbers to the world is the job.",
+   "question": "When did a walk through the plant change a number in your report?",
+   "hashtags": [
+    "#AIinFinance",
+    "#FinanceLeadership",
+    "#Judgment"
+   ],
+   "card": {
+    "title": "Numbers vs reality",
+    "points": [
+     "Numbers to numbers: automated",
+     "Numbers to the world: your job",
+     "Walk the floor"
+    ]
+   }
+  },
+  {
+   "id": "istanbul-bridge",
+   "pillar": "world",
+   "hook": "One city sits on two continents and has been a market since before the Romans.",
+   "body": "Istanbul. Europe on one shore, Asia on the other, the Bosphorus between.\n\nEmpires changed, currencies changed, the trade did not. Position beats fashion.\n\nThe same holds for careers. The person who sits between finance and operations, between India and Africa, between the technical and the commercial, stays valuable through every cycle.",
+   "question": "Which two worlds do you sit between?",
+   "hashtags": [
+    "#Geography",
+    "#CareerGrowth",
+    "#GlobalBusiness"
+   ],
+   "facts": "Byzantium founded around 660 BC, before Rome's rise in the region",
+   "card": {
+    "title": "The bridge position",
+    "points": [
+     "Istanbul: Europe and Asia",
+     "Position outlasts fashion",
+     "Sit between two worlds"
+    ]
+   }
+  },
+  {
+   "id": "nobody-reads-the-pl",
+   "pillar": "founder",
+   "hook": "Nobody in the market reads your P&L. Everyone reads whether you paid on time.",
+   "body": "Reputation in small business is a payment history. Suppliers extend credit to the shop that pays on the day. Customers return to the trader who never short-changes them.\n\nThat is the oldest credit score in the world, and it is still the one that matters most.\n\nEverything I build tries to make that score visible to the person who earned it.",
+   "question": "Who in your network has the kind of reputation that money cannot buy?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#Trust",
+    "#FounderJourney"
+   ],
+   "card": {
+    "title": "The oldest credit score",
+    "points": [
+     "Paid on the day",
+     "Never short-changed anyone",
+     "Reputation is a payment history"
+    ]
+   }
+  }
+ ]
+}

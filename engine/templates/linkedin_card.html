@@ -1,0 +1,51 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;font-weight:800;src:url(../fonts/Inter-800.ttf)}
+@font-face{font-family:Inter;font-weight:600;src:url(../fonts/Inter-600.ttf)}
+@font-face{font-family:Plex;font-weight:500;src:url(../fonts/Plex-500.ttf)}
+@font-face{font-family:Plex;font-weight:400;src:url(../fonts/Plex-400.ttf)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden;background:#0B1220}
+#root{position:relative;width:1080px;height:1350px;font-family:Inter,sans-serif;color:#F4F6FB;
+  background:radial-gradient(900px 700px at 85% -10%,rgba(255,255,255,.07),transparent 60%),
+             radial-gradient(700px 600px at -10% 110%,var(--glow),transparent 60%),#0B1220}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:90px 90px;mask-image:linear-gradient(#000,transparent 85%)}
+.bar{position:absolute;left:96px;top:120px;width:120px;height:10px;border-radius:6px;background:var(--accent)}
+.kicker{position:absolute;left:96px;top:160px;font:500 30px Plex;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.stage{position:absolute;left:96px;right:96px;top:250px;bottom:230px;display:flex;flex-direction:column;justify-content:center}
+.title{font-weight:800;letter-spacing:-.03em;line-height:1.05;text-wrap:balance}
+.points{margin-top:70px;display:flex;flex-direction:column;gap:30px}
+.pt{display:flex;align-items:flex-start;gap:28px;font-weight:600;font-size:46px;line-height:1.2;color:#E3E8F2}
+.pt i{flex:none;width:64px;height:64px;border-radius:50%;background:var(--accent);color:#0B1220;display:flex;align-items:center;justify-content:center;font:800 32px Inter;margin-top:-4px}
+.footer{position:absolute;left:96px;right:96px;bottom:110px;display:flex;align-items:center;justify-content:space-between}
+.who{display:flex;align-items:center;gap:22px}
+.ava{width:76px;height:76px;border-radius:50%;background:var(--accent);color:#0B1220;display:flex;align-items:center;justify-content:center;font:800 34px Inter}
+.name{font-weight:800;font-size:38px;letter-spacing:-.02em}
+.brand{font:500 26px Plex;letter-spacing:.12em;color:#9AA6BF;margin-top:6px;text-transform:uppercase}
+.page{font:500 30px Plex;color:#9AA6BF;border:2px solid rgba(255,255,255,.18);border-radius:999px;padding:10px 26px}
+.line{position:absolute;left:96px;right:96px;bottom:220px;height:2px;background:rgba(255,255,255,.1)}
+</style></head>
+<body><div id="root"><div class="grid"></div><div class="bar"></div><div class="kicker" id="kicker"></div>
+<div class="stage"><div class="title" id="title"></div><div class="points" id="points"></div></div>
+<div class="line"></div>
+<div class="footer"><div class="who"><div class="ava">SG</div><div><div class="name" id="name"></div><div class="brand" id="brand"></div></div></div><div class="page" id="page"></div></div>
+</div>
+<script>
+const C = window.CARD;                                             // injected by linkedin_personal.render_cards
+const root = document.getElementById('root');
+root.style.setProperty('--accent', C.accent);
+root.style.setProperty('--glow', C.accent + '33');
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+document.getElementById('kicker').textContent = C.kicker;
+const title = document.getElementById('title');
+title.textContent = C.title;
+const n = C.title.length, pts = C.points || [];
+title.style.fontSize = (pts.length ? (n > 44 ? 72 : n > 28 ? 84 : 96) : (n > 44 ? 88 : n > 28 ? 104 : 120)) + 'px';
+document.getElementById('points').innerHTML = pts.map((p, i) => `<div class="pt"><i>${i + 1}</i><span>${esc(p)}</span></div>`).join('');
+if (!pts.length) document.getElementById('points').style.display = 'none';
+document.getElementById('name').textContent = C.name;
+document.getElementById('brand').textContent = C.brand;
+const page = document.getElementById('page');
+if (C.total > 1) page.textContent = C.index + ' / ' + C.total + (C.index < C.total ? '  →' : ''); else page.style.display = 'none';
+</script></body></html>
