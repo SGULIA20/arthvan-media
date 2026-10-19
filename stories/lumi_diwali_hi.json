@@ -1,0 +1,126 @@
+{
+ "id": "lumi-diwali-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "lead": "male",
+ "feature": "profit-on-paper-vs-cash",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Diwali ki bikri, khaali galla",
+ "post_on": "2026-10-24",
+ "banner": "Record bikri, phir bhi<br><em>galla khaali</em> 🪔",
+ "caption": "Suresh ki Diwali: munafa kaagaz par do lakh, galle mein kuch nahi. Paisa gaya kahan? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper whose Diwali sales break records while his cash drawer stays empty, and how he finds where the money is stuck. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#DiwaliBikri",
+  "#MunafaVsCash",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Suresh": "Suresh is a small-town Indian shopkeeper in his forties with a thick black moustache, a checked half-sleeve shirt and a wristwatch; an earnest, slightly worried face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "दिवाली पर सुरेश की दुकान में, रिकॉर्ड बिक्री।",
+   "sub": "Diwali par Suresh ki dukaan mein, record bikri.",
+   "min": 2.2,
+   "art": "Suresh in a checked shirt beams behind the counter of his small general store decorated with marigold garlands and rows of clay diyas, a crowd of festive customers, gift boxes and sweets stacked high, warm evening light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "मुनाफ़ा? काग़ज़ पर, दो लाख।",
+   "sub": "Munafa? Kaagaz par, do lakh.",
+   "min": 2.2,
+   "art": "Suresh at night writing happily in a long account register with a calculator beside him, a diya burning on the table, the figures glowing, a proud smile.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "पर नया माल मँगाने के लिए, गल्ले में पैसे नहीं।",
+   "sub": "Par naya maal mangaane ke liye, galle mein paise nahi.",
+   "min": 2.4,
+   "art": "Close view of an open wooden cash drawer that is almost empty, a few coins and two small notes, Suresh's hand resting on its edge, his face above it falling from a smile to worry.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "पैसा गया कहाँ?",
+   "sub": "Paisa gaya kahan?",
+   "min": 2.0,
+   "art": "Suresh sits alone in the closed shop at night scratching his head, the register open in front of him, question marks drawn as faint smoke from the diya, shelves half empty behind him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "आधा, उधार में। त्योहार पर ग्राहक लेकर गए।",
+   "sub": "Aadha, udhaar mein. Tyohaar par graahak lekar gaye.",
+   "min": 2.4,
+   "art": "A page of the register filled with a long list of customer names and amounts, a few customers drawn faintly walking away with bags of festive shopping, Suresh's finger running down the list.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "बाक़ी, रैक पर। जो माल बिका ही नहीं।",
+   "sub": "Baaqi, rack par. Jo maal bika hi nahi.",
+   "min": 2.2,
+   "art": "Suresh looks at a back-room shelf stacked with unsold gift boxes and cartons still in their plastic, a price tag hanging, dim bulb light, his hands on his hips.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "स्कोर माय बिज़ ने दिखाया, मुनाफ़ा कहाँ, नक़द कहाँ फँसा।",
+   "sub": "ScoreMyBiz ne dikhaya: munafa kahan, naqad kahan phansa.",
+   "min": 2.6,
+   "screen": "cash-reality.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "अब हर हफ़्ते, सुरेश देखता है, पैसा कहाँ फँसा है।",
+   "sub": "Ab har hafte, Suresh dekhta hai, paisa kahan phansa hai.",
+   "min": 2.4,
+   "art": "Suresh sits at the shop counter early in the morning with a cup of chai, calmly reading his phone, the register closed beside him, sunlight through the open shutter.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "अगली दिवाली से पहले, गल्ला भी भरा, रैक भी।",
+   "sub": "Agli Diwali se pehle, galla bhi bhara, rack bhi.",
+   "min": 2.4,
+   "art": "Suresh stands proudly in his freshly stocked shop, shelves full and tidy, the cash drawer open and full of neat notes, a new string of marigolds at the door, bright morning.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "आपका मुनाफ़ा, काग़ज़ पर है, या गल्ले में?",
+   "sub": "Aapka munafa, kaagaz par hai, ya galle mein?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

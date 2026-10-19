@@ -104,3 +104,19 @@ def test_a_reel_over_the_60_second_story_limit_is_held_back_and_an_unreadable_on
     by_id = {s["id"]: s for s in cp.load_stories(tmp_path)}
     assert by_id["long"]["problems"] == ["video is 63 s, over the 60 s Instagram Story limit"]
     assert by_id["ok"]["problems"] == [] and by_id["junk"]["problems"] == []
+
+
+def test_in_story_only_mode_the_plan_holds_only_illustrated_story_reels():
+    from datetime import date
+    from engine.calendar_plan import build_plan
+    from engine.select_item import slot
+    d = date(2026, 10, 22)
+    app, lead = slot(d)
+    old = {"id": "old-en", "app": app, "lead": lead, "feature": "f1", "rendered": True, "post_on": "2026-10-01", "problems": []}
+    story = {"id": "story-hi", "app": app, "lead": lead, "feature": "f2", "rendered": True, "post_on": "2026-10-01", "problems": [], "art": {"style": "s"}}
+    assert build_plan(d, 1, [old, story], story_only=True) == {d.isoformat(): "story-hi"}
+    assert build_plan(d, 1, [old], story_only=True) == {d.isoformat(): None}          # an empty day rather than an old-style Reel
+    assert build_plan(d, 1, [old], story_only=False) == {d.isoformat(): "old-en"}
+    other = dict(story, lead="male" if lead == "female" else "female")
+    assert build_plan(d, 1, [other], story_only=True) == {d.isoformat(): "story-hi"}      # the lead rule does not apply to stories
+    assert build_plan(d, 1, [other], story_only=False) == {d.isoformat(): None}

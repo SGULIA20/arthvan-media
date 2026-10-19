@@ -17,7 +17,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from . import broll, calendar_plan, library, localize, notify, translator, tts
-from .config import load_apps
+from .config import MODE, load_apps, production_mode  # noqa: F401  (tests patch production_mode on this module)
 
 ROOT = Path(__file__).resolve().parent.parent
 LOG = Path.home() / "arthvan-social" / "logs" / "production.jsonl"
@@ -79,6 +79,7 @@ def wait_for_network(max_seconds: int = 3 * 3600, step: int = 60, up=network_up,
 
 
 DONE = Path.home() / "arthvan-social" / "logs" / "production-done.json"
+STORY_LANGS = ["bn", "gu", "mr", "ta", "te", "kn", "ml", "ur"]              # versions of a Hindi story, in this order (Indian languages only: the stories are Indian)
 VOICE_MODELS = Path.home() / "arthvan-social" / "logs" / "voice-models.json"       # {"backups": ["gemini-3.8-flash-tts", ...]}: only exists once the founder has approved them
 
 
@@ -165,6 +166,25 @@ def backlog(root: Path = ROOT, failures: dict = None) -> list:
     return items
 
 
+def story_backlog(root: Path = ROOT, failures: dict = None) -> list:
+    """[(lang, hindi story)] story versions still to make, in STORY_LANGS order: Hindi originals first (lang None), then each language.
+    A story is an illustrated Reel (it has an "art" block). Originals whose pictures are not drawn yet are skipped, never drawn here (that costs money)."""
+    from .story import missing_pictures
+    failures = _failures() if failures is None else failures
+    done = {p.stem for p in (root / "stories" / "out").glob("*.mp4")}
+    originals = [s for s in _stories(root) if s.get("art") and s.get("lang", "").split("-")[0] == "hi" and not s["_held"] and s["id"] not in done
+                 and not missing_pictures(s, root) and failures.get(s["id"], 0) < MAX_TRIES]
+    items = [(None, s) for s in sorted(originals, key=lambda s: s.get("post_on", "9999"))]
+    bases = [s for s in _stories(root) if s.get("art") and s.get("lang", "").split("-")[0] == "hi" and s["id"] in done and not s["_held"]]
+    bases.sort(key=lambda s: (s.get("post_on", "9999"), s["app"]))
+    for lang in STORY_LANGS:
+        for s in bases:
+            lid = s["id"].rsplit("-", 1)[0] + "-" + lang
+            if lang in SUPPORTED.get(s["app"], ()) and lid not in done and failures.get(lid, 0) < MAX_TRIES:
+                items.append((lang, s))
+    return items
+
+
 def _seconds(path: Path) -> float:
     out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)], capture_output=True, text=True).stdout.strip()
     return float(out) if out else 0.0
@@ -191,10 +211,11 @@ def _lines(story: dict) -> int:
     return len(story["scenes"])
 
 
-def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_network(900), budget: int = VOICE_BUDGET, build=build_story, ask=None, now: date = None, send=notify.send, log: Path = LOG) -> dict:
+def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_network(900), budget: int = VOICE_BUDGET, build=build_story, ask=None, now: date = None, send=notify.send, log: Path = LOG, mode: str = None) -> dict:
     now = now or (datetime.now(timezone.utc) + timedelta(hours=1)).date()
+    mode = mode or production_mode()
     apps = load_apps()
-    result = {"made": [], "failed": [], "stopped": "", "english": 0}
+    result = {"made": [], "failed": [], "stopped": "", "english": 0, "mode": mode}
     used = 0
 
     models = voice_models()
@@ -224,6 +245,7 @@ def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_netwo
     def finish():
         left = len(backlog(root, _failures(log)))
         result["left"], result["pending_english"] = left, len(pending_english(root))
+        result["stories_left"] = len(story_backlog(root, _failures(log))) if mode == "stories" else 0
         return result
 
     apps_cfg = {k: apps[k] for k in SUPPORTED}
@@ -310,10 +332,48 @@ def run(root: Path = ROOT, *, dry: bool = False, wait_net=lambda: wait_for_netwo
                 result["stopped"] = "voice allowance"; return
             (result["made"] if status == "made" else result["failed"]).append((s["id"], msg)); result["english"] += status == "made"
 
+    def story_phase():
+        """Illustrated story Reels: the Hindi originals that are ready, then their language versions (the pictures are shared, only the voice is new)."""
+        nonlocal used
+        from . import story_localize
+        for lang, base in story_backlog(root, _failures(log)):
+            if used + _lines(base) > budget:
+                result["stopped"] = "voice budget"; return
+            lid = base["id"] if lang is None else base["id"].rsplit("-", 1)[0] + "-" + lang
+            if dry:
+                result["made"].append((lid, "Hindi" if lang is None else library.LANGUAGES.get(lang, lang))); used += _lines(base); continue
+            sp = root / "stories" / (lid.replace("-", "_") + ".json")
+            if lang is not None and not sp.exists():
+                try:
+                    order = STORY_LANGS.index(lang) + 1
+                    st = story_localize.localize_story(base, lang, ask or __import__("engine.gemini", fromlist=["ask"]).ask, order=order)
+                    sp.write_text(json.dumps(st, indent=1, ensure_ascii=False) + "\n")
+                except Exception as e:
+                    if is_network_problem(f"{type(e).__name__} {e}"):
+                        _log({"id": lid, "status": "network", "note": f"translation: {str(e)[:150]}", "kind": "translate"}, log); result["stopped"] = "network"; return
+                    _log({"id": lid, "status": "failed", "note": f"translation: {str(e)[:150]}", "kind": "translate"}, log); result["failed"].append((lid, f"translation: {str(e)[:90]}")); continue
+            status, msg = build_net(sp, root)
+            if status == "network":
+                _log({"id": lid, "status": "network", "note": msg, "kind": "story", "lang": lang or "hi"}, log); result["stopped"] = "network"; return
+            if status == "blocked":
+                _log({"id": lid, "status": "blocked", "note": msg, "kind": "story", "lang": lang or "hi"}, log); result["stopped"] = "google blocked the voice (billing or credit?)"; return
+            used += _lines(base)
+            if status == "made" and _seconds(root / "stories" / "out" / f"{lid}.mp4") > MAX_SECONDS:
+                msg = f"made but over the 60 s Story limit: held back from posting"
+            _log({"id": lid, "status": status, "note": msg, "kind": "story", "lang": lang or "hi"}, log)
+            if status == "quota":
+                result["stopped"] = "voice allowance"; return
+            (result["made"] if status == "made" else result["failed"]).append((lid, msg))
+
     # Order (founder, 15 Oct): while a whole new filmed Reel is still affordable, English originals first; once the video credit
     # is used up, convert the finished Reels into the other languages first, then the remaining English ones (filmed-ready, then cut-out).
+    # Founder, 19 Oct: in "stories" mode only the illustrated story Reels are made; the older style and its conversions are paused.
     credit_gone = now > broll.DEADLINE or broll.spent_inr() + 6 * 8 * broll.INR_PER_SECOND > broll.CREDIT_INR - 300
-    for phase in ([conversion_phase, english_phase, cutout_phase] if credit_gone else [english_phase, conversion_phase, cutout_phase]):
+    if mode == "stories":
+        phases = [story_phase]
+    else:
+        phases = [conversion_phase, english_phase, cutout_phase] if credit_gone else [english_phase, conversion_phase, cutout_phase]
+    for phase in phases:
         phase()
         if result["stopped"]:
             break
@@ -327,7 +387,11 @@ def summary(result: dict, credit_line: str = "") -> str:
     for sid, _ in result["made"]:
         lang = sid.rsplit("-", 1)[-1]; by[lang] = by.get(lang, 0) + 1
     names = ", ".join(f"{library.LANGUAGES.get(k, k)} {v}" for k, v in by.items()) or "nothing"
-    lines = [f"🎬 Daily production: {len(result['made'])} Reels made ({names}).", f"English originals still to make: {result['pending_english']}. Conversions still to do: {result['left']} (about {max(1, round(result['left'] / 12))} days)."]
+    lines = [f"🎬 Daily production: {len(result['made'])} Reels made ({names})."]
+    if result.get("mode") == "stories":
+        lines.append(f"Story Reels still to make: {result.get('stories_left', 0)}. (The older-style conversions are paused: {result['left']} waiting.)")
+    else:
+        lines.append(f"English originals still to make: {result['pending_english']}. Conversions still to do: {result['left']} (about {max(1, round(result['left'] / 12))} days).")
     if result["failed"]:
         lines.append(f"Problems: {len(result['failed'])}, for example {result['failed'][0][0]}: {result['failed'][0][1]}")
     if result["stopped"]:

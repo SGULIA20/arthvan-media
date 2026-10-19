@@ -16,7 +16,7 @@ from pathlib import Path
 from typing import Callable
 
 from . import facebook, instagram, linkedin, notify, render, telegram, threads, whatsapp, youtube
-from .config import ROOT, load_apps, load_bank, load_global
+from .config import ROOT, load_apps, load_bank, load_global, production_mode
 from .instagram import Captions, InstagramError, PartialPublish, SetUrls
 from .lint import alt_texts, build_captions, build_linkedin_text, build_threads_text, lint_item, story_captions
 from .facebook import FacebookError
@@ -447,6 +447,9 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
             print(f"{day} story already posted")
             return 0
         return _run_story(story, day, root, env, deps, apps, log, chans, token, ig_id, mode)
+    if production_mode() == "stories":                 # founder, 19 Oct 2026: only story Reels go out; no graphics set fills a gap
+        print(f"{day}: no story Reel is scheduled and production mode is 'stories': nothing posted today")
+        return 0
     sel = None
     for skip in range(MAX_FALLBACKS):
         cand = pick(day, banks, skip=skip, recent_features=recent_features(log, ORDER[(day - EPOCH).days % 2], day) + planned_features(root, ORDER[(day - EPOCH).days % 2], day))

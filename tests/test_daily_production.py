@@ -17,6 +17,7 @@ def setup(monkeypatch, tmp_path, english, convert):
     monkeypatch.setattr(dp.broll, "spent_inr", lambda *a, **k: 1000.0)
     monkeypatch.setattr(dp, "load_apps", lambda: {"scoremybiz": {}, "waypoint": {}})
     monkeypatch.setattr(dp, "voice_models", lambda path=None: [None])                  # never read the founder's real approval file in a test
+    monkeypatch.setattr(dp, "production_mode", lambda path=None: "all")                # nor his real mode switch
     import engine.story as st
     monkeypatch.setattr(st, "shot_plan", lambda s: [(0, "p", [], True)])                # every shot already cached
 
@@ -159,3 +160,37 @@ def test_india_only_reels_are_converted_into_indian_languages_only(monkeypatch, 
     monkeypatch.setattr(dp, "PRIORITY", ["hi", "es"])
     pairs = [(lang, s["id"]) for lang, s in dp.backlog(tmp_path, {})]
     assert ("hi", "ca-en") in pairs and ("es", "plain-en") in pairs and ("es", "ca-en") not in pairs
+
+
+def test_in_stories_mode_only_story_reels_are_made_hindi_originals_first_then_language_versions(monkeypatch, tmp_path):
+    setup(monkeypatch, tmp_path, [story("old-en")], [("hi", story("old2-en"))])
+    hi = dict(story("mira-x-hi", app="waypoint"), lang="hi-IN", art={"style": "s"})
+    monkeypatch.setattr(dp, "story_backlog", lambda root, failures=None: [(None, hi), ("bn", hi), ("gu", hi)])
+    r = dp.run(tmp_path, dry=True, budget=14, now=NOW, log=tmp_path / "log", mode="stories")
+    assert [m[0] for m in r["made"]] == ["mira-x-hi", "mira-x-bn"] and r["stopped"] == "voice budget"        # the old style is not touched
+    t = dp.summary(dict(r, pending_english=1, left=1, stories_left=1))
+    assert "Story Reels still to make: 1" in t and "paused" in t
+
+
+def test_the_story_backlog_lists_ready_hindi_originals_then_versions_in_language_order(tmp_path, monkeypatch):
+    (tmp_path / "stories" / "out").mkdir(parents=True)
+    base = {"id": "mira-x-hi", "app": "waypoint", "lang": "hi-IN", "post_on": "2026-10-21", "art": {"style": "s"}, "scenes": [{"layout": "illus", "image": "s01.png", "vo": "v"}]}
+    new = dict(base, id="lumi-y-hi", app="scoremybiz", post_on="2026-10-22")
+    old = {"id": "founder-z-en", "app": "scoremybiz", "lang": "en", "scenes": [{"layout": "clip", "vo": "v"}]}
+    for s in (base, new, old):
+        (tmp_path / "stories" / (s["id"].replace("-", "_") + ".json")).write_text(json.dumps(s))
+    (tmp_path / "stories" / "out" / "mira-x-hi.mp4").write_bytes(b"")
+    (tmp_path / "stories" / "out" / "mira-x-bn.mp4").write_bytes(b"")
+    monkeypatch.setattr(dp, "_stories", lambda root: [dict(s, _held=False) for s in (base, new, old)])
+    import engine.story as st
+    monkeypatch.setattr(st, "missing_pictures", lambda s, root=None: [])
+    items = [(lang, s["id"]) for lang, s in dp.story_backlog(tmp_path, {})]
+    assert items[0] == (None, "lumi-y-hi")                                     # the unmade Hindi original comes first
+    assert items[1] == ("gu", "mira-x-hi") and ("bn", "mira-x-hi") not in items   # Bengali exists already; Gujarati is next in order
+    assert all("founder-z" not in sid for _, sid in items)                       # the old style is never a story
+
+
+def test_production_mode_is_all_unless_the_switch_file_says_stories(tmp_path):
+    assert dp.production_mode(tmp_path / "none.json") == "all"
+    (tmp_path / "m.json").write_text(json.dumps({"mode": "stories"}))
+    assert dp.production_mode(tmp_path / "m.json") == "stories"

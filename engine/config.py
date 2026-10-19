@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+MODE = Path.home() / "arthvan-social" / "logs" / "production-mode.json"     # {"mode": "stories"}: founder, 19 Oct 2026: only illustrated story Reels are made and posted
 TEMPLATES = ("ink", "dusk", "spark")
 KINDS = ("hook", "stat", "bars", "steps", "quote")
 
@@ -52,3 +53,12 @@ def validate_item(item: dict) -> list:
         for i, s in enumerate(slides):
             problems.extend(_slide_problems(i, s))
     return problems
+
+
+def production_mode(path: Path = MODE) -> str:
+    """'stories' (illustrated story Reels and their language versions only, in production AND in the posting calendar)
+    or 'all' (the older English Reels, their conversions and the graphics sets too)."""
+    try:
+        return json.loads(Path(path).read_text()).get("mode", "all")
+    except (OSError, ValueError, AttributeError):
+        return "all"

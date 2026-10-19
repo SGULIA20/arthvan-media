@@ -1,0 +1,131 @@
+{
+ "id": "lumi-maakidukaan-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "whatsapp-daily-update",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Maa ki dukaan",
+ "post_on": "2026-10-22",
+ "banner": "Maa ki dukaan,<br><em>hisaab WhatsApp par</em> 📒",
+ "caption": "Papa ke baad dukaan Maa ne sambhali. Hisaab? 'Kal likh loongi.' Phir ek raat se, bas teen number. 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a mother who runs the family shop alone and never finds time for the accounts, until her daughter shows her she only needs to send three numbers on WhatsApp each night. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#MaaKiDukaan",
+  "#DukaanKaHisaab",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman she wears a simple blue kurta with jeans.",
+   "Maa": "Maa is Anaya's mother, a strong tired Indian woman in her fifties in a blue cotton saree with a small red bindi, hair in a bun, reading glasses."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "पापा के जाने के बाद, दुकान माँ ने संभाली।",
+   "sub": "Papa ke jaane ke baad, dukaan Maa ne sambhali.",
+   "min": 2.2,
+   "art": "Maa in a blue saree stands behind the counter of a small general store in the morning, on the wall behind her a framed photo of Papa with a marigold garland, shelves full of jars and packets, soft morning light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "दिन भर ग्राहक, शाम को थकान।",
+   "sub": "Din bhar graahak, shaam ko thakaan.",
+   "min": 2.2,
+   "art": "A busy small shop counter: Maa handing a packet to one customer while two more wait, a child pointing at toffees, coins on the counter, a ceiling fan, warm afternoon light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "हिसाब? कल लिख लूँगी, माँ कहतीं।",
+   "sub": "Hisaab? 'Kal likh loongi,' Maa kehtin.",
+   "min": 2.2,
+   "art": "Maa pulling down the shop shutter at dusk, one hand on her tired back, a dusty closed account register tucked under her arm, the street lamp just coming on.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "और कल, कभी नहीं आता।",
+   "sub": "Aur kal, kabhi nahi aata.",
+   "min": 2.0,
+   "art": "A thick old account register lying closed on a shelf with a thin layer of dust and a pen on top, a calendar on the wall with many days crossed out, dim evening light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "मैंने कहा, माँ, कोई ऐप नहीं। बस व्हाट्सएप।",
+   "sub": "Maine kaha: 'Maa, koi app nahi. Bas WhatsApp.'",
+   "min": 2.4,
+   "art": "Anaya in a blue kurta sits beside Maa at the dinner table at night and shows her a phone with a WhatsApp chat, Maa looks doubtful but curious with her reading glasses on, a steel plate of roti and sabzi between them.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "रात को बस तीन नंबर भेजो। बिक्री, ख़र्च, नक़द।",
+   "sub": "Raat ko bas teen number bhejo: bikri, kharch, naqad.",
+   "min": 2.6,
+   "screen": "whatsapp-numbers.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "जवाब आता है, दर्ज हो गया। बस।",
+   "sub": "Jawab aata hai: 'darj ho gaya.' Bas.",
+   "min": 2.2,
+   "screen": "whatsapp-numbers.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "अब माँ रोज़ रात नौ बजे, तीन नंबर भेजती हैं।",
+   "sub": "Ab Maa roz raat nau baje, teen number bhejti hain.",
+   "min": 2.4,
+   "art": "Maa sits up in bed at night in her reading glasses typing on her phone with one finger, a small satisfied smile, a wall clock showing nine, a glass of water on the side table.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "और हफ़्ते के आख़िर में, दुकान का पूरा हाल।",
+   "sub": "Aur hafte ke aakhir mein, dukaan ka poora haal.",
+   "min": 2.4,
+   "screen": "dashboard.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "माँ बोलीं, तेरे पापा भी यही चाहते थे।",
+   "sub": "Maa bolin: 'tere Papa bhi yahi chahte the.'",
+   "min": 2.4,
+   "art": "Maa stands in the shop in the morning looking up at Papa's garlanded photo with a soft proud smile, her phone in her hand, Anaya beside her with an arm around her shoulder.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "आपकी माँ की दुकान का हिसाब, कौन रखता है?",
+   "sub": "Aapki Maa ki dukaan ka hisaab, kaun rakhta hai?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

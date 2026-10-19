@@ -12,6 +12,13 @@ from engine.render import RenderedSet
 from engine.run_daily import Deps, already_posted, prune_old, run, wait_for_urls
 
 DAY = date(2026, 10, 11)  # waypoint day
+
+
+@pytest.fixture(autouse=True)
+def _all_mode(monkeypatch):
+    """Never read the founder's real production-mode switch in a test."""
+    import engine.run_daily as rd
+    monkeypatch.setattr(rd, "production_mode", lambda path=None: "all")
 ENV = {"IG_ACCESS_TOKEN": "tok", "IG_USER_ID": "1784", "GITHUB_REPOSITORY": "o/r"}
 
 
@@ -552,3 +559,11 @@ def test_a_graphics_day_also_posts_the_facebook_reel_and_story_once(tmp_path):
     env = dict(ENV, FB_PAGE_ID="PG", FB_PAGE_ACCESS_TOKEN="T")
     assert go(w, env=env) == 0 and reels == ["reel.mp4"] and stories == ["story.mp4"]
     assert go(w, env=env) == 0 and len(reels) == 1 and len(stories) == 1
+
+
+def test_in_stories_mode_a_day_without_a_story_reel_posts_nothing(tmp_path, monkeypatch):
+    import engine.run_daily as rd
+    monkeypatch.setattr(rd, "production_mode", lambda path=None: "stories")
+    w = World(tmp_path)
+    assert go(w) == 0
+    assert w.rendered_ids == [] and w.count("publish") == 0        # no graphics set fills the gap

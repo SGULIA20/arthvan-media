@@ -16,7 +16,7 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
-from .config import ROOT
+from .config import ROOT, production_mode
 from . import claims
 from .select_item import NO_REPEAT_DAYS, slot, story_lead
 
@@ -59,10 +59,14 @@ def load_stories(root: Path = ROOT) -> list:
     return out
 
 
-def build_plan(start: date, days: int, stories: list, *, published: dict = None, feature_log: list = None, keep: dict = None) -> dict:
+def build_plan(start: date, days: int, stories: list, *, published: dict = None, feature_log: list = None, keep: dict = None, story_only: bool = False) -> dict:
     """date-iso -> story id or None, for `days` days from `start`.
-    published: story id -> date it went out; feature_log: [(date-iso, app, feature)] already posted; keep: dates before start."""
+    published: story id -> date it went out; feature_log: [(date-iso, app, feature)] already posted; keep: dates before start.
+    story_only (production mode "stories", founder 19 Oct 2026): only illustrated story Reels (those with an "art" block) are planned,
+    and the male/female lead alternation is ignored (every story is told by the same narrator; only the app still alternates)."""
     published = published or {}
+    if story_only:
+        stories = [s for s in stories if s.get("art")]
     log = [tuple(x) for x in (feature_log or [])]
     plan = dict(keep or {})
     used = set(published) | {v for k, v in plan.items() if v}
@@ -103,7 +107,7 @@ def build_plan(start: date, days: int, stories: list, *, published: dict = None,
             avoid = recent(app, d)
             cands = [s for s in stories
                      if s.get("rendered") and s["id"] not in used and not s.get("occasion")
-                     and (s["app"], story_lead(s)) == (app, lead) and (s.get("post_on") or "0") <= iso
+                     and s["app"] == app and (story_only or story_lead(s) == lead) and (s.get("post_on") or "0") <= iso
                      and s.get("feature") not in avoid and not near_festival_with(app, s.get("feature"), d)
                      and not (s.get("legacy") and (prev_legacy or next_fixed_legacy))]
             cands.sort(key=lambda s: (bool(s.get("legacy")), s.get("post_on") or "", s["id"]))
@@ -175,8 +179,11 @@ def main(argv=None) -> int:
         if "=" in a and a[:2] != "--":
             d, sid = a.split("=", 1); keep[d] = sid
     start = today
-    plan = build_plan(start, n, stories, published=published, feature_log=feature_log, keep=keep)
+    story_only = production_mode() == "stories"
+    plan = build_plan(start, n, stories, published=published, feature_log=feature_log, keep=keep, story_only=story_only)
     by_id = {s["id"]: s for s in stories}
+    if story_only:
+        print("production mode: stories (only illustrated story Reels are planned)")
     print("date        slot                       Reel")
     for d in sorted(plan):
         if d < today.isoformat():
