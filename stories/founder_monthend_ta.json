@@ -1,0 +1,74 @@
+{
+ "id": "founder-monthend-ta",
+ "app": "scoremybiz",
+ "lang": "ta",
+ "character": "founder_suit",
+ "title": "மாத முடிவு",
+ "post_on": "2026-11-15",
+ "caption": "சுரேஷின் கல்லாவும் தட்டும் சரியாக இல்லை. வாரத்திற்கு ஒரு எண் எப்படி மாத முடிவை மாற்றியது என்று நிறுவனர் கூறுகிறார்.",
+ "linkedin_text": "Sales good, shelf full, drawer empty. Most small shops only find out at month end.\n\nScoreMyBiz reads the shop's own book and gives one number out of 100 for its health, with three moves for the week. The founder character tells Suresh's story; every screen is the real app.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#MonthEnd"
+ ],
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, stands in a hardware shop aisle among coils of rope and tins of paint, turns to the camera and speaks calmly, warm evening light.",
+   "vo": "வணக்கம். இது சுரேஷின் கதை. அவர் ஒரு ஹார்டுவேர் கடை வச்சிருக்காரு. மாசம் முடியும் போது எல்லாம் ஒரே கேள்வி: பணம் எங்கே போச்சு?",
+   "sub": "வணக்கம். இது சுரேஷின் கதை. அவர் ஒரு ஹார்டுவேர் கடை வச்சிருக்காரு. மாசம் முடியும் போது எல்லாம் ஒரே கேள்வி: பணம் எங்கே போச்சு?",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Month end"
+  },
+  {
+   "layout": "clip",
+   "clip": "A small Indian hardware shop at closing time: the owner, a middle-aged man in a checked shirt, opens the cash drawer, looks at a few notes, then at the full shelves behind him, and exhales. Slow push-in.",
+   "card": "பணம் எங்கே போச்சு?",
+   "vo": "விற்பனை நல்லா இருந்தது. தட்டு நிறையா இருந்தது. கல்லா இல்லை.",
+   "sub": "விற்பனை நல்லா இருந்தது. தட்டு நிறையா இருந்தது. கல்லா இல்லை.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "Close on a hardware shop counter: {suresh} turning the page of a handwritten notebook beside a calculator and a phone, warm lamp light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz அவரோட கணக்கைப் பார்த்து தெளிவா காட்டுது. விற்றது. வாங்கியது. செலவு. மிச்சம் என்ன.",
+   "sub": "ScoreMyBiz அவரோட கணக்கைப் பார்த்து தெளிவா காட்டுது. விற்றது. வாங்கியது. செலவு. மிச்சம் என்ன.",
+   "min": 8,
+   "screen": "profit-loss.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, points at a shelf of unsold festival stock in a hardware shop while {suresh} scratches his head, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Lumi உண்மையான பிரச்சினையைக் காட்டுது: பண்டிகை ஸ்டாக், இன்னும் தட்டிலேயே இருக்கு. பணம் முடங்கிக் கிடக்கு.",
+   "sub": "Lumi உண்மையான பிரச்சினையைக் காட்டுது: பண்டிகை ஸ்டாக், இன்னும் தட்டிலேயே இருக்கு. பணம் முடங்கிக் கிடக்கு.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "screen": "dashboard.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{suresh} at the counter of his hardware shop at closing time a month later, opening the cash drawer and finding it full, a quiet satisfied smile, shelves of rope and paint behind, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "கடை ஆரோக்கியத்திற்கு நூற்றில் ஒரு எண், வாரத்திற்கு மூன்று வேலைகள். அதை அவர் செய்றாரு. அடுத்த மாத இறுதியில், கல்லாவும் தட்டும் ஒத்துப் போகுது.",
+   "sub": "கடை ஆரோக்கியத்திற்கு நூற்றில் ஒரு எண், வாரத்திற்கு மூன்று வேலைகள். அதை அவர் செய்றாரு. அடுத்த மாத இறுதியில், கல்லாவும் தட்டும் ஒத்துப் போகுது.",
+   "min": 9,
+   "screen": "score-history.png"
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. உங்கள் வணிக ஆரோக்கியத்தை அறிந்துகொள்ளுங்கள். முப்பது நாட்களுக்கு இலவசம், பல இந்திய மற்றும் வெளிநாட்டு மொழிகளில்.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "feature": "profit-report",
+ "cast": {
+  "suresh": "Suresh, a middle-aged Indian man with thinning hair, round glasses and a blue checked shirt"
+ }
+}

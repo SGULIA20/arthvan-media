@@ -1,0 +1,113 @@
+{
+ "id": "lumi-overview2-mr",
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "प्रत्येक गोष्ट आणखी जास्त",
+ "post_on": "2027-01-03",
+ "caption": "भाग २: ScoreMyBiz तुमच्या दुकानासाठी आणखी काय करतं, प्रत्यक्ष स्क्रीनवर. लुमी उरलेलं दाखवणार.",
+ "linkedin_text": "Part 2 of the ScoreMyBiz tour on its real screens: today's totals in a hurry, every sale and payment with one customer, items and last prices, asking your numbers on WhatsApp, entries that wait safely when there is no signal, break-even, goals, the score over time, the decision game and the year-end close.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हाय, मी लुमी. भाग दोन: ScoreMyBiz तुमच्या दुकानासाठी आणखी काय करतं.",
+   "sub": "हाय, मी लुमी. भाग दोन: ScoreMyBiz तुमच्या दुकानासाठी आणखी काय करतं.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "घाईत आहात? फक्त आजचे आकडे टाईप करा.",
+   "sub": "घाईत आहात? फक्त आजचे आकडे टाईप करा.",
+   "min": 3.5,
+   "screen": "daily-update.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "एकाच गिऱ्हाइकाचे सगळे व्यवहार आणि पैसे, एकामागोमाग बघा.",
+   "sub": "एकाच गिऱ्हाइकाचे सगळे व्यवहार आणि पैसे, एकामागोमाग बघा.",
+   "min": 3.5,
+   "screen": "customer-history.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "तुमच्या वस्तू आणि मागचे भाव तयार ठेवा.",
+   "sub": "तुमच्या वस्तू आणि मागचे भाव तयार ठेवा.",
+   "min": 3.5,
+   "screen": "items.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "व्हॉट्सॲपवर तुमचे आकडे मागवून घ्या.",
+   "sub": "व्हॉट्सॲपवर तुमचे आकडे मागवून घ्या.",
+   "min": 3.5,
+   "screen": "whatsapp-menu.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "नेट नाहीये? नोंदी सुरक्षित राहतात आणि नंतर जातात.",
+   "sub": "नेट नाहीये? नोंदी सुरक्षित राहतात आणि नंतर जातात.",
+   "min": 3.5,
+   "screen": "offline-entries.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "तुमचा नफा-तोटा नसलेला पॉईंट शोधा.",
+   "sub": "तुमचा नफा-तोटा नसलेला पॉईंट शोधा.",
+   "min": 3.5,
+   "screen": "break-even.png",
+   "pose": "thinking"
+  },
+  {
+   "layout": "present",
+   "vo": "तारीखांसोबत, लक्ष ठरवा.",
+   "sub": "तारीखांसोबत, लक्ष ठरवा.",
+   "min": 3.5,
+   "screen": "goals.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "वेळेनुसार तुमचा स्कोअर बघा.",
+   "sub": "वेळेनुसार तुमचा स्कोअर बघा.",
+   "min": 3.5,
+   "screen": "score-history.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "डिसिजन गेममध्ये मोठे निर्णय आधीच तपासून बघा.",
+   "sub": "डिसिजन गेममध्ये मोठे निर्णय आधीच तपासून बघा.",
+   "min": 3.5,
+   "screen": "game.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "आणि हिशोबाचं पुस्तक चकाचक करून वर्ष संपवा.",
+   "sub": "आणि हिशोबाचं पुस्तक चकाचक करून वर्ष संपवा.",
+   "min": 3.5,
+   "screen": "year-end.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत जाणा. तीस दिवस फुकट, अनेक भारतीय आणि परदेशी भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

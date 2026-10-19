@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "id": "founder-offline-mr",
+ "character": "founder_suit",
+ "feature": "entries-without-signal",
+ "title": "नो सिग्नल",
+ "post_on": "2027-01-01",
+ "caption": "कमीत कमी सिग्नल असलेलं तळघरातील दुकान. सलीम तरीही प्रत्येक विक्रीची नोंद ठेवतो. संस्थापक त्याची गोष्ट सांगतो.",
+ "linkedin_text": "If there is no signal at the counter, a Sold, Bought or Spent entry in ScoreMyBiz is kept safely on the phone, shown as waiting, and goes into the book by itself when the signal returns, without being added twice. Only the entry form works without signal; reports need signal.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#NoSignal"
+ ],
+ "cast": {
+  "salim": "Salim, a middle-aged Indian dry fruit seller with a white skull cap, a white kurta and a trimmed grey beard"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy covered market lane with dry fruit stalls behind him, a warm smile.",
+   "vo": "हाय. ही सलीमची गोष्ट आहे. त्याचं दुकान तळघरात आहे, जिथे नेटवर्क येत-जात असतं.",
+   "sub": "हाय. ही सलीमची गोष्ट आहे. त्याचं दुकान तळघरात आहे, जिथे नेटवर्क येत-जात असतं.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "No signal"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} at his dry fruit stall looking at his phone with a frown, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "एक ग्राहक पैसे देतो. त्याच्या फोनवर सिग्नल नाही. त्याला हातावर लिहून घ्यायचं नाही.",
+   "sub": "एक ग्राहक पैसे देतो. त्याच्या फोनवर सिग्नल नाही. त्याला हातावर लिहून घ्यायचं नाही.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} tapping his phone calmly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये, सिग्नल नसताना केलेली नोंद फोनवर सुरक्षित राहून जाते.",
+   "sub": "ScoreMyBiz मध्ये, सिग्नल नसताना केलेली नोंद फोनवर सुरक्षित राहून जाते.",
+   "min": 8,
+   "screen": "offline-entries.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} watching his phone with a relaxed smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "सिग्नल परत आल्यावर ती नोंद आपोआप बुकमध्ये जाते, आणि ती कधीही दोनदा होत नाही.",
+   "sub": "सिग्नल परत आल्यावर ती नोंद आपोआप बुकमध्ये जाते, आणि ती कधीही दोनदा होत नाही.",
+   "min": 8,
+   "screen": "offline-entries.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} weighing almonds on a scale with a nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "फक्त नोंद करायचं काम विना सिग्नल चालतं. रिपोर्टसाठी सिग्नल लागतो.",
+   "sub": "फक्त नोंद करायचं काम विना सिग्नल चालतं. रिपोर्टसाठी सिग्नल लागतो.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{salim} smiling at the camera among sacks of dry fruit.",
+   "vo": "प्रत्येक विक्रीची नोंद होते, अगदी तळघरात सुद्धा.",
+   "sub": "प्रत्येक विक्रीची नोंद होते, अगदी तळघरात सुद्धा.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत जाणा. तीस दिवस फुकट, अनेक भारतीय आणि परदेशी भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

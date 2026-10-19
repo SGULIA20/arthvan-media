@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "id": "lumi-countnow-mr",
+ "character": "lumi",
+ "feature": "money-now",
+ "title": "ड्रॉवरचा हिशोब जुळतोय का?",
+ "post_on": "2026-12-14",
+ "caption": "दुकान बंद करताना रेखा गल्ल्यातील पैसे मोजते. हिशोब जुळतोय का? लुमी सांगते तिची गोष्ट.",
+ "linkedin_text": "Money I have right now in ScoreMyBiz: count the cash, the bank and the stock, see what the book expected and the gap. A gap usually means an entry was missed. What you type becomes the new starting point.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#CashInHand"
+ ],
+ "cast": {
+  "rekha": "Rekha, a middle-aged Indian woman who runs a sweet shop, in an orange cotton saree with a small red bindi"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a sweet shop with trays of colourful sweets behind her, a warm smile.",
+   "vo": "हाय, मी लुमी. ही आहे रेखाची गोष्ट. दुकान बंद करताना ती गल्ला मोजते आणि हिशोब जुळेल का विचार करते.",
+   "sub": "हाय, मी लुमी. ही आहे रेखाची गोष्ट. दुकान बंद करताना ती गल्ला मोजते आणि हिशोब जुळेल का विचार करते.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Does the drawer agree"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} counting rupee notes at her sweet shop counter at closing time, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "नोट्स एका ढिगात, नाणी दुसऱ्या ढिगात. ती दोनदा मोजणी करते.",
+   "sub": "नोट्स एका ढिगात, नाणी दुसऱ्या ढिगात. ती दोनदा मोजणी करते.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} opening an app on her phone with curiosity, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये ती माझ्याकडचे पैसे उघडते, आणि गल्ल्यातील, बँकेतील व मालाचा हिशोब टाकते.",
+   "sub": "ScoreMyBiz मध्ये ती माझ्याकडचे पैसे उघडते, आणि गल्ल्यातील, बँकेतील व मालाचा हिशोब टाकते.",
+   "min": 8,
+   "screen": "money-now.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} looking at her phone screen, thinking, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "अॅप दाखवतो हिशोबानुसार किती यायला हवे होते, आणि दोन्हीमधील तफावत.",
+   "sub": "अॅप दाखवतो हिशोबानुसार किती यायला हवे होते, आणि दोन्हीमधील तफावत.",
+   "min": 8,
+   "screen": "money-now.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} nodding with a reassured smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तफावतीचा अर्थ बहुधा एखादी नोंद सुटली असा होतो, काही गडबड आहे असा नाही.",
+   "sub": "तफावतीचा अर्थ बहुधा एखादी नोंद सुटली असा होतो, काही गडबड आहे असा नाही.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{rekha} closing the shutter of her sweet shop with a calm smile, evening lights behind her.",
+   "vo": "तिने जे टाईप केले तो आता नवीन सुरुवातीचा पॉईंट बनतो.",
+   "sub": "तिने जे टाईप केले तो आता नवीन सुरुवातीचा पॉईंट बनतो.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत जाणा. तीस दिवस मोफत, अनेक भारतीय व परदेशी भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

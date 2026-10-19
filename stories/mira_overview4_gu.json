@@ -1,0 +1,113 @@
+{
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "id": "mira-overview4-gu",
+ "title": "ચેટ્સ, સલામતી અને સેટિંગ્સ",
+ "post_on": "2027-01-06",
+ "caption": "ભાગ 4: Waypoint માં ચેટ્સ, સલામતી અને સેટિંગ્સ. મીરા બતાવે છે કે તે લોકોને કેવી રીતે સુરક્ષિત રાખે છે.",
+ "linkedin_text": "Part 4 of the Waypoint tour: the 18-plus check, thirty-minute text chats, ending and blocking, reporting, screening before posts go live, the helpline pause, the not-official label, settings, help and deleting your account.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય, હું મીરા છું. ચોથો ભાગ: ચેટ્સ, સલામતી અને સેટિંગ્સ.",
+   "sub": "હાય, હું મીરા છું. ચોથો ભાગ: ચેટ્સ, સલામતી અને સેટિંગ્સ.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "અઢાર અને તેથી વધુ વયના, નિયમો અને માર્ગદર્શિકા સાથે સહમત થવું.",
+   "sub": "અઢાર અને તેથી વધુ વયના, નિયમો અને માર્ગદર્શિકા સાથે સહમત થવું.",
+   "min": 3.5,
+   "card": "૧૮ અને તેથી વધુ",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "મેચ ચેટ્સ માત્ર ટેક્સ્ટ જ છે, ત્રીસ મિનિટ માટે.",
+   "sub": "મેચ ચેટ્સ માત્ર ટેક્સ્ટ જ છે, ત્રીસ મિનિટ માટે.",
+   "min": 3.5,
+   "card": "૩૦ મિનિટની ચેટ્સ",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "scene",
+   "vo": "પાંચ મિનિટ પછી સમાપ્ત, ગમે ત્યારે બ્લોક કરો, રેટ કરો.",
+   "sub": "પાંચ મિનિટ પછી સમાપ્ત, ગમે ત્યારે બ્લોક કરો, રેટ કરો.",
+   "min": 3.5,
+   "card": "તમે નક્કી કરો",
+   "pose": "relieved"
+  },
+  {
+   "layout": "scene",
+   "vo": "કોઈપણ પોસ્ટ, મેસેજ અથવા મોમેન્ટ રિપોર્ટ કે બ્લોક કરો.",
+   "sub": "કોઈપણ પોસ્ટ, મેસેજ અથવા મોમેન્ટ રિપોર્ટ કે બ્લોક કરો.",
+   "min": 3.5,
+   "card": "રિપોર્ટ અને બ્લોક",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "પોસ્ટ્સ પહેલા તપાસાય છે; હેરેસમેન્ટ અને હેટ નકારાય છે.",
+   "sub": "પોસ્ટ્સ પહેલા તપાસાય છે; હેરેસમેન્ટ અને હેટ નકારાય છે.",
+   "min": 3.5,
+   "card": "પહેલા તપાસાય છે",
+   "pose": "listening"
+  },
+  {
+   "layout": "scene",
+   "vo": "કટોકટી જેવી પોસ્ટ હેલ્પલાઈન અને થોભો બતાવે છે.",
+   "sub": "કટોકટી જેવી પોસ્ટ હેલ્પલાઈન અને થોભો બતાવે છે.",
+   "min": 3.5,
+   "card": "તમે પોસ્ટ કરો તે પહેલાં",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "Waypoint સ્ટાફ જેવું દેખાતું કંઈપણ બિનસત્તાવાર ચિહ્નિત છે.",
+   "sub": "Waypoint સ્ટાફ જેવું દેખાતું કંઈપણ બિનસત્તાવાર ચિહ્નિત છે.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "સેટિંગ્સ, મદદ, નિયમો અને પ્રતિસાદ: માય વેપોઈન્ટ્સ.",
+   "sub": "સેટિંગ્સ, મદદ, નિયમો અને પ્રતિસાદ: માય વેપોઈન્ટ્સ.",
+   "min": 3.5,
+   "screen": "my-waypoints.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "તમારું એકાઉન્ટ અને ડેટા પણ ત્યાંથી ડિલીટ કરો.",
+   "sub": "તમારું એકાઉન્ટ અને ડેટા પણ ત્યાંથી ડિલીટ કરો.",
+   "min": 3.5,
+   "screen": "invite.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "નોટિફિકેશન્સ, અપડેટ પ્રોમ્પ્ટ્સ અને એક ઓફલાઈન બાર.",
+   "sub": "નોટિફિકેશન્સ, અપડેટ પ્રોમ્પ્ટ્સ અને એક ઓફલાઈન બાર.",
+   "min": 3.5,
+   "card": "માહિતીમાં રહો",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. એકવાર કહો. Google Play પર મફત.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "id": "lumi-scan-ta",
+ "app": "scoremybiz",
+ "lang": "ta",
+ "character": "lumi",
+ "feature": "photo-entry",
+ "title": "டைப்பிங் வேலையை விடுங்க",
+ "post_on": "2026-11-25",
+ "caption": "சுனிதாவின் கணக்குகள் நோட்டில் இருக்கு. டைப் செய்வதற்குப் பதில் சுனிதா ஒரு போட்டோ எடுக்கிறார். லுமி சுனிதாவின் கதையைச் சொல்கிறார்.",
+ "linkedin_text": "Typing a month of handwritten sales into an app is an evening most shop owners do not have.\n\nIn ScoreMyBiz you can scan a photo of a bill or notebook page, or speak your numbers; the numbers fill in for you to check, and nothing is saved until you do. The AI features are part of the free first month. Lumi tells Sunita's story; every screen is the real app.",
+ "hashtags": [
+  "#ScanAPhoto",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "sunita": "Sunita, an Indian woman in her fifties who owns a grocery shop, in a green cotton saree with reading glasses on a chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera inside a small bright grocery shop with shelves of packets behind her, a friendly smile.",
+   "vo": "வணக்கம், நான் லுமி. இது சுனிதாவின் கதை. அவங்களோட முழு மாதக் கணக்கும் கைரேகை நோட்டுல இருக்கு.",
+   "sub": "வணக்கம், நான் லுமி. இது சுனிதாவின் கதை. அவங்களோட முழு மாதக் கணக்கும் கைரேகை நோட்டுல இருக்கு.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Skip the typing"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} at the counter of her grocery shop turning pages of a thick handwritten notebook, a pen behind her ear, a tired smile, evening light.",
+   "vo": "இதையெல்லாம் டைப் செய்ய அவங்களுக்கு நேரம் இல்லை, ஒரு மாலை முழுதும் தேவைப்படும்.",
+   "sub": "இதையெல்லாம் டைப் செய்ய அவங்களுக்கு நேரம் இல்லை, ஒரு மாலை முழுதும் தேவைப்படும்.",
+   "min": 8,
+   "card": "நோட்டுப் புத்தகம்"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} holding her phone above an open notebook page on the counter as if taking a photo, glasses on, concentrating, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz-ல 'Scan a photo' தொட்டு, நோட்டுப் பக்கத்தை போட்டோ எடுக்கிறாங்க.",
+   "sub": "ScoreMyBiz-ல 'Scan a photo' தொட்டு, நோட்டுப் பக்கத்தை போட்டோ எடுக்கிறாங்க.",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} looking closely at her phone with a small nod, a pencil in her hand, the grocery shop behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "எண்கள் தானா வந்துடும், அவங்க சரிபார்க்கலாம். ஒன்னை மாத்திட்டு, அப்புறமா சேவ் செய்றாங்க.",
+   "sub": "எண்கள் தானா வந்துடும், அவங்க சரிபார்க்கலாம். ஒன்னை மாத்திட்டு, அப்புறமா சேவ் செய்றாங்க.",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} speaking into her phone while standing between grocery shelves, a relaxed smile, soft shop light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "இல்லன்னா, அவங்க கணக்குகளை வாய்விட்டும் சொல்லலாம்.",
+   "sub": "இல்லன்னா, அவங்க கணக்குகளை வாய்விட்டும் சொல்லலாம்.",
+   "min": 8,
+   "screen": "calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sunita} closing the shop shutter in the evening with a light relieved smile, the notebook tucked under her arm.",
+   "vo": "சரிபார்த்துட்டு சேவ் பண்ணுங்க. நோட்டு உங்ககிட்டயே இருக்கும்.",
+   "sub": "சரிபார்த்துட்டு சேவ் பண்ணுங்க. நோட்டு உங்ககிட்டயே இருக்கும்.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. வியாபார நிலையைத் தெரிஞ்சுக்கோங்க. முப்பது நாட்களுக்கு இலவசம், பல இந்திய மற்றும் வெளிநாட்டு மொழிகளில்.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

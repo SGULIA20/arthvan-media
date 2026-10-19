@@ -1,0 +1,113 @@
+{
+ "id": "lumi-overview-mr",
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "सर्वकाही, एका मिनिटात",
+ "post_on": "2026-12-30",
+ "caption": "तुमच्या दुकानासाठी ScoreMyBiz काय करतं, एका मिनिटात. लुमी खऱ्या स्क्रीनवर मुख्य गोष्टी दाखवते.",
+ "linkedin_text": "A one-minute tour of ScoreMyBiz on its real screens: writing sales, purchases and spending, who owes you and what you owe, bills and quotations, profit and cash in plain words, a business health score, a what-if simulator, the Advisor, helpers with their own login, and sharing the book with a CA.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हाय, मी लुमी. हा आहे ScoreMyBiz, एका मिनिटात.",
+   "sub": "हाय, मी लुमी. हा आहे ScoreMyBiz, एका मिनिटात.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "विक्री, खरेदी आणि खर्च सेकंदात लिहा.",
+   "sub": "विक्री, खरेदी आणि खर्च सेकंदात लिहा.",
+   "min": 3.5,
+   "screen": "book.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "कोणाकडून पैसे यायचेत ते पाहा, व्हॉट्सअ‍ॅपवर आठवण करा.",
+   "sub": "कोणाकडून पैसे यायचेत ते पाहा, व्हॉट्सअ‍ॅपवर आठवण करा.",
+   "min": 3.5,
+   "screen": "cash-flow.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "कोणाला पैसे द्यायचेत आणि या आठवड्यात काय देणे आहे ते पाहा.",
+   "sub": "कोणाला पैसे द्यायचेत आणि या आठवड्यात काय देणे आहे ते पाहा.",
+   "min": 3.5,
+   "screen": "payables.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "बिल आणि कोटेशन बनवा, पीडीएफ म्हणून पाठवा.",
+   "sub": "बिल आणि कोटेशन बनवा, पीडीएफ म्हणून पाठवा.",
+   "min": 3.5,
+   "screen": "invoices.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "नफा, रोकड, आणि माल-देणेघेणे, साध्या शब्दात.",
+   "sub": "नफा, रोकड, आणि माल-देणेघेणे, साध्या शब्दात.",
+   "min": 3.5,
+   "screen": "profit-loss.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "व्यवसायाचे आरोग्य कार्ड, तुमचे मजबूत आणि कमजोर मुद्यांसह.",
+   "sub": "व्यवसायाचे आरोग्य कार्ड, तुमचे मजबूत आणि कमजोर मुद्यांसह.",
+   "min": 3.5,
+   "screen": "result.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "तुमच्याच आकड्यांवर 'व्हाट-इफ' करून पाहा.",
+   "sub": "तुमच्याच आकड्यांवर 'व्हाट-इफ' करून पाहा.",
+   "min": 3.5,
+   "screen": "business-simulator.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "तुमच्या मोफत महिन्यात, तुमच्या भाषेत सल्लागाराला विचारा.",
+   "sub": "तुमच्या मोफत महिन्यात, तुमच्या भाषेत सल्लागाराला विचारा.",
+   "min": 3.5,
+   "screen": "advisor.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "मदतनीसांना त्यांचे स्वतःचे लॉगिन द्या.",
+   "sub": "मदतनीसांना त्यांचे स्वतःचे लॉगिन द्या.",
+   "min": 3.5,
+   "screen": "staff.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "आणि तुमचा हिशोब तुमच्या सीए सोबत शेअर करा.",
+   "sub": "आणि तुमचा हिशोब तुमच्या सीए सोबत शेअर करा.",
+   "min": 3.5,
+   "screen": "export-book.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तीस दिवस मोफत, अनेक भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

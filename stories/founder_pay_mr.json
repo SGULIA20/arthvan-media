@@ -1,0 +1,77 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "id": "founder-pay-mr",
+ "character": "founder_suit",
+ "feature": "money-to-pay",
+ "title": "पहिले कोणाला द्यायचे",
+ "post_on": "2026-12-12",
+ "caption": "तीन पुरवठ्याचे बिल, तीन वेगवेगळ्या तारखा, एक आधीच उशीर झालेला. संस्थापक दिनेशची गोष्ट सांगतो.",
+ "linkedin_text": "Money I have to pay in ScoreMyBiz groups supplier bills by supplier, shows what is overdue and what falls due this week, and reminds the owner on the due day and three days before. It does not pay anyone; it only reminds.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Suppliers"
+ ],
+ "cast": {
+  "dinesh": "Dinesh, a middle-aged Indian grocery wholesaler with a thick moustache, in a white half-sleeve shirt and a gold chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy grocery wholesale market in the morning, sacks of grain behind him, a warm smile.",
+   "vo": "हाय. ही दिनेशची गोष्ट आहे. एका पुरवठ्याचे बिल या आठवड्यात द्यायचे आहे, आणि त्याला पैसे बाजूला ठेव Y आहेत.",
+   "sub": "हाय. ही दिनेशची गोष्ट आहे. एका पुरवठ्याचे बिल या आठवड्यात द्यायचे आहे, आणि त्याला पैसे बाजूला ठेव Y आहेत.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Pay first"
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} at a small desk with a spike of paper bills, counting dates on his fingers, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तीन पुरवठ्यांची बिले, तीन वेगवेगळ्या तारखा, आणि त्यातले एक आधीच उशीर झालेले आहे.",
+   "sub": "तीन पुरवठ्यांची बिले, तीन वेगवेगळ्या तारखा, आणि त्यातले एक आधीच उशीर झालेले आहे.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} reading his phone with a calm nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये, मला द्यायचे असलेले पैसे ही बिले पुरवठादाराप्रमाणे गोळा करते.",
+   "sub": "ScoreMyBiz मध्ये, मला द्यायचे असलेले पैसे ही बिले पुरवठादाराप्रमाणे गोळा करते.",
+   "min": 8,
+   "screen": "payables.png",
+   "card": "मला द्यायचे असलेले पैसे"
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} pointing at his phone thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "हे दाखवते कोणते बाकी आहे आणि कोणते या आठवड्यात द्यायचे आहे, त्यामुळे त्याला कळते पहिले कोणाला द्यायचे.",
+   "sub": "हे दाखवते कोणते बाकी आहे आणि कोणते या आठवड्यात द्यायचे आहे, त्यामुळे त्याला कळते पहिले कोणाला द्यायचे.",
+   "min": 8,
+   "screen": "payables.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} glancing at a notification on his phone with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "त्याला ॲपमध्ये देण्याच्या दिवशी आणि तीन दिवस आधी एक टीप देखील मिळते.",
+   "sub": "त्याला ॲपमध्ये देण्याच्या दिवशी आणि तीन दिवस आधी एक टीप देखील मिळते.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{dinesh} standing among sacks of grain, relaxed, arms folded.",
+   "vo": "ScoreMyBiz कोणालाही पैसे देत नाही. ते फक्त आठवण करून देते.",
+   "sub": "ScoreMyBiz कोणालाही पैसे देत नाही. ते फक्त आठवण करून देते.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची स्थिती जाणून घ्या. तीस दिवस मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

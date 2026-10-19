@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "id": "founder-billsettings-mr",
+ "character": "founder_suit",
+ "feature": "bills-tax-settings",
+ "title": "दराने कर",
+ "post_on": "2026-12-29",
+ "caption": "गेल्या तिमाहीत त्याच्या बिलांवर किती कर आकारला गेला, असे त्याचे सीए विचारतात. प्रकाशकडे उत्तर आहे. संस्थापक आपली गोष्ट सांगतो.",
+ "linkedin_text": "In ScoreMyBiz, Bills and GST sets how an owner's bills are numbered, whether and at what rate GST shows on them, and shows the tax his bills charged by rate for any period. It shows tax collected on his bills only; it does not file returns.",
+ "hashtags": [
+  "#GST",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "prakash": "Prakash, a middle-aged Indian electrical goods dealer with silver-framed glasses, in a white shirt"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in an electrical goods shop with cables and lamps behind him, a warm smile.",
+   "vo": "नमस्कार. ही प्रकाशची गोष्ट आहे. गेल्या तिमाहीत बिलांवर किती कर लागला, असे त्याचे सीए विचारतात.",
+   "sub": "नमस्कार. ही प्रकाशची गोष्ट आहे. गेल्या तिमाहीत बिलांवर किती कर लागला, असे त्याचे सीए विचारतात.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Tax by rate"
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} at his shop counter flipping through a stack of paper bills, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "बिलं सगळी तिथेच आहेत. पण दरानुसार एकूण रक्कम तिथे नाही.",
+   "sub": "बिलं सगळी तिथेच आहेत. पण दरानुसार एकूण रक्कम तिथे नाही.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} opening an app on his phone with interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये, 'बिल्स आणि जीएसटी' द्वारे बिलं कशी नंबर करायची ते ठरतं: एक उपसर्ग, आणि पुढचा नंबर.",
+   "sub": "ScoreMyBiz मध्ये, 'बिल्स आणि जीएसटी' द्वारे बिलं कशी नंबर करायची ते ठरतं: एक उपसर्ग, आणि पुढचा नंबर.",
+   "min": 8,
+   "screen": "billing-settings.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} choosing options on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "जीएसटी बिलांवर दिसावा का आणि नेहमीचा दर काय, हे तो निवडतो.",
+   "sub": "जीएसटी बिलांवर दिसावा का आणि नेहमीचा दर काय, हे तो निवडतो.",
+   "min": 8,
+   "screen": "billing-settings.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} nodding as he reads his screen, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "आणि कोणत्याही काळासाठी, दरानुसार बिलांवर लागलेला कर त्याला दिसतो.",
+   "sub": "आणि कोणत्याही काळासाठी, दरानुसार बिलांवर लागलेला कर त्याला दिसतो.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{prakash} smiling at the camera in his shop, arms folded.",
+   "vo": "यावरून बिलांवर किती कर लागला ते समजतं. हा कुठलाही भरणा करत नाही.",
+   "sub": "यावरून बिलांवर किती कर लागला ते समजतं. हा कुठलाही भरणा करत नाही.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची स्थिती जाणून घ्या. तीस दिवस मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "id": "lumi-health-mr",
+ "character": "lumi",
+ "feature": "personal-health-score",
+ "title": "माझी स्वतःची बाजू",
+ "post_on": "2026-12-25",
+ "caption": "समीरचे घरचे आणि दुकानाचे पैसे एकत्र झाले आहेत. लुमी त्याला त्याची स्वतःची बाजू दाखवतो. लुमी त्याची गोष्ट सांगतो.",
+ "linkedin_text": "ScoreMyBiz has a separate Personal Health Score for an owner's own money: income, spending, savings, debts, insurance and family, with a view of whether he is ready to go full-time on his business. It is not investment or insurance advice.",
+ "hashtags": [
+  "#PersonalFinance",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "sameer": "Sameer, a young Indian cafe owner in Pune with a short beard, in a mustard t-shirt and a black apron"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a small cosy cafe with coffee machines and wooden tables behind her, a warm smile.",
+   "vo": "हाय, मी लुमी. ही समीरची गोष्ट आहे. तो पुण्यात एक कॅफे चालवतो, आणि त्याचे घरचे आणि दुकानाचे पैसे एकत्र झाले आहेत.",
+   "sub": "हाय, मी लुमी. ही समीरची गोष्ट आहे. तो पुण्यात एक कॅफे चालवतो, आणि त्याचे घरचे आणि दुकानाचे पैसे एकत्र झाले आहेत.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "My own side"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} behind his cafe counter paying a home bill from the till, a worried look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "काही दिवस गल्ल्यातून दुकान चालतं. काही दिवस घर चालतं.",
+   "sub": "काही दिवस गल्ल्यातून दुकान चालतं. काही दिवस घर चालतं.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} looking at his phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये त्याच्या स्वतःच्या पैशांसाठी एक वेगळा पर्सनल हेल्थ स्कोर आहे.",
+   "sub": "ScoreMyBiz मध्ये त्याच्या स्वतःच्या पैशांसाठी एक वेगळा पर्सनल हेल्थ स्कोर आहे.",
+   "min": 8,
+   "screen": "personal-calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} entering numbers on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "तो त्याची कमाई आणि खर्च टाकतो, आणि बचत, कर्ज आणि कुटुंब जोडू शकतो.",
+   "sub": "तो त्याची कमाई आणि खर्च टाकतो, आणि बचत, कर्ज आणि कुटुंब जोडू शकतो.",
+   "min": 8,
+   "screen": "personal-calculator.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} nodding thoughtfully, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "हा त्याचा स्वतःचा स्कोर दाखवतो, आणि तो पूर्णवेळ व्यवसायात उतरू शकतो का हे सांगतो.",
+   "sub": "हा त्याचा स्वतःचा स्कोर दाखवतो, आणि तो पूर्णवेळ व्यवसायात उतरू शकतो का हे सांगतो.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{sameer} smiling at the camera in his cafe.",
+   "vo": "एक स्कोर आहे, सल्ला नाही. त्याची स्वतःची बाजू, अगदी स्पष्ट.",
+   "sub": "एक स्कोर आहे, सल्ला नाही. त्याची स्वतःची बाजू, अगदी स्पष्ट.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत ओळखा. तीस दिवस मोफत, अनेक भारतीय आणि परदेशी भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

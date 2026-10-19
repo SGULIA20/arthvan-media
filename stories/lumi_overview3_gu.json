@@ -1,0 +1,113 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview3-gu",
+ "title": "તમારા પૈસા, ચોખ્ખા હિસાબ સાથે",
+ "post_on": "2027-01-08",
+ "caption": "ભાગ ૩: તમારા પૈસા, ચોખ્ખા હિસાબ સાથે. સ્કોરમાયબિઝની મની સ્ક્રીન્સ, અસલી એપ પર.",
+ "linkedin_text": "Part 3 of the ScoreMyBiz tour: counting cash and bank against the book, the cash book by day, searchable lists, what you have and owe, paper profit against real cash, quotations, bill settings, WhatsApp numbers, monthly repeats and undo.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય, હું લુમી છું. ભાગ ત્રણ: તમારા પૈસા, ચોખ્ખા હિસાબ સાથે.",
+   "sub": "હાય, હું લુમી છું. ભાગ ત્રણ: તમારા પૈસા, ચોખ્ખા હિસાબ સાથે.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "રોકડ અને બેંક ખાતાનો હિસાબ ચોપડા સાથે મેળવો.",
+   "sub": "રોકડ અને બેંક ખાતાનો હિસાબ ચોપડા સાથે મેળવો.",
+   "min": 3.5,
+   "screen": "money-now.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "દિવસ-પ્રતિ-દિવસની રોકડ બુક, શરૂઆતથી આખર સુધી.",
+   "sub": "દિવસ-પ્રતિ-દિવસની રોકડ બુક, શરૂઆતથી આખર સુધી.",
+   "min": 3.5,
+   "screen": "cash-book.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "વેચેલું, ખરીદેલું અને ખર્ચેલું બધું શોધો અને ડાઉનલોડ કરો.",
+   "sub": "વેચેલું, ખરીદેલું અને ખર્ચેલું બધું શોધો અને ડાઉનલોડ કરો.",
+   "min": 3.5,
+   "screen": "registers.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "તમારી પાસે શું છે અને શું લેણું છે, એક જ પાના પર.",
+   "sub": "તમારી પાસે શું છે અને શું લેણું છે, એક જ પાના પર.",
+   "min": 3.5,
+   "screen": "balance-sheet.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "કાગળ પરનો નફો અને તમારી અસલી રોકડ બંને બાજુ-બાજુમાં.",
+   "sub": "કાગળ પરનો નફો અને તમારી અસલી રોકડ બંને બાજુ-બાજુમાં.",
+   "min": 3.5,
+   "screen": "cash-reality.png",
+   "pose": "thinking"
+  },
+  {
+   "layout": "present",
+   "vo": "પીડીએફ ક્વોટેશન મોકલો, પછી તેને વેચાણ બનાવો.",
+   "sub": "પીડીએફ ક્વોટેશન મોકલો, પછી તેને વેચાણ બનાવો.",
+   "min": 3.5,
+   "screen": "quotations.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "તમારા બિલના નંબર કેવી રીતે આપવા તે પસંદ કરો.",
+   "sub": "તમારા બિલના નંબર કેવી રીતે આપવા તે પસંદ કરો.",
+   "min": 3.5,
+   "screen": "billing-settings.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "આજના આંકડા WhatsApp પર મોકલો; તે નોંધાઈ જાય છે.",
+   "sub": "આજના આંકડા WhatsApp પર મોકલો; તે નોંધાઈ જાય છે.",
+   "min": 3.5,
+   "screen": "whatsapp-numbers.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "ભાડું અને પગાર દર મહિને મેળવી શકાય છે.",
+   "sub": "ભાડું અને પગાર દર મહિને મેળવી શકાય છે.",
+   "min": 3.5,
+   "screen": "book.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "ભૂલથી નીકળી ગયું? પાંચ સેકન્ડ રાહ જુઓ અનડુ માટે.",
+   "sub": "ભૂલથી નીકળી ગયું? પાંચ સેકન્ડ રાહ જુઓ અનડુ માટે.",
+   "min": 3.5,
+   "card": "અનડુ",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. ત્રીસ દિવસ માટે મફત, ઘણી બધી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

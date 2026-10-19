@@ -1,0 +1,79 @@
+{
+ "id": "mira-window-ta",
+ "app": "waypoint",
+ "lang": "ta",
+ "character": "mira",
+ "title": "ஒரு முறை சொல்லுங்க.",
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, stands facing the camera at a Mumbai apartment window at night, the city lights behind her, and smiles gently.",
+   "vo": "ஹாய், நான் மீரா. இது அர்ஜுன் கதை. பகல் முழுக்க அவன் நல்லா இருக்கான். ராத்திரி, மும்பையில, அவனால முடியல.",
+   "sub": "ஹாய், நான் மீரா. இது அர்ஜுன் கதை. பகல் முழுக்க அவன் நல்லா இருக்கான். ராத்திரி, மும்பையில, அவனால முடியல.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Say it once."
+  },
+  {
+   "layout": "clip",
+   "clip": "{arjun} alone at a large apartment window in Mumbai late at night, the city glowing below, his reflection in the glass, a half-finished mug on the sill, the clock on the wall near midnight.",
+   "vo": "அவன் யார்கிட்டேயும் சத்தமா சொல்லாத ஒரு விஷயம் இருக்கு.",
+   "sub": "அவன் யார்கிட்டேயும் சத்தமா சொல்லாத ஒரு விஷயம் இருக்கு.",
+   "min": 8,
+   "card": "11:48 PM"
+  },
+  {
+   "layout": "clip",
+   "clip": "{arjun} sitting on a sofa in a dim Mumbai flat, phone glow on his face, typing one line slowly, his thumb hovering over the screen, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "இன்னைக்கு Waypoint-ல அவனுக்கு ஒரு புதிய பெயர் கிடைக்குது. அவன் வாக்கியத்தை டைப் பண்றான். அவன் கட்டைவிரல் தயங்குது. அதைப் பதிவிடுறான்.",
+   "sub": "இன்னைக்கு Waypoint-ல அவனுக்கு ஒரு புதிய பெயர் கிடைக்குது. அவன் வாக்கியத்தை டைப் பண்றான். அவன் கட்டைவிரல் தயங்குது. அதைப் பதிவிடுறான்.",
+   "min": 8,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{arjun} at the same window in Mumbai at night, looking at a single glowing question on his phone and starting to answer, soft light on his face, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "அப்புறம் Daily Path. ஒரு கேள்வி, எல்லாருக்கும் ஒண்ணுதான். அவன் பதிலளிக்கிறான், நேத்து மத்தவங்க எப்படிப் பதிலளிச்சாங்கன்னு பார்க்கிறான்.",
+   "sub": "அப்புறம் Daily Path. ஒரு கேள்வி, எல்லாருக்கும் ஒண்ணுதான். அவன் பதிலளிக்கிறான், நேத்து மத்தவங்க எப்படிப் பதிலளிச்சாங்கன்னு பார்க்கிறான்.",
+   "min": 8,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{arjun} reading his phone on a Mumbai balcony at night, then closing it and taking one slow breath, a small relieved smile, the city lights behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Wall-ல, இன்னைக்கு ராத்திரி மத்தவங்க என்ன பதிவிட்டாங்கன்னு படிக்கிறான். அவன் மட்டும் இல்லன்னு தெரிய வருது. போனை மூடிட்டு, மூச்சு விடுறான்.",
+   "sub": "Wall-ல, இன்னைக்கு ராத்திரி மத்தவங்க என்ன பதிவிட்டாங்கன்னு படிக்கிறான். அவன் மட்டும் இல்லன்னு தெரிய வருது. போனை மூடிட்டு, மூச்சு விடுறான்.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Two apartment windows in two different Mumbai buildings at night, {arjun} at one holding a phone, a young woman at the other holding hers, each lit warmly, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "அவன் பேச விரும்பும்போது, Waypoint அவனோட வழியில ஒருத்தரைச் சந்திக்குது. ஒரு சிறிய அரட்டை. அப்புறம் ரெண்டு பேரும் நகர்றாங்க.",
+   "sub": "அவன் பேச விரும்பும்போது, Waypoint அவனோட வழியில ஒருத்தரைச் சந்திக்குது. ஒரு சிறிய அரட்டை. அப்புறம் ரெண்டு பேரும் நகர்றாங்க.",
+   "min": 8,
+   "screen": "matching.png"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. ஒரு முறை சொல்லுங்க. Google Play-ல இலவசம்.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "post_on": "2026-11-12",
+ "caption": "பகல் முழுக்க அவன் நல்லா இருக்கான். ராத்திரி மட்டும் இல்ல. அர்ஜுன் கதையை மீரா சொல்றா.",
+ "linkedin_text": "A small design note from Waypoint, told by Mira, our new guide.\n\nMost apps ask \"what's on your mind?\" and get silence. Waypoint asks one specific question a day, the same for everyone, and shows how others answered yesterday. Specific beats open-ended. This short story shows the real app.",
+ "hashtags": [
+  "#Mira",
+  "#DailyPath",
+  "#Waypoint"
+ ],
+ "feature": "write-post",
+ "cast": {
+  "arjun": "Arjun, a young Indian man in his late twenties with short dark hair and a plain navy hoodie"
+ }
+}

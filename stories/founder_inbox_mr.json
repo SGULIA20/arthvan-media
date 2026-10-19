@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "id": "founder-inbox-mr",
+ "character": "founder_suit",
+ "feature": "notifications-inbox",
+ "title": "एकच जागा",
+ "post_on": "2026-12-24",
+ "caption": "मनोजला अॅपने लक्ष द्यायला सांगितलेल्या सर्व गोष्टींसाठी एकच जागा हवी आहे. संस्थापक त्यांची गोष्ट सांगतात.",
+ "linkedin_text": "A bell on the ScoreMyBiz Home screen opens an in-app list of reminders, supplier-due notes, weekly check-ins, challenge updates and, in India, network leads, with an unread badge.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Reminders"
+ ],
+ "cast": {
+  "manoj": "Manoj, a middle-aged Indian pharmacy owner with round glasses and a short grey beard, in a white coat"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a bright neighbourhood pharmacy with shelves of medicine boxes behind him, a warm smile.",
+   "vo": "नमस्कार. ही मनोजची गोष्ट आहे. त्याचे मेडिकल व्यस्त असते, आणि गोष्टी विसरल्या जातात.",
+   "sub": "नमस्कार. ही मनोजची गोष्ट आहे. त्याचे मेडिकल व्यस्त असते, आणि गोष्टी विसरल्या जातात.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "One place"
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} behind his pharmacy counter serving a queue, glancing at a ringing phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "देय बिल, ग्राहकाला आठवण, आठवड्याचा आढावा. अॅपने त्याला ते कुठे सांगितले?",
+   "sub": "देय बिल, ग्राहकाला आठवण, आठवड्याचा आढावा. अॅपने त्याला ते कुठे सांगितले?",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} tapping the bell on his phone with a relieved smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये, होमवरील घंटा त्याने लक्ष द्यावयाच्या गोष्टींची एक यादी उघडते.",
+   "sub": "ScoreMyBiz मध्ये, होमवरील घंटा त्याने लक्ष द्यावयाच्या गोष्टींची एक यादी उघडते.",
+   "min": 8,
+   "screen": "notifications.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} reading his phone with interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "आठवणी, सप्लायरच्या नोंदी, साप्ताहिक आढावा, चॅलेंज अपडेट्स आणि भारतात नेटवर्कमधील लीड्स.",
+   "sub": "आठवणी, सप्लायरच्या नोंदी, साप्ताहिक आढावा, चॅलेंज अपडेट्स आणि भारतात नेटवर्कमधील लीड्स.",
+   "min": 8,
+   "screen": "notifications.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} tapping a notification with a nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "बॅज दाखवतो की काय अजून वाचायचे बाकी आहे.",
+   "sub": "बॅज दाखवतो की काय अजून वाचायचे बाकी आहे.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{manoj} standing at his pharmacy counter, relaxed, arms folded.",
+   "vo": "पाच मेसेज नाही, एकच जागा.",
+   "sub": "पाच मेसेज नाही, एकच जागा.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत চಾಣा. तीस दिवस मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "id": "founder-sunday-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "founder_casual",
+ "title": "रविवार, रात्री ९ वाजता",
+ "post_on": "2026-11-14",
+ "caption": "नवीन शहर, नवीन नोकरी आणि एक दिवस ज्याबद्दल कोणी बोलत नाही. संस्थापक रोहनची गोष्ट सांगतो.",
+ "linkedin_text": "New city, new job, a flat that is too quiet. The weekend is the loud part.\n\nWaypoint lets a person say one true sentence under a fresh name, read tonight's sentences from others, and cross paths with one person when they want a real conversation. The founder character tells Rohan's story; every screen is the real app.",
+ "hashtags": [
+  "#Waypoint",
+  "#NewCity",
+  "#SayItOnce"
+ ],
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, stands on a quiet apartment balcony at dusk in a new city, turns to the camera with an easy smile, city lights beginning to glow.",
+   "vo": "हाय. ही आहे रोहनची गोष्ट. नवीन शहर, नवीन नोकरी, मोठा फ्लॅट. दिवस संपतो, आणि तो असाच राहतो.",
+   "sub": "हाय. ही आहे रोहनची गोष्ट. नवीन शहर, नवीन नोकरी, मोठा फ्लॅट. दिवस संपतो, आणि तो असाच राहतो.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "Sunday, 9 PM"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rohan} alone at a large apartment window on a Sunday night, the city alive below, his reflection in the glass, a mug going cold on the sill.",
+   "vo": "विकेन्डला खूप गर्दी असते. सगळे कुठे ना कुठे असतात. तो खिडकीजवळ उभा असतो.",
+   "sub": "विकेन्डला खूप गर्दी असते. सगळे कुठे ना कुठे असतात. तो खिडकीजवळ उभा असतो.",
+   "min": 8,
+   "card": "रविवार, रात्री ९ वाजता"
+  },
+  {
+   "layout": "clip",
+   "clip": "{rohan} on a sofa in a dim flat, phone glow on his face, typing one line slowly, a half-unpacked box beside him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Waypoint वर त्याला आजच्या दिवसासाठी स्वतःची एक ओळख मिळते. तो एक खरी ओळ टाईप करतो. तेवढंच करायचं असतं.",
+   "sub": "Waypoint वर त्याला आजच्या दिवसासाठी स्वतःची एक ओळख मिळते. तो एक खरी ओळ टाईप करतो. तेवढंच करायचं असतं.",
+   "min": 8,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, sits on a rooftop at night with a phone, reading, the city spread behind her, soft smile, lanterns strung nearby, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "मीरा त्याला वॉल दाखवते: त्याच्यासारख्या लोकांच्या आज रात्रीच्या ओळी. वेगवेगळी शहरे, तीच नऊ वाजण्याची वेळ.",
+   "sub": "मीरा त्याला वॉल दाखवते: त्याच्यासारख्या लोकांच्या आज रात्रीच्या ओळी. वेगवेगळी शहरे, तीच नऊ वाजण्याची वेळ.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Two apartment windows in two different buildings across a night city, {rohan} at one holding a phone, a young woman at the other holding hers, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "जेव्हा त्याला खरंच बोलायचं असतं, तेव्हा Waypoint त्याची भेट एका व्यक्तीशी घडवून आणतं. फक्त दोन ओळी आणि एक उत्तर.",
+   "sub": "जेव्हा त्याला खरंच बोलायचं असतं, तेव्हा Waypoint त्याची भेट एका व्यक्तीशी घडवून आणतं. फक्त दोन ओळी आणि एक उत्तर.",
+   "min": 8,
+   "screen": "matching.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "A dark bedroom at night, a phone face-down on the bedside table, soft blue light, {rohan} breathing slowly with eyes closed, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "आणि ज्या रात्री त्याला बोलायचं नसतं, तेव्हा शांत झोपेसाठी कॅल्म किट. दोन मिनिटे, आणि झोप.",
+   "sub": "आणि ज्या रात्री त्याला बोलायचं नसतं, तेव्हा शांत झोपेसाठी कॅल्म किट. दोन मिनिटे, आणि झोप.",
+   "min": 8,
+   "screen": "calm.png"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. एकदा म्हणून पहा. गुगल प्लेवर मोफत आहे.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "feature": "wall-feed",
+ "cast": {
+  "rohan": "Rohan, a young Indian man in his twenties with short hair, a plain grey hoodie and glasses"
+ }
+}

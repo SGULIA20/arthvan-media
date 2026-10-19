@@ -1,0 +1,113 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview6-mr",
+ "title": "स्मार्ट गोष्टी आणि मोफत टूल्स",
+ "post_on": "2027-01-11",
+ "caption": "भाग ६: स्मार्ट गोष्टी आणि मोफत टूल्स. फोटो आणि आवाजाने नोंद, रिस्क फ्लॅग्ज, निर्णय सराव, मेसेज, प्रिंट करता येणारे कागद आणि ScoreMyBiz साठी कॅल्क्युलेटर.",
+ "linkedin_text": "Part 6 of the ScoreMyBiz tour: photo entry and voice entry that you check before saving, one-tap customer reminders, risk flags, decision practice, comparing with similar businesses when enough exist, a quiet WhatsApp nudge, a printable daily sheet, free calculators, offer posters and inviting a friend.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हाय, मी ल्युमी. भाग सहा: स्मार्ट गोष्टी आणि मोफत टूल्स.",
+   "sub": "हाय, मी ल्युमी. भाग सहा: स्मार्ट गोष्टी आणि मोफत टूल्स.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "बिल किंवा वहीचा फोटो काढा, तपासा, सेव्ह करा.",
+   "sub": "बिल किंवा वहीचा फोटो काढा, तपासा, सेव्ह करा.",
+   "min": 3.5,
+   "card": "फोटोने नोंद",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "एक ओळ बोला, जसे राजू ला दोन हजार विकले.",
+   "sub": "एक ओळ बोला, जसे राजू ला दोन हजार विकले.",
+   "min": 3.5,
+   "card": "आवाजाने नोंद",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "एका क्लिकवर ग्राहकाला व्हॉट्सॲपवर आठवण करा.",
+   "sub": "एका क्लिकवर ग्राहकाला व्हॉट्सॲपवर आठवण करा.",
+   "min": 3.5,
+   "screen": "cash-flow.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "scene",
+   "vo": "तुमच्या स्कोअरमागचे रिस्क फ्लॅग्ज उघडा.",
+   "sub": "तुमच्या स्कोअरमागचे रिस्क फ्लॅग्ज उघडा.",
+   "min": 3.5,
+   "card": "रिस्क फ्लॅग्ज",
+   "pose": "thinking"
+  },
+  {
+   "layout": "scene",
+   "vo": "तीन निर्णय तपासा, आणि तुमचा स्कोअर बदलताना पहा.",
+   "sub": "तीन निर्णय तपासा, आणि तुमचा स्कोअर बदलताना पहा.",
+   "min": 3.5,
+   "card": "निर्णय सराव",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "सारख्या व्यवसायांशी तुलना करा, जेव्हा डेटा असेल.",
+   "sub": "सारख्या व्यवसायांशी तुलना करा, जेव्हा डेटा असेल.",
+   "min": 3.5,
+   "card": "तुलना करा",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "scene",
+   "vo": "दोन शांत दिवस? तुम्हाला व्हॉट्सॲपवर मेसेज येईल.",
+   "sub": "दोन शांत दिवस? तुम्हाला व्हॉट्सॲपवर मेसेज येईल.",
+   "min": 3.5,
+   "card": "एक शांत मेसेज",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "मोफत दररोजची शीट छापा, मग फोटो पाठवा.",
+   "sub": "मोफत दररोजची शीट छापा, मग फोटो पाठवा.",
+   "min": 3.5,
+   "card": "दररोजची शीट",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "scene",
+   "vo": "वेबसाइटवर: मोफत कॅल्क्युलेटर आणि ऑफर्सचे पोस्टर्स.",
+   "sub": "वेबसाइटवर: मोफत कॅल्क्युलेटर आणि ऑफर्सचे पोस्टर्स.",
+   "min": 3.5,
+   "card": "मोफत वेबसाइट टूल्स",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "scene",
+   "vo": "मित्राला बोलवण्यासाठी तुमची लिंक पाठवा.",
+   "sub": "मित्राला बोलवण्यासाठी तुमची लिंक पाठवा.",
+   "min": 3.5,
+   "card": "मित्राला बोलवा",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तीस दिवस मोफत, अनेक भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

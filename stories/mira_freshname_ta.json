@@ -1,0 +1,77 @@
+{
+ "id": "mira-freshname-ta",
+ "app": "waypoint",
+ "lang": "ta",
+ "character": "mira",
+ "feature": "fresh-name",
+ "title": "ஒ h ஒவ்வொரு நாளும் புதிது",
+ "post_on": "2026-11-20",
+ "caption": "ஒவ்வொரு நாளும் Zoya Waypoint-ல் ஒரு புதிய பெயருடன் எழுகிறாள். Mira அவளது கதையைச் சொல்கிறாள்.",
+ "linkedin_text": "Most apps keep you as the same profile forever.\n\nOn Waypoint the app gives you a new generated name and avatar every day, and you can choose your own for the day if you like. Mira tells Zoya's story; every screen is the real app.",
+ "hashtags": [
+  "#FreshStart",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "zoya": "Zoya, a young Indian woman in her twenties with a long braid, a teal kurta and round glasses"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera on a sunny rooftop at sunrise, soft golden light, a gentle smile.",
+   "vo": "ஹாய், நான் Mira. இது Zoya-வின் கதை. ஒவ்வொரு நாளும் Waypoint-ல் அவள் ஒரு புதிய பெயருடன் எழுகிறாள்.",
+   "sub": "ஹாய், நான் Mira. இது Zoya-வின் கதை. ஒவ்வொரு நாளும் Waypoint-ல் அவள் ஒரு புதிய பெயருடன் எழுகிறாள்.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "New every morning"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} in a bright kitchen at sunrise holding a phone and a cup of tea, curious, steam rising, warm light.",
+   "vo": "நேற்று போனது நேற்று. இன்று காலை இந்த ஆப் அவளுக்கு ஒரு புதிய தொடக்கத்தைத் தருகிறது.",
+   "sub": "நேற்று போனது நேற்று. இன்று காலை இந்த ஆப் அவளுக்கு ஒரு புதிய தொடக்கத்தைத் தருகிறது.",
+   "min": 8,
+   "card": "காலை வணக்கம்"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} at her kitchen counter looking at her phone with a delighted smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "இது அவளுக்கு ஒரு பெயரையும் படத்தையும் தேர்ந்தெடுத்து, நாளைய நாளை மீட்டமைக்கும்.",
+   "sub": "இது அவளுக்கு ஒரு பெயரையும் படத்தையும் தேர்ந்தெடுத்து, நாளைய நாளை மீட்டமைக்கும்.",
+   "min": 8,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} thoughtfully picking on her phone at a sunny window, tea beside her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "அவளுக்குப் பிடித்திருந்தால், அவளுடைய சொந்தப் பெயரையும் படத்தையும் நாளுக்கெனத் தேர்ந்தெடுக்கலாம்.",
+   "sub": "அவளுக்குப் பிடித்திருந்தால், அவளுடைய சொந்தப் பெயரையும் படத்தையும் நாளுக்கெனத் தேர்ந்தெடுக்கலாம்.",
+   "min": 8,
+   "screen": "customize.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} laughing with a friend over coffee at a sunny cafe table, relaxed, warm morning light.",
+   "vo": "அதே Zoya. வேறொரு பெயர். இன்னும் லேசான தொடக்கம்.",
+   "sub": "அதே Zoya. வேறொரு பெயர். இன்னும் லேசான தொடக்கம்.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{zoya} walking to work through a sunny street, a bag on her shoulder, an easy confident smile.",
+   "vo": "இன்றைய வாக்கியத்தைச் சொல். பெயர் நாளை மாறட்டும்.",
+   "sub": "இன்றைய வாக்கியத்தைச் சொல். பெயர் நாளை மாறட்டும்.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. ஒருமுறை சொல். Google Play-ல் இலவசம், பல இந்திய மற்றும் உலக மொழிகளில்.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

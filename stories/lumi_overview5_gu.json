@@ -1,0 +1,113 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview5-gu",
+ "title": "વધુ જાણો, વધુ શેર કરો",
+ "post_on": "2027-01-10",
+ "caption": "ભાગ 5: વધુ જાણો અને વધુ શેર કરો. ચોપડીમાંથી તમારો સ્કોર, ફોટા શેર કરો, પ્લાનિંગ ટૂલ્સ, ભાષાઓ અને ScoreMyBiz માં તમારું એકાઉન્ટ.",
+ "linkedin_text": "Part 5 of the ScoreMyBiz tour: a score built from the book itself, sharing your score and your week as pictures, plans for a new shop or more sales, 25 languages, nineteen countries, sign-in with a WhatsApp code, your details and recovery, reporting a problem and downloading or deleting your data.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય, હું લુમી છું. ભાગ પાંચ: વધુ જાણો, અને વધુ શેર કરો.",
+   "sub": "હાય, હું લુમી છું. ભાગ પાંચ: વધુ જાણો, અને વધુ શેર કરો.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "પૂરતી એન્ટ્રી થઈ? તમારો સ્કોર હવે તમારી ચોપડીમાંથી આવે છે.",
+   "sub": "પૂરતી એન્ટ્રી થઈ? તમારો સ્કોર હવે તમારી ચોપડીમાંથી આવે છે.",
+   "min": 3.5,
+   "card": "તમારી ચોપડીમાંથી સ્કોર",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "હેલ્ધી પર, તમારો સ્કોર ફોટા તરીકે શેર કરો.",
+   "sub": "હેલ્ધી પર, તમારો સ્કોર ફોટા તરીકે શેર કરો.",
+   "min": 3.5,
+   "screen": "result.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "તમારું અઠવાડિયું પણ ફોટા તરીકે શેર કરો.",
+   "sub": "તમારું અઠવાડિયું પણ ફોટા તરીકે શેર કરો.",
+   "min": 3.5,
+   "card": "તમારું અઠવાડિયું, શેર કર્યું",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "દુકાનનું આયોજન કરો: નફો, ચૂકવણી, રોકડ જોઈએ.",
+   "sub": "દુકાનનું આયોજન કરો: નફો, ચૂકવણી, રોકડ જોઈએ.",
+   "min": 3.5,
+   "card": "દુકાનનું આયોજન કરો",
+   "pose": "thinking"
+  },
+  {
+   "layout": "scene",
+   "vo": "૨૫ ભાષાઓ, અને WhatsApp ના જવાબો તમારી પસંદગી મુજબ આવશે.",
+   "sub": "૨૫ ભાષાઓ, અને WhatsApp ના જવાબો તમારી પસંદગી મુજબ આવશે.",
+   "min": 3.5,
+   "card": "૨૫ ભાષાઓ",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "સ્થાનિક નાણાં અને ટેક્સના શબ્દો, ઓગણીસ દેશોમાં.",
+   "sub": "સ્થાનિક નાણાં અને ટેક્સના શબ્દો, ઓગણીસ દેશોમાં.",
+   "min": 3.5,
+   "card": "૧૯ દેશો",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "scene",
+   "vo": "WhatsApp કોડથી સાઇન ઇન કરો. કોઈ પાસવર્ડ નહીં.",
+   "sub": "WhatsApp કોડથી સાઇન ઇન કરો. કોઈ પાસવર્ડ નહીં.",
+   "min": 3.5,
+   "card": "WhatsApp સાઇન-ઇન",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "વિગતો બદલો, નંબર બદલો, કે તમારું એકાઉન્ટ પાછું મેળવો.",
+   "sub": "વિગતો બદલો, નંબર બદલો, કે તમારું એકાઉન્ટ પાછું મેળવો.",
+   "min": 3.5,
+   "card": "તમારું એકાઉન્ટ",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "સમસ્યા જણાવો, અને જવાબ અહીં જુઓ.",
+   "sub": "સમસ્યા જણાવો, અને જવાબ અહીં જુઓ.",
+   "min": 3.5,
+   "screen": "support.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "તમારો ડેટા ડાઉનલોડ કરો, અથવા તમારું એકાઉન્ટ કાઢી નાખો.",
+   "sub": "તમારો ડેટા ડાઉનલોડ કરો, અથવા તમારું એકાઉન્ટ કાઢી નાખો.",
+   "min": 3.5,
+   "card": "તમારો ડેટા",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. ત્રીસ દિવસ માટે મફત, ઘણી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

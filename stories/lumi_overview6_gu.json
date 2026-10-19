@@ -1,0 +1,113 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview6-gu",
+ "title": "સ્માર્ટ વધારાની બાબતો અને મફત સાધનો",
+ "post_on": "2027-01-11",
+ "caption": "ભાગ 6: સ્માર્ટ વધારાની બાબતો અને મફત સાધનો. ફોટો અને અવાજથી એન્ટ્રી, જોખમની ચેતવણીઓ, નિર્ણયનો અભ્યાસ, યાદ અપાવવું, છાપી શકાય તેવા કાગળો અને ScoreMyBiz માટે કેલ્ક્યુલેટર.",
+ "linkedin_text": "Part 6 of the ScoreMyBiz tour: photo entry and voice entry that you check before saving, one-tap customer reminders, risk flags, decision practice, comparing with similar businesses when enough exist, a quiet WhatsApp nudge, a printable daily sheet, free calculators, offer posters and inviting a friend.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય, હું લુમિ છું. ભાગ છ: સ્માર્ટ વધારાની બાબતો અને મફત સાધનો.",
+   "sub": "હાય, હું લુમિ છું. ભાગ છ: સ્માર્ટ વધારાની બાબતો અને મફત સાધનો.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "બિલ કે નોટબુકનો ફોટો પાડો, ચકાસો, સાચવો.",
+   "sub": "બિલ કે નોટબુકનો ફોટો પાડો, ચકાસો, સાચવો.",
+   "min": 3.5,
+   "card": "ફોટો એન્ટ્રી",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "એક વાક્ય બોલો, જેમ કે રાજુને બે હજારમાં વેચ્યું.",
+   "sub": "એક વાક્ય બોલો, જેમ કે રાજુને બે હજારમાં વેચ્યું.",
+   "min": 3.5,
+   "card": "અવાજથી એન્ટ્રી",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "WhatsApp પર, એક જ ટૅપમાં ગ્રાહકને યાદ કરાવો.",
+   "sub": "WhatsApp પર, એક જ ટૅપમાં ગ્રાહકને યાદ કરાવો.",
+   "min": 3.5,
+   "screen": "cash-flow.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "scene",
+   "vo": "તમારા સ્કોર પાછળના જોખમની ચેતવણીઓ ખોલો.",
+   "sub": "તમારા સ્કોર પાછળના જોખમની ચેતવણીઓ ખોલો.",
+   "min": 3.5,
+   "card": "જોખમની ચેતવણીઓ",
+   "pose": "thinking"
+  },
+  {
+   "layout": "scene",
+   "vo": "ત્રણ નિર્ણયોનો અભ્યાસ કરો, અને તમારો સ્કોર બદલાતો જુઓ.",
+   "sub": "ત્રણ નિર્ણયોનો અભ્યાસ કરો, અને તમારો સ્કોર બદલાતો જુઓ.",
+   "min": 3.5,
+   "card": "નિર્ણયનો અભ્યાસ",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "પૂરતા વ્યવસાયો થાય ત્યારે, સમાન વ્યવસાયો સાથે સરખામણી કરો.",
+   "sub": "પૂરતા વ્યવસાયો થાય ત્યારે, સમાન વ્યવસાયો સાથે સરખામણી કરો.",
+   "min": 3.5,
+   "card": "સરખામણી કરો",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "scene",
+   "vo": "બે શાંત દિવસો? તમને ક્યારેક WhatsApp પર યાદ અપાવાય છે.",
+   "sub": "બે શાંત દિવસો? તમને ક્યારેક WhatsApp પર યાદ અપાવાય છે.",
+   "min": 3.5,
+   "card": "શાંત યાદી",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "મફત દૈનિક કાગળ છાપો, પછી ફોટો મોકલો.",
+   "sub": "મફત દૈનિક કાગળ છાપો, પછી ફોટો મોકલો.",
+   "min": 3.5,
+   "card": "દૈનિક કાગળ",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "scene",
+   "vo": "વેબસાઇટ પર: મફત કેલ્ક્યુલેટર અને ઓફરના પોસ્ટર.",
+   "sub": "વેબસાઇટ પર: મફત કેલ્ક્યુલેટર અને ઓફરના પોસ્ટર.",
+   "min": 3.5,
+   "card": "મફત વેબસાઇટ સાધનો",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "scene",
+   "vo": "મિત્રને આમંત્રિત કરવા તમારી લિંક શેર કરો.",
+   "sub": "મિત્રને આમંત્રિત કરવા તમારી લિંક શેર કરો.",
+   "min": 3.5,
+   "card": "મિત્રને આમંત્રિત કરો",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. ત્રીસ દિવસ માટે મફત, ઘણી બધી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

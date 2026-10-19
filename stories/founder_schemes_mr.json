@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "id": "founder-schemes-mr",
+ "character": "founder_suit",
+ "feature": "schemes-and-weather",
+ "title": "पावसाआधी",
+ "post_on": "2026-12-26",
+ "caption": "पावसाचा अंदाज अनिलला त्याचा माल जमिनीवरून हलवायला सांगतो. संस्थापक आपली गोष्ट सांगतो.",
+ "linkedin_text": "In India, ScoreMyBiz shows a four-day weather watch with plain business alerts, and matches small-business schemes to the owner's type, city and size as likely or possible fits, each with the official link. It never promises a scheme or a loan.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#MSME"
+ ],
+ "cast": {
+  "anil": "Anil, a middle-aged Indian grain trader with a grey moustache, in a beige kurta"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera outside a grain warehouse in the afternoon, sacks stacked behind him, a warm smile.",
+   "vo": "नमस्कार. ही अनिलची गोष्ट आहे. तो भारतात धान्य विकतो, आणि पाऊस त्याची सगळ्यात मोठी काळजी आहे.",
+   "sub": "नमस्कार. ही अनिलची गोष्ट आहे. तो भारतात धान्य विकतो, आणि पाऊस त्याची सगळ्यात मोठी काळजी आहे.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Before the rain"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} in his grain warehouse looking at sacks on the floor, concerned, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "जमिनीवर पोती, आणि हवामानाचा आठवडाभर काहीच भरवसा नाही.",
+   "sub": "जमिनीवर पोती, आणि हवामानाचा आठवडाभर काहीच भरवसा नाही.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} checking his phone with a serious nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "भारतातील ScoreMyBiz मध्ये, योजना आणि हवामान त्याच्या शहरासाठी चार दिवसांचा हवामानाचा इशारा दाखवतात.",
+   "sub": "भारतातील ScoreMyBiz मध्ये, योजना आणि हवामान त्याच्या शहरासाठी चार दिवसांचा हवामानाचा इशारा दाखवतात.",
+   "min": 8,
+   "screen": "alerts.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} reading the alert on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "एक साधी सूचना सांगते की मुसळधार पाऊस येणार आहे, आणि माल जमिनीवरून वर ठेवा.",
+   "sub": "एक साधी सूचना सांगते की मुसळधार पाऊस येणार आहे, आणि माल जमिनीवरून वर ठेवा.",
+   "min": 8,
+   "screen": "alerts.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} lifting a sack onto a pallet with effort, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "यात सरकारी योजनांची यादीही आहे जी त्याच्या व्यवसायासाठी उपयोगी पडू शकते, अधिकृत लिंकसह. यात कधीही त्याला योजना नक्की मिळेल असा दावा केला जात नाही.",
+   "sub": "यात सरकारी योजनांची यादीही आहे जी त्याच्या व्यवसायासाठी उपयोगी पडू शकते, अधिकृत लिंकसह. यात कधीही त्याला योजना नक्की मिळेल असा दावा केला जात नाही.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{anil} standing relaxed in his dry warehouse, arms folded, smiling.",
+   "vo": "त्याच्या मोफत महिन्यात, पावसाआधीच माल जमिनीवरून हलवला जातो.",
+   "sub": "त्याच्या मोफत महिन्यात, पावसाआधीच माल जमिनीवरून हलवला जातो.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत जाणून घ्या. तीस दिवस मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

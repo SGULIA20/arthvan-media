@@ -1,0 +1,113 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview3-mr",
+ "title": "तुमचे पैसे, एकदम स्पष्ट",
+ "post_on": "2027-01-08",
+ "caption": "भाग ३: तुमचे पैसे, एकदम स्पष्ट. खऱ्या ॲपवर दाखवलेले ScoreMyBiz चे पैशांचे स्क्रीन.",
+ "linkedin_text": "Part 3 of the ScoreMyBiz tour: counting cash and bank against the book, the cash book by day, searchable lists, what you have and owe, paper profit against real cash, quotations, bill settings, WhatsApp numbers, monthly repeats and undo.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हॅलो, मी लुमी. भाग तिसरा: तुमचे पैसे, अगदी स्पष्ट.",
+   "sub": "हॅलो, मी लुमी. भाग तिसरा: तुमचे पैसे, अगदी स्पष्ट.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "रोकड आणि बँक वहीसोबत तपासा.",
+   "sub": "रोकड आणि बँक वहीसोबत तपासा.",
+   "min": 3.5,
+   "screen": "money-now.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "दिवसागणिक कॅश बुक, सुरुवातीपासून शेवटपर्यंत.",
+   "sub": "दिवसागणिक कॅश बुक, सुरुवातीपासून शेवटपर्यंत.",
+   "min": 3.5,
+   "screen": "cash-book.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "विक्री, खरेदी आणि खर्च केलेले सर्व काही शोधा आणि डाउनलोड करा.",
+   "sub": "विक्री, खरेदी आणि खर्च केलेले सर्व काही शोधा आणि डाउनलोड करा.",
+   "min": 3.5,
+   "screen": "registers.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "तुमच्याकडे काय आहे आणि किती देणे आहे, एकाच पानावर.",
+   "sub": "तुमच्याकडे काय आहे आणि किती देणे आहे, एकाच पानावर.",
+   "min": 3.5,
+   "screen": "balance-sheet.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "कागदावरचा नफा आणि प्रत्यक्ष हातातली रोकड.",
+   "sub": "कागदावरचा नफा आणि प्रत्यक्ष हातातली रोकड.",
+   "min": 3.5,
+   "screen": "cash-reality.png",
+   "pose": "thinking"
+  },
+  {
+   "layout": "present",
+   "vo": "पीडीएफ कोटेशन पाठवा, मग त्याची विक्री करा.",
+   "sub": "पीडीएफ कोटेशन पाठवा, मग त्याची विक्री करा.",
+   "min": 3.5,
+   "screen": "quotations.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "तुमच्या बिलांचे नंबर कसे हवेत ते ठरवा.",
+   "sub": "तुमच्या बिलांचे नंबर कसे हवेत ते ठरवा.",
+   "min": 3.5,
+   "screen": "billing-settings.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "आजचे आकडे व्हॉट्सॲपवर पाठवा; ते सेव्ह होतात.",
+   "sub": "आजचे आकडे व्हॉट्सॲपवर पाठवा; ते सेव्ह होतात.",
+   "min": 3.5,
+   "screen": "whatsapp-numbers.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "भाडे आणि पगार दरमहा रिपीट होऊ शकतात.",
+   "sub": "भाडे आणि पगार दरमहा रिपीट होऊ शकतात.",
+   "min": 3.5,
+   "screen": "book.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "चुकीने डिलीट झाले? अनडू पाच सेकंद वाट पाहतो.",
+   "sub": "चुकीने डिलीट झाले? अनडू पाच सेकंद वाट पाहतो.",
+   "min": 3.5,
+   "card": "अनडू",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तीस दिवस मोफत, अनेक भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

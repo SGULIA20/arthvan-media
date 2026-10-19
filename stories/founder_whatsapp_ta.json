@@ -1,0 +1,76 @@
+{
+ "id": "founder-whatsapp-ta",
+ "app": "scoremybiz",
+ "lang": "ta",
+ "character": "founder_suit",
+ "feature": "whatsapp-daily-update",
+ "title": "வாட்ஸ்அப் வழி",
+ "post_on": "2026-10-27",
+ "caption": "கடை மூட நேரமாச்சு, ரவி சோர்வா இருக்காரு. வாட்ஸ்அப்ல மூணு நம்பர் அனுப்புறாரு, டேக்-அவுட் கணக்கு முடிஞ்சது.",
+ "linkedin_text": "A shopkeeper at closing time does not want another form. He sends three numbers in one WhatsApp message: sales, expenses and cash. ScoreMyBiz records them. In the free month a photo of the notebook or a voice note works too, and nothing is saved until he says YES.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#WhatsApp",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "ravi": "Ravi, a young Indian mobile-phone shop owner with a trimmed beard in a checked shirt and a lanyard"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy market lane at night, shop signs glowing behind him, a warm smile.",
+   "vo": "ஹாய். இது ரவி கதை. அவர் மொபைல் விற்கிறார், கடை மூடும் நேரம் சோர்வாக இருக்கிறார்.",
+   "sub": "ஹாய். இது ரவி கதை. அவர் மொபைல் விற்கிறார், கடை மூடும் நேரம் சோர்வாக இருக்கிறார்.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "The WhatsApp way"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} gently closing the glass door of his phone shop in the evening, shop lights glowing behind him, a thoughtful expression.",
+   "vo": "இன்றைய விற்பனை, செலவு, ரொக்கம் எல்லாம் அவர் தலையில்தான் இருக்கு. இன்னைக்கு ராத்திரி வேற ஃபார்ம் எழுத அவர் விரும்பல.",
+   "sub": "இன்றைய விற்பனை, செலவு, ரொக்கம் எல்லாம் அவர் தலையில்தான் இருக்கு. இன்னைக்கு ராத்திரி வேற ஃபார்ம் எழுத அவர் விரும்பல.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} sitting on a stool outside his shop typing on his phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "அதனால வாட்ஸ்அப் திறந்து ScoreMyBiz-க்கு ஒரு மெசேஜ்ல மூணு நம்பர் அனுப்புறாரு: விற்பனை, செலவு, ரொக்கம். 'பதிவு செய்யப்பட்டது'னு பதில் வருது.",
+   "sub": "அதனால வாட்ஸ்அப் திறந்து ScoreMyBiz-க்கு ஒரு மெசேஜ்ல மூணு நம்பர் அனுப்புறாரு: விற்பனை, செலவு, ரொக்கம். 'பதிவு செய்யப்பட்டது'னு பதில் வருது.",
+   "min": 8,
+   "screen": "whatsapp-numbers.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} speaking into his phone at the shop counter, an open notebook beside him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "இலவச மாசத்துல, நோட்டுப் புத்தகம் போட்டோ இல்ல வாய்ஸ் நோட் கூட வேலை செய்யும். அது படிச்சுக் காட்டும், ஆம்னு சொன்னாதான் சேவ் ஆகும்.",
+   "sub": "இலவச மாசத்துல, நோட்டுப் புத்தகம் போட்டோ இல்ல வாய்ஸ் நோட் கூட வேலை செய்யும். அது படிச்சுக் காட்டும், ஆம்னு சொன்னாதான் சேவ் ஆகும்.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} at a wholesaler's busy counter looking at his phone, boxes of phones behind him, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "மொத்த வியாபாரியிடம் அவருக்கு யார் பாக்கி தரணும்னு தெரியணும். அவர் ஹாய் சொல்லி, நம்பர் மூணு தொடுறார்.",
+   "sub": "மொத்த வியாபாரியிடம் அவருக்கு யார் பாக்கி தரணும்னு தெரியணும். அவர் ஹாய் சொல்லி, நம்பர் மூணு தொடுறார்.",
+   "min": 8,
+   "screen": "whatsapp-menu.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{ravi} standing in front of his phone shop in the morning sun, arms folded, a bright smile.",
+   "vo": "அவர் ஏற்கனவே வச்சிருக்க எளிமையான சாட் தான்.",
+   "sub": "அவர் ஏற்கனவே வச்சிருக்க எளிமையான சாட் தான்.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. உங்கள் வியாபார நிலையை அறியுங்கள். முப்பது நாட்களுக்கு இலவசம், பல இந்திய மற்றும் வெளிநாட்டு மொழிகளில்.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

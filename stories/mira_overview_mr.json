@@ -1,0 +1,105 @@
+{
+ "id": "mira-overview-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "एक मिनिटात Waypoint",
+ "post_on": "2026-12-31",
+ "caption": "एक मिनिटात Waypoint: नाव न घेता, एक खरी गोष्ट सांगायची जागा. मीरा खऱ्या स्क्रीनवर मुख्य गोष्टी दाखवते.",
+ "linkedin_text": "A one-minute tour of Waypoint on its real screens: a new name every day, one true sentence, the Wall, polls, voice posts, matching and Mira the AI guide, a mood log, the Break Room and sixteen languages.",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हाय, मी मीरा. एका मिनिटात पहा Waypoint.",
+   "sub": "हाय, मी मीरा. एका मिनिटात पहा Waypoint.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "रोज तुम्हाला मिळतं एक नवीन नाव, फक्त आजसाठी.",
+   "sub": "रोज तुम्हाला मिळतं एक नवीन नाव, फक्त आजसाठी.",
+   "min": 3.5,
+   "screen": "reveal.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "एक खरं वाक्य लिहा. बस, एवढंच आहे.",
+   "sub": "एक खरं वाक्य लिहा. बस, एवढंच आहे.",
+   "min": 3.5,
+   "screen": "create_typed.png",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "present",
+   "vo": "वॉलवर वाचा इतरांनी आज रात्री काय लिहिलंय.",
+   "sub": "वॉलवर वाचा इतरांनी आज रात्री काय लिहिलंय.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "पाथला विचारा: एक प्रश्न, दोन ते चार पर्याय.",
+   "sub": "पाथला विचारा: एक प्रश्न, दोन ते चार पर्याय.",
+   "min": 3.5,
+   "screen": "poll.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "किंवा व्हॉईस दाबून बोला. इतरांना ऐकू येतो एका पात्राचा आवाज.",
+   "sub": "किंवा व्हॉईस दाबून बोला. इतरांना ऐकू येतो एका पात्राचा आवाज.",
+   "min": 3.5,
+   "screen": "voice.png",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "present",
+   "vo": "मॅचची वाट पाहा, किंवा मीराशी बोला, जी एक AI गाईड आहे.",
+   "sub": "मॅचची वाट पाहा, किंवा मीराशी बोला, जी एक AI गाईड आहे.",
+   "min": 3.5,
+   "screen": "matching-mira.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "एका टॅपमध्ये तुमचा मूड नोंदवा. काही टाईप करायचं नाही.",
+   "sub": "एका टॅपमध्ये तुमचा मूड नोंदवा. काही टाईप करायचं नाही.",
+   "min": 3.5,
+   "screen": "mood.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "ब्रेक रूममध्ये नव्वद सेकंद, दिवसातून एकदा.",
+   "sub": "ब्रेक रूममध्ये नव्वद सेकंद, दिवसातून एकदा.",
+   "min": 3.5,
+   "screen": "break-room.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "सोळा भाषांमध्ये.",
+   "sub": "सोळा भाषांमध्ये.",
+   "min": 3.5,
+   "screen": "language.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. एकदा सांगा. गुगल प्लेवर मोफत.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

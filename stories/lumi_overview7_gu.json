@@ -1,0 +1,65 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "feature": "business-network",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview7-gu",
+ "title": "ભારત માટે: વાપરવા માટે વધુ",
+ "post_on": "2027-01-12",
+ "caption": "ભાગ ૭, ભારત માટે: યોજનાઓ અને હવામાન, બિઝનેસ નેટવર્ક અને તમારા સીએના ડૉક્યુમેન્ટ્સ ScoreMyBiz માં.",
+ "linkedin_text": "Part 7 of the ScoreMyBiz tour, for India: a four-day weather alert with government schemes that may suit you, the business network where one line reaches nearby businesses, and documents your CA uploads for you.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય, હું લુમી છું. ભાગ સાત, ભારત માટે: વાપરવા વધુ.",
+   "sub": "હાય, હું લુમી છું. ભાગ સાત, ભારત માટે: વાપરવા વધુ.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "ચાર દિવસની હવામાન ચેતવણી, તમને કામ આવે એવી સરકારી યોજનાઓ સાથે.",
+   "sub": "ચાર દિવસની હવામાન ચેતવણી, તમને કામ આવે એવી સરકારી યોજનાઓ સાથે.",
+   "min": 3.5,
+   "screen": "alerts.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "બિઝનેસ નેટવર્ક: એક જ લીટીથી આસપાસના ધંધા સાથે જોડાય છે.",
+   "sub": "બિઝનેસ નેટવર્ક: એક જ લીટીથી આસપાસના ધંધા સાથે જોડાય છે.",
+   "min": 3.5,
+   "screen": "network.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "અને તમારા સીએ મુકે એ ડૉક્યુમેન્ટ્સ, માય ડૉક્યુમેન્ટ્સમાં.",
+   "sub": "અને તમારા સીએ મુકે એ ડૉક્યુમેન્ટ્સ, માય ડૉક્યુમેન્ટ્સમાં.",
+   "min": 3.5,
+   "screen": "my-documents.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "તમે નક્કી કર્યા પછી, તમારા સીએ પૂરું થયેલું મહિનું લૉક પણ કરી શકે છે.",
+   "sub": "તમે નક્કી કર્યા પછી, તમારા સીએ પૂરું થયેલું મહિનું લૉક પણ કરી શકે છે.",
+   "min": 3.5,
+   "card": "તમારા સીએ સાથે",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,113 @@
+{
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "id": "mira-overview4-mr",
+ "title": "चॅट्स, सुरक्षा आणि सेटिंग्स",
+ "post_on": "2027-01-06",
+ "caption": "भाग ४: Waypoint मधील चॅट्स, सुरक्षा आणि सेटिंग्स. मीरा दाखवते की हे लोकांना सुरक्षित कसं ठेवतं.",
+ "linkedin_text": "Part 4 of the Waypoint tour: the 18-plus check, thirty-minute text chats, ending and blocking, reporting, screening before posts go live, the helpline pause, the not-official label, settings, help and deleting your account.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हाय, मी मीरा. भाग चौथा: चॅट्स, सुरक्षा आणि सेटिंग्स.",
+   "sub": "हाय, मी मीरा. भाग चौथा: चॅट्स, सुरक्षा आणि सेटिंग्स.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "अठरा आणि वयाची अट, अटी आणि नियमांना होकार.",
+   "sub": "अठरा आणि वयाची अट, अटी आणि नियमांना होकार.",
+   "min": 3.5,
+   "card": "१८ आणि वयाची अट",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "मॅच चॅट्स फक्त टेक्स्ट आहेत, तीस मिनिटांसाठी.",
+   "sub": "मॅच चॅट्स फक्त टेक्स्ट आहेत, तीस मिनिटांसाठी.",
+   "min": 3.5,
+   "card": "३०-मिनिटांचे चॅट्स",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "scene",
+   "vo": "पाच मिनिटांत संपतात, केव्हाही ब्लॉक करा, रेट करा.",
+   "sub": "पाच मिनिटांत संपतात, केव्हाही ब्लॉक करा, रेट करा.",
+   "min": 3.5,
+   "card": "तुम्ही ठरवता",
+   "pose": "relieved"
+  },
+  {
+   "layout": "scene",
+   "vo": "कोणतीही पोस्ट, मेसेज वा मोमेंट रिपोर्ट किंवा ब्लॉक करा.",
+   "sub": "कोणतीही पोस्ट, मेसेज वा मोमेंट रिपोर्ट किंवा ब्लॉक करा.",
+   "min": 3.5,
+   "card": "रिपोर्ट आणि ब्लॉक",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "पोस्ट आधी तपासल्या जातात; त्रास देणे आणि द्वेष नाकारला जातो.",
+   "sub": "पोस्ट आधी तपासल्या जातात; त्रास देणे आणि द्वेष नाकारला जातो.",
+   "min": 3.5,
+   "card": "आधी तपासणी",
+   "pose": "listening"
+  },
+  {
+   "layout": "scene",
+   "vo": "संकटाची चाहूल देणारी पोस्ट हेल्पलाईन आणि थांबा दाखवते.",
+   "sub": "संकटाची चाहूल देणारी पोस्ट हेल्पलाईन आणि थांबा दाखवते.",
+   "min": 3.5,
+   "card": "पोस्ट करण्यापूर्वी",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "Waypoint कर्मचारी भासणारी कोणतीही गोष्ट अनधिकृत दर्शवली जाते.",
+   "sub": "Waypoint कर्मचारी भासणारी कोणतीही गोष्ट अनधिकृत दर्शवली जाते.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "सेटिंग्ज, मदत, अटी आणि अभिप्राय: माय Waypoints.",
+   "sub": "सेटिंग्ज, मदत, अटी आणि अभिप्राय: माय Waypoints.",
+   "min": 3.5,
+   "screen": "my-waypoints.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "तिथूनच तुमचे खाते आणि डेटाही डिलीट करा.",
+   "sub": "तिथूनच तुमचे खाते आणि डेटाही डिलीट करा.",
+   "min": 3.5,
+   "screen": "invite.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "सूचना, अपडेट प्रॉम्प्ट्स आणि एक ऑफलाईन बार.",
+   "sub": "सूचना, अपडेट प्रॉम्प्ट्स आणि एक ऑफलाईन बार.",
+   "min": 3.5,
+   "card": "संपर्कात राहा",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. एकदाच सांगा. गुगल प्लेवर मोफत.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

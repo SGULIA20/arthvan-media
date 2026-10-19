@@ -1,0 +1,89 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "founder_suit",
+ "feature": "ca-network",
+ "style": "cutout",
+ "hashtags": [
+  "#CharteredAccountant",
+  "#ScoreMyBiz",
+  "#CAIndia"
+ ],
+ "id": "founder-ca-vault-mr",
+ "title": "डॉक्यूमेंट्स आणि डेटा, योग्य रीतीने शेअर करा",
+ "post_on": "2027-01-02",
+ "caption": "भारतातील CA साठी. भाग २: तुमचे क्लायंट त्यांच्या स्वतःच्या ॲपमध्ये उघडत असलेले डॉक्युमेंट्स, एक्सपोर्ट्स, लॉक केलेले महिने आणि बदलांची स्पष्ट नोंद.",
+ "linkedin_text": "For CAs in India. Upload a client's filing or statement once and they open it in their own ScoreMyBiz app. Clients can export their book for any period as a file accounting software can import. Lock a finished month once the client agrees, and every change shows who made it: the owner, a helper or the CA. ScoreMyBiz does not prepare or file returns.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "सीए लोकांसाठी भाग दुसरा: डॉक्युमेंट्स, रिपोर्ट्स आणि एकाच बुकवर काम करणे.",
+   "sub": "सीए लोकांसाठी भाग दुसरा: डॉक्युमेंट्स, रिपोर्ट्स आणि एकाच बुकवर काम करणे.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "क्लायंटचे फायलिंग किंवा स्टेटमेंट एकदा अपलोड करा, आणि ते त्यांच्या स्वतःच्या ॲपमध्ये उघडतात.",
+   "sub": "क्लायंटचे फायलिंग किंवा स्टेटमेंट एकदा अपलोड करा, आणि ते त्यांच्या स्वतःच्या ॲपमध्ये उघडतात.",
+   "min": 3.5,
+   "screen": "ca-client-reports.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "व्हॉट्सॲपवर पुन्हा पाठवण्याची गरज नाही. ते 'माय डॉक्युमेंट्स'मध्ये राहते.",
+   "sub": "व्हॉट्सॲपवर पुन्हा पाठवण्याची गरज नाही. ते 'माय डॉक्युमेंट्स'मध्ये राहते.",
+   "min": 3.5,
+   "screen": "my-documents.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "क्लायंट कोणत्याही कालावधीसाठी त्यांचे बुक एक्सपोर्ट करू शकतात, तुमच्या अकाउंटिंग सॉफ्टवेअरला चालणाऱ्या फाईलमध्ये.",
+   "sub": "क्लायंट कोणत्याही कालावधीसाठी त्यांचे बुक एक्सपोर्ट करू शकतात, तुमच्या अकाउंटिंग सॉफ्टवेअरला चालणाऱ्या फाईलमध्ये.",
+   "min": 3.5,
+   "screen": "export-book.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "क्लायंट सहमत झाल्यावर संपलेला महिना लॉक करा, जेणेकरून आकडे चुकून बदलणार नाहीत.",
+   "sub": "क्लायंट सहमत झाल्यावर संपलेला महिना लॉक करा, जेणेकरून आकडे चुकून बदलणार नाहीत.",
+   "min": 3.5,
+   "screen": "book-locks.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "प्रत्येक बदलात तो कोणी केला हे दिसते: मालक, मदतनीस किंवा सीए.",
+   "sub": "प्रत्येक बदलात तो कोणी केला हे दिसते: मालक, मदतनीस किंवा सीए.",
+   "min": 3.5,
+   "screen": "book-changes.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "हेल्थ स्कोरमुळे तुम्हाला आणि तुमच्या क्लायंटला दरमहा बोलण्यासाठी एक नंबर मिळतो.",
+   "sub": "हेल्थ स्कोरमुळे तुम्हाला आणि तुमच्या क्लायंटला दरमहा बोलण्यासाठी एक नंबर मिळतो.",
+   "min": 3.5,
+   "screen": "result.png",
+   "pose": "front_standing"
+  },
+  {
+   "layout": "scene",
+   "vo": "ScoreMyBiz रिटर्न तयार किंवा फाइल करत नाही. ते बुक आणि संभाषण एकाच ठिकाणी ठेवते.",
+   "sub": "ScoreMyBiz रिटर्न तयार किंवा फाइल करत नाही. ते बुक आणि संभाषण एकाच ठिकाणी ठेवते.",
+   "min": 5,
+   "pose": "front_standing",
+   "card": "एक सामायिक बुक"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाचे आरोग्य जाणून घ्या. तीस दिवस मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

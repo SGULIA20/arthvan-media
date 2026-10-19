@@ -1,0 +1,97 @@
+{
+ "id": "mira-overview2-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "वेपॉइंटबद्दल आणखी",
+ "post_on": "2027-01-04",
+ "caption": "भाग २: वेपॉइंटचे खरे स्क्रीन. मीरा बाकीचे दाखवते.",
+ "linkedin_text": "Part 2 of the Waypoint tour on its real screens: the Daily Path, matching with one person, chats and Mira, Saved posts, a custom name and avatar, Wrapped, My Waypoints and invites.",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हाय, मी मीरा. भाग दोन: वेपॉइंट काय करू शकतं.",
+   "sub": "हाय, मी मीरा. भाग दोन: वेपॉइंट काय करू शकतं.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "द डेली पाथ: एक प्रश्न, सगळ्यांसाठी.",
+   "sub": "द डेली पाथ: एक प्रश्न, सगळ्यांसाठी.",
+   "min": 3.5,
+   "screen": "daily-path.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "एका व्यक्तीशी संपर्क. दोन वाक्यं आणि उत्तर.",
+   "sub": "एका व्यक्तीशी संपर्क. दोन वाक्यं आणि उत्तर.",
+   "min": 3.5,
+   "screen": "matching.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "मॅचसोबत किंवा मीरासोबत चॅट करा.",
+   "sub": "मॅचसोबत किंवा मीरासोबत चॅट करा.",
+   "min": 3.5,
+   "screen": "chats.png",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "present",
+   "vo": "पोस्ट सेव्ह करा आणि सेव्हडमध्ये पुन्हा शोधा.",
+   "sub": "पोस्ट सेव्ह करा आणि सेव्हडमध्ये पुन्हा शोधा.",
+   "min": 3.5,
+   "screen": "saved.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "आजसाठी नाव आणि अवतार बदला.",
+   "sub": "आजसाठी नाव आणि अवतार बदला.",
+   "min": 3.5,
+   "screen": "customize.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "तुमचं रॅप पाहा: तुम्ही कसे दिसलात.",
+   "sub": "तुमचं रॅप पाहा: तुम्ही कसे दिसलात.",
+   "min": 3.5,
+   "screen": "wrapped.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "तुम्ही पोस्ट केलेलं सगळं, माय वेपॉइंट्समध्ये.",
+   "sub": "तुम्ही पोस्ट केलेलं सगळं, माय वेपॉइंट्समध्ये.",
+   "min": 3.5,
+   "screen": "my-waypoints.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "आणि तुमच्या कोडने मित्राला बोलवा.",
+   "sub": "आणि तुमच्या कोडने मित्राला बोलवा.",
+   "min": 3.5,
+   "screen": "invite.png",
+   "pose": "wave"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट. एकदा सांगा. गुगल प्लेवर मोफत, अनेक भारतीय आणि परदेशी भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

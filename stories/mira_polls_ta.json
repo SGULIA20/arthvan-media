@@ -1,0 +1,77 @@
+{
+ "id": "mira-polls-ta",
+ "app": "waypoint",
+ "lang": "ta",
+ "character": "mira",
+ "feature": "polls",
+ "title": "வழியை கேளுங்கள்",
+ "post_on": "2026-11-16",
+ "caption": "அவள் யாரிடம் கேட்டாலும் அவளைப் பற்றியே கருத்து சொல்கிறார்கள். நேகா அதற்குப் பதிலாக ஒரு வாக்கெடுப்பு நடத்துகிறாள். மீரா தன் கதையைக் கூறுகிறாள்.",
+ "linkedin_text": "A big decision gets a dozen different opinions from a dozen well-meaning friends.\n\nOn Waypoint, Ask the Path lets you put one question and two to four options on the Wall; people vote once and everyone sees how the votes split. Mira tells Neha's story; every screen is the real app.",
+ "hashtags": [
+  "#Polls",
+  "#Waypoint",
+  "#AskThePath"
+ ],
+ "cast": {
+  "neha": "Neha, a young Indian woman in her mid twenties with shoulder-length dark hair, a mustard cardigan and small silver earrings"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera at a window table in a cosy cafe in the evening, a notebook beside her, a gentle smile.",
+   "vo": "ஹாய், நான் மீரா. இது நேகாவின் கதை. அவளுக்கு ஒரு பெரிய முடிவு எடுக்கணும், ஒவ்வொரு நண்பரும் ஒவ்வொரு பதில் சொல்றாங்க.",
+   "sub": "ஹாய், நான் மீரா. இது நேகாவின் கதை. அவளுக்கு ஒரு பெரிய முடிவு எடுக்கணும், ஒவ்வொரு நண்பரும் ஒவ்வொரு பதில் சொல்றாங்க.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Ask the Path"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} at a cafe table with a laptop showing two email offers, chin on her hand, thoughtful, rain on the window behind her.",
+   "vo": "புதிய வேலைக்கு வேற ஊரா, இல்ல வீட்டுக்கு பக்கத்துலயா. யாரிடம் கேட்டாலும் அவளைப் பத்தி பேசுறாங்க, முடிவைப்பத்தி இல்ல.",
+   "sub": "புதிய வேலைக்கு வேற ஊரா, இல்ல வீட்டுக்கு பக்கத்துலயா. யாரிடம் கேட்டாலும் அவளைப் பத்தி பேசுறாங்க, முடிவைப்பத்தி இல்ல.",
+   "min": 8,
+   "card": "புதிய நகரம்?"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} on a late evening bus holding her phone, city lights streaking past the window, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "வேபாயிண்ட்-ல அவள் 'ஆஸ்க் த பாத்' திறக்கிறாள். ஒரே ஒரு கேள்வி, ரெண்டுல இருந்து நாலு ஆப்ஷன்.",
+   "sub": "வேபாயிண்ட்-ல அவள் 'ஆஸ்க் த பாத்' திறக்கிறாள். ஒரே ஒரு கேள்வி, ரெண்டுல இருந்து நாலு ஆப்ஷன்.",
+   "min": 8,
+   "screen": "poll.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} reading her phone at the cafe table, a small smile, a cup of tea steaming, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "வாலில் இருக்கிறவங்க ஒரு தடவை ஓட்டு போடுவாங்க. கட்டுரை இல்ல, அறிவுரை இல்ல. ஒரு தட்டு தட்டினா போதும்.",
+   "sub": "வாலில் இருக்கிறவங்க ஒரு தடவை ஓட்டு போடுவாங்க. கட்டுரை இல்ல, அறிவுரை இல்ல. ஒரு தட்டு தட்டினா போதும்.",
+   "min": 8,
+   "screen": "poll.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} watching her phone with wide-eyed interest, the cafe warm and blurred behind her.",
+   "vo": "ஓட்டுகள் எப்படி பிரியுதுன்னு உடனுக்குடன் பார்க்க முடியும்.",
+   "sub": "ஓட்டுகள் எப்படி பிரியுதுன்னு உடனுக்குடன் பார்க்க முடியும்.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{neha} at her apartment window at dusk, the city lights beginning to glow, a calm decided smile.",
+   "vo": "முடிவு அவளுடையதுதான். ஆனா இப்போ மத்தவங்க எதை நோக்கி இருக்காங்கன்னு அவளுக்கு தெரியும்.",
+   "sub": "முடிவு அவளுடையதுதான். ஆனா இப்போ மத்தவங்க எதை நோக்கி இருக்காங்கன்னு அவளுக்கு தெரியும்.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "வேபாயிண்ட். ஒருமுறை சொல்லுங்க. கூகுள் ப்ளே-ல இலவசம், பல இந்திய மற்றும் வெளிநாட்டு மொழிகளில்.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

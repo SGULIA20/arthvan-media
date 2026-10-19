@@ -1,0 +1,113 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview4-mr",
+ "title": "नियंत्रणात राहा",
+ "post_on": "2027-01-09",
+ "caption": "भाग ४: नियंत्रणात राहा. होम, रिमाइंडर्स, लॉक केलेले महिने, कोणी काय बदलले, तुमचे कार्ड आणि बरेच काही ScoreMyBiz मध्ये.",
+ "linkedin_text": "Part 4 of the ScoreMyBiz tour: Home at a glance, the bell, streak and weekly challenge, reminders in your own words, next moves, locking a finished month, who changed what, the business card, a personal health score and several shops.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हाय, मी लुमी. भाग चौथा: नियंत्रणात राहा.",
+   "sub": "हाय, मी लुमी. भाग चौथा: नियंत्रणात राहा.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "होमवर तुमचा दिवस एका नजरेत दिसतो.",
+   "sub": "होमवर तुमचा दिवस एका नजरेत दिसतो.",
+   "min": 3.5,
+   "screen": "dashboard.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "घंटी रिमाइंडर्स, देय नोटा आणि चेक-इन एकत्र करते.",
+   "sub": "घंटी रिमाइंडर्स, देय नोटा आणि चेक-इन एकत्र करते.",
+   "min": 3.5,
+   "screen": "notifications.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "तुमची स्ट्रीक आणि साप्ताहिक आव्हान, होमवर.",
+   "sub": "तुमची स्ट्रीक आणि साप्ताहिक आव्हान, होमवर.",
+   "min": 3.5,
+   "card": "तुमची स्ट्रीक",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "एक रिमाइंड टाईप करा, आणि ते तारीख असलेले काम बनते.",
+   "sub": "एक रिमाइंड टाईप करा, आणि ते तारीख असलेले काम बनते.",
+   "min": 3.5,
+   "screen": "reminders.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "scene",
+   "vo": "टिक करण्यासाठी तीन ते पाच पुढील मूव्हज मिळवा.",
+   "sub": "टिक करण्यासाठी तीन ते पाच पुढील मूव्हज मिळवा.",
+   "min": 3.5,
+   "card": "पुढील मूव्हज",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "झालेला महिना लॉक करा, जेणेकरून काहीही बदलणार नाही.",
+   "sub": "झालेला महिना लॉक करा, जेणेकरून काहीही बदलणार नाही.",
+   "min": 3.5,
+   "screen": "book-locks.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "कोणी काय बदलले, आणि कधी, ते पहा.",
+   "sub": "कोणी काय बदलले, आणि कधी, ते पहा.",
+   "min": 3.5,
+   "screen": "book-changes.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "WhatsApp QR कोडसह, तुमचे बिझनेस कार्ड शेअर करा.",
+   "sub": "WhatsApp QR कोडसह, तुमचे बिझनेस कार्ड शेअर करा.",
+   "min": 3.5,
+   "screen": "business-card.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "तुमच्या स्वतःच्या पैशांसाठी एक वैयक्तिक हेल्थ स्कोअर.",
+   "sub": "तुमच्या स्वतःच्या पैशांसाठी एक वैयक्तिक हेल्थ स्कोअर.",
+   "min": 3.5,
+   "screen": "personal-calculator.png",
+   "pose": "thinking"
+  },
+  {
+   "layout": "scene",
+   "vo": "पाच दुकाने, प्रत्येकाचे स्वतःचे खाते.",
+   "sub": "पाच दुकाने, प्रत्येकाचे स्वतःचे खाते.",
+   "min": 3.5,
+   "card": "अनेक दुकाने",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तीस दिवस मोफत, अनेक भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

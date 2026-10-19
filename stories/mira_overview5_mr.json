@@ -1,0 +1,121 @@
+{
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "id": "mira-overview5-mr",
+ "title": "Waypoint मध्ये काय नवीन आहे",
+ "post_on": "2027-01-07",
+ "caption": "भाग ५: Waypoint मधील नवीन अपडेट्स. मीरा दाखवतेय काय नवीन आहे.",
+ "linkedin_text": "Part 5 of the Waypoint tour, the recent updates: eight feelings on every post, three posts to react to when you join, private replies, saying thanks, seen counts and a welcome for first posts, quiet check-ins, the Calm kit, Quick exit, official messages on the Wall, Listening Night and appeals for removed accounts.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हाय, मी मीरा. भाग पाच: Waypoint मध्ये काय नवीन आहे.",
+   "sub": "हाय, मी मीरा. भाग पाच: Waypoint मध्ये काय नवीन आहे.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "प्रत्येक पोस्टवर आठपैकी एक भावना असते.",
+   "sub": "प्रत्येक पोस्टवर आठपैकी एक भावना असते.",
+   "min": 3.5,
+   "screen": "create_typed.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "येथे नवीन आहात? तीन पोस्ट पहा, आणि प्रतिक्रिया द्या.",
+   "sub": "येथे नवीन आहात? तीन पोस्ट पहा, आणि प्रतिक्रिया द्या.",
+   "min": 3.5,
+   "card": "पहिले तीन",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "खाजगीरीत्या उत्तर द्या: फक्त लेखक पाहतो.",
+   "sub": "खाजगीरीत्या उत्तर द्या: फक्त लेखक पाहतो.",
+   "min": 3.5,
+   "card": "खाजगी उत्तर द्या",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "scene",
+   "vo": "प्रतिक्रिया देणाऱ्या सर्वांचे आभार, नावांशिवाय.",
+   "sub": "प्रतिक्रिया देणाऱ्या सर्वांचे आभार, नावांशिवाय.",
+   "min": 3.5,
+   "card": "आभार माना",
+   "pose": "relieved"
+  },
+  {
+   "layout": "scene",
+   "vo": "न उत्तर मिळालेल्या पहिल्या पोस्टना स्वागत मिळते.",
+   "sub": "न उत्तर मिळालेल्या पहिल्या पोस्टना स्वागत मिळते.",
+   "min": 3.5,
+   "card": "एक उबदार स्वागत",
+   "pose": "listening"
+  },
+  {
+   "layout": "scene",
+   "vo": "पोस्ट केल्यावर चेक-इन: हलके, तसेच की जड?",
+   "sub": "पोस्ट केल्यावर चेक-इन: हलके, तसेच की जड?",
+   "min": 3.5,
+   "card": "चेक-इन",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "द काम किट: श्वास घ्या, स्थिर व्हा, आराम करा.",
+   "sub": "द काम किट: श्वास घ्या, स्थिर व्हा, आराम करा.",
+   "min": 3.5,
+   "screen": "calm.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "क्विक एक्झिट: एक टॅप, आणि तुम्ही बाहेर.",
+   "sub": "क्विक एक्झिट: एक टॅप, आणि तुम्ही बाहेर.",
+   "min": 3.5,
+   "screen": "my-waypoints.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "अधिकृत संदेश वॉलच्या वर फिरतात.",
+   "sub": "अधिकृत संदेश वॉलच्या वर फिरतात.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "नियोजित असताना लिसनिंग नाइटसाठी जागा राखून ठेवा.",
+   "sub": "नियोजित असताना लिसनिंग नाइटसाठी जागा राखून ठेवा.",
+   "min": 3.5,
+   "card": "लिसनिंग नाइट",
+   "pose": "relieved"
+  },
+  {
+   "layout": "scene",
+   "vo": "काढून टाकलेले खाते कारण पाहते, आणि अपील करू शकते.",
+   "sub": "काढून टाकलेले खाते कारण पाहते, आणि अपील करू शकते.",
+   "min": 3.5,
+   "card": "अपील",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. एकदा सांगा. Google Play वर मोफत.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

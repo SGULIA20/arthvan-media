@@ -1,0 +1,74 @@
+{
+ "id": "mira-calmkit-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "title": "दोन मिनिटं.",
+ "post_on": "2026-11-16",
+ "caption": "दोन मिनिटं. अकाऊंट नाही, काही सेव्ह होत नाही. मीरा वेपॉईंटमधली काम किट दाखवते.",
+ "linkedin_text": "A small addition to Waypoint this week: the Calm kit. Breathe, ground yourself, wind down. Two minutes each, no account, nothing saved. Mira shows it on the real app. It is a feature, not a promise.",
+ "hashtags": [
+  "#Mira",
+  "#Waypoint",
+  "#TwoMinutes"
+ ],
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, stands facing the camera in a quiet kitchen late at night, one lamp on, a kettle steaming behind her, and smiles gently.",
+   "vo": "हाय, मी मीरा. ही प्रियाची गोष्ट आहे. तिचा दिवस वेळेनुसार चालतो, संध्याकाळ नाही.",
+   "sub": "हाय, मी मीरा. ही प्रियाची गोष्ट आहे. तिचा दिवस वेळेनुसार चालतो, संध्याकाळ नाही.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Two minutes."
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} on a late evening commuter train, head against the window, city lights streaking past, tired.",
+   "vo": "काही रात्री तिला फक्त तिची दोन मिनिटं हवी असतात.",
+   "sub": "काही रात्री तिला फक्त तिची दोन मिनिटं हवी असतात.",
+   "min": 8,
+   "card": "रात्र"
+  },
+  {
+   "layout": "clip",
+   "clip": "{priya} sitting in an armchair by a window at night, a phone resting in her hands, eyes closed, breathing slowly, one warm lamp, rain on the glass, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "वेपॉईंटमध्ये आता काम किट आहे. श्वास घ्या. शांत व्हा. विश्रांती घ्या. प्रत्येकी दोन मिनिटं, अकाऊंट नाही, काही सेव्ह होत नाही.",
+   "sub": "वेपॉईंटमध्ये आता काम किट आहे. श्वास घ्या. शांत व्हा. विश्रांती घ्या. प्रत्येकी दोन मिनिटं, अकाऊंट नाही, काही सेव्ह होत नाही.",
+   "min": 8,
+   "screen": "calm.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "A phone on a wooden side table showing a single glowing question, the hand of {priya} reaching for it, night, warm lamp light, a cup of tea beside it, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "मग डेली पाथ, सगळ्यांसाठी एक प्रश्न. ती आज उत्तर हळू देते.",
+   "sub": "मग डेली पाथ, सगळ्यांसाठी एक प्रश्न. ती आज उत्तर हळू देते.",
+   "min": 8,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, on an apartment balcony at night on the left of the frame, facing the camera, reading her phone and nodding slowly, the city glowing behind her.",
+   "vo": "आणि वॉलवर, दुसऱ्या व्यक्तीची पण अशीच संध्याकाळ झाली होती.",
+   "sub": "आणि वॉलवर, दुसऱ्या व्यक्तीची पण अशीच संध्याकाळ झाली होती.",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "screen": "wall.png"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉईंट. तुमची स्वतःची दोन मिनिटं. गुगल प्लेवर मोफत.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "feature": "calm-kit",
+ "cast": {
+  "priya": "Priya, an Indian woman in her late twenties with shoulder-length dark hair, in a grey office blazer over a white top"
+ }
+}

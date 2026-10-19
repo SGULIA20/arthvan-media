@@ -1,0 +1,113 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview5-mr",
+ "title": "जास्त जाणून घ्या, जास्त शेअर करा",
+ "post_on": "2027-01-10",
+ "caption": "भाग ५: जास्त जाणून घ्या आणि जास्त शेअर करा. पुस्तकातून तुमचा स्कोअर, फोटो शेअरिंग, प्लॅनिंग टूल्स, भाषा आणि ScoreMyBiz मधील तुमचे खाते.",
+ "linkedin_text": "Part 5 of the ScoreMyBiz tour: a score built from the book itself, sharing your score and your week as pictures, plans for a new shop or more sales, 25 languages, nineteen countries, sign-in with a WhatsApp code, your details and recovery, reporting a problem and downloading or deleting your data.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हाय, मी लुमी. भाग पाच: जास्त जाणून घ्या, आणि जास्त शेअर करा.",
+   "sub": "हाय, मी लुमी. भाग पाच: जास्त जाणून घ्या, आणि जास्त शेअर करा.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "खूप नोंदी झाल्यात? तुमचा स्कोअर आता पुस्तकातून येतो.",
+   "sub": "खूप नोंदी झाल्यात? तुमचा स्कोअर आता पुस्तकातून येतो.",
+   "min": 3.5,
+   "card": "पुस्तकातून स्कोअर",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "हेल्दीवर, तुमचा स्कोअर फोटो म्हणून शेअर करा.",
+   "sub": "हेल्दीवर, तुमचा स्कोअर फोटो म्हणून शेअर करा.",
+   "min": 3.5,
+   "screen": "result.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "तुमचा आठवडा सुद्धा फोटो म्हणून शेअर करा.",
+   "sub": "तुमचा आठवडा सुद्धा फोटो म्हणून शेअर करा.",
+   "min": 3.5,
+   "card": "तुमचा आठवडा, शेअर करा",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "दुकान आखा: नफा, परतफेड, लागणारी रोकड.",
+   "sub": "दुकान आखा: नफा, परतफेड, लागणारी रोकड.",
+   "min": 3.5,
+   "card": "दुकान आखा",
+   "pose": "thinking"
+  },
+  {
+   "layout": "scene",
+   "vo": "२५ भाषा, आणि तुमच्या पसंतीनुसार व्हॉट्सॲप उत्तरे.",
+   "sub": "२५ भाषा, आणि तुमच्या पसंतीनुसार व्हॉट्सॲप उत्तरे.",
+   "min": 3.5,
+   "card": "२५ भाषा",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "scene",
+   "vo": "स्थानिक पैशांचे आणि करांचे शब्द, १९ देशांमध्ये.",
+   "sub": "स्थानिक पैशांचे आणि करांचे शब्द, १९ देशांमध्ये.",
+   "min": 3.5,
+   "card": "१९ देश",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "scene",
+   "vo": "व्हॉट्सॲप कोडने साइन इन करा. पासवर्ड नाही.",
+   "sub": "व्हॉट्सॲप कोडने साइन इन करा. पासवर्ड नाही.",
+   "min": 3.5,
+   "card": "व्हॉट्सॲप साइन-इन",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "माहिती बदला, नंबर बदला, किंवा खाते परत मिळवा.",
+   "sub": "माहिती बदला, नंबर बदला, किंवा खाते परत मिळवा.",
+   "min": 3.5,
+   "card": "तुमचे खाते",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "अडचण सांगा, आणि उत्तर इथेच पहा.",
+   "sub": "अडचण सांगा, आणि उत्तर इथेच पहा.",
+   "min": 3.5,
+   "screen": "support.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "तुमचा डेटा डाउनलोड करा, किंवा खाते डिलीट करा.",
+   "sub": "तुमचा डेटा डाउनलोड करा, किंवा खाते डिलीट करा.",
+   "min": 3.5,
+   "card": "तुमचा डेटा",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तीस दिवस मोफत, अनेक भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

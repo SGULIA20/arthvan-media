@@ -1,0 +1,79 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "id": "lumi-lists-mr",
+ "character": "lumi",
+ "feature": "sold-bought-spent-lists",
+ "title": "पुन्हा टाईप करायची गरज नाही",
+ "post_on": "2026-12-23",
+ "caption": "गौरीच्या सीएला महिन्याची खरेदी स्प्रेडशीटमध्ये हवी आहे. लुमी तिची गोष्ट सांगते.",
+ "linkedin_text": "In ScoreMyBiz, Registers opens searchable lists of everything sold, bought, spent, received and paid, with totals by name and by category, and downloads them as a spreadsheet file.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#Spreadsheet"
+ ],
+ "cast": {
+  "gauri": "Gauri, a young Indian woman who runs a stationery wholesale shop, in a mint green kurta with a cloth tote bag"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a stationery wholesale shop with stacked notebooks behind her, a warm smile.",
+   "vo": "हाय, मी लुमी. ही गौरीची गोष्ट आहे. तिचे सीए महिन्याची खरेदी स्प्रेडशीटमध्ये मागतात.",
+   "sub": "हाय, मी लुमी. ही गौरीची गोष्ट आहे. तिचे सीए महिन्याची खरेदी स्प्रेडशीटमध्ये मागतात.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Not retyped",
+   "card": "पुन्हा टाईप करायची गरज नाही"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gauri} at a laptop surrounded by paper bills, a tired look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "प्रत्येक बिल वहीत आहे, आणि ते पुन्हा टाईप करायला अख्खी संध्याकाळ लागेल.",
+   "sub": "प्रत्येक बिल वहीत आहे, आणि ते पुन्हा टाईप करायला अख्खी संध्याकाळ लागेल.",
+   "min": 8,
+   "card": "प्रत्येक बिल वहीत आहे"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gauri} opening an app on her phone with curiosity, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये ती 'रेजिस्टर्स' उघडते: प्रत्येक विक्री, खरेदी आणि खर्च, शोधता येण्यासारखा, बेरजेसह.",
+   "sub": "ScoreMyBiz मध्ये ती 'रेजिस्टर्स' उघडते: प्रत्येक विक्री, खरेदी आणि खर्च, शोधता येण्यासारखा, बेरजेसह.",
+   "min": 8,
+   "screen": "registers.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gauri} tapping through lists on her phone, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ती 'हा महिना' निवडते, आणि खरेदीची यादी नावांसहित बेरजेसह तयार होते.",
+   "sub": "ती 'हा महिना' निवडते, आणि खरेदीची यादी नावांसहित बेरजेसह तयार होते.",
+   "min": 8,
+   "screen": "registers.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gauri} downloading a file on her phone with a satisfied nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "मग ती ती स्प्रेडशीट फाईल डाऊनलोड करते.",
+   "sub": "मग ती ती स्प्रेडशीट फाईल डाऊनलोड करते.",
+   "min": 8,
+   "card": "स्प्रेडशीट डाऊनलोड करा"
+  },
+  {
+   "layout": "clip",
+   "clip": "{gauri} smiling at the camera in her shop, notebooks stacked behind her.",
+   "vo": "तिच्या सीएकडे फाईल जाते. काहीही पुन्हा टाईप करावे लागत नाही.",
+   "sub": "तिच्या सीएकडे फाईल जाते. काहीही पुन्हा टाईप करावे लागत नाही.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत जाणून घ्या. तीस दिवस मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

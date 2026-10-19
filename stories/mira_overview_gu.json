@@ -1,0 +1,105 @@
+{
+ "id": "mira-overview-gu",
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "એક મિનિટમાં વેપપોઇન્ટ",
+ "post_on": "2026-12-31",
+ "caption": "એક મિનિટમાં વેપપોઇન્ટ: નામ વગર સાચી વાત કરવાની જગ્યા. મીરા અસલી સ્ક્રીન પર મુખ્ય બાબતો બતાવે છે.",
+ "linkedin_text": "A one-minute tour of Waypoint on its real screens: a new name every day, one true sentence, the Wall, polls, voice posts, matching and Mira the AI guide, a mood log, the Break Room and sixteen languages.",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય, હું મીરા છું. આ છે વેપપોઇન્ટ, એક મિનિટમાં.",
+   "sub": "હાય, હું મીરા છું. આ છે વેપપોઇન્ટ, એક મિનિટમાં.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "દરરોજ તમને નવું નામ મળે છે, આજ પૂરતું બનેલું.",
+   "sub": "દરરોજ તમને નવું નામ મળે છે, આજ પૂરતું બનેલું.",
+   "min": 3.5,
+   "screen": "reveal.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "એક સાચું વાક્ય લખો. બસ આટલું જ માંગે છે.",
+   "sub": "એક સાચું વાક્ય લખો. બસ આટલું જ માંગે છે.",
+   "min": 3.5,
+   "screen": "create_typed.png",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "present",
+   "vo": "આજે રાત્રે બીજાએ શું લખ્યું, વોલ પર વાંચો.",
+   "sub": "આજે રાત્રે બીજાએ શું લખ્યું, વોલ પર વાંચો.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "પાથને પૂછો: એક સવાલ, બે થી ચાર ઓપ્શન.",
+   "sub": "પાથને પૂછો: એક સવાલ, બે થી ચાર ઓપ્શન.",
+   "min": 3.5,
+   "screen": "poll.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "અથવા વોઈસ દબાવો અને બોલો. બીજા અવાજ સાંભળે છે.",
+   "sub": "અથવા વોઈસ દબાવો અને બોલો. બીજા અવાજ સાંભળે છે.",
+   "min": 3.5,
+   "screen": "voice.png",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "present",
+   "vo": "મેચની રાહ જુઓ, અથવા AI ગાઈડ મીરા સાથે વાત કરો.",
+   "sub": "મેચની રાહ જુઓ, અથવા AI ગાઈડ મીરા સાથે વાત કરો.",
+   "min": 3.5,
+   "screen": "matching-mira.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "એક ટેપમાં તમારો મૂડ નોંધો. ટાઈપિંગ વગર.",
+   "sub": "એક ટેપમાં તમારો મૂડ નોંધો. ટાઈપિંગ વગર.",
+   "min": 3.5,
+   "screen": "mood.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "બ્રેક રૂમમાં નેવું સેકન્ડ, દિવસમાં એક વાર.",
+   "sub": "બ્રેક રૂમમાં નેવું સેકન્ડ, દિવસમાં એક વાર.",
+   "min": 3.5,
+   "screen": "break-room.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "સોળ ભાષાઓમાં.",
+   "sub": "સોળ ભાષાઓમાં.",
+   "min": 3.5,
+   "screen": "language.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "વેપપોઇન્ટ. એક વાર કહી દો. ગૂગલ પ્લે પર ફ્રી.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

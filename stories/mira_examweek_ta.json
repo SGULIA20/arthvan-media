@@ -1,0 +1,78 @@
+{
+ "id": "mira-examweek-ta",
+ "app": "waypoint",
+ "lang": "ta",
+ "character": "mira",
+ "feature": "daily-path",
+ "title": "தேர்வு வாரம்",
+ "post_on": "2026-11-20",
+ "caption": "தேர்வு வாரம், எல்லோரும் எப்படிப் போகுதுன்னு கேக்குறாங்க. சனாவின் கதையை மீரா சொல்றாங்க.",
+ "linkedin_text": "During exam week every friend asks the same question and gets the same answer: fine.\n\nWaypoint's Daily Path asks one specific question a day, the same for everyone, and shows how others answered. Mira tells Sana's story; every screen is the real app.",
+ "hashtags": [
+  "#Waypoint",
+  "#DailyPath",
+  "#ExamWeek"
+ ],
+ "cast": {
+  "sana": "Sana, a young Indian woman with short curly hair in a mustard cardigan, a college student"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Mira, a young woman with long dark hair in a lilac hoodie, facing the camera in a quiet university library after hours, stacks of books behind her, a gentle smile.",
+   "vo": "ஹாய், நான் மீரா. இது சனாவின் கதை. தேர்வு வாரம். எல்லாரும் அவகிட்ட அதான் கேக்குறாங்க: எப்படிப் போகுது?",
+   "sub": "ஹாய், நான் மீரா. இது சனாவின் கதை. தேர்வு வாரம். எல்லாரும் அவகிட்ட அதான் கேக்குறாங்க: எப்படிப் போகுது?",
+   "min": 8,
+   "refs": [
+    "mira"
+   ],
+   "title": "Exam week"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} in a university library at night surrounded by open books, a friend passing by and she answers with a quick polite smile, the smile fading as he leaves.",
+   "vo": "அவ நல்லா இருக்குன்னு சொல்றா. எப்போவுமே. நல்லா இருக்கு, நல்லா இருக்கு.",
+   "sub": "அவ நல்லா இருக்குன்னு சொல்றா. எப்போவுமே. நல்லா இருக்கு, நல்லா இருக்கு.",
+   "min": 8,
+   "card": "தேர்வு வாரம்"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} on a late bus with her phone, rain on the window, city lights streaking past, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "வேபாயிண்ட்-ல டெய்லி பாத் அவளுக்கு கிடைக்குது. நாளைக்கு ஒரு கேள்வி, எல்லாருக்கும் ஒரே மாதிரி.",
+   "sub": "வேபாயிண்ட்-ல டெய்லி பாத் அவளுக்கு கிடைக்குது. நாளைக்கு ஒரு கேள்வி, எல்லாருக்கும் ஒரே மாதிரி.",
+   "min": 8,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} at a canteen table late at night with a cup of chai, her phone in both hands, taking her time to answer, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "இன்றைய கேள்வி படிக்க எளிசு, பதில் சொல்லக் கடினம். அவ யோசிச்சு பதில் சொன்னா.",
+   "sub": "இன்றைய கேள்வி படிக்க எளிசு, பதில் சொல்லக் கடினம். அவ யோசிச்சு பதில் சொன்னா.",
+   "min": 8,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} reading her phone in a quiet corridor with a soft look of recognition, a window with night sky behind her, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "அப்புறம் மத்தவங்க எப்படி பதில் சொல்லி இருக்காங்கன்னு பார்த்தா. பலவிதமான பதில்கள். டைப் பண்றதுக்குமுன் அதே யோசனை.",
+   "sub": "அப்புறம் மத்தவங்க எப்படி பதில் சொல்லி இருக்காங்கன்னு பார்த்தா. பலவிதமான பதில்கள். டைப் பண்றதுக்குமுன் அதே யோசனை.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{sana} closing her laptop and walking out of the library into the cool night, a small genuine smile.",
+   "vo": "படிப்புல கவனம். அதே தேர்வுகள். அன்னிக்கு அவ சீக்கிரமே தூங்கப் போனா.",
+   "sub": "படிப்புல கவனம். அதே தேர்வுகள். அன்னிக்கு அவ சீக்கிரமே தூங்கப் போனா.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "வேபாயிண்ட். ஒரே முறை சொல்லுங்க. கூகுள் ப்ளே-ல இலவசம், பல இந்திய மற்றும் வெளிநாட்டு மொழிகளில்.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

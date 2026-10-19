@@ -1,0 +1,121 @@
+{
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "id": "mira-overview5-gu",
+ "title": "વેપોઇન્ટમાં નવું શું છે",
+ "post_on": "2027-01-07",
+ "caption": "ભાગ પાંચ: વેપોઇન્ટમાં સૌથી નવા અપડેટ્સ. મીરા બતાવે છે કે શું નવું છે.",
+ "linkedin_text": "Part 5 of the Waypoint tour, the recent updates: eight feelings on every post, three posts to react to when you join, private replies, saying thanks, seen counts and a welcome for first posts, quiet check-ins, the Calm kit, Quick exit, official messages on the Wall, Listening Night and appeals for removed accounts.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય, હું મીરા છું. ભાગ પાંચ: વેપોઇન્ટમાં શું નવું છે.",
+   "sub": "હાય, હું મીરા છું. ભાગ પાંચ: વેપોઇન્ટમાં શું નવું છે.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "દરેક પોસ્ટમાં આઠમાંથી એક લાગણી હોય છે.",
+   "sub": "દરેક પોસ્ટમાં આઠમાંથી એક લાગણી હોય છે.",
+   "min": 3.5,
+   "screen": "create_typed.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "અહીં નવા છો? ત્રણ પોસ્ટ જુઓ, અને પ્રતિક્રિયા આપો.",
+   "sub": "અહીં નવા છો? ત્રણ પોસ્ટ જુઓ, અને પ્રતિક્રિયા આપો.",
+   "min": 3.5,
+   "card": "પહેલી ત્રણ",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "ખાનગીમાં જવાબ આપો: ફક્ત લેખક જ તેને જુએ છે.",
+   "sub": "ખાનગીમાં જવાબ આપો: ફક્ત લેખક જ તેને જુએ છે.",
+   "min": 3.5,
+   "card": "ખાનગીમાં જવાબ આપો",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "scene",
+   "vo": "પ્રતિસાદ આપનાર દરેકનો આભાર માનો, કોઈ નામ વગર.",
+   "sub": "પ્રતિસાદ આપનાર દરેકનો આભાર માનો, કોઈ નામ વગર.",
+   "min": 3.5,
+   "card": "આભાર કહો",
+   "pose": "relieved"
+  },
+  {
+   "layout": "scene",
+   "vo": "અધૂરી પહેલી પોસ્ટને સ્વાગત મળે છે.",
+   "sub": "અધૂરી પહેલી પોસ્ટને સ્વાગત મળે છે.",
+   "min": 3.5,
+   "card": "ગરમાગરમ સ્વાગત",
+   "pose": "listening"
+  },
+  {
+   "layout": "scene",
+   "vo": "પોસ્ટ કર્યા પછી, ચેક-ઇન: હળવું, સરખું કે ભારે?",
+   "sub": "પોસ્ટ કર્યા પછી, ચેક-ઇન: હળવું, સરખું કે ભારે?",
+   "min": 3.5,
+   "card": "ચેક-ઇન",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "કામ કિટ: શ્વાસ લો, શાંત થાઓ, આરામ કરો.",
+   "sub": "કામ કિટ: શ્વાસ લો, શાંત થાઓ, આરામ કરો.",
+   "min": 3.5,
+   "screen": "calm.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "ઝડપી બહાર નીકળો: એક ટેપ, અને તમે બહાર છો.",
+   "sub": "ઝડપી બહાર નીકળો: એક ટેપ, અને તમે બહાર છો.",
+   "min": 3.5,
+   "screen": "my-waypoints.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "સત્તાવાર સંદેશાઓ વોલની ઉપર ફરે છે.",
+   "sub": "સત્તાવાર સંદેશાઓ વોલની ઉપર ફરે છે.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "લિસનિંગ નાઇટ પર સીટ બુક કરો, જ્યારે નક્કી હોય.",
+   "sub": "લિસનિંગ નાઇટ પર સીટ બુક કરો, જ્યારે નક્કી હોય.",
+   "min": 3.5,
+   "card": "લિસનિંગ નાઇટ",
+   "pose": "relieved"
+  },
+  {
+   "layout": "scene",
+   "vo": "કાઢી નાખેલું એકાઉન્ટ કારણ જુએ છે, અને અપીલ કરી શકે છે.",
+   "sub": "કાઢી નાખેલું એકાઉન્ટ કારણ જુએ છે, અને અપીલ કરી શકે છે.",
+   "min": 3.5,
+   "card": "અપીલો",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "વેપોઇન્ટ. એકવાર કહો. ગૂગલ પ્લે પર ફ્રી.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "id": "mira-overview2-gu",
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "વેપોઇન્ટ વિશે વધુ",
+ "post_on": "2027-01-04",
+ "caption": "ભાગ ૨: વેપોઇન્ટ તેની વાસ્તવિક સ્ક્રીન પર. મીરા બાકીનું બતાવે છે.",
+ "linkedin_text": "Part 2 of the Waypoint tour on its real screens: the Daily Path, matching with one person, chats and Mira, Saved posts, a custom name and avatar, Wrapped, My Waypoints and invites.",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય, હું મીરા છું. ભાગ બીજો: વેપોઇન્ટ શું કરી શકે છે તે વધુ.",
+   "sub": "હાય, હું મીરા છું. ભાગ બીજો: વેપોઇન્ટ શું કરી શકે છે તે વધુ.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "ડેઇલી પાથ: એક પ્રશ્ન, બધા માટે.",
+   "sub": "ડેઇલી પાથ: એક પ્રશ્ન, બધા માટે.",
+   "min": 3.5,
+   "screen": "daily-path.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "એક વ્યક્તિ સાથે ક્રોસ પાથ. બે વાક્યો, અને જવાબ.",
+   "sub": "એક વ્યક્તિ સાથે ક્રોસ પાથ. બે વાક્યો, અને જવાબ.",
+   "min": 3.5,
+   "screen": "matching.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "મેચ સાથે ચેટ કરો, અથવા મીરા સાથે.",
+   "sub": "મેચ સાથે ચેટ કરો, અથવા મીરા સાથે.",
+   "min": 3.5,
+   "screen": "chats.png",
+   "pose": "phone_night"
+  },
+  {
+   "layout": "present",
+   "vo": "પોસ્ટ બુકમાર્ક કરો અને સેવ્ડમાં ફરી શોધો.",
+   "sub": "પોસ્ટ બુકમાર્ક કરો અને સેવ્ડમાં ફરી શોધો.",
+   "min": 3.5,
+   "screen": "saved.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "દિવસ માટે તમારું નામ અને અવતાર બદલો.",
+   "sub": "દિવસ માટે તમારું નામ અને અવતાર બદલો.",
+   "min": 3.5,
+   "screen": "customize.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "તમારું રેપડ જુઓ: તમે કેવા દેખાયા.",
+   "sub": "તમારું રેપડ જુઓ: તમે કેવા દેખાયા.",
+   "min": 3.5,
+   "screen": "wrapped.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "તમે જે પોસ્ટ કર્યું, માઈ વેપોઇન્ટ્સમાં.",
+   "sub": "તમે જે પોસ્ટ કર્યું, માઈ વેપોઇન્ટ્સમાં.",
+   "min": 3.5,
+   "screen": "my-waypoints.png",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "અને તમારા કોડથી મિત્રને આમંત્રિત કરો.",
+   "sub": "અને તમારા કોડથી મિત્રને આમંત્રિત કરો.",
+   "min": 3.5,
+   "screen": "invite.png",
+   "pose": "wave"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "વેપોઇન્ટ. એકવાર કહો. ગૂગલ પ્લે પર ફ્રી, ઘણી ભારતીય અને આંતરરાષ્ટ્રીય ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

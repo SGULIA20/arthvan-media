@@ -1,0 +1,83 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "id": "founder-cashbook-mr",
+ "character": "founder_suit",
+ "feature": "cash-book-by-day",
+ "title": "कोणता दिवस",
+ "post_on": "2026-12-22",
+ "caption": "विक्रमाचा गल्ला आणि त्याचे रेकॉर्ड जुळत नव्हते. कोणता दिवस? संस्थापक त्याची गोष्ट सांगतो.",
+ "linkedin_text": "The Cash book in ScoreMyBiz shows each day what the owner started with, every entry that moved money and what he ended with, and when he counted the drawer, how far the count was from the book.",
+ "hashtags": [
+  "#CashBook",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "vikram": "Vikram, a middle-aged Indian electronics shop owner with a trimmed moustache, in a pale green shirt and a smartwatch"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a navy suit and striped tie, facing the camera in a busy electronics market lane, shop signs glowing behind him, a warm smile.",
+   "vo": "हाय. ही विक्रमाची गोष्ट आहे. त्याचा रोख गल्ला आणि वही जुळत नव्हते, आणि हे कोणत्या दिवशी घडले त्याला माहीत नाही.",
+   "sub": "हाय. ही विक्रमाची गोष्ट आहे. त्याचा रोख गल्ला आणि वही जुळत नव्हते, आणि हे कोणत्या दिवशी घडले त्याला माहीत नाही.",
+   "min": 8,
+   "refs": [
+    "founder_suit"
+   ],
+   "title": "Which day",
+   "card": "कोणता दिवस?"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} at his shop counter looking at an open cash drawer and a notebook, puzzled, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "काही हजार रुपये कागदावर कमी आहेत, आणि तपासण्यासाठी महिनाभर खूप दिवस असतात.",
+   "sub": "काही हजार रुपये कागदावर कमी आहेत, आणि तपासण्यासाठी महिनाभर खूप दिवस असतात.",
+   "min": 8,
+   "card": "कागद आणि गल्ला"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} opening an app on his phone with a hopeful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये, कॅश बुक प्रत्येक दिवस दाखवते: त्याने किती रुपयांनी सुरुवात केली, पैशांची हालचाल करणारी प्रत्येक नोंद, आणि शेवटची रक्कम.",
+   "sub": "ScoreMyBiz मध्ये, कॅश बुक प्रत्येक दिवस दाखवते: त्याने किती रुपयांनी सुरुवात केली, पैशांची हालचाल करणारी प्रत्येक नोंद, आणि शेवटची रक्कम.",
+   "min": 8,
+   "screen": "cash-book.png",
+   "card": "कॅश बुक"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} scrolling on his phone with focus, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "जेव्हा त्याने गल्ला मोजला, तेव्हा मोजलेली रक्कम वहीपेक्षा किती मागे होती हे ते दाखवते.",
+   "sub": "जेव्हा त्याने गल्ला मोजला, तेव्हा मोजलेली रक्कम वहीपेक्षा किती मागे होती हे ते दाखवते.",
+   "min": 8,
+   "screen": "cash-book.png",
+   "card": "फरक तपासा"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} nodding with quiet relief, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "म्हणून तो बरोबर पाहू शकतो की गल्ला जुळणे कोणत्या दिवशी बंद झाले.",
+   "sub": "म्हणून तो बरोबर पाहू शकतो की गल्ला जुळणे कोणत्या दिवशी बंद झाले.",
+   "min": 8,
+   "card": "नक्की दिवस"
+  },
+  {
+   "layout": "clip",
+   "clip": "{vikram} standing at his counter, smiling, arms folded.",
+   "vo": "कोणताही अंदाज नाही. फक्त तो दिवस, आणि पाहण्याची नोंद.",
+   "sub": "कोणताही अंदाज नाही. फक्त तो दिवस, आणि पाहण्याची नोंद.",
+   "min": 8,
+   "card": "काही अंदाज नाही"
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत जाणा. तीस दिवस मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5,
+   "card": "ScoreMyBiz मोफत"
+  }
+ ]
+}

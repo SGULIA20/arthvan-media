@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "id": "lumi-collect-mr",
+ "character": "lumi",
+ "feature": "money-to-collect",
+ "title": "कोणाचे पैसे बाकी आहेत",
+ "post_on": "2026-12-11",
+ "caption": "महिन्याचा शेवट आहे आणि साल्मा ला आठवत नाहीये की कोणाचे पैसे अजून तिच्याकडे बाकी आहेत. लुमी तिची गोष्ट सांगते.",
+ "linkedin_text": "Cash Flow Watch in ScoreMyBiz lists every customer who owes you, with the amount and the days overdue, and a one-tap WhatsApp reminder. Marking a payment as paid, in full or in part, lands in the book.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#GetPaid"
+ ],
+ "cast": {
+  "salma": "Salma, a middle-aged Indian woman who runs a tile shop, in a plum cotton kurta with reading glasses on a chain"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a bright tile shop with colourful tile samples on the walls behind her, a warm smile.",
+   "vo": "हाय, मी लुमी. ही साल्मा ची गोष्ट आहे. महिन्याचा शेवट आहे, आणि तिला आठवत नाहीये कोणाचे पैसे बाकी आहेत.",
+   "sub": "हाय, मी लुमी. ही साल्मा ची गोष्ट आहे. महिन्याचा शेवट आहे, आणि तिला आठवत नाहीये कोणाचे पैसे बाकी आहेत.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Who owes me"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} at her shop counter with a worn handwritten notebook, rubbing her forehead, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ग्राहकांनी पैसे द्यायचं कबूल केलं होतं. काहींनी दिले, काहींनी नाही. वहीत तारीख लिहिलेली नाही.",
+   "sub": "ग्राहकांनी पैसे द्यायचं कबूल केलं होतं. काहींनी दिले, काहींनी नाही. वहीत तारीख लिहिलेली नाही.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} looking at her phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये, कॅश फ्लो वॉच प्रत्येक ग्राहकाचं नाव दाखवतं, किती रक्कम आणि किती दिवस उशीर झालाय तेबी.",
+   "sub": "ScoreMyBiz मध्ये, कॅश फ्लो वॉच प्रत्येक ग्राहकाचं नाव दाखवतं, किती रक्कम आणि किती दिवस उशीर झालाय तेबी.",
+   "min": 8,
+   "screen": "cash-flow.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} tapping her phone with a decisive nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "कोणाला आजच फोन करायचा ते कळतं, आणि व्हॉट्सॲप वर रिमाइंडरचं बटण दाबून एका क्लिकवर मेसेज जातो.",
+   "sub": "कोणाला आजच फोन करायचा ते कळतं, आणि व्हॉट्सॲप वर रिमाइंडरचं बटण दाबून एका क्लिकवर मेसेज जातो.",
+   "min": 8,
+   "screen": "cash-flow.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} receiving a payment with a grateful smile at her counter, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ग्राहक पैसे देतो, तेव्हा ती पूर्ण किंवा आंशिक भरल्याची नोंद करते, आणि ती हिशोबात जमा होते.",
+   "sub": "ग्राहक पैसे देतो, तेव्हा ती पूर्ण किंवा आंशिक भरल्याची नोंद करते, आणि ती हिशोबात जमा होते.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{salma} standing relaxed in her tile shop, arms folded, smiling at the camera.",
+   "vo": "महिन्याचा शेवट आता छोटा हिशोब झालाय, अंदाज नाही.",
+   "sub": "महिन्याचा शेवट आता छोटा हिशोब झालाय, अंदाज नाही.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची तब्येत जाणून घ्या. तीस दिवस मोफत, अनेक भारतीय आणि परदेशी भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

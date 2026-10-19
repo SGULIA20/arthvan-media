@@ -1,0 +1,77 @@
+{
+ "id": "founder-breakroom-ta",
+ "app": "waypoint",
+ "lang": "ta",
+ "character": "founder_casual",
+ "feature": "break-room",
+ "title": "90 வினாடிகள்",
+ "post_on": "2026-11-14",
+ "caption": "சில நாட்களுக்கு பொருட்களை உடைக்க ஒரு அறை தேவைப்படும். இம்ரானின் அறைக்கு தொண்ணூறு வினாடிகள் போதும். நிறுவனர் தனது கதையைக் கூறுகிறார்.",
+ "linkedin_text": "Some working days end with a clenched jaw and a long ride home.\n\nWaypoint has a Break Room: a small drawn room, a bat, twenty things that crack and break with sound and vibration, and ninety seconds, once a day. The founder character tells Imran's story; every screen is the real app.",
+ "hashtags": [
+  "#BreakRoom",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "imran": "Imran, a young Indian man in his late twenties with short black hair, a light blue office shirt with rolled sleeves and a lanyard"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera on a rooftop at dusk, warm city lights beginning to glow behind him, a relaxed smile.",
+   "vo": "வணக்கம். இது இம்ரானின் கதை. சில நாட்களில் இறுக்கமான தாடைகளுடன் எங்கு கோபத்தை காட்டுவது என்று தெரியாது.",
+   "sub": "வணக்கம். இது இம்ரானின் கதை. சில நாட்களில் இறுக்கமான தாடைகளுடன் எங்கு கோபத்தை காட்டுவது என்று தெரியாது.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "90 seconds"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} at an office desk in the evening, a stack of files, shoulders tight, jaw set, a laptop screen glowing, the office nearly empty.",
+   "vo": "எட்டு மணி நேர மின்னஞ்சல்கள். கெட்டதாக முடிந்த ஒரு அழைப்பு. கடந்து செல்ல நீண்ட பயணமும் உண்டு.",
+   "sub": "எட்டு மணி நேர மின்னஞ்சல்கள். கெட்டதாக முடிந்த ஒரு அழைப்பு. கடந்து செல்ல நீண்ட பயணமும் உண்டு.",
+   "min": 8,
+   "card": "நீண்ட நாள்"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} sitting on a parked motorbike outside his building at dusk, holding his phone, a thoughtful look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "வேபாயிண்டில் ஒரு பிரேக் ரூம் உள்ளது. மட்டையைத் தட்டி, சிறிய வரைந்த அறை வழியாக வீசுங்கள்.",
+   "sub": "வேபாயிண்டில் ஒரு பிரேக் ரூம் உள்ளது. மட்டையைத் தட்டி, சிறிய வரைந்த அறை வழியாக வீசுங்கள்.",
+   "min": 8,
+   "screen": "break-room.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "Close on a thumb swiping fast across a phone screen, a small determined smile on the face behind it, dusk light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "சத்தம் மற்றும் அதிர்வுடன் இருபது பொருட்கள் உடையும். சில எதிர்த்து நிற்கும், அதனால் அது ரொம்ப எளிதல்ல.",
+   "sub": "சத்தம் மற்றும் அதிர்வுடன் இருபது பொருட்கள் உடையும். சில எதிர்த்து நிற்கும், அதனால் அது ரொம்ப எளிதல்ல.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} laughing softly at his phone on the parked motorbike, shoulders loosened, streetlights coming on, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "நாளைக்கு ஒரு முறை, தொண்ணூறு வினாடிகள். உங்கள் அதிகபட்ச எண்ணிக்கை இருக்கும், மதிப்பெண்ணைப் படமாகப் பகிரலாம்.",
+   "sub": "நாளைக்கு ஒரு முறை, தொண்ணூறு வினாடிகள். உங்கள் அதிகபட்ச எண்ணிக்கை இருக்கும், மதிப்பெண்ணைப் படமாகப் பகிரலாம்.",
+   "min": 8,
+   "screen": "break-room.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{imran} riding a motorbike home through warm evening city traffic, relaxed, the sky turning orange behind the buildings.",
+   "vo": "பிறகு வீடு திரும்புங்கள். அந்த அறை நாளைக்கும் இருக்கும்.",
+   "sub": "பிறகு வீடு திரும்புங்கள். அந்த அறை நாளைக்கும் இருக்கும்.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "வேபாயிண்ட். ஒருமுறை சொல்லுங்கள். கூகுள் பிளேயில் இலவசம், பல இந்திய மற்றும் உலக மொழிகளில்.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

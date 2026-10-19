@@ -1,0 +1,113 @@
+{
+ "id": "lumi-overview2-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "title": "બધું જ વધુ",
+ "post_on": "2027-01-03",
+ "caption": "ભાગ ૨: ScoreMyBiz તમારી દુકાન માટે શું કરે છે, અસલી સ્ક્રીન પર. લુમિ બાકીનું બતાવે છે.",
+ "linkedin_text": "Part 2 of the ScoreMyBiz tour on its real screens: today's totals in a hurry, every sale and payment with one customer, items and last prices, asking your numbers on WhatsApp, entries that wait safely when there is no signal, break-even, goals, the score over time, the decision game and the year-end close.",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય, હું લુમિ છું. ભાગ બીજો: ScoreMyBiz તમારી દુકાન માટે શું કરે છે.",
+   "sub": "હાય, હું લુમિ છું. ભાગ બીજો: ScoreMyBiz તમારી દુકાન માટે શું કરે છે.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "ઉતાવળમાં છો? બસ આજના કુલ આંકડા લખો.",
+   "sub": "ઉતાવળમાં છો? બસ આજના કુલ આંકડા લખો.",
+   "min": 3.5,
+   "screen": "daily-update.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "એક જ ગ્રાહક સાથે દરેક વેચાણ અને ચુકવણી ક્રમમાં જુઓ.",
+   "sub": "એક જ ગ્રાહક સાથે દરેક વેચાણ અને ચુકવણી ક્રમમાં જુઓ.",
+   "min": 3.5,
+   "screen": "customer-history.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "તમારી વસ્તુઓ અને છેલ્લી કિંમતો તૈયાર રાખો.",
+   "sub": "તમારી વસ્તુઓ અને છેલ્લી કિંમતો તૈયાર રાખો.",
+   "min": 3.5,
+   "screen": "items.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": " WhatsApp પર તમારા આંકડા પૂછો.",
+   "sub": " WhatsApp પર તમારા આંકડા પૂછો.",
+   "min": 3.5,
+   "screen": "whatsapp-menu.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "present",
+   "vo": "સિગ્નલ નથી? એન્ટ્રી સુરક્ષિત રહે છે અને પછી જાય છે.",
+   "sub": "સિગ્નલ નથી? એન્ટ્રી સુરક્ષિત રહે છે અને પછી જાય છે.",
+   "min": 3.5,
+   "screen": "offline-entries.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "તમારો નફા-નુકસાન વગરનો બિંદુ શોધો.",
+   "sub": "તમારો નફા-નુકસાન વગરનો બિંદુ શોધો.",
+   "min": 3.5,
+   "screen": "break-even.png",
+   "pose": "thinking"
+  },
+  {
+   "layout": "present",
+   "vo": "તારીખ સાથે લક્ષ્યો નક્કી કરો.",
+   "sub": "તારીખ સાથે લક્ષ્યો નક્કી કરો.",
+   "min": 3.5,
+   "screen": "goals.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "સમય સાથે તમારો સ્કોર જુઓ.",
+   "sub": "સમય સાથે તમારો સ્કોર જુઓ.",
+   "min": 3.5,
+   "screen": "score-history.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "નિર્ણય રમત માં મોટા નિર્ણયોની પ્રેક્ટિસ કરો.",
+   "sub": "નિર્ણય રમત માં મોટા નિર્ણયોની પ્રેક્ટિસ કરો.",
+   "min": 3.5,
+   "screen": "game.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "અને ચોખ્ખા ચોપડા સાથે વર્ષ પૂરું કરો.",
+   "sub": "અને ચોખ્ખા ચોપડા સાથે વર્ષ પૂરું કરો.",
+   "min": 3.5,
+   "screen": "year-end.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. તમારા ધંધાની તબિયત જાણો. ત્રીસ દિવસ મફત, ઘણી ભારતીય અને વિદેશી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

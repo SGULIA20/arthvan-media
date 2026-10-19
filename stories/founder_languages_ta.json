@@ -1,0 +1,78 @@
+{
+ "id": "founder-languages-ta",
+ "app": "waypoint",
+ "lang": "ta",
+ "character": "founder_casual",
+ "feature": "languages",
+ "title": "உங்கள் மொழி",
+ "post_on": "2026-11-22",
+ "caption": "அவர் ஸ்வாஹிலியில் யோசிக்கிறார், ஆங்கிலத்தில் பார்க்கிறார். ஜோசப் Waypoint மொழிகளை மாற்றுகிறார். நிறுவனர் தனது கதையைச் சொல்கிறார்.",
+ "linkedin_text": "Most apps ask people to read in a language that is not their first.\n\nWaypoint works in 16 languages, and a post written in another language can be translated with one tap, or automatically. The founder character tells Joseph's story; every screen is the real app.",
+ "hashtags": [
+  "#Languages",
+  "#Waypoint",
+  "#SayItOnce"
+ ],
+ "cast": {
+  "joseph": "Joseph, a young Kenyan man in his twenties with short hair, a green polo shirt and a student backpack"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "the founder, a young Indian man with a short beard in a black-and-white floral shirt and khaki shorts, facing the camera in a busy colourful street market in the afternoon, a warm smile.",
+   "vo": "ஹாய். இது ஜோசப்பின் கதை. அவர் ஸ்வாஹிலியில் யோசிக்கிறார், ஆங்கிலத்தில் பார்க்கிறார்.",
+   "sub": "ஹாய். இது ஜோசப்பின் கதை. அவர் ஸ்வாஹிலியில் யோசிக்கிறார், ஆங்கிலத்தில் பார்க்கிறார்.",
+   "min": 8,
+   "refs": [
+    "founder_casual"
+   ],
+   "title": "Your language"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} at a bus stop in Nairobi holding his phone with a slightly tired look, a matatu minibus passing behind him, afternoon light.",
+   "vo": "பெரும்பாலான ஆப்ஸ் தாய்மொழியில் அல்லாமல் படிக்கச் சொல்கின்றன.",
+   "sub": "பெரும்பாலான ஆப்ஸ் தாய்மொழியில் அல்லாமல் படிக்கச் சொல்கின்றன.",
+   "min": 8,
+   "card": "தாய்மொழி அல்ல"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} sitting on a bench in a sunny park scrolling his phone with growing interest, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "Waypoint-ல் பதினாறு மொழிகள் இருக்கு. எல்லாரும் அவங்க மொழியைத் தேர்ந்தெடுக்கலாம்.",
+   "sub": "Waypoint-ல் பதினாறு மொழிகள் இருக்கு. எல்லாரும் அவங்க மொழியைத் தேர்ந்தெடுக்கலாம்.",
+   "min": 8,
+   "screen": "language.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} smiling at his phone as he reads, a friend looking over his shoulder, afternoon light, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "வேற மொழியிலருந்து ஒரு பதிவு வருது. ஒரு தட்டு தட்டினா மொழிமாறிடும்.",
+   "sub": "வேற மொழியிலருந்து ஒரு பதிவு வருது. ஒரு தட்டு தட்டினா மொழிமாறிடும்.",
+   "min": 8,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} on a minibus seat reading his phone with a relaxed grin, bright street passing the window, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "இல்லன்னா ஆட்டோ-ட்ரான்ஸ்லேட் போட்டுக்கலாம், வாலில் அவர் மொழியிலேயே வரும்.",
+   "sub": "இல்லன்னா ஆட்டோ-ட்ரான்ஸ்லேட் போட்டுக்கலாம், வாலில் அவர் மொழியிலேயே வரும்.",
+   "min": 8,
+   "screen": "my-waypoints.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{joseph} laughing with friends outside a university building in warm light, phone in hand.",
+   "vo": "அதே வால். அவரோட சொந்த சொற்கள்.",
+   "sub": "அதே வால். அவரோட சொந்த சொற்கள்.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_standing",
+   "vo": "Waypoint. ஒண்ணு சொல்லுங்க. கூகுள் பிளேயில் இலவசம், பல இந்திய மற்றும் வெளிநாட்டு மொழிகளில்.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

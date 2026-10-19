@@ -1,0 +1,113 @@
+{
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "id": "mira-overview3-mr",
+ "title": "भिंतीवर सगळं काही",
+ "post_on": "2027-01-05",
+ "caption": "भाग ३: वेपॉइंट भिंतीवर तुम्ही काय करू शकता, खऱ्या स्क्रीनवर. मीरा हे दाखवते.",
+ "linkedin_text": "Part 3 of the Waypoint tour: sorting the Wall, the surprise post and search, feeling filters, reactions, translate, Moments, deleting your own post, sharing as a picture, the Leaderboard and What's new.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हाय, मी मीरा. भाग तिसरा: भिंतीवर सगळं काही.",
+   "sub": "हाय, मी मीरा. भाग तिसरा: भिंतीवर सगळं काही.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "नवीन निवडा, किंवा दिवस, आठवडा, महिन्यानुसार टॉप.",
+   "sub": "नवीन निवडा, किंवा दिवस, आठवडा, महिन्यानुसार टॉप.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "सरप्राईज पोस्टसाठी पासा टाका, किंवा शोधा.",
+   "sub": "सरप्राईज पोस्टसाठी पासा टाका, किंवा शोधा.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "भावनेनुसार भिंत फिल्टर करा: चिंताग्रस्त, एकाकी, आणखी.",
+   "sub": "भावनेनुसार भिंत फिल्टर करा: चिंताग्रस्त, एकाकी, आणखी.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "पोस्टवर प्रतिक्रिया द्या, आणि लेखकाला कळवले जाते.",
+   "sub": "पोस्टवर प्रतिक्रिया द्या, आणि लेखकाला कळवले जाते.",
+   "min": 3.5,
+   "card": "प्रतिक्रिया",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "तुमची भाषा नाही? ट्रान्सलेट किंवा ऑटो-ट्रान्सलेट दाबा.",
+   "sub": "तुमची भाषा नाही? ट्रान्सलेट किंवा ऑटो-ट्रान्सलेट दाबा.",
+   "min": 3.5,
+   "screen": "my-waypoints.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "मोमेंट्स: एका व्यक्तीने एकदाच पाहलेला फोटो.",
+   "sub": "मोमेंट्स: एका व्यक्तीने एकदाच पाहलेला फोटो.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "तुमची स्वतःची पोस्ट डिलीट करा, ती लगेच निघून जाते.",
+   "sub": "तुमची स्वतःची पोस्ट डिलीट करा, ती लगेच निघून जाते.",
+   "min": 3.5,
+   "card": "कधीही डिलीट करा",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "पोस्ट, स्कोअर आणि डेली पाथ्स फोटो म्हणून शेअर करा.",
+   "sub": "पोस्ट, स्कोअर आणि डेली पाथ्स फोटो म्हणून शेअर करा.",
+   "min": 3.5,
+   "card": "शेअर",
+   "pose": "relieved"
+  },
+  {
+   "layout": "scene",
+   "vo": "गोल्ड आणि सिल्व्हर्सह पॉईंट्स सर्वांना दररोज रँक करतात.",
+   "sub": "गोल्ड आणि सिल्व्हर्सह पॉईंट्स सर्वांना दररोज रँक करतात.",
+   "min": 3.5,
+   "card": "लीडरबोर्ड",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "आणि व्हॉट्स न्यू तुम्हाला काय बदलले ते सांगते.",
+   "sub": "आणि व्हॉट्स न्यू तुम्हाला काय बदलले ते सांगते.",
+   "min": 3.5,
+   "screen": "whats-new.png",
+   "pose": "wave"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. एकदा सांगा. गुगल प्लेवर मोफत.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

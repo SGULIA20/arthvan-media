@@ -1,0 +1,113 @@
+{
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview4-gu",
+ "title": "કાબૂમાં રાખો",
+ "post_on": "2027-01-09",
+ "caption": "ભાગ 4: કાબૂમાં રાખો. હોમ, રીમાઇન્ડર્સ, લોક કરેલા મહિનાઓ, કોણે શું બદલ્યું, તમારું કાર્ડ અને ઘણું બધું ScoreMyBiz માં.",
+ "linkedin_text": "Part 4 of the ScoreMyBiz tour: Home at a glance, the bell, streak and weekly challenge, reminders in your own words, next moves, locking a finished month, who changed what, the business card, a personal health score and several shops.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય, હું લુમી છું. ચોથો ભાગ: કાબૂમાં રાખો.",
+   "sub": "હાય, હું લુમી છું. ચોથો ભાગ: કાબૂમાં રાખો.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "હોમથી તમારો આખો દિવસ એક નજરમાં દેખાય છે.",
+   "sub": "હોમથી તમારો આખો દિવસ એક નજરમાં દેખાય છે.",
+   "min": 3.5,
+   "screen": "dashboard.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "ઘંટડી રીમાઇન્ડર્સ, બાકી નોંધો અને ચેક-ઇન્સ ભેગા કરે છે.",
+   "sub": "ઘંટડી રીમાઇન્ડર્સ, બાકી નોંધો અને ચેક-ઇન્સ ભેગા કરે છે.",
+   "min": 3.5,
+   "screen": "notifications.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "તમારી સ્ટ્રીક અને સાપ્તાહિક પડકાર, હોમ પર.",
+   "sub": "તમારી સ્ટ્રીક અને સાપ્તાહિક પડકાર, હોમ પર.",
+   "min": 3.5,
+   "card": "તમારી સ્ટ્રીક",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "કોઈ રીમાઇન્ડર લખો, અને તે તારીખવાળું કામ બની જાય છે.",
+   "sub": "કોઈ રીમાઇન્ડર લખો, અને તે તારીખવાળું કામ બની જાય છે.",
+   "min": 3.5,
+   "screen": "reminders.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "scene",
+   "vo": "ટિક કરવા માટે ત્રણથી પાંચ આગલા પગલાં મેળવો.",
+   "sub": "ટિક કરવા માટે ત્રણથી પાંચ આગલા પગલાં મેળવો.",
+   "min": 3.5,
+   "card": "આગલા પગલાં",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "પૂરો થયેલો મહિનો લોક કરો, જેથી કશું બદલાય નહીં.",
+   "sub": "પૂરો થયેલો મહિનો લોક કરો, જેથી કશું બદલાય નહીં.",
+   "min": 3.5,
+   "screen": "book-locks.png",
+   "pose": "explaining_left"
+  },
+  {
+   "layout": "present",
+   "vo": "કોણે શું બદલ્યું, અને ક્યારે, તે જુઓ.",
+   "sub": "કોણે શું બદલ્યું, અને ક્યારે, તે જુઓ.",
+   "min": 3.5,
+   "screen": "book-changes.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "WhatsApp QR કોડ સાથે, તમારું વિઝિટિંગ કાર્ડ શેર કરો.",
+   "sub": "WhatsApp QR કોડ સાથે, તમારું વિઝિટિંગ કાર્ડ શેર કરો.",
+   "min": 3.5,
+   "screen": "business-card.png",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "present",
+   "vo": "તમારા પોતાના નાણાં માટે એક પર્સનલ હેલ્થ સ્કોર.",
+   "sub": "તમારા પોતાના નાણાં માટે એક પર્સનલ હેલ્થ સ્કોર.",
+   "min": 3.5,
+   "screen": "personal-calculator.png",
+   "pose": "thinking"
+  },
+  {
+   "layout": "scene",
+   "vo": "પાંચ દુકાનો સુધી, દરેકનું પોતાનું ચોપડું.",
+   "sub": "પાંચ દુકાનો સુધી, દરેકનું પોતાનું ચોપડું.",
+   "min": 3.5,
+   "card": "ઘણી દુકાનો",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. ત્રીસ દિવસ માટે મફત, ઘણી બધી ભાષાઓમાં.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

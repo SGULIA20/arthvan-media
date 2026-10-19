@@ -1,0 +1,76 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "id": "lumi-reminders-mr",
+ "character": "lumi",
+ "feature": "reminders-in-my-words",
+ "title": "एकदाच टाईप करा",
+ "post_on": "2026-12-31",
+ "caption": "फरहानच्या डोक्यात दहा छोट्या गोष्टी आहेत. तो प्रत्येक गोष्ट एकदा टाईप करतो. लुमी त्याची गोष्ट सांगतो.",
+ "linkedin_text": "In ScoreMyBiz, Reminders in my own words: type something like 'call supplier Raju about cement Friday' and the app turns it into a task with a category and a due date, and the phone reminds the owner the evening before and the morning of, when notifications are allowed.",
+ "hashtags": [
+  "#Reminders",
+  "#ScoreMyBiz",
+  "#SmallBusiness"
+ ],
+ "cast": {
+  "farhan": "Farhan, a young Indian grocery store owner with a short goatee, in a green t-shirt and a canvas apron"
+ },
+ "scenes": [
+  {
+   "layout": "clip",
+   "clip": "Lumi, a young Indian woman with long dark hair in a navy blazer and white top, facing the camera in a neat grocery store with shelves of packets behind her, a warm smile.",
+   "vo": "हाय, मी लुमी. ही फरहानची गोष्ट आहे. त्याच्या डोक्यात दहा छोट्या गोष्टी आहेत, आणि त्यातल्या काही महत्त्वाच्या आहेत.",
+   "sub": "हाय, मी लुमी. ही फरहानची गोष्ट आहे. त्याच्या डोक्यात दहा छोट्या गोष्टी आहेत, आणि त्यातल्या काही महत्त्वाच्या आहेत.",
+   "min": 8,
+   "refs": [
+    "lumi"
+   ],
+   "title": "Type it once"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} at his store counter surrounded by yellow sticky notes, a busy look, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "सप्लायरला फोन करा. लायसन्स रिन्यू करा. वीज बिल भरा. कागदावरील नोट्स हरवतात.",
+   "sub": "सप्लायरला फोन करा. लायसन्स रिन्यू करा. वीज बिल भरा. कागदावरील नोट्स हरवतात.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} typing on his phone with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "ScoreMyBiz मध्ये तो रिमाइन्ड्स उघडून स्वतःच्या भाषेत टाईप करतो, जसे की शुक्रवार सिमेंटसाठी सप्लायर राजूला फोन करा.",
+   "sub": "ScoreMyBiz मध्ये तो रिमाइन्ड्स उघडून स्वतःच्या भाषेत टाईप करतो, जसे की शुक्रवार सिमेंटसाठी सप्लायर राजूला फोन करा.",
+   "min": 8,
+   "screen": "reminders.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} reading his phone with a pleased nod, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "अ‍ॅप त्याचे एका कामात रूपांतर करते, सोबत श्रेणी आणि तारीख देते.",
+   "sub": "अ‍ॅप त्याचे एका कामात रूपांतर करते, सोबत श्रेणी आणि तारीख देते.",
+   "min": 8,
+   "screen": "reminders.png"
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} glancing at a notification with a smile, the subject on the left of the frame, the right third of the frame kept clear.",
+   "vo": "नोटिफिकेशन्स सुरू असताना, त्याचा फोन आदल्या संध्याकाळी आणि त्याच दिवशी सकाळी आठवण करून देतो.",
+   "sub": "नोटिफिकेशन्स सुरू असताना, त्याचा फोन आदल्या संध्याकाळी आणि त्याच दिवशी सकाळी आठवण करून देतो.",
+   "min": 8
+  },
+  {
+   "layout": "clip",
+   "clip": "{farhan} standing relaxed in his store, smiling at the camera.",
+   "vo": "नवीन रिमाइन्डर मोफत महिन्यात किंवा प्लॅनवर चालतात. एकदा टाईप करा, आणि स्टिकी नोट्स विसरून जा.",
+   "sub": "नवीन रिमाइन्डर मोफत महिन्यात किंवा प्लॅनवर चालतात. एकदा टाईप करा, आणि स्टिकी नोट्स विसरून जा.",
+   "min": 8
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची स्थिती जाणून घ्या. तीस दिवस मोफत, अनेक भारतीय आणि आंतरराष्ट्रीय भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

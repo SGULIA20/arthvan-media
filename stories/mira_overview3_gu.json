@@ -1,0 +1,113 @@
+{
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "mira",
+ "feature": "overview",
+ "style": "cutout",
+ "hashtags": [
+  "#Waypoint",
+  "#MentalHealth",
+  "#SayItOnce"
+ ],
+ "id": "mira-overview3-gu",
+ "title": "બધું જ દીવાલ પર",
+ "post_on": "2027-01-05",
+ "caption": "ભાગ ૩: વેપોઇન્ટ દીવાલ પર તમે જે બધું કરી શકો છો, અસલી સ્ક્રીન પર. મીરા બતાવે છે.",
+ "linkedin_text": "Part 3 of the Waypoint tour: sorting the Wall, the surprise post and search, feeling filters, reactions, translate, Moments, deleting your own post, sharing as a picture, the Leaderboard and What's new.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "હાય, હું મીરા છું. ભાગ ત્રણ: દીવાલ પરની બધી જ વસ્તુ.",
+   "sub": "હાય, હું મીરા છું. ભાગ ત્રણ: દીવાલ પરની બધી જ વસ્તુ.",
+   "min": 5,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "નવું પસંદ કરો, અથવા દિવસ, અઠવાડિયા કે મહિનાના ટોપ.",
+   "sub": "નવું પસંદ કરો, અથવા દિવસ, અઠવાડિયા કે મહિનાના ટોપ.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "present",
+   "vo": "સરપ્રાઈઝ પોસ્ટ માટે પાસો ફેંકો, અથવા શોધો.",
+   "sub": "સરપ્રાઈઝ પોસ્ટ માટે પાસો ફેંકો, અથવા શોધો.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "લાગણી પ્રમાણે દીવાલ ફિલ્ટર કરો: બેચેન, એકલા, બીજા.",
+   "sub": "લાગણી પ્રમાણે દીવાલ ફિલ્ટર કરો: બેચેન, એકલા, બીજા.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "પોસ્ટ પર પ્રતિક્રિયા આપો, અને લેખકને જાણ થાય છે.",
+   "sub": "પોસ્ટ પર પ્રતિક્રિયા આપો, અને લેખકને જાણ થાય છે.",
+   "min": 3.5,
+   "card": "પ્રતિક્રિયા",
+   "pose": "relieved"
+  },
+  {
+   "layout": "present",
+   "vo": "તમારી ભાષા નથી? અનુવાદ દબાવો, અથવા ઓટો-અનુવાદ.",
+   "sub": "તમારી ભાષા નથી? અનુવાદ દબાવો, અથવા ઓટો-અનુવાદ.",
+   "min": 3.5,
+   "screen": "my-waypoints.png",
+   "pose": "listening"
+  },
+  {
+   "layout": "present",
+   "vo": "પળો: એક તસવીર જે વ્યક્તિ એક જ વાર જોવે છે.",
+   "sub": "પળો: એક તસવીર જે વ્યક્તિ એક જ વાર જોવે છે.",
+   "min": 3.5,
+   "screen": "wall.png",
+   "pose": "curious"
+  },
+  {
+   "layout": "scene",
+   "vo": "તમારી પોતાની પોસ્ટ કાઢી નાખો, અને તે તરત જતી રહે છે.",
+   "sub": "તમારી પોતાની પોસ્ટ કાઢી નાખો, અને તે તરત જતી રહે છે.",
+   "min": 3.5,
+   "card": "ગમે ત્યારે કાઢી નાખો",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "scene",
+   "vo": "પોસ્ટ, સ્કોર અને ડેઈલી પાથ તસવીર તરીકે શેર કરો.",
+   "sub": "પોસ્ટ, સ્કોર અને ડેઈલી પાથ તસવીર તરીકે શેર કરો.",
+   "min": 3.5,
+   "card": "શેર",
+   "pose": "relieved"
+  },
+  {
+   "layout": "scene",
+   "vo": "પોઈન્ટ્સ બધાને રોજ ક્રમમાં ગોઠવે છે, ગોલ્ડ અને સિલ્વર ટાયર સાથે.",
+   "sub": "પોઈન્ટ્સ બધાને રોજ ક્રમમાં ગોઠવે છે, ગોલ્ડ અને સિલ્વર ટાયર સાથે.",
+   "min": 3.5,
+   "card": "લીડરબોર્ડ",
+   "pose": "front_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "અને શું નવું છે તે તમને જણાવે છે કે શું બદલાયું.",
+   "sub": "અને શું નવું છે તે તમને જણાવે છે કે શું બદલાયું.",
+   "min": 3.5,
+   "screen": "whats-new.png",
+   "pose": "wave"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "વેપોઇન્ટ. એકવાર કહો. ગૂગલ પ્લે પર મફત.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

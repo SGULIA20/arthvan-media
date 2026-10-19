@@ -1,0 +1,65 @@
+{
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "lumi",
+ "feature": "business-network",
+ "style": "cutout",
+ "hashtags": [
+  "#SmallBusiness",
+  "#ScoreMyBiz",
+  "#BusinessHealth"
+ ],
+ "id": "lumi-overview7-mr",
+ "title": "भारतासाठी: वापरण्यासाठी आणखी गोष्टी",
+ "post_on": "2027-01-12",
+ "caption": "भाग ७, भारतासाठी: योजना आणि हवामान, बिझनेस नेटवर्क आणि तुमच्या सीएचे डॉक्युमेंट्स स्कोअरमायबिझमध्ये.",
+ "linkedin_text": "Part 7 of the ScoreMyBiz tour, for India: a four-day weather alert with government schemes that may suit you, the business network where one line reaches nearby businesses, and documents your CA uploads for you.",
+ "scenes": [
+  {
+   "layout": "talk",
+   "vo": "हाय, मी ल्युमी. भाग सात, भारतासाठी: वापरण्यासाठी आणखी.",
+   "sub": "हाय, मी ल्युमी. भाग सात, भारतासाठी: वापरण्यासाठी आणखी.",
+   "min": 6,
+   "pose": "head_neutral"
+  },
+  {
+   "layout": "present",
+   "vo": "चार दिवसांचा हवामानाचा इशारा, आणि तुम्हाला लागू पडणाऱ्या सरकारी योजना.",
+   "sub": "चार दिवसांचा हवामानाचा इशारा, आणि तुम्हाला लागू पडणाऱ्या सरकारी योजना.",
+   "min": 3.5,
+   "screen": "alerts.png",
+   "pose": "pointing_up"
+  },
+  {
+   "layout": "present",
+   "vo": "बिझनेस नेटवर्क: एका ओळीत आजूबाजूचे व्यवसाय गाठा.",
+   "sub": "बिझनेस नेटवर्क: एका ओळीत आजूबाजूचे व्यवसाय गाठा.",
+   "min": 3.5,
+   "screen": "network.png",
+   "pose": "explaining_right"
+  },
+  {
+   "layout": "present",
+   "vo": "आणि तुमचे सीए अपलोड करतात ते डॉक्युमेंट्स, माय डॉक्युमेंट्समध्ये.",
+   "sub": "आणि तुमचे सीए अपलोड करतात ते डॉक्युमेंट्स, माय डॉक्युमेंट्समध्ये.",
+   "min": 3.5,
+   "screen": "my-documents.png",
+   "pose": "phone"
+  },
+  {
+   "layout": "scene",
+   "vo": "तुमचे सीए ठरल्याप्रमाणे पूर्ण झालेला महिना लॉक करू शकतात.",
+   "sub": "तुमचे सीए ठरल्याप्रमाणे पूर्ण झालेला महिना लॉक करू शकतात.",
+   "min": 3.5,
+   "card": "तुमच्या सीए सोबत",
+   "pose": "front_happy"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तुमच्या व्यवसायाची स्थिती जाणून घ्या. तीस दिवस मोफत, अनेक भारतीय आणि जागतिक भाषांमध्ये.",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
