@@ -28,7 +28,7 @@ CHANNEL = "linkedin_personal"
 BANK = ROOT / "content" / "linkedin_personal.json"
 TEMPLATE = ROOT / "engine" / "templates" / "linkedin_card.html"
 SIZE = (1080, 1350)
-MAX_HOOK, MAX_BODY, MAX_POST = 120, 900, 1300
+MAX_HOOK, MAX_BODY, MAX_POST = 200, 1000, 1500
 MAX_TITLE, MAX_POINTS, MAX_POINT, MIN_SLIDES, MAX_SLIDES = 60, 5, 70, 2, 6
 EM_DASH = "—"
 _DIGIT = re.compile(r"\d")
@@ -75,7 +75,7 @@ def lint_personal(item: dict, settings: dict) -> list:
             problems.append(f"missing {k}")
     if item.get("pillar") not in PILLARS:
         problems.append(f"unknown pillar {item.get('pillar')!r}")
-    banned = [(p, _phrase_pattern(p)) for p in load_global()["banned_phrases"]]
+    banned = [(p, _phrase_pattern(p)) for p in settings.get("banned_phrases") or load_global()["banned_phrases"]]   # this lane: hype words only; numbers need a facts note
     posted = [(p, re.compile(re.escape(p), re.I)) for p in settings.get("already_posted", [])]   # founder, 19 Oct: never repeat a topic he posted himself
     for where, text in _texts(item):
         if EM_DASH in text:
@@ -173,6 +173,7 @@ def day_status(log: Path, day: date):
 # ---------- picture ----------
 def _card_data(item: dict, c: dict, index: int, total: int) -> dict:
     return {"kicker": c.get("kicker") or LABELS[item["pillar"]], "title": c["title"], "points": c.get("points", []),
+            "stat": c.get("stat", ""), "stat_label": c.get("stat_label", ""), "source": c.get("source", ""),
             "accent": ACCENTS[item["pillar"]], "index": index, "total": total, "name": "Sanjeev Gulia", "brand": "SG Learning"}
 
 

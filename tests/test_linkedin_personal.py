@@ -48,7 +48,7 @@ def test_lint_refuses_em_dash_six_hashtags_long_hook_and_missing_question_mark()
     assert any("em-dash" in p for p in lp.lint_personal(item(body="Think — then act."), settings()))
     assert any("hashtags" in p for p in lp.lint_personal(item(hashtags=["#a", "#b", "#c", "#d", "#e"]), settings()))   # + #SGLearning = 6
     assert any("hashtags" in p for p in lp.lint_personal(item(hashtags=["#a"]), settings()))                            # only 2
-    assert any("hook" in p for p in lp.lint_personal(item(hook="x" * 121), settings()))
+    assert any("hook" in p for p in lp.lint_personal(item(hook="x" * 201), settings()))
     assert any("question" in p for p in lp.lint_personal(item(question="Think about it."), settings()))
     assert any("banned" in p for p in lp.lint_personal(item(body="This is the best model ever."), settings()))
 
@@ -213,3 +213,15 @@ def test_lint_refuses_topics_the_founder_already_posted_himself():
     posted = lp.load_personal()["settings"]["already_posted"]
     for t in ("Theory of Constraints", "FISHMaN", "TOWS", "first mover", "two continents", "OPPIC"):
         assert t in posted
+
+
+def test_lane_banned_list_replaces_the_global_one_and_every_number_has_a_source():
+    s = dict(settings(), banned_phrases=["guarantee"])
+    assert lp.lint_personal(item(body="Profit fell 11 percent.", facts="HBR 1992"), s) == []       # percent is fine here with a source
+    assert any("banned" in p for p in lp.lint_personal(item(body="We guarantee it."), s))
+    bank = lp.load_personal()
+    for it in bank["items"]:
+        if any(ch.isdigit() for ch in it["body"] + it["hook"]):
+            assert it.get("facts"), it["id"]
+        if it["card"].get("stat"):
+            assert it["card"].get("source"), it["id"]
