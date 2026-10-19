@@ -32,8 +32,8 @@
   {
    "layout": "illus",
    "image": "s01.png",
-   "vo": "रिया, उनतीस साल। हर रिश्तेदार का एक ही सवाल।",
-   "sub": "Riya, untees saal. Har rishtedaar ka ek hi sawaal.",
+   "vo": "रिया, उनतीस साल। हर रिश्तेदार का एक सवाल।",
+   "sub": "Riya, untees saal. Har rishtedaar ka ek sawaal.",
    "min": 2.2,
    "art": "Riya in a mustard-yellow kurti stands at a crowded family wedding function holding a plate, three smiling aunties lean in towards her from all sides with raised eyebrows, fairy lights and marigolds behind.",
    "noref": true
@@ -118,8 +118,8 @@
   {
    "layout": "illus",
    "image": "s11.png",
-   "vo": "अगले इतवार उसने माँ से कहा, मुझे थोड़ा वक़्त चाहिए।",
-   "sub": "Agle itvaar usne Maa se kaha: 'mujhe thoda waqt chahiye.'",
+   "vo": "अगले इतवार माँ से कहा, मुझे थोड़ा वक़्त चाहिए।",
+   "sub": "Agle itvaar Maa se kaha: 'mujhe thoda waqt chahiye.'",
    "min": 2.4,
    "art": "Riya and Maa sit together on a living-room sofa on a sunny Sunday morning with two cups of tea, Riya speaking honestly with her hands open, Maa listening closely.",
    "noref": true
