@@ -1,0 +1,129 @@
+{
+ "id": "lumi-sapna-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "goals-and-timelines",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Papa ka sapna: naya counter",
+ "post_on": "2026-10-30",
+ "banner": "Papa ka sapna,<br><em>har saal 'agle saal'</em> 🪚",
+ "caption": "Naya counter, naya fridge, dukaan ka rang. Har saal Papa kehte, 'agle saal.' Is baar ek taareekh tay hui. 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper's dream that is always 'next year', until it gets a number and a date. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#PapaKaSapna",
+  "#DukaanKaGoal",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman she wears a simple blue kurta with jeans.",
+   "Papa": "Papa is Anaya's father, a small-town shopkeeper in his fifties with a grey moustache, a cream kurta and reading glasses, a gentle tired face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "पापा का एक सपना है। नया काउंटर, नया फ़्रिज।",
+   "sub": "Papa ka ek sapna hai. Naya counter, naya fridge.",
+   "min": 2.4,
+   "art": "Papa in a cream kurta stands in his small old general store looking at a worn wooden counter and an old rattling fridge, imagining a bright new glass counter drawn as a faint glowing sketch over it.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/papa-newspaper-doorway.png",
+   "vo": "हर साल कहते हैं, अगले साल।",
+   "sub": "Har saal kehte hain, 'agle saal.'",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/dusty-register-shelf.png",
+   "vo": "और अगला साल, हर बार वैसा ही निकलता है।",
+   "sub": "Aur agla saal, har baar waisa hi nikalta hai.",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/strip-udhaar-cash-stock.png",
+   "vo": "पैसा आता है, और कहाँ जाता है, पता नहीं चलता।",
+   "sub": "Paisa aata hai, aur kahan jaata hai, pata nahi chalta.",
+   "min": 2.4
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "मैंने पूछा, पापा, कितना चाहिए? कब तक?",
+   "sub": "Maine poocha, 'Papa, kitna chahiye? Kab tak?'",
+   "min": 2.4,
+   "art": "Anaya in a blue kurta sits with Papa at the shop counter in the evening, holding her phone, asking with a warm direct look; Papa scratches his head and smiles, a calendar on the wall behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "पहली बार, सपने को एक नंबर मिला। अस्सी हज़ार।",
+   "sub": "Pehli baar, sapne ko ek number mila. Assi hazaar.",
+   "min": 2.4,
+   "art": "Close view of Papa writing a figure on a small piece of paper at the counter with a determined face, Anaya's hand pointing at it, a diya and a cup of chai beside.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "और एक तारीख़। अगली दिवाली।",
+   "sub": "Aur ek taareekh. Agli Diwali.",
+   "min": 2.4,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "अब हर महीने, पापा देखते हैं, कितना बाक़ी है।",
+   "sub": "Ab har mahine, Papa dekhte hain, kitna baaqi hai.",
+   "min": 2.4,
+   "art": "Papa on a stool outside the shop in the morning sun, reading glasses on, looking at his phone with a small satisfied nod, a cup of chai, a bicycle leaning on the wall.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "और उधार के फ़ोन, अब पापा ख़ुद करते हैं।",
+   "sub": "Aur udhaar ke phone, ab Papa khud karte hain.",
+   "min": 2.2,
+   "art": "Papa at the counter on the phone, polite but firm, ticking a name in his register with a pen, afternoon light, shelves behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "इस दिवाली, काउंटर नया था। और पापा की आँखें भी।",
+   "sub": "Is Diwali, counter naya tha. Aur Papa ki aankhein bhi.",
+   "min": 2.6,
+   "art": "Papa stands proudly behind a new bright glass counter in the shop decorated with marigolds and diyas, Anaya beside him clapping, a new fridge humming in the corner, warm festive light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "आपका अगले साल वाला सपना, कौन सा है?",
+   "sub": "Aapka 'agle saal' wala sapna, kaun sa hai?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

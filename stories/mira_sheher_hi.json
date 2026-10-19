@@ -1,0 +1,135 @@
+{
+ "id": "mira-sheher-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "wall-feed",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Naye sheher mein koi nahi",
+ "post_on": "2026-11-02",
+ "banner": "Naya sheher, nayi naukri,<br><em>aur koi apna nahi</em> 🌃",
+ "caption": "Anaya ke paas sab hai: naukri, kamra, chaar sau contacts. Bas raat ko baat karne ko koi nahi. 👇\nJahan anjaan log sach sunte hain: Waypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about moving to a new city with a new job, a rented room and four hundred contacts, and nobody to talk to at night. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#NayaSheher",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman her signature outfit is a lilac hoodie and blue jeans.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "नया शहर, नई नौकरी, नया कमरा।",
+   "sub": "Naya sheher, nayi naukri, naya kamra.",
+   "min": 2.2,
+   "art": "Anaya in a lilac hoodie steps out of an auto-rickshaw with a big suitcase in front of a tall apartment block in a big Indian city, looking up, morning haze, traffic around her."
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "फ़ोन में चार सौ नंबर।",
+   "sub": "Phone mein chaar sau number.",
+   "min": 2.0,
+   "art": "Close view of Anaya's phone in her hand showing a long contact list scrolling past, her face reflected faintly in the dark screen, a small rented room behind."
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/anaya-night-chats-lonely.png",
+   "vo": "रात को, बात करने को कोई नहीं।",
+   "sub": "Raat ko, baat karne ko koi nahi.",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/friend-chai-stall.png",
+   "vo": "पुरानी दोस्त से कहा, सब बढ़िया है यार।",
+   "sub": "Purani dost se kaha, 'sab badhiya hai yaar.'",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/anaya-hostel-night-phone.png",
+   "vo": "घर पर कहा, बहुत मज़ा आ रहा है।",
+   "sub": "Ghar par kaha, 'bahut maza aa raha hai.'",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/rooftop-night-alone.png",
+   "vo": "और छत पर अकेले, सच कुछ और था।",
+   "sub": "Aur chhat par akele, sach kuch aur tha.",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/fox-bench-dusk.png",
+   "vo": "फिर एक जगह मिली, जहाँ कोई नहीं जानता, तुम कौन हो।",
+   "sub": "Phir ek jagah mili, jahan koi nahi jaanta, tum kaun ho.",
+   "min": 2.4
+  },
+  {
+   "layout": "phone",
+   "vo": "वहाँ हज़ारों अनजान, अपना सच लिख रहे थे।",
+   "sub": "Wahan hazaaron anjaan, apna sach likh rahe the.",
+   "min": 2.4,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "कोई नए शहर में अकेला। कोई नई नौकरी से डरा हुआ।",
+   "sub": "Koi naye sheher mein akela. Koi nayi naukri se dara hua.",
+   "min": 2.4,
+   "art": "A night sky over a big city where glowing paper cards float above different lit windows, each window with a different young person reading their phone, warm and connected.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "मैंने भी लिखा। बिना नाम के।",
+   "sub": "Maine bhi likha. Bina naam ke.",
+   "min": 2.2,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/anaya-relief-tear-smile.png",
+   "vo": "और पहली बार, इस शहर में, किसी ने सुना।",
+   "sub": "Aur pehli baar, is sheher mein, kisi ne suna.",
+   "min": 2.4
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/rooftop-dawn-fox-hope.png",
+   "vo": "शहर वही है। बस अब, मैं अकेली नहीं।",
+   "sub": "Sheher wahi hai. Bas ab, main akeli nahi.",
+   "min": 2.4
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "आपके शहर में, आपकी बात कौन सुनता है?",
+   "sub": "Aapke sheher mein, aapki baat kaun sunta hai?",
+   "min": 3.0,
+   "focus": "50% 40%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
