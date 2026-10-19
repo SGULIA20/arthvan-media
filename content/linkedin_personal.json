@@ -5,28 +5,44 @@
   ],
   "min_hashtags": 3,
   "max_hashtags": 5,
-  "note": "Hand-written posts for the founder's personal LinkedIn profile. English. Pillars rotate model, finance, ai, world, founder. Keep each post short; see docs/superpowers/specs/2026-10-19-linkedin-personal-lane-design.md"
+  "note": "Hand-written posts for the founder's personal LinkedIn profile. English. Pillars rotate model, finance, ai, world, founder. Keep each post short; see docs/superpowers/specs/2026-10-19-linkedin-personal-lane-design.md Topics he has already posted on his profile are listed in already_posted and refused by lint; add to the list after every post he writes himself.",
+  "already_posted": [
+   "Theory of Constraints",
+   "bottleneck",
+   "Broken Window",
+   "SWOT",
+   "TOWS",
+   "FISHMaN",
+   "six capitals",
+   "Integrated Reporting",
+   "OPPIC",
+   "two continents",
+   "first mover",
+   "Kodak",
+   "BlackBerry",
+   "Varanasi",
+   "Semicon",
+   "leadership table"
+  ]
  },
  "items": [
   {
-   "id": "toc-bottleneck",
+   "id": "jobs-to-be-done",
    "pillar": "model",
-   "hook": "You are not as fast as your slowest process.",
-   "body": "Most companies try to improve everything. The Theory of Constraints says improve one thing: the bottleneck.\n\nDouble the capacity of every other step and the output still does not move. The press machine, the dispatch bay, the approval desk, your own calendar. Find it, protect it, then move to the next one.\n\nRemember: a chain is only as strong as its weakest link.",
-   "question": "Where is the bottleneck in your business right now?",
+   "hook": "Nobody buys a drill. They hire a hole in the wall.",
+   "body": "Jobs to be done: customers do not buy products, they hire them to make progress in their lives.\n\nThe shopkeeper does not want accounting software. He wants to know whether he can pay the supplier on Friday. The CFO does not want a dashboard. She wants to walk into the board meeting without a surprise.\n\nDescribe the job, not the feature. The product gets simpler and the marketing writes itself.",
+   "question": "What job are your customers really hiring you for?",
    "hashtags": [
-    "#TheoryOfConstraints",
-    "#OperationalExcellence",
-    "#Leadership"
+    "#JobsToBeDone",
+    "#ProductStrategy",
+    "#CustomerInsight"
    ],
    "card": {
-    "title": "Theory of Constraints",
+    "title": "Jobs to be done",
     "points": [
-     "Identify the bottleneck",
-     "Exploit it fully",
-     "Subordinate everything else",
-     "Elevate it if needed",
-     "Find the next one"
+     "Customers hire products for progress",
+     "Describe the job, not the feature",
+     "Simpler product, clearer message"
     ]
    }
   },
@@ -73,24 +89,22 @@
    }
   },
   {
-   "id": "two-continents",
+   "id": "one-clock-india",
    "pillar": "world",
-   "hook": "Some countries sit on two continents. That is not trivia. It is strategy.",
-   "body": "Turkey, Russia, Egypt, Kazakhstan and Azerbaijan each straddle two continents.\n\nThat geography decides pipelines, shipping lanes, trade deals and who gets a seat at which table.\n\nFor a business it is the same. The companies that sit between two markets, two currencies or two supply chains hold leverage nobody else has.\n\nGeography is not a school subject. It is a balance sheet item.",
-   "question": "Which bridge market matters most to your industry?",
+   "hook": "India runs a whole subcontinent on one clock.",
+   "body": "The sun rises in Arunachal Pradesh long before it reaches Gujarat, yet both open the shop at the same official hour.\n\nOne time zone keeps trains, markets and banks simple. It also means the east loses daylight every evening.\n\nEvery standard is a trade. Simplicity for some, cost for others. The question is never whether a standard has losers. It is whether you know who they are.",
+   "question": "Which standard in your company is simple for head office and costly for someone else?",
    "hashtags": [
-    "#Geography",
-    "#GlobalBusiness",
-    "#SupplyChain"
+    "#India",
+    "#Operations",
+    "#Standards"
    ],
    "card": {
-    "title": "Countries on two continents",
+    "title": "One clock, one subcontinent",
     "points": [
-     "Turkey",
-     "Russia",
-     "Egypt",
-     "Kazakhstan",
-     "Azerbaijan"
+     "East sees the sun first",
+     "Same official hour everywhere",
+     "Every standard has a cost somewhere"
     ]
    }
   },
@@ -115,23 +129,23 @@
    }
   },
   {
-   "id": "broken-window",
+   "id": "ooda-loop",
    "pillar": "model",
-   "hook": "A small oil leak is never just an oil leak.",
-   "body": "The Broken Window Theory: when small problems are tolerated, they signal that bigger problems are acceptable.\n\nPoor housekeeping becomes a safety incident. One ignored defect becomes a customer complaint. One unanswered email becomes a lost account.\n\nCulture is not built in the annual strategy meeting. It is built by the small standards you uphold on an ordinary Tuesday.",
-   "question": "What small problem did you watch grow into an expensive one?",
+   "hook": "The faster you turn the loop, the less your competitor's size matters.",
+   "body": "The OODA loop came from a fighter pilot: Observe, Orient, Decide, Act. Then observe again.\n\nThe side that completes the loop faster forces the other side to react to a situation that has already changed.\n\nIn business the loop is weekly numbers instead of monthly, a price change in a day instead of a quarter, a product fix shipped before the complaint spreads.\n\nSpeed of learning beats size of budget.",
+   "question": "How long does one full loop take in your organisation?",
    "hashtags": [
-    "#BrokenWindowTheory",
-    "#WorkplaceCulture",
-    "#OperationalExcellence"
+    "#OODALoop",
+    "#DecisionMaking",
+    "#Agility"
    ],
    "card": {
-    "title": "Broken Window Theory",
+    "title": "The OODA loop",
     "points": [
-     "Small problems signal what is acceptable",
-     "Tolerated becomes normal",
-     "Normal becomes expensive",
-     "Fix it while it is small"
+     "Observe",
+     "Orient",
+     "Decide",
+     "Act, then observe again"
     ]
    }
   },
@@ -219,23 +233,23 @@
    }
   },
   {
-   "id": "swot-tows",
+   "id": "ansoff-matrix",
    "pillar": "model",
-   "hook": "Most people stop at SWOT. Strategists move on to TOWS.",
-   "body": "SWOT tells you where you are. TOWS tells you what to do next.\n\nUse strengths to seize opportunities. Use opportunities to fix weaknesses. Use strengths to block threats. Shrink weaknesses that threats could exploit.\n\nAnalysis that does not end in an action list is a nicely formatted delay.",
-   "question": "Does your strategy document end with a list or a plan?",
+   "hook": "There are only four ways to grow. Most companies try all four at once.",
+   "body": "The Ansoff matrix: existing products to existing customers, new products to existing customers, existing products to new markets, new products to new markets.\n\nRisk rises as you move away from what you know. The last box is where ambitious plans go to die.\n\nPick one direction per year. Fund it properly. Say no to the other three out loud so the organisation hears it.",
+   "question": "Which of the four boxes is your growth plan really sitting in?",
    "hashtags": [
-    "#SWOT",
-    "#TOWS",
+    "#AnsoffMatrix",
+    "#GrowthStrategy",
     "#BusinessStrategy"
    ],
    "card": {
-    "title": "From SWOT to TOWS",
+    "title": "The Ansoff matrix",
     "points": [
-     "SO: strengths seize opportunities",
-     "WO: opportunities fix weaknesses",
-     "ST: strengths block threats",
-     "WT: shrink what threats exploit"
+     "Sell more of the same to the same",
+     "New products to current customers",
+     "Current products to new markets",
+     "New products to new markets"
     ]
    }
   },
@@ -243,7 +257,7 @@
    "id": "contribution-margin",
    "pillar": "finance",
    "hook": "Revenue is vanity. Contribution is sanity.",
-   "body": "Every product carries a price and a variable cost. The gap between them is contribution. That gap pays your fixed costs before a rupee of profit appears.\n\nA big-revenue product with a thin gap can be worse than a small product with a wide one.\n\nRank your products by contribution per unit of your bottleneck resource, not by sales volume. The list will surprise you.",
+   "body": "Every product carries a price and a variable cost. The gap between them is contribution. That gap pays your fixed costs before a rupee of profit appears.\n\nA big-revenue product with a thin gap can be worse than a small product with a wide one.\n\nRank your products by contribution per unit of your scarcest resource, not by sales volume. The list will surprise you.",
    "question": "Which of your products looks big but contributes little?",
    "hashtags": [
     "#ContributionMargin",
@@ -255,7 +269,7 @@
     "points": [
      "Price minus variable cost",
      "Pays fixed costs first",
-     "Rank by contribution per bottleneck unit"
+     "Rank by contribution per scarce unit"
     ]
    }
   },
@@ -445,24 +459,23 @@
    }
   },
   {
-   "id": "six-capitals",
+   "id": "operating-leverage",
    "pillar": "finance",
-   "hook": "Profit is one capital. A business runs on six.",
-   "body": "Integrated Reporting counts six: financial, intellectual, social and relationship, human, manufactured, natural.\n\nA plant can post record profit while burning out its people, its machines and its licence to operate. The ledger will not warn you. The six capitals will.\n\nI remember them as FISHMaN.",
-   "question": "Which capital does your organisation quietly spend without measuring?",
+   "hook": "High fixed costs make good years great and bad years dangerous.",
+   "body": "Operating leverage is the share of your cost base that does not move with sales.\n\nA factory with heavy fixed costs multiplies every extra unit into profit once it passes break-even. The same factory bleeds when volumes dip, because the rent, the salaries and the loan do not dip with them.\n\nKnow your mix before you sign the next long lease or the next big hire. The structure of your costs decides how much volatility you can survive.",
+   "question": "What share of your costs stays when sales fall?",
    "hashtags": [
-    "#IntegratedReporting",
-    "#ValueCreation",
-    "#CIMA"
+    "#OperatingLeverage",
+    "#CostStructure",
+    "#CFO"
    ],
    "card": {
-    "title": "FISHMaN: the six capitals",
+    "title": "Operating leverage",
     "points": [
-     "Financial",
-     "Intellectual",
-     "Social and relationship",
-     "Human",
-     "Manufactured and Natural"
+     "Fixed costs do not fall with sales",
+     "Great in a good year",
+     "Dangerous in a bad one",
+     "Know the mix before you commit"
     ]
    }
   },
@@ -811,22 +824,22 @@
    }
   },
   {
-   "id": "cannibalise-yourself",
+   "id": "words-i-removed",
    "pillar": "founder",
-   "hook": "If you do not replace your own product, someone else will do it for you.",
-   "body": "Kodak built the digital camera and hid it to protect film. BlackBerry built the smartphone category and dismissed touchscreens.\n\nBoth had the advantage. Neither had the nerve.\n\nI remind myself of this when a feature in my own app starts to feel safe. Safe is usually the moment before someone else moves.",
-   "question": "What part of your business are you protecting that you should be replacing?",
+   "hook": "The most important feature I built was the vocabulary I removed.",
+   "body": "Early versions of ScoreMyBiz said debtors, creditors, receivables. Shopkeepers stopped reading.\n\nSo the app now says Sold, Bought, Spent, and who owes me. The maths underneath did not change. The usage did.\n\nEvery profession has a dialect that keeps outsiders out. Finance is worse than most. If the person who needs the number cannot understand the label, the number does not exist.",
+   "question": "Which word in your reports would your customer not understand?",
    "hashtags": [
-    "#Innovation",
-    "#BusinessStrategy",
+    "#PlainLanguage",
+    "#ProductDesign",
     "#FounderJourney"
    ],
    "card": {
-    "title": "First mover wisdom",
+    "title": "Words I removed",
     "points": [
-     "Advantage is not permanent",
-     "Protecting is not winning",
-     "Replace yourself first"
+     "Debtors became who owes me",
+     "Receivables became Sold",
+     "Same maths, more use"
     ]
    }
   },
@@ -894,7 +907,7 @@
   {
    "id": "istanbul-bridge",
    "pillar": "world",
-   "hook": "One city sits on two continents and has been a market since before the Romans.",
+   "hook": "One city has Europe on one shore and Asia on the other, and has traded across both for ages.",
    "body": "Istanbul. Europe on one shore, Asia on the other, the Bosphorus between.\n\nEmpires changed, currencies changed, the trade did not. Position beats fashion.\n\nThe same holds for careers. The person who sits between finance and operations, between India and Africa, between the technical and the commercial, stays valuable through every cycle.",
    "question": "Which two worlds do you sit between?",
    "hashtags": [

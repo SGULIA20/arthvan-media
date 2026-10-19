@@ -19,7 +19,7 @@ def item(**over):
 
 
 def settings():
-    return {"base_hashtags": ["#SGLearning"], "max_hashtags": 5, "min_hashtags": 3}
+    return {"base_hashtags": ["#SGLearning"], "max_hashtags": 5, "min_hashtags": 3, "already_posted": ["Broken Window"]}
 
 
 # ---------- bank + lint ----------
@@ -206,3 +206,10 @@ def test_log_push_is_retried_and_a_lost_push_warns_loudly(tmp_path):
 
 def test_lint_survives_a_null_question():
     assert any("question" in p for p in lp.lint_personal(item(question=None), settings()))
+
+
+def test_lint_refuses_topics_the_founder_already_posted_himself():
+    assert any("already posted" in p for p in lp.lint_personal(item(body="The Broken Window theory says fix it early."), settings()))
+    posted = lp.load_personal()["settings"]["already_posted"]
+    for t in ("Theory of Constraints", "FISHMaN", "TOWS", "first mover", "two continents", "OPPIC"):
+        assert t in posted

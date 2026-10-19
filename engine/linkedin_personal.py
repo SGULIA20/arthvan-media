@@ -76,12 +76,16 @@ def lint_personal(item: dict, settings: dict) -> list:
     if item.get("pillar") not in PILLARS:
         problems.append(f"unknown pillar {item.get('pillar')!r}")
     banned = [(p, _phrase_pattern(p)) for p in load_global()["banned_phrases"]]
+    posted = [(p, re.compile(re.escape(p), re.I)) for p in settings.get("already_posted", [])]   # founder, 19 Oct: never repeat a topic he posted himself
     for where, text in _texts(item):
         if EM_DASH in text:
             problems.append(f"{where}: em-dash")
         for phrase, pat in banned:
             if pat.search(text):
                 problems.append(f"{where}: banned phrase {phrase.strip()!r}")
+        for phrase, pat in posted:
+            if pat.search(text):
+                problems.append(f"{where}: already posted by the founder {phrase!r}")
         if _DIGIT.search(text) and not item.get("facts"):
             problems.append(f"{where}: number without a facts note in {text!r}")
     if len(str(item.get("hook") or "")) > MAX_HOOK:
