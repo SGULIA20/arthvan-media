@@ -1,0 +1,134 @@
+{
+ "id": "mira-naam-gu",
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "mira",
+ "feature": "mood-log",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "આખો શહેર ઓળખે છે",
+ "post_on": "2026-11-08",
+ "banner": "જ્યારે આખું શહેર<br><em>ઓળખતું હોય</em> 🏫",
+ "caption": "સુનીતા મેડમને બધા ઓળખે છે. એટલે એ કંઈ કહી શકતાં નથી. પછી રોજ એક નવું નામ મળ્યું. 👇\nરોજ નવું નામ, કોઈ ઓળખ નહીં: Waypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about a small-town teacher everyone knows, who cannot say anything as herself, until she finds a place where she gets a fresh name every day. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#RozNayaNaam",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Sunita": "Sunita is a 34-year-old school teacher in a small Indian town, with hair in a neat plait, a teal cotton saree, a thin gold chain and a gentle composed face.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "સુનીતા મેડમને, આખો શહેર ઓળખે છે.",
+   "sub": "સુનીતા મેડમને, આખો શહેર ઓળખે છે.",
+   "min": 2.2,
+   "art": "Sunita in a teal saree walks down a small-town market street in the morning, shopkeepers and parents greeting her with folded hands and smiles from every side, a school bag on her shoulder.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "શાકવાળો, પડોશી, બાળકોના માતા-પિતા.",
+   "sub": "શાકવાળો, પડોશી, બાળકોના માતા-પિતા.",
+   "min": 2.2,
+   "art": "Three small warm pictures side by side like a storybook strip: a vegetable seller waving, a neighbour peering over a balcony, parents at a school gate, all looking towards the viewer.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "એટલે એ ક્યારેય કંઈ કહેતાં નથી. મેડમ જે છે.",
+   "sub": "એટલે એ ક્યારેય કંઈ કહેતાં નથી. મેડમ જે છે.",
+   "min": 2.2,
+   "art": "Sunita stands at the blackboard in a classroom smiling calmly at her students, but a faint grey shadow version of her behind her holds a hand over its own mouth.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "ઘર આવીને પણ, દીવાલોને પણ કાન હોય છે.",
+   "sub": "ઘર આવીને પણ, દીવાલોને પણ કાન હોય છે.",
+   "min": 2.2,
+   "art": "Sunita sits alone at her dining table at night with a cup of tea, through the open window the lit windows of neighbours' houses are very close, a curtain half drawn.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "એક સાચ, જે એ કોઈને કહી શકતી નથી.",
+   "sub": "એક સાચ, જે એ કોઈને કહી શકતી નથી.",
+   "min": 2.2,
+   "art": "Close view of Sunita's face in lamplight, eyes lowered, holding a closed diary against her chest, quiet and heavy.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/fox-name-badge.png",
+   "vo": "પછી એને એક જગ્યા મળી. જ્યાં રોજ નવું નામ મળે છે.",
+   "sub": "પછી એને એક જગ્યા મળી. જ્યાં રોજ નવું નામ મળે છે.",
+   "min": 2.4
+  },
+  {
+   "layout": "phone",
+   "vo": "આજે એ, વાદળી ચિડિયા છે.",
+   "sub": "આજે એ, વાદળી ચિડિયા છે.",
+   "min": 2.4,
+   "screen": "reveal.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "ન મેડમ, ન પડોસણ, ન કોઈની દીકરી.",
+   "sub": "ન મેડમ, ન પડોસણ, ન કોઈની દીકરી.",
+   "min": 2.2,
+   "art": "Sunita in a teal saree with a neat plait sits on her bed at night holding her phone, her face relaxed and free for the first time, a small blue bird drawn glowing softly above the phone, a friendly small orange fox with a teal scarf sitting beside her on the bed.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "અને એણે લખ્યું, જે વર્ષોથી અંદર હતું.",
+   "sub": "અને એણે લખ્યું, જે વર્ષોથી અંદર હતું.",
+   "min": 2.4,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "કાલે, એક નવું નામ હશે. અને એ છતાંય એ જ રહેશે.",
+   "sub": "કાલે, એક નવું નામ હશે. અને એ છતાંય એ જ રહેશે.",
+   "min": 2.4,
+   "art": "Sunita walking to school the next morning in her teal saree with a light step and a private smile, sunlight on the street, the fox mascot peeking from behind a tree.",
+   "noref": false
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "જો આજે તમારું કોઈ નામ ન હોત, તો તમે શું કહેત?",
+   "sub": "જો આજે તમારું કોઈ નામ ન હોત, તો તમે શું કહેત?",
+   "min": 3.0,
+   "focus": "50% 40%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. એકવાર કહો.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "mira-naam-hi",
+ "machine_translated": true
+}

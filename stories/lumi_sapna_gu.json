@@ -1,0 +1,132 @@
+{
+ "id": "lumi-sapna-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "feature": "score-history",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "પપ્પાનું સપનું: નવું કાઉન્ટર",
+ "post_on": "2026-11-07",
+ "banner": "પપ્પાનું સપનું,<br><em>દર વર્ષે 'આવતા વર્ષે'</em> 🪚",
+ "caption": "નવું કાઉન્ટર, નવું ફ્રિજ, દુકાનનો રંગ. દર વર્ષે પપ્પા કહે, 'આવતા વર્ષે.' આ વખતે એક તારીખ નક્કી થઈ. 👇\nScoreMyBiz, 30 દિવસ મફત: બાયોમાં લિંક છે.",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper's dream that is always 'next year', until it gets a number and a date. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#PapaKaSapna",
+  "#DukaanKaGoal",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman she wears a simple blue kurta with jeans.",
+   "Papa": "Papa is Anaya's father, a small-town shopkeeper in his fifties with a grey moustache, a cream kurta and reading glasses, a gentle tired face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "પપ્પાનું એક સપનું છે. નવું કાઉન્ટર, નવું ફ્રિજ.",
+   "sub": "પપ્પાનું એક સપનું છે. નવું કાઉન્ટર, નવું ફ્રિજ.",
+   "min": 2.4,
+   "art": "Papa in a cream kurta stands in his small old general store looking at a worn wooden counter and an old rattling fridge, imagining a bright new glass counter drawn as a faint glowing sketch over it.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/papa-newspaper-doorway.png",
+   "vo": "દર વર્ષે કહે છે, આવતા વર્ષે.",
+   "sub": "દર વર્ષે કહે છે, આવતા વર્ષે.",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/dusty-register-shelf.png",
+   "vo": "અને આવતું વર્ષ, દર વખતે એવું જ નીકળે છે.",
+   "sub": "અને આવતું વર્ષ, દર વખતે એવું જ નીકળે છે.",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/strip-udhaar-cash-stock.png",
+   "vo": "પૈસા આવે છે, અને ક્યાં જાય છે, ખબર નથી પડતી.",
+   "sub": "પૈસા આવે છે, અને ક્યાં જાય છે, ખબર નથી પડતી.",
+   "min": 2.4
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "મેં પૂછ્યું, પપ્પા, કેટલા જોઈએ? ક્યાર સુધી?",
+   "sub": "મેં પૂછ્યું, પપ્પા, કેટલા જોઈએ? ક્યાર સુધી?",
+   "min": 2.4,
+   "art": "Anaya in a blue kurta sits with Papa at the shop counter in the evening, holding her phone, asking with a warm direct look; Papa scratches his head and smiles, a calendar on the wall behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "પહેલી વાર, સપનાને એક નંબર મળ્યો. એંસી હજાર.",
+   "sub": "પહેલી વાર, સપનાને એક નંબર મળ્યો. એંસી હજાર.",
+   "min": 2.4,
+   "art": "Close view of Papa writing a figure on a small piece of paper at the counter with a determined face, Anaya's hand pointing at it, a diya and a cup of chai beside.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "અને એક તારીખ. આવતી દિવાળી.",
+   "sub": "અને એક તારીખ. આવતી દિવાળી.",
+   "min": 2.4,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "હવે દર મહિને, પપ્પા જોવે છે, કેટલું બાકી છે.",
+   "sub": "હવે દર મહિને, પપ્પા જોવે છે, કેટલું બાકી છે.",
+   "min": 2.4,
+   "art": "Papa on a stool outside the shop in the morning sun, reading glasses on, looking at his phone with a small satisfied nod, a cup of chai, a bicycle leaning on the wall.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "અને ઉઘરાણીના ફોન, હવે પપ્પા ખુદ કરે છે.",
+   "sub": "અને ઉઘરાણીના ફોન, હવે પપ્પા ખુદ કરે છે.",
+   "min": 2.2,
+   "art": "Papa at the counter on the phone, polite but firm, ticking a name in his register with a pen, afternoon light, shelves behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "આ દિવાળીએ, કાઉન્ટર નવું હતું. અને પપ્પાની આંખો પણ.",
+   "sub": "આ દિવાળીએ, કાઉન્ટર નવું હતું. અને પપ્પાની આંખો પણ.",
+   "min": 2.6,
+   "art": "Papa stands proudly behind a new bright glass counter in the shop decorated with marigolds and diyas, Anaya beside him clapping, a new fridge humming in the corner, warm festive light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "તમારું આવતા વર્ષવાળું સપનું, કયું છે?",
+   "sub": "તમારું આવતા વર્ષવાળું સપનું, કયું છે?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. ત્રીસ દિવસ મફત.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "lumi-sapna-hi",
+ "machine_translated": true
+}

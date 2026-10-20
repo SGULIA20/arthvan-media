@@ -1,0 +1,138 @@
+{
+ "id": "lumi-card-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "lead": "male",
+ "feature": "score-history",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "વિનોદ દરજીનું કાર્ડ",
+ "post_on": "2026-11-05",
+ "banner": "કામ સરસ, પણ<br><em>દુકાન કોઈને મળતી નથી</em> 🧵",
+ "caption": "વિનોદની સિલાઈ આખા મોહલ્લામાં પ્રખ્યાત. પણ નવો ગ્રાહક પૂછે, 'નંબર ક્યાં છે, દુકાન ક્યાં છે?' 👇\nScoreMyBiz, ૩૦ દિવસ મફત: બાયોમાં લિંક.",
+ "linkedin_text": "A short illustrated story in Hindi about a tailor whose work everyone praises but whose shop nobody can find, until he has a business card he can share on WhatsApp. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#DarziKiDukaan",
+  "#BusinessCard",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Vinod": "Vinod is a tailor in his forties, slim, with neatly combed black hair, a measuring tape around his neck, a white half-sleeve shirt and spectacles; a kind, modest face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "વિનોદની સિલાઈ, આખા મોહલ્લામાં પ્રખ્યાત.",
+   "sub": "વિનોદની સિલાઈ, આખા મોહલ્લામાં પ્રખ્યાત.",
+   "min": 2.2,
+   "art": "Vinod the tailor sits at an old sewing machine in a small bright shop, a measuring tape around his neck, colourful fabric rolls stacked behind him, a finished kurta on a hanger, morning light through the shutter.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "લગ્નનો સૂટ હોય કે સ્કૂલનો યુનિફોર્મ, બધું તેની પાસે.",
+   "sub": "લગ્નનો સૂટ હોય કે સ્કૂલનો યુનિફોર્મ, બધું તેની પાસે.",
+   "min": 2.4,
+   "art": "A proud groom in a sherwani and a small boy in a school uniform stand side by side in front of Vinod's shop as Vinod adjusts the boy's collar, parents smiling behind them.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "પણ નવો ગ્રાહક પૂછે, દુકાન ક્યાં છે? નંબર ક્યાં છે?",
+   "sub": "પણ નવો ગ્રાહક પૂછે, દુકાન ક્યાં છે? નંબર ક્યાં છે?",
+   "min": 2.4,
+   "art": "A young woman on a busy market street holds her phone and looks around confused, asking a vegetable seller for directions, narrow lanes with many small shop signs, Vinod's shop hidden in a corner.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "વિનોદ કાગળના ટુકડા પર નંબર લખે. કાગળ ખોવાઈ જાય.",
+   "sub": "વિનોદ કાગળના ટુકડા પર નંબર લખે. કાગળ ખોવાઈ જાય.",
+   "min": 2.4,
+   "art": "Vinod writes his phone number on a torn scrap of paper for a customer, in the foreground a similar scrap lies crumpled in a gutter beside a bicycle wheel, soft afternoon light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": " છાપેલું કાર્ડ? પાંચ સોનો ખર્ચ, અને દર વખતે ખલાસ.",
+   "sub": " છાપેલું કાર્ડ? પાંચ સોનો ખર્ચ, અને દર વખતે ખલાસ.",
+   "min": 2.4,
+   "art": "Vinod at a small printing shop counter looking at a price list with a frown, a stack of printed cards with only two left in the box on his own counter in a small inset picture.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "પછી એપમાં તેણે પોતાનું કાર્ડ બનાવ્યું.",
+   "sub": "પછી એપમાં તેણે પોતાનું કાર્ડ બનાવ્યું.",
+   "min": 2.6,
+   "screen": "business-card.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "નામ, નંબર, દુકાનનું સરનામું, અને WhatsApp પર શેર.",
+   "sub": "નામ, નંબર, દુકાનનું સરનામું, અને WhatsApp પર શેર.",
+   "min": 2.4,
+   "art": "Vinod holds up his phone showing a neat digital business card to a smiling customer who looks at it with her own phone in hand, both standing at the shop counter, fabric rolls behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "હવે દરેક ગ્રાહકને, એક ટેપમાં મોકલી દે છે.",
+   "sub": "હવે દરેક ગ્રાહકને, એક ટેપમાં મોકલી દે છે.",
+   "min": 2.2,
+   "art": "Vinod sitting at his sewing machine tapping his phone with one thumb, small glowing card icons flying out of the phone towards a row of happy customers' phones drawn faintly in the air.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "અને ગ્રાહકો આગળ મોકલે. મોહલ્લાની બહાર પણ.",
+   "sub": "અને ગ્રાહકો આગળ મોકલે. મોહલ્લાની બહાર પણ.",
+   "min": 2.4,
+   "art": "A view over the rooftops of a town at dusk, dotted lines of light connecting phones in many homes back to Vinod's small lit shop in the middle, warm and hopeful.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "આ મહિને, ત્રણ લગ્નના ઓર્ડર. બધા નવા.",
+   "sub": "આ મહિને, ત્રણ લગ્નના ઓર્ડર. બધા નવા.",
+   "min": 2.4,
+   "art": "Vinod's shop busy and bright with three sets of wedding clothes on hangers, Vinod measuring a young man while two families wait on a bench with sweets, marigolds at the door.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "તમારો ગ્રાહક, તમને કેવી રીતે શોધે છે?",
+   "sub": "તમારો ગ્રાહક, તમને કેવી રીતે શોધે છે?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. ૩૦ દિવસ મફત.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "lumi-card-hi",
+ "machine_translated": true
+}

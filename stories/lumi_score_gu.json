@@ -1,0 +1,143 @@
+{
+ "id": "lumi-score-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "feature": "what-i-have-and-owe",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "પપ્પાની દુકાનનો નંબર",
+ "post_on": "2026-11-03",
+ "banner": "દukan no number<br><em>42 thi 68</em> 📈",
+ "caption": "પપ્પાને લાગતું હતું દુકાન સરસ ચાલે છે. પછી એક નંબર આવ્યો: 42. ત્રણ મહિના પછી, 68. 👇\nScoreMyBiz, 30 દિવસ મફત: બાયોમાં લિંક છે.",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper who thought his shop was fine until he saw its health score, and what changed in three months. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#DukaanKaNumber",
+  "#BusinessHealthScore",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman she wears a simple blue kurta with jeans.",
+   "Papa": "Papa is Anaya's father, a small-town shopkeeper in his fifties with a grey moustache, a cream kurta and reading glasses, a gentle tired face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "પપ્પા કહેતા, દુકાન સરસ ચાલે છે.",
+   "sub": "પપ્પા કહેતા, દુકાન સરસ ચાલે છે.",
+   "min": 2.2,
+   "art": "Papa in a cream kurta stands contentedly at the counter of his small hardware-and-general store in the afternoon, arms folded, a wall of shelves with tins and tools behind him, a customer leaving with a bag.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "સરસ એટલે કેટલું? કોઈને ખબર નહોતી.",
+   "sub": "સરસ એટલે કેટલું? કોઈને ખબર નહોતી.",
+   "min": 2.2,
+   "art": "Papa and Anaya at the dinner table in the evening, Anaya asking with open hands, Papa shrugging with a small smile, an old account register and a steel tumbler between them.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "મેં કીધું, એકવાર નંબર જોઈ લઈએ.",
+   "sub": "મેં કીધું, એકવાર નંબર જોઈ લઈએ.",
+   "min": 2.2,
+   "art": "Anaya in a blue kurta holds her phone out to Papa at the shop counter, Papa leans in with his reading glasses, curious and a little doubtful, warm evening light.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "બ્યાસી. સોમાંથી.",
+   "sub": "બ્યાસી. સોમાંથી.",
+   "min": 2.6,
+   "screen": "result.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "પપ્પા ચૂપ થઈ ગયા. પછી બોલ્યા, આટલું ઓછું?",
+   "sub": "પપ્પા ચૂપ થઈ ગયા. પછી બોલ્યા, આટલું ઓછું?",
+   "min": 2.2,
+   "art": "Close view of Papa's face looking at the phone, glasses pushed up, surprised and a little hurt, Anaya's hand on his shoulder, the shop behind them in soft focus.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "ઉધાર વધારે, રોકડા ઓછા, અને માલ પડ્યો રહ્યો.",
+   "sub": "ઉધાર વધારે, રોકડા ઓછા, અને માલ પડ્યો રહ્યો.",
+   "min": 2.4,
+   "art": "Three small pictures side by side like a storybook strip: a register page full of names, a nearly empty cash drawer, and a shelf of dusty unsold boxes, drawn in the same warm style.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "એપે આ અઠવાડિયાના ત્રણ કામ બતાવ્યા.",
+   "sub": "એપે આ અઠવાડિયાના ત્રણ કામ બતાવ્યા.",
+   "min": 2.4,
+   "screen": "tasks.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "પપ્પાએ જૂના ઉધારના ફોન કર્યા.",
+   "sub": "પપ્પાએ જૂના ઉધારના ફોન કર્યા.",
+   "min": 2.2,
+   "art": "Papa sitting on a stool outside the shop in the morning with a cup of chai, phone to his ear, the register open on his knee, a polite firm expression, a scooter passing by.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "જે નહોતું વેચાતું, એ લાવવાનું બંધ કર્યું.",
+   "sub": "જે નહોતું વેચાતું, એ લાવવાનું બંધ કર્યું.",
+   "min": 2.2,
+   "art": "Papa at the shop with a supplier holding a delivery list, Papa gently shaking his head and crossing out two items with a pen, cartons on a hand-cart outside.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "ત્રણ મહિના પછી, અડસઠ.",
+   "sub": "ત્રણ મહિના પછી, અડસઠ.",
+   "min": 2.6,
+   "screen": "score-history.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "પપ્પાએ પહેલીવાર કીધું, હવે દુકાન સાચે સરસ છે.",
+   "sub": "પપ્પાએ પહેલીવાર કીધું, હવે દુકાન સાચે સરસ છે.",
+   "min": 2.4,
+   "art": "Papa and Anaya standing together in the doorway of the shop at golden hour, Papa smiling proudly with his phone in hand, Anaya laughing, the shop tidy and bright behind them.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "તમારી દુકાનનો નંબર શું છે?",
+   "sub": "તમારી દુકાનનો નંબર શું છે?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. ત્રીસ દિવસ મફત.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "lumi-score-hi",
+ "machine_translated": true
+}

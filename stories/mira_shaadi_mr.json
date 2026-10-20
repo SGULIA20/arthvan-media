@@ -1,0 +1,155 @@
+{
+ "id": "mira-shaadi-mr",
+ "app": "waypoint",
+ "lang": "mr",
+ "character": "mira",
+ "feature": "mood-log",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "लग्न कधी करणार?",
+ "post_on": "2026-11-05",
+ "banner": "सगळे विचारतात<br><em>'लग्न कधी करणार?'</em> 🙃",
+ "caption": "रियाला सगळे प्रश्न विचारतात. कोणाला हे माहीत नाही, तुला काय हवंय? 👇\nरोज एक प्रश्न, उत्तर नावाशिवाय: वेपॉइंट, बायोमध्ये लिंक. १८+",
+ "linkedin_text": "A short illustrated story in Hindi about a young woman everyone keeps asking when she will marry, and the one question nobody asks her. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#ShaadiKabKarogi",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Riya": "Riya is a 29-year-old Indian woman with short curly black hair, a mustard-yellow kurti and small silver earrings; a bright thoughtful face.",
+   "Maa": "Maa is Riya's mother, a warm Indian woman in her fifties in a maroon saree with a gold border, hair in a bun, a small red bindi.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "रिया, ঊणतीस वर्षं. प्रत्येक नातेवाइकात एकच प्रश्न.",
+   "sub": "रिया, ঊणतीस वर्षं. प्रत्येक नातेवाइकात एकच प्रश्न.",
+   "min": 2.2,
+   "art": "Riya in a mustard-yellow kurti stands at a crowded family wedding function holding a plate, three smiling aunties lean in towards her from all sides with raised eyebrows, fairy lights and marigolds behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/aunties-gossip-balcony.png",
+   "vo": "लग्न कधी करणार?",
+   "sub": "लग्न कधी करणार?",
+   "min": 2.0
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "ऑफिसमध्ये प्रगती, घरात काळजी.",
+   "sub": "ऑफिसमध्ये प्रगती, घरात काळजी.",
+   "min": 2.2,
+   "art": "Riya at her office desk holding a small glass award with a proud smile, while her phone on the desk lights up with a call from 'Maa', colleagues clapping softly behind her.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "कोणाला कसं सांगू, मी अजून तयार नाहीये?",
+   "sub": "कोणाला कसं सांगू, मी अजून तयार नाहीये?",
+   "min": 2.2,
+   "art": "Riya sits by her bedroom window at night hugging a cushion, looking out at the rain on the glass, a wedding invitation card lying on the bed beside her.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "सगळ्यांना उत्तरे हवीत. कोणी विचारत नाही, तुला काय हवंय?",
+   "sub": "सगळ्यांना उत्तरे हवीत. कोणी विचारत नाही, तुला काय हवंय?",
+   "min": 2.4,
+   "art": "Riya looks at herself in a dressing-table mirror, around the mirror frame float small speech bubbles with question marks from faceless relatives, her own reflection quiet and searching.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "वेपॉइंटवर रोज एक प्रश्न येतो.",
+   "sub": "वेपॉइंटवर रोज एक प्रश्न येतो.",
+   "min": 2.4,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "आजचा प्रश्न होता, तुला कशाची भीती वाटते?",
+   "sub": "आजचा प्रश्न होता, तुला कशाची भीती वाटते?",
+   "min": 2.4,
+   "art": "Riya sits cross-legged on her bed at night holding her phone, a soft glowing question card floats above the screen, the fox mascot sits beside her looking up kindly.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "तिने लिहिले, चुकीच्या माणसाशी लग्न होण्याच्या भीतीमुळे.",
+   "sub": "तिने लिहिले, चुकीच्या माणसाशी लग्न होण्याच्या भीतीमुळे.",
+   "min": 2.4,
+   "art": "Close view of Riya's hands typing on her phone in the dark, her face calm and relieved in the glow, a single tear on her cheek.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "आणि शेकडो अनोळखी लोकांनी लिहिले, मी सुद्धा.",
+   "sub": "आणि शेकडो अनोळखी लोकांनी लिहिले, मी सुद्धा.",
+   "min": 2.2,
+   "art": "Dozens of small glowing paper cards float up into the night sky above Riya's rooftop like lanterns, each with a tiny heart, Riya watches them with wonder.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "पहिल्यांदा वाटले, मी काही वेगळी नाही.",
+   "sub": "पहिल्यांदा वाटले, मी काही वेगळी नाही.",
+   "min": 2.2,
+   "art": "Riya smiles to herself with wet eyes, holding the phone to her chest, warm lamp light, the fox mascot resting its head on her knee.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "पुढच्या रविवारी आईला सांगितले, मला थोडा वेळ हवाय.",
+   "sub": "पुढच्या रविवारी आईला सांगितले, मला थोडा वेळ हवाय.",
+   "min": 2.4,
+   "art": "Riya and Maa sit together on a living-room sofa on a sunny Sunday morning with two cups of tea, Riya speaking honestly with her hands open, Maa listening closely.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "आई म्हणाली, ठीक आहे बेटा. फक्त खुश राहा.",
+   "sub": "आई म्हणाली, ठीक आहे बेटा. फक्त खुश राहा.",
+   "min": 2.4,
+   "art": "Maa in a maroon saree hugs Riya tightly on the sofa, both with closed eyes and gentle smiles, sunlight through the curtains, a plate of biscuits on the table.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "तुम्हाला सगळे काय विचारतात? आणि तुम्हाला काय हवंय?",
+   "sub": "तुम्हाला सगळे काय विचारतात? आणि तुम्हाला काय हवंय?",
+   "min": 3.0,
+   "focus": "50% 40%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट. एकदा सांगा.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "mira-shaadi-hi",
+ "machine_translated": true
+}

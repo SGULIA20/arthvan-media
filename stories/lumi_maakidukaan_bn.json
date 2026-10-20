@@ -1,0 +1,134 @@
+{
+ "id": "lumi-maakidukaan-bn",
+ "app": "scoremybiz",
+ "lang": "bn",
+ "character": "lumi",
+ "feature": "score-history",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "মায়ের দোকান",
+ "post_on": "2026-10-26",
+ "banner": "মায়ের দোকান,<br><em>হিসাব হোয়াটসঅ্যাপে</em> 📒",
+ "caption": "বাবার পর দোকান মা সামলেছেন। হিসাব? 'কাল লিখে নেব।' তারপর এক রাত থেকে, মাত্র তিন নম্বর। 👇\nScoreMyBiz, ৩০ দিন ফ্রি: বায়োতে লিঙ্ক।",
+ "linkedin_text": "A short illustrated story in Hindi about a mother who runs the family shop alone and never finds time for the accounts, until her daughter shows her she only needs to send three numbers on WhatsApp each night. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#MaaKiDukaan",
+  "#DukaanKaHisaab",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman she wears a simple blue kurta with jeans.",
+   "Maa": "Maa is Anaya's mother, a strong tired Indian woman in her fifties in a blue cotton saree with a small red bindi, hair in a bun, reading glasses."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "বাবা চলে যাওয়ার পর, দোকান মা সামলালেন।",
+   "sub": "বাবা চলে যাওয়ার পর, দোকান মা সামলালেন।",
+   "min": 2.2,
+   "art": "Maa in a blue saree stands behind the counter of a small general store in the morning, on the wall behind her a framed photo of Papa with a marigold garland, shelves full of jars and packets, soft morning light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "সারাদিন খদ্দের, সন্ধ্যায় ক্লান্তি।",
+   "sub": "সারাদিন খদ্দের, সন্ধ্যায় ক্লান্তি।",
+   "min": 2.2,
+   "art": "A busy small shop counter: Maa handing a packet to one customer while two more wait, a child pointing at toffees, coins on the counter, a ceiling fan, warm afternoon light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "হিসাব? কাল লিখে নেব, মা বলতেন।",
+   "sub": "হিসাব? কাল লিখে নেব, মা বলতেন।",
+   "min": 2.2,
+   "art": "Maa pulling down the shop shutter at dusk, one hand on her tired back, a dusty closed account register tucked under her arm, the street lamp just coming on.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "আর কাল, কখনো আসে না।",
+   "sub": "আর কাল, কখনো আসে না।",
+   "min": 2.0,
+   "art": "A thick old account register lying closed on a shelf with a thin layer of dust and a pen on top, a calendar on the wall with many days crossed out, dim evening light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "আমি বললাম, মা, কোনো অ্যাপ নয়। শুধু WhatsApp।",
+   "sub": "আমি বললাম, মা, কোনো অ্যাপ নয়। শুধু WhatsApp।",
+   "min": 2.4,
+   "art": "Anaya in a blue kurta sits beside Maa at the dinner table at night and shows her a phone with a WhatsApp chat, Maa looks doubtful but curious with her reading glasses on, a steel plate of roti and sabzi between them.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "রাতে শুধু তিনটে নম্বর পাঠাও। বিক্রি, খরচ, নগদ।",
+   "sub": "রাতে শুধু তিনটে নম্বর পাঠাও। বিক্রি, খরচ, নগদ।",
+   "min": 2.6,
+   "screen": "whatsapp-numbers.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "উত্তর আসে, এন্ট্রি হয়ে গেছে। ব্যস।",
+   "sub": "উত্তর আসে, এন্ট্রি হয়ে গেছে। ব্যস।",
+   "min": 2.2,
+   "screen": "whatsapp-numbers.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "এখন মা রোজ রাত নটায়, তিনটে নম্বর পাঠান।",
+   "sub": "এখন মা রোজ রাত নটায়, তিনটে নম্বর পাঠান।",
+   "min": 2.4,
+   "art": "Maa sits up in bed at night in her reading glasses typing on her phone with one finger, a small satisfied smile, a wall clock showing nine, a glass of water on the side table.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "আর সপ্তাহের শেষে, দোকানের পুরো খবর।",
+   "sub": "আর সপ্তাহের শেষে, দোকানের পুরো খবর।",
+   "min": 2.4,
+   "screen": "dashboard.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "মা বললেন, তোর বাবাতো এটাই চাইতেন।",
+   "sub": "মা বললেন, তোর বাবাতো এটাই চাইতেন।",
+   "min": 2.4,
+   "art": "Maa stands in the shop in the morning looking up at Papa's garlanded photo with a soft proud smile, her phone in her hand, Anaya beside her with an arm around her shoulder.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "আপনার মায়ের দোকানের হিসাব, কে রাখে?",
+   "sub": "আপনার মায়ের দোকানের হিসাব, কে রাখে?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz। ৩০ দিন ফ্রি।",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "lumi-maakidukaan-hi",
+ "machine_translated": true
+}

@@ -1,0 +1,146 @@
+{
+ "id": "mira-papa-bn",
+ "app": "waypoint",
+ "lang": "bn",
+ "character": "mira",
+ "feature": "reveal",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "যে কথা বাবাকে কখনো বলা হয় না",
+ "post_on": "2026-10-29",
+ "banner": "যে কথাটা <em>পাপাকে</em><br>কখনও বলি না 💛",
+ "caption": "আপনার সেই কথাটা কী, যা বলতে চান, অথচ বলতে পারেননি? 👇\nনাম না জানিয়ে বলার একটা জায়গা: Waypoint, বায়োতে লিংক। ১৮+",
+ "linkedin_text": "A short illustrated story in Hindi about the thing many of us never say to our fathers, and a place where you can say one true thing without your name. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#PapaKiYaad",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman her signature outfit is a lilac hoodie and blue jeans.",
+   "Papa": "Papa is Anaya's father, an Indian man in his fifties with a grey moustache, a cream kurta and reading glasses, a gentle tired face.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "বাবা কখনো বলেননি, আমার তোমাকে নিয়ে গর্ব হয়।",
+   "sub": "বাবা কখনো বলেননি, আমার তোমাকে নিয়ে গর্ব হয়।",
+   "min": 2.2,
+   "art": "Papa stands at a small roadside tea stall at dusk holding two glasses of chai, looking proudly at school-age little Anaya who proudly shows him a report card, warm light, steam rising, bicycle leaning nearby.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "ছোটবেলায় কাঁধে বসিয়ে, সারা মেলা দেখিয়েছিলেন।",
+   "sub": "ছোটবেলায় কাঁধে বসিয়ে, সারা মেলা দেখিয়েছিলেন।",
+   "min": 2.2,
+   "art": "At a colourful village fair, Papa carries little Anaya on his shoulders, she laughs holding a balloon and candy floss, Ferris wheel and festival lights behind them, golden evening.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "আমার টিকিটের জন্য, সারা রাত লাইনে দাঁড়িয়েছিলেন।",
+   "sub": "আমার টিকিটের জন্য, সারা রাত লাইনে দাঁড়িয়েছিলেন।",
+   "min": 2.2,
+   "art": "A railway reservation counter at night, Papa in a cream kurta standing patiently in a long queue holding a thermos and a small bag, tired but determined, a wall clock showing past midnight."
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "কোমরে ব্যথা ছিল, তবুও বলেছিলেন, আমি ঠিক আছি।",
+   "sub": "কোমরে ব্যথা ছিল, তবুও বলেছিলেন, আমি ঠিক আছি।",
+   "min": 2.2,
+   "art": "Papa at home pressing a hand to his lower back with a hidden wince while smiling gently at young Anaya who looks worried, a simple living room, evening light, a steel tumbler of water.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "আর আমিও কখনো বলতে পারিনি, তোমার খুব মনে পড়ে।",
+   "sub": "আর আমিও কখনো বলতে পারিনি, তোমার খুব মনে পড়ে।",
+   "min": 2.2,
+   "art": "Grown Anaya in a lilac hoodie sits alone in her small rented flat in a big city at night, holding a framed photo of Papa and looking at it with longing, a bag half packed, city lights outside."
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "ফোনে শুধু এইটুকু, খেয়েছ? হ্যাঁ, আপনি?",
+   "sub": "ফোনে শুধু এইটুকু, খেয়েছ? হ্যাঁ, আপনি?",
+   "min": 2.2,
+   "art": "A split picture: on the left Papa in his armchair at home holding a phone to his ear, on the right grown Anaya in her city flat holding her phone, a thin glowing line of light connecting the two phones across the middle, both with unspoken feelings in their eyes."
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/rooftop-night-alone.png",
+   "vo": "কিছু কথা, সরাসরি বলা যায় না।",
+   "sub": "কিছু কথা, সরাসরি বলা যায় না।",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/fox-bench-dusk.png",
+   "vo": "তাই এক দিন, আমি ওয়েপয়েন্টে লিখলাম।",
+   "sub": "তাই এক দিন, আমি ওয়েপয়েন্টে লিখলাম।",
+   "min": 2.2
+  },
+  {
+   "layout": "phone",
+   "vo": "বাবা, তোমার খুব মনে পড়ে।",
+   "sub": "বাবা, তোমার খুব মনে পড়ে।",
+   "min": 2.4,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/anaya-relief-tear-smile.png",
+   "vo": "কোনো অচেনা মানুষ ব্যক্তিগত উত্তর পাঠাল, আমিও।",
+   "sub": "কোনো অচেনা মানুষ ব্যক্তিগত উত্তর পাঠাল, আমিও।",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "আর সে রাতে, আমি বাবাকে ফোন করলাম।",
+   "sub": "আর সে রাতে, আমি বাবাকে ফোন করলাম।",
+   "min": 2.2,
+   "art": "Grown Anaya on the balcony of her city flat at night holding the phone to her ear, a nervous hopeful smile, her other hand on her heart, fairy lights and a few stars, the fox mascot peeking from a plant pot beside her."
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "বাবা বললেন, আমারও তোমার খুব মনে পড়ে।",
+   "sub": "বাবা বললেন, আমারও তোমার খুব মনে পড়ে।",
+   "min": 2.2,
+   "art": "Papa in his living room answering the phone call with a trembling joyful smile and a tear, his glasses pushed up, framed family photos behind him, warm lamp light, deeply moving."
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "আপনার সেই কথাটা কী, যা আপনাকে বলতেই হবে?",
+   "sub": "আপনার সেই কথাটা কী, যা আপনাকে বলতেই হবে?",
+   "min": 3.0,
+   "focus": "30% 55%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "ওয়েপয়েন্ট। একবার বলুন।",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "mira-papa-hi",
+ "machine_translated": true
+}

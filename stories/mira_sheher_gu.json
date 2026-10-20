@@ -1,0 +1,138 @@
+{
+ "id": "mira-sheher-gu",
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "mira",
+ "feature": "mood-log",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "નવા શહેરમાં કોઈ નથી",
+ "post_on": "2026-11-10",
+ "banner": "નવું શહેર, નવી નોકરી,<br><em>અને કોઈ પોતાનું નથી</em> 🌃",
+ "caption": "અનાયા પાસે બધું છે: નોકરી, રૂડો, ચાર સો કોન્ટેક્ટ્સ. બસ રાતે વાત કરવા કોઈ નહીં. 👇\nજ્યાં અજાણ્યા લોકો સાચું સાંભળે છે: Waypoint, લિંક બાયોમાં. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about moving to a new city with a new job, a rented room and four hundred contacts, and nobody to talk to at night. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#NayaSheher",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman her signature outfit is a lilac hoodie and blue jeans.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "નવું શહેર, નવી નોકરી, નવો રૂમ.",
+   "sub": "નવું શહેર, નવી નોકરી, નવો રૂમ.",
+   "min": 2.2,
+   "art": "Anaya in a lilac hoodie steps out of an auto-rickshaw with a big suitcase in front of a tall apartment block in a big Indian city, looking up, morning haze, traffic around her."
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "ફોનમાં ચાર સો નંબર.",
+   "sub": "ફોનમાં ચાર સો નંબર.",
+   "min": 2.0,
+   "art": "Close view of Anaya's phone in her hand showing a long contact list scrolling past, her face reflected faintly in the dark screen, a small rented room behind."
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/anaya-night-chats-lonely.png",
+   "vo": "રાતે, વાત કરવા કોઈ નહીં.",
+   "sub": "રાતે, વાત કરવા કોઈ નહીં.",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/friend-chai-stall.png",
+   "vo": "જૂની દોસ્તને કહ્યું, બધું મજામાં છે યાર.",
+   "sub": "જૂની દોસ્તને કહ્યું, બધું મજામાં છે યાર.",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/anaya-hostel-night-phone.png",
+   "vo": "ઘરે કહ્યું, ખૂબ મજા આવી રહી છે.",
+   "sub": "ઘરે કહ્યું, ખૂબ મજા આવી રહી છે.",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/rooftop-night-alone.png",
+   "vo": "અને છત પર એકલા, સાચું કંઈક ઓર હતું.",
+   "sub": "અને છત પર એકલા, સાચું કંઈક ઓર હતું.",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/fox-bench-dusk.png",
+   "vo": "પછી એક જગ્યા મળી, જ્યાં કોઈ નથી જાણતું, તમે કોણ છો.",
+   "sub": "પછી એક જગ્યા મળી, જ્યાં કોઈ નથી જાણતું, તમે કોણ છો.",
+   "min": 2.4
+  },
+  {
+   "layout": "phone",
+   "vo": "ત્યાં હજારો અજાણ્યા, પોતાનું સાચું લખી રહ્યા હતા.",
+   "sub": "ત્યાં હજારો અજાણ્યા, પોતાનું સાચું લખી રહ્યા હતા.",
+   "min": 2.4,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "કોઈ નવા શહેરમાં એકલું. કોઈ નવી નોકરીથી ડરેલું.",
+   "sub": "કોઈ નવા શહેરમાં એકલું. કોઈ નવી નોકરીથી ડરેલું.",
+   "min": 2.4,
+   "art": "A night sky over a big city where glowing paper cards float above different lit windows, each window with a different young person reading their phone, warm and connected.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "મેં પણ લખ્યું. નામ વગર.",
+   "sub": "મેં પણ લખ્યું. નામ વગર.",
+   "min": 2.2,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/anaya-relief-tear-smile.png",
+   "vo": "અને પહેલી વાર, આ શહેરમાં, કોઈએ સાંભળ્યું.",
+   "sub": "અને પહેલી વાર, આ શહેરમાં, કોઈએ સાંભળ્યું.",
+   "min": 2.4
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/rooftop-dawn-fox-hope.png",
+   "vo": "શહેર એ જ છે. બસ હવે, હું એકલી નથી.",
+   "sub": "શહેર એ જ છે. બસ હવે, હું એકલી નથી.",
+   "min": 2.4
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "તમારા શહેરમાં, તમારી વાત કોણ સાંભળે છે?",
+   "sub": "તમારા શહેરમાં, તમારી વાત કોણ સાંભળે છે?",
+   "min": 3.0,
+   "focus": "50% 40%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint. એક વાર કહી જુઓ.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "mira-sheher-hi",
+ "machine_translated": true
+}

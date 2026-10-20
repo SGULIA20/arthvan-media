@@ -1,0 +1,129 @@
+{
+ "id": "lumi-diwali-mr",
+ "app": "scoremybiz",
+ "lang": "mr",
+ "character": "lumi",
+ "lead": "male",
+ "feature": "what-i-have-and-owe",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "दिवालीची विक्री, रिकामे गल्ला",
+ "post_on": "2026-11-05",
+ "banner": "रेकॉर्ड विक्री, तरीही<br><em>गल्ला खाली</em> 🪔",
+ "caption": "सुरेशची दिवाळी: कागदावर दोन लाख नफा, गल्ल्यात काहीच नाही. पैसे गेले कुठं? 👇\nScoreMyBiz, ३० दिवस फुकट: बायोमध्ये लिंक.",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper whose Diwali sales break records while his cash drawer stays empty, and how he finds where the money is stuck. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#DiwaliBikri",
+  "#MunafaVsCash",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Suresh": "Suresh is a small-town Indian shopkeeper in his forties with a thick black moustache, a checked half-sleeve shirt and a wristwatch; an earnest, slightly worried face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "दिवाळीत सुरेशच्या दुकानात, रेकॉर्ड विक्री.",
+   "sub": "दिवाळीत सुरेशच्या दुकानात, रेकॉर्ड विक्री.",
+   "min": 2.2,
+   "art": "Suresh in a checked shirt beams behind the counter of his small general store decorated with marigold garlands and rows of clay diyas, a crowd of festive customers, gift boxes and sweets stacked high, warm evening light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "नफा? कागदावर, दोन लाख.",
+   "sub": "नफा? कागदावर, दोन लाख.",
+   "min": 2.2,
+   "art": "Suresh at night writing happily in a long account register with a calculator beside him, a diya burning on the table, the figures glowing, a proud smile.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "पण नवीन माल आणण्यासाठी, गल्ल्यात पैसे नाहीत.",
+   "sub": "पण नवीन माल आणण्यासाठी, गल्ल्यात पैसे नाहीत.",
+   "min": 2.4,
+   "art": "Close view of an open wooden cash drawer that is almost empty, a few coins and two small notes, Suresh's hand resting on its edge, his face above it falling from a smile to worry.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "पैसे गेले कुठं?",
+   "sub": "पैसे गेले कुठं?",
+   "min": 2.0,
+   "art": "Suresh sits alone in the closed shop at night scratching his head, the register open in front of him, question marks drawn as faint smoke from the diya, shelves half empty behind him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "अर्धे, उधारावर. सणाला ग्राहक घेऊन गेले.",
+   "sub": "अर्धे, उधारावर. सणाला ग्राहक घेऊन गेले.",
+   "min": 2.4,
+   "art": "A page of the register filled with a long list of customer names and amounts, a few customers drawn faintly walking away with bags of festive shopping, Suresh's finger running down the list.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "बाकी, रॅकवर. जो माल विकलाच नाही.",
+   "sub": "बाकी, रॅकवर. जो माल विकलाच नाही.",
+   "min": 2.2,
+   "art": "Suresh looks at a back-room shelf stacked with unsold gift boxes and cartons still in their plastic, a price tag hanging, dim bulb light, his hands on his hips.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "ScoreMyBiz ने दाखवलं, नफा कुठं, रोख कुठं अडकला.",
+   "sub": "ScoreMyBiz ने दाखवलं, नफा कुठं, रोख कुठं अडकला.",
+   "min": 2.6,
+   "screen": "cash-reality.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "आता दर आठवड्याला, सुरेश बघतो, पैसा कुठं अडकलाय.",
+   "sub": "आता दर आठवड्याला, सुरेश बघतो, पैसा कुठं अडकलाय.",
+   "min": 2.4,
+   "art": "Suresh sits at the shop counter early in the morning with a cup of chai, calmly reading his phone, the register closed beside him, sunlight through the open shutter.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "पुढच्या दिवाळीच्या आधी, गल्लाही भरलेला, रॅकही.",
+   "sub": "पुढच्या दिवाळीच्या आधी, गल्लाही भरलेला, रॅकही.",
+   "min": 2.4,
+   "art": "Suresh stands proudly in his freshly stocked shop, shelves full and tidy, the cash drawer open and full of neat notes, a new string of marigolds at the door, bright morning.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "तुमचा नफा, कागदावर आहे, की गल्ल्यात?",
+   "sub": "तुमचा नफा, कागदावर आहे, की गल्ल्यात?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. तीस दिवस फुकट.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "lumi-diwali-hi",
+ "machine_translated": true
+}

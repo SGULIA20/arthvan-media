@@ -1,0 +1,156 @@
+{
+ "id": "mira-naukri-bn",
+ "app": "waypoint",
+ "lang": "bn",
+ "character": "mira",
+ "lead": "male",
+ "feature": "reveal",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "ঘরে সবার মনে হলো, সব ঠিক আছে",
+ "post_on": "2026-10-27",
+ "banner": "চাকরি গেল, আর বাড়িতে<br><em>'সব বঢ়িয়া হ্যায়'</em> 😶",
+ "caption": "রোহান কাউকে কিছু বলেনি। তারপর এক রাতে, নাম না লিখে, লিখে দিল। 👇\nএকটা সত্যি, নাম না লিখে: Waypoint, বায়োতে লিংক। ১৮+",
+ "linkedin_text": "A short illustrated story in Hindi about a young man who loses his job and tells his family everything is fine, until he finds one place to say the truth without his name. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#SabTheekHai",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Rohan": "Rohan is a 27-year-old Indian man with short black hair, a light stubble, a plain blue shirt and a backpack; an honest tired face.",
+   "Maa": "Maa is Rohan's mother, a kind Indian woman in her fifties in a green cotton saree, hair in a bun, reading glasses on a chain.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "রোহানের চাকরি চলে গেল, এক সোমবার।",
+   "sub": "রোহানের চাকরি চলে গেল, এক সোমবার।",
+   "min": 2.2,
+   "art": "Rohan walks out of a glass office building on a grey morning carrying a small cardboard box with a plant and a mug, other people rushing past him, his face blank and tired.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "সন্ধ্যায় মায়ের ফোন, কাজ কেমন চলছে?",
+   "sub": "সন্ধ্যায় মায়ের ফোন, কাজ কেমন চলছে?",
+   "min": 2.2,
+   "art": "Rohan sits by the window of a crowded city bus at dusk holding his phone to his ear, forcing a small smile while his eyes look sad, city lights blurring outside.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "ভালো মা। অনেক কাজ।",
+   "sub": "ভালো মা। অনেক কাজ।",
+   "min": 2.2,
+   "art": "Close view of Rohan's face lit by his phone in a dim rented room, a cheerful fake smile on his lips and worry in his eyes, the cardboard box from the office still unopened on the floor.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "বন্ধুদের গ্রুপে, সবার উন্নতির খবর।",
+   "sub": "বন্ধুদের গ্রুপে, সবার উন্নতির খবর।",
+   "min": 2.2,
+   "art": "Rohan lies on his bed at night scrolling his phone, floating chat bubbles around him show confetti, a trophy, a new car and a 'promoted!' badge, his own face dull in the blue light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "কাকে বলত? সবার মনে হয়, সব ঠিক আছে।",
+   "sub": "কাকে বলত? সবার মনে হয়, সব ঠিক আছে।",
+   "min": 2.2,
+   "art": "Rohan alone on the roof of a city building at night, sitting on the parapet with his knees drawn up, a sea of lit windows below, a dark sky with a few stars.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/fox-name-badge.png",
+   "vo": "তারপর সে Waypoint খুলল। না নাম, না মুখ।",
+   "sub": "তারপর সে Waypoint খুলল। না নাম, না মুখ।",
+   "min": 2.2
+  },
+  {
+   "layout": "phone",
+   "vo": "আজ আমার চাকরি চলে গেছে। কাউকে বলিনি।",
+   "sub": "আজ আমার চাকরি চলে গেছে। কাউকে বলিনি।",
+   "min": 2.4,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "কিছুক্ষণের মধ্যে অচেনারা বলল, আমরা শুনছি।",
+   "sub": "কিছুক্ষণের মধ্যে অচেনারা বলল, আমরা শুনছি।",
+   "min": 2.2,
+   "art": "Rohan's phone glows in his hands in the dark room, three soft glowing hearts and hands float up from the screen and light his surprised face, the fox mascot peeks over the edge of the bed.",
+   "noref": false
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "একজন লিখল, আমারও গিয়েছিল। পরে ভালো পেয়েছি।",
+   "sub": "একজন লিখল, আমারও গিয়েছিল। পরে ভালো পেয়েছি।",
+   "min": 2.4,
+   "art": "A single glowing message card floats above Rohan's phone like a paper lantern in the dark room, Rohan reads it with his hand over his mouth, eyes wet, a faint warm light on his face.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "সে রাতে, রোহান প্রথমবার শান্তিতে ঘুমাল।",
+   "sub": "সে রাতে, রোহান প্রথমবার শান্তিতে ঘুমাল।",
+   "min": 2.2,
+   "art": "Rohan asleep peacefully in his small room, the phone face down on the bedside table, moonlight through the window, the fox mascot curled up asleep on the windowsill.",
+   "noref": false
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "পরের সকালে, সে মাকে সত্যিটা বলল।",
+   "sub": "পরের সকালে, সে মাকে সত্যিটা বলল।",
+   "min": 2.2,
+   "art": "Rohan on a small sunny balcony in the morning holding a cup of tea and his phone to his ear, an honest open face, a deep breath, pigeons on the railing.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "মা বললেন, বাবা, তুই আছিস তো সব আছে।",
+   "sub": "মা বললেন, বাবা, তুই আছিস তো সব আছে।",
+   "min": 2.4,
+   "art": "Maa in a green saree standing in her small kitchen holding the phone to her ear with a tearful proud smile, steam from a pot behind her, morning light through the window.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "আপনার সেই একটা কথা, যা কাউকে বলেননি?",
+   "sub": "আপনার সেই একটা কথা, যা কাউকে বলেননি?",
+   "min": 3.0,
+   "focus": "40% 40%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint। একবার বলুন।",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "mira-naukri-hi",
+ "machine_translated": true
+}

@@ -1,0 +1,129 @@
+{
+ "id": "lumi-diwali-gu",
+ "app": "scoremybiz",
+ "lang": "gu",
+ "character": "lumi",
+ "lead": "male",
+ "feature": "score-history",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "दिवाली की बिक्री, खाली गल्ला",
+ "post_on": "2026-11-01",
+ "banner": "રેકૉર્ડ બિક્રી, છતાંય<br><em>ગલ્લો ખાલી</em> 🪔",
+ "caption": "सुरेश नी दिवाली: नफ़ो काग़ज पर बे लाख, गल्लामां कांई नहीं. पैसो गयो क्यां? 👇\nScoreMyBiz, ३० दिवस मुफ़्त: बायोमां लिंक.",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper whose Diwali sales break records while his cash drawer stays empty, and how he finds where the money is stuck. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#DiwaliBikri",
+  "#MunafaVsCash",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Suresh": "Suresh is a small-town Indian shopkeeper in his forties with a thick black moustache, a checked half-sleeve shirt and a wristwatch; an earnest, slightly worried face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "दिवाली पर सुरेशनी दुकानमां, रिकॉर्ड बिक्री.",
+   "sub": "दिवाली पर सुरेशनी दुकानमां, रिकॉर्ड बिक्री.",
+   "min": 2.2,
+   "art": "Suresh in a checked shirt beams behind the counter of his small general store decorated with marigold garlands and rows of clay diyas, a crowd of festive customers, gift boxes and sweets stacked high, warm evening light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "नफ़ो? काग़ज पर, बे लाख.",
+   "sub": "नफ़ो? काग़ज पर, बे लाख.",
+   "min": 2.2,
+   "art": "Suresh at night writing happily in a long account register with a calculator beside him, a diya burning on the table, the figures glowing, a proud smile.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "पण नवो माल मंगवा माटे, गल्लामां पैसो नथी.",
+   "sub": "पण नवो माल मंगवा माटे, गल्लामां पैसो नथी.",
+   "min": 2.4,
+   "art": "Close view of an open wooden cash drawer that is almost empty, a few coins and two small notes, Suresh's hand resting on its edge, his face above it falling from a smile to worry.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "पैसो गयो क्यां?",
+   "sub": "पैसो गयो क्यां?",
+   "min": 2.0,
+   "art": "Suresh sits alone in the closed shop at night scratching his head, the register open in front of him, question marks drawn as faint smoke from the diya, shelves half empty behind him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "अधो, उधारमां. त्योहार पर ग्राहक लई गया.",
+   "sub": "अधो, उधारमां. त्योहार पर ग्राहक लई गया.",
+   "min": 2.4,
+   "art": "A page of the register filled with a long list of customer names and amounts, a few customers drawn faintly walking away with bags of festive shopping, Suresh's finger running down the list.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "बाकी, रैक पर. जे माल वेचायो ज नथी.",
+   "sub": "बाकी, रैक पर. जे माल वेचायो ज नथी.",
+   "min": 2.2,
+   "art": "Suresh looks at a back-room shelf stacked with unsold gift boxes and cartons still in their plastic, a price tag hanging, dim bulb light, his hands on his hips.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "ScoreMyBiz ए वताव्युं, नफ़ो क्यां, रोकड क्यां फंसार्ड छे.",
+   "sub": "ScoreMyBiz ए वताव्युं, नफ़ो क्यां, रोकड क्यां फंसार्ड छे.",
+   "min": 2.6,
+   "screen": "cash-reality.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "हवे दर हफ्ते, सुरेश जोए छे, पैसो क्यां फंसायो छे.",
+   "sub": "हवे दर हफ्ते, सुरेश जोए छे, पैसो क्यां फंसायो छे.",
+   "min": 2.4,
+   "art": "Suresh sits at the shop counter early in the morning with a cup of chai, calmly reading his phone, the register closed beside him, sunlight through the open shutter.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "आवी दिवाली पेहलां, गल्लो पण भरेलो, रैक पण.",
+   "sub": "आवी दिवाली पेहलां, गल्लो पण भरेलो, रैक पण.",
+   "min": 2.4,
+   "art": "Suresh stands proudly in his freshly stocked shop, shelves full and tidy, the cash drawer open and full of neat notes, a new string of marigolds at the door, bright morning.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "तमारो नफ़ो, काग़ज पर छे, के गल्लामां?",
+   "sub": "तमारो नफ़ो, काग़ज पर छे, के गल्लामां?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. त्रीस दिवस मुफ़्त.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "lumi-diwali-hi",
+ "machine_translated": true
+}

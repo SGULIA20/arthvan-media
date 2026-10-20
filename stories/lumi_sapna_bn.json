@@ -1,0 +1,132 @@
+{
+ "id": "lumi-sapna-bn",
+ "app": "scoremybiz",
+ "lang": "bn",
+ "character": "lumi",
+ "feature": "whatsapp-daily-update",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "বাবার স্বপ্ন: নতুন কাউন্টার",
+ "post_on": "2026-11-03",
+ "banner": "বabার স্বপ্ন,<br><em>প্রতি বছর 'পরের বছর'</em> 🪚",
+ "caption": "নতুন কাউন্টার, নতুন ফ্রিজ, দোকানের রঙ। প্রতি বছর বাবা বলতেন, 'পরের বছর।' এইবার একটা তারিখ ঠিক হলো। 👇\nScoreMyBiz, ৩০ দিন ফ্রি: বায়ো-তে লিংক।",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper's dream that is always 'next year', until it gets a number and a date. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#PapaKaSapna",
+  "#DukaanKaGoal",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman she wears a simple blue kurta with jeans.",
+   "Papa": "Papa is Anaya's father, a small-town shopkeeper in his fifties with a grey moustache, a cream kurta and reading glasses, a gentle tired face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "বাবার একটা স্বপ্ন আছে। নতুন কাউন্টার, নতুন ফ্রিজ।",
+   "sub": "বাবার একটা স্বপ্ন আছে। নতুন কাউন্টার, নতুন ফ্রিজ।",
+   "min": 2.4,
+   "art": "Papa in a cream kurta stands in his small old general store looking at a worn wooden counter and an old rattling fridge, imagining a bright new glass counter drawn as a faint glowing sketch over it.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/papa-newspaper-doorway.png",
+   "vo": "প্রতি বছর বলেন, পরের বছর।",
+   "sub": "প্রতি বছর বলেন, পরের বছর।",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/dusty-register-shelf.png",
+   "vo": "আর পরের বছর, প্রতিবার একই রকম যায়।",
+   "sub": "আর পরের বছর, প্রতিবার একই রকম যায়।",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/strip-udhaar-cash-stock.png",
+   "vo": "টাকা আসে, আর কোথায় যায়, টের পাওয়া যায় না।",
+   "sub": "টাকা আসে, আর কোথায় যায়, টের পাওয়া যায় না।",
+   "min": 2.4
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "আমি জিজ্ঞেস করলাম, বাবা, কত চাই? কবে নাগাদ?",
+   "sub": "আমি জিজ্ঞেস করলাম, বাবা, কত চাই? কবে নাগাদ?",
+   "min": 2.4,
+   "art": "Anaya in a blue kurta sits with Papa at the shop counter in the evening, holding her phone, asking with a warm direct look; Papa scratches his head and smiles, a calendar on the wall behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "প্রথমবার, স্বপ্নের একটা নম্বর হলো। আশি হাজার।",
+   "sub": "প্রথমবার, স্বপ্নের একটা নম্বর হলো। আশি হাজার।",
+   "min": 2.4,
+   "art": "Close view of Papa writing a figure on a small piece of paper at the counter with a determined face, Anaya's hand pointing at it, a diya and a cup of chai beside.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "আর একটা তারিখ। পরের দীপাবলি।",
+   "sub": "আর একটা তারিখ। পরের দীপাবলি।",
+   "min": 2.4,
+   "screen": "goals.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "এখন প্রতি মাসে, বাবা দেখেন, কত বাকি আছে।",
+   "sub": "এখন প্রতি মাসে, বাবা দেখেন, কত বাকি আছে।",
+   "min": 2.4,
+   "art": "Papa on a stool outside the shop in the morning sun, reading glasses on, looking at his phone with a small satisfied nod, a cup of chai, a bicycle leaning on the wall.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "আর বাকি তোলার ফোন, এখন বাবা নিজেই করেন।",
+   "sub": "আর বাকি তোলার ফোন, এখন বাবা নিজেই করেন।",
+   "min": 2.2,
+   "art": "Papa at the counter on the phone, polite but firm, ticking a name in his register with a pen, afternoon light, shelves behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "এই দীপাবলিতে, কাউন্টার নতুন ছিল। আর বাবার চোখও।",
+   "sub": "এই দীপাবলিতে, কাউন্টার নতুন ছিল। আর বাবার চোখও।",
+   "min": 2.6,
+   "art": "Papa stands proudly behind a new bright glass counter in the shop decorated with marigolds and diyas, Anaya beside him clapping, a new fridge humming in the corner, warm festive light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "আপনার পরের বছরের স্বপ্নটা, কোনটা?",
+   "sub": "আপনার পরের বছরের স্বপ্নটা, কোনটা?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz। ৩০ দিন ফ্রি।",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "lumi-sapna-hi",
+ "machine_translated": true
+}

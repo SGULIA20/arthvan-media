@@ -1,0 +1,143 @@
+{
+ "id": "lumi-score-bn",
+ "app": "scoremybiz",
+ "lang": "bn",
+ "character": "lumi",
+ "feature": "whatsapp-daily-update",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "বাবার দোকানের নম্বর",
+ "post_on": "2026-10-30",
+ "banner": "দোকানের নম্বর<br><em>৪২ থেকে ৬৮</em> 📈",
+ "caption": "বাবা ভাবতেন দোকান ঠিক চলছে। তারপর একটা নম্বর এল: ৪২। তিন মাস পরে, ৬৮। 👇\nScoreMyBiz, ৩০ দিন ফ্রি: বায়োতে লিংক আছে।",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper who thought his shop was fine until he saw its health score, and what changed in three months. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#DukaanKaNumber",
+  "#BusinessHealthScore",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman she wears a simple blue kurta with jeans.",
+   "Papa": "Papa is Anaya's father, a small-town shopkeeper in his fifties with a grey moustache, a cream kurta and reading glasses, a gentle tired face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "বাবা বলতেন, দোকান খুব ভালো চলছে।",
+   "sub": "বাবা বলতেন, দোকান খুব ভালো চলছে।",
+   "min": 2.2,
+   "art": "Papa in a cream kurta stands contentedly at the counter of his small hardware-and-general store in the afternoon, arms folded, a wall of shelves with tins and tools behind him, a customer leaving with a bag.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "ভালো মানে কত? কেউ জানত না।",
+   "sub": "ভালো মানে কত? কেউ জানত না।",
+   "min": 2.2,
+   "art": "Papa and Anaya at the dinner table in the evening, Anaya asking with open hands, Papa shrugging with a small smile, an old account register and a steel tumbler between them.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "আমি বললাম, একবার নম্বরটা দেখি।",
+   "sub": "আমি বললাম, একবার নম্বরটা দেখি।",
+   "min": 2.2,
+   "art": "Anaya in a blue kurta holds her phone out to Papa at the shop counter, Papa leans in with his reading glasses, curious and a little doubtful, warm evening light.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "বিয়াল্লিশ। একশোর মধ্যে।",
+   "sub": "বিয়াল্লিশ। একশোর মধ্যে।",
+   "min": 2.6,
+   "screen": "result.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "বাবা চুপ হয়ে গেলেন। তারপর বললেন, এত কম?",
+   "sub": "বাবা চুপ হয়ে গেলেন। তারপর বললেন, এত কম?",
+   "min": 2.2,
+   "art": "Close view of Papa's face looking at the phone, glasses pushed up, surprised and a little hurt, Anaya's hand on his shoulder, the shop behind them in soft focus.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "বাকি বেশি, নগদ কম, আর মাল তাকে পড়ে আছে।",
+   "sub": "বাকি বেশি, নগদ কম, আর মাল তাকে পড়ে আছে।",
+   "min": 2.4,
+   "art": "Three small pictures side by side like a storybook strip: a register page full of names, a nearly empty cash drawer, and a shelf of dusty unsold boxes, drawn in the same warm style.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "অ্যাপটা এই সপ্তাহের তিনটে কাজ বলে দিল।",
+   "sub": "অ্যাপটা এই সপ্তাহের তিনটে কাজ বলে দিল।",
+   "min": 2.4,
+   "screen": "tasks.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "বাবা পুরোনো বাকির জন্য ফোন করলেন।",
+   "sub": "বাবা পুরোনো বাকির জন্য ফোন করলেন।",
+   "min": 2.2,
+   "art": "Papa sitting on a stool outside the shop in the morning with a cup of chai, phone to his ear, the register open on his knee, a polite firm expression, a scooter passing by.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "যা বিক্রি হতো না, তা আনা বন্ধ করলেন।",
+   "sub": "যা বিক্রি হতো না, তা আনা বন্ধ করলেন।",
+   "min": 2.2,
+   "art": "Papa at the shop with a supplier holding a delivery list, Papa gently shaking his head and crossing out two items with a pen, cartons on a hand-cart outside.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "তিন মাস পরে, আটষট্টি।",
+   "sub": "তিন মাস পরে, আটষট্টি।",
+   "min": 2.6,
+   "screen": "score-history.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "বাবা প্রথমবার বললেন, এখন দোকান সত্যি ঠিক আছে।",
+   "sub": "বাবা প্রথমবার বললেন, এখন দোকান সত্যি ঠিক আছে।",
+   "min": 2.4,
+   "art": "Papa and Anaya standing together in the doorway of the shop at golden hour, Papa smiling proudly with his phone in hand, Anaya laughing, the shop tidy and bright behind them.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "আপনার দোকানের নম্বর কত?",
+   "sub": "আপনার দোকানের নম্বর কত?",
+   "min": 3.0,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz. ৩০ দিন ফ্রি।",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "lumi-score-hi",
+ "machine_translated": true
+}

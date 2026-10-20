@@ -1,0 +1,138 @@
+{
+ "id": "mira-sheher-bn",
+ "app": "waypoint",
+ "lang": "bn",
+ "character": "mira",
+ "feature": "reveal",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "নতুন শহরে কেউ নেই",
+ "post_on": "2026-11-06",
+ "banner": "নতুন শহর, নতুন চাকরি,<br><em>আর কেউ নিজের নেই</em> 🌃",
+ "caption": "অনায়ার কাছে সবই আছে: চাকরি, কামরা, চারশো কন্টাক্ট। শুধু রাতে কথা বলার কেউ নেই। 👇\nযেখানে অচেনা লোক সত্যি শোনে: Waypoint, বায়ো-তে লিঙ্ক। ১৮+",
+ "linkedin_text": "A short illustrated story in Hindi about moving to a new city with a new job, a rented room and four hundred contacts, and nobody to talk to at night. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#NayaSheher",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman her signature outfit is a lilac hoodie and blue jeans.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "নতুন শহর, নতুন চাকরি, নতুন কামরা।",
+   "sub": "নতুন শহর, নতুন চাকরি, নতুন কামরা।",
+   "min": 2.2,
+   "art": "Anaya in a lilac hoodie steps out of an auto-rickshaw with a big suitcase in front of a tall apartment block in a big Indian city, looking up, morning haze, traffic around her."
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "ফোনে চারশো নম্বর।",
+   "sub": "ফোনে চারশো নম্বর।",
+   "min": 2.0,
+   "art": "Close view of Anaya's phone in her hand showing a long contact list scrolling past, her face reflected faintly in the dark screen, a small rented room behind."
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/anaya-night-chats-lonely.png",
+   "vo": "রাতে, কথা বলার কেউ নেই।",
+   "sub": "রাতে, কথা বলার কেউ নেই।",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/friend-chai-stall.png",
+   "vo": "পুরোনো বন্ধুকে বলল, সব ভালো আছে ইয়ার।",
+   "sub": "পুরোনো বন্ধুকে বলল, সব ভালো আছে ইয়ার।",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/anaya-hostel-night-phone.png",
+   "vo": "ঘরে বলল, খুব মজা আস্ছে।",
+   "sub": "ঘরে বলল, খুব মজা আস্ছে।",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/rooftop-night-alone.png",
+   "vo": "আর ছাদে একা, সত্যিটা অন্য কিছু ছিল।",
+   "sub": "আর ছাদে একা, সত্যিটা অন্য কিছু ছিল।",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/fox-bench-dusk.png",
+   "vo": "তারপর একটা জায়গা পেল, যেখানে কেউ জানে না, তুমি কে।",
+   "sub": "তারপর একটা জায়গা পেল, যেখানে কেউ জানে না, তুমি কে।",
+   "min": 2.4
+  },
+  {
+   "layout": "phone",
+   "vo": "সেখানে হাজারো অচেনা, নিজেদের সত্যি লিখছিল।",
+   "sub": "সেখানে হাজারো অচেনা, নিজেদের সত্যি লিখছিল।",
+   "min": 2.4,
+   "screen": "wall.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "কেউ নতুন শহরে একা। কেউ নতুন চাকরিতে ভয় পেয়েছে।",
+   "sub": "কেউ নতুন শহরে একা। কেউ নতুন চাকরিতে ভয় পেয়েছে।",
+   "min": 2.4,
+   "art": "A night sky over a big city where glowing paper cards float above different lit windows, each window with a different young person reading their phone, warm and connected.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "আমিও লিখলাম। নাম ছাড়া।",
+   "sub": "আমিও লিখলাম। নাম ছাড়া।",
+   "min": 2.2,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/anaya-relief-tear-smile.png",
+   "vo": "আর প্রথমবার, এই শহরে, কেউ শুনল।",
+   "sub": "আর প্রথমবার, এই শহরে, কেউ শুনল।",
+   "min": 2.4
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/rooftop-dawn-fox-hope.png",
+   "vo": "শহর সেই একই। শুধু এখন, আমি একা নই।",
+   "sub": "শহর সেই একই। শুধু এখন, আমি একা নই।",
+   "min": 2.4
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "আপনার শহরে, আপনার কথা কে শোনে?",
+   "sub": "আপনার শহরে, আপনার কথা কে শোনে?",
+   "min": 3.0,
+   "focus": "50% 40%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint। একবার বলুন।",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "mira-sheher-hi",
+ "machine_translated": true
+}

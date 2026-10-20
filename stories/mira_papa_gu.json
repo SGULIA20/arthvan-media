@@ -1,0 +1,146 @@
+{
+ "id": "mira-papa-gu",
+ "app": "waypoint",
+ "lang": "gu",
+ "character": "mira",
+ "feature": "wall-feed",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "જે વાત પપ્પાને ક્યારેય નથી કહેતા",
+ "post_on": "2026-11-02",
+ "banner": "જે વાત <em>પપ્પાને</em><br>ક્યારેય નથી કહેતા 💛",
+ "caption": "આપની એ વાત કઈ છે, જે તમારે કહેવી છે, પણ કહી નથી શક્યા? 👇\nનામ વગર કહેવાની એક જગ્યા: વેપૉઇન્ટ, બાયોમાં લિંક છે. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about the thing many of us never say to our fathers, and a place where you can say one true thing without your name. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#PapaKiYaad",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman her signature outfit is a lilac hoodie and blue jeans.",
+   "Papa": "Papa is Anaya's father, an Indian man in his fifties with a grey moustache, a cream kurta and reading glasses, a gentle tired face.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "પપ્પાએ ક્યારેય નથી કહ્યું, મને તારા પર ગર્વ છે.",
+   "sub": "પપ્પાએ ક્યારેય નથી કહ્યું, મને તારા પર ગર્વ છે.",
+   "min": 2.2,
+   "art": "Papa stands at a small roadside tea stall at dusk holding two glasses of chai, looking proudly at school-age little Anaya who proudly shows him a report card, warm light, steam rising, bicycle leaning nearby.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "બચપનમાં ખભા પર બેસાડીને, આખો મેળો બતાવ્યો હતો.",
+   "sub": "બચપનમાં ખભા પર બેસાડીને, આખો મેળો બતાવ્યો હતો.",
+   "min": 2.2,
+   "art": "At a colourful village fair, Papa carries little Anaya on his shoulders, she laughs holding a balloon and candy floss, Ferris wheel and festival lights behind them, golden evening.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "મારી ટિકિટ માટે, આખી રાત લાઈનમાં ઊભા રહ્યા.",
+   "sub": "મારી ટિકિટ માટે, આખી રાત લાઈનમાં ઊભા રહ્યા.",
+   "min": 2.2,
+   "art": "A railway reservation counter at night, Papa in a cream kurta standing patiently in a long queue holding a thermos and a small bag, tired but determined, a wall clock showing past midnight."
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "કમરમાં દુખાવો હતો, છતાં બોલ્યા, હું ઠીક છું.",
+   "sub": "કમરમાં દુખાવો હતો, છતાં બોલ્યા, હું ઠીક છું.",
+   "min": 2.2,
+   "art": "Papa at home pressing a hand to his lower back with a hidden wince while smiling gently at young Anaya who looks worried, a simple living room, evening light, a steel tumbler of water.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "અને હું પણ ક્યારેય કહી ન શકી, તમારી બહુ યાદ આવે છે.",
+   "sub": "અને હું પણ ક્યારેય કહી ન શકી, તમારી બહુ યાદ આવે છે.",
+   "min": 2.2,
+   "art": "Grown Anaya in a lilac hoodie sits alone in her small rented flat in a big city at night, holding a framed photo of Papa and looking at it with longing, a bag half packed, city lights outside."
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "ફોન પર બસ એટલું, જમ્યા? હા, તમે?",
+   "sub": "ફોન પર બસ એટલું, જમ્યા? હા, તમે?",
+   "min": 2.2,
+   "art": "A split picture: on the left Papa in his armchair at home holding a phone to his ear, on the right grown Anaya in her city flat holding her phone, a thin glowing line of light connecting the two phones across the middle, both with unspoken feelings in their eyes."
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/rooftop-night-alone.png",
+   "vo": "કેટલીક વાતો, સીધી કહી શકાતી નથી.",
+   "sub": "કેટલીક વાતો, સીધી કહી શકાતી નથી.",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/fox-bench-dusk.png",
+   "vo": "એટલે એક દિવસ, મેં વેપૉઇન્ટ પર લખ્યું.",
+   "sub": "એટલે એક દિવસ, મેં વેપૉઇન્ટ પર લખ્યું.",
+   "min": 2.2
+  },
+  {
+   "layout": "phone",
+   "vo": "પપ્પા, તમારી બહુ યાદ આવે છે.",
+   "sub": "પપ્પા, તમારી બહુ યાદ આવે છે.",
+   "min": 2.4,
+   "screen": "create_typed.png"
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/anaya-relief-tear-smile.png",
+   "vo": "કોઈ અજાણ્યાએ પર્સનલ જવાબ મોકલ્યો, હું પણ.",
+   "sub": "કોઈ અજાણ્યાએ પર્સનલ જવાબ મોકલ્યો, હું પણ.",
+   "min": 2.2
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "અને તે રાતે, મેં પપ્પાને ફોન કર્યો.",
+   "sub": "અને તે રાતે, મેં પપ્પાને ફોન કર્યો.",
+   "min": 2.2,
+   "art": "Grown Anaya on the balcony of her city flat at night holding the phone to her ear, a nervous hopeful smile, her other hand on her heart, fairy lights and a few stars, the fox mascot peeking from a plant pot beside her."
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "પપ્પા બોલ્યા, હું પણ તને બહુ યાદ કરું છું.",
+   "sub": "પપ્પા બોલ્યા, હું પણ તને બહુ યાદ કરું છું.",
+   "min": 2.2,
+   "art": "Papa in his living room answering the phone call with a trembling joyful smile and a tear, his glasses pushed up, framed family photos behind him, warm lamp light, deeply moving."
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "આપની એ વાત કઈ છે, જે તમારે કહેવી છે?",
+   "sub": "આપની એ વાત કઈ છે, જે તમારે કહેવી છે?",
+   "min": 3.0,
+   "focus": "30% 55%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "વેપૉઇન્ટ. એક વાર કહી જુઓ.",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "_held": false,
+ "art_id": "mira-papa-hi",
+ "machine_translated": true
+}

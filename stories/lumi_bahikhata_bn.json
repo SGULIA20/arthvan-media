@@ -1,0 +1,142 @@
+{
+ "id": "lumi-bahikhata-bn",
+ "app": "scoremybiz",
+ "lang": "bn",
+ "character": "lumi",
+ "feature": "whatsapp-daily-update",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "বাবার দোকানের হিসাব",
+ "post_on": "2026-10-24",
+ "banner": "বাবার <em>দোকানের</em><br>হিসাব 📒",
+ "caption": "আপনার দোকানের হিসাব এক খাতায় নাকি এক জায়গায়? 👇\nScoreMyBiz: সব এক জায়গায়, ৩০ দিন ফ্রি। বায়োতে লিংক।",
+ "linkedin_text": "A short illustrated story in Hindi about a daughter who comes home to her father's small shop, finds the old ledger full of credit, and puts the shop's accounts, dues and one health number in her phone with ScoreMyBiz. Free for 30 days.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#BahiKhata",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Anaya": "Anaya has long wavy black hair and warm brown eyes; as a grown woman she wears a simple blue kurta with jeans.",
+   "Papa": "Papa is Anaya's father, a small-town shopkeeper in his fifties with a grey moustache, a cream kurta and reading glasses, a gentle tired face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "বাবার ছোট্ট দোকানটা আমার পুরো শৈশব ছিল।",
+   "sub": "বাবার ছোট্ট দোকানটা আমার পুরো শৈশব ছিল।",
+   "min": 2.2,
+   "art": "A cheerful small-town kirana shop front in the morning, shelves of biscuits and spices, Papa arranging jars, little Anaya in school uniform doing homework at the counter, sunlight and marigold garland over the door.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "প্রতিদিন সন্ধ্যায় উনি পুরনো খাতায় হিসাব লিখতেন।",
+   "sub": "প্রতিদিন সন্ধ্যায় উনি পুরনো খাতায় হিসাব লিখতেন।",
+   "min": 2.2,
+   "art": "Papa at the shop counter at dusk writing in a thick old red cloth-bound ledger with a pen, a glass of chai beside him, an old brass scale and a hanging bulb, warm light."
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "কে কত বাকি নিয়ে গেল, সব ওই এক খাতায়।",
+   "sub": "কে কত বাকি নিয়ে গেল, সব ওই এক খাতায়।",
+   "min": 2.2,
+   "art": "A close view of an open old ledger page full of handwritten names and amounts in a neat hand, a steel pen, a pair of reading glasses resting on it, scattered scrap slips with notes, warm lamp light."
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "কিন্তু দোকান কেমন চলছে, খাতা বা বাবা কেউ বলত না।",
+   "sub": "কিন্তু দোকান কেমন চলছে, খাতা বা বাবা কেউ বলত না।",
+   "min": 2.2,
+   "art": "Papa alone in the shop at night, shutter half down, sitting on a stool with a worried face looking at the ledger and a calculator, a single hanging bulb, long shadows."
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "একদিন আমি শহর থেকে ফিরে সব দেখলাম।",
+   "sub": "একদিন আমি শহর থেকে ফিরে সব দেখলাম।",
+   "min": 2.2,
+   "art": "Grown Anaya in a blue kurta standing at the shop doorway with a suitcase, looking inside with concern and love, Papa behind the counter looking up in surprise, evening light, street outside."
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "অনেক বাকি পড়েছিল, আর বাবা চুপ ছিলেন।",
+   "sub": "অনেক বাকি পড়েছিল, আর বাবা চুপ ছিলেন।",
+   "min": 2.2,
+   "art": "Papa sitting behind the counter looking down quietly while Anaya reads the ledger beside him with a serious face, a stack of unpaid credit slips under a paperweight, the quiet shop around them."
+  },
+  {
+   "layout": "phone",
+   "vo": "আমি ফোনে ScoreMyBiz খুললাম।",
+   "sub": "আমি ফোনে ScoreMyBiz খুললাম।",
+   "min": 2.4,
+   "screen": "dashboard.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "বিক্রি, কেনা, খরচ, সব এক জায়গায়।",
+   "sub": "বিক্রি, কেনা, খরচ, সব এক জায়গায়।",
+   "min": 2.4,
+   "screen": "book.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "কে কত টাকা দেবে, আর WhatsApp-এ মনে করান।",
+   "sub": "কে কত টাকা দেবে, আর WhatsApp-এ মনে করান।",
+   "min": 2.4,
+   "screen": "cash-flow.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "বাবা বললেন, আরে, এ তো সব দেখিয়ে দেয়!খ",
+   "sub": "বাবা বললেন, আরে, এ তো সব দেখিয়ে দেয়!খ",
+   "min": 2.2,
+   "art": "Papa leaning over the counter looking with delighted surprise at a smartphone screen that Anaya holds, both smiling, the old ledger closed beside them, warm golden light."
+  },
+  {
+   "layout": "phone",
+   "vo": "আর দোকানের স্বাস্থ্যের একটাই নম্বর।",
+   "sub": "আর দোকানের স্বাস্থ্যের একটাই নম্বর।",
+   "min": 2.4,
+   "screen": "result.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "খাতা আজও আছে, তবে হিসাব এখন ফোনেও থাকে।",
+   "sub": "খাতা আজও আছে, তবে হিসাব এখন ফোনেও থাকে।",
+   "min": 2.2,
+   "art": "Papa and Anaya laughing together behind the shop counter at golden hour, the old ledger and a phone resting side by side on the counter, the shop lights glowing, customers outside, a feeling of warmth and pride."
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "আপনার দোকানের নম্বরটা কত?",
+   "sub": "আপনার দোকানের নম্বরটা কত?",
+   "min": 3.0,
+   "focus": "35% 60%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "ScoreMyBiz। ত্রিশ দিন ফ্রি।",
+   "sub": "",
+   "min": 5
+  }
+ ],
+ "art_id": "lumi-bahikhata-hi",
+ "machine_translated": true
+}

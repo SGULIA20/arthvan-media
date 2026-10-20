@@ -1,0 +1,158 @@
+{
+ "id": "mira-shaadi-bn",
+ "app": "waypoint",
+ "lang": "bn",
+ "character": "mira",
+ "feature": "reveal",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "বিয়ে কবে করছ?",
+ "post_on": "2026-10-28",
+ "banner": "সবাই জিজ্ঞেস করে<br><em>'বিয়ে কবে করবি?'</em> 🙃",
+ "caption": "রিয়াকে সবাই এমন সব প্রশ্ন করে। কেউ এটা জিজ্ঞেস করে না, তুমি কী চাও? 👇\nরোজ একটা প্রশ্ন, নাম ছাড়া জবাব: Waypoint, বায়োতে লিংক। ১৮+",
+ "linkedin_text": "A short illustrated story in Hindi about a young woman everyone keeps asking when she will marry, and the one question nobody asks her. Waypoint is free on Google Play, for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#SayItOnce",
+  "#ShaadiKabKarogi",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Riya": "Riya is a 29-year-old Indian woman with short curly black hair, a mustard-yellow kurti and small silver earrings; a bright thoughtful face.",
+   "Maa": "Maa is Riya's mother, a warm Indian woman in her fifties in a maroon saree with a gold border, hair in a bun, a small red bindi.",
+   "fox": "The fox mascot is a friendly small orange fox with big kind eyes and a teal scarf, standing on two legs like a storybook character."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "রিয়া, উনত্রিশ বছর। প্রতিটা আত্মীয়র এক প্রশ্ন।",
+   "sub": "রিয়া, উনত্রিশ বছর। প্রতিটা আত্মীয়র এক প্রশ্ন।",
+   "min": 2.2,
+   "art": "Riya in a mustard-yellow kurti stands at a crowded family wedding function holding a plate, three smiling aunties lean in towards her from all sides with raised eyebrows, fairy lights and marigolds behind.",
+   "noref": true,
+   "card": "রিয়া, উনত্রিশ"
+  },
+  {
+   "layout": "illus",
+   "image": "../_library/aunties-gossip-balcony.png",
+   "vo": "বিয়ে কবে করছ?",
+   "sub": "বিয়ে কবে করছ?",
+   "min": 2.0
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "অফিসে উন্নতি, বাড়িতে চিন্তা।",
+   "sub": "অফিসে উন্নতি, বাড়িতে চিন্তা।",
+   "min": 2.2,
+   "art": "Riya at her office desk holding a small glass award with a proud smile, while her phone on the desk lights up with a call from 'Maa', colleagues clapping softly behind her.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "কাউকে কীভাবে বলি, আমি এখন তৈরি নই?",
+   "sub": "কাউকে কীভাবে বলি, আমি এখন তৈরি নই?",
+   "min": 2.2,
+   "art": "Riya sits by her bedroom window at night hugging a cushion, looking out at the rain on the glass, a wedding invitation card lying on the bed beside her.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "সবাই জবাব চায়। কেউ জিজ্ঞাসা করে না, তুমি কী চাও?",
+   "sub": "সবাই জবাব চায়। কেউ জিজ্ঞাসা করে না, তুমি কী চাও?",
+   "min": 2.4,
+   "art": "Riya looks at herself in a dressing-table mirror, around the mirror frame float small speech bubbles with question marks from faceless relatives, her own reflection quiet and searching.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "Waypoint-এ রোজ একটা প্রশ্ন আসে।",
+   "sub": "Waypoint-এ রোজ একটা প্রশ্ন আসে।",
+   "min": 2.4,
+   "screen": "daily-path.png",
+   "card": "Waypoint"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "আজকের প্রশ্ন ছিল, কোন জিনিসে তোমার ভয় লাগে?",
+   "sub": "আজকের প্রশ্ন ছিল, কোন জিনিসে তোমার ভয় লাগে?",
+   "min": 2.4,
+   "art": "Riya sits cross-legged on her bed at night holding her phone, a soft glowing question card floats above the screen, the fox mascot sits beside her looking up kindly.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "সে লিখল, ভুল মানুষের সঙ্গে বিয়ে হয়ে যাওয়াতে।",
+   "sub": "সে লিখল, ভুল মানুষের সঙ্গে বিয়ে হয়ে যাওয়াতে।",
+   "min": 2.4,
+   "art": "Close view of Riya's hands typing on her phone in the dark, her face calm and relieved in the glow, a single tear on her cheek.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "আর শত শত অজানা লোক লিখল, আমিও।",
+   "sub": "আর শত শত অজানা লোক লিখল, আমিও।",
+   "min": 2.2,
+   "art": "Dozens of small glowing paper cards float up into the night sky above Riya's rooftop like lanterns, each with a tiny heart, Riya watches them with wonder.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "প্রথমবার মনে হলো, আমি অদ্ভুত নই।",
+   "sub": "প্রথমবার মনে হলো, আমি অদ্ভুত নই।",
+   "min": 2.2,
+   "art": "Riya smiles to herself with wet eyes, holding the phone to her chest, warm lamp light, the fox mascot resting its head on her knee.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "পরের রবিবার মাকে বললাম, আমার একটু সময় দরকার।",
+   "sub": "পরের রবিবার মাকে বললাম, আমার একটু সময় দরকার।",
+   "min": 2.4,
+   "art": "Riya and Maa sit together on a living-room sofa on a sunny Sunday morning with two cups of tea, Riya speaking honestly with her hands open, Maa listening closely.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "মা বললেন, ঠিক আছে बेटा। শুধু খুশি থেকো।",
+   "sub": "মা বললেন, ঠিক আছে बेटा। শুধু খুশি থেকো।",
+   "min": 2.4,
+   "art": "Maa in a maroon saree hugs Riya tightly on the sofa, both with closed eyes and gentle smiles, sunlight through the curtains, a plate of biscuits on the table.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "আপনাকে সবাই কী জিজ্ঞেস করে? আর আপনি কী চান?",
+   "sub": "আপনাকে সবাই কী জিজ্ঞেস করে? আর আপনি কী চান?",
+   "min": 3.0,
+   "focus": "50% 40%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "Waypoint। একবার বলে ফেলুন।",
+   "sub": "",
+   "min": 5,
+   "card": "Waypoint"
+  }
+ ],
+ "_held": false,
+ "art_id": "mira-shaadi-hi",
+ "machine_translated": true
+}
