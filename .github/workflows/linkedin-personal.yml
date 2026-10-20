@@ -4,7 +4,10 @@ name: linkedin-personal
 on:
   schedule:
     - cron: '37 3 * * *'   # 09:07 India = 04:37 Lagos (87% of the audience is in India); off-peak minute, GitHub delays :00 jobs
-    - cron: '37 4 * * *'   # safety net one hour later; the engine never posts twice on one day
+    - cron: '7 4 * * *'    # GitHub often delays or skips scheduled runs by hours (20 Oct 2026: neither slot fired), so the day
+    - cron: '37 4 * * *'   # gets five chances before noon India; the engine never posts twice on one day
+    - cron: '7 5 * * *'
+    - cron: '37 5 * * *'
   workflow_dispatch:
     inputs:
       mode:
