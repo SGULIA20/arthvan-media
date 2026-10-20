@@ -99,3 +99,13 @@ def test_linkedin_personal_runs_at_09_07_india_defaults_to_render_and_gets_its_s
 
 def test_telegram_commands_job_gets_the_gemini_key_for_comment_drafts():
     assert "secrets.GEMINI_API_KEY" in (WF / "telegram-commands.yml").read_text()
+
+
+def test_the_daily_post_day_folder_is_not_git_ignored():
+    """run_daily commits out/<date>/ so Instagram can fetch the Reel from GitHub; on 19 Oct 2026 a blanket 'out/' ignore made
+    `git add -A out` fail and the day's post was lost. Only the LinkedIn lane's out/linkedin/ (an artifact) is ignored."""
+    import subprocess
+    r = subprocess.run(["git", "check-ignore", "-q", "out/2099-01-01/story.mp4"], cwd=WF.parent.parent)
+    assert r.returncode == 1
+    r = subprocess.run(["git", "check-ignore", "-q", "out/linkedin/card.png"], cwd=WF.parent.parent)
+    assert r.returncode == 0
