@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: '37 14 * * *'  # about 15:37 Lagos = 20:07 India (the audience is 87% India; was 18:00 Lagos = 22:30 India); off-peak minute, GitHub delays :00 jobs
     - cron: '37 15 * * *'  # safety net one hour later; the engine never posts twice on one day
+    - cron: '37 16 * * *'  # two more chances (GitHub has skipped slots for hours); replaces the Mac's backup trigger, 21 Oct 2026
+    - cron: '37 17 * * *'
   workflow_dispatch:
     inputs:
       mode:

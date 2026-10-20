@@ -14,8 +14,8 @@ def setup(tmp_path, sched, on_disk, tracked):
     return lambda cmd, **kw: R(returncode=0, stdout="\n".join(f"stories/out/{t}.mp4" for t in tracked) if "ls-files" in cmd else "", stderr="")
 
 
-def test_the_window_runs_from_three_days_back_to_ten_ahead():
-    s = {"2026-10-10": "old", "2026-10-11": "back", "2026-10-14": "today", "2026-10-24": "edge", "2026-10-25": "far"}
+def test_the_window_runs_from_three_days_back_to_a_month_ahead():
+    s = {"2026-10-10": "old", "2026-10-11": "back", "2026-10-14": "today", "2026-11-14": "edge", "2026-11-15": "far"}
     import tempfile, pathlib
     d = pathlib.Path(tempfile.mkdtemp()); (d / "content").mkdir(); (d / "content" / "schedule.json").write_text(json.dumps(s))
     assert mw.wanted_ids(d, TODAY) == {"back", "today", "edge"}

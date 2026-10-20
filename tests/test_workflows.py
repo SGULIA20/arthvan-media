@@ -14,7 +14,7 @@ def load(name):
 
 def test_daily_post_runs_at_15_37_lagos_which_is_20_07_india():
     wf = load("daily-post.yml")
-    assert wf["on"]["schedule"] == [{"cron": "37 14 * * *"}, {"cron": "37 15 * * *"}]      # moved on 18 Oct 2026: 87% of the audience is in India
+    assert wf["on"]["schedule"] == [{"cron": "37 14 * * *"}, {"cron": "37 15 * * *"}, {"cron": "37 16 * * *"}, {"cron": "37 17 * * *"}]   # 20:07 India + three retries
     assert wf["permissions"] == {"contents": "write"}
     assert wf["concurrency"]["cancel-in-progress"] is False
 
@@ -109,3 +109,9 @@ def test_the_daily_post_day_folder_is_not_git_ignored():
     assert r.returncode == 1
     r = subprocess.run(["git", "check-ignore", "-q", "out/linkedin/card.png"], cwd=WF.parent.parent)
     assert r.returncode == 0
+
+
+def test_status_line_runs_in_the_cloud_every_evening():
+    wf = load("status.yml")
+    assert wf["on"]["schedule"] == [{"cron": "15 18 * * *"}]
+    assert "engine.notify --credit" in " ".join(s.get("run", "") for s in wf["jobs"]["status"]["steps"])

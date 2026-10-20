@@ -1,0 +1,26 @@
+name: status
+
+# The evening Telegram line that used to come from the Mac at 19:15 Lagos: Google video credit pace, Reel buffer, reminders.
+on:
+  schedule:
+    - cron: '15 18 * * *'   # 19:15 Lagos = 23:45 India
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Send the credit and buffer line
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m engine.notify --credit

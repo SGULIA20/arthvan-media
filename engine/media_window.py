@@ -1,5 +1,5 @@
 """Keeps GitHub light. The Mac is the library for every finished Reel (stories/out/*.mp4 on disk, never deleted); the repository
-carries only the Reels the cloud run can need soon: those scheduled from 3 days ago (for retries) to 10 days ahead.
+carries only the Reels the cloud run can need soon: those scheduled from 3 days ago (for retries) to a month ahead.
 Everything outside that window is UNTRACKED (git rm --cached), so the file stays on the Mac and leaves GitHub's current files.
 python -m engine.media_window            show what would change
 python -m engine.media_window --apply    stage the changes and commit them
@@ -11,7 +11,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DAYS_BACK, DAYS_AHEAD = 3, 10
+DAYS_BACK, DAYS_AHEAD = 3, 31          # a month ahead (was 10 days): the cloud poster must not wait for this Mac to be on
 PUSH_SCRIPT = Path.home() / "arthvan-social" / "bin" / "push-arthvan-media.sh"
 
 
