@@ -32,7 +32,8 @@ MAX_FALLBACKS = 5
 WA_MAX_BYTES = 15 * 1024 * 1024   # WhatsApp rejects template videos above 16 MB
 KEEP_DAYS = 14
 DEFAULT_REPO = "SGULIA20/arthvan-media"
-YT_CHANNELS = ("sglearning", "arthvan")   # every Short goes to both channels
+YT_CHANNELS = ("sglearning", "arthvan")
+APP_YT = {"scoremybiz": ("sglearning",), "waypoint": ("arthvan",)}   # founder's table, 21 Oct 2026: ScoreMyBiz → Learning with SG, Waypoint → SG-MYTH-WORLD
 
 
 # ---------- real implementations of the side effects ----------
@@ -185,8 +186,9 @@ def _do_threads(day, app_cfg, item, slide_urls, deps, log, token, uid) -> bool:
 def _do_youtube(day, app_cfg, item, video_path, deps, log, channels: dict, title, desc) -> bool:
     """One upload per configured channel; each channel has its own log line and retries on its own."""
     ok = True
+    allowed = app_cfg.get("youtube_channels") or APP_YT.get(app_cfg.get("key", ""), tuple(channels))
     for name, channel in channels.items():
-        if day_status(log, day, f"youtube:{name}") == "published":
+        if name not in allowed or day_status(log, day, f"youtube:{name}") == "published":
             continue
         ok &= _channel(day, f"youtube:{name}", item["id"], deps, log,
                        lambda c=channel: deps.post_youtube(c, video_path, title, desc, app_cfg["play_url"],
@@ -326,14 +328,7 @@ def _story_extras(st, day, app_cfg, dst, url, deps, log, chans, li_text, tags) -
     yt = chans.get("youtube", {})
     if yt:
         ok &= _do_youtube(day, app_cfg, st, dst, deps, log, yt, st.get("title", app_cfg["name"]), st["caption"])
-    if chans.get("linkedin_any") and app_cfg.get("linkedin", True) and day_status(log, day, "linkedin") != "published":
-        tok, urn = chans["linkedin_any"]
-        ok &= _channel(day, "linkedin", st["id"], deps, log,
-                       lambda: deps.post_linkedin_video(tok, urn, li_text, tags, dst, st.get("title", app_cfg["name"])))
-    if chans.get("threads") and day_status(log, day, "threads") != "published":
-        th_token, th_uid = chans["threads"]
-        text = build_threads_text(app_cfg, {"caption": st["caption"], "hashtags": st.get("hashtags", []), "slides": []})
-        ok &= _channel(day, "threads", st["id"], deps, log, lambda: deps.post_threads_video(th_uid, th_token, url, text))
+    # founder's table, 21 Oct 2026: a Reel goes to YouTube and Instagram only; Threads and LinkedIn get the slide post, not the video
     return ok
 
 
@@ -405,8 +400,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     banks = {a: [i for i in b if not claims.item_problems(a, i, _feats)] or b for a, b in banks.items()}   # nothing false or premature is picked
     chans = {}
     li_token, li_urn = env.get("LINKEDIN_ACCESS_TOKEN"), env.get("LINKEDIN_PERSON_URN")
-    # LinkedIn gets one post a week, on the day set in content/apps.json (Tuesday)
-    if li_token and li_urn and day.weekday() == load_global().get("linkedin_weekday", 1):
+    # LinkedIn gets the slide post on the day set in content/apps.json; -1 = every app day (founder's table, 21 Oct 2026)
+    if li_token and li_urn and load_global().get("linkedin_weekday", 1) in (-1, day.weekday()):
         chans["linkedin"] = (li_token, li_urn)
     if li_token and li_urn:
         chans["linkedin_any"] = (li_token, li_urn)   # story ads go to LinkedIn whatever the weekday

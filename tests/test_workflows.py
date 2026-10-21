@@ -113,5 +113,6 @@ def test_the_daily_post_day_folder_is_not_git_ignored():
 
 def test_status_line_runs_in_the_cloud_every_evening():
     wf = load("status.yml")
-    assert wf["on"]["schedule"] == [{"cron": "15 18 * * *"}]
-    assert "engine.notify --credit" in " ".join(s.get("run", "") for s in wf["jobs"]["status"]["steps"])
+    assert wf["on"]["schedule"] == [{"cron": "35 18 * * *"}]
+    steps = " ".join(s.get("run", "") for s in wf["jobs"]["status"]["steps"])
+    assert "engine.notify --credit" in steps and "engine.relay_scorecard" in steps

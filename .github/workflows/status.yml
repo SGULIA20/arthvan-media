@@ -1,9 +1,9 @@
 name: status
 
-# The evening Telegram line that used to come from the Mac at 19:15 Lagos: Google video credit pace, Reel buffer, reminders.
+# Evening Telegram: the founder's scorecard (relayed from the content pipeline, same text on both bots) and the credit/buffer line.
 on:
   schedule:
-    - cron: '15 18 * * *'   # 19:15 Lagos = 23:45 India
+    - cron: '35 18 * * *'   # 19:35 Lagos: after the content pipeline's 23:20 India scorecard
   workflow_dispatch:
 
 permissions:
@@ -24,3 +24,8 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python -m engine.notify --credit
+      - name: Relay the evening scorecard (same card as the content bot)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m engine.relay_scorecard

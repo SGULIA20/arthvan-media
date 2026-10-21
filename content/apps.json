@@ -1,240 +1,242 @@
 {
- "waypoint": {
-  "name": "Waypoint",
-  "linkedin": false,
-  "play_url": "https://play.google.com/store/apps/details?id=com.arthvananalytics.waypoint",
-  "icon": "engine/assets/waypoint-icon.png",
-  "palette": {
-   "bg": "#150F1E",
-   "bg2": "#2A1E3D",
-   "fg": "#F3EFFA",
-   "muted": "#B7AECB",
-   "accent": "#FF8066",
-   "good": "#5EEAD4",
-   "bad": "#FF8066"
+  "waypoint": {
+    "name": "Waypoint",
+    "linkedin": true,
+    "play_url": "https://play.google.com/store/apps/details?id=com.arthvananalytics.waypoint",
+    "icon": "engine/assets/waypoint-icon.png",
+    "palette": {
+      "bg": "#150F1E",
+      "bg2": "#2A1E3D",
+      "fg": "#F3EFFA",
+      "muted": "#B7AECB",
+      "accent": "#FF8066",
+      "good": "#5EEAD4",
+      "bad": "#FF8066"
+    },
+    "footer": [
+      "Free on Google Play: {play_url}",
+      "Link in bio."
+    ],
+    "base_hashtags": [
+      "#Waypoint",
+      "#NewApp",
+      "#AndroidApps"
+    ],
+    "allowed_numbers": [
+      "16 languages",
+      "90 seconds",
+      "24 hours",
+      "30 days"
+    ],
+    "banned_phrases": [
+      "nobody",
+      "no one",
+      "never",
+      "private",
+      "privacy",
+      "secure",
+      "security",
+      "encrypt",
+      "safe",
+      "untrace",
+      "anonymous",
+      "anonymity",
+      "therap",
+      "anxiety",
+      "depress",
+      "mental health",
+      "cure",
+      "heal",
+      "treatment",
+      "counsel",
+      "suicid",
+      "self-harm",
+      "support group",
+      "lonel",
+      "someone else",
+      "identity",
+      "trace",
+      "track",
+      "hidden",
+      "disappear",
+      "vanish",
+      "real name",
+      "filter",
+      "moderat",
+      "screened",
+      "checked by",
+      "protect",
+      "listening",
+      "heard",
+      "vent",
+      "let it out",
+      "stress",
+      "calm",
+      "cope",
+      "feel better",
+      "mood",
+      "alone",
+      "anywhere else",
+      "support"
+    ],
+    "money_disclaimer": null,
+    "end_line": "Free on Google Play",
+    "linkedin_footer": [
+      "Free on Google Play: {play_url}"
+    ],
+    "allowed_phrases": [
+      "Calm kit"
+    ],
+    "languages": [
+      "English",
+      "हिन्दी",
+      "বাংলা",
+      "தமிழ்",
+      "తెలుగు",
+      "मराठी",
+      "ગુજરાતી",
+      "ಕನ್ನಡ",
+      "മലയാളം",
+      "ਪੰਜਾਬੀ",
+      "Español",
+      "Français",
+      "Deutsch",
+      "Português",
+      "Bahasa Indonesia",
+      "Kiswahili"
+    ],
+    "languages_phrase": "Speaks {n} Indian and international languages",
+    "i18n": {
+      "hi": {
+        "end_line": "गूगल प्ले पर मुफ़्त",
+        "link_in_bio": "लिंक बायो में",
+        "languages_phrase": "{n} भारतीय और अंतरराष्ट्रीय भाषाओं में उपलब्ध"
+      }
+    },
+    "key": "waypoint"
   },
-  "footer": [
-   "Free on Google Play: {play_url}",
-   "Link in bio."
-  ],
-  "base_hashtags": [
-   "#Waypoint",
-   "#NewApp",
-   "#AndroidApps"
-  ],
-  "allowed_numbers": [
-   "16 languages",
-   "90 seconds",
-   "24 hours",
-   "30 days"
-  ],
-  "banned_phrases": [
-   "nobody",
-   "no one",
-   "never",
-   "private",
-   "privacy",
-   "secure",
-   "security",
-   "encrypt",
-   "safe",
-   "untrace",
-   "anonymous",
-   "anonymity",
-   "therap",
-   "anxiety",
-   "depress",
-   "mental health",
-   "cure",
-   "heal",
-   "treatment",
-   "counsel",
-   "suicid",
-   "self-harm",
-   "support group",
-   "lonel",
-   "someone else",
-   "identity",
-   "trace",
-   "track",
-   "hidden",
-   "disappear",
-   "vanish",
-   "real name",
-   "filter",
-   "moderat",
-   "screened",
-   "checked by",
-   "protect",
-   "listening",
-   "heard",
-   "vent",
-   "let it out",
-   "stress",
-   "calm",
-   "cope",
-   "feel better",
-   "mood",
-   "alone",
-   "anywhere else",
-   "support"
-  ],
-  "money_disclaimer": null,
-  "end_line": "Free on Google Play",
-  "linkedin_footer": [
-   "Free on Google Play: {play_url}"
-  ],
-  "allowed_phrases": [
-   "Calm kit"
-  ],
-  "languages": [
-   "English",
-   "हिन्दी",
-   "বাংলা",
-   "தமிழ்",
-   "తెలుగు",
-   "मराठी",
-   "ગુજરાતી",
-   "ಕನ್ನಡ",
-   "മലയാളം",
-   "ਪੰਜਾਬੀ",
-   "Español",
-   "Français",
-   "Deutsch",
-   "Português",
-   "Bahasa Indonesia",
-   "Kiswahili"
-  ],
-  "languages_phrase": "Speaks {n} Indian and international languages",
-  "i18n": {
-   "hi": {
-    "end_line": "गूगल प्ले पर मुफ़्त",
-    "link_in_bio": "लिंक बायो में",
-    "languages_phrase": "{n} भारतीय और अंतरराष्ट्रीय भाषाओं में उपलब्ध"
-   }
-  }
- },
- "scoremybiz": {
-  "name": "ScoreMyBiz",
-  "play_url": "https://play.google.com/store/apps/details?id=com.scoremybiz.app",
-  "icon": "engine/assets/scoremybiz-icon.png",
-  "palette": {
-   "bg": "#06184A",
-   "bg2": "#152559",
-   "fg": "#FFFFFF",
-   "muted": "#9FB0D6",
-   "accent": "#F2B454",
-   "good": "#4FAF6E",
-   "bad": "#D9634A"
+  "scoremybiz": {
+    "name": "ScoreMyBiz",
+    "play_url": "https://play.google.com/store/apps/details?id=com.scoremybiz.app",
+    "icon": "engine/assets/scoremybiz-icon.png",
+    "palette": {
+      "bg": "#06184A",
+      "bg2": "#152559",
+      "fg": "#FFFFFF",
+      "muted": "#9FB0D6",
+      "accent": "#F2B454",
+      "good": "#4FAF6E",
+      "bad": "#D9634A"
+    },
+    "footer": [
+      "Free for 30 days. No credit card.",
+      "Google Play: {play_url}",
+      "Link in bio, or scoremybiz.com"
+    ],
+    "base_hashtags": [
+      "#ScoreMyBiz",
+      "#SmallBusiness",
+      "#MSME"
+    ],
+    "allowed_numbers": [
+      "8 numbers",
+      "5 minutes",
+      "7 areas",
+      "7 parts",
+      "30 days",
+      "out of 100",
+      "25 languages"
+    ],
+    "banned_phrases": [
+      "loan",
+      "cibil",
+      "credit score",
+      "save tax",
+      "tax saving",
+      "gst",
+      "certified",
+      "approved by",
+      "grow your sales"
+    ],
+    "money_disclaimer": "Example figures for illustration. Not financial advice.",
+    "end_line": "Free for 30 days. No credit card.",
+    "linkedin_footer": [
+      "Free for 30 days. No credit card.",
+      "Google Play: {play_url}",
+      "scoremybiz.com"
+    ],
+    "allowed_phrases": [],
+    "languages": [
+      "English",
+      "हिन्दी",
+      "বাংলা",
+      "தமிழ்",
+      "తెలుగు",
+      "मराठी",
+      "ગુજરાતી",
+      "ಕನ್ನಡ",
+      "മലയാളം",
+      "ਪੰਜਾਬੀ",
+      "ଓଡ଼ିଆ",
+      "অসমীয়া",
+      "اردو",
+      "العربية",
+      "Kiswahili",
+      "Yorùbá",
+      "Hausa",
+      "Igbo",
+      "Deutsch",
+      "Français",
+      "Español",
+      "Italiano",
+      "Português",
+      "Nederlands",
+      "Suomi"
+    ],
+    "languages_phrase": "Works in {n} Indian and international languages",
+    "i18n": {
+      "hi": {
+        "end_line": "30 दिन मुफ़्त। क्रेडिट कार्ड की ज़रूरत नहीं।",
+        "link_in_bio": "लिंक बायो में",
+        "languages_phrase": "{n} भारतीय और अंतरराष्ट्रीय भाषाओं में उपलब्ध",
+        "money_disclaimer": "उदाहरण के आँकड़े, सिर्फ़ समझाने के लिए। वित्तीय सलाह नहीं।"
+      }
+    },
+    "key": "scoremybiz"
   },
-  "footer": [
-   "Free for 30 days. No credit card.",
-   "Google Play: {play_url}",
-   "Link in bio, or scoremybiz.com"
-  ],
-  "base_hashtags": [
-   "#ScoreMyBiz",
-   "#SmallBusiness",
-   "#MSME"
-  ],
-  "allowed_numbers": [
-   "8 numbers",
-   "5 minutes",
-   "7 areas",
-   "7 parts",
-   "30 days",
-   "out of 100",
-   "25 languages"
-  ],
-  "banned_phrases": [
-   "loan",
-   "cibil",
-   "credit score",
-   "save tax",
-   "tax saving",
-   "gst",
-   "certified",
-   "approved by",
-   "grow your sales"
-  ],
-  "money_disclaimer": "Example figures for illustration. Not financial advice.",
-  "end_line": "Free for 30 days. No credit card.",
-  "linkedin_footer": [
-   "Free for 30 days. No credit card.",
-   "Google Play: {play_url}",
-   "scoremybiz.com"
-  ],
-  "allowed_phrases": [],
-  "languages": [
-   "English",
-   "हिन्दी",
-   "বাংলা",
-   "தமிழ்",
-   "తెలుగు",
-   "मराठी",
-   "ગુજરાતી",
-   "ಕನ್ನಡ",
-   "മലയാളം",
-   "ਪੰਜਾਬੀ",
-   "ଓଡ଼ିଆ",
-   "অসমীয়া",
-   "اردو",
-   "العربية",
-   "Kiswahili",
-   "Yorùbá",
-   "Hausa",
-   "Igbo",
-   "Deutsch",
-   "Français",
-   "Español",
-   "Italiano",
-   "Português",
-   "Nederlands",
-   "Suomi"
-  ],
-  "languages_phrase": "Works in {n} Indian and international languages",
-  "i18n": {
-   "hi": {
-    "end_line": "30 दिन मुफ़्त। क्रेडिट कार्ड की ज़रूरत नहीं।",
-    "link_in_bio": "लिंक बायो में",
-    "languages_phrase": "{n} भारतीय और अंतरराष्ट्रीय भाषाओं में उपलब्ध",
-    "money_disclaimer": "उदाहरण के आँकड़े, सिर्फ़ समझाने के लिए। वित्तीय सलाह नहीं।"
-   }
+  "_global": {
+    "banned_phrases": [
+      "best ",
+      "number one",
+      "#1",
+      "guarantee",
+      "risk-free",
+      "risk free",
+      "double your",
+      "increase your profit",
+      "get rich",
+      "100%",
+      "lakh",
+      "crore",
+      "thousand",
+      "million",
+      "billion",
+      "percent",
+      "per cent",
+      "%"
+    ],
+    "allowed_count_words": [
+      "things",
+      "questions",
+      "ways",
+      "steps",
+      "signs",
+      "checks",
+      "habits",
+      "mistakes",
+      "moves",
+      "reasons"
+    ],
+    "linkedin_weekday": -1
   }
- },
- "_global": {
-  "banned_phrases": [
-   "best ",
-   "number one",
-   "#1",
-   "guarantee",
-   "risk-free",
-   "risk free",
-   "double your",
-   "increase your profit",
-   "get rich",
-   "100%",
-   "lakh",
-   "crore",
-   "thousand",
-   "million",
-   "billion",
-   "percent",
-   "per cent",
-   "%"
-  ],
-  "allowed_count_words": [
-   "things",
-   "questions",
-   "ways",
-   "steps",
-   "signs",
-   "checks",
-   "habits",
-   "mistakes",
-   "moves",
-   "reasons"
-  ],
-  "linkedin_weekday": 1
- }
 }

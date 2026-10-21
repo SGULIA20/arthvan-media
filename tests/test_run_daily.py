@@ -259,10 +259,10 @@ def test_linkedin_posts_after_instagram_with_the_same_slides_and_a_clickable_lin
     assert last_entry(tmp_path, "linkedin")["status"] == "published"
 
 
-def test_waypoint_never_goes_to_linkedin_even_on_a_tuesday(tmp_path):
+def test_waypoint_slides_go_to_linkedin_but_its_reel_video_never_does(tmp_path):
     w = World(tmp_path)
-    assert go(w, env=LI_ENV, day=TUE) == 0                       # a Waypoint Tuesday: Instagram yes, LinkedIn no
-    assert w.count("publish") == 1 and w.li_calls == []
+    assert go(w, env=LI_ENV, day=TUE) == 0                       # a Waypoint day: Instagram and the LinkedIn slide post (founder's table, 21 Oct 2026)
+    assert w.count("publish") == 1 and len(w.li_calls) == 1
     (tmp_path / "stories" / "out").mkdir(parents=True)
     (tmp_path / "stories" / "out" / "mira-x-hi.mp4").write_bytes(b"v" * 30)
     (tmp_path / "stories" / "mira_x_hi.json").write_text(json.dumps({
@@ -292,20 +292,18 @@ def test_linkedin_failure_exits_1_keeps_instagram_published_and_a_rerun_retries_
     assert go(w, env=LI_ENV, day=SMB_TUE) == 0 and len(w.li_calls) == 2  # already on LinkedIn: nothing more
 
 
-def test_linkedin_posts_only_once_a_week_on_tuesday(tmp_path):
+def test_linkedin_gets_the_slide_post_every_app_day(tmp_path):
     w = World(tmp_path)
-    for d in (date(2026, 10, 11), date(2026, 10, 12), date(2026, 10, 14), date(2026, 10, 15), date(2026, 10, 16), date(2026, 10, 17)):
+    days = (date(2026, 10, 11), date(2026, 10, 12), date(2026, 10, 14), date(2026, 10, 15), date(2026, 10, 16), date(2026, 10, 17))
+    for d in days:
         assert go(w, env=LI_ENV, day=d) == 0
-    assert w.li_calls == [] and w.count("publish") == 6
-    assert go(w, env=LI_ENV, day=TUE) == 0 and w.li_calls == []                    # a Tuesday, but Waypoint's day
-    assert go(w, env=LI_ENV, day=SMB_TUE) == 0 and len(w.li_calls) == 1            # the ScoreMyBiz Tuesday
-    assert go(w, env=LI_ENV, day=date(2026, 10, 27)) == 0 and len(w.li_calls) == 1  # next Tuesday is Waypoint's again
+    assert len(w.li_calls) == 6 and w.count("publish") == 6                        # founder's table, 21 Oct 2026: Post → LinkedIn on every app day
 
 
-def test_a_rerun_on_a_non_linkedin_day_never_posts_to_linkedin(tmp_path):
+def test_a_rerun_never_posts_to_linkedin_twice(tmp_path):
     w = World(tmp_path)
     assert go(w, env=LI_ENV, day=date(2026, 10, 12)) == 0
-    assert go(w, env=LI_ENV, day=date(2026, 10, 12)) == 0 and w.li_calls == []
+    assert go(w, env=LI_ENV, day=date(2026, 10, 12)) == 0 and len(w.li_calls) == 1
 
 
 TH_ENV = dict(ENV, THREADS_ACCESS_TOKEN="thtok", THREADS_USER_ID="9001")
@@ -340,7 +338,7 @@ def test_threads_and_linkedin_both_retry_when_both_failed_on_a_tuesday(tmp_path)
     assert len(w.th_calls) == 2 and len(w.li_calls) == 2 and w.count("publish") == 1
 
 
-def test_a_scheduled_story_replaces_the_bank_item_and_posts_reel_story_and_linkedin_video(tmp_path):
+def test_a_scheduled_story_replaces_the_bank_item_and_posts_reel_and_story_but_no_linkedin_video(tmp_path):
     w = World(tmp_path)
     (tmp_path / "stories" / "out").mkdir(parents=True)
     (tmp_path / "stories" / "out" / "lumi-friday-hi.mp4").write_bytes(b"v" * 30)
@@ -353,8 +351,8 @@ def test_a_scheduled_story_replaces_the_bank_item_and_posts_reel_story_and_linke
     assert go(w, env=env, day=date(2026, 10, 14)) == 0        # 14 Oct is a ScoreMyBiz + female-lead slot
     assert w.rendered_ids == []                                 # no bank item rendered
     assert w.count("publish") == 1 and w.prepared_video == "https://raw.githubusercontent.com/o/r/deadbeef/out/2026-10-14/story.mp4"
-    assert len(w.li_videos) == 1 and "play.google.com" in w.li_videos[0][0] and w.li_videos[0][2] == "शुक्रवार"
-    assert last_entry(tmp_path, "instagram")["item"] == "lumi-friday-hi" and last_entry(tmp_path, "linkedin")["status"] == "published"
+    assert w.li_videos == []                                    # founder's table, 21 Oct 2026: the Reel video stays off LinkedIn
+    assert last_entry(tmp_path, "instagram")["item"] == "lumi-friday-hi" and not [r for r in map(json.loads, log_path(tmp_path).read_text().splitlines()) if r.get("channel") == "linkedin"]
     assert w.th_calls == []                                     # Threads needs images; skipped on story days
     assert go(w, env=env, day=date(2026, 10, 14)) == 0 and w.count("publish") == 1
 
@@ -379,11 +377,11 @@ def test_youtube_short_is_uploaded_after_instagram_when_the_channel_is_configure
     ups = []
     w.deps.post_youtube = lambda channel, path, title, desc, play, tags: ups.append((channel["refresh_token"], str(path), title, play)) or "VID1"
     env = dict(ENV, YT_CLIENT_ID="cid", YT_CLIENT_SECRET="sec", YT_SGLEARNING_REFRESH_TOKEN="rt-sg", YT_ARTHVAN_REFRESH_TOKEN="rt-ar")
-    assert go(w, env=env) == 0                                    # waypoint day: both channels
-    assert sorted(u[0] for u in ups) == ["rt-ar", "rt-sg"] and all(u[1].endswith("reel.mp4") and "arthvananalytics.waypoint" in u[3] for u in ups)
-    assert last_entry(tmp_path, "youtube:sglearning")["status"] == "published" and last_entry(tmp_path, "youtube:arthvan")["id"] == "VID1"
-    assert go(w, env=env, day=date(2026, 10, 12)) == 0 and len(ups) == 4   # scoremybiz day: both channels again
-    assert go(w, env=dict(ENV), day=date(2026, 10, 13)) == 0 and len(ups) == 4  # no YouTube config: skipped quietly
+    assert go(w, env=env) == 0                                    # waypoint day: SG-MYTH-WORLD only (founder's table, 21 Oct 2026)
+    assert [u[0] for u in ups] == ["rt-ar"] and ups[0][1].endswith("reel.mp4") and "arthvananalytics.waypoint" in ups[0][3]
+    assert last_entry(tmp_path, "youtube:arthvan")["id"] == "VID1" and "youtube:sglearning" not in log_path(tmp_path).read_text()
+    assert go(w, env=env, day=date(2026, 10, 12)) == 0 and [u[0] for u in ups] == ["rt-ar", "rt-sg"]   # scoremybiz day: Learning with SG only
+    assert go(w, env=dict(ENV), day=date(2026, 10, 13)) == 0 and len(ups) == 2  # no YouTube config: skipped quietly
 
 
 def test_youtube_failure_is_isolated_and_retried(tmp_path):
@@ -395,8 +393,9 @@ def test_youtube_failure_is_isolated_and_retried(tmp_path):
         return "VID2"
     w.deps.post_youtube = flaky
     env = dict(ENV, YT_CLIENT_ID="cid", YT_CLIENT_SECRET="sec", YT_SGLEARNING_REFRESH_TOKEN="rt")
-    assert go(w, env=env) == 1 and last_entry(tmp_path, "instagram")["status"] == "published"
-    assert go(w, env=env) == 0 and len(calls) == 2 and w.count("publish") == 1
+    smb = date(2026, 10, 12)                                                    # a ScoreMyBiz day: its channel is Learning with SG
+    assert go(w, env=env, day=smb) == 1 and last_entry(tmp_path, "instagram")["status"] == "published"
+    assert go(w, env=env, day=smb) == 0 and len(calls) == 2 and w.count("publish") == 1
 
 
 def test_whatsapp_status_video_goes_to_the_founder_after_instagram_and_retries_alone(tmp_path):
@@ -490,7 +489,7 @@ def test_recent_features_are_the_apps_own_posts_of_the_last_ten_days(tmp_path):
     assert recent_features(tmp_path / "missing.jsonl", "waypoint", day) == []
 
 
-def test_a_story_day_also_posts_a_threads_video_and_a_later_run_retries_only_what_is_missing(tmp_path):
+def test_a_story_day_posts_no_threads_video_and_youtube_goes_to_the_apps_own_channel_with_retry(tmp_path):
     w = World(tmp_path)
     (tmp_path / "stories" / "out").mkdir(parents=True)
     (tmp_path / "stories" / "out" / "s-en.mp4").write_bytes(b"v" * 100)
@@ -500,15 +499,14 @@ def test_a_story_day_also_posts_a_threads_video_and_a_later_run_retries_only_wha
     flaky = {"n": 0}
     def post_youtube(channel, path, title, desc, play, tags):
         flaky["n"] += 1
-        if flaky["n"] <= 2: raise YouTubeError("quota")
+        if flaky["n"] == 1: raise YouTubeError("quota")
         yt.append(channel["refresh_token"]); return "V"
     w.deps.post_youtube = post_youtube
     env = dict(ENV, THREADS_ACCESS_TOKEN="th", THREADS_USER_ID="77", YT_CLIENT_ID="c", YT_CLIENT_SECRET="s", YT_SGLEARNING_REFRESH_TOKEN="a", YT_ARTHVAN_REFRESH_TOKEN="b")
-    assert go(w, env=env, day=date(2026, 10, 14)) == 1                       # both YouTube channels failed: the run is red, the rest went out
-    assert last_entry(tmp_path, "threads")["status"] == "published" and len(tv) == 1 and tv[0][0] == "77" and tv[0][1].endswith("/out/2026-10-14/story.mp4") and "Cap" in tv[0][2]
-    assert w.count("publish") == 1
+    assert go(w, env=env, day=date(2026, 10, 14)) == 1                       # YouTube failed once; the Reel and Story went out
+    assert tv == [] and w.count("publish") == 1                              # founder's table, 21 Oct 2026: a Reel never goes to Threads
     assert go(w, env=env, day=date(2026, 10, 14)) == 0                       # retry: only YouTube is attempted again
-    assert len(tv) == 1 and sorted(yt) == ["a", "b"] and w.count("publish") == 1
+    assert yt == ["a"] and "youtube:arthvan" not in log_path(tmp_path).read_text() and w.count("publish") == 1   # ScoreMyBiz → Learning with SG only
 
 
 def test_the_daily_video_also_goes_to_telegram_once_and_a_failure_is_retried_alone(tmp_path):
