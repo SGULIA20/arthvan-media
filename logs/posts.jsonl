@@ -81,3 +81,4 @@
 {"date": "2026-10-21", "app": "waypoint", "item": "mira-ekbaat-hi", "status": "publishing", "kind": "story", "feature": "reactions", "sha": "e4425182039d741719a849f7fa4c02de8d8c872d", "at": "2026-10-21T16:40:55+00:00"}
 {"date": "2026-10-21", "app": "waypoint", "item": "mira-ekbaat-hi", "status": "published", "kind": "story", "feature": "reactions", "sha": "e4425182039d741719a849f7fa4c02de8d8c872d", "at": "2026-10-21T16:40:55+00:00", "ids": {"reel": "17872427136643081", "story": "18076276643766839"}}
 {"date": "2026-10-21", "channel": "whatsapp", "item": "mira-ekbaat-hi", "status": "published", "id": "b2d59ef4-961e-4a37-86db-b897b432ad5a"}
+{"date": "2026-10-21", "channel": "telegram", "item": "mira-ekbaat-hi", "status": "published", "id": "110"}
