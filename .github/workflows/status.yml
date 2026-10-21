@@ -3,7 +3,7 @@ name: status
 # Evening Telegram: the founder's scorecard (relayed from the content pipeline, same text on both bots) and the credit/buffer line.
 on:
   schedule:
-    - cron: '35 18 * * *'   # 19:35 Lagos: after the content pipeline's 23:20 India scorecard
+    - cron: '58 17 * * *'   # 18:58 Lagos: the founder wants the scorecard by 19:00 WAT; the content pipeline writes it at 18:35
   workflow_dispatch:
 
 permissions:
