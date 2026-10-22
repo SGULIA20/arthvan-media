@@ -27,7 +27,7 @@ concurrency:
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 75          # 22 Oct 2026: a full set (Instagram waits, YouTube, Threads, LinkedIn, catch-up post) outran 30 min and was cancelled mid-way
     steps:
       - uses: actions/checkout@v4
         with:
