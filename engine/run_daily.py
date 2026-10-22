@@ -405,7 +405,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     chans = {}
     li_token, li_urn = env.get("LINKEDIN_ACCESS_TOKEN"), env.get("LINKEDIN_PERSON_URN")
     # LinkedIn gets the slide post on the day set in content/apps.json; -1 = every app day (founder's table, 21 Oct 2026)
-    if li_token and li_urn and load_global().get("linkedin_weekday", 1) in (-1, day.weekday()):
+    if li_token and li_urn and load_global().get("linkedin_app_posts", True) and load_global().get("linkedin_weekday", 1) in (-1, day.weekday()):
         chans["linkedin"] = (li_token, li_urn)
     if li_token and li_urn:
         chans["linkedin_any"] = (li_token, li_urn)   # story ads go to LinkedIn whatever the weekday

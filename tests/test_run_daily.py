@@ -19,6 +19,14 @@ def _all_mode(monkeypatch):
     """Never read the founder's real production-mode switch in a test."""
     import engine.run_daily as rd
     monkeypatch.setattr(rd, "production_mode", lambda path=None: "all")
+
+@pytest.fixture
+def li_on(monkeypatch):
+    """The LinkedIn slide post capability, tested with the setting on (production has it off since 22 Oct 2026)."""
+    import engine.run_daily as rd
+    real = rd.load_global
+    monkeypatch.setattr(rd, "load_global", lambda: {**real(), "linkedin_app_posts": True})
+
 ENV = {"IG_ACCESS_TOKEN": "tok", "IG_USER_ID": "1784", "GITHUB_REPOSITORY": "o/r"}
 
 
@@ -248,7 +256,7 @@ def last_entry(tmp_path, channel):
     return [r for r in rows if r.get("channel", "instagram") == channel][-1]
 
 
-def test_linkedin_posts_after_instagram_with_the_same_slides_and_a_clickable_link(tmp_path):
+def test_linkedin_posts_after_instagram_with_the_same_slides_and_a_clickable_link(tmp_path, li_on):
     w = World(tmp_path)
     assert go(w, env=LI_ENV, day=SMB_TUE) == 0
     assert w.count("publish") == 1 and len(w.li_calls) == 1
@@ -259,7 +267,7 @@ def test_linkedin_posts_after_instagram_with_the_same_slides_and_a_clickable_lin
     assert last_entry(tmp_path, "linkedin")["status"] == "published"
 
 
-def test_waypoint_slides_go_to_linkedin_but_its_reel_video_never_does(tmp_path):
+def test_waypoint_slides_go_to_linkedin_but_its_reel_video_never_does(tmp_path, li_on):
     w = World(tmp_path)
     assert go(w, env=LI_ENV, day=TUE) == 0                       # a Waypoint day: Instagram and the LinkedIn slide post (founder's table, 21 Oct 2026)
     assert w.count("publish") == 1 and len(w.li_calls) == 1
@@ -281,7 +289,7 @@ def test_linkedin_is_skipped_quietly_without_credentials_and_in_prepare_mode(tmp
     assert go(w2, mode="prepare", env=LI_ENV, day=TUE) == 0 and w2.li_calls == []
 
 
-def test_linkedin_failure_exits_1_keeps_instagram_published_and_a_rerun_retries_only_linkedin(tmp_path):
+def test_linkedin_failure_exits_1_keeps_instagram_published_and_a_rerun_retries_only_linkedin(tmp_path, li_on):
     w = World(tmp_path)
     w.li_fail = 1
     assert go(w, env=LI_ENV, day=SMB_TUE) == 1
@@ -292,7 +300,7 @@ def test_linkedin_failure_exits_1_keeps_instagram_published_and_a_rerun_retries_
     assert go(w, env=LI_ENV, day=SMB_TUE) == 0 and len(w.li_calls) == 2  # already on LinkedIn: nothing more
 
 
-def test_linkedin_gets_the_slide_post_every_app_day(tmp_path):
+def test_linkedin_gets_the_slide_post_every_app_day(tmp_path, li_on):
     w = World(tmp_path)
     days = (date(2026, 10, 11), date(2026, 10, 12), date(2026, 10, 14), date(2026, 10, 15), date(2026, 10, 16), date(2026, 10, 17))
     for d in days:
@@ -300,7 +308,7 @@ def test_linkedin_gets_the_slide_post_every_app_day(tmp_path):
     assert len(w.li_calls) == 6 and w.count("publish") == 6                        # founder's table, 21 Oct 2026: Post → LinkedIn on every app day
 
 
-def test_a_rerun_never_posts_to_linkedin_twice(tmp_path):
+def test_a_rerun_never_posts_to_linkedin_twice(tmp_path, li_on):
     w = World(tmp_path)
     assert go(w, env=LI_ENV, day=date(2026, 10, 12)) == 0
     assert go(w, env=LI_ENV, day=date(2026, 10, 12)) == 0 and len(w.li_calls) == 1
@@ -329,7 +337,7 @@ def test_threads_failure_is_isolated_and_retried_on_rerun(tmp_path):
     assert go(w, env=TH_ENV) == 0 and len(w.th_calls) == 2
 
 
-def test_threads_and_linkedin_both_retry_when_both_failed_on_a_tuesday(tmp_path):
+def test_threads_and_linkedin_both_retry_when_both_failed_on_a_tuesday(tmp_path, li_on):
     w = World(tmp_path)
     w.th_fail, w.li_fail = 1, 1
     env = dict(TH_ENV, **{k: v for k, v in LI_ENV.items() if k.startswith("LINKEDIN")})
@@ -582,3 +590,15 @@ def test_in_stories_mode_a_day_without_a_story_reel_posts_nothing(tmp_path, monk
     w = World(tmp_path)
     assert go(w) == 0
     assert w.rendered_ids == [] and w.count("publish") == 0        # no graphics set fills the gap
+
+
+def test_the_app_slide_post_goes_to_linkedin_only_when_the_setting_allows(tmp_path, monkeypatch):
+    import engine.run_daily as rd
+    real = rd.load_global
+    w = World(tmp_path)
+    monkeypatch.setattr(rd, "load_global", lambda: {**real(), "linkedin_app_posts": True})
+    assert go(w, env=LI_ENV, day=date(2026, 10, 12)) == 0 and len(w.li_calls) == 1
+    off = tmp_path / "off"; off.mkdir()
+    w2 = World(off)
+    monkeypatch.setattr(rd, "load_global", lambda: {**real(), "linkedin_app_posts": False})
+    assert go(w2, env=LI_ENV, day=date(2026, 10, 14)) == 0 and w2.li_calls == []       # founder, 22 Oct 2026: nothing from the apps on LinkedIn

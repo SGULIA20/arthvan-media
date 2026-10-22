@@ -237,6 +237,7 @@
       "moves",
       "reasons"
     ],
-    "linkedin_weekday": -1
+    "linkedin_weekday": -1,
+    "linkedin_app_posts": false
   }
 }
