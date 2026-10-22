@@ -113,7 +113,8 @@
         "languages_phrase": "{n} भारतीय और अंतरराष्ट्रीय भाषाओं में उपलब्ध"
       }
     },
-    "key": "waypoint"
+    "key": "waypoint",
+    "youtube_url": "https://www.youtube.com/@sgmythworld?sub_confirmation=1"
   },
   "scoremybiz": {
     "name": "ScoreMyBiz",
@@ -202,7 +203,8 @@
         "money_disclaimer": "उदाहरण के आँकड़े, सिर्फ़ समझाने के लिए। वित्तीय सलाह नहीं।"
       }
     },
-    "key": "scoremybiz"
+    "key": "scoremybiz",
+    "youtube_url": "https://www.youtube.com/@sanjeev_gulia?sub_confirmation=1"
   },
   "_global": {
     "banned_phrases": [

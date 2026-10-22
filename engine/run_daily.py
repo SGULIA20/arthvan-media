@@ -18,6 +18,7 @@ from typing import Callable
 from . import facebook, instagram, linkedin, notify, render, telegram, threads, whatsapp, youtube
 from .config import ROOT, load_apps, load_bank, load_global, production_mode
 from .instagram import Captions, InstagramError, PartialPublish, SetUrls
+from .links import for_post, tracked_play_url
 from .lint import alt_texts, build_captions, build_linkedin_text, build_threads_text, lint_item, story_captions
 from .facebook import FacebookError
 from .linkedin import LinkedInError
@@ -180,7 +181,7 @@ def _do_linkedin(day, app_cfg, item, slides, deps, log, token, urn) -> bool:
 
 def _do_threads(day, app_cfg, item, slide_urls, deps, log, token, uid) -> bool:
     return _channel(day, "threads", item["id"], deps, log,
-                    lambda: deps.post_threads(uid, token, slide_urls, build_threads_text(app_cfg, item)))
+                    lambda: deps.post_threads(uid, token, slide_urls, build_threads_text(for_post(app_cfg, "threads", "post", item["id"]), item)))
 
 
 def _do_youtube(day, app_cfg, item, video_path, deps, log, channels: dict, title, desc) -> bool:
@@ -191,7 +192,7 @@ def _do_youtube(day, app_cfg, item, video_path, deps, log, channels: dict, title
         if name not in allowed or day_status(log, day, f"youtube:{name}") == "published":
             continue
         ok &= _channel(day, f"youtube:{name}", item["id"], deps, log,
-                       lambda c=channel: deps.post_youtube(c, video_path, title, desc, app_cfg["play_url"],
+                       lambda c=channel: deps.post_youtube(c, video_path, title, desc, tracked_play_url(app_cfg["play_url"], "youtube", "short", item["id"]),
                                                            [t.lstrip("#") for t in item.get("hashtags", [])] + app_cfg["base_hashtags"]))
     return ok
 
@@ -202,22 +203,22 @@ def _extras(day, app_cfg, item, slides, slide_urls, deps, log, chans) -> int:
     wa = chans.get("whatsapp")
     if wa and day_status(log, day, "whatsapp") != "published" and slide_urls:
         reel_url = slide_urls[0].rsplit("/", 1)[0] + "/reel.mp4"
-        caption = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + app_cfg["play_url"]
+        caption = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + tracked_play_url(app_cfg["play_url"], "whatsapp", "slides", item["id"])
         ok &= _channel(day, "whatsapp", item["id"], deps, log, lambda: deps.send_whatsapp(wa, reel_url, app_cfg["name"], caption))
     tg = chans.get("telegram")
     if tg and day_status(log, day, "telegram") != "published" and slide_urls:
         reel_url = slide_urls[0].rsplit("/", 1)[0] + "/reel.mp4"
-        caption = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + app_cfg["play_url"]
+        caption = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + tracked_play_url(app_cfg["play_url"], "telegram", "slides", item["id"])
         ok &= _channel(day, "telegram", item["id"], deps, log, lambda: deps.send_telegram(tg, reel_url, caption))
     tgc = chans.get("telegram_channel")
     if tgc and day_status(log, day, "telegram_channel") != "published" and slide_urls:
         reel_url = slide_urls[0].rsplit("/", 1)[0] + "/reel.mp4"
-        caption = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + app_cfg["play_url"]
+        caption = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + tracked_play_url(app_cfg["play_url"], "telegram_channel", "slides", item["id"])
         ok &= _channel(day, "telegram_channel", item["id"], deps, log, lambda: deps.send_telegram(tgc, reel_url, caption))
     fb = chans.get("facebook")
     if fb and slides:
         fb_reel, fb_story = Path(slides[0]).parent / "reel.mp4", Path(slides[0]).parent / "story.mp4"
-        fb_text = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + app_cfg["play_url"]
+        fb_text = (item["slides"][0]["text"] if item.get("slides") else item["caption"][:120]) + " " + tracked_play_url(app_cfg["play_url"], "facebook", "slides", item["id"])
         if day_status(log, day, "facebook") != "published" and fb_reel.exists():
             ok &= _channel(day, "facebook", item["id"], deps, log, lambda: deps.post_facebook_reel(fb, fb_reel, fb_text))
         if day_status(log, day, "facebook_story") != "published" and fb_story.exists():
@@ -312,17 +313,17 @@ def _story_extras(st, day, app_cfg, dst, url, deps, log, chans, li_text, tags) -
         print(f"whatsapp skipped: {dst.stat().st_size / 1048576:.1f} MB is over WhatsApp's 16 MB video limit")
         wa = None
     if wa and day_status(log, day, "whatsapp") != "published":
-        ok &= _channel(day, "whatsapp", st["id"], deps, log, lambda: deps.send_whatsapp(wa, url, app_cfg["name"], st["caption"] + " " + app_cfg["play_url"]))
+        ok &= _channel(day, "whatsapp", st["id"], deps, log, lambda: deps.send_whatsapp(wa, url, app_cfg["name"], st["caption"] + " " + tracked_play_url(app_cfg["play_url"], "whatsapp", "reel", st["id"])))
     tg = chans.get("telegram")
     if tg and day_status(log, day, "telegram") != "published":
-        ok &= _channel(day, "telegram", st["id"], deps, log, lambda: deps.send_telegram(tg, url, st["caption"] + " " + app_cfg["play_url"]))
+        ok &= _channel(day, "telegram", st["id"], deps, log, lambda: deps.send_telegram(tg, url, st["caption"] + " " + tracked_play_url(app_cfg["play_url"], "telegram", "reel", st["id"])))
     tgc = chans.get("telegram_channel")
     if tgc and day_status(log, day, "telegram_channel") != "published":
-        ok &= _channel(day, "telegram_channel", st["id"], deps, log, lambda: deps.send_telegram(tgc, url, st["caption"] + " " + app_cfg["play_url"]))
+        ok &= _channel(day, "telegram_channel", st["id"], deps, log, lambda: deps.send_telegram(tgc, url, st["caption"] + " " + tracked_play_url(app_cfg["play_url"], "telegram_channel", "reel", st["id"])))
     fb = chans.get("facebook")
     if fb:
         if day_status(log, day, "facebook") != "published":
-            ok &= _channel(day, "facebook", st["id"], deps, log, lambda: deps.post_facebook_reel(fb, dst, st["caption"] + " " + app_cfg["play_url"]))
+            ok &= _channel(day, "facebook", st["id"], deps, log, lambda: deps.post_facebook_reel(fb, dst, st["caption"] + " " + tracked_play_url(app_cfg["play_url"], "facebook", "reel", st["id"])))
         if day_status(log, day, "facebook_story") != "published":
             ok &= _channel(day, "facebook_story", st["id"], deps, log, lambda: deps.post_facebook_story(fb, dst))
     yt = chans.get("youtube", {})
@@ -331,7 +332,7 @@ def _story_extras(st, day, app_cfg, dst, url, deps, log, chans, li_text, tags) -
     # a filmed-Reel day has no slide post: Threads gets the Reel video; LinkedIn gets nothing (founder, 22 Oct 2026: pictures only on LinkedIn, no video)
     if chans.get("threads") and day_status(log, day, "threads") != "published":
         th_token, th_uid = chans["threads"]
-        text = build_threads_text(app_cfg, {"caption": st["caption"], "hashtags": st.get("hashtags", []), "slides": []})
+        text = build_threads_text(for_post(app_cfg, "threads", "reel", st["id"]), {"caption": st["caption"], "hashtags": st.get("hashtags", []), "slides": []})
         ok &= _channel(day, "threads", st["id"], deps, log, lambda: deps.post_threads_video(th_uid, th_token, url, text))
     return ok
 
@@ -366,7 +367,7 @@ def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log
         repo = env.get("GITHUB_REPOSITORY", DEFAULT_REPO)
         url = f"https://raw.githubusercontent.com/{repo}/{deps.head_sha()}/out/{day.isoformat()}/story.mp4"
         deps.wait_for_urls({url: dst.stat().st_size})
-        ig_caption, li_text, tags = story_captions(app_cfg, st)
+        ig_caption, li_text, tags = story_captions(for_post(app_cfg, "instagram", "reel", st["id"]), st)
         prepared = deps.prepare_video_set(ig_id, token, url, ig_caption)
         if mode == "prepare":
             return 0
@@ -484,7 +485,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         expected[urls.story] = rs.story.stat().st_size
         deps.wait_for_urls(expected)
 
-        post_cap, reel_cap = build_captions(apps[sel.app], sel.item)
+        post_cap, reel_cap = build_captions(for_post(apps[sel.app], "instagram", "slides", sel.item["id"]), sel.item)
         prepared = deps.prepare_set(ig_id, token, urls, Captions(post=post_cap, reel=reel_cap))
         print("all containers ready")
         if mode == "prepare":

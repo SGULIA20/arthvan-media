@@ -1,6 +1,7 @@
 """Guardrails and caption building. A non-empty lint result means: do not post this item."""
 import re
 
+from .links import youtube_line
 from .config import load_global
 
 _DIGIT = re.compile(r"\d")
@@ -77,8 +78,10 @@ def build_captions(app_cfg: dict, item: dict) -> tuple:
     disclaimer = app_cfg.get("money_disclaimer") if has_sample else None
     tags = list(dict.fromkeys(item["hashtags"] + app_cfg["base_hashtags"]))[:MAX_TAGS]
 
+    yt = youtube_line(app_cfg)
+
     def make(body: str) -> str:
-        parts = [body, footer]
+        parts = [body, footer] + ([yt] if yt else [])
         if disclaimer:
             parts.append(disclaimer)
         parts.append(" ".join(tags))
@@ -119,7 +122,7 @@ def build_threads_text(app_cfg: dict, item: dict) -> str:
     """Threads: 500 characters, links are clickable, no 'link in bio'."""
     has_sample = any(s.get("sample") for s in item["slides"])
     tags = list(dict.fromkeys(item["hashtags"] + app_cfg["base_hashtags"]))[:3]
-    parts = [item["caption"], app_cfg["play_url"]]
+    parts = [item["caption"], app_cfg["play_url"]] + ([youtube_line(app_cfg)] if youtube_line(app_cfg) else [])
     if has_sample and app_cfg.get("money_disclaimer"):
         parts.append(app_cfg["money_disclaimer"])
     parts.append(" ".join(tags))
@@ -138,6 +141,6 @@ def story_captions(app_cfg: dict, story: dict) -> tuple:
     footer = "\n".join(line.format(play_url=app_cfg["play_url"]) for line in app_cfg["footer"])
     li_footer = "\n".join(line.format(play_url=app_cfg["play_url"]) for line in app_cfg["linkedin_footer"])
     disc = app_cfg.get("money_disclaimer")
-    ig = "\n\n".join([story["caption"], footer] + ([disc] if disc else []) + [" ".join(tags)])
+    ig = "\n\n".join([story["caption"], footer] + ([youtube_line(app_cfg)] if youtube_line(app_cfg) else []) + ([disc] if disc else []) + [" ".join(tags)])
     li = "\n\n".join([story.get("linkedin_text", story["caption"]), li_footer] + ([disc] if disc else []))
     return ig, li, tags
