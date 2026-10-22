@@ -75,8 +75,11 @@ def render_set(sel: Selection, app_cfg: dict, out_dir: Path, fps: int = 30) -> R
         browser.close()
         music = tmp / "music.m4a"
         write_m4a(synth(sel.app, sel.day.toordinal() + sel.bank_index, total), music)
+        from . import watermark
+        wm_in, wm_fc, wm_v = watermark.ffmpeg_parts(watermark.icon_for(sel.app), 1080, 1920)
+        wm_args = (["-filter_complex", wm_fc, "-map", wm_v, "-map", "1:a"] if wm_fc else [])
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(fps), "-i", str(frames / "f%04d.jpg"),
-                        "-i", str(music), "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
+                        "-i", str(music), *wm_in, *wm_args, "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
                         "-pix_fmt", "yuv420p", "-r", str(fps), "-c:a", "aac", "-b:a", "160k",
                         "-movflags", "+faststart", str(reel)], check=True)
     return RenderedSet(slides=slides, reel=reel, story=reel, seconds=total)

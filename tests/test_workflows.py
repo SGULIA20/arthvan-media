@@ -86,7 +86,8 @@ def test_whatsapp_status_settings_reach_the_daily_job():
 
 def test_linkedin_personal_runs_at_09_07_india_defaults_to_render_and_gets_its_secrets():
     wf = load("linkedin-personal.yml")
-    assert wf["on"]["schedule"] == [{"cron": "37 3 * * *"}, {"cron": "7 4 * * *"}, {"cron": "37 4 * * *"}, {"cron": "7 5 * * *"}, {"cron": "37 5 * * *"}]
+    assert wf["on"]["schedule"] == [{"cron": "37 3 * * *"}, {"cron": "7 4 * * *"}, {"cron": "37 4 * * *"}, {"cron": "7 5 * * *"}, {"cron": "37 5 * * *"},
+                                    {"cron": "37 7 * * *"}, {"cron": "37 9 * * *"}]
     assert wf["on"]["workflow_dispatch"]["inputs"]["mode"]["default"] == "render"
     assert wf["permissions"] == {"contents": "write"} and wf["concurrency"]["cancel-in-progress"] is False
     text = (WF / "linkedin-personal.yml").read_text()
@@ -113,6 +114,6 @@ def test_the_daily_post_day_folder_is_not_git_ignored():
 
 def test_status_line_runs_in_the_cloud_every_evening():
     wf = load("status.yml")
-    assert wf["on"]["schedule"] == [{"cron": "58 17 * * *"}]      # by 19:00 WAT (founder, 22 Oct 2026)
+    assert wf["on"]["schedule"] == [{"cron": "28 20 * * *"}]      # 21:28 WAT, after the 9 pm card (founder, 22 Oct 2026)
     steps = " ".join(s.get("run", "") for s in wf["jobs"]["status"]["steps"])
     assert "engine.notify --credit" in steps and "engine.relay_scorecard" in steps

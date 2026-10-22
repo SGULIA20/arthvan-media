@@ -312,8 +312,11 @@ def build(story_path: Path, out_dir: Path) -> Path:
         # encode to a private temp file, check the WHOLE file decodes, and only then move it into place: a second render of the
         # same story, a crash or a full disk can never leave a damaged Reel (13 Oct: lumi-scan-en was corrupted by two queues)
         part = out.with_name(f".{out.stem}.{os.getpid()}.part.mp4")
+        from . import watermark
+        wm_in, wm_fc, wm_v = watermark.ffmpeg_parts(watermark.icon_for(story["app"]), 1080, 1920)
+        wm_args = (["-filter_complex", wm_fc, "-map", wm_v, "-map", "1:a"] if wm_fc else [])
         for attempt in (1, 2):
-            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "f%04d.jpg"), "-i", str(audio),
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "f%04d.jpg"), "-i", str(audio), *wm_in, *wm_args,
                             "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "slow", "-crf", "24", "-maxrate", "1700k", "-bufsize", "3400k", "-pix_fmt", "yuv420p", "-r", str(FPS),
                             "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", str(part)], check=True)
             from .qa import decode_errors

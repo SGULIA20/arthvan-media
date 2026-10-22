@@ -8,6 +8,8 @@ on:
     - cron: '37 4 * * *'   # gets five chances before noon India; the engine never posts twice on one day
     - cron: '7 5 * * *'
     - cron: '37 5 * * *'
+    - cron: '37 7 * * *'   # 22 Oct 2026: GitHub skipped all five morning slots; two more chances, plus daily-post's catch-up step
+    - cron: '37 9 * * *'
   workflow_dispatch:
     inputs:
       mode:
