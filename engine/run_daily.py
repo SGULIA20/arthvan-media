@@ -328,11 +328,7 @@ def _story_extras(st, day, app_cfg, dst, url, deps, log, chans, li_text, tags) -
     yt = chans.get("youtube", {})
     if yt:
         ok &= _do_youtube(day, app_cfg, st, dst, deps, log, yt, st.get("title", app_cfg["name"]), st["caption"])
-    # a filmed-Reel day has no slide post, so Threads and LinkedIn get the Reel video instead (22 Oct 2026: otherwise both stayed empty)
-    if chans.get("linkedin_any") and app_cfg.get("linkedin", True) and day_status(log, day, "linkedin") != "published":
-        tok, urn = chans["linkedin_any"]
-        ok &= _channel(day, "linkedin", st["id"], deps, log,
-                       lambda: deps.post_linkedin_video(tok, urn, li_text, tags, dst, st.get("title", app_cfg["name"])))
+    # a filmed-Reel day has no slide post: Threads gets the Reel video; LinkedIn gets nothing (founder, 22 Oct 2026: pictures only on LinkedIn, no video)
     if chans.get("threads") and day_status(log, day, "threads") != "published":
         th_token, th_uid = chans["threads"]
         text = build_threads_text(app_cfg, {"caption": st["caption"], "hashtags": st.get("hashtags", []), "slides": []})

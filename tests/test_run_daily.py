@@ -271,7 +271,7 @@ def test_waypoint_slides_go_to_linkedin_but_its_reel_video_never_does(tmp_path):
     w.li_videos = []
     w.deps.post_linkedin_video = lambda *a: w.li_videos.append(a) or "urn:li:ugcPost:5"
     assert go(w, env=LI_ENV, day=date(2026, 10, 17)) == 0       # a Waypoint, female-lead day: the story is scheduled
-    assert last_entry(tmp_path, "instagram")["item"] == "mira-x-hi" and len(w.li_videos) == 1
+    assert last_entry(tmp_path, "instagram")["item"] == "mira-x-hi" and w.li_videos == []
 
 
 def test_linkedin_is_skipped_quietly_without_credentials_and_in_prepare_mode(tmp_path):
@@ -338,7 +338,7 @@ def test_threads_and_linkedin_both_retry_when_both_failed_on_a_tuesday(tmp_path)
     assert len(w.th_calls) == 2 and len(w.li_calls) == 2 and w.count("publish") == 1
 
 
-def test_a_scheduled_story_replaces_the_bank_item_and_posts_reel_story_and_linkedin_video(tmp_path):
+def test_a_scheduled_story_replaces_the_bank_item_and_posts_reel_and_story_but_never_a_linkedin_video(tmp_path):
     w = World(tmp_path)
     (tmp_path / "stories" / "out").mkdir(parents=True)
     (tmp_path / "stories" / "out" / "lumi-friday-hi.mp4").write_bytes(b"v" * 30)
@@ -351,8 +351,8 @@ def test_a_scheduled_story_replaces_the_bank_item_and_posts_reel_story_and_linke
     assert go(w, env=env, day=date(2026, 10, 14)) == 0        # 14 Oct is a ScoreMyBiz + female-lead slot
     assert w.rendered_ids == []                                 # no bank item rendered
     assert w.count("publish") == 1 and w.prepared_video == "https://raw.githubusercontent.com/o/r/deadbeef/out/2026-10-14/story.mp4"
-    assert len(w.li_videos) == 1 and "play.google.com" in w.li_videos[0][0] and w.li_videos[0][2] == "शुक्रवार"   # no slide post that day: LinkedIn gets the Reel
-    assert last_entry(tmp_path, "instagram")["item"] == "lumi-friday-hi" and last_entry(tmp_path, "linkedin")["status"] == "published"
+    assert w.li_videos == []                                    # founder, 22 Oct 2026: LinkedIn gets pictures only, never a video
+    assert last_entry(tmp_path, "instagram")["item"] == "lumi-friday-hi" and "linkedin" not in log_path(tmp_path).read_text()
     assert w.th_calls == []                                     # Threads needs images; skipped on story days
     assert go(w, env=env, day=date(2026, 10, 14)) == 0 and w.count("publish") == 1
 
