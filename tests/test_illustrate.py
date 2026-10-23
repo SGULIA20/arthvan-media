@@ -96,3 +96,17 @@ def test_after_the_free_key_is_refused_it_is_not_tried_again_for_an_hour(tmp_pat
     il.generate("p", tmp_path / "a.png", model="gemini-3.1-flash-lite-image")
     il.generate("p", tmp_path / "b.png", model="gemini-3.1-flash-lite-image")
     assert calls == ["AIzaFREE", "AIzaPAID", "AIzaPAID"]                                  # the second picture goes straight to the paid key
+
+
+def test_a_new_story_is_drawn_in_its_apps_brand_style_and_a_started_story_keeps_its_own(tmp_path):
+    (tmp_path / "content").mkdir()
+    (tmp_path / "content" / "brand_styles.json").write_text(json.dumps({"waypoint": "BRAND."}))
+    story = {**STORY, "app": "waypoint"}
+    prompts = []
+    def fake(prompt, out, refs, model):
+        prompts.append(prompt); out.parent.mkdir(parents=True, exist_ok=True); out.write_bytes(b"png")
+    il.make_story_art(story, only=[1], root=tmp_path, gen=fake)
+    assert prompts[-1].startswith("BRAND.")                                    # nothing drawn yet: the brand style (founder, 23 Oct 2026)
+    il.make_story_art(story, root=tmp_path, gen=fake)
+    assert prompts[-1].startswith("STYLE.")                                    # s01 exists, so the rest keeps the story's own style: no mixed looks
+    assert il.brand_style({**STORY, "id": "other", "app": "scoremybiz"}, tmp_path) == ""   # a brand with no style listed keeps its own

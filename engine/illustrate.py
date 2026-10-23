@@ -17,6 +17,7 @@ from . import tts
 
 ROOT = Path(__file__).resolve().parent.parent
 CHAR_DIR = ROOT / "engine" / "assets" / "characters"
+BRAND_STYLES = ROOT / "content" / "brand_styles.json"
 SPEND_FILE = Path.home() / "arthvan-social" / "logs" / "image-spend.json"
 MODEL = "gemini-3.1-flash-lite-image"        # $0.0336 a picture (about Rs 3); gemini-2.5-flash-image is $0.039 (Rs 3.5); the batch API would halve either price
 INR_PER_IMAGE = {"gemini-2.5-flash-image": 3.5, "gemini-3.1-flash-image": 6.0, "gemini-3.1-flash-lite-image": 3.0, "gemini-3-pro-image": 12.0}
@@ -135,9 +136,23 @@ def _generate_with(prompt: str, out: Path, refs: list, model: str, key: str, tri
     raise IllustrationError(last)
 
 
+def brand_style(story: dict, root: Path = ROOT, styles_file: Path = None) -> str:
+    """The app's picture style (content/brand_styles.json, founder 23 Oct 2026), or '' to keep the story's own style. A story that already
+    has any picture drawn keeps its own style, so a half-made story never mixes two looks and the reserve goes out as made."""
+    styles_file = Path(styles_file or Path(root) / "content" / "brand_styles.json")
+    if not styles_file.exists():
+        return ""
+    folder = art_dir(story.get("art_id", story["id"]), root)
+    own = [sc["image"] for sc in story.get("scenes", []) if sc.get("art") and sc.get("image") and not sc["image"].startswith("..")]   # shared library pictures don't count
+    if any((folder / name).exists() for name in own):
+        return ""
+    return json.loads(styles_file.read_text()).get(story.get("app", ""), "")
+
+
 def make_story_art(story: dict, only: list = None, root: Path = ROOT, model: str = MODEL, gen=generate) -> list:
     """Draws every scene of the story that has an "art" line and no picture yet. Returns the files drawn."""
-    art = story["art"]
+    art = dict(story["art"])
+    art["style"] = brand_style(story, root) or art["style"]
     refs = [CHAR_DIR / r for r in art.get("ref", [])]
     made = []
     for i, sc in enumerate(story["scenes"]):
