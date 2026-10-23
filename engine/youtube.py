@@ -60,7 +60,8 @@ def build_metadata(title: str, description: str, play_url: str, tags: list) -> d
     t = title.strip()[: MAX_TITLE - len(suffix)].rstrip() + suffix
     return {"snippet": {"title": t, "description": f"{description.strip()}\n\nGet the app on Google Play: {play_url}",
                         "tags": [x.lstrip("#") for x in tags][:15], "categoryId": "22"},
-            "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False}}
+            "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False,
+                       "containsSyntheticMedia": True}}     # AI pictures and AI voice: YouTube's altered-content label, as sg-content does (23 Oct 2026)
 
 
 def upload_short(token: str, path, metadata: dict) -> str:

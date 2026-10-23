@@ -12,7 +12,7 @@ def test_metadata_has_shorts_tag_play_link_and_safe_defaults():
     m = build_metadata("Friday", "Meena's week, told by Lumi.", "https://play.google.com/store/apps/details?id=com.scoremybiz.app", ["Lumi", "ScoreMyBiz"])
     assert m["snippet"]["title"].endswith("#Shorts") and len(m["snippet"]["title"]) <= 100
     assert "play.google.com" in m["snippet"]["description"] and "Lumi" in m["snippet"]["tags"]
-    assert m["status"] == {"privacyStatus": "public", "selfDeclaredMadeForKids": False}
+    assert m["status"] == {"privacyStatus": "public", "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True}
     assert m["snippet"]["categoryId"] == "22"
 
 
