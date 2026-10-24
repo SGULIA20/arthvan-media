@@ -25,9 +25,16 @@ def message(card: str, today) -> str:
     return f"📋 Evening status {stamp}: the scorecard from the content pipeline is not available yet (its job may have run late)."
 
 
+def report_day(now=None):
+    """The day the card is dated: the founder's day in Lagos, the same rule as sg-content's evening.card_day (before 05:00 WAT is still the
+    previous day, so a late run reports the day that ended). The relay runs at 21:28 WAT, already 01:58 the next day in India."""
+    from zoneinfo import ZoneInfo
+    now = now or datetime.now(timezone.utc)
+    return (now.astimezone(ZoneInfo("Africa/Lagos")) - timedelta(hours=5)).date()
+
+
 def main(argv=None) -> int:
-    today = (datetime.now(timezone.utc) + timedelta(hours=5, minutes=30)).date()      # the card is dated in India time
-    text = message(fetch(), today)
+    text = message(fetch(), report_day())
     print(text)
     return 0 if notify.send(text) else 1
 
