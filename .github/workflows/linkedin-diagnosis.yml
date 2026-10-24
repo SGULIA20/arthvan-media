@@ -1,0 +1,57 @@
+# One-off diagnosis (founder, 24 Oct 2026): LinkedIn impressions. Reads numbers only (what the token is allowed to read) and saves
+# them to logs/linkedin-diagnosis.json. Delete this file once the analysis is done.
+name: linkedin-diagnosis
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements.txt
+      - name: Collect
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.parse
+          from engine import linkedin
+          tok = os.environ["LINKEDIN_ACCESS_TOKEN"]
+          out = {"posts": [], "probes": {}}
+          def tryget(name, url):
+              try:
+                  s, _h, b = linkedin.call("GET", url, tok)
+                  out["probes"][name] = {"status": s, "body": b}
+                  return b
+              except Exception as e:
+                  out["probes"][name] = {"error": str(e)[:300]}
+          A = linkedin.API
+          tryget("followers", f"{A}/rest/memberFollowersCount?q=me")
+          posts = [json.loads(l) for l in open("logs/posts.jsonl") if '"linkedin' in l]
+          posts = [p for p in posts if p.get("status") == "published" and p.get("id", "").startswith("urn:li:")][-15:]
+          for p in posts:
+              urn = p["id"]; e = urllib.parse.quote(urn, safe="")
+              row = {"date": p["date"], "channel": p["channel"], "item": p["item"], "urn": urn}
+              for name, url in (("social", f"{A}/rest/socialActions/{e}"),
+                                ("impressions", f"{A}/rest/memberCreatorPostAnalytics?q=entity&entity=({'share' if ':share:' in urn else 'ugc'}:{e})&queryType=IMPRESSION&aggregation=TOTAL"),
+                                ("reach", f"{A}/rest/memberCreatorPostAnalytics?q=entity&entity=({'share' if ':share:' in urn else 'ugc'}:{e})&queryType=MEMBERS_REACHED&aggregation=TOTAL")):
+                  try:
+                      s, _h, b = linkedin.call("GET", url, tok); row[name] = b
+                  except Exception as ex:
+                      row[name] = {"error": str(ex)[:200]}
+              out["posts"].append(row)
+          json.dump(out, open("logs/linkedin-diagnosis.json", "w"), indent=1, ensure_ascii=False)
+          print(json.dumps(out)[:3000])
+          PY
+      - name: Save
+        run: |
+          git config user.name "arthvan-bot"
+          git config user.email "arthvan-bot@users.noreply.github.com"
+          git add -f logs/linkedin-diagnosis.json
+          git commit -m "linkedin diagnosis numbers [skip ci]"
+          git pull --rebase origin main && git push origin HEAD:main
