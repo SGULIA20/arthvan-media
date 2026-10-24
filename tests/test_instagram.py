@@ -140,3 +140,17 @@ def test_app_reels_go_out_as_trial_reels_and_fall_back_to_normal_reels(monkeypat
     assert ig.reel_container("/u/media", "t", {"media_type": "REELS"}) == "trial1"
     assert _json.loads(sent[0]["trial_params"]) == {"graduation_strategy": "SS_PERFORMANCE"} and "share_to_feed" not in sent[0]
     assert ig.reel_container("/u/media", "t", {"media_type": "REELS"}) == "plain1" and sent[-1]["share_to_feed"] == "true"
+
+
+def test_prepared_says_whether_the_reel_is_a_trial(monkeypatch):
+    from engine import instagram as ig
+    monkeypatch.setattr(ig, "TRIAL_CONTAINERS", set())
+    monkeypatch.setattr(ig, "_wait", lambda *a, **k: None)
+    monkeypatch.setattr(ig, "call", lambda method, path, token, params=None: {"id": "reel1" if params.get("media_type") == "REELS" else "story1"})
+    assert ig.prepare_video_set("u", "t", "https://v", "cap").reel_trial is True
+    def refuse(method, path, token, params=None):
+        if params.get("trial_params"):
+            raise ig.InstagramError("HTTP 400")
+        return {"id": "plain" if params.get("media_type") == "REELS" else "story2"}
+    monkeypatch.setattr(ig, "call", refuse)
+    assert ig.prepare_video_set("u", "t", "https://v", "cap").reel_trial is False

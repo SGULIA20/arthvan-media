@@ -44,6 +44,7 @@ class Prepared:
     post: str
     reel: str
     story: str
+    reel_trial: bool = False         # the Reel went out as a Trial Reel (logged, so sg-content's 9 pm card can list it after 72 hours)
 
 
 def _scrub(text: str, token: str) -> str:
@@ -81,11 +82,16 @@ def _wait(cid: str, token: str, label: str, sleep, max_polls: int, poll_s: float
 TRIAL = json.dumps({"graduation_strategy": "SS_PERFORMANCE"})
 
 
+TRIAL_CONTAINERS: set = set()       # Reel containers this run made as Trial Reels
+
+
 def reel_container(path: str, token: str, params: dict) -> str:
     """A Trial Reel first (non-followers see it first; Instagram shares the strong ones with followers; founder, 24 Oct 2026);
     a normal Reel shared to the feed when Instagram refuses the trial."""
     try:
-        return call("POST", path, token, {**params, "trial_params": TRIAL})["id"]
+        cid = call("POST", path, token, {**params, "trial_params": TRIAL})["id"]
+        TRIAL_CONTAINERS.add(cid)
+        return cid
     except InstagramError as e:
         print(f"trial reel refused ({str(e)[:100]}); posting a normal Reel", flush=True)
         return call("POST", path, token, {**params, "share_to_feed": "true"})["id"]
@@ -107,7 +113,7 @@ def prepare_set(ig_id: str, token: str, urls: SetUrls, captions: Captions, thumb
     story = call("POST", path, token, {"media_type": "STORIES", "video_url": urls.story})["id"]
     for label, cid in (("post", post), ("reel", reel), ("story", story)):
         _wait(cid, token, label, sleep, max_polls, poll_s)
-    return Prepared(post=post, reel=reel, story=story)
+    return Prepared(post=post, reel=reel, story=story, reel_trial=reel in TRIAL_CONTAINERS)
 
 
 def prepare_video_set(ig_id: str, token: str, video_url: str, caption: str, thumb_offset_ms: int = 2000,
@@ -119,7 +125,7 @@ def prepare_video_set(ig_id: str, token: str, video_url: str, caption: str, thum
     story = call("POST", path, token, {"media_type": "STORIES", "video_url": video_url})["id"]
     for label, cid in (("reel", reel), ("story", story)):
         _wait(cid, token, label, sleep, max_polls, poll_s)
-    return Prepared(post=None, reel=reel, story=story)
+    return Prepared(post=None, reel=reel, story=story, reel_trial=reel in TRIAL_CONTAINERS)
 
 
 def publish_set(ig_id: str, token: str, prepared: Prepared) -> dict:
