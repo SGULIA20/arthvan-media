@@ -379,7 +379,7 @@ def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log
         except PartialPublish as e:
             _append(log, dict(entry, status="partial", ids=e.ids)); deps.git_publish([log], f"log: partial publish {day}")
             print(f"run failed: {e}"); return 1
-        _append(log, dict(entry, status="published", ids=ids)); deps.git_publish([log], f"log: published {day}")
+        _append(log, dict(entry, status="published", ids=ids, **_trial(prepared))); deps.git_publish([log], f"log: published {day}")
         print(f"published story {st['id']}: {ids}")
         ok = _story_extras(st, day, app_cfg, dst, url, deps, log, chans, li_text, tags)
         return 0 if ok else 1
@@ -388,6 +388,22 @@ def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log
 
 
 # ---------- the run ----------
+def is_post_day(day: date, root: Path = ROOT) -> bool:
+    """App posts go out only on the weekdays in apps.json _global.post_weekdays (all days when unset); a festival in
+    occasions.json always counts, so an occasion story still goes out on its date."""
+    glob = json.loads((Path(root) / "content" / "apps.json").read_text()).get("_global", {})
+    days = glob.get("post_weekdays")
+    if days is None or day.weekday() in days:
+        return True
+    occ = Path(root) / "content" / "occasions.json"
+    return occ.exists() and any(o.get("date") == day.isoformat() for o in json.loads(occ.read_text()).get("occasions", []))
+
+
+def _trial(prepared) -> dict:
+    """The log marks a Trial Reel; sg-content's 9 pm card lists it once its 72 hours end (founder, 24 Oct 2026)."""
+    return {"reel_trial": "SS_PERFORMANCE"} if getattr(prepared, "reel_trial", False) else {}
+
+
 def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None, banks=None, apps=None) -> int:
     env = os.environ if env is None else env
     deps = deps or Deps()
@@ -502,7 +518,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
             deps.git_publish([log], f"log: partial publish {day}")
             print(f"run failed: {e}")
             return 1
-        _append(log, dict(entry, status="published", ids=ids))
+        _append(log, dict(entry, status="published", ids=ids, **_trial(prepared)))
         deps.git_publish([log], f"log: published {day}")
         print(f"published {sel.item['id']}: {ids}")
         return _extras(day, apps[sel.app], sel.item, rs.slides, urls.slides, deps, log, chans)
@@ -519,6 +535,9 @@ def main(argv=None) -> int:
     day = date.fromisoformat(args.date) if args.date else lagos_date(datetime.now(timezone.utc))
     if args.mode != "post":
         return run(args.mode, day)
+    if not is_post_day(day):
+        print(f"{day}: not an app post day (founder, 24 Oct 2026: 2-3 a week); nothing posted")
+        return 0
     before = len(notify.entries(ROOT / "logs" / "posts.jsonl"))
     try:
         code = run(args.mode, day)

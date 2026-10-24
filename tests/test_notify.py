@@ -98,12 +98,12 @@ def test_the_daily_run_reports_through_notify_only_in_post_mode(monkeypatch, tmp
     calls, codes = [], iter([0, 1])
     monkeypatch.setattr(run_daily, "run", lambda mode, day: next(codes))
     monkeypatch.setattr(run_daily.notify, "after_run", lambda root, day, code, before: calls.append(code))
-    assert run_daily.main(["--mode", "render", "--date", "2026-10-13"]) == 0 and calls == []
-    assert run_daily.main(["--mode", "post", "--date", "2026-10-13"]) == 1 and calls == [1]
+    assert run_daily.main(["--mode", "render", "--date", "2026-10-14"]) == 0 and calls == []
+    assert run_daily.main(["--mode", "post", "--date", "2026-10-14"]) == 1 and calls == [1]
     def crash(mode, day): raise RuntimeError("boom")
     monkeypatch.setattr(run_daily, "run", crash)
     try:
-        run_daily.main(["--mode", "post", "--date", "2026-10-13"])
+        run_daily.main(["--mode", "post", "--date", "2026-10-14"])
     except RuntimeError:
         pass
     assert calls == [1, 1]

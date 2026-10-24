@@ -602,3 +602,15 @@ def test_the_app_slide_post_goes_to_linkedin_only_when_the_setting_allows(tmp_pa
     w2 = World(off)
     monkeypatch.setattr(rd, "load_global", lambda: {**real(), "linkedin_app_posts": False})
     assert go(w2, env=LI_ENV, day=date(2026, 10, 14)) == 0 and w2.li_calls == []       # founder, 22 Oct 2026: nothing from the apps on LinkedIn
+
+
+def test_app_posts_go_out_only_on_the_chosen_weekdays_or_a_festival(tmp_path):
+    import json as _json
+    from datetime import date as _date
+    from engine import run_daily as rd
+    (tmp_path / "content").mkdir()
+    (tmp_path / "content" / "apps.json").write_text(_json.dumps({"_global": {"post_weekdays": [0, 2, 4]}}))
+    (tmp_path / "content" / "occasions.json").write_text(_json.dumps({"occasions": [{"key": "diwali", "date": "2026-11-08"}]}))
+    assert rd.is_post_day(_date(2026, 10, 26), tmp_path)            # Monday
+    assert not rd.is_post_day(_date(2026, 10, 27), tmp_path)        # Tuesday
+    assert rd.is_post_day(_date(2026, 11, 8), tmp_path)             # a Sunday, but a festival

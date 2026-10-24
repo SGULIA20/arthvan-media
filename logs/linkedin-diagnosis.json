@@ -1,0 +1,234 @@
+{
+ "posts": [
+  {
+   "date": "2026-10-06",
+   "channel": "linkedin",
+   "item": "smb-month-end",
+   "urn": "urn:li:ugcPost:7514756277231824896",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-13",
+   "channel": "linkedin",
+   "item": "mira-window-en",
+   "urn": "urn:li:ugcPost:7515830114148995072",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-14",
+   "channel": "linkedin",
+   "item": "lumi-navratri-gu",
+   "urn": "urn:li:ugcPost:7516185854919471104",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-15",
+   "channel": "linkedin",
+   "item": "founder-breakroom-en",
+   "urn": "urn:li:ugcPost:7516549830081404928",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-16",
+   "channel": "linkedin",
+   "item": "founder-monthend-en",
+   "urn": "urn:li:ugcPost:7516912194861674496",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-17",
+   "channel": "linkedin",
+   "item": "mira-polls-en",
+   "urn": "urn:li:ugcPost:7517271915334586368",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-18",
+   "channel": "linkedin",
+   "item": "lumi-friday-hi",
+   "urn": "urn:li:ugcPost:7517633980473602049",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-19",
+   "channel": "linkedin",
+   "item": "founder-voice-en",
+   "urn": "urn:li:ugcPost:7517962888993566721",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-20",
+   "channel": "linkedin_personal",
+   "item": "premortem",
+   "urn": "urn:li:share:7518183446603571200",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-20",
+   "channel": "linkedin",
+   "item": "lumi-bahikhata-hi",
+   "urn": "urn:li:ugcPost:7518376961707261952",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-21",
+   "channel": "linkedin_personal",
+   "item": "price-vs-volume",
+   "urn": "urn:li:share:7518595218120847360",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-22",
+   "channel": "linkedin_personal",
+   "item": "jagged-frontier",
+   "urn": "urn:li:share:7518935114999816192",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-22",
+   "channel": "linkedin",
+   "item": "lumi-maakidukaan-hi",
+   "urn": "urn:li:ugcPost:7519065461003808769",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-23",
+   "channel": "linkedin_personal",
+   "item": "ever-given",
+   "urn": "urn:li:share:7519312706060017664",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  },
+  {
+   "date": "2026-10-24",
+   "channel": "linkedin_personal",
+   "item": "shopkeeper-cash-lesson",
+   "urn": "urn:li:share:7519675126292959232",
+   "social": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiSocialActions.GET.20260901\"}"
+   },
+   "impressions": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   },
+   "reach": {
+    "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberCreatorPostAnalytics.FINDER-entity.20260901\"}"
+   }
+  }
+ ],
+ "probes": {
+  "followers": {
+   "error": "HTTP 403: {\"status\":403,\"serviceErrorCode\":100,\"code\":\"ACCESS_DENIED\",\"message\":\"Not enough permissions to access: partnerApiMemberFollowersCount.FINDER-me.20260901\"}"
+  }
+ }
+}
