@@ -78,6 +78,19 @@ def _wait(cid: str, token: str, label: str, sleep, max_polls: int, poll_s: float
     raise InstagramError(f"{label} container never finished")
 
 
+TRIAL = json.dumps({"graduation_strategy": "SS_PERFORMANCE"})
+
+
+def reel_container(path: str, token: str, params: dict) -> str:
+    """A Trial Reel first (non-followers see it first; Instagram shares the strong ones with followers; founder, 24 Oct 2026);
+    a normal Reel shared to the feed when Instagram refuses the trial."""
+    try:
+        return call("POST", path, token, {**params, "trial_params": TRIAL})["id"]
+    except InstagramError as e:
+        print(f"trial reel refused ({str(e)[:100]}); posting a normal Reel", flush=True)
+        return call("POST", path, token, {**params, "share_to_feed": "true"})["id"]
+
+
 def prepare_set(ig_id: str, token: str, urls: SetUrls, captions: Captions, thumb_offset_ms: int = 2000,
                 sleep=time.sleep, max_polls: int = 90, poll_s: float = 4) -> Prepared:
     """Create every container and wait until all are FINISHED. Nothing is public yet."""
@@ -89,8 +102,8 @@ def prepare_set(ig_id: str, token: str, urls: SetUrls, captions: Captions, thumb
         children.append(cid)
     post = call("POST", path, token, {"media_type": "CAROUSEL", "children": ",".join(children),
                                       "caption": captions.post})["id"]
-    reel = call("POST", path, token, {"media_type": "REELS", "video_url": urls.reel, "caption": captions.reel,
-                                      "share_to_feed": "true", "thumb_offset": str(thumb_offset_ms)})["id"]
+    reel = reel_container(path, token, {"media_type": "REELS", "video_url": urls.reel, "caption": captions.reel,
+                                        "thumb_offset": str(thumb_offset_ms)})
     story = call("POST", path, token, {"media_type": "STORIES", "video_url": urls.story})["id"]
     for label, cid in (("post", post), ("reel", reel), ("story", story)):
         _wait(cid, token, label, sleep, max_polls, poll_s)
@@ -101,8 +114,8 @@ def prepare_video_set(ig_id: str, token: str, video_url: str, caption: str, thum
                       sleep=time.sleep, max_polls: int = 90, poll_s: float = 4) -> Prepared:
     """A story ad: Reel + Story from one MP4, no carousel."""
     path = f"/{ig_id}/media"
-    reel = call("POST", path, token, {"media_type": "REELS", "video_url": video_url, "caption": caption,
-                                      "share_to_feed": "true", "thumb_offset": str(thumb_offset_ms)})["id"]
+    reel = reel_container(path, token, {"media_type": "REELS", "video_url": video_url, "caption": caption,
+                                        "thumb_offset": str(thumb_offset_ms)})
     story = call("POST", path, token, {"media_type": "STORIES", "video_url": video_url})["id"]
     for label, cid in (("reel", reel), ("story", story)):
         _wait(cid, token, label, sleep, max_polls, poll_s)

@@ -47,7 +47,7 @@ def test_prepare_builds_carousel_reel_and_story_containers(monkeypatch):
     assert carousel["media_type"] == "CAROUSEL" and carousel["children"] == "c1,c2,c3" and carousel["caption"] == "post caption"
     reel = media[4]
     assert reel["media_type"] == "REELS" and reel["video_url"] == "https://x/r.mp4"
-    assert reel["caption"] == "reel caption" and reel["share_to_feed"] == "true" and reel["thumb_offset"] == "2000"
+    assert reel["caption"] == "reel caption" and "trial_params" in reel and reel["thumb_offset"] == "2000"
     story = media[5]
     assert story["media_type"] == "STORIES" and "caption" not in story
     assert (prepared.post, prepared.reel, prepared.story) == ("c4", "c5", "c6")
@@ -123,3 +123,20 @@ def test_prepare_video_set_makes_reel_and_story_only_and_publish_skips_the_missi
     assert media[1]["media_type"] == "STORIES" and prepared.post is None
     ids = publish_set("17841", TOKEN, prepared)
     assert list(ids) == ["reel", "story"]
+
+
+def test_app_reels_go_out_as_trial_reels_and_fall_back_to_normal_reels(monkeypatch):
+    import json as _json
+    from engine import instagram as ig
+    sent = []
+    def call(method, path, token, params=None):
+        sent.append(dict(params or {}))
+        if (params or {}).get("trial_params") and len(sent) == 1:
+            return {"id": "trial1"}
+        if (params or {}).get("trial_params"):
+            raise ig.InstagramError("HTTP 400: trial not allowed")
+        return {"id": "plain1"}
+    monkeypatch.setattr(ig, "call", call)
+    assert ig.reel_container("/u/media", "t", {"media_type": "REELS"}) == "trial1"
+    assert _json.loads(sent[0]["trial_params"]) == {"graduation_strategy": "SS_PERFORMANCE"} and "share_to_feed" not in sent[0]
+    assert ig.reel_container("/u/media", "t", {"media_type": "REELS"}) == "plain1" and sent[-1]["share_to_feed"] == "true"
