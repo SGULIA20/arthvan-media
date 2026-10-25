@@ -28,7 +28,8 @@ CHANNEL = "linkedin_personal"
 BANK = ROOT / "content" / "linkedin_personal.json"
 TEMPLATE = ROOT / "engine" / "templates" / "linkedin_card.html"
 SIZE = (1080, 1350)
-MAX_HOOK, MAX_BODY, MAX_POST = 200, 1000, 1500
+MAX_HOOK, MAX_BODY, MAX_POST = 140, 1000, 1500     # hook: what a phone shows before "...see more" (founder, 25 Oct 2026)
+DOC_WEEKDAYS = (0, 2, 4)            # Mon, Wed, Fri (Lagos): a swipeable document; other days the single picture (test from 26 Oct 2026)
 MAX_TITLE, MAX_POINTS, MAX_POINT, MIN_SLIDES, MAX_SLIDES = 60, 5, 70, 2, 6
 EM_DASH = "—"
 _DIGIT = re.compile(r"\d")
@@ -41,6 +42,14 @@ def load_personal(root: Path = ROOT) -> dict:
 
 def cards(item: dict) -> list:
     return list(item["slides"]) if item.get("slides") else [item["card"]]
+
+
+def deck(item: dict) -> list:
+    """The pages of a document post: the opening line, the picture card, one page per point, and the question."""
+    c = item["card"] if item.get("card") else cards(item)[0]
+    pages = [{"title": item["hook"].strip()}, c]
+    pages += [{"title": pt, "kicker": f"{LABELS[item['pillar']]} · {i + 1} of {len(c.get('points', []))}"} for i, pt in enumerate(c.get("points", []))]
+    return pages + [{"title": item["question"].strip(), "kicker": "Your turn"}]
 
 
 def _texts(item: dict):
@@ -223,6 +232,8 @@ def _sync_repo() -> None:
 class Deps:
     render_cards: Callable = render_cards
     post_images: Callable = linkedin.post_images
+    post_document: Callable = linkedin.post_document
+    make_pdf: Callable = linkedin.jpegs_to_pdf
     git_publish: Callable = _git_publish
     notify: Callable = field(default_factory=lambda: notify.send)
     sync_repo: Callable = _sync_repo
@@ -310,11 +321,20 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     print(f"{day} {item['id']} ({item['pillar']}): {len(paths)} picture(s)\n\n{text}\n\n{' '.join(tags)}\n")
     if mode != "post":
         return 0
-    try:
-        post_id = deps.post_images(token, urn, text, tags, paths, alts)
-    except Exception as e:                                    # noqa: BLE001  LinkedInError, or an odd API body (KeyError)
-        return failed("post", e)
-    _append(log, dict(entry, status="published", id=post_id))
+    post_id, fmt = None, "picture"
+    if day.weekday() in DOC_WEEKDAYS:
+        try:
+            pages = deps.render_cards({**item, "slides": deck(item)}, root / "out" / "linkedin" / day.isoformat() / "deck")
+            pdf = deps.make_pdf(pages, root / "out" / "linkedin" / day.isoformat() / "deck.pdf")
+            post_id, fmt = deps.post_document(token, urn, text, tags, pdf, item["hook"].strip()), "document"
+        except Exception as e:                                # noqa: BLE001  the picture still goes out today
+            print(f"document post failed, posting the picture instead: {type(e).__name__}: {e}")
+    if post_id is None:
+        try:
+            post_id = deps.post_images(token, urn, text, tags, paths, alts)
+        except Exception as e:                                # noqa: BLE001  LinkedInError, or an odd API body (KeyError)
+            return failed("post", e)
+    _append(log, dict(entry, status="published", id=post_id, format=fmt))
     saved = _save_log(deps, log, f"log: {CHANNEL} published {day}")
     url = post_url(post_id)
     if not saved:
@@ -322,7 +342,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
                     "The safety run one hour later may post the same item again: send /pause now and I will sort it out.")
         print(f"published {item['id']} but the log was not pushed: {url}")
         return 1
-    deps.notify(f"LinkedIn post out: {item['hook']}\n{url}")
+    deps.notify(f"LinkedIn post out ({fmt}): {item['hook']}\n{url}\n\n👉 Reply to every comment in the next hour: "
+                "early replies are what make LinkedIn show it to more people.")
     print(f"published {item['id']}: {url}")
     return 0
 

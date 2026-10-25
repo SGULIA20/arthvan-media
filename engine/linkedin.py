@@ -117,6 +117,64 @@ def post_images(token: str, person_urn: str, text: str, tags: list, paths: list,
     return create_multi_image_post(token, person_urn, body, urns, alts)
 
 
+def upload_document(token: str, owner_urn: str, path) -> str:
+    _, _, body = call("POST", f"{API}/rest/documents?action=initializeUpload", token,
+                      json_body={"initializeUploadRequest": {"owner": owner_urn}})
+    value = body["value"]
+    status, _, _ = call("PUT", value["uploadUrl"], token, data=Path(path).read_bytes(),
+                        headers={"Content-Type": "application/octet-stream"})
+    if status not in (200, 201):
+        raise LinkedInError(f"document upload returned {status}")
+    return value["document"]
+
+
+def post_document(token: str, person_urn: str, text: str, tags: list, pdf_path, title: str) -> str:
+    """A PDF as a swipeable document post (founder, 25 Oct 2026: tested against the single picture). Returns the post URN."""
+    doc = upload_document(token, person_urn, pdf_path)
+    return _create_post(token, _post_body(person_urn, commentary(text, tags), {"media": {"title": title[:200], "id": doc}}), "document post")
+
+
+def jpegs_to_pdf(jpegs: list, out_path) -> Path:
+    """One page per JPEG at its own pixel size, no extra packages (the JPEG goes in as-is)."""
+    import struct
+    objs, pages = [], []
+    def size(data: bytes):
+        i = 2
+        while i < len(data):
+            marker, length = data[i + 1], struct.unpack(">H", data[i + 2:i + 4])[0]
+            if marker in (0xC0, 0xC1, 0xC2):
+                h, w = struct.unpack(">HH", data[i + 5:i + 9])
+                return w, h
+            i += 2 + length
+        raise LinkedInError("not a JPEG")
+    n = 2 + 3 * len(jpegs)                                   # catalog, pages, then image + content + page per JPEG
+    kids = []
+    for k, jp in enumerate(jpegs):
+        data = Path(jp).read_bytes()
+        w, h = size(data)
+        img, cnt, pg = 3 + 3 * k, 4 + 3 * k, 5 + 3 * k
+        objs.append((img, b"<< /Type /XObject /Subtype /Image /Width %d /Height %d /ColorSpace /DeviceRGB /BitsPerComponent 8 "
+                          b"/Filter /DCTDecode /Length %d >>\nstream\n" % (w, h, len(data)) + data + b"\nendstream"))
+        draw = b"q %d 0 0 %d 0 0 cm /Im0 Do Q" % (w, h)
+        objs.append((cnt, b"<< /Length %d >>\nstream\n" % len(draw) + draw + b"\nendstream"))
+        objs.append((pg, b"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 %d %d] /Resources << /XObject << /Im0 %d 0 R >> >> "
+                         b"/Contents %d 0 R >>" % (w, h, img, cnt)))
+        kids.append(b"%d 0 R" % pg)
+    objs = [(1, b"<< /Type /Catalog /Pages 2 0 R >>"), (2, b"<< /Type /Pages /Kids [" + b" ".join(kids) + b"] /Count %d >>" % len(jpegs))] + objs
+    out = bytearray(b"%PDF-1.4\n")
+    offsets = {}
+    for num, body in sorted(objs):
+        offsets[num] = len(out)
+        out += b"%d 0 obj\n" % num + body + b"\nendobj\n"
+    xref = len(out)
+    out += b"xref\n0 %d\n0000000000 65535 f \n" % (n + 1)
+    for num in range(1, n + 1):
+        out += b"%010d 00000 n \n" % offsets[num]
+    out += b"trailer\n<< /Size %d /Root 1 0 R >>\nstartxref\n%d\n%%%%EOF\n" % (n + 1, xref)
+    Path(out_path).write_bytes(bytes(out))
+    return Path(out_path)
+
+
 PART = 4194304  # LinkedIn splits uploads into 4 MiB parts
 
 

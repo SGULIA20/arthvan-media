@@ -3,13 +3,13 @@ name: linkedin-personal
 # One short hand-written post with a picture to the founder's personal LinkedIn profile, every day.
 on:
   schedule:
-    - cron: '37 3 * * *'   # 09:07 India = 04:37 Lagos (87% of the audience is in India); off-peak minute, GitHub delays :00 jobs
-    - cron: '7 4 * * *'    # GitHub often delays or skips scheduled runs by hours (20 Oct 2026: neither slot fired), so the day
-    - cron: '37 4 * * *'   # gets five chances before noon India; the engine never posts twice on one day
-    - cron: '7 5 * * *'
-    - cron: '37 5 * * *'
-    - cron: '37 7 * * *'   # 22 Oct 2026: GitHub skipped all five morning slots; two more chances, plus daily-post's catch-up step
+    # Backups only: the Supabase clock starts this at 08:10 Lagos (12:40 India), when the founder is awake to reply to the first
+    # comments (founder, 25 Oct 2026; was 04:37 Lagos). GitHub's own schedule is often late; the engine never posts twice a day.
+    - cron: '37 7 * * *'
+    - cron: '17 8 * * *'
+    - cron: '47 8 * * *'
     - cron: '37 9 * * *'
+    - cron: '37 10 * * *'
   workflow_dispatch:
     inputs:
       mode:
