@@ -84,10 +84,10 @@ def test_whatsapp_status_settings_reach_the_daily_job():
         assert k in text
 
 
-def test_linkedin_personal_runs_at_09_07_india_defaults_to_render_and_gets_its_secrets():
-    wf = load("linkedin-personal.yml")
-    assert wf["on"]["schedule"] == [{"cron": "37 3 * * *"}, {"cron": "7 4 * * *"}, {"cron": "37 4 * * *"}, {"cron": "7 5 * * *"}, {"cron": "37 5 * * *"},
-                                    {"cron": "37 7 * * *"}, {"cron": "37 9 * * *"}]
+def test_linkedin_personal_backups_start_after_08_10_lagos_defaults_to_render_and_gets_its_secrets():
+    wf = load("linkedin-personal.yml")                       # the Supabase clock starts it at 08:10 Lagos (founder, 25 Oct 2026)
+    assert wf["on"]["schedule"] == [{"cron": "37 7 * * *"}, {"cron": "17 8 * * *"}, {"cron": "47 8 * * *"}, {"cron": "37 9 * * *"},
+                                    {"cron": "37 10 * * *"}]
     assert wf["on"]["workflow_dispatch"]["inputs"]["mode"]["default"] == "render"
     assert wf["permissions"] == {"contents": "write"} and wf["concurrency"]["cancel-in-progress"] is False
     text = (WF / "linkedin-personal.yml").read_text()

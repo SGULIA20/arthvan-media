@@ -1,0 +1,41 @@
+name: story-hooks
+
+# Rewrites the opening of every story Reel not yet rendered so it starts on the hook, not "Hi, I'm Lumi" (founder, 25 Oct 2026).
+# write=false prints the changes only; write=true saves and commits them. Rendered Reels are never touched.
+on:
+  workflow_dispatch:
+    inputs:
+      write:
+        description: 'save the rewritten openings'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  hooks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Rewrite openings
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          WRITE: ${{ github.event.inputs.write }}
+        run: if [ "$WRITE" = "true" ]; then python -m engine.story_hook --write; else python -m engine.story_hook; fi
+      - name: Commit
+        if: github.event.inputs.write == 'true'
+        run: |
+          git config user.name "arthvan-autoposter"
+          git config user.email "autoposter@users.noreply.github.com"
+          git add stories/*.json
+          git diff --cached --quiet || git commit -m "Story Reels open on the hook: rewritten first scenes [skip ci]"
+          git pull --rebase origin main && git push origin HEAD:main

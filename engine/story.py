@@ -186,7 +186,8 @@ def speed_for(durations: list, mins: list, limit: float = LIMIT_S, pad: float = 
 
 def build(story_path: Path, out_dir: Path) -> Path:
     story = json.loads(Path(story_path).read_text())
-    problems = missing_pictures(story)
+    from .story_hook import opening_problems
+    problems = missing_pictures(story) + opening_problems(story)      # 25 Oct 2026: a Reel opens on the hook, never "Hi, I'm Lumi"
     if problems:
         raise SystemExit(f"{story['id']}: cannot render, {'; '.join(problems)}")
     plan = shot_plan(story)
