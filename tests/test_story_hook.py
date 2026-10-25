@@ -27,3 +27,8 @@ def test_rewrite_and_apply_change_voice_and_subtitles_and_mark_the_story():
     assert problems == []
     out = sh.apply(st, new)
     assert out["scenes"][0]["vo"] == out["scenes"][0]["sub"] == new and out["hook_rewritten"]
+
+
+def test_story_mode_openings_pass_even_with_words_that_mean_thing():
+    assert sh.opening_problems(_st("નાનપણમાં આપણે બધી વાત મમ્મીને કહેતા.", lang="gu")) == []
+    assert sh.opening_problems(_st("लहानपणी आपण प्रत्येक गोष्ट आईला सांगायचो.", lang="mr")) == []

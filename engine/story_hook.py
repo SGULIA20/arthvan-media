@@ -4,6 +4,8 @@ Imtiaz's story" and 54-80 % of viewers swiped away in the first 3 seconds. A Ree
 opening_problems(story)   what a render refuses: a greeting or a self-introduction first, or a first sentence over HOOK_WORDS_MAX
 rewrite(story, ask)       the first scene rewritten by Gemini in the story's own language, checked before it is kept
 python -m engine.story_hook [--write]    every story not yet rendered; prints the changes, --write saves them
+Story mode (Oct 2026) already opens in the scene; this guards new stories. Machine rewrites of old stories were NOT applied
+(25 Oct preview: about 1 in 8 changed the meaning in Gujarati/Marathi/Tamil).
 """
 import json
 import re
@@ -20,6 +22,7 @@ SPLIT = re.compile(r"(?<=[.!?।])\s+")
 GREETINGS = ("hi", "hello", "hey", "namaste", "namaskar", "नमस्ते", "नमस्कार", "हाय", "हैलो", "हॅलो", "હાય", "નમસ્તે", "નમસ્કાર", "હેલો",
              "ஹாய்", "வணக்கம்", "হাই", "নমস্কার", "হ্যালো")
 STORY_WORDS = ("story", "कहानी", "कथा", "गोष्ट", "વાર્તા", "વાત", "કહાણી", "கதை", "গল্প")
+THIS = ("this", "यह", "ये", "ही", "आ", "இது", "এটা", "এই")       # "vaat"/"goshta" also mean "a thing": only "THIS is X's story" counts
 SELF = ("i'm lumi", "i am lumi", "i'm mira", "i am mira", "मैं लूमी", "मैं मीरा", "मी लुमी", "मी मीरा", "હું લુમી", "હું મીરા",
         "நான் லூமி", "நான் மீரா", "আমি লুমি", "আমি মীরা")
 PROMPT = """Below is the first spoken scene of a 30-second Instagram Reel for a mobile app, in {language}.
@@ -41,7 +44,8 @@ def _bare(s: str) -> str:
 def _slow(sentence: str) -> bool:
     b = _bare(sentence)
     words = b.split()
-    return bool(words) and (words[0] in GREETINGS or (len(sentence) <= 60 and (any(w in b for w in SELF) or any(w in b for w in STORY_WORDS))))
+    intro = bool(words) and words[0] in THIS and any(w in b for w in STORY_WORDS)
+    return bool(words) and (words[0] in GREETINGS or (len(sentence) <= 60 and (any(w in b for w in SELF) or intro)))
 
 
 def opening_problems(story: dict) -> list:
