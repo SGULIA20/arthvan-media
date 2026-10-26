@@ -112,3 +112,4 @@
 {"date": "2026-10-26", "app": "scoremybiz", "item": "lumi-card-hi", "status": "publishing", "kind": "story", "feature": "business-card", "sha": "15c795df3de7ba001646f171754a3adf4827deb1", "at": "2026-10-26T15:25:05+00:00"}
 {"date": "2026-10-26", "app": "scoremybiz", "item": "lumi-card-hi", "status": "published", "kind": "story", "feature": "business-card", "sha": "15c795df3de7ba001646f171754a3adf4827deb1", "at": "2026-10-26T15:25:05+00:00", "ids": {"reel": "18114006302335866", "story": "17967347136191167"}, "reel_trial": "SS_PERFORMANCE"}
 {"date": "2026-10-26", "channel": "whatsapp", "item": "lumi-card-hi", "status": "published", "id": "465874ff-d193-4ace-9f24-03006e017a60"}
+{"date": "2026-10-26", "channel": "telegram", "item": "lumi-card-hi", "status": "published", "id": "156"}
