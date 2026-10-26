@@ -110,3 +110,4 @@
 {"date": "2026-10-25", "channel": "linkedin_personal", "item": "reference-class", "status": "published", "id": "urn:li:share:7519966279701622784", "format": "picture"}
 {"date": "2026-10-26", "channel": "linkedin_personal", "item": "discount-breakeven", "status": "published", "id": "urn:li:ugcPost:7520328716552462336", "format": "document"}
 {"date": "2026-10-26", "app": "scoremybiz", "item": "lumi-card-hi", "status": "publishing", "kind": "story", "feature": "business-card", "sha": "15c795df3de7ba001646f171754a3adf4827deb1", "at": "2026-10-26T15:25:05+00:00"}
+{"date": "2026-10-26", "app": "scoremybiz", "item": "lumi-card-hi", "status": "published", "kind": "story", "feature": "business-card", "sha": "15c795df3de7ba001646f171754a3adf4827deb1", "at": "2026-10-26T15:25:05+00:00", "ids": {"reel": "18114006302335866", "story": "17967347136191167"}, "reel_trial": "SS_PERFORMANCE"}
