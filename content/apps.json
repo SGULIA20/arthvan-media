@@ -243,9 +243,13 @@
     "linkedin_app_posts": false,
     "post_weekdays": [
       0,
+      1,
       2,
-      4
+      3,
+      4,
+      5,
+      6
     ],
-    "_post_weekdays_note": "App posts only on these weekdays (0 = Monday, Lagos date); festival days in occasions.json always post (founder, 24 Oct 2026: fewer, better app posts)."
+    "_post_weekdays_note": "App posts only on these weekdays (0 = Monday, Lagos date); festival days in occasions.json always post. Every day again (founder, 28 Oct 2026: \"better to go everyday\"; the 24 Oct Mon/Wed/Fri rule is dropped)."
   }
 }
