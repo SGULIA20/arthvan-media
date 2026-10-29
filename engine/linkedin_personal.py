@@ -29,7 +29,8 @@ BANK = ROOT / "content" / "linkedin_personal.json"
 TEMPLATE = ROOT / "engine" / "templates" / "linkedin_card.html"
 SIZE = (1080, 1350)
 MAX_HOOK, MAX_BODY, MAX_POST = 140, 1000, 1500     # hook: what a phone shows before "...see more" (founder, 25 Oct 2026)
-DOC_WEEKDAYS = (0, 2, 4)            # Mon, Wed, Fri (Lagos): a swipeable document; other days the single picture (test from 26 Oct 2026)
+POST_WEEKDAYS = (0, 2, 4)           # Mon, Wed, Fri (Lagos) only (founder, 29 Oct 2026: daily posts split the same ~360 readers, impressions fell 333 -> 31 a day)
+DOC_WEEKDAYS = (2,)                 # Wednesday a swipeable document, Mon/Fri the single picture (pictures led 23-29 Oct: 139/138 vs documents 59/22)
 MAX_TITLE, MAX_POINTS, MAX_POINT, MIN_SLIDES, MAX_SLIDES = 60, 5, 70, 2, 6
 EM_DASH = "—"
 _DIGIT = re.compile(r"\d")
@@ -282,6 +283,9 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     if mode == "post" and not (token and urn):
         print("LINKEDIN_ACCESS_TOKEN and LINKEDIN_PERSON_URN must be set")
         return 1
+    if mode == "post" and day.weekday() not in POST_WEEKDAYS:
+        print(f"{day}: not a LinkedIn day (Mon/Wed/Fri only), nothing posted")
+        return 0
     bank = bank or load_personal(root)
     settings, items = bank["settings"], bank["items"]
     log = root / "logs" / "posts.jsonl"
