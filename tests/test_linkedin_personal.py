@@ -6,7 +6,7 @@ import pytest
 
 from engine import linkedin_personal as lp
 
-DAY = date(2026, 10, 20)
+DAY = date(2026, 10, 19)                 # a Monday: LinkedIn posts Mon/Wed/Fri (founder, 29 Oct 2026)
 
 
 def item(**over):
@@ -133,7 +133,7 @@ def test_post_logs_published_and_notifies(tmp_path):
     d = Deps()
     assert lp.run("post", DAY, root=tmp_path, env=ENV, deps=d, bank=bank()) == 0
     rows = [json.loads(l) for l in (tmp_path / "logs" / "posts.jsonl").read_text().splitlines()]
-    assert rows[-1] == {"date": "2026-10-20", "channel": "linkedin_personal", "item": "a", "status": "published", "id": "urn:li:share:99",
+    assert rows[-1] == {"date": "2026-10-19", "channel": "linkedin_personal", "item": "a", "status": "published", "id": "urn:li:share:99",
                         "format": "picture"}
     assert d.posted[0][1] == ["#TheoryOfConstraints", "#OperationalExcellence", "#SGLearning"]
     assert d.published and "linkedin.com/feed/update/urn:li:share:99" in d.sent[0]
@@ -143,8 +143,8 @@ def test_second_run_same_day_is_a_noop_and_next_day_takes_the_next_item(tmp_path
     d = Deps()
     lp.run("post", DAY, root=tmp_path, env=ENV, deps=d, bank=bank())
     assert lp.run("post", DAY, root=tmp_path, env=ENV, deps=d, bank=bank()) == 0 and len(d.posted) == 1
-    lp.run("post", date(2026, 10, 21), root=tmp_path, env=ENV, deps=d, bank=bank())
-    assert d.rendered == ["a", "b", "b"]                       # Wednesday: the picture (the fallback) and the document pages
+    lp.run("post", date(2026, 10, 23), root=tmp_path, env=ENV, deps=d, bank=bank())
+    assert d.rendered == ["a", "b"]                            # Monday and Friday: the picture only
 
 
 def test_pause_stops_posting_and_prepare_never_posts(tmp_path):
@@ -209,7 +209,7 @@ def test_log_push_is_retried_and_a_lost_push_warns_loudly(tmp_path):
     d = Flaky(2)
     assert lp.run("post", DAY, root=tmp_path, env=ENV, deps=d, bank=bank()) == 0 and d.published and d.slept == [20, 20]
     d = Flaky(9)
-    assert lp.run("post", date(2026, 10, 21), root=tmp_path, env=ENV, deps=d, bank=bank()) == 1
+    assert lp.run("post", date(2026, 10, 23), root=tmp_path, env=ENV, deps=d, bank=bank()) == 1
     assert "/pause" in d.sent[-1] and "linkedin.com/feed/update/" in d.sent[-1]
 
 
@@ -236,13 +236,13 @@ def test_lane_banned_list_replaces_the_global_one_and_every_number_has_a_source(
             assert it["card"].get("source"), it["id"]
 
 
-def test_monday_wednesday_friday_post_a_document_and_fall_back_to_the_picture(tmp_path):
+def test_wednesday_posts_a_document_and_falls_back_to_the_picture(tmp_path):
     d = Deps()
-    assert lp.run("post", date(2026, 10, 26), root=tmp_path, env=ENV, deps=d, bank=bank()) == 0          # a Monday
+    assert lp.run("post", date(2026, 10, 28), root=tmp_path, env=ENV, deps=d, bank=bank()) == 0          # a Wednesday
     row = json.loads((tmp_path / "logs" / "posts.jsonl").read_text().splitlines()[-1])
     assert row["format"] == "document" and row["id"] == "urn:li:share:77" and "Reply to every comment" in d.sent[-1]
     d2 = Deps(); d2.doc_fail = True
-    assert lp.run("post", date(2026, 10, 26), root=tmp_path / "x", env=ENV, deps=d2, bank=bank()) == 0
+    assert lp.run("post", date(2026, 10, 28), root=tmp_path / "x", env=ENV, deps=d2, bank=bank()) == 0
     row = json.loads((tmp_path / "x" / "logs" / "posts.jsonl").read_text().splitlines()[-1])
     assert row["format"] == "picture" and row["id"] == "urn:li:share:99"
 
@@ -252,3 +252,10 @@ def test_deck_is_hook_card_points_question():
     pages = lp.deck(it)
     assert pages[0]["title"] == it["hook"] and pages[1] == it["card"] and pages[-1]["kicker"] == "Your turn"
     assert len(pages) == 3 + len(it["card"].get("points", []))
+
+
+def test_tuesday_thursday_and_weekends_post_nothing(tmp_path):
+    for day in (date(2026, 10, 27), date(2026, 10, 29), date(2026, 10, 31), date(2026, 11, 1)):
+        d = Deps()
+        assert lp.run("post", day, root=tmp_path, env=ENV, deps=d, bank=bank()) == 0
+    assert not (tmp_path / "logs" / "posts.jsonl").exists()
