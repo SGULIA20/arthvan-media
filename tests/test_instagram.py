@@ -33,8 +33,9 @@ class Fake:
         return [c for c in self.calls if c[0] == "POST" and c[1].endswith(suffix)]
 
 
-def run_prepare(fake, monkeypatch, **kw):
+def run_prepare(fake, monkeypatch, carousel=True, **kw):
     monkeypatch.setattr(instagram, "call", fake)
+    monkeypatch.setattr(instagram, "CAROUSEL", carousel)      # the carousel path stays tested; it is switched off by default
     return prepare_set("17841", TOKEN, URLS, CAPS, sleep=lambda s: None, **kw)
 
 
@@ -154,3 +155,12 @@ def test_prepared_says_whether_the_reel_is_a_trial(monkeypatch):
         return {"id": "plain" if params.get("media_type") == "REELS" else "story2"}
     monkeypatch.setattr(ig, "call", refuse)
     assert ig.prepare_video_set("u", "t", "https://v", "cap").reel_trial is False
+
+
+def test_default_is_reel_and_story_only_no_slides(monkeypatch):
+    assert instagram.CAROUSEL is False                          # founder, 31 Oct 2026: only videos on Instagram
+    fake = Fake()
+    prepared = run_prepare(fake, monkeypatch, carousel=False)
+    media = [c[2] for c in fake.posts("/media")]
+    assert [m["media_type"] for m in media] == ["REELS", "STORIES"] and not any(m.get("is_carousel_item") for m in media)
+    assert prepared.post is None and prepared.reel and prepared.story

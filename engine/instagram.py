@@ -97,22 +97,28 @@ def reel_container(path: str, token: str, params: dict) -> str:
         return call("POST", path, token, {**params, "share_to_feed": "true"})["id"]
 
 
+CAROUSEL = False   # founder, 31 Oct 2026: "do not add 7 slides on instagram, only videos": Reel + Story only; slides still go to LinkedIn etc.
+
+
 def prepare_set(ig_id: str, token: str, urls: SetUrls, captions: Captions, thumb_offset_ms: int = 2000,
                 sleep=time.sleep, max_polls: int = 90, poll_s: float = 4) -> Prepared:
     """Create every container and wait until all are FINISHED. Nothing is public yet."""
     path = f"/{ig_id}/media"
-    children = []
-    for i, u in enumerate(urls.slides):
-        cid = call("POST", path, token, {"image_url": u, "is_carousel_item": "true"})["id"]
-        _wait(cid, token, f"slide {i + 1}", sleep, max_polls, poll_s)
-        children.append(cid)
-    post = call("POST", path, token, {"media_type": "CAROUSEL", "children": ",".join(children),
-                                      "caption": captions.post})["id"]
+    post = None
+    if CAROUSEL:
+        children = []
+        for i, u in enumerate(urls.slides):
+            cid = call("POST", path, token, {"image_url": u, "is_carousel_item": "true"})["id"]
+            _wait(cid, token, f"slide {i + 1}", sleep, max_polls, poll_s)
+            children.append(cid)
+        post = call("POST", path, token, {"media_type": "CAROUSEL", "children": ",".join(children),
+                                          "caption": captions.post})["id"]
     reel = reel_container(path, token, {"media_type": "REELS", "video_url": urls.reel, "caption": captions.reel,
                                         "thumb_offset": str(thumb_offset_ms)})
     story = call("POST", path, token, {"media_type": "STORIES", "video_url": urls.story})["id"]
     for label, cid in (("post", post), ("reel", reel), ("story", story)):
-        _wait(cid, token, label, sleep, max_polls, poll_s)
+        if cid is not None:
+            _wait(cid, token, label, sleep, max_polls, poll_s)
     return Prepared(post=post, reel=reel, story=story, reel_trial=reel in TRIAL_CONTAINERS)
 
 
