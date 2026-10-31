@@ -87,7 +87,12 @@ def main() -> int:
     if not cfg:
         print("Telegram is not set up (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID)")
         return 1
-    print(f"answered {poll(cfg)} command(s)")
+    try:
+        print(f"answered {poll(cfg)} command(s)")
+    except telegram.TelegramError as e:
+        if "(5" not in str(e):                      # a 5xx is Telegram's own outage (30 Oct 2026: 504 Gateway Timeout); the next run answers
+            raise
+        print(f"Telegram is down for the moment, commands wait for the next run: {e}")
     return 0
 
 

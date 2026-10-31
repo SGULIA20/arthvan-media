@@ -26,7 +26,7 @@ def _call(token: str, method: str, body: dict, tries: int = 3):
                 return json.loads(r.read())
         except urllib.error.HTTPError as e:
             last = e.read().decode(errors="replace")[:300]
-            if e.code in (429, 500, 502, 503) and attempt < tries - 1:
+            if e.code in (429, 500, 502, 503, 504) and attempt < tries - 1:
                 time.sleep(5 * (attempt + 1)); continue
             raise TelegramError(f"Telegram {method} failed ({e.code}): {last.replace(token, '<token>')}") from None
         except Exception as e:
