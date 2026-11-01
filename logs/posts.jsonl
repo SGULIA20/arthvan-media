@@ -146,3 +146,4 @@
 {"date": "2026-11-01", "app": "scoremybiz", "item": "lumi-maakidukaan-gu", "status": "publishing", "kind": "story", "feature": "what-i-have-and-owe", "sha": "0149421462e5219c4bdd2198e46d3e8a20929306", "at": "2026-11-01T14:43:15+00:00"}
 {"date": "2026-11-01", "app": "scoremybiz", "item": "lumi-maakidukaan-gu", "status": "published", "kind": "story", "feature": "what-i-have-and-owe", "sha": "0149421462e5219c4bdd2198e46d3e8a20929306", "at": "2026-11-01T14:43:15+00:00", "ids": {"reel": "17908079142596078", "story": "18116800958024495"}, "reel_trial": "SS_PERFORMANCE"}
 {"date": "2026-11-01", "channel": "whatsapp", "item": "lumi-maakidukaan-gu", "status": "published", "id": "c98aebcc-775a-4180-a4b4-dbb5fa147fb4"}
+{"date": "2026-11-01", "channel": "telegram", "item": "lumi-maakidukaan-gu", "status": "published", "id": "196"}
