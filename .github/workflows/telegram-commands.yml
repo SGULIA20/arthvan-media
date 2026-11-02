@@ -1,6 +1,6 @@
 name: telegram-commands
 
-# Answers /status, /pause, /resume and /help sent to the Telegram bot. There is no always-on server, so this checks every 5 minutes.
+# Answers /status, /pause, /resume, /help and Reel videos (X-ray) sent to the Telegram bot. There is no always-on server, so this checks every 5 minutes.
 on:
   schedule:
     - cron: '*/5 * * * *'
@@ -16,7 +16,7 @@ concurrency:
 jobs:
   commands:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v5
         with:

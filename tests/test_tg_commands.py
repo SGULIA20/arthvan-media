@@ -68,3 +68,50 @@ def test_status_still_says_nothing_posted_after_only_the_personal_post(tmp_path)
     (tmp_path / "logs" / "posts.jsonl").write_text('{"date": "2026-10-13", "channel": "linkedin_personal", "item": "toc", "status": "published", "id": "u"}\n')
     t = tc.status(tmp_path, DAY)
     assert "Nothing posted yet today" in t and "LinkedIn personal post: out (toc)." in t
+
+
+def _video_update(uid, size=5_000_000, caption="/xray canwe.ai hook"):
+    return {"update_id": uid, "message": {"chat": {"id": 42}, "date": int(time.time()), "caption": caption,
+                                           "video": {"file_id": "F1", "file_size": size, "mime_type": "video/mp4"}}}
+
+
+def test_a_reel_video_gets_an_xray_and_is_confirmed_before_the_slow_part(tmp_path):
+    sent, confirmed, seen = [], [], []
+    def call(token, method, body):
+        if "offset" in body: confirmed.append(body["offset"]); return {"result": []}
+        return {"result": [_video_update(9)]}
+    def xr(cfg, m, root, call=None, change=None):
+        seen.append(confirmed[:]); return "🎬 Reel X-ray\n\nHOOK: ..."
+    n = tc.poll(CFG, tmp_path, call=call, send=lambda cfg, t: sent.append(t), change=lambda *a: None, day=DAY, xray_fn=xr)
+    assert n == 1 and seen == [[10]] and sent[0].startswith("🎬 Got the Reel") and sent[1].startswith("🎬 Reel X-ray")
+
+
+def test_xray_reply_saves_the_breakdown_and_passes_the_note(tmp_path):
+    changes, notes = [], []
+    def fetch(cfg, fid, out, call): out.write_bytes(b"mp4"); return out
+    def analyse(path, note): notes.append(note); return "HOOK: a question in 2 seconds"
+    reply = tc.xray_reply(CFG, _video_update(1)["message"], tmp_path, call=None, change=lambda root, add, rm, msg: changes.append(add),
+                          analyse=analyse, fetch=fetch)
+    assert reply.startswith("🎬 Reel X-ray") and notes == ["canwe.ai hook"]
+    saved = list((tmp_path / "logs" / "xray").glob("*.md"))
+    assert len(saved) == 1 and "a question in 2 seconds" in saved[0].read_text() and changes[0][0].startswith("logs/xray/")
+
+
+def test_xray_refuses_a_video_too_big_for_the_bot(tmp_path):
+    reply = tc.xray_reply(CFG, _video_update(1, size=60_000_000)["message"], tmp_path, call=None, change=lambda *a: None,
+                          analyse=lambda p, n: "x", fetch=lambda *a: None)
+    assert "over 20 MB" in reply
+
+
+def test_xray_upload_and_answer_with_a_fake_gemini(tmp_path):
+    from engine import xray
+    v = tmp_path / "r.mp4"; v.write_bytes(b"x" * 10)
+    calls = []
+    def req(url, data=None, headers=None, method="GET", timeout=180):
+        calls.append(url)
+        if url.endswith("/upload/v1beta/files"):
+            return {"X-Goog-Upload-URL": "https://up/1"}, b""
+        if url == "https://up/1":
+            return {}, json.dumps({"file": {"name": "files/a", "uri": "https://f/a", "state": "ACTIVE", "mimeType": "video/mp4"}}).encode()
+        return {}, json.dumps({"candidates": [{"content": {"parts": [{"text": "1. HOOK: big question"}]}}]}).encode()
+    assert xray.analyse(v, "note", key="k", req=req) == "1. HOOK: big question" and calls[-1].endswith(":generateContent")
