@@ -151,3 +151,4 @@
 {"date": "2026-11-01", "channel": "threads", "item": "lumi-maakidukaan-gu", "status": "published", "id": "18141934414616223"}
 {"date": "2026-11-02", "channel": "linkedin_personal", "item": "msme-45-days", "status": "published", "id": "urn:li:share:7522918239648235521", "format": "picture"}
 {"date": "2026-11-02", "app": "waypoint", "item": "mira-naukri-gu", "status": "publishing", "kind": "story", "feature": "wall-feed", "sha": "84c3c8b32e55ba6d53bd99580d72807c371d6dcb", "at": "2026-11-02T14:43:01+00:00"}
+{"date": "2026-11-02", "app": "waypoint", "item": "mira-naukri-gu", "status": "published", "kind": "story", "feature": "wall-feed", "sha": "84c3c8b32e55ba6d53bd99580d72807c371d6dcb", "at": "2026-11-02T14:43:01+00:00", "ids": {"reel": "18386358625238896", "story": "18116396383865545"}, "reel_trial": "SS_PERFORMANCE"}
