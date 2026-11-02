@@ -1,4 +1,4 @@
-"""Commands the founder sends to the Telegram bot: /status, /pause, /resume, /comment, /help.
+"""Commands the founder sends to the Telegram bot: /status, /pause, /resume, /comment, /help, and a Reel video for an X-ray (engine/xray.py).
 A GitHub workflow runs this every few minutes (there is no always-on server), so an answer can take 5-10 minutes.
 Only the founder's own chat is obeyed; anyone else who finds the bot is ignored. /pause writes the PAUSE file that run_daily
 already honours and pushes it; /resume removes it."""
@@ -8,13 +8,15 @@ import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import comment_drafts, notify, telegram
+from . import comment_drafts, notify, telegram, xray
 
 ROOT = Path(__file__).resolve().parent.parent
 MAX_AGE_SECONDS = 12 * 3600
 
 HELP = ("I can do these:\n/status – what went out today, what is paused, what is next\n/pause – stop all posting until you say /resume\n"
-        "/resume – start posting again\n/comment <post text> – two LinkedIn comment drafts in your voice\n/help – this list\n\nAnswers can take 5–10 minutes: I check for commands every few minutes.")
+        "/resume – start posting again\n/comment <post text> – two LinkedIn comment drafts in your voice\n"
+        "🎬 Send any Reel's video (screen recording or saved Reel, under 20 MB), caption optional – a Reel X-ray: why it works, what to copy\n"
+        "/help – this list\n\nAnswers can take 5–10 minutes: I check for commands every few minutes.")
 
 
 def git_change(root: Path, add: list, remove: list, message: str) -> None:
@@ -64,7 +66,38 @@ def answer(text: str, root: Path, day: date, change=git_change) -> str:
     return HELP
 
 
-def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.send_message, change=git_change, day: date = None, now: float = None) -> int:
+def download(cfg: dict, file_id: str, out: Path, call=telegram._call) -> Path:
+    import urllib.request
+    path = call(cfg["token"], "getFile", {"file_id": file_id})["result"]["file_path"]
+    with urllib.request.urlopen(f"{telegram.API}/file/bot{cfg['token']}/{path}", timeout=180, context=telegram._CTX) as r:
+        out.write_bytes(r.read())
+    return out
+
+
+def xray_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, change=git_change, analyse=xray.analyse, fetch=download) -> str:
+    """A Reel video from the founder: download it, let Gemini watch it, save the breakdown under logs/xray/ and answer with it."""
+    import tempfile
+    v = xray.video_of(message)
+    note = (message.get("caption") or "").replace("/xray", "").strip()
+    if (v.get("file_size") or 0) > xray.MAX_BYTES:
+        return ("🎬 That video is over 20 MB, the most a bot can download. Send it again as a normal video (Telegram compresses it), "
+                "or trim it to the first 60 seconds.")
+    with tempfile.TemporaryDirectory() as tmp:
+        path = fetch(cfg, v["file_id"], Path(tmp) / "reel.mp4", call)
+        try:
+            text = analyse(path, note)
+        except Exception as e:
+            return f"🎬 Reel X-ray failed: {str(e)[:200]}. Send the video again in a few minutes."
+    saved = xray.save(root, note, text)
+    try:
+        change(root, [str(saved.relative_to(root))], [], "Reel X-ray from Telegram")
+    except Exception as e:                                   # the answer still reaches the founder; the file waits for the next push
+        print(f"could not save the X-ray to git: {e}")
+    return "🎬 Reel X-ray\n\n" + text[:3900]
+
+
+def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.send_message, change=git_change, day: date = None, now: float = None,
+         xray_fn=xray_reply) -> int:
     """Answer every waiting command from the founder's chat, confirming each one so it is answered once. Returns how many."""
     day = day or lagos_today()
     now = time.time() if now is None else now
@@ -72,7 +105,13 @@ def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.sen
     handled = 0
     for u in updates:
         m = u.get("message") or {}
-        if str((m.get("chat") or {}).get("id")) == str(cfg["chat_id"]) and (m.get("text") or "").strip():
+        mine = str((m.get("chat") or {}).get("id")) == str(cfg["chat_id"])
+        if mine and xray.video_of(m):
+            send(cfg, "🎬 Got the Reel. Watching it now, the X-ray comes in a minute or two."); handled += 1
+            call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # never watched twice, even if this run dies
+            send(cfg, xray_fn(cfg, m, root, call=call, change=change))
+            continue
+        if mine and (m.get("text") or "").strip():
             if now - m.get("date", now) > MAX_AGE_SECONDS:
                 reply = "That command is more than 12 hours old, so I ignored it. Send it again if you still want it."
             else:
@@ -87,7 +126,12 @@ def main() -> int:
     if not cfg:
         print("Telegram is not set up (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID)")
         return 1
-    print(f"answered {poll(cfg)} command(s)")
+    try:
+        print(f"answered {poll(cfg)} command(s)")
+    except telegram.TelegramError as e:
+        if "(5" not in str(e):                      # a 5xx is Telegram's own outage (30 Oct 2026: 504 Gateway Timeout); the next run answers
+            raise
+        print(f"Telegram is down for the moment, commands wait for the next run: {e}")
     return 0
 
 
