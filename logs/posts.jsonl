@@ -166,3 +166,4 @@
 {"date": "2026-11-04", "app": "waypoint", "item": "mira-ekbaat-bn", "status": "publishing", "kind": "story", "feature": "reveal", "sha": "7ad31098aaff2d66287e41d617b05574b7b2355f", "at": "2026-11-04T14:43:57+00:00"}
 {"date": "2026-11-04", "app": "waypoint", "item": "mira-ekbaat-bn", "status": "published", "kind": "story", "feature": "reveal", "sha": "7ad31098aaff2d66287e41d617b05574b7b2355f", "at": "2026-11-04T14:43:57+00:00", "ids": {"reel": "18111484877141150", "story": "18142624729612614"}, "reel_trial": "SS_PERFORMANCE"}
 {"date": "2026-11-04", "channel": "whatsapp", "item": "mira-ekbaat-bn", "status": "published", "id": "798620d8-1fed-4cb6-8d5a-824bcfda020b"}
+{"date": "2026-11-04", "channel": "telegram", "item": "mira-ekbaat-bn", "status": "published", "id": "236"}
