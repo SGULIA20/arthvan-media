@@ -115,3 +115,29 @@ def test_xray_upload_and_answer_with_a_fake_gemini(tmp_path):
             return {}, json.dumps({"file": {"name": "files/a", "uri": "https://f/a", "state": "ACTIVE", "mimeType": "video/mp4"}}).encode()
         return {}, json.dumps({"candidates": [{"content": {"parts": [{"text": "1. HOOK: big question"}]}}]}).encode()
     assert xray.analyse(v, "note", key="k", req=req) == "1. HOOK: big question" and calls[-1].endswith(":generateContent")
+
+
+def test_an_intro_video_is_saved_under_its_piece_id_not_xrayed(tmp_path):
+    """4 Nov 2026 (founder, test C): "intro <piece id>" caption = the founder's 10-second opening, kept for the splice."""
+    sent, confirmed, changes, fetched = [], [], [], []
+    def call(token, method, body):
+        if "offset" in body: confirmed.append(body["offset"]); return {"result": []}
+        return {"result": [_video_update(9, caption="Intro 2026-11-07-sglearning-short ")]}
+    def fetch(cfg, file_id, out, call_):
+        fetched.append(file_id); out.write_bytes(b"v" * 100); return out
+    def xr(*a, **k):
+        raise AssertionError("an intro must never be X-rayed")
+    import functools
+    intro = functools.partial(tc.intro_reply, fetch=fetch)
+    n = tc.poll(CFG, tmp_path, call=call, send=lambda cfg, t: sent.append(t), change=lambda root, add, rm, msg: changes.append((add, msg)),
+                day=DAY, xray_fn=xr, intro_fn=intro)
+    assert n == 1 and confirmed == [10] and fetched == ["F1"]
+    assert (tmp_path / "inbox" / "intro" / "2026-11-07-sglearning-short.mp4").read_bytes() == b"v" * 100
+    assert changes == [(["inbox/intro/2026-11-07-sglearning-short.mp4"], "intro clip for 2026-11-07-sglearning-short")]
+    assert sent[0].startswith("🎬 Intro for 2026-11-07-sglearning-short saved")
+    assert tc.intro_id({"caption": "/xray canwe.ai"}) == "" and tc.intro_id({"caption": "intro 2026-11-07-arthvan-long"}) == "2026-11-07-arthvan-long"
+
+
+def test_an_intro_too_big_for_the_bot_is_refused(tmp_path):
+    m = _video_update(9, size=25_000_000, caption="intro 2026-11-07-sglearning-short")["message"]
+    assert tc.intro_reply(CFG, m, tmp_path, fetch=lambda *a: None, change=lambda *a: None).startswith("🎬 That intro is over 20 MB")
