@@ -170,3 +170,4 @@
 {"date": "2026-11-04", "channel": "youtube:arthvan", "item": "mira-ekbaat-bn", "status": "published", "id": "CYmoXTWPzkI"}
 {"date": "2026-11-04", "channel": "threads", "item": "mira-ekbaat-bn", "status": "published", "id": "18120701431997951"}
 {"date": "2026-11-05", "app": "scoremybiz", "item": "lumi-maakidukaan-bn", "status": "publishing", "kind": "story", "feature": "score-history", "sha": "c807a8ff5b76d8f5cd882928c3668731b5185ddc", "at": "2026-11-05T14:42:57+00:00"}
+{"date": "2026-11-05", "app": "scoremybiz", "item": "lumi-maakidukaan-bn", "status": "published", "kind": "story", "feature": "score-history", "sha": "c807a8ff5b76d8f5cd882928c3668731b5185ddc", "at": "2026-11-05T14:42:57+00:00", "ids": {"reel": "18117623690111374", "story": "18115585496141720"}, "reel_trial": "SS_PERFORMANCE"}
