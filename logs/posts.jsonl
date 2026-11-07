@@ -185,3 +185,4 @@
 {"date": "2026-11-07", "app": "scoremybiz", "item": "smb-kirana-sample", "status": "publishing", "feature": "business-health-score", "sha": "86b4f80290a0554c7da353c2da2fde834fc9043a", "at": "2026-11-07T14:43:11+00:00"}
 {"date": "2026-11-07", "app": "scoremybiz", "item": "smb-kirana-sample", "status": "published", "feature": "business-health-score", "sha": "86b4f80290a0554c7da353c2da2fde834fc9043a", "at": "2026-11-07T14:43:11+00:00", "ids": {"reel": "18085968656718389", "story": "18139847320650242"}, "reel_trial": "SS_PERFORMANCE"}
 {"date": "2026-11-07", "channel": "whatsapp", "item": "smb-kirana-sample", "status": "published", "id": "3bd80af2-59b2-4a3d-8173-c068caef578b"}
+{"date": "2026-11-07", "channel": "telegram", "item": "smb-kirana-sample", "status": "published", "id": "321"}
