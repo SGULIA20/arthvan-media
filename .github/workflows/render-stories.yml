@@ -1,0 +1,76 @@
+name: render-stories
+
+# Draws and renders story Reels in the cloud (founder, 8 Nov 2026: "fix it, and fill the empty days with real story Reels for both
+# Waypoint and ScoreMyBiz"). For each story id: its illustrations (Gemini images, about Rs 3 each, cached) and its voice (Gemini TTS),
+# then the MP4 into stories/out. The posting calendar (engine.calendar_plan) schedules rendered stories only. A short list first: it costs money.
+on:
+  workflow_dispatch:
+    inputs:
+      stories:
+        description: 'comma-separated story ids, e.g. lumi-bahikhata-hi,mira-papa-hi'
+        required: true
+      plan:
+        description: 'yes = then re-plan the next 45 days of the schedule'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render-stories
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Restore the drawn pictures and voice lines
+        uses: actions/cache@v5
+        with:
+          path: |
+            stories/art
+            stories/cache
+          key: story-art-${{ github.run_id }}
+          restore-keys: story-art-
+      - name: Install ffmpeg and fonts
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-color-emoji
+      - name: Install Python packages
+        run: pip install -r requirements.txt
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+      - name: Git identity
+        run: |
+          git config user.name "arthvan-autoposter"
+          git config user.email "autoposter@users.noreply.github.com"
+      - name: Draw, voice and render each story
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          STORIES: ${{ inputs.stories }}
+        run: |
+          set -e
+          for id in $(echo "$STORIES" | tr ',' ' '); do
+            f="stories/$(echo "$id" | tr '-' '_').json"
+            test -f "$f" || { echo "no story file $f"; exit 1; }
+            echo "=== $id"
+            python -m engine.illustrate "$f"
+            python -m engine.story "$f" stories/out
+            ls -la "stories/out/$id.mp4"
+          done
+      - name: Plan the schedule
+        if: ${{ inputs.plan == 'yes' }}
+        run: python -m engine.calendar_plan 45 --write
+      - name: Save the rendered Reels
+        if: always()
+        run: |
+          git add -f stories/out/*.mp4 content/schedule.json || true
+          git diff --cached --quiet || git commit -m "render-stories: ${{ inputs.stories }} [skip ci]"
+          git pull --rebase --autostash origin main && git push origin HEAD:main
