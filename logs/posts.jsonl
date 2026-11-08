@@ -191,3 +191,4 @@
 {"date": "2026-11-08", "app": "waypoint", "item": "wp-voice-how", "status": "publishing", "feature": "voice-posts", "sha": "eff38b506998a7efe4cb65ee37de88f9a0f59095", "at": "2026-11-08T14:43:13+00:00"}
 {"date": "2026-11-08", "app": "waypoint", "item": "wp-voice-how", "status": "published", "feature": "voice-posts", "sha": "eff38b506998a7efe4cb65ee37de88f9a0f59095", "at": "2026-11-08T14:43:13+00:00", "ids": {"reel": "18126527210513929", "story": "17967885549199790"}, "reel_trial": "SS_PERFORMANCE"}
 {"date": "2026-11-08", "channel": "whatsapp", "item": "wp-voice-how", "status": "published", "id": "cc74f663-1aa8-4842-af60-c1ccb1c0fc50"}
+{"date": "2026-11-08", "channel": "telegram", "item": "wp-voice-how", "status": "published", "id": "331"}
