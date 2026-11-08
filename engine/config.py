@@ -55,10 +55,18 @@ def validate_item(item: dict) -> list:
     return problems
 
 
-def production_mode(path: Path = MODE) -> str:
+REPO_MODE = ROOT / "content" / "production-mode.json"      # the same switch kept in the repo, so the cloud poster honours it too (8 Nov 2026)
+
+
+def production_mode(path: Path = None) -> str:
     """'stories' (illustrated story Reels and their language versions only, in production AND in the posting calendar)
-    or 'all' (the older English Reels, their conversions and the graphics sets too)."""
-    try:
-        return json.loads(Path(path).read_text()).get("mode", "all")
-    except (OSError, ValueError, AttributeError):
-        return "all"
+    or 'all' (the older English Reels, their conversions and the graphics sets too). The founder's file on the Mac wins; without it
+    (the cloud poster has no Mac) the repo's content/production-mode.json decides (founder, 19 Oct 2026: no graphics set fills a gap; 8 Nov: enforced
+    in the cloud after a card deck posted on 7 and 8 Nov)."""
+    paths = [Path(path)] if path is not None else [MODE, REPO_MODE]
+    for p in paths:
+        try:
+            return json.loads(p.read_text()).get("mode", "all")
+        except (OSError, ValueError, AttributeError):
+            continue
+    return "all"
