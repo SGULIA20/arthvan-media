@@ -11,6 +11,7 @@ python -m engine.calendar_plan 30            show the next 30 days
 python -m engine.calendar_plan 30 --write    also write content/schedule.json (days already past are kept)
 """
 import json
+import re
 import subprocess
 import sys
 from datetime import date, timedelta
@@ -21,6 +22,14 @@ from . import claims
 from .select_item import NO_REPEAT_DAYS, slot, story_lead
 
 SCHEDULE = ROOT / "content" / "schedule.json"
+FEATURE_GAP_DAYS = 30        # founder, 8 Nov 2026: "every time a new feature story": a feature is not shown again within 30 days, and the one shown longest ago goes first
+LANG_SUFFIX = re.compile(r"-(en|hi|bn|gu|mr|ta|te|kn|ml|pa|or|ur)$")
+
+
+def story_base(story_id: str) -> str:
+    """The story without its language: lumi-diwali-hi and lumi-diwali-bn are one story told twice. A story is never repeated in another language
+    (founder, 8 Nov 2026: 'stories should not repeat')."""
+    return LANG_SUFFIX.sub("", story_id or "")
 
 
 def load_schedule(root: Path = ROOT):
@@ -70,13 +79,17 @@ def build_plan(start: date, days: int, stories: list, *, published: dict = None,
     log = [tuple(x) for x in (feature_log or [])]
     plan = dict(keep or {})
     used = set(published) | {v for k, v in plan.items() if v}
+    bases = {story_base(x) for x in used}                          # a story told in one language is not told again in another
     by_id = {s["id"]: s for s in stories}
     stories = [s for s in stories if not s.get("problems")]          # nothing false or premature is ever planned
     fixed = {s["post_on"]: s for s in stories if s.get("occasion") and s.get("rendered") and s.get("post_on")}
 
     def recent(app, d):
-        lo = (d - timedelta(days=NO_REPEAT_DAYS)).isoformat()
+        lo = (d - timedelta(days=FEATURE_GAP_DAYS)).isoformat()
         return {f for (when, a, f) in log if a == app and lo <= when < d.isoformat()}
+
+    def last_shown(app, feature):
+        return max([when for (when, a, f) in log if a == app and f == feature] or ["0000"])
 
     def near_festival_with(app, feature, d):
         """A festival Reel fixed within 10 days of d (either side) already shows this feature for this app."""
@@ -106,15 +119,15 @@ def build_plan(start: date, days: int, stories: list, *, published: dict = None,
             app, lead = slot(d)
             avoid = recent(app, d)
             cands = [s for s in stories
-                     if s.get("rendered") and s["id"] not in used and not s.get("occasion")
+                     if s.get("rendered") and s["id"] not in used and story_base(s["id"]) not in bases and not s.get("occasion")
                      and s["app"] == app and (story_only or story_lead(s) == lead) and (s.get("post_on") or "0") <= iso
                      and s.get("feature") not in avoid and not near_festival_with(app, s.get("feature"), d)
                      and not (s.get("legacy") and (prev_legacy or next_fixed_legacy))]
-            cands.sort(key=lambda s: (bool(s.get("legacy")), s.get("post_on") or "", s["id"]))
+            cands.sort(key=lambda s: (bool(s.get("legacy")), last_shown(app, s.get("feature")), s.get("post_on") or "", s["id"]))
             pick = cands[0] if cands else None
         plan[iso] = pick["id"] if pick else None
         if pick:
-            used.add(pick["id"]); log.append((iso, pick["app"], pick.get("feature")))
+            used.add(pick["id"]); bases.add(story_base(pick["id"])); log.append((iso, pick["app"], pick.get("feature")))
     return plan
 
 
@@ -125,10 +138,14 @@ def violations(plan: dict, stories: list) -> list:
     for d in days:
         if plan[d] and by_id.get(plan[d], {}).get("problems"):
             bad.append(f"{d}: {plan[d]} has claim problems: {by_id[plan[d]]['problems'][0]}")
+    seen_base = {}
     for k, d in enumerate(days):
         sid = plan[d]
         if not sid:
             continue
+        if story_base(sid) in seen_base:
+            bad.append(f"{d}: {sid} repeats the story of {seen_base[story_base(sid)]}")
+        seen_base[story_base(sid)] = sid
         s = by_id[sid]
         if (s["app"], story_lead(s)) != slot(date.fromisoformat(d)) and not s.get("occasion"):
             bad.append(f"{d}: {sid} is not this day's app and lead")
