@@ -3,12 +3,14 @@ name: render-stories
 # Draws and renders story Reels in the cloud (founder, 8 Nov 2026: "fix it, and fill the empty days with real story Reels for both
 # Waypoint and ScoreMyBiz"). For each story id: its illustrations (Gemini images, about Rs 3 each, cached) and its voice (Gemini TTS),
 # then the MP4 into stories/out. The posting calendar (engine.calendar_plan) schedules rendered stories only. A short list first: it costs money.
+# An empty list with plan=yes only re-plans the schedule (no cost).
 on:
   workflow_dispatch:
     inputs:
       stories:
-        description: 'comma-separated story ids, e.g. lumi-bahikhata-hi,mira-papa-hi'
-        required: true
+        description: 'comma-separated story ids, e.g. lumi-bahikhata-hi,mira-papa-hi (empty = render nothing)'
+        required: false
+        default: ''
       plan:
         description: 'yes = then re-plan the next 45 days of the schedule'
         required: false
@@ -42,10 +44,12 @@ jobs:
           key: story-art-${{ github.run_id }}
           restore-keys: story-art-
       - name: Install ffmpeg and fonts
+        if: ${{ inputs.stories != '' }}
         run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-color-emoji
       - name: Install Python packages
         run: pip install -r requirements.txt
       - name: Install Chromium
+        if: ${{ inputs.stories != '' }}
         run: python -m playwright install --with-deps chromium
       - name: Git identity
         run: |
@@ -72,5 +76,5 @@ jobs:
         if: always()
         run: |
           git add -f stories/out/*.mp4 content/schedule.json || true
-          git diff --cached --quiet || git commit -m "render-stories: ${{ inputs.stories }} [skip ci]"
+          git diff --cached --quiet || git commit -m "render-stories: ${{ inputs.stories }} plan=${{ inputs.plan }} [skip ci]"
           git pull --rebase --autostash origin main && git push origin HEAD:main
