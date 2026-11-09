@@ -1,0 +1,133 @@
+{
+ "id": "lumi-items-and-prices-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "items-and-prices",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Pichhli baar kya rate lagaya tha?",
+ "banner": "Pichhla rate<br><em>yaad rakhe</em> kaun? 🏷️",
+ "caption": "Pichhle mahine us item ka rate kya tha? Yaad hai ya dhoondhna padta hai? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper who sees the last selling rate and last cost of each item in one list that grows from his own entries. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Geeta": "Geeta is a cheerful woman in her forties who runs a small stationery and general shop, wearing a yellow salwar kameez and a long braid.",
+   "Customer": "The customer is a schoolboy of about twelve with a backpack and a bright smile."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "गीता की दुकान पर स्कूल की भीड़ थी।",
+   "sub": "Geeta ki dukaan par school ki bheed thi.",
+   "min": 2.2,
+   "art": "Geeta behind the counter of a small stationery shop full of notebooks and pens, schoolchildren crowding in, afternoon.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "एक बच्चे ने पेन का दाम पूछा।",
+   "sub": "Ek bachche ne pen ka daam poochha.",
+   "min": 2.2,
+   "art": "A schoolboy pointing at a pen box, Geeta leaning forward to hear him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "पिछली बार कितने का दिया था? याद नहीं आया।",
+   "sub": "Pichhli baar kitne ka diya tha? Yaad nahi aaya.",
+   "min": 2.2,
+   "art": "Geeta frowning slightly, tapping her chin, rows of different pens on shelves behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "पुरानी कॉपी में ढूँढने लगी, देर हो रही थी।",
+   "sub": "Purani copy mein dhoondhne lagi, der ho rahi thi.",
+   "min": 2.2,
+   "art": "Geeta flipping through a thick old notebook while the line of children fidgets.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "फिर उसने फ़ोन में आइटम की सूची खोली।",
+   "sub": "Phir usne phone mein item ki soochi kholi.",
+   "min": 2.2,
+   "art": "Geeta opening her phone with one hand, relieved smile, the schoolboy peeking.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "हर चीज़ का आख़िरी बिक्री रेट।",
+   "sub": "Har cheez ka aakhiri bikri rate.",
+   "min": 2.4,
+   "screen": "items.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "और आख़िरी ख़रीद का दाम भी।",
+   "sub": "Aur aakhiri kharid ka daam bhi.",
+   "min": 2.4,
+   "screen": "items.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "रेट सामने था, बात दस सेकंड में ख़त्म।",
+   "sub": "Rate saamne tha, baat das second mein khatam.",
+   "min": 2.2,
+   "art": "Geeta telling the price with a confident smile, the schoolboy counting coins.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "यह सूची उसकी अपनी एंट्री से अपने-आप बढ़ती है।",
+   "sub": "Yeh soochi uski apni entry se apne-aap badhti hai.",
+   "min": 2.2,
+   "art": "Geeta typing a new entry on her phone beside a neat stack of notebooks, calm evening light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "जो नहीं चाहिए, वो छिपा भी सकती है।",
+   "sub": "Jo nahi chahiye, woh chhipa bhi sakti hai.",
+   "min": 2.2,
+   "art": "Geeta swiping on her phone with a satisfied nod, tidy counter with a cup of tea.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "आपको अपने सामान का रेट याद रहता है?",
+   "sub": "Aapko apne saamaan ka rate yaad rehta hai?",
+   "min": 3.0,
+   "art": "Close-up of Geeta smiling warmly at the viewer, stationery shelves softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
