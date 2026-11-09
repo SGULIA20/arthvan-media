@@ -24,6 +24,7 @@ from .config import ROOT
 MODEL = os.environ.get("STORY_WRITER_MODEL", "claude-sonnet-5-5")
 CHARACTER = {"scoremybiz": "lumi", "waypoint": "mira"}
 HASHTAGS = {"scoremybiz": ["#ScoreMyBiz", "#SmallBusiness", "#HindiReels"], "waypoint": ["#Waypoint", "#HindiReels"]}
+END_POSE = {"scoremybiz": "front_happy", "waypoint": "wave"}      # a pose picture that exists for each character
 CTA = {"scoremybiz": "ScoreMyBiz, 30 din muft: link in bio.", "waypoint": "Waypoint, link in bio. 18+"}
 
 
@@ -134,7 +135,7 @@ def build(app: str, feature: str, raw: dict, template: dict, feats: dict, smap: 
         raise WriterError(f"unusable shape: {len(scenes)} scenes, {n} pictures")
     scenes[-1]["focus"] = "50% 45%"
     scenes[-1]["min"] = 3.0
-    scenes.append({"layout": "end", "pose": "front_happy", "vo": template_end_vo(app), "sub": "", "min": 5})
+    scenes.append({"layout": "end", "pose": END_POSE[app], "vo": template_end_vo(app), "sub": "", "min": 5})
     sid = f"{char}-{feature}-hi"
     art = json.loads(json.dumps(template["art"]))
     art["cast"] = {str(k): str(v) for k, v in (raw.get("cast") or {}).items()} or art.get("cast", {})
@@ -151,7 +152,7 @@ def build(app: str, feature: str, raw: dict, template: dict, feats: dict, smap: 
 
 
 def template_end_vo(app: str) -> str:
-    return "स्कोर माय बिज़। तीस दिन मुफ़्त।" if app == "scoremybiz" else "वेपॉइंट। गूगल प्ले पर मुफ़्त।"
+    return "स्कोर माय बिज़। तीस दिन मुफ़्त।" if app == "scoremybiz" else "वेपॉइंट। एक बार कहिए।"
 
 
 def art_template(app: str, root: Path = ROOT) -> dict:
