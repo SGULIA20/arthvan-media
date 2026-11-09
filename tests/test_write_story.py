@@ -13,7 +13,7 @@ def _setup():
     feats, smap = claims.load()
     feature = w.pick_feature("scoremybiz", feats, smap)
     screens = w.feature_screens("scoremybiz", feature, smap)
-    tmpl = json.loads(next(w.ROOT.glob("stories/lumi_*_hi.json")).read_text())
+    tmpl = w.art_template("scoremybiz")
     return feats, smap, feature, screens, tmpl
 
 

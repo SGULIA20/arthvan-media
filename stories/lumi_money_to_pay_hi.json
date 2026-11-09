@@ -1,0 +1,133 @@
+{
+ "id": "lumi-money-to-pay-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "money-to-pay",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Pehle kisko dena hai?",
+ "banner": "Is hafte <em>kisko</em><br>paise dene hain? 🗓️",
+ "caption": "Thok wale ka bill is hafte aaya hai. Aapko pata hai pehle kisko dena hai? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper who sees which supplier bills are overdue and which fall due this week, so he knows who to pay first. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Meena": "Meena is a confident woman in her thirties who runs a small garment shop, wearing a green cotton saree and glasses.",
+   "Supplier": "The supplier is a friendly middle-aged wholesaler with a round face, a white shirt and a bundle of bills."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "मीना की साड़ी की दुकान अच्छी चल रही थी।",
+   "sub": "Meena ki saree ki dukaan achchi chal rahi thi.",
+   "min": 2.2,
+   "art": "Meena arranging colourful sarees on shelves in her bright small shop in the morning.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "पर थोक वालों के बिल कई थे।",
+   "sub": "Par thok walon ke bill kai the.",
+   "min": 2.2,
+   "art": "Meena at the counter with a thick stack of paper bills in her hands, a bit overwhelmed.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "कौन सा बिल पुराना है? कौन सा इसी हफ़्ते का?",
+   "sub": "Kaun sa bill purana hai? Kaun sa isi hafte ka?",
+   "min": 2.2,
+   "art": "Meena spreading the bills across the counter, comparing dates with a puzzled frown.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "पिछले महीने देर हुई थी, तो माल रुक गया था।",
+   "sub": "Pichhle mahine der hui thi, to maal ruk gaya tha.",
+   "min": 2.2,
+   "art": "The supplier at the shop door shaking his head gently, a closed delivery crate behind him, Meena apologising.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "आज उसने फ़ोन खोला।",
+   "sub": "Aaj usne phone khola.",
+   "min": 2.2,
+   "art": "Meena sitting on a cushioned seat in the shop, opening her phone with a determined smile.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "देनदारी में हर थोक वाले का नाम, अलग-अलग।",
+   "sub": "Dendaari mein har thok wale ka naam, alag-alag.",
+   "min": 2.4,
+   "screen": "payables.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "कितना बकाया है, और इस हफ़्ते क्या देना है।",
+   "sub": "Kitna bakaya hai, aur is hafte kya dena hai.",
+   "min": 2.4,
+   "screen": "payables.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "मीना ने सबसे पुराना बिल पहले चुकाया।",
+   "sub": "Meena ne sabse purana bill pehle chukaya.",
+   "min": 2.2,
+   "art": "Meena handing a payment envelope to the supplier at the counter, both smiling.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "बाकी के लिए पैसे अलग रख लिए।",
+   "sub": "Baaki ke liye paise alag rakh liye.",
+   "min": 2.2,
+   "art": "Meena placing folded notes into a small tin box labelled in Hindi for the week, tidy desk.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "ऐप तारीख़ से पहले याद भी दिलाता है।",
+   "sub": "App taareekh se pehle yaad bhi dilata hai.",
+   "min": 2.2,
+   "art": "Meena's phone on the counter showing a small reminder bell glow, Meena looking relieved while folding a saree.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "आप पहले किसे पैसे देते हैं?",
+   "sub": "Aap pehle kise paise dete hain?",
+   "min": 3.0,
+   "art": "Close-up of Meena smiling warmly at the viewer, shop shelves softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
