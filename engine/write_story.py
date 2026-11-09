@@ -154,15 +154,23 @@ def template_end_vo(app: str) -> str:
     return "स्कोर माय बिज़। तीस दिन मुफ़्त।" if app == "scoremybiz" else "वेपॉइंट। गूगल प्ले पर मुफ़्त।"
 
 
-def write(app: str, only: str = None, root: Path = ROOT, ask=ask_claude, tries: int = 2):
+def art_template(app: str, root: Path = ROOT) -> dict:
+    """An existing illustrated story of this app's character: its `art` block (style, reference picture) is reused."""
+    for p in sorted(Path(root).glob(f"stories/{CHARACTER[app]}_*_hi.json")):
+        s = json.loads(p.read_text())
+        if s.get("art") and s["art"].get("style"):
+            return s
+    raise WriterError(f"no illustrated {CHARACTER[app]} story to copy the art style from")
+
+
+def write(app: str, only: str = None, root: Path = ROOT, ask=ask_claude, tries: int = 2, answer: str = None):
     feats, smap = claims.load(root)
     feature = pick_feature(app, feats, smap, root, only)
     if not feature:
         print(f"{app}: every live feature already has a story")
         return None
     f = feats[app][feature]
-    tmpl_path = sorted(Path(root).glob(f"stories/{CHARACTER[app]}_*_hi.json"))[0]
-    template = json.loads(tmpl_path.read_text())
+    template = art_template(app, root)
     prompt = PROMPT.format(app_name={"scoremybiz": "ScoreMyBiz", "waypoint": "Waypoint (an anonymous peer-support app for adults 18+; never imply therapy or crisis help)"}[app],
                            name=f["name"], summary=f["summary"], safe=f.get("safe_wording", ""), hook=f.get("story_hook", ""),
                            avoid=", ".join(f.get("avoid_words") or []) or "none",
@@ -170,7 +178,9 @@ def write(app: str, only: str = None, root: Path = ROOT, ask=ask_claude, tries: 
     err = None
     for _ in range(tries):
         try:
-            story = build(app, feature, parse(ask(prompt + (f"\n\nYour last try was rejected: {err}. Fix that." if err else ""))), template, feats, smap, root)
+            if answer is not None:                      # a script written by hand (or by a session): same checks, no API call
+                tries = 1
+            story = build(app, feature, parse(answer if answer is not None else ask(prompt + (f"\n\nYour last try was rejected: {err}. Fix that." if err else ""))), template, feats, smap, root)
             out = Path(root) / "stories" / (story["id"].replace("-", "_") + ".json")
             out.write_text(json.dumps(story, ensure_ascii=False, indent=1) + "\n")
             print(f"wrote {out.relative_to(root)} for feature {feature}")
@@ -185,8 +195,9 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("app", choices=sorted(CHARACTER))
     ap.add_argument("--feature")
+    ap.add_argument("--answer", help="a JSON file holding the script, instead of asking Claude")
     a = ap.parse_args(argv)
-    sid = write(a.app, a.feature)
+    sid = write(a.app, a.feature, answer=Path(a.answer).read_text() if a.answer else None)
     if sid and os.environ.get("GITHUB_OUTPUT"):
         with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
             fh.write(f"story={sid}\n")
