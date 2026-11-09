@@ -1,0 +1,132 @@
+{
+ "id": "mira-break-room-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "break-room",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Nabbe second ka gussa",
+ "banner": "Meeting ke beech<br><em>90 second</em> ka bat 🏏",
+ "caption": "Din bhar ka tanaav nikalne ka aapka tareeka kya hai? 👇\nWaypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about a woman who plays Break Room, a 90-second bat-swinging game in Waypoint, between meetings. For adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Mia": "Mia is a young professional woman in her late twenties with a ponytail, a white shirt and a lanyard.",
+   "Colleague": "The colleague is a friendly man in a grey blazer carrying a laptop."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "मीया की सुबह से तीन मीटिंग हो चुकी थीं।",
+   "sub": "Mia ki subah se teen meeting ho chuki thi.",
+   "min": 2.2,
+   "art": "Mia in an office meeting room with a laptop, tired eyes, a whiteboard full of notes behind her.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "चौथी में पाँच मिनट बाक़ी थे।",
+   "sub": "Chauthi mein paanch minute baaki the.",
+   "min": 2.2,
+   "art": "Mia in a small corridor holding a coffee cup, a wall clock showing five minutes to the hour.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "सिर भारी था, कंधे अकड़े हुए।",
+   "sub": "Sir bhaari tha, kandhe akde hue.",
+   "min": 2.2,
+   "art": "Mia rolling her stiff shoulders and rubbing her neck near a window.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "उसने वेपॉइंट खोला, बैट वाला आइकन दबाया।",
+   "sub": "Usne Waypoint khola, bat wala icon dabaya.",
+   "min": 2.2,
+   "art": "Mia opening an app on her phone with a mischievous smile, leaning against a corridor wall.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "बैट घुमाओ, कमरे की चीज़ें टूटती हैं।",
+   "sub": "Bat ghumao, kamre ki cheezein tootti hain.",
+   "min": 2.4,
+   "screen": "break-room.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "नब्बे सेकंड, दिन में एक बार।",
+   "sub": "Nabbe second, din mein ek baar.",
+   "min": 2.4,
+   "screen": "break-room.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "पहली स्विंग पर टीवी चटक गया।",
+   "sub": "Pehli swing par TV chatak gaya.",
+   "min": 2.2,
+   "art": "Mia swinging an imaginary bat in the air in the corridor, a cartoon TV cracking inside a floating illustrated bubble above her phone.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "आवाज़ और हल्का कंपन, मन हल्का होने लगा।",
+   "sub": "Awaaz aur halka kampan, man halka hone laga.",
+   "min": 2.2,
+   "art": "Mia laughing with her eyes closed, little sparkle lines around her phone.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "नब्बे सेकंड बाद कमरा बंद, खेल ख़त्म।",
+   "sub": "Nabbe second baad kamra band, khel khatam.",
+   "min": 2.2,
+   "art": "Mia lowering her phone with a deep calm breath, straightening her shoulders.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "वो हल्की मुस्कान के साथ मीटिंग में लौटी।",
+   "sub": "Woh halki muskaan ke saath meeting mein lauti.",
+   "min": 2.2,
+   "art": "Mia walking back into the meeting room smiling, a colleague holding the door.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "आप भारीपन कैसे निकालते हैं?",
+   "sub": "Aap bhaaripan kaise nikalte hain?",
+   "min": 3.0,
+   "art": "Close-up of Mia smiling warmly at the viewer, office corridor softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
