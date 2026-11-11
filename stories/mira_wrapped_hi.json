@@ -1,0 +1,132 @@
+{
+ "id": "mira-wrapped-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "wrapped",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Mahine bhar mein kya kya likha?",
+ "banner": "Poora mahina<br><em>ek nazar mein</em> 🗓️",
+ "caption": "Pichhla mahina kaisa gaya, yaad hai? Aap apne mahine ko ek shabd mein kya kahenge? 👇\nWaypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about a man who opens his monthly recap on Waypoint and sees how many posts he shared, the reactions he gave and received, and the feeling he logged most. Waypoint is for adults 18 and over and is not a counselling or crisis service.",
+ "hashtags": [
+  "#Waypoint",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Arjun": "Arjun is a man of about thirty with short hair, a light stubble and an olive green shirt.",
+   "Roommate": "The roommate is a cheerful man of about thirty with curly hair and a red hoodie."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "महीने की पहली तारीख़ थी, अर्जुन चाय लेकर बैठा।",
+   "sub": "Mahine ki pehli taareekh thi, Arjun chai lekar baitha.",
+   "min": 2.2,
+   "art": "Arjun sitting on a small balcony with a cup of tea in the morning, a wall calendar visible through the door.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "पिछला महीना कैसे निकल गया, पता ही नहीं चला।",
+   "sub": "Pichhla mahina kaise nikal gaya, pata hi nahi chala.",
+   "min": 2.2,
+   "art": "Arjun looking out over the city with a thoughtful face, steam rising from the cup.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "काम, घर, काम, घर। बस यही याद था।",
+   "sub": "Kaam, ghar, kaam, ghar. Bas yahi yaad tha.",
+   "min": 2.2,
+   "art": "Arjun at an office desk late in the evening, tired, a laptop glowing.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "पर वह रोज़ वेपॉइंट पर दो लाइन लिखता रहा था।",
+   "sub": "Par woh roz Waypoint par do line likhta raha tha.",
+   "min": 2.2,
+   "art": "Arjun on a bus at night typing on his phone, window lights passing.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "आज उसने माय वेपॉइंट्स में इस महीने वाला पन्ना खोला।",
+   "sub": "Aaj usne My Waypoints mein is mahine wala panna khola.",
+   "min": 2.2,
+   "art": "Arjun on the balcony again, tapping his phone with curiosity.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "बारह पोस्ट, और दूसरों को दिए इतने सारे रिएक्शन।",
+   "sub": "Baarah post, aur doosron ko diye itne saare reaction.",
+   "min": 2.4,
+   "screen": "wrapped.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "कितने थम्ब्स अप मिले, कितनी हँसी, सब गिना हुआ था।",
+   "sub": "Kitne thumbs up mile, kitni hansi, sab gina hua tha.",
+   "min": 2.4,
+   "screen": "wrapped.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "और जो एहसास उसने सबसे ज़्यादा लिखा, वह भी।",
+   "sub": "Aur jo ehsaas usne sabse zyaada likha, woh bhi.",
+   "min": 2.2,
+   "art": "Arjun reading his phone with a quiet, surprised smile.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "महीना उतना ख़ाली नहीं था जितना लगा था।",
+   "sub": "Mahina utna khaali nahi tha jitna laga tha.",
+   "min": 2.2,
+   "art": "Arjun leaning back in his chair, relaxed, sunlight on his face.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "उसने रूममेट को भी दिखाया।",
+   "sub": "Usne roommate ko bhi dikhaaya.",
+   "min": 2.2,
+   "art": "Arjun showing his phone to his roommate in the doorway, both grinning.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "आपका पिछला महीना कैसा गया?",
+   "sub": "Aapka pichhla mahina kaisa gaya?",
+   "min": 3.0,
+   "art": "Close-up of Arjun smiling at the viewer, balcony plants softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
