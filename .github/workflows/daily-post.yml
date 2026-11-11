@@ -37,7 +37,7 @@ jobs:
           python-version: '3.12'
           cache: pip
       - name: Install ffmpeg
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+        run: for i in 1 2 3; do sudo timeout 240 apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 update && sudo timeout 420 apt-get -o Acquire::http::Timeout=30 install -y ffmpeg && break; if [ "$i" = 3 ]; then exit 1; fi; sleep 20; done   # 11 Nov 2026: a stuck package mirror held this step for 63 minutes
       - name: Install Python packages
         run: pip install -r requirements.txt
       - name: Install Chromium
