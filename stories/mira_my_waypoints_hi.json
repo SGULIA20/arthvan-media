@@ -1,0 +1,132 @@
+{
+ "id": "mira-my-waypoints-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "my-waypoints",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Apni hi baatein, ek jagah",
+ "banner": "Meri baatein<br><em>ek jagah</em> 📍",
+ "caption": "Kabhi apni purani likhi baatein dobara padhi hain? Kaisa laga tha? 👇\nWaypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about a woman who opens My Waypoints and sees her points, her rank and her own posts from the last 30 days in one place. Waypoint is for adults 18 and over and is not a counselling or crisis service.",
+ "hashtags": [
+  "#Waypoint",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Fatima": "Fatima is a woman in her early thirties wearing a teal kurta and a light dupatta, with a calm, thoughtful face.",
+   "Sister": "The sister is a woman in her twenties with a braid and a yellow top."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "फ़ातिमा को नए शहर में आए एक महीना हुआ था।",
+   "sub": "Fatima ko naye shehar mein aaye ek mahina hua tha.",
+   "min": 2.2,
+   "art": "Fatima unpacking the last cardboard box in a small new flat, evening light through the window.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "शुरू के दिन भारी थे, किसी को जानती नहीं थी।",
+   "sub": "Shuru ke din bhaari the, kisi ko jaanti nahi thi.",
+   "min": 2.2,
+   "art": "Fatima eating dinner alone at a small table, looking out at unfamiliar buildings.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "वह रात को वेपॉइंट की वॉल पर अपना दिन लिख देती थी।",
+   "sub": "Woh raat ko Waypoint ki wall par apna din likh deti thi.",
+   "min": 2.2,
+   "art": "Fatima in bed with a lamp on, typing on her phone.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "आज उसने वॉल पर अपने नाम पर टैप किया।",
+   "sub": "Aaj usne wall par apne naam par tap kiya.",
+   "min": 2.2,
+   "art": "Fatima on a sofa with a cup of tea, tapping her phone with curiosity.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "माय वेपॉइंट्स खुला: उसके पॉइंट और उसकी रैंक।",
+   "sub": "My Waypoints khula: uske point aur uski rank.",
+   "min": 2.4,
+   "screen": "my-waypoints.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "नीचे पिछले तीस दिन की उसकी अपनी पोस्ट थीं।",
+   "sub": "Neeche pichhle tees din ki uski apni post thin.",
+   "min": 2.4,
+   "screen": "my-waypoints.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "पहले हफ़्ते की पोस्ट पढ़कर वह हल्का सा मुस्कुराई।",
+   "sub": "Pehle hafte ki post padhkar woh halka sa muskuraayi.",
+   "min": 2.2,
+   "art": "Fatima reading her phone with a small, fond smile.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "तब जो बात बड़ी लगती थी, अब छोटी लग रही थी।",
+   "sub": "Tab jo baat badi lagti thi, ab chhoti lag rahi thi.",
+   "min": 2.2,
+   "art": "Fatima looking up from her phone at her now tidy, decorated living room.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "हर पोस्ट पर लोगों के रिएक्शन भी दिख रहे थे।",
+   "sub": "Har post par logon ke reaction bhi dikh rahe the.",
+   "min": 2.2,
+   "art": "Fatima holding the phone close with a touched expression.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "उसने बहन को फ़ोन किया, अब यहाँ ठीक लग रहा है।",
+   "sub": "Usne behen ko phone kiya, ab yahan theek lag raha hai.",
+   "min": 2.2,
+   "art": "Fatima on a video call with her sister, both smiling.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "आप अपनी पुरानी बातें दोबारा पढ़ते हैं?",
+   "sub": "Aap apni purani baatein dobara padhte hain?",
+   "min": 3.0,
+   "art": "Close-up of Fatima smiling at the viewer, a window with plants softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

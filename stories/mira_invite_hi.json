@@ -1,0 +1,134 @@
+{
+ "id": "mira-invite-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "invite",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Ek code, do logon ke points",
+ "banner": "Ek code bheja<br><em>dono ko points</em> 🎁",
+ "caption": "Koi apna aapke saath Waypoint par aaye, toh kise bulayenge? 👇\nWaypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about a young woman who shares her Waypoint invite code with her cousin; when the cousin redeems it in her first week, both get ten points. Waypoint is for adults 18 and over and is not a counselling or crisis service.",
+ "hashtags": [
+  "#Waypoint",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Priya": "Priya is a woman in her mid twenties with shoulder-length hair, a mustard kurta and small earrings.",
+   "Neha": "Neha is Priya's cousin, a woman of about twenty-two with a ponytail and a denim jacket."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "प्रिया और नेहा बचपन से हर बात बाँटती थीं।",
+   "sub": "Priya aur Neha bachpan se har baat baantti thin.",
+   "min": 2.2,
+   "art": "Priya and Neha laughing together on a rooftop terrace with potted plants, evening sky.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "फिर नेहा नौकरी के लिए दूसरे शहर चली गई।",
+   "sub": "Phir Neha naukri ke liye doosre shehar chali gayi.",
+   "min": 2.2,
+   "art": "Neha with a suitcase at a railway platform, Priya waving goodbye.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "फ़ोन पर बात कम होने लगी।",
+   "sub": "Phone par baat kam hone lagi.",
+   "min": 2.2,
+   "art": "Priya alone on the same terrace at night, looking at her phone, city lights behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "प्रिया रोज़ वेपॉइंट की वॉल पर अपना दिन लिखती थी।",
+   "sub": "Priya roz Waypoint ki wall par apna din likhti thi.",
+   "min": 2.2,
+   "art": "Priya sitting cross-legged on her bed typing on her phone with a soft smile, a lamp beside her.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "उसने सोचा, नेहा भी यहाँ होती तो अच्छा लगता।",
+   "sub": "Usne socha, Neha bhi yahan hoti toh achchha lagta.",
+   "min": 2.2,
+   "art": "Priya looking up thoughtfully from her phone, a framed photo of the two cousins on the shelf.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "उसने अपना इनवाइट कोड निकाला और नेहा को भेज दिया।",
+   "sub": "Usne apna invite code nikaala aur Neha ko bhej diya.",
+   "min": 2.4,
+   "screen": "invite.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "नेहा ने उसी हफ़्ते नया अकाउंट बनाया।",
+   "sub": "Neha ne usi hafte naya account banaaya.",
+   "min": 2.2,
+   "art": "Neha in a small rented room in another city, sitting by a window with her phone, smiling.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "कोड डाला, तो दोनों को दस दस पॉइंट मिले।",
+   "sub": "Code daala, toh dono ko das das point mile.",
+   "min": 2.2,
+   "art": "Split view: Priya on her bed and Neha by her window, both looking at their phones happily.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "अब दोनों एक ही वॉल पर अपनी बातें लिखती हैं।",
+   "sub": "Ab dono ek hi wall par apni baatein likhti hain.",
+   "min": 2.2,
+   "art": "Priya laughing at her phone on the terrace in daylight.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "दूर रहकर भी थोड़ा पास लगने लगा।",
+   "sub": "Door rehkar bhi thoda paas lagne laga.",
+   "min": 2.2,
+   "art": "Neha walking to work with her phone in hand and a light smile, a busy street behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "आप अपना कोड किसे भेजेंगे?",
+   "sub": "Aap apna code kise bhejenge?",
+   "min": 3.0,
+   "art": "Close-up of Priya smiling at the viewer, terrace plants softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

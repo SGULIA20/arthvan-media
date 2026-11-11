@@ -1,0 +1,142 @@
+{
+ "id": "lumi-cash-book-by-day-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "cash-book-by-day",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Galla kis din se nahi mil raha?",
+ "banner": "Galla kis din<br><em>bigda tha</em>? 💰",
+ "caption": "Galle ka paisa aur khaata alag alag bol rahe hain? Aap kaise pakadte hain ki fark kis din aaya? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a sweet-shop owner who opens a day-by-day cash book and sees the day her counted cash stopped matching her book. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Sunita": "Sunita is a woman in her early forties who runs a small sweet shop, wearing a maroon saree with her hair in a bun.",
+   "Raju": "Raju is a thin young helper of about twenty in a white apron and cap."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "सुनीता की मिठाई की दुकान रोज़ शाम तक भरी रहती थी।",
+   "sub": "Sunita ki mithai ki dukaan roz shaam tak bhari rehti thi.",
+   "min": 2.2,
+   "art": "Sunita behind the glass counter of a small sweet shop full of trays of sweets, customers waiting, evening light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "रात को गल्ला गिना, तो पैसे कम निकले।",
+   "sub": "Raat ko galla gina, toh paise kam nikle.",
+   "min": 2.2,
+   "art": "Sunita counting notes from an open cash drawer at night with a puzzled face, shop half shuttered.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "कल भी कम थे। परसों भी।",
+   "sub": "Kal bhi kam the. Parson bhi.",
+   "min": 2.2,
+   "art": "Sunita looking at three small paper slips laid on the counter, rubbing her forehead.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "पर गड़बड़ शुरू किस दिन हुई, यह पता नहीं था।",
+   "sub": "Par gadbad shuru kis din hui, yeh pata nahi tha.",
+   "min": 2.2,
+   "art": "Sunita flipping through a thick ledger under a tube light, Raju sweeping the floor behind her.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "पूरा महीना पलटना पड़ता, और नींद भी जाती।",
+   "sub": "Poora mahina palatna padta, aur neend bhi jaati.",
+   "min": 2.2,
+   "art": "Sunita yawning with the ledger open, a wall clock showing late night.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "अगली सुबह उसने स्कोर माय बिज़ में कैश बुक खोली।",
+   "sub": "Agli subah usne ScoreMyBiz mein cash book kholi.",
+   "min": 2.2,
+   "art": "Sunita in the morning with a cup of tea, opening her phone at the counter, fresh trays of sweets around.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "हर दिन का हिसाब अलग दिखा: शुरू में कितना, आख़िर में कितना।",
+   "sub": "Har din ka hisaab alag dikha: shuru mein kitna, aakhir mein kitna.",
+   "min": 2.4,
+   "screen": "cash-book.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "और जिस दिन गिनती खाते से अलग थी, वह भी।",
+   "sub": "Aur jis din ginti khaate se alag thi, woh bhi.",
+   "min": 2.4,
+   "screen": "cash-book.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "फ़र्क़ मंगलवार से शुरू हुआ था।",
+   "sub": "Fark mangalvaar se shuru hua tha.",
+   "min": 2.2,
+   "art": "Sunita pointing at her phone with a look of discovery, eyebrows raised.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "उस दिन एक उधार की बिक्री लिखना रह गया था।",
+   "sub": "Us din ek udhaar ki bikri likhna reh gaya tha.",
+   "min": 2.2,
+   "art": "Sunita talking kindly to Raju, who holds a box of sweets and looks apologetic.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "अब वह रोज़ रात को दो मिनट में मिला लेती है।",
+   "sub": "Ab woh roz raat ko do minute mein mila leti hai.",
+   "min": 2.2,
+   "art": "Sunita closing the cash drawer with a calm smile, phone in her other hand, shop lights warm.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "आपका गल्ला आज खाते से मिला था?",
+   "sub": "Aapka galla aaj khaate se mila tha?",
+   "min": 3.0,
+   "art": "Close-up of Sunita smiling at the viewer, trays of sweets softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
