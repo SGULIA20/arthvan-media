@@ -101,10 +101,15 @@ CAROUSEL = False   # founder, 31 Oct 2026: "do not add 7 slides on instagram, on
 
 
 def prepare_set(ig_id: str, token: str, urls: SetUrls, captions: Captions, thumb_offset_ms: int = 2000,
-                sleep=time.sleep, max_polls: int = 90, poll_s: float = 4) -> Prepared:
-    """Create every container and wait until all are FINISHED. Nothing is public yet."""
+                sleep=time.sleep, max_polls: int = 90, poll_s: float = 4, feed: bool = True) -> Prepared:
+    """Create every container and wait until all are FINISHED. Nothing is public yet. feed=False: the Story only (founder, 12 Nov 2026:
+    "stop posting ScoreMyBiz and Waypoint videos on YouTube and Instagram; only stories on Instagram")."""
     path = f"/{ig_id}/media"
     post = None
+    if not feed:
+        story = call("POST", path, token, {"media_type": "STORIES", "video_url": urls.story})["id"]
+        _wait(story, token, "story", sleep, max_polls, poll_s)
+        return Prepared(post=None, reel=None, story=story, reel_trial=False)
     if CAROUSEL:
         children = []
         for i, u in enumerate(urls.slides):
@@ -123,9 +128,13 @@ def prepare_set(ig_id: str, token: str, urls: SetUrls, captions: Captions, thumb
 
 
 def prepare_video_set(ig_id: str, token: str, video_url: str, caption: str, thumb_offset_ms: int = 2000,
-                      sleep=time.sleep, max_polls: int = 90, poll_s: float = 4) -> Prepared:
-    """A story ad: Reel + Story from one MP4, no carousel."""
+                      sleep=time.sleep, max_polls: int = 90, poll_s: float = 4, feed: bool = True) -> Prepared:
+    """A story ad: Reel + Story from one MP4, no carousel. feed=False: the Story only, no Reel."""
     path = f"/{ig_id}/media"
+    if not feed:
+        story = call("POST", path, token, {"media_type": "STORIES", "video_url": video_url})["id"]
+        _wait(story, token, "story", sleep, max_polls, poll_s)
+        return Prepared(post=None, reel=None, story=story, reel_trial=False)
     reel = reel_container(path, token, {"media_type": "REELS", "video_url": video_url, "caption": caption,
                                         "thumb_offset": str(thumb_offset_ms)})
     story = call("POST", path, token, {"media_type": "STORIES", "video_url": video_url})["id"]

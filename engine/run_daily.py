@@ -368,7 +368,8 @@ def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log
         url = f"https://raw.githubusercontent.com/{repo}/{deps.head_sha()}/out/{day.isoformat()}/story.mp4"
         deps.wait_for_urls({url: dst.stat().st_size})
         ig_caption, li_text, tags = story_captions(for_post(app_cfg, "instagram", "reel", st["id"]), st)
-        prepared = deps.prepare_video_set(ig_id, token, url, ig_caption)
+        prepared = deps.prepare_video_set(ig_id, token, url, ig_caption) if promo("instagram_feed", root) \
+            else deps.prepare_video_set(ig_id, token, url, ig_caption, feed=False)
         if mode == "prepare":
             return 0
         entry = {"date": day.isoformat(), "app": st["app"], "item": st["id"], "status": "publishing", "kind": "story", "feature": st.get("feature"),
@@ -388,6 +389,17 @@ def _run_story(st: dict, day: date, root: Path, env, deps: Deps, apps: dict, log
 
 
 # ---------- the run ----------
+def promo(key: str, root: Path = ROOT) -> bool:
+    """content/apps.json _global.app_promo: where the app videos may go. Founder, 12 Nov 2026: "stop posting of ScoreMyBiz and Waypoint
+    videos on YouTube and Instagram (only stories need to be posted on Instagram)": instagram_feed false = no Reel and no carousel,
+    the Story still goes; youtube false = no upload to either channel. Unset = allowed."""
+    try:
+        glob = json.loads((Path(root) / "content" / "apps.json").read_text()).get("_global", {})
+    except (OSError, ValueError):
+        return True
+    return bool((glob.get("app_promo") or {}).get(key, True))
+
+
 def is_post_day(day: date, root: Path = ROOT) -> bool:
     """App posts go out only on the weekdays in apps.json _global.post_weekdays (all days when unset); a festival in
     occasions.json always counts, so an occasion story still goes out on its date."""
@@ -443,6 +455,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     chans["youtube"] = {ch: {"client_id": env["YT_CLIENT_ID"], "client_secret": env["YT_CLIENT_SECRET"],
                              "refresh_token": env[f"YT_{ch.upper()}_REFRESH_TOKEN"]}
                         for ch in YT_CHANNELS if env.get("YT_CLIENT_ID") and env.get("YT_CLIENT_SECRET") and env.get(f"YT_{ch.upper()}_REFRESH_TOKEN")}
+    if not promo("youtube", root):
+        chans["youtube"] = {}
     if mode == "post":
         deps.sync_repo()
         status = day_status(log, day)
@@ -502,7 +516,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         deps.wait_for_urls(expected)
 
         post_cap, reel_cap = build_captions(for_post(apps[sel.app], "instagram", "slides", sel.item["id"]), sel.item)
-        prepared = deps.prepare_set(ig_id, token, urls, Captions(post=post_cap, reel=reel_cap))
+        prepared = deps.prepare_set(ig_id, token, urls, Captions(post=post_cap, reel=reel_cap)) if promo("instagram_feed", root) \
+            else deps.prepare_set(ig_id, token, urls, Captions(post=post_cap, reel=reel_cap), feed=False)
         print("all containers ready")
         if mode == "prepare":
             return 0

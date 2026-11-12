@@ -614,3 +614,12 @@ def test_app_posts_go_out_only_on_the_chosen_weekdays_or_a_festival(tmp_path):
     assert rd.is_post_day(_date(2026, 10, 26), tmp_path)            # Monday
     assert not rd.is_post_day(_date(2026, 10, 27), tmp_path)        # Tuesday
     assert rd.is_post_day(_date(2026, 11, 8), tmp_path)             # a Sunday, but a festival
+
+
+def test_app_promo_switch_reads_the_roots_apps_json(tmp_path):
+    from engine import run_daily
+    (tmp_path / "content").mkdir()
+    (tmp_path / "content" / "apps.json").write_text('{"_global": {"app_promo": {"instagram_feed": false, "youtube": false}}}')
+    assert run_daily.promo("instagram_feed", tmp_path) is False and run_daily.promo("youtube", tmp_path) is False
+    (tmp_path / "content" / "apps.json").write_text('{"_global": {}}')
+    assert run_daily.promo("instagram_feed", tmp_path) is True and run_daily.promo("youtube", tmp_path) is True
