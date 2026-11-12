@@ -164,3 +164,17 @@ def test_default_is_reel_and_story_only_no_slides(monkeypatch):
     media = [c[2] for c in fake.posts("/media")]
     assert [m["media_type"] for m in media] == ["REELS", "STORIES"] and not any(m.get("is_carousel_item") for m in media)
     assert prepared.post is None and prepared.reel and prepared.story
+
+
+def test_feed_off_makes_only_the_story(monkeypatch):
+    from engine import instagram as ig
+    made = []
+    def call(method, path, token, params=None):
+        if method == "POST":
+            made.append(params.get("media_type")); return {"id": f"c{len(made)}"}
+        return {"status_code": "FINISHED"}
+    monkeypatch.setattr(ig, "call", call)
+    p = ig.prepare_video_set("u", "t", "https://v", "cap", sleep=lambda s: None, feed=False)
+    assert made == ["STORIES"] and p.reel is None and p.post is None and p.story == "c1"
+    monkeypatch.setattr(ig, "call", lambda m, path, token, params=None: {"id": "pub"})
+    assert ig.publish_set("u", "t", p) == {"story": "pub"}
