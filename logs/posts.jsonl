@@ -223,3 +223,4 @@
 {"date": "2026-11-13", "channel": "linkedin_personal", "item": "kraft-heinz-zbb", "status": "published", "id": "urn:li:share:7526904647475892224", "format": "picture"}
 {"date": "2026-11-13", "app": "scoremybiz", "item": "lumi-cash-book-by-day-hi", "status": "publishing", "kind": "story", "feature": "cash-book-by-day", "sha": "f6f61a0db3832caf209464342b44923ab844d62c", "at": "2026-11-13T14:44:03+00:00"}
 {"date": "2026-11-13", "app": "scoremybiz", "item": "lumi-cash-book-by-day-hi", "status": "published", "kind": "story", "feature": "cash-book-by-day", "sha": "f6f61a0db3832caf209464342b44923ab844d62c", "at": "2026-11-13T14:44:03+00:00", "ids": {"story": "18019105748971987"}}
+{"date": "2026-11-13", "channel": "whatsapp", "item": "lumi-cash-book-by-day-hi", "status": "published", "id": "82d26509-77f5-4fbb-b593-836741a0d40f"}
