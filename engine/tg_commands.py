@@ -2,6 +2,7 @@
 A GitHub workflow runs this every few minutes (there is no always-on server), so an answer can take 5-10 minutes.
 Only the founder's own chat is obeyed; anyone else who finds the bot is ignored. /pause writes the PAUSE file that run_daily
 already honours and pushes it; /resume removes it."""
+import re
 import subprocess
 import sys
 import time
@@ -12,10 +13,15 @@ from . import comment_drafts, notify, telegram, xray
 
 ROOT = Path(__file__).resolve().parent.parent
 MAX_AGE_SECONDS = 12 * 3600
+# 4 Nov 2026 (founder, test C): a video captioned "intro <piece id>" is the founder's 10-second opening for that sg-content Short or long.
+# It is saved under inbox/intro/ (not X-rayed) so Claude can splice it in front of the rendered piece.
+INTRO_RE = re.compile(r"^\s*intro\s+(\d{4}-\d{2}-\d{2}-(?:sglearning|arthvan)-(?:short|long))\s*$", re.I)
+INTRO_DIR = "inbox/intro"
 
 HELP = ("I can do these:\n/status – what went out today, what is paused, what is next\n/pause – stop all posting until you say /resume\n"
         "/resume – start posting again\n/comment <post text> – two LinkedIn comment drafts in your voice\n"
         "🎬 Send any Reel's video (screen recording or saved Reel, under 20 MB), caption optional – a Reel X-ray: why it works, what to copy\n"
+        "🎬 Send your 10-second intro with the caption intro <piece id> (e.g. intro 2026-11-07-sglearning-short) – saved for the splice\n"
         "/help – this list\n\nAnswers can take 5–10 minutes: I check for commands every few minutes.")
 
 
@@ -74,6 +80,30 @@ def download(cfg: dict, file_id: str, out: Path, call=telegram._call) -> Path:
     return out
 
 
+def intro_id(message: dict) -> str:
+    m = INTRO_RE.match(message.get("caption") or "")
+    return m.group(1).lower() if m else ""
+
+
+def intro_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, change=git_change, fetch=download) -> str:
+    """The founder's intro clip for one piece: saved as inbox/intro/<piece id>.mp4 and pushed, replacing any earlier clip for that piece."""
+    v = xray.video_of(message)
+    pid = intro_id(message)
+    if (v.get("file_size") or 0) > xray.MAX_BYTES:
+        return "🎬 That intro is over 20 MB, the most a bot can download. Send it again as a normal video (Telegram compresses it)."
+    out = Path(root) / INTRO_DIR / f"{pid}.mp4"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    fetch(cfg, v["file_id"], out, call)
+    rel = str(out.relative_to(root))
+    try:
+        change(root, [rel], [], f"intro clip for {pid}")
+    except Exception as e:
+        return f"🎬 Intro for {pid} downloaded but could not be saved to git: {str(e)[:160]}. Send it again in a few minutes."
+    secs = v.get("duration")
+    return (f"🎬 Intro for {pid} saved ({out.stat().st_size / 1e6:.1f} MB{f', {secs} s' if secs else ''}). "
+            f"Claude splices it in front of the piece; the preview comes back here.")
+
+
 def xray_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, change=git_change, analyse=xray.analyse, fetch=download) -> str:
     """A Reel video from the founder: download it, let Gemini watch it, save the breakdown under logs/xray/ and answer with it."""
     import tempfile
@@ -97,7 +127,7 @@ def xray_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, cha
 
 
 def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.send_message, change=git_change, day: date = None, now: float = None,
-         xray_fn=xray_reply) -> int:
+         xray_fn=xray_reply, intro_fn=intro_reply) -> int:
     """Answer every waiting command from the founder's chat, confirming each one so it is answered once. Returns how many."""
     day = day or lagos_today()
     now = time.time() if now is None else now
@@ -106,6 +136,10 @@ def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.sen
     for u in updates:
         m = u.get("message") or {}
         mine = str((m.get("chat") or {}).get("id")) == str(cfg["chat_id"])
+        if mine and xray.video_of(m) and intro_id(m):
+            call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
+            send(cfg, intro_fn(cfg, m, root, call=call, change=change)); handled += 1
+            continue
         if mine and xray.video_of(m):
             send(cfg, "🎬 Got the Reel. Watching it now, the X-ray comes in a minute or two."); handled += 1
             call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # never watched twice, even if this run dies

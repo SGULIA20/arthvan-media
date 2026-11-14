@@ -1,0 +1,132 @@
+{
+ "id": "mira-matching-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "matching",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Khaane ke baad ek baat",
+ "banner": "Koi sunne wala<br><em>mil gaya</em> 💬",
+ "caption": "Kabhi mann hua ki bas koi sun le? Aap kis se baat karna chahenge? 👇\nWaypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about a young man who uses Waypoint to be paired for a short chat with another adult who is also looking to talk. For adults 18 and over; not a counselling or crisis service.",
+ "hashtags": [
+  "#Waypoint",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Karan": "Karan is a young man in his late twenties with short wavy hair, a navy t-shirt and a tired but kind face.",
+   "Mother": "Karan's mother is a woman in her fifties in a cotton saree, clearing plates in the background."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "खाना ख़त्म हुआ, घर में सब अपने कमरों में थे।",
+   "sub": "Khaana khatam hua, ghar mein sab apne kamron mein the.",
+   "min": 2.2,
+   "art": "Karan sitting alone at a dining table after dinner, empty plates, his mother walking away with a tray, warm lamp light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "करण का मन कुछ कहने को हो रहा था।",
+   "sub": "Karan ka man kuch kehne ko ho raha tha.",
+   "min": 2.2,
+   "art": "Karan leaning on his elbow looking at a quiet window, city lights outside.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "पर किससे? सब थके हुए थे।",
+   "sub": "Par kisse? Sab thake hue the.",
+   "min": 2.2,
+   "art": "Karan glancing at the closed doors of the house, long hallway, soft shadows.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "उसने वेपॉइंट का चैट वाला हिस्सा खोला।",
+   "sub": "Usne Waypoint ka chat wala hissa khola.",
+   "min": 2.2,
+   "art": "Karan sitting on the sofa opening an app on his phone, curious look.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "बताओ क्या ढूँढ रहे हो, किससे मिलना है।",
+   "sub": "Batao kya dhoondh rahe ho, kisse milna hai.",
+   "min": 2.4,
+   "screen": "matching.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "फिर दबाओ, किसी से बात करने के लिए।",
+   "sub": "Phir dabao, kisi se baat karne ke liye.",
+   "min": 2.4,
+   "screen": "matching.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "कुछ सेकंड इंतज़ार, स्क्रीन पर धीमी रोशनी।",
+   "sub": "Kuch second intezaar, screen par dheemi roshni.",
+   "min": 2.2,
+   "art": "Karan holding his phone in both hands waiting, a soft pulsing glow on the screen lighting his face.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "एक और इंसान भी उसी वक़्त ढूँढ रहा था।",
+   "sub": "Ek aur insaan bhi usi waqt dhoondh raha tha.",
+   "min": 2.2,
+   "art": "Two small phone icons connected by a thin warm line over a night city skyline, gentle illustration.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "दोनों की छोटी सी बातचीत शुरू हुई।",
+   "sub": "Dono ki chhoti si baatcheet shuru hui.",
+   "min": 2.2,
+   "art": "Karan smiling softly at a chat on his phone, relaxed shoulders, lamp light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "कोई सलाह नहीं, बस कोई सुन रहा था।",
+   "sub": "Koi salah nahi, bas koi sun raha tha.",
+   "min": 2.2,
+   "art": "Karan breathing out with a relieved smile, window now showing early stars.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "आज रात आप किससे बात करना चाहेंगे?",
+   "sub": "Aaj raat aap kisse baat karna chahenge?",
+   "min": 3.0,
+   "art": "Close-up of Karan smiling gently at the viewer, sofa softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

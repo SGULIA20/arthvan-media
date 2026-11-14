@@ -1,0 +1,133 @@
+{
+ "id": "lumi-customer-history-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "customer-history",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Kitna baaki hai, ek nazar mein",
+ "banner": "Pura hisaab<br><em>ek customer</em> ka 🧾",
+ "caption": "Grahak bole 'itna nahi bacha.' Aap ke paas poori list hoti hai kya? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper who opens one customer's full history of sales and payments to settle a disagreement politely. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Imran": "Imran is a calm kirana shop owner in his late thirties with a trimmed beard, a white kurta and a skull cap.",
+   "Rashid": "Rashid is a regular customer in his fifties with a salt-and-pepper moustache and a striped shirt."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "रशीद भाई महीने भर से उधार ले रहे थे।",
+   "sub": "Rashid bhai mahine bhar se udhaar le rahe the.",
+   "min": 2.2,
+   "art": "Rashid at the counter of Imran's kirana shop picking up a bag of rice, Imran smiling, morning light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "आज बोले, मेरा इतना बाकी नहीं है।",
+   "sub": "Aaj bole, 'mera itna baaki nahi hai.'",
+   "min": 2.2,
+   "art": "Rashid shaking his head with raised eyebrows, Imran listening calmly with open hands.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "इमरान के पास बहस करने का मन नहीं था।",
+   "sub": "Imran ke paas behas karne ka man nahi tha.",
+   "min": 2.2,
+   "art": "Imran taking a quiet breath, a customer waiting behind Rashid, shop shelves in the background.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "उसने कहा, रुकिए, पूरी सूची देखते हैं।",
+   "sub": "Usne kaha, 'rukiye, poori soochi dekhte hain.'",
+   "min": 2.2,
+   "art": "Imran gesturing politely and picking up his phone, Rashid curious.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "रशीद का नाम खोला।",
+   "sub": "Rashid ka naam khola.",
+   "min": 2.4,
+   "screen": "customer-history.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "हर बिक्री, हर भुगतान, तारीख़ के साथ।",
+   "sub": "Har bikri, har bhugtaan, taareekh ke saath.",
+   "min": 2.4,
+   "screen": "customer-history.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "रशीद ने ख़ुद एक-एक लाइन पढ़ी।",
+   "sub": "Rashid ne khud ek-ek line padhi.",
+   "min": 2.2,
+   "art": "Rashid reading the phone screen held by Imran, glasses pushed up, thoughtful face.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "तीन हफ़्ते पहले का एक हिस्सा याद आ गया।",
+   "sub": "Teen hafte pehle ka ek hissa yaad aa gaya.",
+   "min": 2.2,
+   "art": "Rashid tapping his forehead with a rueful smile, Imran laughing gently.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "बिना झगड़े के बात वहीं सुलझ गई।",
+   "sub": "Bina jhagde ke baat wahin suljh gayi.",
+   "min": 2.2,
+   "art": "Rashid and Imran shaking hands over the counter, other customers smiling in the background.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "इमरान ने वही सूची रशीद को संदेश में भेज दी।",
+   "sub": "Imran ne wahi soochi Rashid ko sandesh mein bhej di.",
+   "min": 2.2,
+   "art": "Imran tapping send on his phone while Rashid pockets his own phone, warm shop interior.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "आपके पास हर ग्राहक की पूरी सूची है?",
+   "sub": "Aapke paas har grahak ki poori soochi hai?",
+   "min": 3.0,
+   "art": "Close-up of Imran smiling warmly at the viewer, shop shelves softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

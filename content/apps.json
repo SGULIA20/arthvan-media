@@ -250,6 +250,11 @@
       5,
       6
     ],
-    "_post_weekdays_note": "App posts only on these weekdays (0 = Monday, Lagos date); festival days in occasions.json always post. Every day again (founder, 28 Oct 2026: \"better to go everyday\"; the 24 Oct Mon/Wed/Fri rule is dropped)."
+    "_post_weekdays_note": "App posts only on these weekdays (0 = Monday, Lagos date); festival days in occasions.json always post. Every day again (founder, 28 Oct 2026: \"better to go everyday\"; the 24 Oct Mon/Wed/Fri rule is dropped).",
+    "app_promo": {
+      "instagram_feed": false,
+      "youtube": false
+    },
+    "_app_promo_note": "Founder, 12 Nov 2026: app videos (ScoreMyBiz, Waypoint) no longer go to YouTube or to the Instagram feed (no Reel, no carousel); the Instagram Story still goes. true or removing the key allows it again."
   }
 }

@@ -1,0 +1,144 @@
+{
+ "id": "lumi-helpers-with-own-login-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "helpers-with-own-login",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Helper likhe bikri, par dekhe nahi sab",
+ "banner": "Helper likhe bikri<br><em>khaata aapka</em> 🔑",
+ "caption": "Dukaan helper ke bharose chhodni ho, toh khaata kiske haath mein dete hain? Aap kya karte hain? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a shop owner who gives her helper his own simple login to add sales, purchases and spending, while reports and settings stay with her. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Kavita": "Kavita is a woman in her late thirties who runs a small cosmetics and gift shop, wearing a pink kurta with her hair tied back.",
+   "Sonu": "Sonu is a helper of about nineteen with a neat side parting and a blue t-shirt."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "कविता को बेटी के स्कूल जाना था, दुकान सोनू के भरोसे थी।",
+   "sub": "Kavita ko beti ke school jaana tha, dukaan Sonu ke bharose thi.",
+   "min": 2.2,
+   "art": "Kavita picking up her handbag behind the counter of a small cosmetics and gift shop, Sonu arranging items on a shelf.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "बिक्री लिखने के लिए सोनू को उसका फ़ोन चाहिए था।",
+   "sub": "Bikri likhne ke liye Sonu ko uska phone chahiye tha.",
+   "min": 2.2,
+   "art": "Sonu holding out his hand politely, Kavita holding her phone close and hesitating.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "पर उस फ़ोन में पूरा खाता और मुनाफ़ा भी था।",
+   "sub": "Par us phone mein poora khaata aur munaafa bhi tha.",
+   "min": 2.2,
+   "art": "Kavita looking at her phone with a worried face, Sonu waiting.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "वह नहीं चाहती थी कि ग़लती से कुछ मिट जाए।",
+   "sub": "Woh nahi chahti thi ki galti se kuch mit jaaye.",
+   "min": 2.2,
+   "art": "Kavita biting her lip, a wall clock behind showing she is getting late.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "फिर उसे स्कोर माय बिज़ का हेल्पर लॉगिन याद आया।",
+   "sub": "Phir use ScoreMyBiz ka helper login yaad aaya.",
+   "min": 2.2,
+   "art": "Kavita's face brightening as she taps her phone.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "उसने सोनू का नंबर जोड़ा, उसका अपना लॉगिन बन गया।",
+   "sub": "Usne Sonu ka number joda, uska apna login ban gaya.",
+   "min": 2.4,
+   "screen": "staff.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "सोनू के फ़ोन पर बस एक सादी स्क्रीन खुली।",
+   "sub": "Sonu ke phone par bas ek saadi screen khuli.",
+   "min": 2.2,
+   "art": "Sonu looking at his own phone with a pleased, surprised smile.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "बिक्री, ख़रीद और ख़र्च जोड़ सकता था, बस इतना।",
+   "sub": "Bikri, khareed aur kharch jod sakta tha, bas itna.",
+   "min": 2.2,
+   "art": "Sonu typing on his phone at the counter while a customer holds a gift box.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "रिपोर्ट और सेटिंग उसे दिखती ही नहीं थीं।",
+   "sub": "Report aur setting use dikhti hi nahi thin.",
+   "min": 2.2,
+   "art": "Kavita walking out of the shop relaxed, waving, Sonu waving back from the counter.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "शाम को कविता ने देखा, हर एंट्री पर सोनू का नाम था।",
+   "sub": "Shaam ko Kavita ne dekha, har entry par Sonu ka naam tha.",
+   "min": 2.2,
+   "art": "Kavita back in the shop in the evening, looking at her phone and nodding, Sonu tidying up.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "अब वह बेफ़िक्र होकर दुकान छोड़ पाती है।",
+   "sub": "Ab woh befikr hokar dukaan chhod paati hai.",
+   "min": 2.2,
+   "art": "Kavita and Sonu sharing a cup of tea at the counter, shop lights warm.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "आपका हेल्पर बिक्री कहाँ लिखता है?",
+   "sub": "Aapka helper bikri kahan likhta hai?",
+   "min": 3.0,
+   "art": "Close-up of Kavita smiling at the viewer, shelves of gifts softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+{
+ "id": "lumi-sold-bought-spent-entry-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "sold-bought-spent-entry",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Udhaar likh liya, bhoolna nahi",
+ "banner": "Udhaar ka hisaab<br><em>10 second</em> mein ✍️",
+ "caption": "Grahak ne maal liya, bola 'agle hafte doonga.' Aap kahan likhte hain? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a shopkeeper who writes down a pay-later sale before the next customer reaches the counter. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Ramesh": "Ramesh is a cheerful grocery shopkeeper in his forties with a thin moustache, a checked shirt and a pen behind his ear.",
+   "Sharma ji": "Sharma ji is an elderly neighbourhood customer with white hair, a cotton kurta and a cloth shopping bag."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "दोपहर की भीड़ थी, दुकान पर लाइन लगी थी।",
+   "sub": "Dopahar ki bheed thi, dukaan par line lagi thi.",
+   "min": 2.2,
+   "art": "Ramesh behind the counter of a busy small grocery store at noon, three customers waiting in a line, shelves of packets and jars behind him, bright daylight.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "शर्मा जी ने आटा और दाल उठाई।",
+   "sub": "Sharma ji ne aata aur daal uthayi.",
+   "min": 2.2,
+   "art": "Sharma ji placing a bag of flour and a packet of lentils on the counter, Ramesh smiling and packing them.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "बोले, पैसे अगले हफ़्ते देता हूँ।",
+   "sub": "Bole, 'paise agle hafte deta hoon.'",
+   "min": 2.2,
+   "art": "Sharma ji with folded hands and a friendly smile, Ramesh nodding at the counter, the line of customers behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "रमेश ने सिर हिलाया, पर पर्ची कहाँ लिखे?",
+   "sub": "Ramesh ne sir hilaya, par parchi kahan likhe?",
+   "min": 2.2,
+   "art": "Ramesh looking down at a messy counter full of loose paper slips and a pen, a worried half-smile.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "पिछली बार एक पर्ची खो गई थी।",
+   "sub": "Pichhli baar ek parchi kho gayi thi.",
+   "min": 2.2,
+   "art": "A single paper slip lying forgotten under a sack in a dim corner of the shop, dust in the light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "इस बार उसने फ़ोन निकाला।",
+   "sub": "Is baar usne phone nikala.",
+   "min": 2.2,
+   "art": "Ramesh pulling his phone from his shirt pocket with one hand while still holding the flour bag, focused look.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "बेचा दबाया, रकम लिखी, नाम लिखा।",
+   "sub": "Becha dabaya, rakam likhi, naam likha.",
+   "min": 2.4,
+   "screen": "book.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "बाद में देना है, तारीख़ डाली। बस।",
+   "sub": "Baad mein dena hai, taareekh daali. Bas.",
+   "min": 2.4,
+   "screen": "book.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "दस सेकंड में अगला ग्राहक सामने था।",
+   "sub": "Das second mein agla grahak saamne tha.",
+   "min": 2.2,
+   "art": "Ramesh smiling and handing the packed bag to Sharma ji while the next customer steps up, the phone resting on the counter.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "शाम को उसने सारा हिसाब एक जगह देखा।",
+   "sub": "Shaam ko usne saara hisaab ek jagah dekha.",
+   "min": 2.2,
+   "art": "Ramesh sitting on a stool in the evening light, closing time, calmly looking at his phone with a cup of tea beside him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "आपका उधार कहाँ लिखा जाता है?",
+   "sub": "Aapka udhaar kahan likha jaata hai?",
+   "min": 3.0,
+   "art": "Close-up of Ramesh looking warmly at the viewer, holding his phone, shop shelves softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

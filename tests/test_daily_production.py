@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 from datetime import date
 
 from engine import daily_production as dp
@@ -194,3 +195,16 @@ def test_production_mode_is_all_unless_the_switch_file_says_stories(tmp_path):
     assert dp.production_mode(tmp_path / "none.json") == "all"
     (tmp_path / "m.json").write_text(json.dumps({"mode": "stories"}))
     assert dp.production_mode(tmp_path / "m.json") == "stories"
+
+
+def test_the_repo_switch_decides_when_the_founders_mac_file_is_absent(tmp_path, monkeypatch):
+    """8 Nov 2026: the cloud poster has no Mac, so a card deck filled the days without a story; content/production-mode.json now carries the switch."""
+    from engine import config
+    monkeypatch.setattr(config, "MODE", tmp_path / "none.json")
+    monkeypatch.setattr(config, "REPO_MODE", tmp_path / "repo.json")
+    assert config.production_mode() == "all"
+    (tmp_path / "repo.json").write_text('{"mode": "stories"}')
+    assert config.production_mode() == "stories"
+    (tmp_path / "none.json").write_text('{"mode": "all"}')                  # the Mac file, when it exists, wins
+    assert config.production_mode() == "all"
+    assert json.loads(Path(__file__).resolve().parent.parent.joinpath("content", "production-mode.json").read_text())["mode"] == "stories"

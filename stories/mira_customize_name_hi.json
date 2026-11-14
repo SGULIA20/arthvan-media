@@ -1,0 +1,132 @@
+{
+ "id": "mira-customize-name-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "customize-name",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Aaj raat Night Owl",
+ "banner": "Aaj ka naam<br><em>Night Owl</em> 🦉",
+ "caption": "Agar aaj raat aap apna naam khud chunte, to kya rakhte? 👇\nWaypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about a young man who picks his own name and avatar for the evening in Waypoint, an anonymous peer-support space for adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Arjun": "Arjun is a quiet young man in his twenties with short black hair, round glasses and a grey hoodie.",
+   "Maa": "Maa is Arjun's mother, a kind woman in her fifties in a printed cotton saree."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "रात के ग्यारह बजे थे, अर्जुन जाग रहा था।",
+   "sub": "Raat ke gyaarah baje the, Arjun jaag raha tha.",
+   "min": 2.2,
+   "art": "Arjun sitting on his bed in a dim room at night, phone glowing in his hands, a desk lamp, city lights through the window.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "दिन भर की बातें मन में घूम रही थीं।",
+   "sub": "Din bhar ki baatein man mein ghoom rahi thi.",
+   "min": 2.2,
+   "art": "Arjun lying back on pillows staring at the ceiling, faint thought-swirl of warm light, quiet night.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "वो कुछ कहना चाहता था, बिना नाम बताए।",
+   "sub": "Woh kuch kehna chahta tha, bina naam bataye.",
+   "min": 2.2,
+   "art": "Arjun holding his phone, hesitating with a thumb above the screen, soft lamp light on his face.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "वेपॉइंट पर रोज़ एक नया नाम मिलता है।",
+   "sub": "Waypoint par roz ek naya naam milta hai.",
+   "min": 2.2,
+   "art": "Arjun looking at his phone with a small curious smile, the lamp casting a warm circle.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "पर आज उसने ख़ुद अपना नाम चुना।",
+   "sub": "Par aaj usne khud apna naam chuna.",
+   "min": 2.4,
+   "screen": "customize.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "बीस अक्षर तक, और एक इमोजी।",
+   "sub": "Bees akshar tak, aur ek emoji.",
+   "min": 2.4,
+   "screen": "customize.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "नाम रखा, नाइट आउल। उल्लू वाला अवतार।",
+   "sub": "Naam rakha, Night Owl. Ullu wala avatar.",
+   "min": 2.2,
+   "art": "Arjun grinning softly at his phone, a small friendly owl illustration glowing above the phone as a floating icon.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "चौबीस घंटे के लिए, यही उसकी पहचान थी।",
+   "sub": "Chaubees ghante ke liye, yahi uski pehchaan thi.",
+   "min": 2.2,
+   "art": "Arjun's phone on the desk showing a calm glow, a clock on the wall showing midnight, peaceful room.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "उसने अपने मन की एक बात लिख दी।",
+   "sub": "Usne apne man ki ek baat likh di.",
+   "min": 2.2,
+   "art": "Arjun typing on his phone with relaxed shoulders, a cup of water beside him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "किसी ने जवाब दिया, तुम अकेले नहीं हो।",
+   "sub": "Kisi ne jawab diya, tum akele nahi ho.",
+   "min": 2.2,
+   "art": "Arjun reading a reply on his phone with a soft relieved smile, early light starting at the window.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "आज रात आप कौन सा नाम चुनते?",
+   "sub": "Aaj raat aap kaun sa naam chunte?",
+   "min": 3.0,
+   "art": "Close-up of Arjun smiling gently at the viewer, hoodie, night window softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

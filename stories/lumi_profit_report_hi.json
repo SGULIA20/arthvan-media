@@ -1,0 +1,142 @@
+{
+ "id": "lumi-profit-report-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "profit-report",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Bikri bahut, par bacha kya?",
+ "banner": "Bikri bahut hui<br><em>bacha kitna</em>? 📊",
+ "caption": "Mahina achchha gaya, par jeb mein kitna aaya? Aap apna bacha hua paisa kaise nikaalte hain? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a garment shop owner who opens a profit report built from his own entries and sees sales, the cost of goods, running costs and what he kept. It is a view of his book, not statutory accounts. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Harish": "Harish is a man in his mid forties who runs a small garment shop, with a moustache, a light blue kurta and a measuring tape around his neck.",
+   "Meena": "Meena is Harish's wife, a woman in her forties in a green saree with a warm smile."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "दिवाली के बाद हरीश की कपड़ों की दुकान ख़ूब चली।",
+   "sub": "Diwali ke baad Harish ki kapdon ki dukaan khoob chali.",
+   "min": 2.2,
+   "art": "Harish in a small garment shop with folded shirts and sarees on shelves, several customers browsing, festive lights.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "मीना ने पूछा, इस महीने कितना बचा?",
+   "sub": "Meena ne poochha, is mahine kitna bacha?",
+   "min": 2.2,
+   "art": "Meena standing by the counter with a tiffin box, asking Harish a question, he looks up from folding a shirt.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "हरीश बोला, बिक्री तो बहुत हुई है।",
+   "sub": "Harish bola, bikri toh bahut hui hai.",
+   "min": 2.2,
+   "art": "Harish spreading his hands proudly over a pile of bills on the counter.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "पर माल का पैसा, किराया, बिजली, सब उसी में से गया था।",
+   "sub": "Par maal ka paisa, kiraaya, bijli, sab usi mein se gaya tha.",
+   "min": 2.2,
+   "art": "Harish counting on his fingers with a thoughtful frown, a rent receipt and an electricity bill on the counter.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "असल में हाथ में क्या आया, उसे ख़ुद नहीं पता था।",
+   "sub": "Asal mein haath mein kya aaya, use khud nahi pata tha.",
+   "min": 2.2,
+   "art": "Harish scratching his head, Meena raising an eyebrow with a small smile.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "उसने स्कोर माय बिज़ में मुनाफ़े की रिपोर्ट खोली।",
+   "sub": "Usne ScoreMyBiz mein munaafe ki report kholi.",
+   "min": 2.2,
+   "art": "Harish holding his phone, Meena leaning in to look over his shoulder.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "ऊपर बिक्री, नीचे माल की लागत, और बीच में जो बचा।",
+   "sub": "Upar bikri, neeche maal ki laagat, aur beech mein jo bacha.",
+   "min": 2.4,
+   "screen": "profit-loss.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "फिर ख़र्चे अलग अलग, और आख़िर में जो सच में रखा।",
+   "sub": "Phir kharche alag alag, aur aakhir mein jo sach mein rakha.",
+   "min": 2.4,
+   "screen": "profit-loss.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "यह सब उसकी अपनी लिखी एंट्री से बना था।",
+   "sub": "Yeh sab uski apni likhi entry se bana tha.",
+   "min": 2.2,
+   "art": "Harish nodding slowly at his phone with understanding, shelves of cloth behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "बिक्री बड़ी थी, पर बचत उससे काफ़ी छोटी।",
+   "sub": "Bikri badi thi, par bachat usse kaafi chhoti.",
+   "min": 2.2,
+   "art": "Harish and Meena looking at each other, he gives a sheepish smile.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "अब उसे पता है अगला माल कितना उठाना है।",
+   "sub": "Ab use pata hai agla maal kitna uthaana hai.",
+   "min": 2.2,
+   "art": "Harish writing a short list in a small notebook with a calm, decided face, Meena pouring tea.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "आपको पता है इस महीने आपने सच में कितना रखा?",
+   "sub": "Aapko pata hai is mahine aapne sach mein kitna rakha?",
+   "min": 3.0,
+   "art": "Close-up of Harish smiling at the viewer, colourful folded clothes softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "id": "mira-voice-posts-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "voice-posts",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Likhna nahi, bolna tha",
+ "banner": "Bolkar kaho<br><em>Bear ki awaaz</em> mein 🐻",
+ "caption": "Kabhi likhne se zyada bolna aasaan lagta hai? 👇\nWaypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about a young man who records a short voice post in Waypoint and hears it played back in a synthetic character voice. Voice posts are removed after 7 days. For adults 18 and over.",
+ "hashtags": [
+  "#Waypoint",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Kofi": "Kofi is a thoughtful young man in his twenties with curly black hair, a mustard t-shirt and headphones around his neck.",
+   "Friend": "Friend is Kofi's roommate, a cheerful young man in a blue shirt."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "कोफ़ी को लिखना कभी पसंद नहीं था।",
+   "sub": "Kofi ko likhna kabhi pasand nahi tha.",
+   "min": 2.2,
+   "art": "Kofi at a desk with a blank notes page and a pen, shaking his head, evening light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "जो मन में था, वो शब्दों में अटकता था।",
+   "sub": "Jo man mein tha, woh shabdon mein atakta tha.",
+   "min": 2.2,
+   "art": "Kofi crumpling a page of scribbles, a small pile of paper balls beside him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "वो बोलकर कहना चाहता था।",
+   "sub": "Woh bolkar kehna chahta tha.",
+   "min": 2.2,
+   "art": "Kofi pressing his headphones, taking a deep breath, mouth just opening to speak.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "वेपॉइंट में आवाज़ वाली पोस्ट होती है।",
+   "sub": "Waypoint mein awaaz wali post hoti hai.",
+   "min": 2.2,
+   "art": "Kofi looking at his phone with an interested smile, sitting cross-legged on a sofa.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "साठ सेकंड तक रिकॉर्ड करो।",
+   "sub": "Saath second tak record karo.",
+   "min": 2.4,
+   "screen": "voice.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "भालू, लोमड़ी या गौरैया की आवाज़ चुनो।",
+   "sub": "Bhaalu, lomdi ya gauraiya ki awaaz chuno.",
+   "min": 2.4,
+   "screen": "voice.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "कोफ़ी ने तीस सेकंड बोला, और भालू चुना।",
+   "sub": "Kofi ne tees second bola, aur bhaalu chuna.",
+   "min": 2.2,
+   "art": "Kofi speaking calmly toward his phone, a friendly cartoon bear icon floating gently near the phone.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "दीवार पर उसकी बात भालू की आवाज़ में बजी।",
+   "sub": "Deewar par uski baat bhaalu ki awaaz mein baji.",
+   "min": 2.2,
+   "art": "Kofi listening on his phone with a surprised smile, soft sound waves drawn as warm lines around the phone.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "उसकी अपनी आवाज़ नहीं, बस उसके अपने शब्द।",
+   "sub": "Uski apni awaaz nahi, bas uske apne shabd.",
+   "min": 2.2,
+   "art": "Kofi relaxed and smiling, a bear mascot silhouette in a speech bubble above his shoulder.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "सात दिन बाद वो पोस्ट हट जाती है।",
+   "sub": "Saat din baad woh post hat jaati hai.",
+   "min": 2.2,
+   "art": "A wall calendar with seven days crossed off beside Kofi's window, gentle morning light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "आप लिखना पसंद करेंगे या बोलना?",
+   "sub": "Aap likhna pasand karenge ya bolna?",
+   "min": 3.0,
+   "art": "Close-up of Kofi smiling warmly at the viewer, headphones on his neck, sofa softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

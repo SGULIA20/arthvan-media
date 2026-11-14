@@ -1,0 +1,76 @@
+name: write-story
+
+# Writes, draws and renders NEW feature story Reels (founder, 8 Nov 2026: a new feature every post, never a repeat).
+# Claude writes the Hindi script from content/features.json only; engine.claims checks it; pictures and voice cost about Rs 3 per
+# picture. Needs repo secrets ANTHROPIC_API_KEY and GEMINI_API_KEY. Runs only when started by hand.
+on:
+  workflow_dispatch:
+    inputs:
+      apps:
+        description: 'scoremybiz, waypoint or both'
+        required: false
+        default: 'both'
+      count:
+        description: 'stories per app (1-5)'
+        required: false
+        default: '1'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render-stories
+  cancel-in-progress: false
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+      - uses: actions/cache@v5
+        with:
+          path: |
+            stories/art
+            stories/cache
+          key: story-art-${{ github.run_id }}
+          restore-keys: story-art-
+      - run: for i in 1 2 3; do sudo timeout 240 apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 update && sudo timeout 420 apt-get -o Acquire::http::Timeout=30 install -y ffmpeg fonts-noto-core fonts-noto-color-emoji && break; if [ "$i" = 3 ]; then exit 1; fi; sleep 20; done   # 11 Nov 2026: a stuck package mirror held this step for 63 minutes
+      - run: pip install -r requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Git identity
+        run: |
+          git config user.name "arthvan-autoposter"
+          git config user.email "autoposter@users.noreply.github.com"
+      - name: Write, draw and render
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          APPS: ${{ inputs.apps }}
+          COUNT: ${{ inputs.count }}
+        run: |
+          set -e
+          test -n "$ANTHROPIC_API_KEY" || { echo "ANTHROPIC_API_KEY secret is missing"; exit 1; }
+          [ "$APPS" = both ] && APPS="scoremybiz waypoint"
+          for app in $APPS; do
+            for i in $(seq 1 "$COUNT"); do
+              python -m engine.write_story "$app" || break
+              id=$(git ls-files --others --exclude-standard stories | grep -E '^stories/(lumi|mira)_.*_hi\.json$' | head -1)
+              test -n "$id" || break
+              sid=$(basename "$id" .json | tr '_' '-')
+              python -m engine.illustrate "$id"
+              python -m engine.story "$id" stories/out
+              git add -f "$id" "stories/out/$sid.mp4"
+              git commit -qm "write-story: $sid [skip ci]"
+            done
+          done
+          python -m engine.calendar_plan 45 --write
+          git add -f content/schedule.json
+          git diff --cached --quiet || git commit -qm "write-story: re-plan schedule [skip ci]"
+          git pull --rebase --autostash origin main && git push origin HEAD:main

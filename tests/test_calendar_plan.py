@@ -120,3 +120,18 @@ def test_in_story_only_mode_the_plan_holds_only_illustrated_story_reels():
     other = dict(story, lead="male" if lead == "female" else "female")
     assert build_plan(d, 1, [other], story_only=True) == {d.isoformat(): "story-hi"}      # the lead rule does not apply to stories
     assert build_plan(d, 1, [other], story_only=False) == {d.isoformat(): None}
+
+
+def test_a_story_told_in_one_language_is_not_planned_again_in_another_and_the_longest_unseen_feature_goes_first():
+    """8 Nov 2026 (founder: 'stories should not repeat; every time a new feature story')."""
+    stories = [S("lumi-diwali-hi", "scoremybiz", "lumi", "profit-on-paper-vs-cash"), S("lumi-diwali-bn", "scoremybiz", "lumi", "whatsapp-daily-update"),
+               S("lumi-score-hi", "scoremybiz", "lumi", "score-history"), S("lumi-card-hi", "scoremybiz", "lumi", "business-card")]
+    p = cp.build_plan(date(2026, 11, 9), 40, stories, story_only=False,
+                      feature_log=[("2026-10-01", "scoremybiz", "score-history"), ("2026-10-20", "scoremybiz", "business-card")])
+    used = [sid for sid in p.values() if sid]
+    bases = [cp.story_base(sid) for sid in used]
+    assert len(bases) == len(set(bases)) and "lumi-diwali" in bases and len(used) == 3          # one Diwali story, not two
+    smb_days = [d for d, sid in sorted(p.items()) if sid]
+    assert p[smb_days[0]] in ("lumi-diwali-hi", "lumi-diwali-bn")                                  # a feature never shown comes before one shown on 1 Oct or 20 Oct
+    assert cp.story_base("mira-papa-mr") == "mira-papa" and cp.story_base("old-wp-f") == "old-wp-f"
+    assert any("repeats the story" in v for v in cp.violations({"2026-11-09": "lumi-diwali-hi", "2026-11-11": "lumi-diwali-bn"}, stories))

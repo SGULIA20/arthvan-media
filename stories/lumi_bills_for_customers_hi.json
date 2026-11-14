@@ -1,0 +1,142 @@
+{
+ "id": "lumi-bills-for-customers-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "bills-for-customers",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Pakka bill chahiye, dukaan ke naam ka",
+ "banner": "Dukaan ke naam ka<br><em>pakka bill</em> 🧾",
+ "caption": "Customer ne pakka bill maanga aur aapke paas sirf kachchi parchi thi? Aap bill kaise banate hain? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a hardware shop owner who makes a numbered bill with his items and payment details and shares it as a PDF or WhatsApp message. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Imran": "Imran is a man in his late thirties who runs a small hardware shop, with a trimmed beard, a grey checked shirt and rolled-up sleeves.",
+   "Verma ji": "Verma ji is a building contractor in his fifties with grey hair, glasses and a white shirt, carrying a file."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "इमरान की हार्डवेयर की दुकान पर वर्मा जी आए।",
+   "sub": "Imran ki hardware ki dukaan par Verma ji aaye.",
+   "min": 2.2,
+   "art": "Imran behind the counter of a small hardware shop with paint tins, pipes and tools on shelves, Verma ji walking in with a file, morning light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "उन्होंने सीमेंट और पाइप का बड़ा ऑर्डर दिया।",
+   "sub": "Unhone cement aur pipe ka bada order diya.",
+   "min": 2.2,
+   "art": "Verma ji pointing at cement bags and a bundle of pipes, Imran noting it down happily.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "फिर बोले, मुझे दुकान के नाम का पक्का बिल चाहिए।",
+   "sub": "Phir bole, mujhe dukaan ke naam ka pakka bill chahiye.",
+   "min": 2.2,
+   "art": "Verma ji holding out his file and tapping it, Imran looking up from the counter.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "इमरान के पास बस एक कच्ची पर्ची थी।",
+   "sub": "Imran ke paas bas ek kachchi parchi thi.",
+   "min": 2.2,
+   "art": "Imran holding a small torn slip of paper with a worried face, a pen behind his ear.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "हाथ से लिखता, तो नंबर और हिसाब गड़बड़ हो जाता।",
+   "sub": "Haath se likhta, toh number aur hisaab gadbad ho jaata.",
+   "min": 2.2,
+   "art": "Imran scratching his head over a messy handwritten pad with crossed-out lines, Verma ji waiting patiently.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "उसने फ़ोन निकाला और स्कोर माय बिज़ खोला।",
+   "sub": "Usne phone nikaala aur ScoreMyBiz khola.",
+   "min": 2.2,
+   "art": "Imran taking his phone out of his shirt pocket with a small confident smile.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "सामान चुना, तो नंबर वाला बिल अपने आप बन गया।",
+   "sub": "Saamaan chuna, toh number wala bill apne aap ban gaya.",
+   "min": 2.4,
+   "screen": "invoices.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "उसमें दुकान का नाम और यूपीआई की जानकारी भी थी।",
+   "sub": "Usmein dukaan ka naam aur UPI ki jaankari bhi thi.",
+   "min": 2.4,
+   "screen": "invoices.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "बिल सीधे वर्मा जी के व्हाट्सऐप पर पहुँच गया।",
+   "sub": "Bill seedhe Verma ji ke WhatsApp par pahunch gaya.",
+   "min": 2.2,
+   "art": "Verma ji looking at his own phone and nodding with approval, Imran watching with a smile.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "पैसे आए, तो इमरान ने बिल पर चुकता लगा दिया।",
+   "sub": "Paise aaye, toh Imran ne bill par chukta laga diya.",
+   "min": 2.2,
+   "art": "Imran tapping his phone once with satisfaction while Verma ji puts his phone back in his pocket.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "वर्मा जी बोले, अब हर बार यहीं से लूँगा।",
+   "sub": "Verma ji bole, ab har baar yahin se loonga.",
+   "min": 2.2,
+   "art": "Verma ji shaking hands with Imran across the counter, cement bags being loaded onto a cart behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "आपके ग्राहक पक्का बिल माँगते हैं, तो आप क्या करते हैं?",
+   "sub": "Aapke grahak pakka bill maangte hain, toh aap kya karte hain?",
+   "min": 3.0,
+   "art": "Close-up of Imran smiling warmly at the viewer, hardware shelves softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
