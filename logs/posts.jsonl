@@ -231,3 +231,9 @@
 {"date": "2026-11-14", "channel": "whatsapp", "item": "mira-matching-hi", "status": "published", "id": "a1709440-d9d2-4859-a114-a6fe32ab5ce8"}
 {"date": "2026-11-14", "channel": "telegram", "item": "mira-matching-hi", "status": "published", "id": "416"}
 {"date": "2026-11-14", "channel": "threads", "item": "mira-matching-hi", "status": "published", "id": "18642488317019978"}
+{"date": "2026-11-15", "app": "scoremybiz", "item": "lumi-helpers-with-own-login-hi", "status": "publishing", "kind": "story", "feature": "helpers-with-own-login", "sha": "9b26d0a8cfb7c1c6ce68a3293dc78a99656f0cec", "at": "2026-11-15T14:42:26+00:00"}
+{"date": "2026-11-15", "app": "scoremybiz", "item": "lumi-helpers-with-own-login-hi", "status": "published", "kind": "story", "feature": "helpers-with-own-login", "sha": "9b26d0a8cfb7c1c6ce68a3293dc78a99656f0cec", "at": "2026-11-15T14:42:26+00:00", "ids": {"story": "18121498120760760"}}
+{"date": "2026-11-15", "channel": "whatsapp", "item": "lumi-helpers-with-own-login-hi", "status": "published", "id": "e77a19a2-1928-44e8-920d-1f703ec6fb72"}
+{"date": "2026-11-15", "channel": "telegram", "item": "lumi-helpers-with-own-login-hi", "status": "published", "id": "432"}
+{"date": "2026-11-15", "channel": "threads", "item": "lumi-helpers-with-own-login-hi", "status": "published", "id": "18120051905602408"}
+{"date": "2026-11-16", "channel": "linkedin_personal", "item": "avianca-citations", "status": "published", "id": "urn:li:share:7527941703371059200", "format": "picture"}
