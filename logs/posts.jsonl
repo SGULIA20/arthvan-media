@@ -239,3 +239,4 @@
 {"date": "2026-11-16", "channel": "linkedin_personal", "item": "avianca-citations", "status": "published", "id": "urn:li:share:7527941703371059200", "format": "picture"}
 {"date": "2026-11-16", "app": "waypoint", "item": "mira-my-waypoints-hi", "status": "publishing", "kind": "story", "feature": "my-waypoints", "sha": "4cb63c8f1112c242cb687b6ef5eefecacb563204", "at": "2026-11-16T14:43:23+00:00"}
 {"date": "2026-11-16", "app": "waypoint", "item": "mira-my-waypoints-hi", "status": "published", "kind": "story", "feature": "my-waypoints", "sha": "4cb63c8f1112c242cb687b6ef5eefecacb563204", "at": "2026-11-16T14:43:23+00:00", "ids": {"story": "18080945405474942"}}
+{"date": "2026-11-16", "channel": "whatsapp", "item": "mira-my-waypoints-hi", "status": "published", "id": "a64964cf-83e7-4302-956a-db551536d126"}
