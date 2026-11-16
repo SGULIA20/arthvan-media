@@ -243,3 +243,4 @@
 {"date": "2026-11-16", "channel": "telegram", "item": "mira-my-waypoints-hi", "status": "published", "id": "447"}
 {"date": "2026-11-16", "channel": "threads", "item": "mira-my-waypoints-hi", "status": "published", "id": "18102129812428559"}
 {"date": "2026-11-17", "app": "scoremybiz", "item": "lumi-money-to-pay-hi", "status": "publishing", "kind": "story", "feature": "money-to-pay", "sha": "b82d5bd0dad2884f5cbc6a4e2b5ee9210d999872", "at": "2026-11-16T23:51:31+00:00"}
+{"date": "2026-11-17", "app": "scoremybiz", "item": "lumi-money-to-pay-hi", "status": "published", "kind": "story", "feature": "money-to-pay", "sha": "b82d5bd0dad2884f5cbc6a4e2b5ee9210d999872", "at": "2026-11-16T23:51:31+00:00", "ids": {"story": "18160390531521015"}}
