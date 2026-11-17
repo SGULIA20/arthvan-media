@@ -247,3 +247,4 @@
 {"date": "2026-11-17", "channel": "whatsapp", "item": "lumi-money-to-pay-hi", "status": "published", "id": "b5bdfa1a-c9d5-424c-b683-eb96d915beac"}
 {"date": "2026-11-17", "channel": "telegram", "item": "lumi-money-to-pay-hi", "status": "published", "id": "459"}
 {"date": "2026-11-17", "channel": "threads", "item": "lumi-money-to-pay-hi", "status": "published", "id": "17897557245681830"}
+{"date": "2026-11-18", "app": "waypoint", "item": "mira-wrapped-hi", "status": "publishing", "kind": "story", "feature": "wrapped", "sha": "f3c40c0e2bac6fd2ccefa17d2b28aa618a6534ce", "at": "2026-11-17T23:09:02+00:00"}
