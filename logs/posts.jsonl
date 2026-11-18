@@ -255,3 +255,4 @@
 {"date": "2026-11-18", "channel": "linkedin_personal", "item": "upi-24-billion", "status": "published", "id": "urn:li:ugcPost:7528595439273795585", "format": "document"}
 {"date": "2026-11-19", "app": "scoremybiz", "item": "lumi-sold-bought-spent-entry-hi", "status": "publishing", "kind": "story", "feature": "sold-bought-spent-entry", "sha": "277b10c9d8fd25de6107ebf936aecdeef21166ac", "at": "2026-11-18T23:07:13+00:00"}
 {"date": "2026-11-19", "app": "scoremybiz", "item": "lumi-sold-bought-spent-entry-hi", "status": "published", "kind": "story", "feature": "sold-bought-spent-entry", "sha": "277b10c9d8fd25de6107ebf936aecdeef21166ac", "at": "2026-11-18T23:07:13+00:00", "ids": {"story": "17995259949115099"}}
+{"date": "2026-11-19", "channel": "whatsapp", "item": "lumi-sold-bought-spent-entry-hi", "status": "published", "id": "8bb2b4d2-6031-42a4-afde-6f87566d0295"}
