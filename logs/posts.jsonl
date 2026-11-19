@@ -261,3 +261,4 @@
 {"date": "2026-11-20", "app": "waypoint", "item": "mira-break-room-hi", "status": "publishing", "kind": "story", "feature": "break-room", "sha": "11b318552500be6d73f942ed6146489cc00de693", "at": "2026-11-19T23:14:29+00:00"}
 {"date": "2026-11-20", "app": "waypoint", "item": "mira-break-room-hi", "status": "published", "kind": "story", "feature": "break-room", "sha": "11b318552500be6d73f942ed6146489cc00de693", "at": "2026-11-19T23:14:29+00:00", "ids": {"story": "18104609516638436"}}
 {"date": "2026-11-20", "channel": "whatsapp", "item": "mira-break-room-hi", "status": "published", "id": "dc9c5601-f918-486b-8a51-af8d187bb250"}
+{"date": "2026-11-20", "channel": "telegram", "item": "mira-break-room-hi", "status": "published", "id": "500"}
