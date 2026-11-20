@@ -623,3 +623,22 @@ def test_app_promo_switch_reads_the_roots_apps_json(tmp_path):
     assert run_daily.promo("instagram_feed", tmp_path) is False and run_daily.promo("youtube", tmp_path) is False
     (tmp_path / "content" / "apps.json").write_text('{"_global": {}}')
     assert run_daily.promo("instagram_feed", tmp_path) is True and run_daily.promo("youtube", tmp_path) is True
+
+
+def test_a_run_that_fires_before_its_slot_posts_nothing(monkeypatch):
+    """20 Nov 2026: late-firing evening slots posted the next day's set at about 00:10 Lagos four days running."""
+    from datetime import datetime, timezone
+    from engine import run_daily
+    assert run_daily.too_early(datetime(2026, 11, 19, 23, 14, tzinfo=timezone.utc), run_daily.APP_EARLIEST)       # 00:14 Lagos
+    assert run_daily.too_early(datetime(2026, 11, 20, 13, 29, tzinfo=timezone.utc), run_daily.APP_EARLIEST)       # 14:29 Lagos
+    assert not run_daily.too_early(datetime(2026, 11, 20, 14, 37, tzinfo=timezone.utc), run_daily.APP_EARLIEST)   # 15:37 Lagos, the slot
+    assert not run_daily.too_early(datetime(2026, 11, 20, 22, 59, tzinfo=timezone.utc), run_daily.APP_EARLIEST)   # 23:59 Lagos, a late same-day run
+    called = []
+    monkeypatch.setattr(run_daily, "run", lambda mode, day: called.append((mode, day)) or 0)
+    monkeypatch.setattr(run_daily, "is_post_day", lambda day: True)
+    monkeypatch.setattr(run_daily.notify, "after_run", lambda *a, **k: None)
+    assert run_daily.main(["--mode", "post"], now=datetime(2026, 11, 19, 23, 14, tzinfo=timezone.utc)) == 0 and called == []
+    assert run_daily.main(["--mode", "post"], now=datetime(2026, 11, 20, 14, 40, tzinfo=timezone.utc)) == 0 and len(called) == 1
+    assert run_daily.main(["--mode", "post", "--date", "2026-11-20"], now=datetime(2026, 11, 19, 23, 14, tzinfo=timezone.utc)) == 0
+    assert len(called) == 2                                                                              # a date given by hand is obeyed
+
