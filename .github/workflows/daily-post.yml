@@ -27,7 +27,7 @@ concurrency:
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 75          # 22 Oct 2026: a full set (Instagram waits, YouTube, Threads, LinkedIn, catch-up post) outran 30 min and was cancelled mid-way
+    timeout-minutes: 120         # 20 Nov 2026: room for a slow package mirror before the posting; 22 Oct 2026: a full set (Instagram waits, YouTube, Threads, LinkedIn, catch-up post) outran 30 min and was cancelled mid-way
     steps:
       - uses: actions/checkout@v5
         with:
@@ -37,7 +37,7 @@ jobs:
           python-version: '3.12'
           cache: pip
       - name: Install ffmpeg
-        run: for i in 1 2 3; do sudo timeout 240 apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 update && sudo timeout 420 apt-get -o Acquire::http::Timeout=30 install -y ffmpeg && break; if [ "$i" = 3 ]; then exit 1; fi; sleep 20; done   # 11 Nov 2026: a stuck package mirror held this step for 63 minutes
+        run: for i in 1 2 3 4 5 6; do sudo timeout 240 apt-get -o Acquire::Retries=2 -o Acquire::http::Timeout=30 update && sudo timeout 600 apt-get -o Acquire::http::Timeout=30 install -y ffmpeg && break; if [ "$i" = 6 ]; then exit 1; fi; sleep 20; done   # 11 Nov 2026: a stuck mirror held this step for 63 minutes. 20 Nov 2026: a slow mirror (13 MB in 3 minutes) outran three 7-minute tries twice and nothing was posted; each try keeps the packages already fetched, so six longer tries finish
       - name: Install Python packages
         run: pip install -r requirements.txt
       - name: Install Chromium
