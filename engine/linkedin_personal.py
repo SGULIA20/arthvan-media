@@ -272,7 +272,15 @@ def evening(now_utc: datetime, *, root: Path = ROOT, deps=None, bank: dict = Non
         print(f"{day}: the picture was already asked for")
         return 0
     bank = bank or load_personal(root)
-    item = choose(day, bank["items"], root / "logs" / "posts.jsonl", bank["settings"], root)
+    log = root / "logs" / "posts.jsonl"
+    cat, item, note = category_for(day), None, ""
+    if cat in LIVE:                                               # markets, news: researched and written now, used only past the fact gate
+        used = used_ids(log)
+        covered = [i["hook"] for i in bank["items"] if i["id"] in used] + [e.get("hook", "") for e in _entries(log) if e.get("hook")]
+        item, why = deps.write_live(cat, day, covered, bank["settings"])
+        if item is None:
+            note = f"\n\nℹ️ A {LABELS[cat].lower()} post was due, but the fact check did not pass ({why}). A ready post from the bank goes out instead."
+    item = item or choose(day, bank["items"], log, bank["settings"], root)
     if item is None:
         deps.notify(f"LinkedIn {day}: no post passes the checks, nothing is planned.")
         return 1
@@ -281,7 +289,8 @@ def evening(now_utc: datetime, *, root: Path = ROOT, deps=None, bank: dict = Non
     state = {"date": day.isoformat(), "asked": True, **({"item_id": item["id"]} if in_bank else {"item": item})}
     (root / NEXT).write_text(json.dumps(state, ensure_ascii=False, indent=1) + "\n")
     deps.git_publish([NEXT], f"linkedin: post planned for {day}")
-    deps.notify(f"🖼 LinkedIn post for {day:%a %d %b}, 08:10 WAT ({LABELS[item['pillar']]})\n\n{text}\n\n{' '.join(tags)}")
+    sources = ("\n\nSources checked:\n" + "\n".join(item["sources"][:4])) if item.get("sources") else ""
+    deps.notify(f"🖼 LinkedIn post for {day:%a %d %b}, 08:10 WAT ({LABELS[item['pillar']]})\n\n{text}\n\n{' '.join(tags)}{sources}{note}")
     deps.notify(f"🖼 Picture for the LinkedIn post of {day:%a %d %b}\n\nPrompt:\n{image_prompt(item)}\n\n"
                 f"Send it to this bot as a PHOTO with the caption:\nli {day.isoformat()}\n\n"
                 f"By 08:00 WAT. Without it the post still goes out, with the drawn card.")
@@ -345,6 +354,11 @@ def _sync_repo() -> None:
     sync_repo()
 
 
+def _write_live(category: str, day: date, covered: list, settings: dict):
+    from . import linkedin_live
+    return linkedin_live.write(category, day, covered, settings)
+
+
 @dataclass
 class Deps:
     render_cards: Callable = render_cards
@@ -355,6 +369,7 @@ class Deps:
     notify: Callable = field(default_factory=lambda: notify.send)
     sync_repo: Callable = _sync_repo
     sleep: Callable = time.sleep
+    write_live: Callable = field(default_factory=lambda: _write_live)
 
 
 PUSH_TRIES = 3
@@ -417,6 +432,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
             deps.notify("LinkedIn personal post: nothing went out today, every item in the bank failed lint.")
         return 1
     entry = {"date": day.isoformat(), "channel": CHANNEL, "item": item["id"]}
+    if str(item["id"]).startswith("live-"):
+        entry["hook"] = item["hook"]                              # a live post is not in the bank: its subject is kept here against repeats
 
     def failed(what: str, e: Exception) -> int:
         print(f"{what} failed: {type(e).__name__}: {e}")
@@ -472,11 +489,22 @@ LINKEDIN_EARLIEST = (8, 0)                   # Lagos; the slot is 08:10
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("mode", nargs="?", choices=["render", "prepare", "post", "evening"], default="render")
+    ap.add_argument("mode", nargs="?", choices=["render", "prepare", "post", "evening", "trial"], default="render")
+    ap.add_argument("--category", choices=LIVE, default="markets", help="trial: which live category to write a sample of")
     ap.add_argument("--date", default="")
     a = ap.parse_args(argv)
     if a.mode == "evening":
         return evening(datetime.now(timezone.utc))
+    if a.mode == "trial":                                          # a sample of a live post, sent to the founder; nothing is saved or posted
+        bank, today = load_personal(), lagos_today()
+        item, why = _write_live(a.category, today, [i["hook"] for i in bank["items"]][:25], bank["settings"])
+        if item is None:
+            notify.send(f"🧪 LinkedIn {a.category} sample: the fact check did not pass, so on a real evening the bank post would go out.\nReason: {why}")
+            return 0
+        text, tags = build_text(item, bank["settings"])
+        notify.send(f"🧪 SAMPLE LinkedIn {a.category} post (not posted, not saved)\n\n{text}\n\n{' '.join(tags)}\n\nSources checked:\n"
+                    + "\n".join(item["sources"][:4]) + f"\n\nPicture prompt:\n{image_prompt(item)}")
+        return 0
     day = date.fromisoformat(a.date) if a.date else lagos_today()
     if a.mode == "post" and not a.date:
         from .run_daily import too_early

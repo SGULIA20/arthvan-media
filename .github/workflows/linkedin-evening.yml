@@ -10,6 +10,11 @@ on:
     - cron: '7 19 * * *'
     - cron: '7 21 * * *'
   workflow_dispatch:
+    inputs:
+      trial:
+        description: 'markets or news = write a SAMPLE of that live post and send it to Telegram (nothing saved or posted); blank = the normal evening run'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -42,4 +47,6 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PAUSE: ${{ vars.PAUSE }}
-        run: python -m engine.linkedin_personal evening
+          TRIAL: ${{ github.event.inputs.trial }}
+        run: |
+          if [ -n "$TRIAL" ]; then python -m engine.linkedin_personal trial --category "$TRIAL"; else python -m engine.linkedin_personal evening; fi

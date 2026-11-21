@@ -306,3 +306,27 @@ def test_the_evening_run_plans_the_post_asks_for_the_picture_once_and_the_mornin
     assert entry["item"] == "c1" and entry["format"] == "founder-picture"
     pic.unlink()
     assert lp.run("post", date(2026, 11, 25), root=tmp_path, env=env, deps=deps, bank=bank) == 0 and posted[-1] == ["card.jpg"]   # no picture: the card
+
+
+def test_a_live_category_uses_the_fresh_post_past_the_gate_and_the_bank_when_it_fails(tmp_path):
+    from datetime import datetime, timezone
+    (tmp_path / "content").mkdir(); (tmp_path / "logs").mkdir(); (tmp_path / "logs" / "posts.jsonl").write_text("")
+    settings = {"base_hashtags": ["#SG"], "min_hashtags": 3, "max_hashtags": 5, "banned_phrases": ["guarantee"]}
+    bank = {"settings": settings, "items": [_brief_item("t1", "tools")]}
+    (tmp_path / "content" / "linkedin_personal.json").write_text(json.dumps(bank))
+    tue = datetime(2026, 11, 24, 17, 7, tzinfo=timezone.utc)                                    # the evening before Wed 25 Nov: markets
+    fresh = {**_brief_item("live-gold", "markets"), "sources": ["https://www.reuters.com/x"], "scene": "gold bars"}
+    def deps_with(result):
+        sent = []
+        return sent, lp.Deps(render_cards=lambda item, out: ["card.jpg"], post_images=lambda *a: "urn:li:share:1", git_publish=lambda paths, msg: None,
+                             notify=sent.append, sync_repo=lambda: None, sleep=lambda s: None, write_live=lambda cat, day, covered, s: result)
+    sent, d = deps_with((fresh, ""))
+    assert lp.evening(tue, root=tmp_path, deps=d, bank=bank) == 0
+    assert "Hook live-gold" in sent[0] and "Sources checked" in sent[0] and "gold bars" in sent[1]
+    assert json.loads((tmp_path / lp.NEXT).read_text())["item"]["id"] == "live-gold"            # the whole post is saved for the morning
+    assert lp.planned(tmp_path, date(2026, 11, 25))["id"] == "live-gold"
+    (tmp_path / lp.NEXT).unlink()
+    sent, d = deps_with((None, "fewer than two sites back: gold fell"))
+    assert lp.evening(tue, root=tmp_path, deps=d, bank=bank) == 0
+    assert "Hook t1" in sent[0] and "fact check did not pass" in sent[0] and "fewer than two sites" in sent[0]
+
