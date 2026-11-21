@@ -35,3 +35,22 @@ and one intelligent closing question. Three to five hashtags.
 ## Picture
 The founder makes it. He is sent a prompt: photorealistic, professional, 4:5 portrait (1200 x 1500), one strong focal point,
 almost no text, no company logos, no invented photograph passed off as history, no recognisable real person.
+
+## Every post connects three things (founder, 21 Nov 2026, after the first sample)
+1. What happened in the real world, with its figures.
+2. Why it happened, from a business, financial or management view.
+3. What a CEO, CFO, COO or business owner should learn or do differently.
+
+## Three rules of accuracy (same day)
+- Every market figure comes from a primary or highly credible source.
+- What markets expect (futures pricing, forecasts) is kept apart from what has been decided, and worded as an expectation.
+- A move that happened alongside something is never presented as caused by it without a source that says so.
+
+## The visual is chosen, not defaulted (same day: his data-visualisation rules)
+Each post gets the format that tells its story best: an editorial photograph, a data infographic, a financial chart (bar, line, donut,
+waterfall), a comparison graphic, a timeline, a process diagram, a map or a KPI view. A data visual uses only actual, verified figures
+of one period and one definition, names the period, the units and the original source, marks an estimate as an estimate, and is not
+made at all when reliable data is too thin; a donut's parts total 100 percent. Premium consulting look: white or charcoal background,
+clear title, labels and values, a restrained palette, the one insight highlighted, nothing decorative. 4:5 portrait, 1200 x 1500.
+The picture must carry a business insight, not decorate the post.
+

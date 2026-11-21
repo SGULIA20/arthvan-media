@@ -41,6 +41,13 @@ ASK = {"markets": "a current move in financial markets or the economy (gold, cry
                "conglomerate) and its business implications"}
 
 
+# founder, 21 Nov 2026, after the first sample: what the second check must also confirm about the post as a whole
+QUALITY = {"sources_credible": "a market figure without a primary or highly credible source",
+           "expectations_clear": "an expectation worded as a decision",
+           "causes_supported": "a cause stated without evidence",
+           "three_parts": "what happened, why, and what a leader should do are not all there"}
+
+
 class LiveError(Exception):
     pass
 
@@ -106,20 +113,38 @@ def write_prompt(category: str, day: date, covered: list) -> str:
             "value to a CEO, CFO or COO, then check its key figures in at least two credible sources on DIFFERENT sites (company filings "
             "and announcements, central banks, Reuters, Bloomberg, Financial Times and the like). Never assume a price or an index is "
             "rising or falling: read the latest move, its period and its date.\n\n"
+            "Three rules of accuracy (founder, 21 Nov 2026):\n"
+            "1. Take every market figure from a primary or highly credible source: the exchange, the central bank, the company's own "
+            "filing or statement, official statistics; Reuters, Bloomberg or the Financial Times for prices.\n"
+            "2. Keep what markets EXPECT apart from what has been DECIDED. A probability implied by futures, a forecast or a bank's call is "
+            "an expectation and must be worded as one ('futures price in', 'markets expect'); only an announced decision is a decision.\n"
+            "3. Do not present a move that happened alongside something as caused by it. State a cause only when a credible source you "
+            "found states it, and say who; otherwise write 'as' or 'while', or leave the cause out.\n\n"
             f"Already covered recently, do not repeat these subjects: {'; '.join(covered[-25:]) or 'none'}.\n\n"
-            "Write the post to the brief: a hook of at most 140 characters, a body of 105 to 140 words that gives the real story with its "
-            "figures, why it happened and what it costs or changes, the management lesson, and ONE line of the author's view as a finance "
-            "and operations leader, then one closing question. Do not invent a personal anecdote, a place he was or anything he did. "
+            "Write the post to the brief: a hook of at most 140 characters and a body of 105 to 140 words that connects three things, in "
+            "this order: WHAT HAPPENED in the real world, with its figures; WHY it happened, from a business, financial or management "
+            "view; and WHAT a CEO, CFO, COO or business owner should learn or do differently. Add ONE line of the author's view as a "
+            "finance and operations leader, then one closing question. Do not invent a personal anecdote, a place he was or anything he did. "
             "No investment advice: never say to buy, sell or hold, and no price forecast. No em-dashes, no emojis.\n\n"
             "Reply with JSON only, exactly this shape:\n"
             '{"id": "short-kebab-id", "hook": "...", "body": "...", "question": "...?", "hashtags": ["#A", "#B", "#C"], '
             '"card": {"title": "at most 60 characters", "points": ["at most 70 characters each, 3 to 5 points"], "source": "the main sources, short"}, '
             '"scene": "one photorealistic scene for the picture: a place or object, no text, no logos, no real person", '
+            '"visual": {"format": "photo | chart | infographic | comparison", "why": "one sentence: why this format tells the story best", '
+            '"chart": "bar | line | donut | waterfall | timeline | process | map | kpi (omit for a photo)", "title": "the one insight, at most 60 characters", '
+            '"data": [{"label": "...", "value": 0, "unit": "% or USD bn or ..."}], "period": "what period and date the data covers", '
+            '"source": "the original data source, short", "highlight": "the one value to draw the eye to"}, '
             '"as_of": "YYYY-MM-DD, the date of the latest figure in the post", '
             '"claims": [{"claim": "one checkable statement exactly as the post makes it, with its figures", "sources": ["url", "url"]}]}\n'
             f"At most {MAX_CLAIMS} claims: build the post on a few solid facts, and state each claim in one plain sentence so that a second "
             "reader can confirm it with one search. "
-            "Every number in the hook, the body and the card must appear in a claim, and every source must be a page your search returned.")
+            "Every number in the hook, the body, the card and the visual's data must appear in a claim, and every source must be a page "
+            "your search returned.\n\n"
+            "The visual (his brief, the data visualisation rules): do not default to a photograph. Choose a chart, an infographic or a "
+            "comparison when the story is in the numbers (bars for comparisons, a line for a history, a donut for a composition whose "
+            "parts total 100 percent, a waterfall for a bridge, a timeline for a sequence), and a photograph when it is not. Use a data "
+            "visual ONLY with actual, verified figures of one period and one definition, each of them in your claims; never estimate a "
+            "missing value, never mix actuals with forecasts unmarked. If the reliable data is too thin for a chart, choose the photograph.")
 
 
 def repair_prompt(problems: list) -> str:
@@ -148,6 +173,21 @@ def gate(post: dict, urls: set, category: str, day: date, settings: dict) -> lis
             problems.append(f"fewer than two sites back: {str(c.get('claim'))[:70]}")
     card = post.get("card") or {}
     shown = " ".join([str(post.get("hook", "")), str(post.get("body", "")), str(card.get("title", "")), " ".join(card.get("points") or [])])
+    visual = post.get("visual") or {}
+    data = visual.get("data") or []
+    if str(visual.get("format") or "photo") != "photo":
+        if len(data) < 2:
+            problems.append("a data visual needs at least two verified data points; use a photograph instead")
+        if not visual.get("period") or not visual.get("source"):
+            problems.append("a data visual needs its period and its source")
+        if visual.get("chart") == "donut":
+            try:
+                total = sum(float(d.get("value")) for d in data)
+            except (TypeError, ValueError):
+                total = 0
+            if abs(total - 100) > 0.5:
+                problems.append(f"the donut's parts total {total:g}, not 100")
+        shown += " " + " ".join(f"{d.get('value')}" for d in data) + " " + str(visual.get("title") or "")
     missing = _numbers(shown) - _numbers(" ".join(str(c.get("claim", "")) for c in claims))
     if missing:
         problems.append(f"numbers in the post that no claim covers: {', '.join(sorted(missing)[:6])}")
@@ -168,7 +208,7 @@ def to_item(post: dict, category: str) -> dict:
     return {"id": f"live-{str(post.get('id') or category)[:40]}", "pillar": category, "hook": str(post.get("hook", "")).strip(),
             "body": str(post.get("body", "")).strip(), "question": str(post.get("question", "")).strip(),
             "hashtags": [h for h in post.get("hashtags") or [] if isinstance(h, str)][:4], "card": post.get("card") or {},
-            "scene": str(post.get("scene") or ""), "facts": facts or "", "as_of": post.get("as_of"),
+            "scene": str(post.get("scene") or ""), "visual": post.get("visual") or {}, "facts": facts or "", "as_of": post.get("as_of"),
             "sources": sorted({s for c in claims for s in c.get("sources") or []})[:8]}
 
 
@@ -178,8 +218,14 @@ def verify_prompt(post: dict, day: date) -> str:
             "against the web yourself; do not trust the claim's wording. A claim is true only if you find it confirmed, with its figures "
             "and dates, by a credible source. Also say whether the hook is supported by the facts. Spend your searches evenly: one or two "
             "per claim, and never leave a claim unchecked. If you could not check a claim, mark it false and say so in the note.\n\n"
-            f"Hook: {post.get('hook')}\nClaims:\n" + "\n".join(f"{i + 1}. {c}" for i, c in enumerate(claims)) +
-            '\n\nReply with JSON only: {"claims": [{"n": 1, "true": true, "note": "short"}], "hook_supported": true}')
+            "Then read the post itself and answer four more questions strictly. sources_credible: does every market figure rest on a "
+            "primary or highly credible source? expectations_clear: is everything that is only expected (futures pricing, forecasts, a "
+            "bank's call) worded as an expectation, never as a decision taken? causes_supported: is every 'because' or cause in the post "
+            "stated by a credible source, with nothing that merely happened alongside presented as the cause? three_parts: does the post "
+            "say what happened, why it happened, and what a business leader should learn or do?\n\n"
+            f"Hook: {post.get('hook')}\nPost: {post.get('body')}\nClaims:\n" + "\n".join(f"{i + 1}. {c}" for i, c in enumerate(claims)) +
+            '\n\nReply with JSON only: {"claims": [{"n": 1, "true": true, "note": "short"}], "hook_supported": true, '
+            '"sources_credible": true, "expectations_clear": true, "causes_supported": true, "three_parts": true, "note": "short, if any is false"}')
 
 
 def write(category: str, day: date, covered: list, settings: dict, *, root: Path = ROOT, ask=call):
@@ -206,6 +252,9 @@ def write(category: str, day: date, covered: list, settings: dict, *, root: Path
         if len(rows) < len(post["claims"]) or bad or check.get("hook_supported") is not True:
             why = (bad[0].get("note") if bad else "") or "the hook is not supported, or a claim was left unchecked"
             return None, f"the second check did not confirm it: {str(why)[:160]}"
+        failed = [k for k in QUALITY if check.get(k) is not True]
+        if failed:
+            return None, f"the second check found: {', '.join(QUALITY[k] for k in failed)} ({str(check.get('note') or '')[:120]})"
         return to_item(post, category), ""
     except (LiveError, OSError, KeyError, TypeError) as e:
         return None, f"{type(e).__name__}: {str(e)[:160]}"
