@@ -21,7 +21,8 @@ INTRO_DIR = "inbox/intro"
 HELP = ("I can do these:\n/status – what went out today, what is paused, what is next\n/pause – stop all posting until you say /resume\n"
         "/resume – start posting again\n/comment <post text> – two LinkedIn comment drafts in your voice\n"
         "🎬 Send any Reel's video (screen recording or saved Reel, under 20 MB), caption optional – a Reel X-ray: why it works, what to copy\n"
-        "🎬 Send your 10-second intro with the caption intro <piece id> (e.g. intro 2026-11-07-sglearning-short) – saved for the splice\n"
+"🖼 Send the picture for a LinkedIn post as a PHOTO with the caption li <date> (e.g. li 2026-11-23)\n"
+                "🎬 Send your 10-second intro with the caption intro <piece id> (e.g. intro 2026-11-07-sglearning-short) – saved for the splice\n"
         "/help – this list\n\nAnswers can take 5–10 minutes: I check for commands every few minutes.")
 
 
@@ -80,6 +81,47 @@ def download(cfg: dict, file_id: str, out: Path, call=telegram._call) -> Path:
     return out
 
 
+# 21 Nov 2026: the founder makes the picture for his LinkedIn post himself; a photo captioned "li <date>" is that day's picture.
+LI_RE = re.compile(r"^\s*li\s+(\d{4}-\d{2}-\d{2})\s*$", re.I)
+LI_DIR = "inbox/linkedin"
+
+
+def li_day(message: dict) -> str:
+    m = LI_RE.match(message.get("caption") or "")
+    return m.group(1) if m else ""
+
+
+def picture_of(message: dict) -> dict:
+    """The largest size of a photo, or an image sent as a file; {} when the message carries neither."""
+    if message.get("photo"):
+        return max(message["photo"], key=lambda p: p.get("file_size") or p.get("width", 0))
+    d = message.get("document") or {}
+    return d if str(d.get("mime_type", "")).startswith("image/") else {}
+
+
+def li_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, change=git_change, fetch=download) -> str:
+    """The founder's picture for one LinkedIn post: saved as inbox/linkedin/<date>.jpg and pushed, replacing an earlier one for that day."""
+    from PIL import Image
+    day, pic = li_day(message), picture_of(message)
+    out = Path(root) / LI_DIR / f"{day}.jpg"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    raw = out.with_suffix(".raw")
+    fetch(cfg, pic["file_id"], raw, call)
+    try:
+        im = Image.open(raw).convert("RGB")
+        im.thumbnail((2400, 3000))
+        im.save(out, "JPEG", quality=92)
+    except Exception as e:
+        return f"🖼 That file is not a picture I can read ({str(e)[:80]}). Send it again as a photo."
+    finally:
+        raw.unlink(missing_ok=True)
+    try:
+        change(root, [str(out.relative_to(root))], [], f"linkedin picture for {day}")
+    except Exception as e:
+        return f"🖼 Picture for {day} downloaded but could not be saved to git: {str(e)[:160]}. Send it again in a few minutes."
+    return f"🖼 Picture for the LinkedIn post of {day} saved ({im.width} x {im.height}). It goes out with that morning's post at 08:10 WAT."
+
+
 def intro_id(message: dict) -> str:
     m = INTRO_RE.match(message.get("caption") or "")
     return m.group(1).lower() if m else ""
@@ -127,7 +169,7 @@ def xray_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, cha
 
 
 def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.send_message, change=git_change, day: date = None, now: float = None,
-         xray_fn=xray_reply, intro_fn=intro_reply) -> int:
+         xray_fn=xray_reply, intro_fn=intro_reply, li_fn=li_reply) -> int:
     """Answer every waiting command from the founder's chat, confirming each one so it is answered once. Returns how many."""
     day = day or lagos_today()
     now = time.time() if now is None else now
@@ -136,6 +178,10 @@ def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.sen
     for u in updates:
         m = u.get("message") or {}
         mine = str((m.get("chat") or {}).get("id")) == str(cfg["chat_id"])
+        if mine and picture_of(m) and li_day(m):
+            call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
+            send(cfg, li_fn(cfg, m, root, call=call, change=change)); handled += 1
+            continue
         if mine and xray.video_of(m) and intro_id(m):
             call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
             send(cfg, intro_fn(cfg, m, root, call=call, change=change)); handled += 1

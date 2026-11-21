@@ -33,7 +33,7 @@
    "Semicon",
    "leadership table"
   ],
-  "note": "Hand-written, research-backed posts for the founder's personal LinkedIn profile. English. Every number needs a 'facts' note naming the source. Pillars rotate model, finance, ai, world, founder. Topics he posted himself are in already_posted and refused by lint. Spec: docs/superpowers/specs/2026-10-19-linkedin-personal-lane-design.md"
+  "note": "Research-backed posts for the founder's personal LinkedIn profile, written to his brief (content/prompts/linkedin-brief.md, 21 Nov 2026): seven categories rotating over Mon/Wed/Fri, body 100-150 words, every number with a 'facts' note naming the source. The founder supplies the picture each evening (inbox/linkedin/<date>.jpg); without it the drawn card goes out. Topics he posted himself are in already_posted and refused by lint."
  },
  "items": [
   {
@@ -524,7 +524,7 @@
   },
   {
    "id": "cynefin",
-   "pillar": "model",
+   "pillar": "tools",
    "hook": "Most management mistakes come from using a complicated-problem method on a complex problem.",
    "body": "Dave Snowden's Cynefin framework, published in Harvard Business Review in 2007, sorts situations into four kinds.\n\nClear: the answer is known, follow the procedure. Complicated: an expert can analyse it, like a machine breakdown or a tax computation. Complex: cause and effect only show afterwards, like a market entry or a culture change. Chaotic: act first to stop the bleeding, then think.\n\nThe error that costs most money is treating complex as complicated. We hire the consultant, build the model, present the plan, and are surprised when the market does not read it.\n\nFor complex problems the method is different: run small safe experiments, watch what happens, amplify what works. Cheaper, slower, and far more often right.",
    "question": "Which decision on your desk is complex, and which are you treating as merely complicated?",
@@ -543,11 +543,12 @@
     ],
     "source": "Snowden and Boone, HBR November 2007"
    },
-   "facts": "Cynefin: Snowden & Boone 'A Leader's Framework for Decision Making' HBR Nov 2007; four domains (originally simple/complicated/complex/chaotic)"
+   "facts": "Cynefin: Snowden & Boone 'A Leader's Framework for Decision Making' HBR Nov 2007; four domains (originally simple/complicated/complex/chaotic)",
+   "scene": "a senior manager standing alone at a glass wall covered in handwritten sticky notes sorted into four loose groups, seen from behind, late-afternoon office light"
   },
   {
    "id": "amazon-ccc",
-   "pillar": "finance",
+   "pillar": "case",
    "hook": "Amazon's suppliers fund its growth. Its cash conversion cycle has been negative for years.",
    "body": "Cash conversion cycle: days of inventory plus days of receivables minus days of payables. For most manufacturers it is 60 to 120 days of cash tied up before a sale turns back into money.\n\nAmazon runs it negative, around minus 30 to minus 40 days in most years. Customers pay at checkout. Suppliers are paid weeks later. The business grows and the cash balance grows with it.\n\nYou do not need Amazon's scale to move in that direction. Collect at order for new customers. Negotiate payment terms that match your own collection cycle. Hold stock in days, not months.\n\nEvery day you cut from the cycle is cash you no longer have to borrow. At today's lending rates that is the cheapest money a CFO will ever find.",
    "question": "How many days is your cash conversion cycle, and when did you last compute it?",
@@ -568,11 +569,12 @@
     "stat_label": "days, Amazon's cash conversion cycle in a recent quarter",
     "source": "Marketplace Pulse analysis of Amazon filings"
    },
-   "facts": "Amazon CCC negative; Marketplace Pulse: -35 days in a recent Q3, about -38 days prior year; textbook 2012 example -41 days"
+   "facts": "Amazon CCC negative; Marketplace Pulse: -35 days in a recent Q3, about -38 days prior year; textbook 2012 example -41 days",
+   "scene": "a vast modern fulfilment warehouse seen from a high walkway, endless shelves and conveyor belts carrying plain brown parcels, a few workers small in the frame, cool morning light"
   },
   {
    "id": "big-four-pipeline",
-   "pillar": "ai",
+   "pillar": "leadership",
    "hook": "KPMG cut its UK graduate intake by 29 percent. Where will the partners of 2040 come from?",
    "body": "UK reporting in 2025: KPMG's graduate scheme shrank from 1,399 to 942. Deloitte cut 18 percent, EY 11 percent, PwC 6 percent. Job adverts for accountancy graduates fell 44 percent against 2023.\n\nThe stated reason is AI doing the entry-level work. The unstated one is partner profit in a soft consulting market.\n\nHere is the problem nobody in those firms has solved. The reconciliations, the schedules and the first drafts were tedious. They were also how every finance leader learned how the numbers connect.\n\nIf the machine does the junior work, training has to be redesigned, not removed. Juniors must review, challenge and explain from day one. The firms that do this keep their future partners. The others will have tools and nobody left who understands them.",
    "question": "How are you training people who will never do the work you learned on?",
@@ -593,11 +595,12 @@
     "stat_label": "KPMG UK graduate intake, 1,399 to 942",
     "source": "Telegraph figures reported June 2025; Indeed job data"
    },
-   "facts": "2025 UK: KPMG grad intake 1,399->942 (-29%), Deloitte 1,700->1,400 (-18%), EY 1,800->1,600 (-11%), PwC 1,600->1,500 (-6%); accountancy grad job ads -44% vs 2023 (Indeed/Adzuna)"
+   "facts": "2025 UK: KPMG grad intake 1,399->942 (-29%), Deloitte 1,700->1,400 (-18%), EY 1,800->1,600 (-11%), PwC 1,600->1,500 (-6%); accountancy grad job ads -44% vs 2023 (Indeed/Adzuna)",
+   "scene": "a nearly empty open-plan audit office at dusk, rows of desks with dark monitors, one young analyst working at a single lit screen"
   },
   {
    "id": "monsoon-economy",
-   "pillar": "world",
+   "pillar": "africa",
    "hook": "More than three quarters of India's rain falls in four months. That is the real budget assumption behind every rural sales forecast.",
    "body": "The southwest monsoon, June to September, delivers over 75 percent of India's annual rainfall. About 60 percent of farmland depends on it directly.\n\nAgriculture is roughly 18 percent of GDP but close to half of all employment. A weak monsoon does not just hurt farmers. It shows up a quarter later in tractors, two-wheelers, cement, fertiliser, gold and the credit book of every kirana store in a district town.\n\nYet most corporate forecasts carry a single national demand number with no weather scenario in it.\n\nThe fix is not a meteorologist. It is two cases in the plan: normal monsoon and deficient monsoon, with rural volume, collections and credit terms adjusted for each. The IMD forecast in April tells you which case you are in.",
    "question": "Does your annual plan have a monsoon scenario, or just a number?",
@@ -618,11 +621,12 @@
     "stat_label": "of India's annual rainfall from the southwest monsoon",
     "source": "India Meteorological Department; Infomerics 2025"
    },
-   "facts": "IMD/IITM: SW monsoon >75% of annual rainfall; Infomerics: ~60% of agriculture rain-fed, agriculture ~18% of GDP 2024, ~54% employment; Business Today 2026 ~46% employment"
+   "facts": "IMD/IITM: SW monsoon >75% of annual rainfall; Infomerics: ~60% of agriculture rain-fed, agriculture ~18% of GDP 2024, ~54% employment; Business Today 2026 ~46% employment",
+   "scene": "heavy monsoon rain sweeping across green Indian farmland with a loaded goods truck on a wet rural highway, dramatic grey sky"
   },
   {
    "id": "built-from-lagos",
-   "pillar": "founder",
+   "pillar": "africa",
    "hook": "I build for shopkeepers in India from a desk in Lagos. The distance turned out to be the product's best editor.",
    "body": "Both cities run on small trade. Both have shop owners who know their cash to the last note and distrust anything calling itself finance.\n\nDistance forces discipline. I cannot walk into a shop and explain a screen. The screen has to explain itself, in the words a trader uses, in the three seconds before she decides it is not for her.\n\nEvery feature goes through a test I could not have run from Mumbai: would this make sense to someone who has never met me and never will?\n\nConstraints are not the enemy of good products. They are what stops a founder from shipping his own assumptions.",
    "question": "What constraint in your work turned out to improve the result?",
@@ -642,7 +646,7 @@
   },
   {
    "id": "jobs-to-be-done",
-   "pillar": "model",
+   "pillar": "tools",
    "hook": "A fast-food chain tried for months to sell more milkshakes. Then it asked what job the milkshake was hired for.",
    "body": "Clayton Christensen's jobs to be done, from his Harvard work: customers do not buy products, they hire them to make progress in a situation.\n\nIn his milkshake study, nearly half the shakes were bought early in the morning by commuters, alone, for a long drive. The competition was not another milkshake. It was a banana, a bagel, boredom.\n\nOnce the job was clear the improvements were obvious: thicker shake, faster counter, a card to skip the queue.\n\nThe shopkeeper does not want accounting software. He wants to know whether he can pay the supplier on Friday. The CFO does not want a dashboard. She wants to walk into the board without a surprise. Describe the job and the product simplifies itself.",
    "question": "What job is your customer really hiring you for, and who else is applying?",
@@ -665,7 +669,7 @@
   },
   {
    "id": "inventory-carrying-cost",
-   "pillar": "finance",
+   "pillar": "leadership",
    "hook": "Holding ten crore rupees of stock costs two to three crore rupees a year. Most plants never see that invoice.",
    "body": "Inventory carrying cost, the commonly used planning figure across supply chain bodies: 20 to 30 percent of average inventory value per year.\n\nIt is made of pieces nobody bills together. Cost of the capital tied up. Warehouse space and handling. Insurance. Obsolescence and damage. Shrinkage. The capital cost alone is usually the largest.\n\nSo when a plant manager asks for \"a bit more safety stock\", the question is not whether the warehouse has room. It is whether the service improvement is worth a quarter of the stock's value every year.\n\nPut the carrying rate in the monthly pack next to the stock figure. Once people see the running cost, the stock conversation changes on its own.",
    "question": "What carrying rate does your company use, and is it in the monthly report?",
@@ -690,7 +694,7 @@
   },
   {
    "id": "dpdp-and-ai",
-   "pillar": "ai",
+   "pillar": "leadership",
    "hook": "Pasting a customer list into a public AI tool is a data transfer under the DPDP Act. The penalty ceiling is 250 crore rupees.",
    "body": "India's Digital Personal Data Protection Act, 2023 treats a business that decides how personal data is used as a Data Fiduciary. Notice, consent or a listed legitimate use, purpose limitation and reasonable security safeguards are its obligations. A breach must be reported to the Data Protection Board and to the affected people. The schedule sets a ceiling of 250 crore rupees for failing security safeguards.\n\nNow the finance team's habit: export the debtor ledger, paste into a chatbot, ask for a collections priority list. Names, phone numbers, amounts owed, straight to a third-party server, with no record of the transfer.\n\nThe fix is not banning AI. It is three rules. Anonymise before you paste. Use a tool under an enterprise agreement with no training on your data. Keep a log of what left the building. Then use the tool as much as you like.",
    "question": "Does anyone in your company know which customer data has already gone into a public AI tool?",
@@ -715,7 +719,7 @@
   },
   {
    "id": "india-two-time-zones",
-   "pillar": "world",
+   "pillar": "africa",
    "hook": "Scientists proposed a second time zone for India's northeast. It would save 20 million units of electricity a year. It was refused.",
    "body": "In 2018 CSIR's National Physical Laboratory proposed IST-II, one hour ahead, for states east of 89 degrees 52 minutes, from Assam to Arunachal. The sun rises there well before Gujarat, yet offices open at the same clock hour and daylight is wasted in the morning and bought back as electricity in the evening.\n\nThe estimated saving was 20 million kilowatt-hours a year, plus a workforce whose body clock matched its working day.\n\nIt was turned down. The main reason was railway safety: every crossing between zones is a chance for a timetable error.\n\nEvery standard has winners and losers. One national clock is simpler for the centre and costly for the east. The question for a company is the same: which of your standards is simple for head office and expensive for the plant?",
    "question": "Which standard in your organisation is quietly paid for by the people furthest from head office?",
@@ -740,7 +744,7 @@
   },
   {
    "id": "cima-case-lesson",
-   "pillar": "founder",
+   "pillar": "leadership",
    "hook": "The CIMA case study taught one habit I still use in every board paper: never give a recommendation without its implication.",
    "body": "Not: exit the product line. Instead: exit the product line, expect revenue to fall by the line's contribution, release the working capital it holds, and watch the key account that buys it alongside everything else.\n\nBoards do not pay for answers. They pay for the consequences you saw before they did.\n\nThe exam framework for this is simple: objective, position, proposal, implications, conclusion. It looks like exam technique. It is actually how a finance leader earns the right to be in the room when the decision is made rather than told about it afterwards.\n\nI have seen bright analysts stall for years because they presented conclusions without consequences. The fix takes one extra paragraph.",
    "question": "What was the last recommendation you made without stating what it would cost?",
@@ -761,7 +765,7 @@
   },
   {
    "id": "ooda-loop",
-   "pillar": "model",
+   "pillar": "tools",
    "hook": "The side that learns faster wins, even when it is smaller. A fighter pilot proved it, and every business proves it again.",
    "body": "John Boyd's OODA loop: observe, orient, decide, act, then observe again. His insight from air combat was that the pilot who completed the loop faster forced the other into reacting to a situation that had already changed.\n\nIn business the loop is the gap between a signal and a changed decision. Weekly numbers instead of monthly. A price revised in a day instead of a quarter. A product fix shipped before the complaint spreads.\n\nMost large companies have an OODA loop measured in quarters because every step needs a committee. A smaller competitor with a weekly loop sees the same market twelve times as often.\n\nThe question for a finance team is not how accurate the monthly report is. It is how many decisions changed because of it, and how soon.",
    "question": "How long does it take your organisation to go from a signal to a changed decision?",
@@ -783,7 +787,7 @@
   },
   {
    "id": "operating-leverage",
-   "pillar": "finance",
+   "pillar": "tools",
    "hook": "Same sales fall, two companies. One loses a little. One nearly dies. The difference was decided years earlier, in the cost structure.",
    "body": "Operating leverage: the share of your costs that does not move with sales.\n\nWorked example. Sales 100, variable costs 30, fixed costs 60, profit 10. Sales rise 10 percent: contribution rises 7, profit becomes 17, up 70 percent. Sales fall 10 percent: profit becomes 3, down 70 percent. A 10 percent swing in sales becomes a 70 percent swing in profit.\n\nNow the same company with fixed costs of 30 and variable costs of 60. The same 10 percent fall takes profit from 10 to 6. Painful, survivable.\n\nEvery long lease, every permanent hire, every own-fleet decision raises the first number. Before you sign, run the 10 percent down case. The structure you choose in good years decides how much bad year you can survive.",
    "question": "What does a 10 percent fall in sales do to your profit, in numbers?",
@@ -808,7 +812,7 @@
   },
   {
    "id": "data-before-models",
-   "pillar": "ai",
+   "pillar": "leadership",
    "hook": "AI on a messy ledger is a faster way to be wrong. The boring work comes first.",
    "body": "Before any model, three unglamorous questions.\n\nIs the chart of accounts consistent across entities, or does marketing sit in three different lines depending on who booked it? Are customer and supplier masters deduplicated, or does the same distributor exist four times with four credit limits? Does every plant book the same cost to the same line?\n\nFix those and even a spreadsheet looks intelligent. Skip them and the smartest model confidently reports nonsense, and because it is confident, people believe it.\n\nI have never seen an AI project in finance fail on the model. They fail on master data, every time, usually six months after the demo.",
    "question": "Which data mess does your team work around every month instead of fixing?",
@@ -829,7 +833,7 @@
   },
   {
    "id": "median-age",
-   "pillar": "world",
+   "pillar": "africa",
    "hook": "India's median age is about 29. China's is about 40. Japan's about 49. This is the biggest number in your hiring plan and it is not in it.",
    "body": "United Nations population estimates put India's median age near 29 years, against roughly 40 for China and 49 for Japan.\n\nThe phrase is demographic dividend. The honest version is demographic window. It pays only if the young people have jobs, skills and the health to work, and most projections see the window narrowing in the 2040s.\n\nFor a company operating in India the implication is practical. Your labour pool is young, mobile and cheap to hire but expensive to keep. Training, not recruitment, is the constraint. For a company selling in Japan or China, the customer is ageing and so is the workforce that serves them.\n\nDemography is slow, certain, and almost always missing from the five-year plan.",
    "question": "Does your five-year plan say anything about the age of the people who will work for you and buy from you?",
@@ -854,7 +858,7 @@
   },
   {
    "id": "score-not-statement",
-   "pillar": "founder",
+   "pillar": "leadership",
    "hook": "Shopkeepers do not read financial statements. They read signals. So I stopped building statements.",
    "body": "Is money coming in faster than it goes out? Who owes me and since when? Can I pay the supplier on Friday?\n\nThose are the three questions a trader asks a hundred times a month. No balance sheet answers them in under a minute.\n\nSo ScoreMyBiz turns the daily entries into one score and a handful of plain warnings. The accountant in me resisted for a year. A score felt unserious. The shopkeepers in the market settled it: they looked at the score and ignored the statements.\n\nThe lesson travels. In most companies the monthly pack is forty pages and the board reads three numbers. Find the three. Lead with them. Keep the forty pages for the people who ask.",
    "question": "If your business had to be summarised in one number each morning, which would you choose?",
@@ -875,7 +879,7 @@
   },
   {
    "id": "swiss-cheese",
-   "pillar": "model",
+   "pillar": "tools",
    "hook": "No serious accident has one cause. The Swiss cheese model explains why your controls fail together.",
    "body": "James Reason's model from 1990: every safety layer is a slice of cheese with holes. An accident happens only when the holes in several slices line up at once.\n\nA fraud in a finance department follows the same pattern. The maker-checker split was skipped because someone was on leave. The vendor master change needed no second approval. The bank reconciliation was two months behind. None alone would have let the money out. Together they did.\n\nThe useful discipline is not another slice. It is checking regularly whether the existing holes have drifted into line. Who is covering for whom this month? Which review has quietly become a formality?\n\nEvery control that is never tested is a slice you only think you have.",
    "question": "Which control in your business is currently covered by one person's good habits?",
@@ -898,7 +902,7 @@
   },
   {
    "id": "southwest-hedging",
-   "pillar": "finance",
+   "pillar": "case",
    "hook": "Southwest's fuel hedges earned 1.3 billion dollars in 2008. By December the same book was a 992 million dollar liability.",
    "body": "Southwest Airlines hedged jet fuel further ahead than any rival. When oil spiked in 2008 its derivatives settled for 1.3 billion dollars of gains, cash basis, before profit sharing and tax.\n\nThen oil collapsed. By 31 December 2008 the remaining hedge book stood at a net liability of about 992 million dollars, and the airline cut its hedged position to around 10 percent of expected consumption, locking in losses it would pay through 2011.\n\nBoth halves are the lesson. A hedge is not a bet that prices rise. It is a payment to make the future survivable whichever way it moves. If your treasury describes hedge gains as profit, it will one day describe hedge losses as a mistake, and the board will stop hedging at exactly the wrong moment.\n\nHedge to survive. Never to win.",
    "question": "Does your board see hedging results as insurance or as trading profit?",
@@ -923,7 +927,7 @@
   },
   {
    "id": "decision-test-for-ai",
-   "pillar": "ai",
+   "pillar": "tools",
    "hook": "Before buying any AI tool for finance, finish this sentence: the decision that changes is...",
    "body": "If nobody in the room can finish it, the tool is a demo with a subscription.\n\nExamples that pass. Pricing reviewed weekly instead of yearly because the margin analysis takes an hour, not a month. Credit limits set on live payment behaviour instead of last year's audited accounts. Stock reordered on actual sell-through instead of a planner's instinct.\n\nExamples that fail. A dashboard that is prettier than the old one. A chatbot that answers questions nobody asked.\n\nThe research is consistent: productivity gains show up where the tool shortens a specific loop. So name the loop. Then measure, as the developer study showed, because felt speed and real speed are different things.",
    "question": "Which decision in your company would you most like to make faster, and what stops you today?",
@@ -944,7 +948,7 @@
   },
   {
    "id": "apapa-port",
-   "pillar": "world",
+   "pillar": "africa",
    "hook": "It can cost more than 4,000 dollars to move a container 20 kilometres from Lagos port. That is roughly the price of shipping it from China.",
    "body": "Apapa and Tin Can, the ports that feed Nigeria, were built for about 1,500 trucks a day and have handled over 5,000. The African Centre for Supply Chain estimated the congestion costs the economy 14.2 billion dollars a year. Clearing agents have reported four to six weeks for a container to get in.\n\nFor a finance team the lesson is in the landed cost sheet. The ocean freight line is the one everyone negotiates. The last 20 kilometres is the line that quietly doubles it.\n\nI have watched budgets built on the China to Lagos rate collapse on the Apapa to Ikeja rate.\n\nWherever you operate: find the leg of your supply chain nobody has priced, because it is the one the plan assumes is free.",
    "question": "Which leg of your supply chain is missing from the landed cost sheet?",
@@ -969,7 +973,7 @@
   },
   {
    "id": "nobody-reads-the-pl",
-   "pillar": "founder",
+   "pillar": "leadership",
    "hook": "In the market nobody reads your profit and loss. Everyone knows whether you paid on the day.",
    "body": "Reputation in small trade is a payment history. Suppliers extend credit to the shop that settles on the agreed day. Customers come back to the trader who never short-changed them. The whole thing runs on memory and word of mouth.\n\nThat is the oldest credit score in the world, and until recently nobody could see it except the people in the street.\n\nSection 43B(h), UPI records, TReDS: India is slowly turning that street-level reputation into something a bank can read. The shopkeeper who paid on the day for twenty years finally has a way to prove it.\n\nEverything I build tries to make that record visible to the person who earned it. The data was always there. It was just never written down.",
    "question": "Who do you trust in business because of twenty years of paying on time, with no paperwork at all?",
@@ -991,7 +995,7 @@
   },
   {
    "id": "sunk-cost-concorde",
-   "pillar": "model",
+   "pillar": "failure",
    "hook": "Britain and France kept funding Concorde for years after both knew it would never pay. Economists named a fallacy after it.",
    "body": "The sunk cost fallacy: continuing because of what has already been spent, not because of what will come back. The Concorde programme became its textbook case, kept alive through the 1960s and 70s by governments unwilling to write off the money already gone.\n\nEvery plant has a Concorde. The machine that never ran right and got one more overhaul. The software that needs one more module. The hire everyone is still waiting to see.\n\nThe money is gone whether you continue or stop. The only question is forward: from today, with what we now know, is this the best use of the next rupee?\n\nA useful habit from capital review committees: ask the sponsor to re-propose the project as if it were new, with the remaining cost and the expected return. Most Concordes do not survive the re-proposal.",
    "question": "What are you still funding mainly because you already funded it?",
@@ -1010,11 +1014,12 @@
     ],
     "source": "Arkes and Blumer, 1985; Concorde programme history"
    },
-   "facts": "Concorde: Anglo-French programme, commercial service 1976-2003, often called the Concorde fallacy (Dawkins & Carlisle 1976); Arkes & Blumer 1985 sunk cost psychology"
+   "facts": "Concorde: Anglo-French programme, commercial service 1976-2003, often called the Concorde fallacy (Dawkins & Carlisle 1976); Arkes & Blumer 1985 sunk cost psychology",
+   "scene": "a sleek white delta-wing supersonic airliner parked alone on an empty airfield apron at sunset, no markings, long shadows"
   },
   {
    "id": "altman-z",
-   "pillar": "finance",
+   "pillar": "tools",
    "hook": "Before you extend credit to a distributor, four ratios will tell you more than his bank reference.",
    "body": "Edward Altman's Z-score has predicted corporate distress since 1968. The version for private, non-manufacturing companies and emerging markets needs only the balance sheet and the profit and loss:\n\n6.56 times working capital over total assets, plus 3.26 times retained earnings over total assets, plus 6.72 times operating profit over total assets, plus 1.05 times book equity over total liabilities.\n\nBelow 1.1 is the distress zone. Above 2.6 is safe. Between them is grey, where the model is least reliable and your own judgment matters most.\n\nIt is not a crystal ball. Asset-light businesses score oddly, and a single bad year can swing it. But as a first screen before a credit limit, it beats a reference letter and a handshake every time. Run it once a year on your ten largest customers.",
    "question": "When did you last recompute the credit risk of your largest customer, rather than assume it?",
@@ -1040,7 +1045,7 @@
   },
   {
    "id": "numbers-versus-reality",
-   "pillar": "ai",
+   "pillar": "leadership",
    "hook": "The reconciliation no machine can do is the one between the ledger and the warehouse floor.",
    "body": "The system says stock is worth a certain amount. A walk through the warehouse says half of it has not moved since last year and the rest is damp.\n\nThe ledger says the customer owes you. The sales manager knows he is about to close his shop.\n\nMatching numbers to numbers is now cheap. Bank to ledger, invoice to order, intercompany to intercompany: let the machine do all of it, and audit its exceptions.\n\nMatching numbers to the world is the job that remains. It needs someone who walks the floor, calls the customer, and asks the operator why the scrap bin is full. The finance leaders who will be valuable in ten years are the ones who treat the walk as the work, not as a break from it.",
    "question": "When did a walk through the plant last change a number in your report?",
@@ -1061,7 +1066,7 @@
   },
   {
    "id": "nigeria-subsidy-shock",
-   "pillar": "world",
+   "pillar": "africa",
    "hook": "On 29 May 2023 Nigeria ended its petrol subsidy. In two months the pump price more than tripled. Businesses learned pricing fast.",
    "body": "Petrol went from roughly 195 naira a litre to 617 by July. The subsidy had cost about 10 billion dollars in the previous year, so the removal was inevitable. The speed was not.\n\nWhat happened inside companies is the useful part. Businesses that knew their fuel share of cost per unit repriced within days. Businesses that carried fuel inside a general overhead line discovered their margins had vanished a quarter later.\n\nThe same shock arrives elsewhere as a currency move, a tariff, a freight spike or a power tariff revision.\n\nPreparation is one table: each major input, its share of unit cost, and the price change that would erase the margin. If you cannot fill it in from memory, fill it in this week.",
    "question": "Which input could triple in price tomorrow, and do you know its share of your unit cost?",
@@ -1086,7 +1091,7 @@
   },
   {
    "id": "three-reconciliations",
-   "pillar": "founder",
+   "pillar": "leadership",
    "hook": "As a plant finance head, three reconciliations saved me more money than every cost-cutting drive combined.",
    "body": "One: physical stock to book, every month, by a team that does not report to the stores manager. Half the write-offs I ever found started as a variance somebody had been carrying forward.\n\nTwo: production output to power and raw material consumed. When yield moves and nobody can explain it, something is leaving the plant through a gate that is not the dispatch gate.\n\nThree: customer ledger to the customer's own statement, quarterly, for the ten largest accounts. Disputes that surface at year end were visible in month two.\n\nNone of this is clever. All of it is boring. The discipline is doing it when nothing seems wrong, because the month it finds something is the month that pays for all the others.",
    "question": "Which reconciliation in your business is done only when something already looks wrong?",
