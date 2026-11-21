@@ -28,6 +28,8 @@ from .config import ROOT
 MODEL = os.environ.get("LINKEDIN_LIVE_MODEL", "claude-opus-5-5")
 API = "https://api.anthropic.com/v1/messages"
 SEARCH = {"type": "web_search_20260209", "name": "web_search", "max_uses": 8}
+CHECK_SEARCHES = 20                    # 21 Nov 2026: the second check ran out of its 8 searches before it had confirmed every claim
+MAX_CLAIMS = 5                         # a short post rests on a few facts; more than this cannot be checked properly in one pass
 MAX_TURNS = 4                          # a long search turn can pause; it is resumed this many times at most
 FRESH_DAYS = 4                         # a markets figure older than this is not "current"
 BRIEF = "content/prompts/linkedin-brief.md"
@@ -43,7 +45,7 @@ class LiveError(Exception):
     pass
 
 
-def call(messages: list, system: str, key: str = None, model: str = MODEL) -> dict:
+def call(messages: list, system: str, key: str = None, model: str = MODEL, searches: int = SEARCH["max_uses"]) -> dict:
     """One Messages request with web search, resumed while the turn is paused. Returns {"text", "urls"}: the final text and every
     page address the search returned."""
     key = key or os.environ.get("ANTHROPIC_API_KEY")
@@ -51,7 +53,7 @@ def call(messages: list, system: str, key: str = None, model: str = MODEL) -> di
         raise LiveError("ANTHROPIC_API_KEY is not set")
     messages, urls, text = list(messages), set(), ""
     for _ in range(MAX_TURNS):
-        body = {"model": model, "max_tokens": 16000, "system": system, "tools": [SEARCH], "messages": messages,
+        body = {"model": model, "max_tokens": 16000, "system": system, "tools": [{**SEARCH, "max_uses": searches}], "messages": messages,
                 "output_config": {"effort": "high"}}
         req = urllib.request.Request(API, data=json.dumps(body).encode(), method="POST",
                                      headers={"content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01"})
@@ -115,6 +117,8 @@ def write_prompt(category: str, day: date, covered: list) -> str:
             '"scene": "one photorealistic scene for the picture: a place or object, no text, no logos, no real person", '
             '"as_of": "YYYY-MM-DD, the date of the latest figure in the post", '
             '"claims": [{"claim": "one checkable statement exactly as the post makes it, with its figures", "sources": ["url", "url"]}]}\n'
+            f"At most {MAX_CLAIMS} claims: build the post on a few solid facts, and state each claim in one plain sentence so that a second "
+            "reader can confirm it with one search. "
             "Every number in the hook, the body and the card must appear in a claim, and every source must be a page your search returned.")
 
 
@@ -133,6 +137,8 @@ def gate(post: dict, urls: set, category: str, day: date, settings: dict) -> lis
     claims = post.get("claims") or []
     if not claims:
         problems.append("no claims listed")
+    if len(claims) > MAX_CLAIMS:
+        problems.append(f"{len(claims)} claims: keep the post to at most {MAX_CLAIMS} checkable facts")
     for c in claims:
         srcs = [s for s in (c.get("sources") or []) if isinstance(s, str)]
         unseen = [s for s in srcs if s not in urls]
@@ -170,7 +176,8 @@ def verify_prompt(post: dict, day: date) -> str:
     claims = [c.get("claim") for c in post.get("claims") or []]
     return (f"Today is {day:%d %B %Y}. A post is about to be published under a finance executive's name. Check each claim below "
             "against the web yourself; do not trust the claim's wording. A claim is true only if you find it confirmed, with its figures "
-            "and dates, by a credible source. Also say whether the hook is supported by the facts.\n\n"
+            "and dates, by a credible source. Also say whether the hook is supported by the facts. Spend your searches evenly: one or two "
+            "per claim, and never leave a claim unchecked. If you could not check a claim, mark it false and say so in the note.\n\n"
             f"Hook: {post.get('hook')}\nClaims:\n" + "\n".join(f"{i + 1}. {c}" for i, c in enumerate(claims)) +
             '\n\nReply with JSON only: {"claims": [{"n": 1, "true": true, "note": "short"}], "hook_supported": true}')
 
@@ -193,7 +200,7 @@ def write(category: str, day: date, covered: list, settings: dict, *, root: Path
         if problems:
             return None, "; ".join(problems[:3])
         check = _json(ask([{"role": "user", "content": verify_prompt(post, day)}],
-                          "You are a careful fact checker. Search before you answer.")["text"])
+                          "You are a careful fact checker. Search before you answer.", searches=CHECK_SEARCHES)["text"])
         rows = check.get("claims") or []
         bad = [r for r in rows if r.get("true") is not True]
         if len(rows) < len(post["claims"]) or bad or check.get("hook_supported") is not True:
