@@ -542,14 +542,30 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         return 1
 
 
-def main(argv=None) -> int:
+# 20 Nov 2026: GitHub fired the evening safety-net slots five to eight hours late, after midnight in Lagos; the engine took that for the new
+# day and posted at about 00:10 Lagos (04:40 India) four days running, so the real 15:37 slot found the day done. A run without a date
+# posts only from its slot onward; a late-firing run before that does nothing and the day waits for its own time.
+APP_EARLIEST = (14, 30)                      # Lagos; the slot is 15:37 (20:07 India)
+
+
+def too_early(now_utc: datetime, earliest: tuple) -> bool:
+    """True while the Lagos clock (UTC+1, no summer time) has not reached `earliest` (hour, minute) today."""
+    local = now_utc.astimezone(timezone(timedelta(hours=1)))
+    return (local.hour, local.minute) < tuple(earliest)
+
+
+def main(argv=None, now: datetime | None = None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", choices=("render", "prepare", "post"), default="render")
     ap.add_argument("--date", help="YYYY-MM-DD (Lagos date); default: today in Lagos")
     args = ap.parse_args(argv)
-    day = date.fromisoformat(args.date) if args.date else lagos_date(datetime.now(timezone.utc))
+    now = now or datetime.now(timezone.utc)
+    day = date.fromisoformat(args.date) if args.date else lagos_date(now)
     if args.mode != "post":
         return run(args.mode, day)
+    if not args.date and too_early(now, APP_EARLIEST):
+        print(f"{day}: before {APP_EARLIEST[0]:02d}:{APP_EARLIEST[1]:02d} Lagos, a late-firing run; nothing posted, the day waits for its slot")
+        return 0
     if not is_post_day(day):
         print(f"{day}: not an app post day (founder, 24 Oct 2026: 2-3 a week); nothing posted")
         return 0

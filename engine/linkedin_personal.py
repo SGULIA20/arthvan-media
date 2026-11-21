@@ -352,12 +352,23 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     return 0
 
 
+LINKEDIN_EARLIEST = (8, 0)                   # Lagos; the slot is 08:10
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("mode", nargs="?", choices=["render", "prepare", "post"], default="render")
     ap.add_argument("--date", default="")
     a = ap.parse_args(argv)
     day = date.fromisoformat(a.date) if a.date else lagos_today()
+    if a.mode == "post" and not a.date:
+        from datetime import datetime, timezone
+        from .run_daily import too_early
+        # 20 Nov 2026: the daily-post catch-up step, fired late by GitHub, published this at about 00:15 Lagos on 18 and 20 Nov, when
+        # nobody is awake to answer the first comments; the slot is 08:10 Lagos (founder, 25 Oct 2026)
+        if too_early(datetime.now(timezone.utc), LINKEDIN_EARLIEST):
+            print(f"{day}: before {LINKEDIN_EARLIEST[0]:02d}:{LINKEDIN_EARLIEST[1]:02d} Lagos; nothing posted, the day waits for its slot")
+            return 0
     return run(a.mode, day)
 
 
