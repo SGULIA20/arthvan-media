@@ -21,16 +21,27 @@ from .config import ROOT, load_global
 from .linkedin import LinkedInError
 from .lint import _phrase_pattern
 
-PILLARS = ("model", "finance", "ai", "world", "founder")
-LABELS = {"model": "Business model", "finance": "Finance", "ai": "AI for finance", "world": "World", "founder": "Founder notes"}
-ACCENTS = {"model": "#F5B700", "finance": "#5EEAD4", "ai": "#C4B5FD", "world": "#FF9A7A", "founder": "#7DD3FC"}
+# founder, 21 Nov 2026: the lane follows his own brief (content/prompts/linkedin-brief.md): seven categories of real companies, real
+# numbers and management lessons, rotating over the three weekly slots. The five older names stay valid for posts already out.
+CYCLE = ("case", "markets", "tools", "news", "leadership", "africa", "failure")
+LIVE = ("markets", "news")           # need same-day facts: written the evening before behind a fact gate, never taken from the bank
+CYCLE_START = date(2026, 11, 23)     # the first post under the brief (a Monday)
+PILLARS = CYCLE + ("model", "finance", "ai", "world", "founder")
+LABELS = {"case": "Case study", "markets": "Markets", "tools": "Management tools", "news": "Business news", "leadership": "Leadership",
+          "africa": "Africa and emerging markets", "failure": "Business failures",
+          "model": "Business model", "finance": "Finance", "ai": "AI for finance", "world": "World", "founder": "Founder notes"}
+ACCENTS = {"case": "#F5B700", "markets": "#5EEAD4", "tools": "#C4B5FD", "news": "#FF9A7A", "leadership": "#7DD3FC", "africa": "#86EFAC",
+           "failure": "#FCA5A5", "model": "#F5B700", "finance": "#5EEAD4", "ai": "#C4B5FD", "world": "#FF9A7A", "founder": "#7DD3FC"}
 CHANNEL = "linkedin_personal"
 BANK = ROOT / "content" / "linkedin_personal.json"
 TEMPLATE = ROOT / "engine" / "templates" / "linkedin_card.html"
 SIZE = (1080, 1350)
 MAX_HOOK, MAX_BODY, MAX_POST = 140, 1000, 1500     # hook: what a phone shows before "...see more" (founder, 25 Oct 2026)
 POST_WEEKDAYS = (0, 2, 4)           # Mon, Wed, Fri (Lagos) only (founder, 29 Oct 2026: daily posts split the same ~360 readers, impressions fell 333 -> 31 a day)
-DOC_WEEKDAYS = (2,)                 # Wednesday a swipeable document, Mon/Fri the single picture (pictures led 23-29 Oct: 139/138 vs documents 59/22)
+DOC_WEEKDAYS = ()                   # 21 Nov 2026: no documents; his 25 Oct-21 Nov export gave pictures 127 impressions a post, documents 64
+NEXT = "content/linkedin_next.json"  # the post chosen the evening before, so the founder's picture is made for the post that goes out
+PICTURE_DIR = "inbox/linkedin"       # his picture for a day: inbox/linkedin/<YYYY-MM-DD>.jpg (the bot saves it from a photo captioned "li <date>")
+BODY_WORDS = (100, 150)              # founder, 21 Nov 2026: "word limit should be similar as we posted so far" (the bank runs 107-144)
 MAX_TITLE, MAX_POINTS, MAX_POINT, MIN_SLIDES, MAX_SLIDES = 60, 5, 70, 2, 6
 EM_DASH = "—"
 _DIGIT = re.compile(r"\d")
@@ -102,6 +113,9 @@ def lint_personal(item: dict, settings: dict) -> list:
         problems.append(f"hook longer than {MAX_HOOK} characters")
     if len(str(item.get("body") or "")) > MAX_BODY:
         problems.append(f"body longer than {MAX_BODY} characters")
+    words = len(str(item.get("body") or "").split())
+    if item.get("pillar") in CYCLE and not BODY_WORDS[0] <= words <= BODY_WORDS[1]:
+        problems.append(f"body is {words} words, need {BODY_WORDS[0]} to {BODY_WORDS[1]}")
     if not str(item.get("question") or "").rstrip().endswith("?"):
         problems.append("question must end with a question mark")
     tags = _tags(item, settings)
@@ -172,6 +186,117 @@ def pick(day: date, items: list, log: Path) -> dict:
     return order(items, log)[0]
 
 
+def post_days_between(start: date, day: date) -> int:
+    """How many posting days lie from `start` up to but not including `day`."""
+    n, d = 0, start
+    while d < day:
+        n += d.weekday() in POST_WEEKDAYS
+        d += timedelta(days=1)
+    return n
+
+
+def category_for(day: date):
+    """The brief's category for a posting day, or None before the brief began."""
+    return None if day < CYCLE_START else CYCLE[post_days_between(CYCLE_START, day) % len(CYCLE)]
+
+
+def choose(day: date, items: list, log: Path, settings: dict, root: Path = ROOT):
+    """The post for `day`: the one fixed the evening before (so the founder's picture matches), else the first unused bank post of the
+    day's category that passes the checks, else the first unused post of any bank category. None when nothing passes."""
+    chosen = planned(root, day)
+    if chosen and not lint_personal(chosen, settings):
+        return chosen
+    cat = category_for(day)
+    queue = order(items, log)
+    bank = [i for i in queue if i.get("pillar") not in LIVE]            # a live category is written that evening, never taken from the bank
+    for cand in [i for i in bank if i.get("pillar") == cat] + [i for i in bank if i.get("pillar") != cat]:
+        problems = lint_personal(cand, settings)
+        if not problems:
+            return cand
+        print(f"lint rejected {cand['id']}: {problems}")
+    return None
+
+
+def planned(root: Path, day: date):
+    """The post saved for `day` by the evening run: a bank id, or a whole post written that evening."""
+    try:
+        data = json.loads((Path(root) / NEXT).read_text())
+    except (FileNotFoundError, ValueError):
+        return None
+    if data.get("date") != day.isoformat():
+        return None
+    if isinstance(data.get("item"), dict):
+        return data["item"]
+    return next((i for i in load_personal(root)["items"] if i["id"] == data.get("item_id")), None)
+
+
+def founder_picture(root: Path, day: date):
+    p = Path(root) / PICTURE_DIR / f"{day.isoformat()}.jpg"
+    return p if p.exists() and p.stat().st_size > 10_000 else None
+
+
+def image_prompt(item: dict) -> str:
+    """The picture prompt sent to the founder with the post (his brief, section 6): photorealistic, 4:5, almost no text, no logos."""
+    c = (cards(item) or [{}])[0] if (item.get("card") or item.get("slides")) else {}
+    scene = item.get("scene") or f"one clear, concrete scene that shows the subject of this post: {c.get('title') or item['hook']}"
+    return (f"Photorealistic editorial business photograph, 4:5 portrait, 1200 x 1500 pixels. Scene: {scene}. "
+            "Professional LinkedIn look: clean composition, one strong focal point, natural light, real textures, shallow depth of field. "
+            "No text, no captions, no numbers, no watermark, no company logos or brand marks, no recognisable real person. "
+            "Not a collage, not an infographic, no decorative elements.")
+
+
+def next_post_day(now_utc: datetime) -> date:
+    """The next posting day whose 08:00 Lagos is still ahead."""
+    local = now_utc.astimezone(timezone(timedelta(hours=1)))
+    d = local.date() if (local.hour, local.minute) < LINKEDIN_EARLIEST else local.date() + timedelta(days=1)
+    while d.weekday() not in POST_WEEKDAYS:
+        d += timedelta(days=1)
+    return d
+
+
+def evening(now_utc: datetime, *, root: Path = ROOT, deps=None, bank: dict = None) -> int:
+    """The evening before a post: fix tomorrow's post, save it, and send the founder its text and picture prompt, once."""
+    deps = deps or Deps()
+    root = Path(root)
+    day = next_post_day(now_utc)
+    local = now_utc.astimezone(timezone(timedelta(hours=1)))
+    if (day - local.date()).days > 1:
+        print(f"next post is {day}: too early to ask for its picture")
+        return 0
+    deps.sync_repo()
+    try:
+        state = json.loads((root / NEXT).read_text())
+    except (FileNotFoundError, ValueError):
+        state = {}
+    if state.get("date") == day.isoformat() and state.get("asked"):
+        print(f"{day}: the picture was already asked for")
+        return 0
+    bank = bank or load_personal(root)
+    log = root / "logs" / "posts.jsonl"
+    cat, item, note = category_for(day), None, ""
+    if cat in LIVE:                                               # markets, news: researched and written now, used only past the fact gate
+        used = used_ids(log)
+        covered = [i["hook"] for i in bank["items"] if i["id"] in used] + [e.get("hook", "") for e in _entries(log) if e.get("hook")]
+        item, why = deps.write_live(cat, day, covered, bank["settings"])
+        if item is None:
+            note = f"\n\nℹ️ A {LABELS[cat].lower()} post was due, but the fact check did not pass ({why}). A ready post from the bank goes out instead."
+    item = item or choose(day, bank["items"], log, bank["settings"], root)
+    if item is None:
+        deps.notify(f"LinkedIn {day}: no post passes the checks, nothing is planned.")
+        return 1
+    text, tags = build_text(item, bank["settings"])
+    in_bank = any(i["id"] == item["id"] for i in bank["items"])
+    state = {"date": day.isoformat(), "asked": True, **({"item_id": item["id"]} if in_bank else {"item": item})}
+    (root / NEXT).write_text(json.dumps(state, ensure_ascii=False, indent=1) + "\n")
+    deps.git_publish([NEXT], f"linkedin: post planned for {day}")
+    sources = ("\n\nSources checked:\n" + "\n".join(item["sources"][:4])) if item.get("sources") else ""
+    deps.notify(f"🖼 LinkedIn post for {day:%a %d %b}, 08:10 WAT ({LABELS[item['pillar']]})\n\n{text}\n\n{' '.join(tags)}{sources}{note}")
+    deps.notify(f"🖼 Picture for the LinkedIn post of {day:%a %d %b}\n\nPrompt:\n{image_prompt(item)}\n\n"
+                f"Send it to this bot as a PHOTO with the caption:\nli {day.isoformat()}\n\n"
+                f"By 08:00 WAT. Without it the post still goes out, with the drawn card.")
+    return 0
+
+
 def day_status(log: Path, day: date):
     status = None
     for e in _entries(log):
@@ -229,6 +354,11 @@ def _sync_repo() -> None:
     sync_repo()
 
 
+def _write_live(category: str, day: date, covered: list, settings: dict):
+    from . import linkedin_live
+    return linkedin_live.write(category, day, covered, settings)
+
+
 @dataclass
 class Deps:
     render_cards: Callable = render_cards
@@ -239,6 +369,7 @@ class Deps:
     notify: Callable = field(default_factory=lambda: notify.send)
     sync_repo: Callable = _sync_repo
     sleep: Callable = time.sleep
+    write_live: Callable = field(default_factory=lambda: _write_live)
 
 
 PUSH_TRIES = 3
@@ -294,19 +425,15 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         if day_status(log, day) == "published":
             print(f"{day}: personal post already out, nothing to do")
             return 0
-    item = None
-    for cand in order(items, log):
-        problems = lint_personal(cand, settings)
-        if not problems:
-            item = cand
-            break
-        print(f"lint rejected {cand['id']}: {problems}")
+    item = choose(day, items, log, settings, root)
     if item is None:
         print("every item in the bank failed lint")
         if mode == "post":
             deps.notify("LinkedIn personal post: nothing went out today, every item in the bank failed lint.")
         return 1
     entry = {"date": day.isoformat(), "channel": CHANNEL, "item": item["id"]}
+    if str(item["id"]).startswith("live-"):
+        entry["hook"] = item["hook"]                              # a live post is not in the bank: its subject is kept here against repeats
 
     def failed(what: str, e: Exception) -> int:
         print(f"{what} failed: {type(e).__name__}: {e}")
@@ -316,12 +443,16 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
             deps.notify(f"LinkedIn personal post failed today ({item['id']}), {what}: {str(e)[:200]}")
         return 1
 
-    try:
-        paths = deps.render_cards(item, root / "out" / "linkedin" / day.isoformat())
-    except Exception as e:                                    # noqa: BLE001  a blank picture or a Chromium crash
-        return failed("picture", e)
+    mine = founder_picture(root, day)
+    if mine:                                                  # 21 Nov 2026: the founder's own picture, made from the prompt sent the evening before
+        paths = [mine]
+    else:
+        try:
+            paths = deps.render_cards(item, root / "out" / "linkedin" / day.isoformat())
+        except Exception as e:                                # noqa: BLE001  a blank picture or a Chromium crash
+            return failed("picture", e)
     text, tags = build_text(item, settings)
-    alts = [alt_text(c) for c in cards(item)]
+    alts = [alt_text(c) for c in cards(item)][:len(paths)]
     print(f"{day} {item['id']} ({item['pillar']}): {len(paths)} picture(s)\n\n{text}\n\n{' '.join(tags)}\n")
     if mode != "post":
         return 0
@@ -338,6 +469,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
             post_id = deps.post_images(token, urn, text, tags, paths, alts)
         except Exception as e:                                # noqa: BLE001  LinkedInError, or an odd API body (KeyError)
             return failed("post", e)
+    fmt = "founder-picture" if mine and fmt == "picture" else fmt
     _append(log, dict(entry, status="published", id=post_id, format=fmt))
     saved = _save_log(deps, log, f"log: {CHANNEL} published {day}")
     url = post_url(post_id)
@@ -357,12 +489,24 @@ LINKEDIN_EARLIEST = (8, 0)                   # Lagos; the slot is 08:10
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("mode", nargs="?", choices=["render", "prepare", "post"], default="render")
+    ap.add_argument("mode", nargs="?", choices=["render", "prepare", "post", "evening", "trial"], default="render")
+    ap.add_argument("--category", choices=LIVE, default="markets", help="trial: which live category to write a sample of")
     ap.add_argument("--date", default="")
     a = ap.parse_args(argv)
+    if a.mode == "evening":
+        return evening(datetime.now(timezone.utc))
+    if a.mode == "trial":                                          # a sample of a live post, sent to the founder; nothing is saved or posted
+        bank, today = load_personal(), lagos_today()
+        item, why = _write_live(a.category, today, [i["hook"] for i in bank["items"]][:25], bank["settings"])
+        if item is None:
+            notify.send(f"🧪 LinkedIn {a.category} sample: the fact check did not pass, so on a real evening the bank post would go out.\nReason: {why}")
+            return 0
+        text, tags = build_text(item, bank["settings"])
+        notify.send(f"🧪 SAMPLE LinkedIn {a.category} post (not posted, not saved)\n\n{text}\n\n{' '.join(tags)}\n\nSources checked:\n"
+                    + "\n".join(item["sources"][:4]) + f"\n\nPicture prompt:\n{image_prompt(item)}")
+        return 0
     day = date.fromisoformat(a.date) if a.date else lagos_today()
     if a.mode == "post" and not a.date:
-        from datetime import datetime, timezone
         from .run_daily import too_early
         # 20 Nov 2026: the daily-post catch-up step, fired late by GitHub, published this at about 00:15 Lagos on 18 and 20 Nov, when
         # nobody is awake to answer the first comments; the slot is 08:10 Lagos (founder, 25 Oct 2026)

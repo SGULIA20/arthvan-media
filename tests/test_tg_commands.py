@@ -141,3 +141,19 @@ def test_an_intro_video_is_saved_under_its_piece_id_not_xrayed(tmp_path):
 def test_an_intro_too_big_for_the_bot_is_refused(tmp_path):
     m = _video_update(9, size=25_000_000, caption="intro 2026-11-07-sglearning-short")["message"]
     assert tc.intro_reply(CFG, m, tmp_path, fetch=lambda *a: None, change=lambda *a: None).startswith("🎬 That intro is over 20 MB")
+
+
+def test_a_photo_captioned_li_and_a_date_is_saved_as_that_days_linkedin_picture(tmp_path):
+    """Founder, 21 Nov 2026: he makes the picture for his LinkedIn post each evening."""
+    from PIL import Image
+    from engine import tg_commands as tg
+    msg = {"chat": {"id": 7}, "caption": "li 2026-11-23", "photo": [{"file_id": "s", "file_size": 10}, {"file_id": "big", "file_size": 900}]}
+    assert tg.li_day(msg) == "2026-11-23" and tg.picture_of(msg)["file_id"] == "big"
+    assert tg.li_day({"caption": "intro 2026-11-23-arthvan-short"}) == "" and tg.picture_of({"text": "hi"}) == {}
+    changed = []
+    def fetch(cfg, file_id, out, call):
+        Image.new("RGB", (3000, 3750), "navy").save(out, "PNG"); return out
+    reply = tg.li_reply({"token": "t", "chat_id": 7}, msg, tmp_path, call=None, change=lambda root, add, rm, m: changed.append((add, m)), fetch=fetch)
+    saved = tmp_path / "inbox" / "linkedin" / "2026-11-23.jpg"
+    assert saved.exists() and Image.open(saved).size == (2400, 3000) and "saved" in reply
+    assert changed == [(["inbox/linkedin/2026-11-23.jpg"], "linkedin picture for 2026-11-23")]

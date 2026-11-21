@@ -34,9 +34,9 @@ def test_bank_ids_unique_and_pillars_rotate():
     items = lp.load_personal()["items"]
     ids = [i["id"] for i in items]
     assert len(ids) == len(set(ids))
-    for a, b in zip(items, items[1:]):
-        assert a["pillar"] != b["pillar"], (a["id"], b["id"])
-    assert {i["pillar"] for i in items} == set(lp.PILLARS)
+    assert {i["pillar"] for i in items} <= set(lp.PILLARS)
+    unused = {i["pillar"] for i in items} & set(lp.CYCLE)
+    assert unused >= set(lp.CYCLE) - set(lp.LIVE)                    # every bank category of the brief has posts waiting (21 Nov 2026)
 
 
 def test_lint_refuses_digits_without_facts():
@@ -236,14 +236,11 @@ def test_lane_banned_list_replaces_the_global_one_and_every_number_has_a_source(
             assert it["card"].get("source"), it["id"]
 
 
-def test_wednesday_posts_a_document_and_falls_back_to_the_picture(tmp_path):
+def test_wednesday_posts_a_picture_now_not_a_document(tmp_path):
+    """21 Nov 2026: his export gave pictures 127 impressions a post and documents 64, so the Wednesday document stopped."""
     d = Deps()
     assert lp.run("post", date(2026, 10, 28), root=tmp_path, env=ENV, deps=d, bank=bank()) == 0          # a Wednesday
     row = json.loads((tmp_path / "logs" / "posts.jsonl").read_text().splitlines()[-1])
-    assert row["format"] == "document" and row["id"] == "urn:li:share:77" and "Reply to every comment" in d.sent[-1]
-    d2 = Deps(); d2.doc_fail = True
-    assert lp.run("post", date(2026, 10, 28), root=tmp_path / "x", env=ENV, deps=d2, bank=bank()) == 0
-    row = json.loads((tmp_path / "x" / "logs" / "posts.jsonl").read_text().splitlines()[-1])
     assert row["format"] == "picture" and row["id"] == "urn:li:share:99"
 
 
@@ -259,3 +256,77 @@ def test_tuesday_thursday_and_weekends_post_nothing(tmp_path):
         d = Deps()
         assert lp.run("post", day, root=tmp_path, env=ENV, deps=d, bank=bank()) == 0
     assert not (tmp_path / "logs" / "posts.jsonl").exists()
+
+
+# ---------- the founder's brief (21 Nov 2026): seven categories, his own picture, the evening request ----------
+def _brief_item(i, pillar, words=120):
+    return {"id": i, "pillar": pillar, "hook": f"Hook {i}", "body": " ".join(["word"] * words), "question": "Why?",
+            "hashtags": ["#A", "#B"], "card": {"title": f"Title {i}", "points": ["one", "two"]}, "facts": "test"}
+
+
+def test_categories_rotate_over_the_three_weekly_slots_and_live_ones_never_come_from_the_bank(tmp_path):
+    from datetime import date
+    days = [date(2026, 11, 23), date(2026, 11, 25), date(2026, 11, 27), date(2026, 11, 30), date(2026, 12, 2), date(2026, 12, 4), date(2026, 12, 7)]
+    assert [lp.category_for(d) for d in days] == list(lp.CYCLE) and lp.category_for(date(2026, 12, 9)) == "case"
+    assert lp.category_for(date(2026, 11, 20)) is None
+    settings = {"base_hashtags": ["#SG"], "min_hashtags": 3, "max_hashtags": 5, "banned_phrases": ["guarantee"]}
+    items = [_brief_item("t1", "tools"), _brief_item("m1", "markets"), _brief_item("c1", "case")]
+    log = tmp_path / "posts.jsonl"; log.write_text("")
+    assert lp.choose(date(2026, 11, 23), items, log, settings, tmp_path)["id"] == "c1"          # Monday: a case study
+    assert lp.choose(date(2026, 11, 25), items, log, settings, tmp_path)["id"] == "t1"          # markets day, nothing written: the bank, never m1
+    assert "body is 60 words" in " ".join(lp.lint_personal(_brief_item("s", "case", 60), settings))   # his word limit holds
+
+
+def test_the_evening_run_plans_the_post_asks_for_the_picture_once_and_the_morning_uses_it(tmp_path):
+    from datetime import date, datetime, timezone
+    from PIL import Image
+    (tmp_path / "content").mkdir(); (tmp_path / "logs").mkdir(); (tmp_path / "logs" / "posts.jsonl").write_text("")
+    settings = {"base_hashtags": ["#SG"], "min_hashtags": 3, "max_hashtags": 5, "banned_phrases": ["guarantee"]}
+    bank = {"settings": settings, "items": [_brief_item("t1", "tools"), {**_brief_item("c1", "case"), "scene": "a warehouse at dawn"}]}
+    (tmp_path / "content" / "linkedin_personal.json").write_text(json.dumps(bank))
+    sent, pushed, posted = [], [], []
+    deps = lp.Deps(render_cards=lambda item, out: ["card.jpg"], post_images=lambda tok, urn, text, tags, paths, alts: posted.append(paths) or "urn:li:share:1",
+                   git_publish=lambda paths, msg: pushed.append(msg), notify=sent.append, sync_repo=lambda: None, sleep=lambda s: None)
+    sat = datetime(2026, 11, 21, 17, 7, tzinfo=timezone.utc)                                    # Saturday evening: Monday is two days off
+    assert lp.evening(sat, root=tmp_path, deps=deps, bank=bank) == 0 and sent == []
+    sun = datetime(2026, 11, 22, 17, 7, tzinfo=timezone.utc)                                    # Sunday 18:07 Lagos
+    assert lp.next_post_day(sun) == date(2026, 11, 23)
+    assert lp.evening(sun, root=tmp_path, deps=deps, bank=bank) == 0
+    assert len(sent) == 2 and "Hook c1" in sent[0] and "a warehouse at dawn" in sent[1] and "li 2026-11-23" in sent[1] and "No text" in sent[1]
+    assert json.loads((tmp_path / lp.NEXT).read_text())["item_id"] == "c1"
+    assert lp.evening(sun, root=tmp_path, deps=deps, bank=bank) == 0 and len(sent) == 2          # a second slot the same evening: silent
+    late = datetime(2026, 11, 23, 0, 30, tzinfo=timezone.utc)                                   # GitHub fires late, 01:30 Lagos: still Monday's post
+    assert lp.next_post_day(late) == date(2026, 11, 23)
+    env = {"LINKEDIN_ACCESS_TOKEN": "t", "LINKEDIN_PERSON_URN": "u"}
+    pic = tmp_path / lp.PICTURE_DIR / "2026-11-23.jpg"; pic.parent.mkdir(parents=True)
+    Image.effect_noise((1200, 1500), 60).convert("RGB").save(pic, quality=95)
+    assert lp.run("post", date(2026, 11, 23), root=tmp_path, env=env, deps=deps, bank=bank) == 0
+    assert posted == [[pic]]                                                                    # his picture, not the drawn card
+    entry = [json.loads(l) for l in (tmp_path / "logs" / "posts.jsonl").read_text().splitlines()][-1]
+    assert entry["item"] == "c1" and entry["format"] == "founder-picture"
+    pic.unlink()
+    assert lp.run("post", date(2026, 11, 25), root=tmp_path, env=env, deps=deps, bank=bank) == 0 and posted[-1] == ["card.jpg"]   # no picture: the card
+
+
+def test_a_live_category_uses_the_fresh_post_past_the_gate_and_the_bank_when_it_fails(tmp_path):
+    from datetime import datetime, timezone
+    (tmp_path / "content").mkdir(); (tmp_path / "logs").mkdir(); (tmp_path / "logs" / "posts.jsonl").write_text("")
+    settings = {"base_hashtags": ["#SG"], "min_hashtags": 3, "max_hashtags": 5, "banned_phrases": ["guarantee"]}
+    bank = {"settings": settings, "items": [_brief_item("t1", "tools")]}
+    (tmp_path / "content" / "linkedin_personal.json").write_text(json.dumps(bank))
+    tue = datetime(2026, 11, 24, 17, 7, tzinfo=timezone.utc)                                    # the evening before Wed 25 Nov: markets
+    fresh = {**_brief_item("live-gold", "markets"), "sources": ["https://www.reuters.com/x"], "scene": "gold bars"}
+    def deps_with(result):
+        sent = []
+        return sent, lp.Deps(render_cards=lambda item, out: ["card.jpg"], post_images=lambda *a: "urn:li:share:1", git_publish=lambda paths, msg: None,
+                             notify=sent.append, sync_repo=lambda: None, sleep=lambda s: None, write_live=lambda cat, day, covered, s: result)
+    sent, d = deps_with((fresh, ""))
+    assert lp.evening(tue, root=tmp_path, deps=d, bank=bank) == 0
+    assert "Hook live-gold" in sent[0] and "Sources checked" in sent[0] and "gold bars" in sent[1]
+    assert json.loads((tmp_path / lp.NEXT).read_text())["item"]["id"] == "live-gold"            # the whole post is saved for the morning
+    assert lp.planned(tmp_path, date(2026, 11, 25))["id"] == "live-gold"
+    (tmp_path / lp.NEXT).unlink()
+    sent, d = deps_with((None, "fewer than two sites back: gold fell"))
+    assert lp.evening(tue, root=tmp_path, deps=d, bank=bank) == 0
+    assert "Hook t1" in sent[0] and "fact check did not pass" in sent[0] and "fewer than two sites" in sent[0]
+

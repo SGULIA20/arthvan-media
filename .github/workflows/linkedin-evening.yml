@@ -1,0 +1,52 @@
+name: linkedin-evening
+
+# The evening before a LinkedIn post (Sun, Tue, Thu about 18:00 Lagos): fix tomorrow's post and send the founder its text and the
+# picture prompt (founder, 21 Nov 2026: he makes the picture each evening for the next morning's post). The engine asks once per post
+# and does nothing on other evenings, so several slots are safe: GitHub's own schedule is often hours late.
+on:
+  schedule:
+    - cron: '7 17 * * *'
+    - cron: '7 18 * * *'
+    - cron: '7 19 * * *'
+    - cron: '7 21 * * *'
+  workflow_dispatch:
+    inputs:
+      trial:
+        description: 'markets or news = write a SAMPLE of that live post and send it to Telegram (nothing saved or posted); blank = the normal evening run'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: linkedin-personal
+  cancel-in-progress: false
+
+jobs:
+  evening:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install Python packages
+        run: pip install -r requirements.txt
+      - name: Git identity
+        run: |
+          git config user.name "arthvan-autoposter"
+          git config user.email "autoposter@users.noreply.github.com"
+      - name: Plan tomorrow's post and ask for its picture
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PAUSE: ${{ vars.PAUSE }}
+          TRIAL: ${{ github.event.inputs.trial }}
+        run: |
+          if [ -n "$TRIAL" ]; then python -m engine.linkedin_personal trial --category "$TRIAL"; else python -m engine.linkedin_personal evening; fi
