@@ -235,14 +235,44 @@ def founder_picture(root: Path, day: date):
     return p if p.exists() and p.stat().st_size > 10_000 else None
 
 
+CHARTS = {"bar": "a bar chart", "line": "a line graph", "donut": "a donut chart", "waterfall": "a waterfall chart", "timeline": "a timeline",
+          "process": "a process diagram", "map": "a geographical map", "kpi": "a KPI dashboard"}
+
+
 def image_prompt(item: dict) -> str:
-    """The picture prompt sent to the founder with the post (his brief, section 6): photorealistic, 4:5, almost no text, no logos."""
+    """The picture prompt sent to the founder with the post. A photograph (his brief, section 6), or, when the post carries verified
+    data, a data visual to his data-visualisation rules (21 Nov 2026): the exact figures are spelled out so nothing is invented."""
     c = (cards(item) or [{}])[0] if (item.get("card") or item.get("slides")) else {}
+    v = item.get("visual") or {}
+    data = v.get("data") or []
+    if str(v.get("format") or "photo") != "photo" and len(data) >= 2:
+        kind = CHARTS.get(str(v.get("chart")), "a data infographic" if v.get("format") == "infographic" else "a business comparison graphic")
+        rows = "; ".join(f"{d.get('label')}: {d.get('value')}{(' ' + str(d['unit'])) if d.get('unit') else ''}" for d in data)
+        return (f"Premium consulting-style data visual, 4:5 portrait, 1200 x 1500 pixels: {kind}. "
+                f"Title at the top: \"{v.get('title') or c.get('title') or item['hook']}\". "
+                f"Exact data, draw these values and no others, do not round, add or change any figure: {rows}. "
+                f"Period, shown under the title: {v.get('period')}. Source line at the bottom, small: \"Source: {v.get('source')}\". "
+                + (f"Highlight in one accent colour: {v['highlight']}. " if v.get("highlight") else "")
+                + "Clean white or charcoal background, professional typography, a restrained palette of two or three colours, clear "
+                "labels and data values on every mark, a legend only if it is needed. No decorative graphics, no icons that carry no "
+                "data, no company logos, no photograph, no extra numbers or text.")
     scene = item.get("scene") or f"one clear, concrete scene that shows the subject of this post: {c.get('title') or item['hook']}"
     return (f"Photorealistic editorial business photograph, 4:5 portrait, 1200 x 1500 pixels. Scene: {scene}. "
             "Professional LinkedIn look: clean composition, one strong focal point, natural light, real textures, shallow depth of field. "
             "No text, no captions, no numbers, no watermark, no company logos or brand marks, no recognisable real person. "
             "Not a collage, not an infographic, no decorative elements.")
+
+
+def visual_note(item: dict) -> str:
+    """What the founder is told about the picture: the format chosen and why, and the figures to check his picture against."""
+    v = item.get("visual") or {}
+    data = v.get("data") or []
+    if str(v.get("format") or "photo") == "photo" or len(data) < 2:
+        return "Format: editorial photograph." + (f" {v['why']}" if v.get("why") else "")
+    rows = "\n".join(f"  {d.get('label')}: {d.get('value')}{(' ' + str(d['unit'])) if d.get('unit') else ''}" for d in data)
+    return (f"Format: {v.get('format')} ({v.get('chart') or 'graphic'}). {v.get('why') or ''}\n"
+            f"⚠️ Picture tools often misdraw numbers. Before you send it, check every figure in the picture against this list:\n{rows}\n"
+            f"Period: {v.get('period')} · Source: {v.get('source')}")
 
 
 def next_post_day(now_utc: datetime) -> date:
@@ -291,7 +321,7 @@ def evening(now_utc: datetime, *, root: Path = ROOT, deps=None, bank: dict = Non
     deps.git_publish([NEXT], f"linkedin: post planned for {day}")
     sources = ("\n\nSources checked:\n" + "\n".join(item["sources"][:4])) if item.get("sources") else ""
     deps.notify(f"🖼 LinkedIn post for {day:%a %d %b}, 08:10 WAT ({LABELS[item['pillar']]})\n\n{text}\n\n{' '.join(tags)}{sources}{note}")
-    deps.notify(f"🖼 Picture for the LinkedIn post of {day:%a %d %b}\n\nPrompt:\n{image_prompt(item)}\n\n"
+    deps.notify(f"🖼 Picture for the LinkedIn post of {day:%a %d %b}\n\n{visual_note(item)}\n\nPrompt:\n{image_prompt(item)}\n\n"
                 f"Send it to this bot as a PHOTO with the caption:\nli {day.isoformat()}\n\n"
                 f"By 08:00 WAT. Without it the post still goes out, with the drawn card.")
     return 0
@@ -503,7 +533,7 @@ def main(argv=None) -> int:
             return 0
         text, tags = build_text(item, bank["settings"])
         notify.send(f"🧪 SAMPLE LinkedIn {a.category} post (not posted, not saved)\n\n{text}\n\n{' '.join(tags)}\n\nSources checked:\n"
-                    + "\n".join(item["sources"][:4]) + f"\n\nPicture prompt:\n{image_prompt(item)}")
+                    + "\n".join(item["sources"][:4]) + f"\n\n{visual_note(item)}\n\nPicture prompt:\n{image_prompt(item)}")
         return 0
     day = date.fromisoformat(a.date) if a.date else lagos_today()
     if a.mode == "post" and not a.date:
