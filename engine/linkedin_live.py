@@ -83,9 +83,15 @@ def _json(text: str) -> dict:
         raise LiveError(f"the reply is not valid JSON ({e})")
 
 
+_TWO_PART = {"co.uk", "org.uk", "gov.uk", "ac.uk", "co.in", "gov.in", "org.in", "net.in", "com.au", "co.za", "com.ng", "gov.ng", "co.jp",
+             "com.sg", "com.br", "co.nz", "com.cn", "co.kr", "com.hk"}
+
+
 def _site(url: str) -> str:
-    host = (urlparse(url).hostname or "").lower()
-    return ".".join(host.split(".")[-2:])
+    """The site a page belongs to: reuters.com, bbc.co.uk. Two pages of one site count once."""
+    parts = (urlparse(url).hostname or "").lower().split(".")
+    n = 3 if ".".join(parts[-2:]) in _TWO_PART else 2
+    return ".".join(parts[-n:])
 
 
 def _numbers(text: str) -> set:
@@ -110,6 +116,14 @@ def write_prompt(category: str, day: date, covered: list) -> str:
             '"as_of": "YYYY-MM-DD, the date of the latest figure in the post", '
             '"claims": [{"claim": "one checkable statement exactly as the post makes it, with its figures", "sources": ["url", "url"]}]}\n'
             "Every number in the hook, the body and the card must appear in a claim, and every source must be a page your search returned.")
+
+
+def repair_prompt(problems: list) -> str:
+    return ("That post did not pass these checks:\n- " + "\n- ".join(problems[:8]) +
+            "\n\nMend exactly these and change nothing else that is sound. For a claim without two sources on DIFFERENT sites: search again "
+            "and add a second site that confirms it, or remove the claim AND the sentence that makes it. Every number in the hook, body and "
+            "card, years included, must appear in a claim. A source must be a page your search returned. Keep the body at 105 to 140 words. "
+            "Reply with the whole JSON again, same shape.")
 
 
 def gate(post: dict, urls: set, category: str, day: date, settings: dict) -> list:
@@ -165,9 +179,17 @@ def write(category: str, day: date, covered: list, settings: dict, *, root: Path
     """(post ready for the lane, "") or (None, why not). Never raises: the caller falls back to the bank."""
     try:
         system = (Path(root) / BRIEF).read_text()
-        first = ask([{"role": "user", "content": write_prompt(category, day, covered)}], system)
-        post = _json(first["text"])
-        problems = gate(post, first["urls"], category, day, settings)
+        prompt = write_prompt(category, day, covered)
+        first = ask([{"role": "user", "content": prompt}], system)
+        post, urls = _json(first["text"]), set(first["urls"])
+        problems = gate(post, urls, category, day, settings)
+        if problems:
+            # 21 Nov 2026, the first real run: a sound post failed on one claim with a single site and one year no claim covered.
+            # The checks stay as strict; the writer gets one chance to mend exactly what failed, then the bank post goes out.
+            again = ask([{"role": "user", "content": prompt}, {"role": "assistant", "content": first["text"]},
+                         {"role": "user", "content": repair_prompt(problems)}], system)
+            post, urls = _json(again["text"]), urls | set(again["urls"])
+            problems = gate(post, urls, category, day, settings)
         if problems:
             return None, "; ".join(problems[:3])
         check = _json(ask([{"role": "user", "content": verify_prompt(post, day)}],

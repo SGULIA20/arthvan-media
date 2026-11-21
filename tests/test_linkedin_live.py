@@ -67,3 +67,29 @@ def test_write_uses_the_post_only_when_the_second_check_confirms_every_claim(tmp
         raise live.LiveError("Claude failed (529)")
     item, why = live.write("markets", DAY, [], SETTINGS, root=tmp_path, ask=broken)
     assert item is None and "529" in why                                                   # never raises: the bank post goes out
+
+
+def test_a_post_that_fails_the_gate_gets_one_chance_to_be_mended(tmp_path):
+    """21 Nov 2026, the first real run: one claim had a single site and the year 2027 was in no claim."""
+    (tmp_path / "content" / "prompts").mkdir(parents=True)
+    (tmp_path / "content" / "prompts" / "linkedin-brief.md").write_text("brief")
+    flawed = post(hook="Gold fell 4 percent in a week. Cuts may wait until 2027.")
+    verdict = {"claims": [{"n": 1, "true": True, "note": "ok"}], "hook_supported": True}
+    def run(second):
+        calls = []
+        def ask(messages, system):
+            calls.append(messages)
+            return [{"text": json.dumps(flawed), "urls": URLS}, {"text": json.dumps(second), "urls": {"https://www.wsj.com/x"}},
+                    {"text": json.dumps(verdict), "urls": set()}][len(calls) - 1]
+        return live.write("markets", DAY, [], SETTINGS, root=tmp_path, ask=ask), calls
+    (item, why), calls = run(post())
+    assert item and why == "" and len(calls) == 3
+    assert "no claim covers: 2027" in calls[1][2]["content"] and calls[1][1]["role"] == "assistant"      # told exactly what failed
+    (item, why), calls = run(flawed)
+    assert item is None and "2027" in why and len(calls) == 2                                            # still flawed: no third try, no check
+
+
+def test_two_pages_of_one_site_count_once_even_on_two_part_country_domains():
+    assert live._site("https://www.bbc.co.uk/news/1") == "bbc.co.uk" and live._site("https://www.ft.co.uk/x") == "ft.co.uk"
+    assert live._site("https://economictimes.indiatimes.com/a") == "indiatimes.com" and live._site("https://www.rbi.org.in/x") == "rbi.org.in"
+
