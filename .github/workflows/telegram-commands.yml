@@ -24,6 +24,8 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+      - name: Picture library (the bot resizes LinkedIn pictures and thumbnails)
+        run: pip install -q "pillow>=10.0"       # 22 Nov 2026: without it the bot crashed on the first LinkedIn picture and lost it
       - name: Answer waiting commands
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
