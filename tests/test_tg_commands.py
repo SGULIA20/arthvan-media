@@ -157,3 +157,19 @@ def test_a_photo_captioned_li_and_a_date_is_saved_as_that_days_linkedin_picture(
     saved = tmp_path / "inbox" / "linkedin" / "2026-11-23.jpg"
     assert saved.exists() and Image.open(saved).size == (2400, 3000) and "saved" in reply
     assert changed == [(["inbox/linkedin/2026-11-23.jpg"], "linkedin picture for 2026-11-23")]
+
+
+def test_a_photo_captioned_thumb_and_a_long_piece_id_is_saved_as_its_thumbnail(tmp_path):
+    """22 Nov 2026: the founder sent 'thumb 2026-11-29-arthvan-long' to this bot and nothing took it."""
+    from PIL import Image
+    from engine import tg_commands as tg
+    msg = {"chat": {"id": 7}, "caption": "thumb 2026-11-29-arthvan-long", "photo": [{"file_id": "big", "file_size": 900}]}
+    assert tg.thumb_id(msg) == "2026-11-29-arthvan-long" and tg.thumb_id({"caption": "thumb 2026-11-29-arthvan-short"}) == ""   # only longs have one
+    changed = []
+    def fetch(cfg, file_id, out, call):
+        Image.new("RGB", (1672, 941), "maroon").save(out, "PNG"); return out
+    reply = tg.thumb_reply({"token": "t", "chat_id": 7}, msg, tmp_path, call=None, change=lambda root, add, rm, m: changed.append((add, m)), fetch=fetch)
+    saved = tmp_path / "inbox" / "thumb" / "2026-11-29-arthvan-long.jpg"
+    assert Image.open(saved).size == (1280, 720) and "saved" in reply
+    assert changed == [(["inbox/thumb/2026-11-29-arthvan-long.jpg"], "thumbnail for 2026-11-29-arthvan-long")]
+
