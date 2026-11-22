@@ -21,7 +21,8 @@ INTRO_DIR = "inbox/intro"
 HELP = ("I can do these:\n/status – what went out today, what is paused, what is next\n/pause – stop all posting until you say /resume\n"
         "/resume – start posting again\n/comment <post text> – two LinkedIn comment drafts in your voice\n"
         "🎬 Send any Reel's video (screen recording or saved Reel, under 20 MB), caption optional – a Reel X-ray: why it works, what to copy\n"
-"🖼 Send the picture for a LinkedIn post as a PHOTO with the caption li <date> (e.g. li 2026-11-23)\n"
+"🖼 Send a long video's thumbnail as a PHOTO with the caption thumb <piece id> (e.g. thumb 2026-11-29-arthvan-long)\n"
+        "🖼 Send the picture for a LinkedIn post as a PHOTO with the caption li <date> (e.g. li 2026-11-23)\n"
                 "🎬 Send your 10-second intro with the caption intro <piece id> (e.g. intro 2026-11-07-sglearning-short) – saved for the splice\n"
         "/help – this list\n\nAnswers can take 5–10 minutes: I check for commands every few minutes.")
 
@@ -122,6 +123,38 @@ def li_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, chang
     return f"🖼 Picture for the LinkedIn post of {day} saved ({im.width} x {im.height}). It goes out with that morning's post at 08:10 WAT."
 
 
+# 22 Nov 2026: the founder sent a long video's thumbnail to this bot ("thumb <piece id>") and nothing took it; thumbnails had only ever
+# been handled in the Claude chat. It is saved here like an intro clip, and sg-content's studio job collects it.
+THUMB_RE = re.compile(r"^\s*thumb\s+(\d{4}-\d{2}-\d{2}-(?:sglearning|arthvan)-long)\s*$", re.I)
+THUMB_DIR = "inbox/thumb"
+
+
+def thumb_id(message: dict) -> str:
+    m = THUMB_RE.match(message.get("caption") or "")
+    return m.group(1).lower() if m else ""
+
+
+def thumb_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, change=git_change, fetch=download) -> str:
+    """A long video's thumbnail: saved as inbox/thumb/<piece id>.jpg at 1280 x 720 and pushed, replacing an earlier one."""
+    from PIL import Image, ImageOps
+    pid, pic = thumb_id(message), picture_of(message)
+    out = Path(root) / THUMB_DIR / f"{pid}.jpg"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    raw = out.with_suffix(".raw")
+    fetch(cfg, pic["file_id"], raw, call)
+    try:
+        ImageOps.fit(Image.open(raw).convert("RGB"), (1280, 720)).save(out, "JPEG", quality=90)     # YouTube: 16:9, under 2 MB
+    except Exception as e:
+        return f"🖼 That file is not a picture I can read ({str(e)[:80]}). Send it again as a photo."
+    finally:
+        raw.unlink(missing_ok=True)
+    try:
+        change(root, [str(out.relative_to(root))], [], f"thumbnail for {pid}")
+    except Exception as e:
+        return f"🖼 Thumbnail for {pid} downloaded but could not be saved to git: {str(e)[:160]}. Send it again in a few minutes."
+    return f"🖼 Thumbnail for {pid} saved. It is set on YouTube when the video is uploaded, or within minutes if it already is."
+
+
 def intro_id(message: dict) -> str:
     m = INTRO_RE.match(message.get("caption") or "")
     return m.group(1).lower() if m else ""
@@ -169,7 +202,7 @@ def xray_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, cha
 
 
 def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.send_message, change=git_change, day: date = None, now: float = None,
-         xray_fn=xray_reply, intro_fn=intro_reply, li_fn=li_reply) -> int:
+         xray_fn=xray_reply, intro_fn=intro_reply, li_fn=li_reply, thumb_fn=thumb_reply) -> int:
     """Answer every waiting command from the founder's chat, confirming each one so it is answered once. Returns how many."""
     day = day or lagos_today()
     now = time.time() if now is None else now
@@ -178,6 +211,10 @@ def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.sen
     for u in updates:
         m = u.get("message") or {}
         mine = str((m.get("chat") or {}).get("id")) == str(cfg["chat_id"])
+        if mine and picture_of(m) and thumb_id(m):
+            call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
+            send(cfg, thumb_fn(cfg, m, root, call=call, change=change)); handled += 1
+            continue
         if mine and picture_of(m) and li_day(m):
             call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
             send(cfg, li_fn(cfg, m, root, call=call, change=change)); handled += 1
