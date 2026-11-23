@@ -1,0 +1,141 @@
+{
+ "id": "mira-daily-path-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "daily-path",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Roz ek sawaal, do raaste",
+ "banner": "Ek sawaal<br><em>aap kya chunte</em>? 🔀",
+ "caption": "Sach bol kar dost khona, ya chup reh kar dosti bachaana: aap kya chunenge? 👇\nWaypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about a hostel student who answers Waypoint's one two-option question each day and, the next day, sees how everyone else answered. Waypoint is for adults 18 and over and is not a counselling or crisis service.",
+ "hashtags": [
+  "#Waypoint",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Ananya": "Ananya is a woman of about twenty-one with a long braid, a yellow kurti and round glasses.",
+   "Tara": "Tara is Ananya's hostel roommate, a woman of about twenty-one with short hair and a maroon hoodie."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "सच बोलूँ, तो दोस्त जाएगा। चुप रहूँ, तो दोस्ती झूठी।",
+   "sub": "Sach boloon, toh dost jaayega. Chup rahoon, toh dosti jhoothi.",
+   "min": 2.2,
+   "art": "Ananya sitting on a hostel bed with her knees drawn up, looking at her phone with a troubled, thoughtful face, fairy lights on the wall.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "अनन्या पूरी शाम इसी में उलझी रही।",
+   "sub": "Ananya poori shaam isi mein uljhi rahi.",
+   "min": 2.2,
+   "art": "Ananya at a hostel study desk with open books, not reading, staring out of the window at dusk.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "तारा ने पूछा, क्या हुआ? वह बोली, कुछ नहीं।",
+   "sub": "Tara ne poochha, kya hua? Woh boli, kuch nahi.",
+   "min": 2.2,
+   "art": "Tara looking up from her own bed with a concerned face, Ananya shaking her head.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "कभी कभी अपनी उलझन बतानी मुश्किल होती है।",
+   "sub": "Kabhi kabhi apni uljhan bataani mushkil hoti hai.",
+   "min": 2.2,
+   "art": "Ananya alone on the hostel balcony at night with a cup of tea, city lights far away.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "उस रात वेपॉइंट पर रोज़ का सवाल आया।",
+   "sub": "Us raat Waypoint par roz ka sawaal aaya.",
+   "min": 2.2,
+   "art": "Ananya's face lit by her phone as she sits on the balcony step, curious.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "एक सवाल। दो रास्ते। बस एक बार चुनना था।",
+   "sub": "Ek sawaal. Do raaste. Bas ek baar chunna tha.",
+   "min": 2.4,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "अगले दिन दिखा कि बाक़ी सब ने क्या चुना।",
+   "sub": "Agle din dikha ki baaqi sab ne kya chuna.",
+   "min": 2.4,
+   "screen": "daily-path.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "आधे लोग उसकी तरह सोचते थे। आधे बिलकुल उल्टा।",
+   "sub": "Aadhe log uski tarah sochte the. Aadhe bilkul ulta.",
+   "min": 2.2,
+   "art": "Ananya smiling in surprise at her phone in the hostel corridor in morning light.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "उसे लगा, उलझन सिर्फ़ उसकी नहीं थी।",
+   "sub": "Use laga, uljhan sirf uski nahi thi.",
+   "min": 2.2,
+   "art": "Ananya walking across a sunny college lawn with lighter steps, books in her arm.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "शाम को उसने तारा से बात शुरू की।",
+   "sub": "Shaam ko usne Tara se baat shuru ki.",
+   "min": 2.2,
+   "art": "Ananya and Tara sitting side by side on a hostel bed, talking, two cups of tea between them.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "अब दोनों रोज़ का सवाल साथ में खोलती हैं।",
+   "sub": "Ab dono roz ka sawaal saath mein kholti hain.",
+   "min": 2.2,
+   "art": "Ananya and Tara laughing together over one phone on the hostel balcony.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "आज के सवाल में आप क्या चुनते?",
+   "sub": "Aaj ke sawaal mein aap kya chunte?",
+   "min": 3.0,
+   "art": "Close-up of Ananya smiling at the viewer, fairy lights softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

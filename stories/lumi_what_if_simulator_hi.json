@@ -1,0 +1,142 @@
+{
+ "id": "lumi-what-if-simulator-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "what-if-simulator",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Agar daam badha doon toh?",
+ "banner": "Daam badhaoon<br><em>ya rehne doon</em>? 🤔",
+ "caption": "Daam badhaane se pehle aap kya sochte hain? Graahak jaayega, ya rukega? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a tailor who cannot decide whether to raise her prices, then nudges her own sales, costs and how fast customers pay on a saved score and watches the score move. It is a what-if on her own numbers, not a forecast. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Farida": "Farida is a woman in her mid forties who runs a tailoring shop, with a green salwar kameez, a dupatta and a measuring tape around her neck.",
+   "Rekha": "Rekha is Farida's neighbour and friend, a woman in her forties in a pink saree."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "धागा महँगा। कपड़ा महँगा। सिलाई का दाम वही पुराना।",
+   "sub": "Dhaaga mehnga. Kapda mehnga. Silaai ka daam wahi puraana.",
+   "min": 2.2,
+   "art": "Farida at her sewing machine in a small tailoring shop, holding up a spool of thread and frowning at it, colourful fabric rolls behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "फ़रीदा तीन महीने से सोच रही थी।",
+   "sub": "Farida teen mahine se soch rahi thi.",
+   "min": 2.2,
+   "art": "Farida looking out of her shop window with her chin on her hand, a half-stitched blouse on the table.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "दाम बढ़ाऊँ, तो ग्राहक चला जाएगा।",
+   "sub": "Daam badhaaoon, toh graahak chala jaayega.",
+   "min": 2.2,
+   "art": "Farida imagining a customer walking away from her shop, the customer shown faintly in the doorway.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "न बढ़ाऊँ, तो घर कैसे चलेगा?",
+   "sub": "Na badhaaoon, toh ghar kaise chalega?",
+   "min": 2.2,
+   "art": "Farida counting a few notes from a small tin box, looking worried but composed.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "रेखा बोली, पहले काग़ज़ पर आज़मा के देख।",
+   "sub": "Rekha boli, pehle kaagaz par aazma ke dekh.",
+   "min": 2.2,
+   "art": "Rekha sitting on a stool in the shop with a cup of tea, pointing at Farida's phone.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "फ़रीदा ने स्कोर माय बिज़ में अपना स्कोर खोला।",
+   "sub": "Farida ne ScoreMyBiz mein apna score khola.",
+   "min": 2.2,
+   "art": "Farida and Rekha leaning over the phone together at the cutting table.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "बिक्री थोड़ी ऊपर। ख़र्चा थोड़ा नीचे। स्कोर हिला।",
+   "sub": "Bikri thodi oopar. Kharcha thoda neeche. Score hila.",
+   "min": 2.4,
+   "screen": "business-simulator.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "ग्राहक जल्दी पैसा दें, तो क्या हो? वह भी देखा।",
+   "sub": "Graahak jaldi paisa dein, toh kya ho? Woh bhi dekha.",
+   "min": 2.4,
+   "screen": "business-simulator.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "यह भविष्य नहीं था। उसके अपने आँकड़ों पर एक आज़माइश थी।",
+   "sub": "Yeh bhavishya nahi tha. Uske apne aankdon par ek aazmaaish thi.",
+   "min": 2.2,
+   "art": "Farida nodding slowly at the phone, Rekha smiling beside her.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "उसने दाम नहीं, उधार की आदत बदलने का सोचा।",
+   "sub": "Usne daam nahi, udhaar ki aadat badalne ka socha.",
+   "min": 2.2,
+   "art": "Farida writing a small sign for her shop counter with a marker pen.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "अब सिलाई देते समय आधा पैसा पहले।",
+   "sub": "Ab silaai dete samay aadha paisa pehle.",
+   "min": 2.2,
+   "art": "A customer handing money to Farida while giving her a folded cloth, both smiling.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "आप बड़ा फ़ैसला लेने से पहले कहाँ आज़माते हैं?",
+   "sub": "Aap bada faisla lene se pehle kahaan aazmaate hain?",
+   "min": 3.0,
+   "art": "Close-up of Farida smiling at the viewer, colourful fabric rolls softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
