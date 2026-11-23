@@ -1,0 +1,141 @@
+{
+ "id": "mira-calm-kit-hi",
+ "app": "waypoint",
+ "lang": "hi-IN",
+ "character": "mira",
+ "feature": "calm-kit",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Do minute, sirf saans",
+ "banner": "Raat ke do baje<br><em>do minute</em> 🌙",
+ "caption": "Jab neend nahi aati, tab aap kya karte hain? 👇\nWaypoint, link in bio. 18+",
+ "linkedin_text": "A short illustrated story in Hindi about a young man lying awake before an interview who opens the Calm kit in Waypoint and follows two minutes of box breathing with a growing circle. Waypoint is for adults 18 and over and is not a counselling or crisis service.",
+ "hashtags": [
+  "#Waypoint",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Karan": "Karan is a man of about twenty-four with short curly hair, a plain white t-shirt and tired eyes.",
+   "Maa": "Maa is Karan's mother, a woman in her fifties in a cotton saree with a gentle face."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "रात के दो बजे। कल इंटरव्यू। और नींद ग़ायब।",
+   "sub": "Raat ke do baje. Kal interview. Aur neend ghaayab.",
+   "min": 2.2,
+   "art": "Karan lying awake in bed in a small moonlit room, staring at the ceiling fan, a formal shirt hanging on the cupboard door.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "करन करवटें बदलता रहा।",
+   "sub": "Karan karvatein badalta raha.",
+   "min": 2.2,
+   "art": "Karan turned on his side hugging a pillow, a wall clock showing two o'clock.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "दिमाग़ में एक ही सवाल, अगर नहीं हुआ तो?",
+   "sub": "Dimaag mein ek hi sawaal, agar nahi hua toh?",
+   "min": 2.2,
+   "art": "Karan sitting up in bed with his hands in his hair, moonlight through the window.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "किसी को जगाना नहीं चाहता था।",
+   "sub": "Kisi ko jagaana nahi chaahta tha.",
+   "min": 2.2,
+   "art": "Karan looking at the closed door of the next room where his family sleeps.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "उसने वेपॉइंट खोला। वहाँ कैल्म किट नाम की एक चीज़ थी।",
+   "sub": "Usne Waypoint khola. Wahaan Calm kit naam ki ek cheez thi.",
+   "min": 2.2,
+   "art": "Karan sitting cross-legged on the bed with his phone glowing softly in his hands.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "एक गोला, जो धीरे धीरे बड़ा होता है। चार गिनती साँस अंदर।",
+   "sub": "Ek gola, jo dheere dheere bada hota hai. Chaar ginti saans andar.",
+   "min": 2.4,
+   "screen": "calm.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "चार रोको। चार बाहर। चार रुको। बस दो मिनट।",
+   "sub": "Chaar roko. Chaar baahar. Chaar ruko. Bas do minute.",
+   "min": 2.4,
+   "screen": "calm.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s08.png",
+   "vo": "करन ने गोले के साथ साँस ली।",
+   "sub": "Karan ne gole ke saath saans li.",
+   "min": 2.2,
+   "art": "Karan with his eyes closed and shoulders relaxed, breathing in slowly, phone resting on his knee.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "सवाल वही था। पर सीना थोड़ा हल्का था।",
+   "sub": "Sawaal wahi tha. Par seena thoda halka tha.",
+   "min": 2.2,
+   "art": "Karan lying back on the pillow with a calmer face, the phone face down beside him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "सुबह माँ ने पूछा, नींद आई?",
+   "sub": "Subah Maa ne poochha, neend aayi?",
+   "min": 2.2,
+   "art": "Maa handing Karan a cup of tea in a sunny kitchen, he is dressed in the formal shirt.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "करन मुस्कुराया, थोड़ी सी। काफ़ी थी।",
+   "sub": "Karan muskuraaya, thodi si. Kaafi thi.",
+   "min": 2.2,
+   "art": "Karan smiling at Maa while tying his shoelaces at the door, morning light behind him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "जब नींद नहीं आती, आप क्या करते हैं?",
+   "sub": "Jab neend nahi aati, aap kya karte hain?",
+   "min": 3.0,
+   "art": "Close-up of Karan smiling at the viewer, sunny doorway softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "wave",
+   "vo": "वेपॉइंट। एक बार कहिए।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
