@@ -278,3 +278,4 @@
 {"date": "2026-11-24", "app": "waypoint", "item": "mira-calm-kit-hi", "status": "publishing", "kind": "story", "feature": "calm-kit", "sha": "c1dde76086bd926204963b82c981b6c52d691596", "at": "2026-11-24T14:42:05+00:00"}
 {"date": "2026-11-24", "app": "waypoint", "item": "mira-calm-kit-hi", "status": "published", "kind": "story", "feature": "calm-kit", "sha": "c1dde76086bd926204963b82c981b6c52d691596", "at": "2026-11-24T14:42:05+00:00", "ids": {"story": "18026470118930611"}}
 {"date": "2026-11-24", "channel": "whatsapp", "item": "mira-calm-kit-hi", "status": "published", "id": "f239becf-6ad7-475b-9be2-ab95395c9443"}
+{"date": "2026-11-24", "channel": "telegram", "item": "mira-calm-kit-hi", "status": "published", "id": "576"}
