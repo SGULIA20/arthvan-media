@@ -87,7 +87,8 @@ jobs:
           PAUSE: ${{ vars.PAUSE }}
         run: python -m engine.linkedin_personal post || true
       - name: Tell the founder if the workflow broke before the engine could report
-        if: failure() && steps.run.outcome != 'failure'
+        # 24 Nov 2026: this fired on each of the day's four slots while tests or setup stayed broken; the first slot and a manual run tell him
+        if: failure() && steps.run.outcome != 'failure' && (github.event_name != 'schedule' || github.event.schedule == '37 14 * * *')
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

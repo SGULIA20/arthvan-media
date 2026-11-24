@@ -323,6 +323,8 @@ def evening(now_utc: datetime, *, root: Path = ROOT, deps=None, bank: dict = Non
             note = f"\n\nℹ️ A {LABELS[cat].lower()} post was due, but the fact check did not pass ({why}). A ready post from the bank goes out instead."
     item = item or choose(day, bank["items"], log, bank["settings"], root)
     if item is None:
+        (root / NEXT).write_text(json.dumps({"date": day.isoformat(), "asked": True, "none": True}, indent=1) + "\n")    # told once, not on each evening slot
+        deps.git_publish([NEXT], f"linkedin: nothing passes the checks for {day}")
         deps.notify(f"LinkedIn {day}: no post passes the checks, nothing is planned.")
         return 1
     text, tags = build_text(item, bank["settings"])
@@ -499,8 +501,9 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     item = choose(day, items, log, settings, root)
     if item is None:
         print("every item in the bank failed lint")
-        if mode == "post":
+        if mode == "post" and day_status(log, day) != "told":       # once a day, not on each of the day's ten runs (24 Nov 2026)
             deps.notify("LinkedIn personal post: nothing went out today, every item in the bank failed lint.")
+            _append(log, {"date": day.isoformat(), "channel": CHANNEL, "status": "told"}); _save_log(deps, log, f"log: {CHANNEL} told {day}")
         return 1
     entry = {"date": day.isoformat(), "channel": CHANNEL, "item": item["id"]}
     if str(item["id"]).startswith("live-"):
@@ -509,9 +512,12 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     def failed(what: str, e: Exception) -> int:
         print(f"{what} failed: {type(e).__name__}: {e}")
         if mode == "post":
+            first = not any(e.get("channel") == CHANNEL and e.get("date") == day.isoformat() and e.get("status") == "failed"
+                            and str(e.get("error", "")).startswith(f"{what}:") for e in _entries(log))   # a later run tries again; he is told once per kind of failure (24 Nov 2026)
             _append(log, dict(entry, status="failed", error=f"{what}: {type(e).__name__}: {str(e)[:250]}"))
             _save_log(deps, log, f"log: {CHANNEL} failed {day}")
-            deps.notify(f"LinkedIn personal post failed today ({item['id']}), {what}: {str(e)[:200]}")
+            if first:
+                deps.notify(f"LinkedIn personal post failed today ({item['id']}), {what}: {str(e)[:200]}")
         return 1
 
     mine = founder_picture(root, day)
@@ -529,11 +535,12 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         return 0
     if SELF_POST:                                             # hand the draft and its picture to the founder; he posts it himself
         touch = TOUCH.get(item["pillar"], "your own experience of this")
-        deps.notify(f"✍️ Your LinkedIn post for today ({LABELS[item['pillar']]}). Add your touch and post it now (08:10 WAT is the slot).\n\n"
-                    f"{text}\n\n{' '.join(tags)}\n\n👉 YOUR TOUCH: {touch}.\n\n"
+        # 24 Nov 2026: the whole post was sent the evening before, again in the morning, and a third time inside the link. The morning
+        # is now one message: the link that opens it written, and what to add. The text itself is in last evening's draft.
+        deps.notify(f"✍️ Your LinkedIn post for today ({LABELS[item['pillar']]}): \"{str(item.get('hook', ''))[:90]}\"\n\n"
+                    "📲 Tap to open LinkedIn with last evening's draft already written. Add your lines, attach the picture below, Post "
+                    f"(08:10 WAT is the slot):\n{composer_link(text, tags)}\n\n👉 YOUR TOUCH: {touch}.\n\n"
                     "After posting, reply to every comment in the first hour.")
-        deps.notify("📲 Tap to open LinkedIn with this post already written (no copy and paste). Add your lines, attach the picture below, Post:\n\n"
-                    + composer_link(text, tags))
         sent = deps.send_photo(paths[0], "The picture for today's LinkedIn post" + ("" if mine else " (the drawn card; your own picture was not sent)"))
         _append(log, dict(entry, status="handed", format="founder-picture" if mine else "picture", picture_sent=bool(sent)))
         _save_log(deps, log, f"log: {CHANNEL} handed to the founder {day}")

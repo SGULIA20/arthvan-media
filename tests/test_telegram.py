@@ -24,15 +24,35 @@ def test_send_video_posts_the_url_and_caption_and_returns_the_message_id(monkeyp
     assert seen["url"].endswith("/botTOK/sendVideo") and seen["body"]["chat_id"] == "9" and seen["body"]["video"] == "https://v/x.mp4" and len(seen["body"]["caption"]) == 1000
 
 
-def test_errors_never_contain_the_token_and_server_errors_are_retried(monkeypatch):
+def test_errors_never_contain_the_token_and_a_send_is_repeated_only_when_telegram_did_not_take_it(monkeypatch):
+    """Founder, 24 Nov 2026: 'I am getting n number of duplicate messages'. A send that timed out or met a 5xx may have been delivered,
+    so it is not sent again; a 429 (not accepted) is; a read such as getUpdates still retries on a server error."""
     calls = []
-    def fake(req, timeout=None, context=None):
-        calls.append(1)
-        raise urllib.error.HTTPError(req.full_url, 400 if len(calls) > 1 else 503, "x", {}, io.BytesIO(b"bad token TOK"))
-    monkeypatch.setattr(telegram.urllib.request, "urlopen", fake); monkeypatch.setattr(telegram.time, "sleep", lambda s: None)
+    def fake(code_first):
+        def f(req, timeout=None, context=None):
+            calls.append(1)
+            raise urllib.error.HTTPError(req.full_url, 400 if len(calls) > 1 else code_first, "x", {}, io.BytesIO(b"bad token TOK"))
+        return f
+    monkeypatch.setattr(telegram.time, "sleep", lambda s: None)
+    monkeypatch.setattr(telegram.urllib.request, "urlopen", fake(503))
     with pytest.raises(TelegramError) as e:
         send_video({"token": "TOK", "chat_id": "9"}, "u", "c")
-    assert "TOK" not in str(e.value) and "<token>" in str(e.value) and len(calls) == 2
+    assert "TOK" not in str(e.value) and "<token>" in str(e.value) and len(calls) == 1          # a 5xx on a send: not repeated
+    calls.clear(); monkeypatch.setattr(telegram.urllib.request, "urlopen", fake(429))
+    with pytest.raises(TelegramError):
+        send_video({"token": "TOK", "chat_id": "9"}, "u", "c")
+    assert len(calls) == 2                                                                        # not accepted: tried once more
+    calls.clear(); monkeypatch.setattr(telegram.urllib.request, "urlopen", fake(503))
+    with pytest.raises(TelegramError):
+        telegram._call("TOK", "getUpdates", {})
+    assert len(calls) == 2                                                                        # a read is safe to repeat
+    calls.clear()
+    def slow(req, timeout=None, context=None):
+        calls.append(1); raise TimeoutError("timed out")
+    monkeypatch.setattr(telegram.urllib.request, "urlopen", slow)
+    with pytest.raises(TelegramError):
+        telegram.send_message({"token": "TOK", "chat_id": "9"}, "hello")
+    assert len(calls) == 1                                                                        # a timed-out send may have gone through
 
 
 def test_find_chat_id_takes_the_latest_conversation_and_explains_when_there_is_none(monkeypatch):
