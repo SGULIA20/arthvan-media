@@ -352,7 +352,8 @@ def test_self_post_hands_the_draft_and_the_picture_to_the_founder_and_posts_noth
     assert lp.evening(datetime(2026, 11, 22, 17, 7, tzinfo=timezone.utc), root=tmp_path, deps=deps, bank=bank) == 0
     assert "DRAFT" in sent[0] and "YOUR TOUCH" in sent[0] and "company you worked in" in sent[0] and "li 2026-11-23" in sent[1]
     assert lp.run("post", date(2026, 11, 23), root=tmp_path, env={}, deps=deps, bank=bank) == 0      # no LinkedIn token needed
-    assert posted == [] and photos == ["card.jpg"] and "YOUR TOUCH" in sent[-1]
+    assert posted == [] and photos == ["card.jpg"] and "YOUR TOUCH" in sent[-2]
+    assert sent[-1].rstrip().split()[-1].startswith("https://www.linkedin.com/feed/?shareActive=true&text=Hook%20c1")   # one tap opens the post box, written
     entry = [json.loads(l) for l in (tmp_path / "logs" / "posts.jsonl").read_text().splitlines()][-1]
     assert entry["status"] == "handed" and entry["item"] == "c1"
     n = len(sent)

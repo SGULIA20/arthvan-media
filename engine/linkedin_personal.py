@@ -346,6 +346,13 @@ def evening(now_utc: datetime, *, root: Path = ROOT, deps=None, bank: dict = Non
     return 0
 
 
+def composer_link(text: str, tags: list) -> str:
+    """A link that opens LinkedIn's own post box with the text filled in (founder, 24 Nov 2026: "I will not need to do copy paste from
+    somewhere"). LinkedIn's API cannot put a post into the app's Drafts, and a link cannot attach a picture: he adds that himself."""
+    from urllib.parse import quote
+    return "https://www.linkedin.com/feed/?shareActive=true&text=" + quote(f"{text}\n\n{' '.join(tags)}", safe="")
+
+
 def day_status(log: Path, day: date):
     status = None
     for e in _entries(log):
@@ -522,9 +529,11 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         return 0
     if SELF_POST:                                             # hand the draft and its picture to the founder; he posts it himself
         touch = TOUCH.get(item["pillar"], "your own experience of this")
-        deps.notify(f"✍️ Your LinkedIn post for today ({LABELS[item['pillar']]}). Copy, add your touch, post it now (08:10 WAT is the slot).\n\n"
+        deps.notify(f"✍️ Your LinkedIn post for today ({LABELS[item['pillar']]}). Add your touch and post it now (08:10 WAT is the slot).\n\n"
                     f"{text}\n\n{' '.join(tags)}\n\n👉 YOUR TOUCH: {touch}.\n\n"
                     "After posting, reply to every comment in the first hour.")
+        deps.notify("📲 Tap to open LinkedIn with this post already written (no copy and paste). Add your lines, attach the picture below, Post:\n\n"
+                    + composer_link(text, tags))
         sent = deps.send_photo(paths[0], "The picture for today's LinkedIn post" + ("" if mine else " (the drawn card; your own picture was not sent)"))
         _append(log, dict(entry, status="handed", format="founder-picture" if mine else "picture", picture_sent=bool(sent)))
         _save_log(deps, log, f"log: {CHANNEL} handed to the founder {day}")
