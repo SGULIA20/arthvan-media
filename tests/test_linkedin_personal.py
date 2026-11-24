@@ -9,6 +9,13 @@ from engine import linkedin_personal as lp
 DAY = date(2026, 10, 19)                 # a Monday: LinkedIn posts Mon/Wed/Fri (founder, 29 Oct 2026)
 
 
+@pytest.fixture(autouse=True)
+def _api_posting(monkeypatch, request):
+    """The tests below cover the engine posting through the API; since 24 Nov 2026 the founder posts himself (SELF_POST), tested at the end."""
+    if "self_post" not in request.node.name:
+        monkeypatch.setattr(lp, "SELF_POST", False)
+
+
 def item(**over):
     base = {"id": "toc", "pillar": "model", "hook": "You are not as fast as your slowest process.",
             "body": "Every system has one bottleneck.\n\nFix that one first.", "question": "Where is yours?",
@@ -330,3 +337,24 @@ def test_a_live_category_uses_the_fresh_post_past_the_gate_and_the_bank_when_it_
     assert lp.evening(tue, root=tmp_path, deps=d, bank=bank) == 0
     assert "Hook t1" in sent[0] and "fact check did not pass" in sent[0] and "fewer than two sites" in sent[0]
 
+
+
+def test_self_post_hands_the_draft_and_the_picture_to_the_founder_and_posts_nothing(tmp_path):
+    """Founder, 24 Nov 2026: 'draft the posts with pics and let me post them ... personal touch'."""
+    from datetime import date, datetime, timezone
+    (tmp_path / "content").mkdir(); (tmp_path / "logs").mkdir(); (tmp_path / "logs" / "posts.jsonl").write_text("")
+    settings = {"base_hashtags": ["#SG"], "min_hashtags": 3, "max_hashtags": 5, "banned_phrases": ["guarantee"]}
+    bank = {"settings": settings, "items": [_brief_item("t1", "tools"), _brief_item("c1", "case")]}
+    (tmp_path / "content" / "linkedin_personal.json").write_text(json.dumps(bank))
+    sent, photos, posted = [], [], []
+    deps = lp.Deps(render_cards=lambda item, out: ["card.jpg"], post_images=lambda *a: posted.append(a) or "urn:li:share:1", send_photo=lambda path, cap="": photos.append(path) or True,
+                   git_publish=lambda paths, msg: None, notify=sent.append, sync_repo=lambda: None, sleep=lambda s: None)
+    assert lp.evening(datetime(2026, 11, 22, 17, 7, tzinfo=timezone.utc), root=tmp_path, deps=deps, bank=bank) == 0
+    assert "DRAFT" in sent[0] and "YOUR TOUCH" in sent[0] and "company you worked in" in sent[0] and "li 2026-11-23" in sent[1]
+    assert lp.run("post", date(2026, 11, 23), root=tmp_path, env={}, deps=deps, bank=bank) == 0      # no LinkedIn token needed
+    assert posted == [] and photos == ["card.jpg"] and "YOUR TOUCH" in sent[-1]
+    entry = [json.loads(l) for l in (tmp_path / "logs" / "posts.jsonl").read_text().splitlines()][-1]
+    assert entry["status"] == "handed" and entry["item"] == "c1"
+    n = len(sent)
+    assert lp.run("post", date(2026, 11, 23), root=tmp_path, env={}, deps=deps, bank=bank) == 0 and len(sent) == n   # the safety run an hour later: silent
+    assert "c1" in lp.used_ids(tmp_path / "logs" / "posts.jsonl")                                   # a handed draft is not drafted again

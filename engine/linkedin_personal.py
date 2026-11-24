@@ -41,6 +41,17 @@ POST_WEEKDAYS = (0, 2, 4)           # Mon, Wed, Fri (Lagos) only (founder, 29 Oc
 DOC_WEEKDAYS = ()                   # 21 Nov 2026: no documents; his 25 Oct-21 Nov export gave pictures 127 impressions a post, documents 64
 NEXT = "content/linkedin_next.json"  # the post chosen the evening before, so the founder's picture is made for the post that goes out
 PICTURE_DIR = "inbox/linkedin"       # his picture for a day: inbox/linkedin/<YYYY-MM-DD>.jpg (the bot saves it from a photo captioned "li <date>")
+# founder, 24 Nov 2026: "draft the posts with pics and let me post them. I think personal touch require there. Will fill it on your draft."
+# Nothing is posted through the API any more: the evening message is his draft, the morning run hands him the text and the picture.
+SELF_POST = True
+DONE = ("published", "handed")       # a draft handed to him counts as used: the same post is not drafted again
+TOUCH = {"case": "where you have seen this in a company you worked in or advised",
+         "markets": "what this changes this week for your own business or the ones you advise",
+         "tools": "one time you used this tool, or wish you had",
+         "news": "what you would do about this if it were your company",
+         "leadership": "a moment you led this way, or were led this way",
+         "africa": "what you see of this on the ground in Lagos",
+         "failure": "a mistake of your own that taught you the same lesson"}
 BODY_WORDS = (100, 150)              # founder, 21 Nov 2026: "word limit should be similar as we posted so far" (the bank runs 107-144)
 MAX_TITLE, MAX_POINTS, MAX_POINT, MIN_SLIDES, MAX_SLIDES = 60, 5, 70, 2, 6
 EM_DASH = "—"
@@ -168,7 +179,7 @@ def used_ids(log: Path) -> list:
     """Ids published on this lane, oldest use first; an id used again moves to the end."""
     order = []
     for e in _entries(log):
-        if e.get("channel") == CHANNEL and e.get("status") == "published" and e.get("item"):
+        if e.get("channel") == CHANNEL and e.get("status") in DONE and e.get("item"):
             if e["item"] in order:
                 order.remove(e["item"])
             order.append(e["item"])
@@ -320,6 +331,14 @@ def evening(now_utc: datetime, *, root: Path = ROOT, deps=None, bank: dict = Non
     (root / NEXT).write_text(json.dumps(state, ensure_ascii=False, indent=1) + "\n")
     deps.git_publish([NEXT], f"linkedin: post planned for {day}")
     sources = ("\n\nSources checked:\n" + "\n".join(item["sources"][:4])) if item.get("sources") else ""
+    if SELF_POST:
+        deps.notify(f"✍️ LinkedIn DRAFT for {day:%a %d %b} ({LABELS[item['pillar']]}). You post this one yourself; best time 08:10 WAT.\n\n"
+                    f"{text}\n\n{' '.join(tags)}{sources}{note}\n\n"
+                    f"👉 YOUR TOUCH (add one or two lines in your own words, after the first paragraph): {TOUCH.get(item['pillar'], 'your own experience of this')}.")
+        deps.notify(f"🖼 Picture for this draft\n\n{visual_note(item)}\n\nPrompt:\n{image_prompt(item)}\n\n"
+                    f"Make it and post it with the draft. If you send it here as a PHOTO with the caption\nli {day.isoformat()}\n"
+                    f"I hand it back with the final text at 08:10 WAT; without it you get the drawn card to use.")
+        return 0
     deps.notify(f"🖼 LinkedIn post for {day:%a %d %b}, 08:10 WAT ({LABELS[item['pillar']]})\n\n{text}\n\n{' '.join(tags)}{sources}{note}")
     deps.notify(f"🖼 Picture for the LinkedIn post of {day:%a %d %b}\n\n{visual_note(item)}\n\nPrompt:\n{image_prompt(item)}\n\n"
                 f"Send it to this bot as a PHOTO with the caption:\nli {day.isoformat()}\n\n"
@@ -389,8 +408,23 @@ def _write_live(category: str, day: date, covered: list, settings: dict):
     return linkedin_live.write(category, day, covered, settings)
 
 
+def _send_photo(path, caption: str = "") -> bool:
+    """The picture to the founder's Telegram; never breaks the run."""
+    from . import telegram
+    cfg = notify.config(None)
+    if not cfg:
+        return False
+    try:
+        telegram.send_photo_file(cfg, path, caption)
+        return True
+    except Exception as e:                                    # noqa: BLE001
+        print(f"picture not sent: {type(e).__name__}: {str(e)[:150]}")
+        return False
+
+
 @dataclass
 class Deps:
+    send_photo: Callable = field(default_factory=lambda: _send_photo)
     render_cards: Callable = render_cards
     post_images: Callable = linkedin.post_images
     post_document: Callable = linkedin.post_document
@@ -441,7 +475,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         print("paused: nothing to do")
         return 0
     token, urn = env.get("LINKEDIN_ACCESS_TOKEN"), env.get("LINKEDIN_PERSON_URN")
-    if mode == "post" and not (token and urn):
+    if mode == "post" and not SELF_POST and not (token and urn):
         print("LINKEDIN_ACCESS_TOKEN and LINKEDIN_PERSON_URN must be set")
         return 1
     if mode == "post" and day.weekday() not in POST_WEEKDAYS:
@@ -452,8 +486,8 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     log = root / "logs" / "posts.jsonl"
     if mode == "post":
         deps.sync_repo()
-        if day_status(log, day) == "published":
-            print(f"{day}: personal post already out, nothing to do")
+        if day_status(log, day) in DONE:
+            print(f"{day}: personal post already out or handed over, nothing to do")
             return 0
     item = choose(day, items, log, settings, root)
     if item is None:
@@ -485,6 +519,16 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
     alts = [alt_text(c) for c in cards(item)][:len(paths)]
     print(f"{day} {item['id']} ({item['pillar']}): {len(paths)} picture(s)\n\n{text}\n\n{' '.join(tags)}\n")
     if mode != "post":
+        return 0
+    if SELF_POST:                                             # hand the draft and its picture to the founder; he posts it himself
+        touch = TOUCH.get(item["pillar"], "your own experience of this")
+        deps.notify(f"✍️ Your LinkedIn post for today ({LABELS[item['pillar']]}). Copy, add your touch, post it now (08:10 WAT is the slot).\n\n"
+                    f"{text}\n\n{' '.join(tags)}\n\n👉 YOUR TOUCH: {touch}.\n\n"
+                    "After posting, reply to every comment in the first hour.")
+        sent = deps.send_photo(paths[0], "The picture for today's LinkedIn post" + ("" if mine else " (the drawn card; your own picture was not sent)"))
+        _append(log, dict(entry, status="handed", format="founder-picture" if mine else "picture", picture_sent=bool(sent)))
+        _save_log(deps, log, f"log: {CHANNEL} handed to the founder {day}")
+        print(f"handed {item['id']} to the founder")
         return 0
     post_id, fmt = None, "picture"
     if day.weekday() in DOC_WEEKDAYS:
