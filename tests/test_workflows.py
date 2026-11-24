@@ -116,4 +116,4 @@ def test_status_line_runs_in_the_cloud_every_evening():
     wf = load("status.yml")
     assert wf["on"]["schedule"] == [{"cron": "28 20 * * *"}]      # 21:28 WAT, after the 9 pm card (founder, 22 Oct 2026)
     steps = " ".join(s.get("run", "") for s in wf["jobs"]["status"]["steps"])
-    assert "engine.notify --credit" in steps and "engine.relay_scorecard" in steps
+    assert "engine.notify --credit" in steps and "engine.relay_scorecard" not in steps      # 24 Nov 2026: the scorecard comes from one bot
