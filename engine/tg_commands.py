@@ -224,8 +224,8 @@ def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.sen
             send(cfg, intro_fn(cfg, m, root, call=call, change=change)); handled += 1
             continue
         if mine and xray.video_of(m):
-            send(cfg, "🎬 Got the Reel. Watching it now, the X-ray comes in a minute or two."); handled += 1
             call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # never watched twice, even if this run dies
+            send(cfg, "🎬 Got the Reel. Watching it now, the X-ray comes in a minute or two."); handled += 1
             send(cfg, xray_fn(cfg, m, root, call=call, change=change))
             continue
         if mine and (m.get("text") or "").strip():
@@ -233,7 +233,11 @@ def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.sen
                 reply = "That command is more than 12 hours old, so I ignored it. Send it again if you still want it."
             else:
                 reply = answer(m["text"], root, day, change)
+            # 24 Nov 2026: the message is marked read BEFORE the reply goes out. When marking failed after the reply, the same command
+            # was answered again every five minutes until it succeeded.
+            call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})
             send(cfg, reply); handled += 1
+            continue
         call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})
     return handled
 
