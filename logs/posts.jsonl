@@ -282,3 +282,4 @@
 {"date": "2026-11-24", "channel": "threads", "item": "mira-calm-kit-hi", "status": "published", "id": "18119814920065936"}
 {"date": "2026-11-25", "channel": "linkedin_personal", "item": "cynefin", "status": "handed", "format": "founder-picture", "picture_sent": true}
 {"date": "2026-11-25", "app": "scoremybiz", "item": "lumi-notifications-inbox-hi", "status": "publishing", "kind": "story", "feature": "notifications-inbox", "sha": "a071d8ca8bf0c3ddb1bc9958c668499604687967", "at": "2026-11-25T14:42:26+00:00"}
+{"date": "2026-11-25", "app": "scoremybiz", "item": "lumi-notifications-inbox-hi", "status": "published", "kind": "story", "feature": "notifications-inbox", "sha": "a071d8ca8bf0c3ddb1bc9958c668499604687967", "at": "2026-11-25T14:42:26+00:00", "ids": {"story": "17989390520891809"}}
