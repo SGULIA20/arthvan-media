@@ -26,12 +26,15 @@ from .lint import _phrase_pattern
 CYCLE = ("case", "markets", "tools", "news", "leadership", "africa", "failure")
 LIVE = ("markets", "news")           # need same-day facts: written the evening before behind a fact gate, never taken from the bank
 CYCLE_START = date(2026, 11, 23)     # the first post under the brief (a Monday)
-PILLARS = CYCLE + ("model", "finance", "ai", "world", "founder")
+PILLARS = CYCLE + ("model", "finance", "ai", "world", "founder", "trend")
+TREND_FIRST = True                   # founder, 25 Nov 2026 ("free to choose any topic worldwide"): each post starts from the week's most talked-about
+                                     # business story, written the evening before behind the same fact gate; the day's category is the fallback
 LABELS = {"case": "Case study", "markets": "Markets", "tools": "Management tools", "news": "Business news", "leadership": "Leadership",
           "africa": "Africa and emerging markets", "failure": "Business failures",
-          "model": "Business model", "finance": "Finance", "ai": "AI for finance", "world": "World", "founder": "Founder notes"}
+          "model": "Business model", "finance": "Finance", "ai": "AI for finance", "world": "World", "founder": "Founder notes",
+          "trend": "This week's talking point"}
 ACCENTS = {"case": "#F5B700", "markets": "#5EEAD4", "tools": "#C4B5FD", "news": "#FF9A7A", "leadership": "#7DD3FC", "africa": "#86EFAC",
-           "failure": "#FCA5A5", "model": "#F5B700", "finance": "#5EEAD4", "ai": "#C4B5FD", "world": "#FF9A7A", "founder": "#7DD3FC"}
+           "failure": "#FCA5A5", "model": "#F5B700", "finance": "#5EEAD4", "ai": "#C4B5FD", "world": "#FF9A7A", "founder": "#7DD3FC", "trend": "#F5B700"}
 CHANNEL = "linkedin_personal"
 BANK = ROOT / "content" / "linkedin_personal.json"
 TEMPLATE = ROOT / "engine" / "templates" / "linkedin_card.html"
@@ -51,7 +54,8 @@ TOUCH = {"case": "where you have seen this in a company you worked in or advised
          "news": "what you would do about this if it were your company",
          "leadership": "a moment you led this way, or were led this way",
          "africa": "what you see of this on the ground in Lagos",
-         "failure": "a mistake of your own that taught you the same lesson"}
+         "failure": "a mistake of your own that taught you the same lesson",
+         "trend": "which side you take, and the one thing from your own work that makes you take it"}
 BODY_WORDS = (100, 150)              # founder, 21 Nov 2026: "word limit should be similar as we posted so far" (the bank runs 107-144)
 MAX_TITLE, MAX_POINTS, MAX_POINT, MIN_SLIDES, MAX_SLIDES = 60, 5, 70, 2, 6
 EM_DASH = "—"
@@ -125,7 +129,7 @@ def lint_personal(item: dict, settings: dict) -> list:
     if len(str(item.get("body") or "")) > MAX_BODY:
         problems.append(f"body longer than {MAX_BODY} characters")
     words = len(str(item.get("body") or "").split())
-    if item.get("pillar") in CYCLE and not BODY_WORDS[0] <= words <= BODY_WORDS[1]:
+    if item.get("pillar") in CYCLE + ("trend",) and not BODY_WORDS[0] <= words <= BODY_WORDS[1]:
         problems.append(f"body is {words} words, need {BODY_WORDS[0]} to {BODY_WORDS[1]}")
     if not str(item.get("question") or "").rstrip().endswith("?"):
         problems.append("question must end with a question mark")
@@ -315,9 +319,17 @@ def evening(now_utc: datetime, *, root: Path = ROOT, deps=None, bank: dict = Non
     bank = bank or load_personal(root)
     log = root / "logs" / "posts.jsonl"
     cat, item, note = category_for(day), None, ""
-    if cat in LIVE:                                               # markets, news: researched and written now, used only past the fact gate
-        used = used_ids(log)
-        covered = [i["hook"] for i in bank["items"] if i["id"] in used] + [e.get("hook", "") for e in _entries(log) if e.get("hook")]
+    used = used_ids(log)
+    covered = [i["hook"] for i in bank["items"] if i["id"] in used] + [e.get("hook", "") for e in _entries(log) if e.get("hook")]
+    told = deps.review(root)                                      # his numbers, when new ones came in: lessons for tonight's writer
+    if told:
+        deps.git_publish(["logs/linkedin-lessons.json"], "linkedin: lessons from the last posts' numbers")
+        deps.notify("📊 LinkedIn review of your last posts\n\n" + told.get("report", "") + "\n\nTonight's draft is written with this in mind.")
+    if TREND_FIRST:
+        item, why = deps.write_live("trend", day, covered, bank["settings"])
+        if item is None:
+            print(f"trend post did not pass ({why}); falling back to {cat}")
+    if item is None and cat in LIVE:                                               # markets, news: researched and written now, used only past the fact gate
         item, why = deps.write_live(cat, day, covered, bank["settings"])
         if item is None:
             note = f"\n\nℹ️ A {LABELS[cat].lower()} post was due, but the fact check did not pass ({why}). A ready post from the bank goes out instead."
@@ -417,6 +429,16 @@ def _write_live(category: str, day: date, covered: list, settings: dict):
     return linkedin_live.write(category, day, covered, settings)
 
 
+def _review(root: Path):
+    """New lessons from the numbers he sent, or None. Never raises: a failed review does not stop tomorrow's post."""
+    try:
+        from . import linkedin_live, linkedin_review
+        return linkedin_review.review(root, lambda prompt: linkedin_live.call([{"role": "user", "content": prompt}], "You are a careful analyst.", searches=0)["text"])
+    except Exception as e:                                    # noqa: BLE001
+        print(f"linkedin review skipped: {type(e).__name__}: {str(e)[:150]}")
+        return None
+
+
 def _send_photo(path, caption: str = "") -> bool:
     """The picture to the founder's Telegram; never breaks the run."""
     from . import telegram
@@ -443,6 +465,7 @@ class Deps:
     sync_repo: Callable = _sync_repo
     sleep: Callable = time.sleep
     write_live: Callable = field(default_factory=lambda: _write_live)
+    review: Callable = field(default_factory=lambda: _review)
 
 
 PUSH_TRIES = 3
@@ -507,6 +530,7 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         return 1
     entry = {"date": day.isoformat(), "channel": CHANNEL, "item": item["id"]}
     if str(item["id"]).startswith("live-"):
+        entry["pillar"] = item["pillar"]
         entry["hook"] = item["hook"]                              # a live post is not in the bank: its subject is kept here against repeats
 
     def failed(what: str, e: Exception) -> int:
@@ -540,7 +564,9 @@ def run(mode: str, day: date, *, root: Path = ROOT, env=None, deps: Deps = None,
         deps.notify(f"✍️ Your LinkedIn post for today ({LABELS[item['pillar']]}): \"{str(item.get('hook', ''))[:90]}\"\n\n"
                     "📲 Tap to open LinkedIn with last evening's draft already written. Add your lines, attach the picture below, Post "
                     f"(08:10 WAT is the slot):\n{composer_link(text, tags)}\n\n👉 YOUR TOUCH: {touch}.\n\n"
-                    "After posting, reply to every comment in the first hour.")
+                    "After posting, reply to every comment in the first hour.\n\n"
+                    "📊 Tomorrow, send me a screenshot of this post's analytics as a PHOTO with the caption stats. "
+                    "Those numbers decide how the next draft is written.")
         sent = deps.send_photo(paths[0], "The picture for today's LinkedIn post" + ("" if mine else " (the drawn card; your own picture was not sent)"))
         _append(log, dict(entry, status="handed", format="founder-picture" if mine else "picture", picture_sent=bool(sent)))
         _save_log(deps, log, f"log: {CHANNEL} handed to the founder {day}")
@@ -580,7 +606,7 @@ LINKEDIN_EARLIEST = (8, 0)                   # Lagos; the slot is 08:10
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("mode", nargs="?", choices=["render", "prepare", "post", "evening", "trial"], default="render")
-    ap.add_argument("--category", choices=LIVE, default="markets", help="trial: which live category to write a sample of")
+    ap.add_argument("--category", choices=LIVE + ("trend",), default="markets", help="trial: which live category to write a sample of")
     ap.add_argument("--date", default="")
     a = ap.parse_args(argv)
     if a.mode == "evening":

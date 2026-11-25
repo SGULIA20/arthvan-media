@@ -9,7 +9,7 @@ import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import comment_drafts, notify, telegram, xray
+from . import comment_drafts, linkedin_review, notify, telegram, xray
 
 ROOT = Path(__file__).resolve().parent.parent
 MAX_AGE_SECONDS = 12 * 3600
@@ -23,6 +23,7 @@ HELP = ("I can do these:\n/status – what went out today, what is paused, what 
         "🎬 Send any Reel's video (screen recording or saved Reel, under 20 MB), caption optional – a Reel X-ray: why it works, what to copy\n"
 "🖼 Send a long video's thumbnail as a PHOTO with the caption thumb <piece id> (e.g. thumb 2026-11-29-arthvan-long)\n"
         "🖼 Send the picture for a LinkedIn post as a PHOTO with the caption li <date> (e.g. li 2026-11-23)\n"
+        "📊 Send a screenshot of a LinkedIn post's analytics as a PHOTO with the caption stats – its numbers shape the next draft\n"
                 "🎬 Send your 10-second intro with the caption intro <piece id> (e.g. intro 2026-11-07-sglearning-short) – saved for the splice\n"
         "/help – this list\n\nAnswers can take 5–10 minutes: I check for commands every few minutes.")
 
@@ -202,7 +203,8 @@ def xray_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, cha
 
 
 def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.send_message, change=git_change, day: date = None, now: float = None,
-         xray_fn=xray_reply, intro_fn=intro_reply, li_fn=li_reply, thumb_fn=thumb_reply) -> int:
+         xray_fn=xray_reply, intro_fn=intro_reply, li_fn=li_reply, thumb_fn=thumb_reply,
+         stats_fn=linkedin_review.stats_reply) -> int:
     """Answer every waiting command from the founder's chat, confirming each one so it is answered once. Returns how many."""
     day = day or lagos_today()
     now = time.time() if now is None else now
@@ -214,6 +216,10 @@ def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.sen
         if mine and picture_of(m) and thumb_id(m):
             call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
             send(cfg, thumb_fn(cfg, m, root, call=call, change=change)); handled += 1
+            continue
+        if mine and picture_of(m) and linkedin_review.is_stats(m):
+            call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # read once, even if this run dies
+            send(cfg, stats_fn(cfg, m, root, call=call, change=change)); handled += 1
             continue
         if mine and picture_of(m) and li_day(m):
             call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
