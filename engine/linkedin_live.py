@@ -41,12 +41,17 @@ ASK = {"markets": "a current move in financial markets or the economy (gold, cry
                "conglomerate) and its business implications",
        # founder, 25 Nov 2026: "You are free to choose any topic worldwide", chosen the way the channels now choose theirs
        "trend": "the ONE business, money, technology or work story that professionals around the world are talking about most in the "
-                "last 72 hours: any country, any industry, any company. Judge 'most talked about' by evidence you can find: how many "
+                "last 24 hours (founder, 25 Nov 2026, on the first sample: 'it's old news means yesterday news'). The event itself must "
+                "have happened or been announced within the last 24 hours; read the date and time on each source and drop a story "
+                "that broke earlier, however widely it is still discussed. Look for the newest first (same day: 'do first 3 hours if "
+                "not getting any impressive story then 10 then 12 then 24 hours'): search for what broke in the last 3 hours; only if "
+                "nothing there is impressive enough, widen to the last 10 hours, then 12, then 24, and take the first window that has "
+                "a story worth a senior reader's time. Never go past 24 hours: any country, any industry, any company. Judge 'most talked about' by evidence you can find: how many "
                 "major outlets in different countries lead with it, and whether people DISAGREE about it. Prefer a story with a real "
                 "argument in it (two defensible sides), a named company or person, and a number that surprises, because those are the "
                 "posts people comment on. LinkedIn itself cannot be searched from here; do not claim a post or a hashtag is trending there"}
 HOOKS = 6                              # openings written for one post; a panel of readers picks the one that goes out
-FRESH = {"markets": FRESH_DAYS, "trend": 7}
+FRESH = {"markets": FRESH_DAYS, "trend": 1}
 PANEL = """Three people are scrolling LinkedIn on their phones in a spare minute. A: a CFO of a manufacturing group in Lagos. B: a
 start-up founder in Bengaluru. C: a mid-level operations manager in London. Each sees ONLY the first line of a post, then decides
 whether to tap "see more". They skip anything that sounds like a lecture, a press release or motivational talk, and stop for a named

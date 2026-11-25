@@ -35,8 +35,9 @@ def test_the_topic_is_the_weeks_talking_point_from_anywhere_and_must_be_fresh():
     p = live.write_prompt("trend", DAY, [])
     assert "any country" in p and "DISAGREE" in p and '"hooks"' in p and "two defensible answers" in p
     assert "LinkedIn itself cannot be searched" in p                                    # no pretending to read LinkedIn's own trends
-    assert live.gate(post(), URLS, "trend", DAY, SETTINGS) == []
-    assert any("not within 7 days" in x for x in live.gate(post(as_of="2026-11-01"), URLS, "trend", DAY, SETTINGS))
+    assert "last 3 hours" in p and "then 12, then 24" in p and "Never go past 24 hours" in p
+    assert "last 24 hours" in p and live.gate(post(as_of="2026-11-23"), URLS, "trend", DAY, SETTINGS) == []      # yesterday's event, for a post written this evening
+    assert any("not within 1 days" in x for x in live.gate(post(), URLS, "trend", DAY, SETTINGS))                # 20 Nov: old news
     assert "trend" in lp.PILLARS and lp.LABELS["trend"] and lp.TOUCH["trend"]
 
 
@@ -61,7 +62,7 @@ def test_the_chosen_opening_is_the_one_the_second_check_judges(tmp_path):
     def ask(messages, system, searches=8):
         seen.append(messages[0]["content"])
         if len(seen) == 1:
-            return {"text": json.dumps(post(hooks=["Gold lost 4 percent in a week while the dollar rose."])), "urls": URLS}
+            return {"text": json.dumps(post(as_of="2026-11-23", hooks=["Gold lost 4 percent in a week while the dollar rose."])), "urls": URLS}
         if len(seen) == 2:
             return {"text": json.dumps({"scores": [[2, 2, 2], [9, 9, 9]]}), "urls": set()}
         return {"text": json.dumps({"claims": [{"n": 1, "true": True}], "hook_supported": True, **GOOD}), "urls": set()}
