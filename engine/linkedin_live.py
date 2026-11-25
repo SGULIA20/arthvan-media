@@ -131,7 +131,7 @@ def _numbers(text: str) -> set:
 
 
 def write_prompt(category: str, day: date, covered: list, lessons: str = "") -> str:
-    return (f"Today is {day:%A %d %B %Y}; the post goes out tomorrow morning. Category: {category}. Write about {ASK[category]}.\n\n"
+    return (f"Today is {day:%A %d %B %Y}; the post goes out this morning at 08:10 Lagos time (07:10 UTC). Category: {category}. Write about {ASK[category]}.\n\n"
             "Search the web first. Find three to five candidate topics, pick the one with the strongest mix of relevance, originality and "
             "value to a CEO, CFO or COO, then check its key figures in at least two credible sources on DIFFERENT sites (company filings "
             "and announcements, central banks, Reuters, Bloomberg, Financial Times and the like). Never assume a price or an index is "

@@ -296,7 +296,8 @@ def test_the_evening_run_plans_the_post_asks_for_the_picture_once_and_the_mornin
                    git_publish=lambda paths, msg: pushed.append(msg), notify=sent.append, sync_repo=lambda: None, sleep=lambda s: None)
     sat = datetime(2026, 11, 21, 17, 7, tzinfo=timezone.utc)                                    # Saturday evening: Monday is two days off
     assert lp.evening(sat, root=tmp_path, deps=deps, bank=bank) == 0 and sent == []
-    sun = datetime(2026, 11, 22, 17, 7, tzinfo=timezone.utc)                                    # Sunday 18:07 Lagos
+    sun = datetime(2026, 11, 23, 5, 7, tzinfo=timezone.utc)                                     # Monday 06:07 Lagos: the morning of the post
+    assert lp.evening(datetime(2026, 11, 22, 17, 7, tzinfo=timezone.utc), root=tmp_path, deps=deps, bank=bank) == 0 and sent == []   # the evening before: nothing now
     assert lp.next_post_day(sun) == date(2026, 11, 23)
     assert lp.evening(sun, root=tmp_path, deps=deps, bank=bank) == 0
     assert len(sent) == 2 and "Hook c1" in sent[0] and "a warehouse at dawn" in sent[1] and "li 2026-11-23" in sent[1] and "No text" in sent[1]
@@ -321,7 +322,7 @@ def test_a_live_category_uses_the_fresh_post_past_the_gate_and_the_bank_when_it_
     settings = {"base_hashtags": ["#SG"], "min_hashtags": 3, "max_hashtags": 5, "banned_phrases": ["guarantee"]}
     bank = {"settings": settings, "items": [_brief_item("t1", "tools")]}
     (tmp_path / "content" / "linkedin_personal.json").write_text(json.dumps(bank))
-    tue = datetime(2026, 11, 24, 17, 7, tzinfo=timezone.utc)                                    # the evening before Wed 25 Nov: markets
+    tue = datetime(2026, 11, 25, 5, 7, tzinfo=timezone.utc)                                     # the morning of Wed 25 Nov: markets
     fresh = {**_brief_item("live-gold", "markets"), "sources": ["https://www.reuters.com/x"], "scene": "gold bars"}
     def deps_with(result):
         sent = []
@@ -349,7 +350,7 @@ def test_self_post_hands_the_draft_and_the_picture_to_the_founder_and_posts_noth
     sent, photos, posted = [], [], []
     deps = lp.Deps(render_cards=lambda item, out: ["card.jpg"], post_images=lambda *a: posted.append(a) or "urn:li:share:1", send_photo=lambda path, cap="": photos.append(path) or True,
                    git_publish=lambda paths, msg: None, notify=sent.append, sync_repo=lambda: None, sleep=lambda s: None)
-    assert lp.evening(datetime(2026, 11, 22, 17, 7, tzinfo=timezone.utc), root=tmp_path, deps=deps, bank=bank) == 0
+    assert lp.evening(datetime(2026, 11, 23, 5, 7, tzinfo=timezone.utc), root=tmp_path, deps=deps, bank=bank) == 0
     assert "DRAFT" in sent[0] and "YOUR TOUCH" in sent[0] and "company you worked in" in sent[0] and "li 2026-11-23" in sent[1]
     assert lp.run("post", date(2026, 11, 23), root=tmp_path, env={}, deps=deps, bank=bank) == 0      # no LinkedIn token needed
     assert posted == [] and photos == ["card.jpg"] and "YOUR TOUCH" in sent[-1] and len(sent) == 3            # two evening messages, one in the morning

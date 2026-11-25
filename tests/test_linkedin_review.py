@@ -82,7 +82,7 @@ def test_the_evening_tries_the_talking_point_first_and_falls_back_to_the_days_ca
         asked.append(cat)
         return (fresh, "") if cat == "trend" else (None, "no")
     d = lp.Deps(git_publish=lambda paths, msg: None, notify=sent.append, sync_repo=lambda: None, write_live=write_live, review=lambda root: None)
-    thu = datetime(2026, 11, 26, 17, 7, tzinfo=timezone.utc)                             # the evening before Fri 27 Nov (tools day)
+    thu = datetime(2026, 11, 27, 5, 7, tzinfo=timezone.utc)                              # the morning of Fri 27 Nov (tools day)
     assert lp.evening(thu, root=root, deps=d, bank=bank) == 0
     assert asked == ["trend"] and "This week's talking point" in sent[0] and "which side you take" in sent[0]
     assert json.loads((root / lp.NEXT).read_text())["item"]["pillar"] == "trend"
@@ -141,5 +141,5 @@ def test_lessons_come_only_from_new_numbers_and_reach_the_next_writer(tmp_path):
     told, sent = [], []
     d = lp.Deps(git_publish=lambda paths, msg: told.append(paths), notify=sent.append, sync_repo=lambda: None,
                 write_live=lambda *a: (None, "no"), review=lambda root: {"report": "Amazon led."})
-    lp.evening(datetime(2026, 11, 26, 17, 7, tzinfo=timezone.utc), root=root, deps=d, bank={"settings": SETTINGS, "items": []})
+    lp.evening(datetime(2026, 11, 27, 5, 7, tzinfo=timezone.utc), root=root, deps=d, bank={"settings": SETTINGS, "items": []})
     assert ["logs/linkedin-lessons.json"] in told and "Amazon led." in sent[0]
