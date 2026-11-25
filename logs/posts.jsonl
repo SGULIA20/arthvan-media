@@ -285,3 +285,4 @@
 {"date": "2026-11-25", "app": "scoremybiz", "item": "lumi-notifications-inbox-hi", "status": "published", "kind": "story", "feature": "notifications-inbox", "sha": "a071d8ca8bf0c3ddb1bc9958c668499604687967", "at": "2026-11-25T14:42:26+00:00", "ids": {"story": "17989390520891809"}}
 {"date": "2026-11-25", "channel": "whatsapp", "item": "lumi-notifications-inbox-hi", "status": "published", "id": "8eabfccd-5ab6-4079-b480-1d3c2e6c5b5d"}
 {"date": "2026-11-25", "channel": "telegram", "item": "lumi-notifications-inbox-hi", "status": "published", "id": "585"}
+{"date": "2026-11-25", "channel": "threads", "item": "lumi-notifications-inbox-hi", "status": "published", "id": "18510474235098090"}
