@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       trial:
-        description: 'markets or news = write a SAMPLE of that live post and send it to Telegram (nothing saved or posted); blank = the normal evening run'
+        description: 'trend, markets or news = write a SAMPLE of that live post and send it to Telegram (nothing saved or posted); blank = the normal evening run'
         required: false
         default: ''
 

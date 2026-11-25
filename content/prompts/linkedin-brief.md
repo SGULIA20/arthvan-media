@@ -54,3 +54,12 @@ made at all when reliable data is too thin; a donut's parts total 100 percent. P
 clear title, labels and values, a restrained palette, the one insight highlighted, nothing decorative. 4:5 portrait, 1200 x 1500.
 The picture must carry a business insight, not decorate the post.
 
+
+## From the topic to the post-mortem (founder, 25 Nov 2026: "additional steps for LinkedIn as well like we did for YouTube channels ... You are free to choose any topic worldwide")
+- The topic comes first. Each posting evening the writer looks for the one business, money, technology or work story professionals
+  around the world are talking about most in the last 72 hours (any country, any industry), preferring one with a real argument in
+  it. It passes the same fact gate as markets and news. If it fails, the day's category goes out as before.
+- Six openings are written and a panel of three readers picks the one that goes out. The closing question has two defensible answers.
+- The numbers come from him: a screenshot of a post's analytics sent to the bot as a photo captioned `stats`. Once three posts have
+  numbers, the lessons are written into the next draft's instructions (logs/linkedin-lessons.json).
+- LinkedIn's own feed is not read or scraped; "talked about" is judged from news coverage the search returns.
