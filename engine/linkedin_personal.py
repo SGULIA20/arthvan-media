@@ -300,13 +300,14 @@ def next_post_day(now_utc: datetime) -> date:
 
 
 def evening(now_utc: datetime, *, root: Path = ROOT, deps=None, bank: dict = None) -> int:
-    """The evening before a post: fix tomorrow's post, save it, and send the founder its text and picture prompt, once."""
+    """The morning of a post, before 08:00 Lagos (until 25 Nov 2026 the evening before, hence the name): fix today's post, save it,
+    and send the founder its text and picture prompt, once."""
     deps = deps or Deps()
     root = Path(root)
     day = next_post_day(now_utc)
     local = now_utc.astimezone(timezone(timedelta(hours=1)))
-    if (day - local.date()).days > 1:
-        print(f"next post is {day}: too early to ask for its picture")
+    if (day - local.date()).days > 0:                             # founder, 25 Nov 2026: written the same morning, not 12-15 hours before
+        print(f"next post is {day}: its draft is written that morning, so the story is hours old, not a day")
         return 0
     deps.sync_repo()
     try:
