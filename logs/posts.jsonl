@@ -290,3 +290,4 @@
 {"date": "2026-11-26", "app": "waypoint", "item": "mira-daily-path-hi", "status": "published", "kind": "story", "feature": "daily-path", "sha": "7c8b79afce46473c2d01231bc145ecefd21ec7f3", "at": "2026-11-26T14:42:36+00:00", "ids": {"story": "17960422827315570"}}
 {"date": "2026-11-26", "channel": "whatsapp", "item": "mira-daily-path-hi", "status": "published", "id": "8ca49802-e5ce-4682-aa24-647905ec3306"}
 {"date": "2026-11-26", "channel": "telegram", "item": "mira-daily-path-hi", "status": "published", "id": "589"}
+{"date": "2026-11-26", "channel": "threads", "item": "mira-daily-path-hi", "status": "published", "id": "17982434759915894"}
