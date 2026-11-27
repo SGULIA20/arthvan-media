@@ -293,3 +293,4 @@
 {"date": "2026-11-26", "channel": "threads", "item": "mira-daily-path-hi", "status": "published", "id": "17982434759915894"}
 {"date": "2026-11-27", "channel": "linkedin_personal", "item": "jobs-to-be-done", "status": "handed", "format": "picture", "picture_sent": true}
 {"date": "2026-11-27", "app": "scoremybiz", "item": "lumi-reminders-in-my-words-hi", "status": "publishing", "kind": "story", "feature": "reminders-in-my-words", "sha": "29c3400563966abef8aabd370eb38f265547de77", "at": "2026-11-27T14:42:11+00:00"}
+{"date": "2026-11-27", "app": "scoremybiz", "item": "lumi-reminders-in-my-words-hi", "status": "published", "kind": "story", "feature": "reminders-in-my-words", "sha": "29c3400563966abef8aabd370eb38f265547de77", "at": "2026-11-27T14:42:11+00:00", "ids": {"story": "18123699662050005"}}
