@@ -25,6 +25,7 @@ HELP = ("I can do these:\n/status – what went out today, what is paused, what 
 "🖼 Send a long video's thumbnail as a PHOTO with the caption thumb <piece id> (e.g. thumb 2026-11-29-arthvan-long)\n"
         "🖼 Send the picture for a LinkedIn post as a PHOTO with the caption li <date> (e.g. li 2026-11-23)\n"
         "📊 Send a screenshot of a LinkedIn post's analytics as a PHOTO with the caption stats – its numbers shape the next draft\n"
+                "🎞 Send a moving clip for a video's body as a FILE with the caption clip <piece id> <number> (e.g. clip 2026-11-28-arthvan-short 1)\n"
                 "🎬 Send your 10-second intro with the caption intro <piece id> (e.g. intro 2026-11-07-sglearning-short) – saved for the splice\n"
         "/help – this list\n\nAnswers can take 5–10 minutes: I check for commands every few minutes.")
 
@@ -169,6 +170,34 @@ def thumb_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, ch
     return f"🖼 Thumbnail for {pid} saved. It is set on YouTube when the video is uploaded, or within minutes if it already is."
 
 
+# 28 Nov 2026: the founder sent four moving clips for the Napoleon Short to this bot ("Uploaded 4 clips of napoleon on Arthvan bot") and
+# they were watched as Reels to X-ray: only the Sg-content bot knew the caption. Both bots take it now: "clip <piece id> <number>".
+CLIP_RE = re.compile(r"^\s*clip\s+(\d{4}-\d{2}-\d{2}-(?:sglearning|arthvan)-(?:short|long))\s+(\d{1,2})\s*$", re.I)
+CLIP_DIR = "inbox/scenes"
+
+
+def clip_id(message: dict) -> tuple:
+    m = CLIP_RE.match(message.get("caption") or "")
+    return (m.group(1).lower(), int(m.group(2))) if m else ()
+
+
+def clip_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, change=git_change, fetch=download) -> str:
+    """One of the founder's moving clips for a video's body: saved as inbox/scenes/<piece id>/clip<number>.mp4 and pushed; sg-content collects it."""
+    v = xray.video_of(message)
+    pid, number = clip_id(message)
+    if (v.get("file_size") or 0) > xray.MAX_BYTES:
+        return "🎞 That clip is over 20 MB, the most a bot can download. Send it again as a normal video (Telegram compresses it)."
+    out = Path(root) / CLIP_DIR / pid / f"clip{number}.mp4"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    fetch(cfg, v["file_id"], out, call)
+    try:
+        change(root, [str(out.relative_to(root))], [], f"moving clip {number} for {pid}")
+    except Exception as e:
+        return f"🎞 Clip {number} for {pid} downloaded but could not be saved to git: {str(e)[:160]}. Send it again in a few minutes."
+    have = sorted(int(f.stem[4:]) for f in out.parent.glob("clip*.mp4") if f.stem[4:].isdigit())
+    return f"🎞 Clip {number} for {pid} saved ({out.stat().st_size / 1e6:.1f} MB). Clips in so far: {', '.join(str(n) for n in have)}."
+
+
 def intro_id(message: dict) -> str:
     m = INTRO_RE.match(message.get("caption") or "")
     return m.group(1).lower() if m else ""
@@ -217,7 +246,7 @@ def xray_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, cha
 
 def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.send_message, change=git_change, day: date = None, now: float = None,
          xray_fn=xray_reply, intro_fn=intro_reply, li_fn=li_reply, thumb_fn=thumb_reply,
-         stats_fn=linkedin_review.stats_reply) -> int:
+         stats_fn=linkedin_review.stats_reply, clip_fn=clip_reply) -> int:
     """Answer every waiting command from the founder's chat, confirming each one so it is answered once. Returns how many."""
     day = day or lagos_today()
     now = time.time() if now is None else now
@@ -237,6 +266,10 @@ def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.sen
         if mine and picture_of(m) and li_day(m):
             call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
             send(cfg, li_fn(cfg, m, root, call=call, change=change)); handled += 1
+            continue
+        if mine and xray.video_of(m) and clip_id(m):
+            call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
+            send(cfg, clip_fn(cfg, m, root, call=call, change=change)); handled += 1
             continue
         if mine and xray.video_of(m) and intro_id(m):
             call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
