@@ -143,3 +143,17 @@ def test_lessons_come_only_from_new_numbers_and_reach_the_next_writer(tmp_path):
                 write_live=lambda *a: (None, "no"), review=lambda root: {"report": "Amazon led."})
     lp.evening(datetime(2026, 11, 27, 5, 7, tzinfo=timezone.utc), root=root, deps=d, bank={"settings": SETTINGS, "items": []})
     assert ["logs/linkedin-lessons.json"] in told and "Amazon led." in sent[0]
+
+
+def test_a_subject_he_posted_himself_is_told_to_the_writer_and_can_be_added_from_telegram(tmp_path):
+    """27 Nov 2026: 'Posted nvidia recently. Another post', after two samples about Nvidia."""
+    root = _root(tmp_path)
+    assert lp._own_posts({"already_posted": ["Kodak", "Nvidia"]})[-1] == "anything about Nvidia (he posted on it himself)"
+    assert "Nvidia" in lp.load_personal()["settings"]["already_posted"]
+    saved = []
+    reply = tg.answer("/posted Nvidia", root, date(2026, 11, 27), lambda root, add, rm, why: saved.append(add))
+    assert "Nvidia" in json.loads((root / "content" / "linkedin_personal.json").read_text())["settings"]["already_posted"] and "Noted" in reply
+    assert saved == [["content/linkedin_personal.json"]] and "e.g. /posted" in tg.answer("/posted", root, date(2026, 11, 27), lambda *a: None)
+    item = {"id": "x", "pillar": "trend", "hook": "Nvidia did it again", "body": " ".join(["word"] * 120), "question": "Why?", "hashtags": ["#A", "#B"],
+            "card": {"title": "T", "points": ["one", "two"]}}
+    assert any("already posted" in p for p in lp.lint_personal(item, {**SETTINGS, "already_posted": ["Nvidia"]}))

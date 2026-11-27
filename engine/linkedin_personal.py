@@ -321,7 +321,8 @@ def evening(now_utc: datetime, *, root: Path = ROOT, deps=None, bank: dict = Non
     log = root / "logs" / "posts.jsonl"
     cat, item, note = category_for(day), None, ""
     used = used_ids(log)
-    covered = [i["hook"] for i in bank["items"] if i["id"] in used] + [e.get("hook", "") for e in _entries(log) if e.get("hook")]
+    covered = ([i["hook"] for i in bank["items"] if i["id"] in used] + [e.get("hook", "") for e in _entries(log) if e.get("hook")]
+               + _own_posts(bank["settings"]))
     told = deps.review(root)                                      # his numbers, when new ones came in: lessons for tonight's writer
     if told:
         deps.git_publish(["logs/linkedin-lessons.json"], "linkedin: lessons from the last posts' numbers")
@@ -428,6 +429,12 @@ def _sync_repo() -> None:
 def _write_live(category: str, day: date, covered: list, settings: dict):
     from . import linkedin_live
     return linkedin_live.write(category, day, covered, settings)
+
+
+def _own_posts(settings: dict) -> list:
+    """Subjects he has posted about himself, in words the writer is shown: the check refuses them anyway, and a writer who is not
+    told wastes its one try on them (27 Nov 2026: two samples running were about Nvidia, which he had just posted)."""
+    return [f"anything about {x} (he posted on it himself)" for x in (settings.get("already_posted") or [])[-10:]]
 
 
 def _review(root: Path):
@@ -614,7 +621,7 @@ def main(argv=None) -> int:
         return evening(datetime.now(timezone.utc))
     if a.mode == "trial":                                          # a sample of a live post, sent to the founder; nothing is saved or posted
         bank, today = load_personal(), lagos_today()
-        item, why = _write_live(a.category, today, [i["hook"] for i in bank["items"]][:25], bank["settings"])
+        item, why = _write_live(a.category, today, [i["hook"] for i in bank["items"]][:15] + _own_posts(bank["settings"]), bank["settings"])
         if item is None:
             notify.send(f"🧪 LinkedIn {a.category} sample: the fact check did not pass, so on a real evening the bank post would go out.\nReason: {why}")
             return 0

@@ -2,6 +2,7 @@
 A GitHub workflow runs this every few minutes (there is no always-on server), so an answer can take 5-10 minutes.
 Only the founder's own chat is obeyed; anyone else who finds the bot is ignored. /pause writes the PAUSE file that run_daily
 already honours and pushes it; /resume removes it."""
+import json
 import re
 import subprocess
 import sys
@@ -19,7 +20,7 @@ INTRO_RE = re.compile(r"^\s*intro\s+(\d{4}-\d{2}-\d{2}-(?:sglearning|arthvan)-(?
 INTRO_DIR = "inbox/intro"
 
 HELP = ("I can do these:\n/status – what went out today, what is paused, what is next\n/pause – stop all posting until you say /resume\n"
-        "/resume – start posting again\n/comment <post text> – two LinkedIn comment drafts in your voice\n"
+        "/resume – start posting again\n/posted <subject> – a subject you already posted on LinkedIn, so it is not drafted again\n/comment <post text> – two LinkedIn comment drafts in your voice\n"
         "🎬 Send any Reel's video (screen recording or saved Reel, under 20 MB), caption optional – a Reel X-ray: why it works, what to copy\n"
 "🖼 Send a long video's thumbnail as a PHOTO with the caption thumb <piece id> (e.g. thumb 2026-11-29-arthvan-long)\n"
         "🖼 Send the picture for a LinkedIn post as a PHOTO with the caption li <date> (e.g. li 2026-11-23)\n"
@@ -70,6 +71,18 @@ def answer(text: str, root: Path, day: date, change=git_change) -> str:
         flag.unlink()
         change(root, [], ["PAUSE"], "resume posting (from Telegram)")
         return "▶️ Posting is back on. The next run goes out at its usual time."
+    if cmd == "/posted":                                              # 27 Nov 2026: he posts by hand, so only he knows what went out ("Posted nvidia recently")
+        subject = text.strip()[len(text.split()[0]):].strip()[:60]
+        if len(subject) < 3:
+            return "Tell me the subject you posted about, e.g. /posted Nvidia"
+        bank_file = root / "content" / "linkedin_personal.json"
+        bank = json.loads(bank_file.read_text())
+        done = bank["settings"].setdefault("already_posted", [])
+        if subject.lower() not in [x.lower() for x in done]:
+            done.append(subject)
+            bank_file.write_text(json.dumps(bank, indent=1, ensure_ascii=False))
+            change(root, ["content/linkedin_personal.json"], [], f"linkedin: the founder posted about {subject}")
+        return f"✅ Noted: no more LinkedIn drafts about {subject}."
     if cmd == "/comment":
         return comment_drafts.drafts(text.strip()[len(text.split()[0]):])
     return HELP
