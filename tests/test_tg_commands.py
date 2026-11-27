@@ -173,3 +173,22 @@ def test_a_photo_captioned_thumb_and_a_long_piece_id_is_saved_as_its_thumbnail(t
     assert Image.open(saved).size == (1280, 720) and "saved" in reply
     assert changed == [(["inbox/thumb/2026-11-29-arthvan-long.jpg"], "thumbnail for 2026-11-29-arthvan-long")]
 
+
+
+def test_a_video_captioned_clip_is_saved_for_the_videos_body_and_never_x_rayed(tmp_path):
+    """28 Nov 2026: four Napoleon clips sent to this bot were watched as Reels instead of being kept."""
+    from engine import tg_commands as tg
+    assert tg.clip_id({"caption": "clip 2026-11-28-arthvan-short 3"}) == ("2026-11-28-arthvan-short", 3) and tg.clip_id({"caption": "nice clip"}) == ()
+    calls, sent, kept = [], [], []
+    def call(token, method, params=None):
+        calls.append(method)
+        if method == "getUpdates" and not (params or {}).get("offset"):
+            return {"result": [{"update_id": 5, "message": {"chat": {"id": 1}, "caption": "Clip 2026-11-28-arthvan-short 2", "document": {"file_id": "f", "mime_type": "video/mp4", "file_size": 6_000_000}}}]}
+        return {"result": []}
+    def fetch(cfg, file_id, out, call):
+        out.write_bytes(b"x" * 1000)
+    n = tg.poll({"token": "t", "chat_id": 1}, tmp_path, call=call, send=lambda cfg, text: sent.append(text), change=lambda *a: kept.append(a[1]),
+                xray_fn=lambda *a, **k: (_ for _ in ()).throw(AssertionError("a clip must not be X-rayed")),
+                clip_fn=lambda cfg, m, root, call, change: tg.clip_reply(cfg, m, root, call=call, change=change, fetch=fetch))
+    assert n == 1 and (tmp_path / "inbox" / "scenes" / "2026-11-28-arthvan-short" / "clip2.mp4").exists()
+    assert "Clips in so far: 2" in sent[0] and kept == [["inbox/scenes/2026-11-28-arthvan-short/clip2.mp4"]]
