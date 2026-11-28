@@ -1,0 +1,142 @@
+{
+ "id": "lumi-break-even-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "break-even",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Kam se kam kitna bechna hai?",
+ "banner": "Badi dukaan lene se pehle<br><em>ek hisaab</em> 🧮",
+ "caption": "Mahine ka kharcha nikaalne ke liye aapko kam se kam kitna bechna padta hai, pata hai? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a sweet shop owner who, before renting a bigger shop, enters her monthly fixed costs and sales and sees the least she must sell each month to cover her costs. It is maths on the numbers she types, not a forecast and not a promise of profit. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Sunita": "Sunita is a woman in her late thirties who runs a small sweet shop, with a neat bun, an orange saree and an apron.",
+   "Vikas": "Vikas is Sunita's husband, a man of about forty with glasses and a white shirt."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "बड़ी दुकान। दुगना किराया। सुनीता हाँ कहने वाली थी।",
+   "sub": "Badi dukaan. Dugna kiraaya. Sunita haan kehne waali thi.",
+   "min": 2.2,
+   "art": "Sunita standing in front of a large empty shop with a To Let board, looking up at it with hope, a busy market street behind.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "अभी की मिठाई की दुकान छोटी थी, पर चलती थी।",
+   "sub": "Abhi ki mithai ki dukaan chhoti thi, par chalti thi.",
+   "min": 2.2,
+   "art": "Sunita behind the glass counter of a small sweet shop filled with trays of colourful sweets, serving a customer.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "विकास ने पूछा, किराया निकलेगा कैसे?",
+   "sub": "Vikas ne poochha, kiraaya niklega kaise?",
+   "min": 2.2,
+   "art": "Vikas sitting on a stool in the sweet shop with a cup of tea, asking Sunita a question.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "सुनीता बोली, ज़्यादा जगह, ज़्यादा ग्राहक।",
+   "sub": "Sunita boli, zyaada jagah, zyaada graahak.",
+   "min": 2.2,
+   "art": "Sunita spreading her arms wide with a confident smile, trays of sweets around her.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "पर कितने ज़्यादा? यह किसी को नहीं पता था।",
+   "sub": "Par kitne zyaada? Yeh kisi ko nahi pata tha.",
+   "min": 2.2,
+   "art": "Sunita and Vikas looking at each other in silence, a rent agreement paper lying on the counter.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "रात को उसने स्कोर माय बिज़ खोला।",
+   "sub": "Raat ko usne ScoreMyBiz khola.",
+   "min": 2.2,
+   "art": "Sunita sitting at a small table at home at night with her phone, a notebook and a steel glass of water beside her.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "किराया, तनख़्वाह, बिजली। और महीने की बिक्री।",
+   "sub": "Kiraaya, tankhwaah, bijli. Aur mahine ki bikri.",
+   "min": 2.4,
+   "screen": "break-even.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "ऐप ने एक रेखा दिखाई। इतना बेचो, तब ख़र्चा निकलेगा।",
+   "sub": "App ne ek rekha dikhaayi. Itna becho, tab kharcha niklega.",
+   "min": 2.4,
+   "screen": "break-even.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "नई दुकान के लिए वह रेखा बहुत ऊपर थी।",
+   "sub": "Nayi dukaan ke liye woh rekha bahut oopar thi.",
+   "min": 2.2,
+   "art": "Sunita looking at her phone with wide, serious eyes, her hand over her mouth.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "यह अंदाज़ा नहीं था। उसके अपने लिखे आँकड़ों का हिसाब था।",
+   "sub": "Yeh andaaza nahi tha. Uske apne likhe aankdon ka hisaab tha.",
+   "min": 2.2,
+   "art": "Sunita writing figures from her phone into a notebook, Vikas leaning in beside her.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "उसने मालिक से कहा, पहले छोटा हिस्सा दीजिए।",
+   "sub": "Usne maalik se kaha, pehle chhota hissa deejiye.",
+   "min": 2.2,
+   "art": "Sunita talking confidently with an elderly landlord in front of the large shop, pointing at one half of it.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "आपको पता है, कम से कम कितना बेचना है?",
+   "sub": "Aapko pata hai, kam se kam kitna bechna hai?",
+   "min": 3.0,
+   "art": "Close-up of Sunita smiling at the viewer, trays of sweets softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

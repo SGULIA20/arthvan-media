@@ -1,0 +1,142 @@
+{
+ "id": "lumi-notifications-inbox-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "notifications-inbox",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Ek ghanti, saari yaad",
+ "banner": "Supplier ka paisa<br><em>yaad hi nahi raha</em> 🔔",
+ "caption": "Kisi ka paisa dena bhool gaye hon, aisa aapke saath kab hua tha? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a mobile repair shop owner who misses a supplier's due date, then finds one in-app list behind a bell on the home screen with reminders, supplier-due notes and weekly check-ins. It is a list inside the app. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Deepak": "Deepak is a man of about thirty who runs a mobile repair shop, with short hair, a grey t-shirt and a small screwdriver in his shirt pocket.",
+   "Gupta": "Gupta is a parts supplier in his fifties with a round face, a cream safari suit and a leather bag."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "गुप्ता जी दुकान पर खड़े थे। और दीपक को कुछ याद नहीं था।",
+   "sub": "Gupta ji dukaan par khade the. Aur Deepak ko kuch yaad nahi tha.",
+   "min": 2.2,
+   "art": "Gupta standing at the counter of a small mobile repair shop with his arms folded, Deepak looking up surprised from a phone he is repairing.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "पैसा देने की तारीख़ तीन दिन पहले निकल चुकी थी।",
+   "sub": "Paisa dene ki taareekh teen din pehle nikal chuki thi.",
+   "min": 2.2,
+   "art": "Gupta showing a paper bill to Deepak, who scratches the back of his head.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "दीपक ने माफ़ी माँगी और पैसा दिया।",
+   "sub": "Deepak ne maafi maangi aur paisa diya.",
+   "min": 2.2,
+   "art": "Deepak handing an envelope to Gupta with an apologetic face.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "पर शर्म पूरे दिन साथ रही।",
+   "sub": "Par sharm poore din saath rahi.",
+   "min": 2.2,
+   "art": "Deepak sitting alone at his repair bench, a dismantled phone in front of him, looking thoughtful.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "बातें कई थीं। कहीं काग़ज़ पर, कहीं मैसेज में, कहीं दिमाग़ में।",
+   "sub": "Baatein kai theen. Kaheen kaagaz par, kaheen message mein, kaheen dimaag mein.",
+   "min": 2.2,
+   "art": "A cluttered shop counter with sticky notes, a diary, bills and a phone with many messages.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "शाम को उसने स्कोर माय बिज़ के घर वाले पन्ने पर एक घंटी देखी।",
+   "sub": "Shaam ko usne ScoreMyBiz ke ghar waale panne par ek ghanti dekhi.",
+   "min": 2.2,
+   "art": "Deepak looking closely at his phone in the evening light of the shop, curious.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "अंदर एक ही सूची थी। याद दिलाने वाली बातें, किसका पैसा कब देना है।",
+   "sub": "Andar ek hi soochi thi. Yaad dilaane waali baatein, kiska paisa kab dena hai.",
+   "min": 2.4,
+   "screen": "notifications.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "हफ़्ते का हाल भी वहीं। जो नहीं पढ़ा, उस पर निशान।",
+   "sub": "Hafte ka haal bhi waheen. Jo nahi padha, us par nishaan.",
+   "min": 2.4,
+   "screen": "notifications.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "अब वह सुबह दुकान खोलते ही घंटी देखता है।",
+   "sub": "Ab woh subah dukaan kholte hi ghanti dekhta hai.",
+   "min": 2.2,
+   "art": "Deepak lifting the shop shutter in bright morning light with one hand, phone in the other.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "अगले महीने गुप्ता जी आए, तो लिफ़ाफ़ा तैयार था।",
+   "sub": "Agle mahine Gupta ji aaye, toh lifaafa taiyaar tha.",
+   "min": 2.2,
+   "art": "Deepak handing an envelope to a smiling Gupta across the counter, both relaxed.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "गुप्ता जी बोले, अरे वाह, इस बार तारीख़ से पहले।",
+   "sub": "Gupta ji bole, are waah, is baar taareekh se pehle.",
+   "min": 2.2,
+   "art": "Gupta laughing and patting Deepak on the shoulder.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "आपकी ज़रूरी बातें कितनी जगह बिखरी हैं?",
+   "sub": "Aapki zaroori baatein kitni jagah bikhri hain?",
+   "min": 3.0,
+   "art": "Close-up of Deepak smiling at the viewer, shelves of phone covers softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

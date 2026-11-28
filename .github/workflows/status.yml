@@ -1,9 +1,10 @@
 name: status
 
-# Evening Telegram: the founder's scorecard (relayed from the content pipeline, same text on both bots) and the credit/buffer line.
+# Evening Telegram: the credit/buffer line. The 9 pm scorecard comes from the content bot only (founder, 24 Nov 2026: 'Scorecard on one
+# bot'); until then this bot relayed the same card (21 Oct 2026). engine/relay_scorecard.py is kept, unused, in case he wants it back.
 on:
   schedule:
-    - cron: '28 20 * * *'   # 21:28 Lagos: relays the 9 pm card the content pipeline writes at 21:03 (founder, 22 Oct 2026)
+    - cron: '28 20 * * *'   # 21:28 Lagos
   workflow_dispatch:
 
 permissions:
@@ -24,8 +25,3 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python -m engine.notify --credit
-      - name: Relay the evening scorecard (same card as the content bot)
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python -m engine.relay_scorecard

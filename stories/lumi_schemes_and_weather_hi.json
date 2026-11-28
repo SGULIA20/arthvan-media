@@ -1,0 +1,142 @@
+{
+ "id": "lumi-schemes-and-weather-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "schemes-and-weather",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Baarish aayi, maal bheeg gaya",
+ "banner": "Baarish ka pata hota<br><em>toh maal bachta</em> 🌧️",
+ "caption": "Mausam ki wajah se aapka maal kabhi kharaab hua hai? Kya hua tha? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a grain trader who loses sacks to sudden rain, then finds a four-day weather watch and a list of small-business schemes with a likely or possible fit and the official link. The app never says a scheme will be granted; the official page decides. India only. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Iqbal": "Iqbal is a man in his late forties who trades grain, with a short beard, a white kurta and a cotton scarf on his shoulder.",
+   "Arif": "Arif is Iqbal's son, a young man of about twenty with a blue shirt."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "रात भर बारिश। सुबह बीस बोरियाँ भीगी मिलीं।",
+   "sub": "Raat bhar baarish. Subah bees boriyaan bheegi mileen.",
+   "min": 2.2,
+   "art": "Iqbal standing in the doorway of a grain store looking at wet jute sacks stacked outside, puddles on the ground, grey morning sky clearing to sun.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "इक़बाल ने सिर पकड़ लिया।",
+   "sub": "Iqbal ne sir pakad liya.",
+   "min": 2.2,
+   "art": "Iqbal sitting on a wooden bench holding his head, wet sacks beside him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "किसी ने बताया ही नहीं था कि पानी आने वाला है।",
+   "sub": "Kisi ne bataaya hi nahi tha ki paani aane waala hai.",
+   "min": 2.2,
+   "art": "Iqbal and Arif lifting a wet sack together into the store.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "आरिफ़ बोला, अब्बा, फ़ोन में मौसम दिखता है।",
+   "sub": "Arif bola, abba, phone mein mausam dikhta hai.",
+   "min": 2.2,
+   "art": "Arif showing his phone to Iqbal, who looks doubtful.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "इक़बाल हँसा, मेरे धंधे से उसका क्या लेना?",
+   "sub": "Iqbal hansa, mere dhandhe se uska kya lena?",
+   "min": 2.2,
+   "art": "Iqbal laughing and waving his hand, sacks of grain stacked behind him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "आरिफ़ ने स्कोर माय बिज़ में एक स्क्रीन खोली।",
+   "sub": "Arif ne ScoreMyBiz mein ek screen kholi.",
+   "min": 2.2,
+   "art": "Arif holding the phone up between them, both looking at it.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "चार दिन का मौसम। और साफ़ लिखा था, बारिश है, माल ढक लो।",
+   "sub": "Chaar din ka mausam. Aur saaf likha tha, baarish hai, maal dhak lo.",
+   "min": 2.4,
+   "screen": "alerts.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "नीचे छोटे कारोबार की योजनाएँ, और हर एक का सरकारी लिंक।",
+   "sub": "Neeche chhote kaarobaar ki yojanaayen, aur har ek ka sarkaari link.",
+   "min": 2.4,
+   "screen": "alerts.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s09.png",
+   "vo": "ऐप ने वादा नहीं किया। बस बताया, कौन सी योजना शायद जमे।",
+   "sub": "App ne vaada nahi kiya. Bas bataaya, kaun si yojana shaayad jame.",
+   "min": 2.2,
+   "art": "Iqbal reading the phone carefully through his glasses, stroking his beard.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "अगले हफ़्ते फिर बादल आए।",
+   "sub": "Agle hafte phir baadal aaye.",
+   "min": 2.2,
+   "art": "Dark clouds gathering over the grain market, traders looking up.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "इस बार बोरियाँ तिरपाल के नीचे थीं।",
+   "sub": "Is baar boriyaan tirpaal ke neeche theen.",
+   "min": 2.2,
+   "art": "Iqbal and Arif pulling a blue tarpaulin over stacked sacks, both smiling, first raindrops falling.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "आपका माल मौसम से कितनी बार बिगड़ा है?",
+   "sub": "Aapka maal mausam se kitni baar bigda hai?",
+   "min": 3.0,
+   "art": "Close-up of Iqbal smiling at the viewer, covered sacks softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}

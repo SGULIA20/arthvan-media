@@ -185,10 +185,19 @@ def after_run(root: Path, day: date, code: int, entries_before: int, env=None, s
     log = Path(root) / "logs" / "posts.jsonl"
     env = os.environ if env is None else env
     run_url = f"{env.get('GITHUB_SERVER_URL', 'https://github.com')}/{env.get('GITHUB_REPOSITORY')}/actions/runs/{env.get('GITHUB_RUN_ID')}" if env.get("GITHUB_RUN_ID") and env.get("GITHUB_REPOSITORY") else ""
+    # 24 Nov 2026: the day's four posting slots each sent the alert while a problem stayed open, and each sent the summary while a
+    # channel kept answering "waiting". Each is now told once a day: a row in the log remembers it (the log is pushed with every run).
+    told = {e.get("status") for e in entries(log) if e.get("date") == day.isoformat() and e.get("channel") == "founder_note"}
+    def remember(what: str) -> None:
+        with open(log, "a") as f:
+            f.write(json.dumps({"date": day.isoformat(), "channel": "founder_note", "status": what}) + "\n")
     if code != 0:
-        send_fn(failure_alert(root, day, run_url), env)
+        if "alert" not in told:
+            send_fn(failure_alert(root, day, run_url), env); remember("alert")
     elif len(entries(log)) > entries_before:
-        send_fn(daily_summary(root, day), env)
+        posted_now = [e for e in entries(log)[entries_before:] if e.get("status") == "published"]
+        if posted_now or "summary" not in told:
+            send_fn(daily_summary(root, day), env); remember("summary")
 
 
 def credit_line(today: date = None, ledger_path: Path = None) -> str:

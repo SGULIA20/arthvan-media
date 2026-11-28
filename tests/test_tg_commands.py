@@ -141,3 +141,54 @@ def test_an_intro_video_is_saved_under_its_piece_id_not_xrayed(tmp_path):
 def test_an_intro_too_big_for_the_bot_is_refused(tmp_path):
     m = _video_update(9, size=25_000_000, caption="intro 2026-11-07-sglearning-short")["message"]
     assert tc.intro_reply(CFG, m, tmp_path, fetch=lambda *a: None, change=lambda *a: None).startswith("🎬 That intro is over 20 MB")
+
+
+def test_a_photo_captioned_li_and_a_date_is_saved_as_that_days_linkedin_picture(tmp_path):
+    """Founder, 21 Nov 2026: he makes the picture for his LinkedIn post each evening."""
+    from PIL import Image
+    from engine import tg_commands as tg
+    msg = {"chat": {"id": 7}, "caption": "li 2026-11-23", "photo": [{"file_id": "s", "file_size": 10}, {"file_id": "big", "file_size": 900}]}
+    assert tg.li_day(msg) == "2026-11-23" and tg.picture_of(msg)["file_id"] == "big"
+    assert tg.li_day({"caption": "intro 2026-11-23-arthvan-short"}) == "" and tg.picture_of({"text": "hi"}) == {}
+    changed = []
+    def fetch(cfg, file_id, out, call):
+        Image.new("RGB", (3000, 3750), "navy").save(out, "PNG"); return out
+    reply = tg.li_reply({"token": "t", "chat_id": 7}, msg, tmp_path, call=None, change=lambda root, add, rm, m: changed.append((add, m)), fetch=fetch)
+    saved = tmp_path / "inbox" / "linkedin" / "2026-11-23.jpg"
+    assert saved.exists() and Image.open(saved).size == (2400, 3000) and "saved" in reply
+    assert changed == [(["inbox/linkedin/2026-11-23.jpg"], "linkedin picture for 2026-11-23")]
+
+
+def test_a_photo_captioned_thumb_and_a_long_piece_id_is_saved_as_its_thumbnail(tmp_path):
+    """22 Nov 2026: the founder sent 'thumb 2026-11-29-arthvan-long' to this bot and nothing took it."""
+    from PIL import Image
+    from engine import tg_commands as tg
+    msg = {"chat": {"id": 7}, "caption": "thumb 2026-11-29-arthvan-long", "photo": [{"file_id": "big", "file_size": 900}]}
+    assert tg.thumb_id(msg) == "2026-11-29-arthvan-long" and tg.thumb_id({"caption": "thumb 2026-11-29-arthvan-short"}) == ""   # only longs have one
+    changed = []
+    def fetch(cfg, file_id, out, call):
+        Image.new("RGB", (1672, 941), "maroon").save(out, "PNG"); return out
+    reply = tg.thumb_reply({"token": "t", "chat_id": 7}, msg, tmp_path, call=None, change=lambda root, add, rm, m: changed.append((add, m)), fetch=fetch)
+    saved = tmp_path / "inbox" / "thumb" / "2026-11-29-arthvan-long.jpg"
+    assert Image.open(saved).size == (1280, 720) and "saved" in reply
+    assert changed == [(["inbox/thumb/2026-11-29-arthvan-long.jpg"], "thumbnail for 2026-11-29-arthvan-long")]
+
+
+
+def test_a_video_captioned_clip_is_saved_for_the_videos_body_and_never_x_rayed(tmp_path):
+    """28 Nov 2026: four Napoleon clips sent to this bot were watched as Reels instead of being kept."""
+    from engine import tg_commands as tg
+    assert tg.clip_id({"caption": "clip 2026-11-28-arthvan-short 3"}) == ("2026-11-28-arthvan-short", 3) and tg.clip_id({"caption": "nice clip"}) == ()
+    calls, sent, kept = [], [], []
+    def call(token, method, params=None):
+        calls.append(method)
+        if method == "getUpdates" and not (params or {}).get("offset"):
+            return {"result": [{"update_id": 5, "message": {"chat": {"id": 1}, "caption": "Clip 2026-11-28-arthvan-short 2", "document": {"file_id": "f", "mime_type": "video/mp4", "file_size": 6_000_000}}}]}
+        return {"result": []}
+    def fetch(cfg, file_id, out, call):
+        out.write_bytes(b"x" * 1000)
+    n = tg.poll({"token": "t", "chat_id": 1}, tmp_path, call=call, send=lambda cfg, text: sent.append(text), change=lambda *a: kept.append(a[1]),
+                xray_fn=lambda *a, **k: (_ for _ in ()).throw(AssertionError("a clip must not be X-rayed")),
+                clip_fn=lambda cfg, m, root, call, change: tg.clip_reply(cfg, m, root, call=call, change=change, fetch=fetch))
+    assert n == 1 and (tmp_path / "inbox" / "scenes" / "2026-11-28-arthvan-short" / "clip2.mp4").exists()
+    assert "Clips in so far: 2" in sent[0] and kept == [["inbox/scenes/2026-11-28-arthvan-short/clip2.mp4"]]

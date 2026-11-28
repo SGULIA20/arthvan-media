@@ -17,7 +17,15 @@ class TelegramError(Exception):
     pass
 
 
+SENDS = ("sendMessage", "sendVideo", "sendPhoto", "sendDocument")     # a send whose answer is lost may still have been delivered
+
+
 def _call(token: str, method: str, body: dict, tries: int = 3):
+    # founder, 24 Nov 2026: "I am getting n number of duplicate messages". A send was tried up to three times on a timeout or a 5xx,
+    # and Telegram had often delivered the first one already. A send is now repeated only when Telegram says it was not accepted (429).
+    retry_on = (429,) if method in SENDS else (429, 500, 502, 503, 504)
+    if method in SENDS:
+        tries = min(tries, 2)
     req = urllib.request.Request(f"{API}/bot{token}/{method}", data=json.dumps(body).encode(), method="POST", headers={"Content-Type": "application/json"})
     last = ""
     for attempt in range(tries):
@@ -26,13 +34,14 @@ def _call(token: str, method: str, body: dict, tries: int = 3):
                 return json.loads(r.read())
         except urllib.error.HTTPError as e:
             last = e.read().decode(errors="replace")[:300]
-            if e.code in (429, 500, 502, 503, 504) and attempt < tries - 1:
+            if e.code in retry_on and attempt < tries - 1:
                 time.sleep(5 * (attempt + 1)); continue
             raise TelegramError(f"Telegram {method} failed ({e.code}): {last.replace(token, '<token>')}") from None
         except Exception as e:
             last = f"{type(e).__name__}: {e}"
-            if attempt < tries - 1:
+            if method not in SENDS and attempt < tries - 1:      # a timed-out send is not repeated: it may have gone through
                 time.sleep(5 * (attempt + 1)); continue
+            break
     raise TelegramError(f"Telegram {method} kept failing: {last.replace(token, '<token>')[:200]}")
 
 
@@ -84,3 +93,27 @@ def find_chat_id(token: str) -> str:
     if not chats:
         raise TelegramError("no messages yet: send the bot any message (for example /start) and try again")
     return str(chats[-1])
+
+
+def send_photo_file(cfg: dict, path, caption: str = "") -> str:
+    """Upload a local picture to the founder's chat (his LinkedIn picture, handed back with the draft). Returns the message id."""
+    from pathlib import Path
+    path = Path(path)
+    boundary = "----arthvan" + str(int(time.time() * 1000))
+    def field(name, value):
+        return f'--{boundary}\r\nContent-Disposition: form-data; name="{name}"\r\n\r\n{value}\r\n'.encode()
+    kind = "image/png" if path.suffix.lower() == ".png" else "image/jpeg"
+    body = (field("chat_id", cfg["chat_id"]) + field("caption", caption[:1000])
+            + f'--{boundary}\r\nContent-Disposition: form-data; name="photo"; filename="{path.name}"\r\nContent-Type: {kind}\r\n\r\n'.encode()
+            + path.read_bytes() + f"\r\n--{boundary}--\r\n".encode())
+    req = urllib.request.Request(f"{API}/bot{cfg['token']}/sendPhoto", data=body, method="POST",
+                                 headers={"Content-Type": f"multipart/form-data; boundary={boundary}"})
+    try:
+        with urllib.request.urlopen(req, timeout=120, context=_CTX) as r:
+            res = json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        raise TelegramError(f"Telegram sendPhoto failed ({e.code}): {e.read().decode(errors='replace')[:200].replace(cfg['token'], '<token>')}") from None
+    if not res.get("ok"):
+        raise TelegramError(f"Telegram refused the photo: {str(res)[:200].replace(cfg['token'], '<token>')}")
+    return str(res["result"]["message_id"])
+

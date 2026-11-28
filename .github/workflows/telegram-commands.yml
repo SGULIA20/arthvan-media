@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  actions: write            # starts the LinkedIn morning draft (below)
 
 concurrency:
   group: telegram-commands
@@ -24,9 +25,24 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+      - name: Picture library (the bot resizes LinkedIn pictures and thumbnails)
+        run: pip install -q "pillow>=10.0"       # 22 Nov 2026: without it the bot crashed on the first LinkedIn picture and lost it
       - name: Answer waiting commands
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python -m engine.tg_commands
+      # 27 Nov 2026: the first morning of the same-day draft, GitHub started none of its six slots before 08:00 Lagos (its own schedule
+      # runs this repository hours late), so a bank post went out. This job is started on time by the outside clock, so it starts
+      # the draft: on a posting day from 06:00 Lagos, until today's post is planned.
+      - name: Start the LinkedIn morning draft
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          now=$(TZ=Africa/Lagos date +%H%M); dow=$(TZ=Africa/Lagos date +%u); today=$(TZ=Africa/Lagos date +%F)
+          case "$dow" in 1|3|5) ;; *) exit 0 ;; esac
+          if [ "$now" -lt 0600 ] || [ "$now" -ge 0755 ]; then exit 0; fi
+          if grep -q "\"date\": \"$today\"" content/linkedin_next.json 2>/dev/null; then exit 0; fi
+          gh workflow run linkedin-evening.yml --ref main && echo "started the draft for $today"

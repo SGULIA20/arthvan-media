@@ -2,6 +2,7 @@
 A GitHub workflow runs this every few minutes (there is no always-on server), so an answer can take 5-10 minutes.
 Only the founder's own chat is obeyed; anyone else who finds the bot is ignored. /pause writes the PAUSE file that run_daily
 already honours and pushes it; /resume removes it."""
+import json
 import re
 import subprocess
 import sys
@@ -9,7 +10,7 @@ import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from . import comment_drafts, notify, telegram, xray
+from . import comment_drafts, linkedin_review, notify, telegram, xray
 
 ROOT = Path(__file__).resolve().parent.parent
 MAX_AGE_SECONDS = 12 * 3600
@@ -19,9 +20,13 @@ INTRO_RE = re.compile(r"^\s*intro\s+(\d{4}-\d{2}-\d{2}-(?:sglearning|arthvan)-(?
 INTRO_DIR = "inbox/intro"
 
 HELP = ("I can do these:\n/status – what went out today, what is paused, what is next\n/pause – stop all posting until you say /resume\n"
-        "/resume – start posting again\n/comment <post text> – two LinkedIn comment drafts in your voice\n"
+        "/resume – start posting again\n/posted <subject> – a subject you already posted on LinkedIn, so it is not drafted again\n/comment <post text> – two LinkedIn comment drafts in your voice\n"
         "🎬 Send any Reel's video (screen recording or saved Reel, under 20 MB), caption optional – a Reel X-ray: why it works, what to copy\n"
-        "🎬 Send your 10-second intro with the caption intro <piece id> (e.g. intro 2026-11-07-sglearning-short) – saved for the splice\n"
+"🖼 Send a long video's thumbnail as a PHOTO with the caption thumb <piece id> (e.g. thumb 2026-11-29-arthvan-long)\n"
+        "🖼 Send the picture for a LinkedIn post as a PHOTO with the caption li <date> (e.g. li 2026-11-23)\n"
+        "📊 Send a screenshot of a LinkedIn post's analytics as a PHOTO with the caption stats – its numbers shape the next draft\n"
+                "🎞 Send a moving clip for a video's body as a FILE with the caption clip <piece id> <number> (e.g. clip 2026-11-28-arthvan-short 1)\n"
+                "🎬 Send your 10-second intro with the caption intro <piece id> (e.g. intro 2026-11-07-sglearning-short) – saved for the splice\n"
         "/help – this list\n\nAnswers can take 5–10 minutes: I check for commands every few minutes.")
 
 
@@ -67,6 +72,18 @@ def answer(text: str, root: Path, day: date, change=git_change) -> str:
         flag.unlink()
         change(root, [], ["PAUSE"], "resume posting (from Telegram)")
         return "▶️ Posting is back on. The next run goes out at its usual time."
+    if cmd == "/posted":                                              # 27 Nov 2026: he posts by hand, so only he knows what went out ("Posted nvidia recently")
+        subject = text.strip()[len(text.split()[0]):].strip()[:60]
+        if len(subject) < 3:
+            return "Tell me the subject you posted about, e.g. /posted Nvidia"
+        bank_file = root / "content" / "linkedin_personal.json"
+        bank = json.loads(bank_file.read_text())
+        done = bank["settings"].setdefault("already_posted", [])
+        if subject.lower() not in [x.lower() for x in done]:
+            done.append(subject)
+            bank_file.write_text(json.dumps(bank, indent=1, ensure_ascii=False))
+            change(root, ["content/linkedin_personal.json"], [], f"linkedin: the founder posted about {subject}")
+        return f"✅ Noted: no more LinkedIn drafts about {subject}."
     if cmd == "/comment":
         return comment_drafts.drafts(text.strip()[len(text.split()[0]):])
     return HELP
@@ -78,6 +95,107 @@ def download(cfg: dict, file_id: str, out: Path, call=telegram._call) -> Path:
     with urllib.request.urlopen(f"{telegram.API}/file/bot{cfg['token']}/{path}", timeout=180, context=telegram._CTX) as r:
         out.write_bytes(r.read())
     return out
+
+
+# 21 Nov 2026: the founder makes the picture for his LinkedIn post himself; a photo captioned "li <date>" is that day's picture.
+LI_RE = re.compile(r"^\s*li\s+(\d{4}-\d{2}-\d{2})\s*$", re.I)
+LI_DIR = "inbox/linkedin"
+
+
+def li_day(message: dict) -> str:
+    m = LI_RE.match(message.get("caption") or "")
+    return m.group(1) if m else ""
+
+
+def picture_of(message: dict) -> dict:
+    """The largest size of a photo, or an image sent as a file; {} when the message carries neither."""
+    if message.get("photo"):
+        return max(message["photo"], key=lambda p: p.get("file_size") or p.get("width", 0))
+    d = message.get("document") or {}
+    return d if str(d.get("mime_type", "")).startswith("image/") else {}
+
+
+def li_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, change=git_change, fetch=download) -> str:
+    """The founder's picture for one LinkedIn post: saved as inbox/linkedin/<date>.jpg and pushed, replacing an earlier one for that day."""
+    from PIL import Image
+    day, pic = li_day(message), picture_of(message)
+    out = Path(root) / LI_DIR / f"{day}.jpg"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    raw = out.with_suffix(".raw")
+    fetch(cfg, pic["file_id"], raw, call)
+    try:
+        im = Image.open(raw).convert("RGB")
+        im.thumbnail((2400, 3000))
+        im.save(out, "JPEG", quality=92)
+    except Exception as e:
+        return f"🖼 That file is not a picture I can read ({str(e)[:80]}). Send it again as a photo."
+    finally:
+        raw.unlink(missing_ok=True)
+    try:
+        change(root, [str(out.relative_to(root))], [], f"linkedin picture for {day}")
+    except Exception as e:
+        return f"🖼 Picture for {day} downloaded but could not be saved to git: {str(e)[:160]}. Send it again in a few minutes."
+    return f"🖼 Picture for the LinkedIn post of {day} saved ({im.width} x {im.height}). It goes out with that morning's post at 08:10 WAT."
+
+
+# 22 Nov 2026: the founder sent a long video's thumbnail to this bot ("thumb <piece id>") and nothing took it; thumbnails had only ever
+# been handled in the Claude chat. It is saved here like an intro clip, and sg-content's studio job collects it.
+THUMB_RE = re.compile(r"^\s*thumb\s+(\d{4}-\d{2}-\d{2}-(?:sglearning|arthvan)-long)\s*$", re.I)
+THUMB_DIR = "inbox/thumb"
+
+
+def thumb_id(message: dict) -> str:
+    m = THUMB_RE.match(message.get("caption") or "")
+    return m.group(1).lower() if m else ""
+
+
+def thumb_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, change=git_change, fetch=download) -> str:
+    """A long video's thumbnail: saved as inbox/thumb/<piece id>.jpg at 1280 x 720 and pushed, replacing an earlier one."""
+    from PIL import Image, ImageOps
+    pid, pic = thumb_id(message), picture_of(message)
+    out = Path(root) / THUMB_DIR / f"{pid}.jpg"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    raw = out.with_suffix(".raw")
+    fetch(cfg, pic["file_id"], raw, call)
+    try:
+        ImageOps.fit(Image.open(raw).convert("RGB"), (1280, 720)).save(out, "JPEG", quality=90)     # YouTube: 16:9, under 2 MB
+    except Exception as e:
+        return f"🖼 That file is not a picture I can read ({str(e)[:80]}). Send it again as a photo."
+    finally:
+        raw.unlink(missing_ok=True)
+    try:
+        change(root, [str(out.relative_to(root))], [], f"thumbnail for {pid}")
+    except Exception as e:
+        return f"🖼 Thumbnail for {pid} downloaded but could not be saved to git: {str(e)[:160]}. Send it again in a few minutes."
+    return f"🖼 Thumbnail for {pid} saved. It is set on YouTube when the video is uploaded, or within minutes if it already is."
+
+
+# 28 Nov 2026: the founder sent four moving clips for the Napoleon Short to this bot ("Uploaded 4 clips of napoleon on Arthvan bot") and
+# they were watched as Reels to X-ray: only the Sg-content bot knew the caption. Both bots take it now: "clip <piece id> <number>".
+CLIP_RE = re.compile(r"^\s*clip\s+(\d{4}-\d{2}-\d{2}-(?:sglearning|arthvan)-(?:short|long))\s+(\d{1,2})\s*$", re.I)
+CLIP_DIR = "inbox/scenes"
+
+
+def clip_id(message: dict) -> tuple:
+    m = CLIP_RE.match(message.get("caption") or "")
+    return (m.group(1).lower(), int(m.group(2))) if m else ()
+
+
+def clip_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, change=git_change, fetch=download) -> str:
+    """One of the founder's moving clips for a video's body: saved as inbox/scenes/<piece id>/clip<number>.mp4 and pushed; sg-content collects it."""
+    v = xray.video_of(message)
+    pid, number = clip_id(message)
+    if (v.get("file_size") or 0) > xray.MAX_BYTES:
+        return "🎞 That clip is over 20 MB, the most a bot can download. Send it again as a normal video (Telegram compresses it)."
+    out = Path(root) / CLIP_DIR / pid / f"clip{number}.mp4"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    fetch(cfg, v["file_id"], out, call)
+    try:
+        change(root, [str(out.relative_to(root))], [], f"moving clip {number} for {pid}")
+    except Exception as e:
+        return f"🎞 Clip {number} for {pid} downloaded but could not be saved to git: {str(e)[:160]}. Send it again in a few minutes."
+    have = sorted(int(f.stem[4:]) for f in out.parent.glob("clip*.mp4") if f.stem[4:].isdigit())
+    return f"🎞 Clip {number} for {pid} saved ({out.stat().st_size / 1e6:.1f} MB). Clips in so far: {', '.join(str(n) for n in have)}."
 
 
 def intro_id(message: dict) -> str:
@@ -127,7 +245,8 @@ def xray_reply(cfg: dict, message: dict, root: Path, *, call=telegram._call, cha
 
 
 def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.send_message, change=git_change, day: date = None, now: float = None,
-         xray_fn=xray_reply, intro_fn=intro_reply) -> int:
+         xray_fn=xray_reply, intro_fn=intro_reply, li_fn=li_reply, thumb_fn=thumb_reply,
+         stats_fn=linkedin_review.stats_reply, clip_fn=clip_reply) -> int:
     """Answer every waiting command from the founder's chat, confirming each one so it is answered once. Returns how many."""
     day = day or lagos_today()
     now = time.time() if now is None else now
@@ -136,13 +255,29 @@ def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.sen
     for u in updates:
         m = u.get("message") or {}
         mine = str((m.get("chat") or {}).get("id")) == str(cfg["chat_id"])
+        if mine and picture_of(m) and thumb_id(m):
+            call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
+            send(cfg, thumb_fn(cfg, m, root, call=call, change=change)); handled += 1
+            continue
+        if mine and picture_of(m) and linkedin_review.is_stats(m):
+            call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # read once, even if this run dies
+            send(cfg, stats_fn(cfg, m, root, call=call, change=change)); handled += 1
+            continue
+        if mine and picture_of(m) and li_day(m):
+            call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
+            send(cfg, li_fn(cfg, m, root, call=call, change=change)); handled += 1
+            continue
+        if mine and xray.video_of(m) and clip_id(m):
+            call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
+            send(cfg, clip_fn(cfg, m, root, call=call, change=change)); handled += 1
+            continue
         if mine and xray.video_of(m) and intro_id(m):
             call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # saved once, even if this run dies
             send(cfg, intro_fn(cfg, m, root, call=call, change=change)); handled += 1
             continue
         if mine and xray.video_of(m):
-            send(cfg, "🎬 Got the Reel. Watching it now, the X-ray comes in a minute or two."); handled += 1
             call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})     # never watched twice, even if this run dies
+            send(cfg, "🎬 Got the Reel. Watching it now, the X-ray comes in a minute or two."); handled += 1
             send(cfg, xray_fn(cfg, m, root, call=call, change=change))
             continue
         if mine and (m.get("text") or "").strip():
@@ -150,7 +285,11 @@ def poll(cfg: dict, root: Path = ROOT, *, call=telegram._call, send=telegram.sen
                 reply = "That command is more than 12 hours old, so I ignored it. Send it again if you still want it."
             else:
                 reply = answer(m["text"], root, day, change)
+            # 24 Nov 2026: the message is marked read BEFORE the reply goes out. When marking failed after the reply, the same command
+            # was answered again every five minutes until it succeeded.
+            call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})
             send(cfg, reply); handled += 1
+            continue
         call(cfg["token"], "getUpdates", {"offset": u["update_id"] + 1, "timeout": 0})
     return handled
 

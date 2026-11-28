@@ -1,0 +1,142 @@
+{
+ "id": "lumi-reminders-in-my-words-hi",
+ "app": "scoremybiz",
+ "lang": "hi-IN",
+ "character": "lumi",
+ "feature": "reminders-in-my-words",
+ "style": "cutout",
+ "pad": 0.4,
+ "title": "Dus kaam, ek hi dimaag",
+ "banner": "Dus kaam yaad the<br><em>ek bhool gaya</em> 📝",
+ "caption": "Dukaan ke chhote chhote kaam aap kahan likhte hain: diary mein, haath par, ya sirf dimaag mein? 👇\nScoreMyBiz, 30 din muft: link in bio.",
+ "linkedin_text": "A short illustrated story in Hindi about a hardware shop owner who forgets to call his cement supplier, then types his reminders in his own words and gets them back as dated tasks. Phone reminders arrive only when notifications are allowed. ScoreMyBiz is free for 30 days on Google Play.",
+ "hashtags": [
+  "#ScoreMyBiz",
+  "#SmallBusiness",
+  "#HindiReels"
+ ],
+ "art": {
+  "style": "Warm hand-painted Indian storybook illustration, soft gouache and watercolour texture, golden-hour lighting, rich detailed everyday Indian settings, expressive faces, gentle nostalgic mood.",
+  "ref": [
+   "mira_front_neutral.png"
+  ],
+  "cast": {
+   "Ramesh": "Ramesh is a man in his early fifties who runs a small hardware shop, with grey at his temples, a checked shirt and a pencil behind his ear.",
+   "Chhotu": "Chhotu is a cheerful shop helper of about nineteen in a red t-shirt."
+  }
+ },
+ "scenes": [
+  {
+   "layout": "illus",
+   "image": "s01.png",
+   "vo": "सीमेंट ख़त्म। और ऑर्डर देना रमेश भूल गया।",
+   "sub": "Cement khatm. Aur order dena Ramesh bhool gaya.",
+   "min": 2.2,
+   "art": "Ramesh staring at an empty corner of his hardware shop where cement bags should be, a customer waiting with a handcart.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s02.png",
+   "vo": "ग्राहक ख़ाली हाथ लौट गया।",
+   "sub": "Graahak khaali haath laut gaya.",
+   "min": 2.2,
+   "art": "A customer walking away from the hardware shop with an empty handcart, Ramesh watching from the counter.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s03.png",
+   "vo": "रमेश के दिमाग़ में रोज़ दस काम घूमते थे।",
+   "sub": "Ramesh ke dimaag mein roz das kaam ghoomte the.",
+   "min": 2.2,
+   "art": "Ramesh at the counter rubbing his forehead, shelves of paint tins, pipes and tools all around him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s04.png",
+   "vo": "राजू को फ़ोन, बिजली का बिल, पेंट का माल।",
+   "sub": "Raju ko phone, bijli ka bill, paint ka maal.",
+   "min": 2.2,
+   "art": "Ramesh counting tasks on his fingers while Chhotu carries a box of paint tins past him.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s05.png",
+   "vo": "हथेली पर लिखता था, पसीने में मिट जाता था।",
+   "sub": "Hatheli par likhta tha, paseene mein mit jaata tha.",
+   "min": 2.2,
+   "art": "Close view of Ramesh's open palm with smudged blue ink writing, a pen in his other hand.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s06.png",
+   "vo": "छोटू बोला, चाचा, फ़ोन में लिख दो ना।",
+   "sub": "Chhotu bola, chacha, phone mein likh do na.",
+   "min": 2.2,
+   "art": "Chhotu pointing at the phone lying on the counter, grinning at Ramesh.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s07.png",
+   "vo": "रमेश ने स्कोर माय बिज़ में अपनी ही भाषा में लिखा।",
+   "sub": "Ramesh ne ScoreMyBiz mein apni hi bhaasha mein likha.",
+   "min": 2.2,
+   "art": "Ramesh typing slowly on his phone with one finger, Chhotu watching over his shoulder.",
+   "noref": true
+  },
+  {
+   "layout": "phone",
+   "vo": "शुक्रवार को राजू को सीमेंट के लिए फ़ोन। बस इतना।",
+   "sub": "Shukravaar ko Raju ko cement ke liye phone. Bas itna.",
+   "min": 2.4,
+   "screen": "reminders.png"
+  },
+  {
+   "layout": "phone",
+   "vo": "ऐप ने उसे तारीख़ वाला काम बना दिया।",
+   "sub": "App ne use taareekh waala kaam bana diya.",
+   "min": 2.4,
+   "screen": "reminders.png"
+  },
+  {
+   "layout": "illus",
+   "image": "s10.png",
+   "vo": "एक शाम पहले फ़ोन ने याद दिलाया।",
+   "sub": "Ek shaam pehle phone ne yaad dilaaya.",
+   "min": 2.2,
+   "art": "Ramesh closing the shop shutter at dusk, glancing at his phone in his hand with a small nod.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s11.png",
+   "vo": "अगली सुबह सीमेंट की गाड़ी दुकान पर थी।",
+   "sub": "Agli subah cement ki gaadi dukaan par thi.",
+   "min": 2.2,
+   "art": "A small truck unloading cement bags in front of the hardware shop in morning light, Chhotu carrying one bag.",
+   "noref": true
+  },
+  {
+   "layout": "illus",
+   "image": "s12.png",
+   "vo": "आप अपने दस काम कहाँ लिखते हैं?",
+   "sub": "Aap apne das kaam kahaan likhte hain?",
+   "min": 3.0,
+   "art": "Close-up of Ramesh smiling at the viewer, hardware shelves softly blurred behind.",
+   "noref": true,
+   "focus": "50% 45%"
+  },
+  {
+   "layout": "end",
+   "pose": "front_happy",
+   "vo": "स्कोर माय बिज़। तीस दिन मुफ़्त।",
+   "sub": "",
+   "min": 5
+  }
+ ]
+}
